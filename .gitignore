@@ -53,3 +53,13 @@ dkms.conf
 
 # debug information files
 *.dwo
+
+# Build files
+Firmware/.settings
+Firmware/.vscode
+Firmware/build
+
+# Personal settings folders
+.settings/
+.cproject
+.project
