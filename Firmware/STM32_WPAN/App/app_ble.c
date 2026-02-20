@@ -513,7 +513,7 @@ SVCCTL_UserEvtFlowStatus_t SVCCTL_App_Notification(void *p_Pckt)
                       p_connection_complete_event->Supervision_Timeout*10
                      );
 
-          if (BleApplicationContext.Device_Connection_Status == APP_BLE_LP_CONNECTING)
+          if (BleApplicationContext.Device_Connection_Status == APP_BLE_CONNECTING)
           {
             /* Connection as client */
             BleApplicationContext.Device_Connection_Status = APP_BLE_CONNECTED_CLIENT;

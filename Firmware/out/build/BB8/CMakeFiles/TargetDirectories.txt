@@ -1,8 +1,0 @@
-/home/ryan-mcbride/Documents/BB8_STM32/Firmware/out/build/BB8/CMakeFiles/BB8.dir
-/home/ryan-mcbride/Documents/BB8_STM32/Firmware/out/build/BB8/CMakeFiles/edit_cache.dir
-/home/ryan-mcbride/Documents/BB8_STM32/Firmware/out/build/BB8/CMakeFiles/rebuild_cache.dir
-/home/ryan-mcbride/Documents/BB8_STM32/Firmware/out/build/BB8/cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir
-/home/ryan-mcbride/Documents/BB8_STM32/Firmware/out/build/BB8/cmake/stm32cubemx/CMakeFiles/Utilities.dir
-/home/ryan-mcbride/Documents/BB8_STM32/Firmware/out/build/BB8/cmake/stm32cubemx/CMakeFiles/STM32_WPAN.dir
-/home/ryan-mcbride/Documents/BB8_STM32/Firmware/out/build/BB8/cmake/stm32cubemx/CMakeFiles/edit_cache.dir
-/home/ryan-mcbride/Documents/BB8_STM32/Firmware/out/build/BB8/cmake/stm32cubemx/CMakeFiles/rebuild_cache.dir

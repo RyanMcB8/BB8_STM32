@@ -26,6 +26,9 @@ BB8_SOURCE_DIR:STATIC=/home/ryan-mcbride/Documents/BB8_STM32/Firmware
 //No help, variable specified on the command line.
 CMAKE_BUILD_TYPE:UNINITIALIZED=Debug
 
+//No help, variable specified on the command line.
+CMAKE_EXPORT_COMPILE_COMMANDS:BOOL=TRUE
+
 //Value Computed by CMake.
 CMAKE_FIND_PACKAGE_REDIRECTS_DIR:STATIC=/home/ryan-mcbride/Documents/BB8_STM32/Firmware/build/Debug/CMakeFiles/pkgRedirects
 
