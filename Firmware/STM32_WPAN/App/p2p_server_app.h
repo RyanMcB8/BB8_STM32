@@ -1,9 +1,9 @@
 /* USER CODE BEGIN Header */
 /**
   ******************************************************************************
-  * @file           : main.h
-  * @brief          : Header for main.c file.
-  *                   This file contains the common defines of the application.
+  * @file    App/p2p_server_app.h
+  * @author  MCD Application Team
+  * @brief   Header for p2p_server_app.c module
   ******************************************************************************
   * @attention
   *
@@ -19,19 +19,14 @@
 /* USER CODE END Header */
 
 /* Define to prevent recursive inclusion -------------------------------------*/
-#ifndef __MAIN_H
-#define __MAIN_H
+#ifndef P2P_SERVER_APP_H
+#define P2P_SERVER_APP_H
 
 #ifdef __cplusplus
 extern "C" {
 #endif
 
 /* Includes ------------------------------------------------------------------*/
-#include "stm32wbxx_hal.h"
-
-#include "app_conf.h"
-#include "app_entry.h"
-#include "app_common.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -39,6 +34,17 @@ extern "C" {
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/
+typedef enum
+{
+  PEER_CONN_HANDLE_EVT,
+  PEER_DISCON_HANDLE_EVT,
+} P2PS_APP__Opcode_Notification_evt_t;
+
+typedef struct
+{
+  P2PS_APP__Opcode_Notification_evt_t   P2P_Evt_Opcode;
+  uint16_t                              ConnectionHandle;
+}P2PS_APP_ConnHandle_Not_evt_t;
 /* USER CODE BEGIN ET */
 
 /* USER CODE END ET */
@@ -48,42 +54,25 @@ extern "C" {
 
 /* USER CODE END EC */
 
-/* Exported macro ------------------------------------------------------------*/
+/* External variables --------------------------------------------------------*/
+/* USER CODE BEGIN EV */
+
+/* USER CODE END EV */
+
+/* Exported macros ------------------------------------------------------------*/
 /* USER CODE BEGIN EM */
 
 /* USER CODE END EM */
 
-/* Exported functions prototypes ---------------------------------------------*/
-void Error_Handler(void);
+/* Exported functions ---------------------------------------------*/
+  void P2PS_APP_Init( void );
+  void P2PS_APP_Notification( P2PS_APP_ConnHandle_Not_evt_t *pNotification );
+/* USER CODE BEGIN EF */
 
-/* USER CODE BEGIN EFP */
-
-/* USER CODE END EFP */
-
-/* Private defines -----------------------------------------------------------*/
-#define MOTOR2_FAULT_Pin GPIO_PIN_13
-#define MOTOR2_FAULT_GPIO_Port GPIOC
-#define MOTOR1_STEP_Pin GPIO_PIN_0
-#define MOTOR1_STEP_GPIO_Port GPIOA
-#define MOTOR2_EN_BAR_Pin GPIO_PIN_8
-#define MOTOR2_EN_BAR_GPIO_Port GPIOA
-#define MOTOR1_FAULT_Pin GPIO_PIN_10
-#define MOTOR1_FAULT_GPIO_Port GPIOA
-#define MOTOR2_STEP_Pin GPIO_PIN_11
-#define MOTOR2_STEP_GPIO_Port GPIOA
-#define MOTOR2_DIR_Pin GPIO_PIN_15
-#define MOTOR2_DIR_GPIO_Port GPIOA
-#define MOTOR1_EN_BAR_Pin GPIO_PIN_0
-#define MOTOR1_EN_BAR_GPIO_Port GPIOD
-#define MOTOR1_DIR_Pin GPIO_PIN_1
-#define MOTOR1_DIR_GPIO_Port GPIOD
-
-/* USER CODE BEGIN Private defines */
-
-/* USER CODE END Private defines */
+/* USER CODE END EF */
 
 #ifdef __cplusplus
 }
 #endif
 
-#endif /* __MAIN_H */
+#endif /*P2P_SERVER_APP_H */

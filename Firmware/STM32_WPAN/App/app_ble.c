@@ -7,7 +7,7 @@
   *****************************************************************************
   * @attention
   *
-  * Copyright (c) 2026 STMicroelectronics.
+  * Copyright (c) 2025 STMicroelectronics.
   * All rights reserved.
   *
   * This software is licensed under terms that can be found in the LICENSE file
@@ -64,6 +64,14 @@ typedef struct _tSecurityParams
   uint8_t bonding_mode;
 
   /**
+   * this variable indicates whether to use a fixed pin
+   * during the pairing process or a passkey has to be
+   * requested to the application during the pairing process
+   * 0 implies use fixed pin and 1 implies request for passkey
+   */
+  uint8_t Use_Fixed_Pin;
+
+  /**
    * minimum encryption key size requirement
    */
   uint8_t encryptionKeySizeMin;
@@ -72,6 +80,12 @@ typedef struct _tSecurityParams
    * maximum encryption key size requirement
    */
   uint8_t encryptionKeySizeMax;
+
+  /**
+   * fixed pin to be used in the pairing process if
+   * Use_Fixed_Pin is set to 1
+   */
+  uint32_t Fixed_Pin;
 
   /**
    * this flag indicates whether the host has to initiate
@@ -155,7 +169,6 @@ typedef struct
 #define INITIAL_ADV_TIMEOUT            (60*1000*1000/CFG_TS_TICK_VAL) /**< 60s */
 
 #define BD_ADDR_SIZE_LOCAL    6
-#define BLE_DEFAULT_PIN                     (111111)
 
 /* USER CODE BEGIN PD */
 
@@ -212,9 +225,9 @@ uint8_t index_con_int, mutex;
 /**
  * Advertising Data
  */
-uint8_t a_AdvData[9] =
+uint8_t a_AdvData[11] =
 {
-  8, AD_TYPE_COMPLETE_LOCAL_NAME, 'B', 'B', '8', 'm', 'a', 'i', 'n',  /* Complete name */
+  9, AD_TYPE_COMPLETE_LOCAL_NAME, 'B', 'B', '8', '_', 'M', 'A', 'I', 'N',  /* Complete name */
 
 };
 
@@ -240,7 +253,6 @@ static void Connection_Interval_Update_Req(void);
 /* USER CODE END PFP */
 
 /* External variables --------------------------------------------------------*/
-extern RNG_HandleTypeDef hrng;
 
 /* USER CODE BEGIN EV */
 
@@ -287,7 +299,7 @@ void APP_BLE_Init(void)
      CFG_BLE_RX_PATH_COMPENS,
      CFG_BLE_CORE_VERSION,
      CFG_BLE_OPTIONS_EXT,
-	 CFG_BLE_MAX_ADD_EATT_BEARERS
+	 //CFG_BLE_MAX_ADD_EATT_BEARERS
     }
   };
 
@@ -296,10 +308,9 @@ void APP_BLE_Init(void)
    */
   Ble_Tl_Init();
 
-  /**
-   * Do not allow standby in the application
-   */
-  UTIL_LPM_SetOffMode(1 << CFG_LPM_APP_BLE, UTIL_LPM_DISABLE);
+#if (CFG_LPM_STANDBY_SUPPORTED == 0)
+  UTIL_LPM_SetOffMode(1U << CFG_LPM_APP_BLE, UTIL_LPM_DISABLE);
+#endif /* CFG_LPM_STANDBY_SUPPORTED == 0 */
 
   /**
    * Register the hci transport layer to handle BLE User Asynchronous Events
@@ -589,22 +600,16 @@ SVCCTL_UserEvtFlowStatus_t SVCCTL_App_Notification(void *p_Pckt)
 
         /* PAIRING */
         case (ACI_GAP_KEYPRESS_NOTIFICATION_VSEVT_CODE):
-            APP_DBG_MSG(">>== ACI_GAP_KEYPRESS_NOTIFICATION_VSEVT_CODE\n");
+          APP_DBG_MSG(">>== ACI_GAP_KEYPRESS_NOTIFICATION_VSEVT_CODE\n");
           /* USER CODE BEGIN ACI_GAP_KEYPRESS_NOTIFICATION_VSEVT_CODE*/
 
           /* USER CODE END ACI_GAP_KEYPRESS_NOTIFICATION_VSEVT_CODE*/
           break;
 
         case ACI_GAP_PASS_KEY_REQ_VSEVT_CODE:
-		{
-	      uint32_t pin;
           APP_DBG_MSG(">>== ACI_GAP_PASS_KEY_REQ_VSEVT_CODE \n");
-          pin = BLE_DEFAULT_PIN;
-          /* USER CODE BEGIN ACI_GAP_PASS_KEY_REQ_VSEVT_CODE_0 */
 
-          /* USER CODE END ACI_GAP_PASS_KEY_REQ_VSEVT_CODE_0 */
-
-          ret = aci_gap_pass_key_resp(BleApplicationContext.BleApplicationContext_legacy.connectionHandle, pin);
+          ret = aci_gap_pass_key_resp(BleApplicationContext.BleApplicationContext_legacy.connectionHandle, CFG_FIXED_PIN);
           if (ret != BLE_STATUS_SUCCESS)
           {
             APP_DBG_MSG("==>> aci_gap_pass_key_resp : Fail, reason: 0x%x\n", ret);
@@ -617,7 +622,6 @@ SVCCTL_UserEvtFlowStatus_t SVCCTL_App_Notification(void *p_Pckt)
 
           /* USER CODE END ACI_GAP_PASS_KEY_REQ_VSEVT_CODE*/
           break;
-		}
 
         case ACI_GAP_NUMERIC_COMPARISON_VALUE_VSEVT_CODE:
           APP_DBG_MSG(">>== ACI_GAP_NUMERIC_COMPARISON_VALUE_VSEVT_CODE\n");
@@ -936,6 +940,8 @@ static void Ble_Hci_Gap_Gatt_Init(void)
   BleApplicationContext.BleApplicationContext_legacy.bleSecurityParam.mitm_mode = CFG_MITM_PROTECTION;
   BleApplicationContext.BleApplicationContext_legacy.bleSecurityParam.encryptionKeySizeMin = CFG_ENCRYPTION_KEY_SIZE_MIN;
   BleApplicationContext.BleApplicationContext_legacy.bleSecurityParam.encryptionKeySizeMax = CFG_ENCRYPTION_KEY_SIZE_MAX;
+  BleApplicationContext.BleApplicationContext_legacy.bleSecurityParam.Use_Fixed_Pin = CFG_USED_FIXED_PIN;
+  BleApplicationContext.BleApplicationContext_legacy.bleSecurityParam.Fixed_Pin = CFG_FIXED_PIN;
   BleApplicationContext.BleApplicationContext_legacy.bleSecurityParam.bonding_mode = CFG_BONDING_MODE;
   /* USER CODE BEGIN Ble_Hci_Gap_Gatt_Init_1*/
 
@@ -947,8 +953,8 @@ static void Ble_Hci_Gap_Gatt_Init(void)
                                                CFG_KEYPRESS_NOTIFICATION_SUPPORT,
                                                BleApplicationContext.BleApplicationContext_legacy.bleSecurityParam.encryptionKeySizeMin,
                                                BleApplicationContext.BleApplicationContext_legacy.bleSecurityParam.encryptionKeySizeMax,
-                                               USE_FIXED_PIN_FOR_PAIRING_FORBIDDEN, /* deprecated feature */
-                                               0,                                   /* deprecated feature */
+                                               BleApplicationContext.BleApplicationContext_legacy.bleSecurityParam.Use_Fixed_Pin,
+                                               BleApplicationContext.BleApplicationContext_legacy.bleSecurityParam.Fixed_Pin,
                                                CFG_IDENTITY_ADDRESS);
   if (ret != BLE_STATUS_SUCCESS)
   {
