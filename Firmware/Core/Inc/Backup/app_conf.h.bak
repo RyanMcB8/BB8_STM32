@@ -120,8 +120,8 @@
 /**
  * Device name configuration for Generic Access Service
  */
-#define CFG_GAP_DEVICE_NAME             "BB8_Main"
-#define CFG_GAP_DEVICE_NAME_LENGTH      (9)
+#define CFG_GAP_DEVICE_NAME             "BB8_MAIN"
+#define CFG_GAP_DEVICE_NAME_LENGTH      (8)
 
 /**
  * Define PHY

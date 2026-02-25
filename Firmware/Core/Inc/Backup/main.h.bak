@@ -63,16 +63,16 @@ void Error_Handler(void);
 /* Private defines -----------------------------------------------------------*/
 #define MOTOR2_FAULT_Pin GPIO_PIN_13
 #define MOTOR2_FAULT_GPIO_Port GPIOC
-#define MOTOR1_STEP_Pin GPIO_PIN_0
-#define MOTOR1_STEP_GPIO_Port GPIOA
 #define MOTOR2_EN_BAR_Pin GPIO_PIN_8
 #define MOTOR2_EN_BAR_GPIO_Port GPIOA
+#define MOTOR1_STEP_Pin GPIO_PIN_6
+#define MOTOR1_STEP_GPIO_Port GPIOC
 #define MOTOR1_FAULT_Pin GPIO_PIN_10
 #define MOTOR1_FAULT_GPIO_Port GPIOA
-#define MOTOR2_STEP_Pin GPIO_PIN_11
-#define MOTOR2_STEP_GPIO_Port GPIOA
 #define MOTOR2_DIR_Pin GPIO_PIN_15
 #define MOTOR2_DIR_GPIO_Port GPIOA
+#define MOTOR2_STEP_Pin GPIO_PIN_10
+#define MOTOR2_STEP_GPIO_Port GPIOC
 #define MOTOR1_EN_BAR_Pin GPIO_PIN_0
 #define MOTOR1_EN_BAR_GPIO_Port GPIOD
 #define MOTOR1_DIR_Pin GPIO_PIN_1
