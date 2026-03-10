@@ -57,7 +57,7 @@ dkms.conf
 # Build files
 Firmware/.settings
 Firmware/.vscode
-Firmware/build
+Firmware/build/
 
 # Personal settings folders
 .settings/
