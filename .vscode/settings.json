@@ -1,3 +1,7 @@
 {
+<<<<<<< HEAD
     "cmake.sourceDirectory": "/home/ryan-mcbride/Documents/BB8_STM32/Firmware"
+=======
+    "cmake.sourceDirectory": "C:/Users/ryanm/Documents/DesignGroup/BB8_STM32/Firmware"
+>>>>>>> 98ec8eb47ada0ea6cb419501bc6db1624caa612b
 }
