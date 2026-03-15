@@ -1,0 +1,3 @@
+[submodule "Firmware/PS2_Controller_C_Driver"]
+	path = Firmware/PS2_Controller_C_Driver
+	url = https://github.com/RyanMcB8/PS2_Controller_C_Driver.git
