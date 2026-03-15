@@ -55,6 +55,9 @@ dkms.conf
 *.dwo
 
 # Build files
+Firmware/.settings/
+Firmware/.vscode/
+Firmware/build/
 Firmware/.settings
 Firmware/.vscode
 Firmware/build
