@@ -29,7 +29,7 @@ float PID_Update(PIDController_t *pid,
     pid->integral += error * dt;
 
     /* Derivative on measurement */
-    float derivative = (measurement - pid->prev_measurement) / dt;
+    float derivative = -(measurement - pid->prev_measurement) / dt;
 
     float output = pid->Kp * error + pid->Ki * pid->integral + pid->Kd * derivative;
 
