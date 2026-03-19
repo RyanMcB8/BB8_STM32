@@ -23,6 +23,17 @@ set(CMAKE_PROJECT_NAME BB8)
 
 # Enable compile command to ease indexing with e.g. clangd
 set(CMAKE_EXPORT_COMPILE_COMMANDS TRUE)
+set(CMAKE_TRY_COMPILE_TARGET_TYPE STATIC_LIBRARY)
+
+set(CPU_FLAGS
+    -mcpu=cortex-m4
+    -mthumb
+    -mfpu=fpv4-sp-d16
+    -mfloat-abi=hard
+)
+
+add_compile_options(${CPU_FLAGS})
+add_link_options(${CPU_FLAGS})
 
 # Core project settings
 project(${CMAKE_PROJECT_NAME})
@@ -67,4 +78,14 @@ target_link_libraries(${CMAKE_PROJECT_NAME}
     stm32cubemx
 
     # Add user defined libraries
+)
+
+set(LINKER_SCRIPT ${CMAKE_SOURCE_DIR}/stm32wb55xx_flash_cm4.ld)
+
+target_link_options(BB8 PRIVATE
+    -T${LINKER_SCRIPT}
+)
+
+target_link_options(BB8 PRIVATE
+    -Wl,-Map=BB8.map
 )
