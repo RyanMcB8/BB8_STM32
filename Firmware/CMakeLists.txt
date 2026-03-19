@@ -57,12 +57,14 @@ target_link_directories(${CMAKE_PROJECT_NAME} PRIVATE
 target_sources(${CMAKE_PROJECT_NAME} PRIVATE
     # Add user sources here
     ${CMAKE_CURRENT_SOURCE_DIR}/Custom_Drivers/Src
+    ${CMAKE_CURRENT_SOURCE_DIR}/PS2_Controller_C_Driver
 )
 
 # Add include paths
 target_include_directories(${CMAKE_PROJECT_NAME} PRIVATE
     # Add user defined include paths
     ${CMAKE_CURRENT_SOURCE_DIR}/Custom_Drivers/Inc
+    ${CMAKE_CURRENT_SOURCE_DIR}/PS2_Controller_C_Driver
 )
 
 # Add project symbols (macros)
@@ -80,11 +82,11 @@ target_link_libraries(${CMAKE_PROJECT_NAME}
     # Add user defined libraries
 )
 
-set(LINKER_SCRIPT ${CMAKE_SOURCE_DIR}/stm32wb55xx_flash_cm4.ld)
+# set(LINKER_SCRIPT ${CMAKE_SOURCE_DIR}/stm32wb55xx_flash_cm4.ld)
 
-target_link_options(BB8 PRIVATE
-    -T${LINKER_SCRIPT}
-)
+# target_link_options(BB8 PRIVATE
+#     -T${LINKER_SCRIPT}
+# )
 
 target_link_options(BB8 PRIVATE
     -Wl,-Map=BB8.map
