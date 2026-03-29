@@ -1,0 +1,150 @@
+\doxysection{C:\+/\+\+Users/\+ryanm/\+\+Documents/\+\+Design\+Group/\+\+BB8\+\_\+\+STM32/\+\+Firmware/\+\+Core/\+\+Inc/\+utilities\+\_\+conf.h File Reference}
+\hypertarget{utilities__conf_8h}{}\label{utilities__conf_8h}\index{C:/Users/ryanm/Documents/DesignGroup/BB8\_STM32/Firmware/Core/Inc/utilities\_conf.h@{C:/Users/ryanm/Documents/DesignGroup/BB8\_STM32/Firmware/Core/Inc/utilities\_conf.h}}
+
+
+Configuration file for STM32 Utilities.  
+
+
+{\ttfamily \+\#include "{}cmsis\+\_\+compiler.\+h"{}}\newline
+{\ttfamily \+\#include "{}string.\+h"{}}\newline
+{\ttfamily \+\#include "{}app\+\_\+conf.\+h"{}}\newline
+Include dependency graph for utilities\+\_\+conf.\+h:\+
+% FIG 0
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\+\#define \doxymbox{\hyperlink{utilities__conf_8h_a959a227787704c59cb8fc5215ad059c8}{UTILS\+\_\+\+ENTER\+\_\+\+CRITICAL\+\_\+\+SECTION}}()
+\item 
+\+\#define \doxymbox{\hyperlink{utilities__conf_8h_add097394dc85df56c52d30fec59475cc}{UTILS\+\_\+\+EXIT\+\_\+\+CRITICAL\+\_\+\+SECTION}}()
+\item 
+\+\#define \doxymbox{\hyperlink{utilities__conf_8h_a9ad354d3f091d1f713c8b34a9e8213e3}{UTILS\+\_\+\+MEMSET8}}(dest,  value,  size)
+\item 
+\Hypertarget{utilities__conf_8h_ae3cab914b877ebbb50431911291ad7c8}\label{utilities__conf_8h_ae3cab914b877ebbb50431911291ad7c8} 
+\+\#define {\bfseries UTIL\+\_\+\+LPM\+\_\+\+INIT\+\_\+\+CRITICAL\+\_\+\+SECTION}()
+\item 
+\+\#define \doxymbox{\hyperlink{utilities__conf_8h_a5a55b524c363a5bef3c5d37dc2561834}{UTIL\+\_\+\+LPM\+\_\+\+ENTER\+\_\+\+CRITICAL\+\_\+\+SECTION}}()
+\item 
+\+\#define \doxymbox{\hyperlink{utilities__conf_8h_a312f47424e8a0c4703961d2e1afac8a1}{UTIL\+\_\+\+LPM\+\_\+\+EXIT\+\_\+\+CRITICAL\+\_\+\+SECTION}}()
+\item 
+\Hypertarget{utilities__conf_8h_a44463ede12800592cab40083b922db3c}\label{utilities__conf_8h_a44463ede12800592cab40083b922db3c} 
+\+\#define {\bfseries UTIL\+\_\+\+SEQ\+\_\+\+INIT\+\_\+\+CRITICAL\+\_\+\+SECTION}()
+\item 
+\+\#define \doxymbox{\hyperlink{utilities__conf_8h_a9fc3dba92c568f181fe93161143cba22}{UTIL\+\_\+\+SEQ\+\_\+\+ENTER\+\_\+\+CRITICAL\+\_\+\+SECTION}}()
+\item 
+\+\#define \doxymbox{\hyperlink{utilities__conf_8h_a7236f4b0542201e179cdbb45a4764b77}{UTIL\+\_\+\+SEQ\+\_\+\+EXIT\+\_\+\+CRITICAL\+\_\+\+SECTION}}()
+\item 
+\Hypertarget{utilities__conf_8h_aaf974b4a940fc6a921b3a76344e5c7ed}\label{utilities__conf_8h_aaf974b4a940fc6a921b3a76344e5c7ed} 
+\+\#define {\bfseries UTIL\+\_\+\+SEQ\+\_\+\+CONF\+\_\+\+TASK\+\_\+\+NBR}~(32)
+\item 
+\Hypertarget{utilities__conf_8h_a13e13f6ac2442ffb667502a9f35df865}\label{utilities__conf_8h_a13e13f6ac2442ffb667502a9f35df865} 
+\+\#define {\bfseries UTIL\+\_\+\+SEQ\+\_\+\+CONF\+\_\+\+PRIO\+\_\+\+NBR}~CFG\+\_\+\+SCH\+\_\+\+PRIO\+\_\+\+NBR
+\item 
+\+\#define \doxymbox{\hyperlink{utilities__conf_8h_ad3b4f5f14f4f512725984e6da759871c}{UTIL\+\_\+\+SEQ\+\_\+\+MEMSET8}}(dest,  value,  size)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Configuration file for STM32 Utilities. 
+
+\begin{DoxyAuthor}{Author}
+MCD Application Team 
+\end{DoxyAuthor}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+Copyright (c) 2026 STMicroelectronics. All rights reserved.
+
+This software is licensed under terms that can be found in the LICENSE file in the root directory of this software component. If no LICENSE file comes with this software, it is provided AS-\/\+IS. 
+
+\label{doc-define-members}
+\Hypertarget{utilities__conf_8h_doc-define-members}
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{utilities__conf_8h_a5a55b524c363a5bef3c5d37dc2561834}\index{utilities\_conf.h@{utilities\_conf.h}!UTIL\_LPM\_ENTER\_CRITICAL\_SECTION@{UTIL\_LPM\_ENTER\_CRITICAL\_SECTION}}
+\index{UTIL\_LPM\_ENTER\_CRITICAL\_SECTION@{UTIL\_LPM\_ENTER\_CRITICAL\_SECTION}!utilities\_conf.h@{utilities\_conf.h}}
+\doxysubsubsection{\texorpdfstring{UTIL\_LPM\_ENTER\_CRITICAL\_SECTION}{UTIL\_LPM\_ENTER\_CRITICAL\_SECTION}}
+{\footnotesize\ttfamily \label{utilities__conf_8h_a5a55b524c363a5bef3c5d37dc2561834} 
+\+\#define UTIL\+\_\+\+LPM\+\_\+\+ENTER\+\_\+\+CRITICAL\+\_\+\+SECTION(\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+{\bfseries Value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{UTILS\_ENTER\_CRITICAL\_SECTION(\ )}
+
+\end{DoxyCode}
+\Hypertarget{utilities__conf_8h_a312f47424e8a0c4703961d2e1afac8a1}\index{utilities\_conf.h@{utilities\_conf.h}!UTIL\_LPM\_EXIT\_CRITICAL\_SECTION@{UTIL\_LPM\_EXIT\_CRITICAL\_SECTION}}
+\index{UTIL\_LPM\_EXIT\_CRITICAL\_SECTION@{UTIL\_LPM\_EXIT\_CRITICAL\_SECTION}!utilities\_conf.h@{utilities\_conf.h}}
+\doxysubsubsection{\texorpdfstring{UTIL\_LPM\_EXIT\_CRITICAL\_SECTION}{UTIL\_LPM\_EXIT\_CRITICAL\_SECTION}}
+{\footnotesize\ttfamily \label{utilities__conf_8h_a312f47424e8a0c4703961d2e1afac8a1} 
+\+\#define UTIL\+\_\+\+LPM\+\_\+\+EXIT\+\_\+\+CRITICAL\+\_\+\+SECTION(\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+{\bfseries Value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{UTILS\_EXIT\_CRITICAL\_SECTION(\ )}
+
+\end{DoxyCode}
+\Hypertarget{utilities__conf_8h_a9fc3dba92c568f181fe93161143cba22}\index{utilities\_conf.h@{utilities\_conf.h}!UTIL\_SEQ\_ENTER\_CRITICAL\_SECTION@{UTIL\_SEQ\_ENTER\_CRITICAL\_SECTION}}
+\index{UTIL\_SEQ\_ENTER\_CRITICAL\_SECTION@{UTIL\_SEQ\_ENTER\_CRITICAL\_SECTION}!utilities\_conf.h@{utilities\_conf.h}}
+\doxysubsubsection{\texorpdfstring{UTIL\_SEQ\_ENTER\_CRITICAL\_SECTION}{UTIL\_SEQ\_ENTER\_CRITICAL\_SECTION}}
+{\footnotesize\ttfamily \label{utilities__conf_8h_a9fc3dba92c568f181fe93161143cba22} 
+\+\#define UTIL\+\_\+\+SEQ\+\_\+\+ENTER\+\_\+\+CRITICAL\+\_\+\+SECTION(\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+{\bfseries Value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{UTILS\_ENTER\_CRITICAL\_SECTION(\ )}
+
+\end{DoxyCode}
+\Hypertarget{utilities__conf_8h_a7236f4b0542201e179cdbb45a4764b77}\index{utilities\_conf.h@{utilities\_conf.h}!UTIL\_SEQ\_EXIT\_CRITICAL\_SECTION@{UTIL\_SEQ\_EXIT\_CRITICAL\_SECTION}}
+\index{UTIL\_SEQ\_EXIT\_CRITICAL\_SECTION@{UTIL\_SEQ\_EXIT\_CRITICAL\_SECTION}!utilities\_conf.h@{utilities\_conf.h}}
+\doxysubsubsection{\texorpdfstring{UTIL\_SEQ\_EXIT\_CRITICAL\_SECTION}{UTIL\_SEQ\_EXIT\_CRITICAL\_SECTION}}
+{\footnotesize\ttfamily \label{utilities__conf_8h_a7236f4b0542201e179cdbb45a4764b77} 
+\+\#define UTIL\+\_\+\+SEQ\+\_\+\+EXIT\+\_\+\+CRITICAL\+\_\+\+SECTION(\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+{\bfseries Value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{UTILS\_EXIT\_CRITICAL\_SECTION(\ )}
+
+\end{DoxyCode}
+\Hypertarget{utilities__conf_8h_ad3b4f5f14f4f512725984e6da759871c}\index{utilities\_conf.h@{utilities\_conf.h}!UTIL\_SEQ\_MEMSET8@{UTIL\_SEQ\_MEMSET8}}
+\index{UTIL\_SEQ\_MEMSET8@{UTIL\_SEQ\_MEMSET8}!utilities\_conf.h@{utilities\_conf.h}}
+\doxysubsubsection{\texorpdfstring{UTIL\_SEQ\_MEMSET8}{UTIL\_SEQ\_MEMSET8}}
+{\footnotesize\ttfamily \label{utilities__conf_8h_ad3b4f5f14f4f512725984e6da759871c} 
+\+\#define UTIL\+\_\+\+SEQ\+\_\+\+MEMSET8(\begin{DoxyParamCaption}\item[{}]{dest}{, }\item[{}]{value}{, }\item[{}]{size}{}\end{DoxyParamCaption})}
+
+{\bfseries Value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{UTILS\_MEMSET8(\ dest,\ value,\ size\ )}
+
+\end{DoxyCode}
+\Hypertarget{utilities__conf_8h_a959a227787704c59cb8fc5215ad059c8}\index{utilities\_conf.h@{utilities\_conf.h}!UTILS\_ENTER\_CRITICAL\_SECTION@{UTILS\_ENTER\_CRITICAL\_SECTION}}
+\index{UTILS\_ENTER\_CRITICAL\_SECTION@{UTILS\_ENTER\_CRITICAL\_SECTION}!utilities\_conf.h@{utilities\_conf.h}}
+\doxysubsubsection{\texorpdfstring{UTILS\_ENTER\_CRITICAL\_SECTION}{UTILS\_ENTER\_CRITICAL\_SECTION}}
+{\footnotesize\ttfamily \label{utilities__conf_8h_a959a227787704c59cb8fc5215ad059c8} 
+\+\#define UTILS\+\_\+\+ENTER\+\_\+\+CRITICAL\+\_\+\+SECTION(\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+{\bfseries Value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{uint32\_t\ primask\_bit\ =\ \_\_get\_PRIMASK(\ );\(\backslash\)}
+\DoxyCodeLine{\_\_disable\_irq(\ )}
+
+\end{DoxyCode}
+\Hypertarget{utilities__conf_8h_add097394dc85df56c52d30fec59475cc}\index{utilities\_conf.h@{utilities\_conf.h}!UTILS\_EXIT\_CRITICAL\_SECTION@{UTILS\_EXIT\_CRITICAL\_SECTION}}
+\index{UTILS\_EXIT\_CRITICAL\_SECTION@{UTILS\_EXIT\_CRITICAL\_SECTION}!utilities\_conf.h@{utilities\_conf.h}}
+\doxysubsubsection{\texorpdfstring{UTILS\_EXIT\_CRITICAL\_SECTION}{UTILS\_EXIT\_CRITICAL\_SECTION}}
+{\footnotesize\ttfamily \label{utilities__conf_8h_add097394dc85df56c52d30fec59475cc} 
+\+\#define UTILS\+\_\+\+EXIT\+\_\+\+CRITICAL\+\_\+\+SECTION(\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+{\bfseries Value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\_\_set\_PRIMASK(\ primask\_bit\ )}
+
+\end{DoxyCode}
+\Hypertarget{utilities__conf_8h_a9ad354d3f091d1f713c8b34a9e8213e3}\index{utilities\_conf.h@{utilities\_conf.h}!UTILS\_MEMSET8@{UTILS\_MEMSET8}}
+\index{UTILS\_MEMSET8@{UTILS\_MEMSET8}!utilities\_conf.h@{utilities\_conf.h}}
+\doxysubsubsection{\texorpdfstring{UTILS\_MEMSET8}{UTILS\_MEMSET8}}
+{\footnotesize\ttfamily \label{utilities__conf_8h_a9ad354d3f091d1f713c8b34a9e8213e3} 
+\+\#define UTILS\+\_\+\+MEMSET8(\begin{DoxyParamCaption}\item[{}]{dest}{, }\item[{}]{value}{, }\item[{}]{size}{}\end{DoxyParamCaption})}
+
+{\bfseries Value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{memset(\ dest,\ value,\ size);}
+
+\end{DoxyCode}

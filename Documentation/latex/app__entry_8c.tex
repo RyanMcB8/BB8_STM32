@@ -1,0 +1,220 @@
+\doxysection{C:\+/\+\+Users/\+ryanm/\+\+Documents/\+\+Design\+Group/\+\+BB8\+\_\+\+STM32/\+\+Firmware/\+\+Core/\+\+Src/\+app\+\_\+entry.c File Reference}
+\hypertarget{app__entry_8c}{}\label{app__entry_8c}\index{C:/Users/ryanm/Documents/DesignGroup/BB8\_STM32/Firmware/Core/Src/app\_entry.c@{C:/Users/ryanm/Documents/DesignGroup/BB8\_STM32/Firmware/Core/Src/app\_entry.c}}
+
+
+Entry point of the application.  
+
+
+{\ttfamily \+\#include "{}app\+\_\+common.\+h"{}}\newline
+{\ttfamily \+\#include "{}main.\+h"{}}\newline
+{\ttfamily \+\#include "{}app\+\_\+entry.\+h"{}}\newline
+{\ttfamily \+\#include "{}app\+\_\+ble.\+h"{}}\newline
+{\ttfamily \+\#include "{}ble.\+h"{}}\newline
+{\ttfamily \+\#include "{}tl.\+h"{}}\newline
+{\ttfamily \+\#include "{}stm32\+\_\+seq.\+h"{}}\newline
+{\ttfamily \+\#include "{}shci\+\_\+tl.\+h"{}}\newline
+{\ttfamily \+\#include "{}stm32\+\_\+lpm.\+h"{}}\newline
+{\ttfamily \+\#include "{}app\+\_\+debug.\+h"{}}\newline
+{\ttfamily \+\#include "{}dbg\+\_\+trace.\+h"{}}\newline
+{\ttfamily \+\#include "{}shci.\+h"{}}\newline
+{\ttfamily \+\#include "{}otp.\+h"{}}\newline
+Include dependency graph for app\+\_\+entry.\+c:\+
+% FIG 0
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{app__entry_8c_aa2ac54564b3514084afd2c5dafe9d232}\label{app__entry_8c_aa2ac54564b3514084afd2c5dafe9d232} 
+\+\#define {\bfseries POOL\+\_\+\+SIZE}~(\doxymbox{\hyperlink{app__conf_8h_a501e1da937d31f57747eaa19e3a05312}{CFG\+\_\+\+TLBLE\+\_\+\+EVT\+\_\+\+QUEUE\+\_\+\+LENGTH}}\texorpdfstring{$\ast$}{*}4U\texorpdfstring{$\ast$}{*}DIVC((sizeof(TL\+\_\+\+Packet\+Header\+\_\+t) + TL\+\_\+\+BLE\+\_\+\+EVENT\+\_\+\+FRAME\+\_\+\+SIZE), 4U))
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{app__entry_8c_ac866233e18dd7f11d0703a6e5df4b8e6}{PLACE\+\_\+\+IN\+\_\+\+SECTION}} ("{}MB\+\_\+\+MEM2"{})
+\item 
+void \doxymbox{\hyperlink{app__entry_8c_a4d1fb9c131dd2089107322bec3b3d9bd}{MX\+\_\+\+APPE\+\_\+\+Init}} (void)
+\item 
+\Hypertarget{app__entry_8c_a6289913b3632c63f5aa53e29ffc9f03f}\label{app__entry_8c_a6289913b3632c63f5aa53e29ffc9f03f} 
+void {\bfseries Init\+\_\+\+Smps} (void)
+\item 
+\Hypertarget{app__entry_8c_a575be45f9c1ffea11900110c0ef3445f}\label{app__entry_8c_a575be45f9c1ffea11900110c0ef3445f} 
+void {\bfseries Init\+\_\+\+Exti} (void)
+\item 
+\Hypertarget{app__entry_8c_a517492e7527a8819dbb8d5560e6f59fb}\label{app__entry_8c_a517492e7527a8819dbb8d5560e6f59fb} 
+static void {\bfseries Reset\+\_\+\+Device} (void)
+\item 
+static void \doxymbox{\hyperlink{app__entry_8c_ad80014b38c6148667605dbbb8d667dee}{Config\+\_\+\+HSE}} (void)
+\item 
+\Hypertarget{app__entry_8c_a2084ed3cfce16ed499ec58acae4f1f2c}\label{app__entry_8c_a2084ed3cfce16ed499ec58acae4f1f2c} 
+static void {\bfseries System\+\_\+\+Init} (void)
+\item 
+\Hypertarget{app__entry_8c_a0dec8cda848cb569bfd10c213406c9ad}\label{app__entry_8c_a0dec8cda848cb569bfd10c213406c9ad} 
+static void {\bfseries Init\+\_\+\+Rtc} (void)
+\item 
+static void \doxymbox{\hyperlink{app__entry_8c_a193cd9c7ce3bd506dfb0302976e456f0}{System\+Power\+\_\+\+Config}} (void)
+\begin{DoxyCompactList}\small\item\em Configure the system for power optimization. \end{DoxyCompactList}\item 
+static void \doxymbox{\hyperlink{app__entry_8c_afbba8d842ca13d4b3d69756d4e083981}{appe\+\_\+\+Tl\+\_\+\+Init}} (void)
+\item 
+\Hypertarget{app__entry_8c_a8d6ce2063ebc309ef85627ffb93c630f}\label{app__entry_8c_a8d6ce2063ebc309ef85627ffb93c630f} 
+static void {\bfseries APPE\+\_\+\+Sys\+Status\+Not} (SHCI\+\_\+\+TL\+\_\+\+Cmd\+Status\+\_\+t status)
+\item 
+static void \doxymbox{\hyperlink{app__entry_8c_a27b9b353c606559878803ff4764c00fa}{APPE\+\_\+\+Sys\+User\+Evt\+Rx}} (void \texorpdfstring{$\ast$}{*}p\+Payload)
+\item 
+static void \doxymbox{\hyperlink{app__entry_8c_a4f88ccedf8dad55552e276211fd92112}{APPE\+\_\+\+Sys\+Evt\+Error}} (void \texorpdfstring{$\ast$}{*}p\+Payload)
+\begin{DoxyCompactList}\small\item\em Notify a system error coming from the M0 firmware. \end{DoxyCompactList}\item 
+static void \doxymbox{\hyperlink{app__entry_8c_a051f11ff3923483faeb97c26949db9b7}{APPE\+\_\+\+Sys\+Evt\+Ready\+Processing}} (void \texorpdfstring{$\ast$}{*}p\+Payload)
+\item 
+void \doxymbox{\hyperlink{app__entry_8c_ae63b34eea12780ca2e1100c2402da18e}{HAL\+\_\+\+Delay}} (uint32\+\_\+t Delay)
+\item 
+\Hypertarget{app__entry_8c_a3fb12c54a4603818d8be588d313872dd}\label{app__entry_8c_a3fb12c54a4603818d8be588d313872dd} 
+void {\bfseries MX\+\_\+\+APPE\+\_\+\+Process} (void)
+\item 
+\Hypertarget{app__entry_8c_a5efb8394fc5244b650c8cc8f642e6271}\label{app__entry_8c_a5efb8394fc5244b650c8cc8f642e6271} 
+void {\bfseries UTIL\+\_\+\+SEQ\+\_\+\+Idle} (void)
+\item 
+\Hypertarget{app__entry_8c_a8a318f5eaf84f0b62945f11124b6c695}\label{app__entry_8c_a8a318f5eaf84f0b62945f11124b6c695} 
+void {\bfseries shci\+\_\+notify\+\_\+asynch\+\_\+evt} (void \texorpdfstring{$\ast$}{*}pdata)
+\item 
+\Hypertarget{app__entry_8c_aace80fa6b0232a3d1775b3b935cf6f80}\label{app__entry_8c_aace80fa6b0232a3d1775b3b935cf6f80} 
+void {\bfseries shci\+\_\+cmd\+\_\+resp\+\_\+release} (uint32\+\_\+t flag)
+\item 
+\Hypertarget{app__entry_8c_a006624c0d3c84b18905b1d08e71444d7}\label{app__entry_8c_a006624c0d3c84b18905b1d08e71444d7} 
+void {\bfseries shci\+\_\+cmd\+\_\+resp\+\_\+wait} (uint32\+\_\+t timeout)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{app__entry_8c_aa0c7fca836406ade332e1e3f1039d8ab}\label{app__entry_8c_aa0c7fca836406ade332e1e3f1039d8ab} 
+RTC\+\_\+\+Handle\+Type\+Def {\bfseries hrtc}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Entry point of the application. 
+
+\begin{DoxyAuthor}{Author}
+MCD Application Team 
+\end{DoxyAuthor}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+Copyright (c) 2026 STMicroelectronics. All rights reserved.
+
+This software is licensed under terms that can be found in the LICENSE file in the root directory of this software component. If no LICENSE file comes with this software, it is provided AS-\/\+IS. 
+
+\label{doc-func-members}
+\Hypertarget{app__entry_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{app__entry_8c_a4f88ccedf8dad55552e276211fd92112}\index{app\_entry.c@{app\_entry.c}!APPE\_SysEvtError@{APPE\_SysEvtError}}
+\index{APPE\_SysEvtError@{APPE\_SysEvtError}!app\_entry.c@{app\_entry.c}}
+\doxysubsubsection{\texorpdfstring{APPE\_SysEvtError()}{APPE\_SysEvtError()}}
+{\footnotesize\ttfamily \label{app__entry_8c_a4f88ccedf8dad55552e276211fd92112} 
+void APPE\+\_\+\+Sys\+Evt\+Error (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{p\+Payload}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Notify a system error coming from the M0 firmware. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Error\+Code} & :\+ error\+Code detected by the M0 firmware\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{app__entry_8c_a051f11ff3923483faeb97c26949db9b7}\index{app\_entry.c@{app\_entry.c}!APPE\_SysEvtReadyProcessing@{APPE\_SysEvtReadyProcessing}}
+\index{APPE\_SysEvtReadyProcessing@{APPE\_SysEvtReadyProcessing}!app\_entry.c@{app\_entry.c}}
+\doxysubsubsection{\texorpdfstring{APPE\_SysEvtReadyProcessing()}{APPE\_SysEvtReadyProcessing()}}
+{\footnotesize\ttfamily \label{app__entry_8c_a051f11ff3923483faeb97c26949db9b7} 
+void APPE\+\_\+\+Sys\+Evt\+Ready\+Processing (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{p\+Payload}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+The wireless firmware is running on the CPU2
+
+Return the device revision identifier \begin{DoxyNote}{Note}
+This field indicates the revision of the device. @rmtoll DBGMCU\+\_\+\+IDCODE REV\+\_\+\+ID LL\+\_\+\+DBGMCU\+\_\+\+Get\+Revision\+ID 
+\end{DoxyNote}
+
+\begin{DoxyRetVals}{Return values}
+{\em Values} & between Min\+\_\+\+Data=0x00 and Max\+\_\+\+Data=0x\+FFFF\\
+\hline
+\end{DoxyRetVals}
+The FUS firmware is running on the CPU2 In the scope of this application, there should be no case when we get here\Hypertarget{app__entry_8c_a27b9b353c606559878803ff4764c00fa}\index{app\_entry.c@{app\_entry.c}!APPE\_SysUserEvtRx@{APPE\_SysUserEvtRx}}
+\index{APPE\_SysUserEvtRx@{APPE\_SysUserEvtRx}!app\_entry.c@{app\_entry.c}}
+\doxysubsubsection{\texorpdfstring{APPE\_SysUserEvtRx()}{APPE\_SysUserEvtRx()}}
+{\footnotesize\ttfamily \label{app__entry_8c_a27b9b353c606559878803ff4764c00fa} 
+void APPE\+\_\+\+Sys\+User\+Evt\+Rx (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{p\+Payload}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+The type of the payload for a system user event is t\+SHCI\+\_\+\+User\+Evt\+Rx\+Param When the system event is both :\+
+\begin{DoxyItemize}
+\item a ready event (subevtcode = SHCI\+\_\+\+SUB\+\_\+\+EVT\+\_\+\+CODE\+\_\+\+READY)
+\item reported by the FUS (sysevt\+\_\+ready\+\_\+rsp == FUS\+\_\+\+FW\+\_\+\+RUNNING) The buffer shall not be released (eg ((t\+SHCI\+\_\+\+User\+Evt\+Rx\+Param\texorpdfstring{$\ast$}{*})p\+Payload)-\/\texorpdfstring{$>$}{>}status shall be set to SHCI\+\_\+\+TL\+\_\+\+User\+Event\+Flow\+\_\+\+Disable) When the status is not filled, the buffer is released by default 
+\end{DoxyItemize}\Hypertarget{app__entry_8c_afbba8d842ca13d4b3d69756d4e083981}\index{app\_entry.c@{app\_entry.c}!appe\_Tl\_Init@{appe\_Tl\_Init}}
+\index{appe\_Tl\_Init@{appe\_Tl\_Init}!app\_entry.c@{app\_entry.c}}
+\doxysubsubsection{\texorpdfstring{appe\_Tl\_Init()}{appe\_Tl\_Init()}}
+{\footnotesize\ttfamily \label{app__entry_8c_afbba8d842ca13d4b3d69756d4e083981} 
+void appe\+\_\+\+Tl\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\texorpdfstring{$<$}{<} Reference table initialization
+
+\texorpdfstring{$<$}{<} System channel initialization
+
+\texorpdfstring{$<$}{<} Memory Manager channel initialization\Hypertarget{app__entry_8c_ad80014b38c6148667605dbbb8d667dee}\index{app\_entry.c@{app\_entry.c}!Config\_HSE@{Config\_HSE}}
+\index{Config\_HSE@{Config\_HSE}!app\_entry.c@{app\_entry.c}}
+\doxysubsubsection{\texorpdfstring{Config\_HSE()}{Config\_HSE()}}
+{\footnotesize\ttfamily \label{app__entry_8c_ad80014b38c6148667605dbbb8d667dee} 
+void Config\+\_\+\+HSE (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Read HSE\+\_\+\+Tuning from OTP\Hypertarget{app__entry_8c_ae63b34eea12780ca2e1100c2402da18e}\index{app\_entry.c@{app\_entry.c}!HAL\_Delay@{HAL\_Delay}}
+\index{HAL\_Delay@{HAL\_Delay}!app\_entry.c@{app\_entry.c}}
+\doxysubsubsection{\texorpdfstring{HAL\_Delay()}{HAL\_Delay()}}
+{\footnotesize\ttfamily \label{app__entry_8c_ae63b34eea12780ca2e1100c2402da18e} 
+void HAL\+\_\+\+Delay (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Delay}{}\end{DoxyParamCaption})}
+
+\texorpdfstring{$<$}{<} Clear SLEEPDEEP bit of Cortex System Control Register
+
+This option is used to ensure that store operations are completed\Hypertarget{app__entry_8c_a4d1fb9c131dd2089107322bec3b3d9bd}\index{app\_entry.c@{app\_entry.c}!MX\_APPE\_Init@{MX\_APPE\_Init}}
+\index{MX\_APPE\_Init@{MX\_APPE\_Init}!app\_entry.c@{app\_entry.c}}
+\doxysubsubsection{\texorpdfstring{MX\_APPE\_Init()}{MX\_APPE\_Init()}}
+{\footnotesize\ttfamily \label{app__entry_8c_a4d1fb9c131dd2089107322bec3b3d9bd} 
+void MX\+\_\+\+APPE\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+\texorpdfstring{$<$}{<} System initialization
+
+\texorpdfstring{$<$}{<} Configure the system Power Mode
+
+\texorpdfstring{$<$}{<} Initialize the Timer\+Server
+
+From now, the application is waiting for the ready event (VS\+\_\+\+HCI\+\_\+\+C2\+\_\+\+Ready) received on the system channel before starting the Stack This system event is received with \doxylink{app__entry_8c_a27b9b353c606559878803ff4764c00fa}{APPE\+\_\+\+Sys\+User\+Evt\+Rx()}\Hypertarget{app__entry_8c_ac866233e18dd7f11d0703a6e5df4b8e6}\index{app\_entry.c@{app\_entry.c}!PLACE\_IN\_SECTION@{PLACE\_IN\_SECTION}}
+\index{PLACE\_IN\_SECTION@{PLACE\_IN\_SECTION}!app\_entry.c@{app\_entry.c}}
+\doxysubsubsection{\texorpdfstring{PLACE\_IN\_SECTION()}{PLACE\_IN\_SECTION()}}
+{\footnotesize\ttfamily \label{app__entry_8c_ac866233e18dd7f11d0703a6e5df4b8e6} 
+PLACE\+\_\+\+IN\+\_\+\+SECTION (\begin{DoxyParamCaption}\item[{"{}MB\+\_\+\+MEM2"{}}]{}{}\end{DoxyParamCaption})}
+
+The OPTVERR flag is wrongly set at power on It shall be cleared before using any HAL\+\_\+\+FLASH\+\_\+xxx() api
+
+Reset some configurations so that the system behave in the same way when either out of n\+Reset or Power On\Hypertarget{app__entry_8c_a193cd9c7ce3bd506dfb0302976e456f0}\index{app\_entry.c@{app\_entry.c}!SystemPower\_Config@{SystemPower\_Config}}
+\index{SystemPower\_Config@{SystemPower\_Config}!app\_entry.c@{app\_entry.c}}
+\doxysubsubsection{\texorpdfstring{SystemPower\_Config()}{SystemPower\_Config()}}
+{\footnotesize\ttfamily \label{app__entry_8c_a193cd9c7ce3bd506dfb0302976e456f0} 
+void System\+Power\+\_\+\+Config (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Configure the system for power optimization. 
+
+\begin{DoxyNote}{Note}
+This API configures the system to be ready for low power mode
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+Select HSI as system clock source after Wake Up from Stop mode

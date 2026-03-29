@@ -1,0 +1,101 @@
+\doxysection{C:\+/\+\+Users/\+ryanm/\+\+Documents/\+\+Design\+Group/\+\+BB8\+\_\+\+STM32/\+\+Firmware/\+\+Core/\+\+Inc/\+main.h File Reference}
+\hypertarget{main_8h}{}\label{main_8h}\index{C:/Users/ryanm/Documents/DesignGroup/BB8\_STM32/Firmware/Core/Inc/main.h@{C:/Users/ryanm/Documents/DesignGroup/BB8\_STM32/Firmware/Core/Inc/main.h}}
+
+
+:\+ Header for \doxylink{main_8c}{main.\+c} file. This file contains the common defines of the application.  
+
+
+{\ttfamily \+\#include "{}stm32wbxx\+\_\+hal.\+h"{}}\newline
+{\ttfamily \+\#include "{}app\+\_\+conf.\+h"{}}\newline
+{\ttfamily \+\#include "{}app\+\_\+entry.\+h"{}}\newline
+{\ttfamily \+\#include "{}app\+\_\+common.\+h"{}}\newline
+Include dependency graph for main.\+h:\+
+% FIG 0
+This graph shows which files directly or indirectly include this file:\+
+% FIG 1
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{main_8h_a4fa02cea340d70fd7251b41bdd633795}\label{main_8h_a4fa02cea340d70fd7251b41bdd633795} 
+\+\#define {\bfseries MOTOR2\+\_\+\+FAULT\+\_\+\+Pin}~GPIO\+\_\+\+PIN\+\_\+13
+\item 
+\Hypertarget{main_8h_a7e1e5fd2121bc45a67162fb7e6512e00}\label{main_8h_a7e1e5fd2121bc45a67162fb7e6512e00} 
+\+\#define {\bfseries MOTOR2\+\_\+\+FAULT\+\_\+\+GPIO\+\_\+\+Port}~GPIOC
+\item 
+\Hypertarget{main_8h_a30237c6db20f9a8da4cd341ebbd5b111}\label{main_8h_a30237c6db20f9a8da4cd341ebbd5b111} 
+\+\#define {\bfseries MOTOR1\+\_\+\+STEP\+\_\+\+Pin}~GPIO\+\_\+\+PIN\+\_\+0
+\item 
+\Hypertarget{main_8h_aa5eab723c0c672d10c77db47e613d5d8}\label{main_8h_aa5eab723c0c672d10c77db47e613d5d8} 
+\+\#define {\bfseries MOTOR1\+\_\+\+STEP\+\_\+\+GPIO\+\_\+\+Port}~GPIOA
+\item 
+\Hypertarget{main_8h_a5498753df81c15e31f0799c6a0c420e1}\label{main_8h_a5498753df81c15e31f0799c6a0c420e1} 
+\+\#define {\bfseries MOTOR2\+\_\+\+EN\+\_\+\+BAR\+\_\+\+Pin}~GPIO\+\_\+\+PIN\+\_\+8
+\item 
+\Hypertarget{main_8h_aa0c0c0bef24613a7025a1c4d99a8d458}\label{main_8h_aa0c0c0bef24613a7025a1c4d99a8d458} 
+\+\#define {\bfseries MOTOR2\+\_\+\+EN\+\_\+\+BAR\+\_\+\+GPIO\+\_\+\+Port}~GPIOA
+\item 
+\Hypertarget{main_8h_a7f1f1d18df6cc96e9b2d3eb60c5fbfb8}\label{main_8h_a7f1f1d18df6cc96e9b2d3eb60c5fbfb8} 
+\+\#define {\bfseries MOTOR1\+\_\+\+FAULT\+\_\+\+Pin}~GPIO\+\_\+\+PIN\+\_\+10
+\item 
+\Hypertarget{main_8h_a842033f65a0612f648cefe41e61dba0e}\label{main_8h_a842033f65a0612f648cefe41e61dba0e} 
+\+\#define {\bfseries MOTOR1\+\_\+\+FAULT\+\_\+\+GPIO\+\_\+\+Port}~GPIOA
+\item 
+\Hypertarget{main_8h_ad4089391055b685878bc5016bbe23129}\label{main_8h_ad4089391055b685878bc5016bbe23129} 
+\+\#define {\bfseries MOTOR2\+\_\+\+STEP\+\_\+\+Pin}~GPIO\+\_\+\+PIN\+\_\+11
+\item 
+\Hypertarget{main_8h_a805c13c661ddf2e4d62506d65ee3f876}\label{main_8h_a805c13c661ddf2e4d62506d65ee3f876} 
+\+\#define {\bfseries MOTOR2\+\_\+\+STEP\+\_\+\+GPIO\+\_\+\+Port}~GPIOA
+\item 
+\Hypertarget{main_8h_a6927234f13247de9413bddc276e76ade}\label{main_8h_a6927234f13247de9413bddc276e76ade} 
+\+\#define {\bfseries MOTOR2\+\_\+\+DIR\+\_\+\+Pin}~GPIO\+\_\+\+PIN\+\_\+15
+\item 
+\Hypertarget{main_8h_ae0dc91437f50e39be3fb5a002e082d6d}\label{main_8h_ae0dc91437f50e39be3fb5a002e082d6d} 
+\+\#define {\bfseries MOTOR2\+\_\+\+DIR\+\_\+\+GPIO\+\_\+\+Port}~GPIOA
+\item 
+\Hypertarget{main_8h_a003adcd6351ece54118be7d80434e120}\label{main_8h_a003adcd6351ece54118be7d80434e120} 
+\+\#define {\bfseries MOTOR1\+\_\+\+EN\+\_\+\+BAR\+\_\+\+Pin}~GPIO\+\_\+\+PIN\+\_\+0
+\item 
+\Hypertarget{main_8h_a0a6c4aee6f13fefb4e9f9a37f0da78ed}\label{main_8h_a0a6c4aee6f13fefb4e9f9a37f0da78ed} 
+\+\#define {\bfseries MOTOR1\+\_\+\+EN\+\_\+\+BAR\+\_\+\+GPIO\+\_\+\+Port}~GPIOD
+\item 
+\Hypertarget{main_8h_af9cf6c7b77f6eca08905e86f2e4507d9}\label{main_8h_af9cf6c7b77f6eca08905e86f2e4507d9} 
+\+\#define {\bfseries MOTOR1\+\_\+\+DIR\+\_\+\+Pin}~GPIO\+\_\+\+PIN\+\_\+1
+\item 
+\Hypertarget{main_8h_ae1525abc8be7ae8d0475331f9c701b51}\label{main_8h_ae1525abc8be7ae8d0475331f9c701b51} 
+\+\#define {\bfseries MOTOR1\+\_\+\+DIR\+\_\+\+GPIO\+\_\+\+Port}~GPIOD
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{main_8h_a1730ffe1e560465665eb47d9264826f9}{Error\+\_\+\+Handler}} (void)
+\begin{DoxyCompactList}\small\item\em This function is executed in case of error occurrence. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+:\+ Header for \doxylink{main_8c}{main.\+c} file. This file contains the common defines of the application. 
+
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+Copyright (c) 2026 STMicroelectronics. All rights reserved.
+
+This software is licensed under terms that can be found in the LICENSE file in the root directory of this software component. If no LICENSE file comes with this software, it is provided AS-\/\+IS. 
+
+\label{doc-func-members}
+\Hypertarget{main_8h_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{main_8h_a1730ffe1e560465665eb47d9264826f9}\index{main.h@{main.h}!Error\_Handler@{Error\_Handler}}
+\index{Error\_Handler@{Error\_Handler}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{Error\_Handler()}{Error\_Handler()}}
+{\footnotesize\ttfamily \label{main_8h_a1730ffe1e560465665eb47d9264826f9} 
+void Error\+\_\+\+Handler (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+This function is executed in case of error occurrence. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}

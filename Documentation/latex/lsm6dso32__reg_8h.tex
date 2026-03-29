@@ -1,0 +1,1745 @@
+\doxysection{C:\+/\+\+Users/\+ryanm/\+\+Documents/\+\+Design\+Group/\+\+BB8\+\_\+\+STM32/\+\+Firmware/\+\+Custom\+\_\+\+Drivers/\+\+Inc/\+lsm6dso32\+\_\+reg.h File Reference}
+\hypertarget{lsm6dso32__reg_8h}{}\label{lsm6dso32__reg_8h}\index{C:/Users/ryanm/Documents/DesignGroup/BB8\_STM32/Firmware/Custom\_Drivers/Inc/lsm6dso32\_reg.h@{C:/Users/ryanm/Documents/DesignGroup/BB8\_STM32/Firmware/Custom\_Drivers/Inc/lsm6dso32\_reg.h}}
+
+
+This file contains all the functions prototypes for the \doxylink{lsm6dso32__reg_8c}{lsm6dso32\+\_\+reg.\+c} driver.  
+
+
+{\ttfamily \+\#include $<$stdint.\+h$>$}\newline
+{\ttfamily \+\#include $<$stddef.\+h$>$}\newline
+{\ttfamily \+\#include $<$math.\+h$>$}\newline
+Include dependency graph for lsm6dso32\+\_\+reg.\+h:\+
+% FIG 0
+This graph shows which files directly or indirectly include this file:\+
+% FIG 1
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{structbitwise__t}{bitwise\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structucf__line__t}{ucf\+\_\+line\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__func__cfg__access__t}{lsm6dso32\+\_\+func\+\_\+cfg\+\_\+access\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__pin__ctrl__t}{lsm6dso32\+\_\+pin\+\_\+ctrl\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__fifo__ctrl1__t}{lsm6dso32\+\_\+fifo\+\_\+ctrl1\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__fifo__ctrl2__t}{lsm6dso32\+\_\+fifo\+\_\+ctrl2\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__fifo__ctrl3__t}{lsm6dso32\+\_\+fifo\+\_\+ctrl3\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__fifo__ctrl4__t}{lsm6dso32\+\_\+fifo\+\_\+ctrl4\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__counter__bdr__reg1__t}{lsm6dso32\+\_\+counter\+\_\+bdr\+\_\+reg1\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__counter__bdr__reg2__t}{lsm6dso32\+\_\+counter\+\_\+bdr\+\_\+reg2\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__int1__ctrl__t}{lsm6dso32\+\_\+int1\+\_\+ctrl\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__int2__ctrl__t}{lsm6dso32\+\_\+int2\+\_\+ctrl\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__ctrl1__xl__t}{lsm6dso32\+\_\+ctrl1\+\_\+xl\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__ctrl2__g__t}{lsm6dso32\+\_\+ctrl2\+\_\+g\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__ctrl3__c__t}{lsm6dso32\+\_\+ctrl3\+\_\+c\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__ctrl4__c__t}{lsm6dso32\+\_\+ctrl4\+\_\+c\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__ctrl5__c__t}{lsm6dso32\+\_\+ctrl5\+\_\+c\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__ctrl6__c__t}{lsm6dso32\+\_\+ctrl6\+\_\+c\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__ctrl7__g__t}{lsm6dso32\+\_\+ctrl7\+\_\+g\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__ctrl8__xl__t}{lsm6dso32\+\_\+ctrl8\+\_\+xl\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__ctrl9__xl__t}{lsm6dso32\+\_\+ctrl9\+\_\+xl\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__ctrl10__c__t}{lsm6dso32\+\_\+ctrl10\+\_\+c\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__all__int__src__t}{lsm6dso32\+\_\+all\+\_\+int\+\_\+src\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__wake__up__src__t}{lsm6dso32\+\_\+wake\+\_\+up\+\_\+src\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__tap__src__t}{lsm6dso32\+\_\+tap\+\_\+src\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__d6d__src__t}{lsm6dso32\+\_\+d6d\+\_\+src\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__status__reg__t}{lsm6dso32\+\_\+status\+\_\+reg\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__emb__func__status__mainpage__t}{lsm6dso32\+\_\+emb\+\_\+func\+\_\+status\+\_\+mainpage\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__fsm__status__a__mainpage__t}{lsm6dso32\+\_\+fsm\+\_\+status\+\_\+a\+\_\+mainpage\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__fsm__status__b__mainpage__t}{lsm6dso32\+\_\+fsm\+\_\+status\+\_\+b\+\_\+mainpage\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__status__master__mainpage__t}{lsm6dso32\+\_\+status\+\_\+master\+\_\+mainpage\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__fifo__status1__t}{lsm6dso32\+\_\+fifo\+\_\+status1\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__fifo__status2__t}{lsm6dso32\+\_\+fifo\+\_\+status2\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__tap__cfg0__t}{lsm6dso32\+\_\+tap\+\_\+cfg0\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__tap__cfg1__t}{lsm6dso32\+\_\+tap\+\_\+cfg1\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__tap__cfg2__t}{lsm6dso32\+\_\+tap\+\_\+cfg2\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__tap__ths__6d__t}{lsm6dso32\+\_\+tap\+\_\+ths\+\_\+6d\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__int__dur2__t}{lsm6dso32\+\_\+int\+\_\+dur2\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__wake__up__ths__t}{lsm6dso32\+\_\+wake\+\_\+up\+\_\+ths\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__wake__up__dur__t}{lsm6dso32\+\_\+wake\+\_\+up\+\_\+dur\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__free__fall__t}{lsm6dso32\+\_\+free\+\_\+fall\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__md1__cfg__t}{lsm6dso32\+\_\+md1\+\_\+cfg\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__md2__cfg__t}{lsm6dso32\+\_\+md2\+\_\+cfg\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__i3c__bus__avb__t}{lsm6dso32\+\_\+i3c\+\_\+bus\+\_\+avb\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__internal__freq__fine__t}{lsm6dso32\+\_\+internal\+\_\+freq\+\_\+fine\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__fifo__data__out__tag__t}{lsm6dso32\+\_\+fifo\+\_\+data\+\_\+out\+\_\+tag\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__page__sel__t}{lsm6dso32\+\_\+page\+\_\+sel\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__emb__func__en__a__t}{lsm6dso32\+\_\+emb\+\_\+func\+\_\+en\+\_\+a\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__emb__func__en__b__t}{lsm6dso32\+\_\+emb\+\_\+func\+\_\+en\+\_\+b\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__page__address__t}{lsm6dso32\+\_\+page\+\_\+address\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__page__value__t}{lsm6dso32\+\_\+page\+\_\+value\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__emb__func__int1__t}{lsm6dso32\+\_\+emb\+\_\+func\+\_\+int1\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__fsm__int1__a__t}{lsm6dso32\+\_\+fsm\+\_\+int1\+\_\+a\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__fsm__int1__b__t}{lsm6dso32\+\_\+fsm\+\_\+int1\+\_\+b\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__emb__func__int2__t}{lsm6dso32\+\_\+emb\+\_\+func\+\_\+int2\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__fsm__int2__a__t}{lsm6dso32\+\_\+fsm\+\_\+int2\+\_\+a\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__fsm__int2__b__t}{lsm6dso32\+\_\+fsm\+\_\+int2\+\_\+b\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__emb__func__status__t}{lsm6dso32\+\_\+emb\+\_\+func\+\_\+status\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__fsm__status__a__t}{lsm6dso32\+\_\+fsm\+\_\+status\+\_\+a\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__fsm__status__b__t}{lsm6dso32\+\_\+fsm\+\_\+status\+\_\+b\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__page__rw__t}{lsm6dso32\+\_\+page\+\_\+rw\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__emb__func__fifo__cfg__t}{lsm6dso32\+\_\+emb\+\_\+func\+\_\+fifo\+\_\+cfg\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__fsm__enable__a__t}{lsm6dso32\+\_\+fsm\+\_\+enable\+\_\+a\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__fsm__enable__b__t}{lsm6dso32\+\_\+fsm\+\_\+enable\+\_\+b\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__fsm__long__counter__clear__t}{lsm6dso32\+\_\+fsm\+\_\+long\+\_\+counter\+\_\+clear\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__fsm__outs1__t}{lsm6dso32\+\_\+fsm\+\_\+outs1\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__fsm__outs2__t}{lsm6dso32\+\_\+fsm\+\_\+outs2\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__fsm__outs3__t}{lsm6dso32\+\_\+fsm\+\_\+outs3\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__fsm__outs4__t}{lsm6dso32\+\_\+fsm\+\_\+outs4\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__fsm__outs5__t}{lsm6dso32\+\_\+fsm\+\_\+outs5\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__fsm__outs6__t}{lsm6dso32\+\_\+fsm\+\_\+outs6\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__fsm__outs7__t}{lsm6dso32\+\_\+fsm\+\_\+outs7\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__fsm__outs8__t}{lsm6dso32\+\_\+fsm\+\_\+outs8\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__fsm__outs9__t}{lsm6dso32\+\_\+fsm\+\_\+outs9\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__fsm__outs10__t}{lsm6dso32\+\_\+fsm\+\_\+outs10\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__fsm__outs11__t}{lsm6dso32\+\_\+fsm\+\_\+outs11\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__fsm__outs12__t}{lsm6dso32\+\_\+fsm\+\_\+outs12\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__fsm__outs13__t}{lsm6dso32\+\_\+fsm\+\_\+outs13\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__fsm__outs14__t}{lsm6dso32\+\_\+fsm\+\_\+outs14\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__fsm__outs15__t}{lsm6dso32\+\_\+fsm\+\_\+outs15\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__fsm__outs16__t}{lsm6dso32\+\_\+fsm\+\_\+outs16\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__emb__func__odr__cfg__b__t}{lsm6dso32\+\_\+emb\+\_\+func\+\_\+odr\+\_\+cfg\+\_\+b\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__emb__func__src__t}{lsm6dso32\+\_\+emb\+\_\+func\+\_\+src\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__emb__func__init__a__t}{lsm6dso32\+\_\+emb\+\_\+func\+\_\+init\+\_\+a\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__emb__func__init__b__t}{lsm6dso32\+\_\+emb\+\_\+func\+\_\+init\+\_\+b\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__mag__cfg__a__t}{lsm6dso32\+\_\+mag\+\_\+cfg\+\_\+a\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__mag__cfg__b__t}{lsm6dso32\+\_\+mag\+\_\+cfg\+\_\+b\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__pedo__cmd__reg__t}{lsm6dso32\+\_\+pedo\+\_\+cmd\+\_\+reg\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__sensor__hub__1__t}{lsm6dso32\+\_\+sensor\+\_\+hub\+\_\+1\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__sensor__hub__2__t}{lsm6dso32\+\_\+sensor\+\_\+hub\+\_\+2\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__sensor__hub__3__t}{lsm6dso32\+\_\+sensor\+\_\+hub\+\_\+3\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__sensor__hub__4__t}{lsm6dso32\+\_\+sensor\+\_\+hub\+\_\+4\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__sensor__hub__5__t}{lsm6dso32\+\_\+sensor\+\_\+hub\+\_\+5\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__sensor__hub__6__t}{lsm6dso32\+\_\+sensor\+\_\+hub\+\_\+6\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__sensor__hub__7__t}{lsm6dso32\+\_\+sensor\+\_\+hub\+\_\+7\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__sensor__hub__8__t}{lsm6dso32\+\_\+sensor\+\_\+hub\+\_\+8\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__sensor__hub__9__t}{lsm6dso32\+\_\+sensor\+\_\+hub\+\_\+9\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__sensor__hub__10__t}{lsm6dso32\+\_\+sensor\+\_\+hub\+\_\+10\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__sensor__hub__11__t}{lsm6dso32\+\_\+sensor\+\_\+hub\+\_\+11\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__sensor__hub__12__t}{lsm6dso32\+\_\+sensor\+\_\+hub\+\_\+12\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__sensor__hub__13__t}{lsm6dso32\+\_\+sensor\+\_\+hub\+\_\+13\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__sensor__hub__14__t}{lsm6dso32\+\_\+sensor\+\_\+hub\+\_\+14\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__sensor__hub__15__t}{lsm6dso32\+\_\+sensor\+\_\+hub\+\_\+15\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__sensor__hub__16__t}{lsm6dso32\+\_\+sensor\+\_\+hub\+\_\+16\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__sensor__hub__17__t}{lsm6dso32\+\_\+sensor\+\_\+hub\+\_\+17\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__sensor__hub__18__t}{lsm6dso32\+\_\+sensor\+\_\+hub\+\_\+18\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__master__config__t}{lsm6dso32\+\_\+master\+\_\+config\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__slv0__add__t}{lsm6dso32\+\_\+slv0\+\_\+add\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__slv0__subadd__t}{lsm6dso32\+\_\+slv0\+\_\+subadd\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__slv0__config__t}{lsm6dso32\+\_\+slv0\+\_\+config\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__slv1__add__t}{lsm6dso32\+\_\+slv1\+\_\+add\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__slv1__subadd__t}{lsm6dso32\+\_\+slv1\+\_\+subadd\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__slv1__config__t}{lsm6dso32\+\_\+slv1\+\_\+config\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__slv2__add__t}{lsm6dso32\+\_\+slv2\+\_\+add\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__slv2__subadd__t}{lsm6dso32\+\_\+slv2\+\_\+subadd\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__slv2__config__t}{lsm6dso32\+\_\+slv2\+\_\+config\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__slv3__add__t}{lsm6dso32\+\_\+slv3\+\_\+add\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__slv3__subadd__t}{lsm6dso32\+\_\+slv3\+\_\+subadd\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__slv3__config__t}{lsm6dso32\+\_\+slv3\+\_\+config\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__datawrite__src__mode__sub__slv0__t}{lsm6dso32\+\_\+datawrite\+\_\+src\+\_\+mode\+\_\+sub\+\_\+slv0\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__status__master__t}{lsm6dso32\+\_\+status\+\_\+master\+\_\+t}}
+\item 
+union \doxymbox{\hyperlink{unionlsm6dso32__reg__t}{lsm6dso32\+\_\+reg\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__all__sources__t}{lsm6dso32\+\_\+all\+\_\+sources\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__pin__int1__route__t}{lsm6dso32\+\_\+pin\+\_\+int1\+\_\+route\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__pin__int2__route__t}{lsm6dso32\+\_\+pin\+\_\+int2\+\_\+route\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__emb__fsm__enable__t}{lsm6dso32\+\_\+emb\+\_\+fsm\+\_\+enable\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__fsm__out__t}{lsm6dso32\+\_\+fsm\+\_\+out\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__emb__sh__read__t}{lsm6dso32\+\_\+emb\+\_\+sh\+\_\+read\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__sh__cfg__write__t}{lsm6dso32\+\_\+sh\+\_\+cfg\+\_\+write\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlsm6dso32__sh__cfg__read__t}{lsm6dso32\+\_\+sh\+\_\+cfg\+\_\+read\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\+\#define {\bfseries DRV\+\_\+\+LITTLE\+\_\+\+ENDIAN}~1234
+\item 
+\+\#define {\bfseries DRV\+\_\+\+BIG\+\_\+\+ENDIAN}~4321
+\item 
+\+\#define \doxymbox{\hyperlink{group___endianness_ga0bbe7363e8dc18e8009385370c9219f2}{DRV\+\_\+\+BYTE\+\_\+\+ORDER}}~DRV\+\_\+\+LITTLE\+\_\+\+ENDIAN
+\item 
+\+\#define {\bfseries MEMS\+\_\+\+SHARED\+\_\+\+TYPES}
+\item 
+\+\#define {\bfseries PROPERTY\+\_\+\+DISABLE}~(0U)
+\item 
+\+\#define {\bfseries PROPERTY\+\_\+\+ENABLE}~(1U)
+\item 
+\+\#define {\bfseries MEMS\+\_\+\+UCF\+\_\+\+SHARED\+\_\+\+TYPES}
+\item 
+\+\#define \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___infos_ga2024d6eaa12acf4b95b251bf56777051}{LSM6\+DSO32\+\_\+\+I2\+C\+\_\+\+ADD\+\_\+L}}~0x\+D5
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+I2\+C\+\_\+\+ADD\+\_\+H}~0x\+D7
+\item 
+\+\#define \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___infos_gaa494c157133f7f55dd14615c12d29c68}{LSM6\+DSO32\+\_\+\+ID}}~0x6C
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+FUNC\+\_\+\+CFG\+\_\+\+ACCESS}~0x01U
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+PIN\+\_\+\+CTRL}~0x02U
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+FIFO\+\_\+\+CTRL1}~0x07U
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+FIFO\+\_\+\+CTRL2}~0x08U
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+FIFO\+\_\+\+CTRL3}~0x09U
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+FIFO\+\_\+\+CTRL4}~0x0\+AU
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+COUNTER\+\_\+\+BDR\+\_\+\+REG1}~0x0\+BU
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+COUNTER\+\_\+\+BDR\+\_\+\+REG2}~0x0\+CU
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+INT1\+\_\+\+CTRL}~0x0\+DU
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+INT2\+\_\+\+CTRL}~0x0\+EU
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+WHO\+\_\+\+AM\+\_\+I}~0x0\+FU
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+CTRL1\+\_\+\+XL}~0x10U
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+CTRL2\+\_\+G}~0x11U
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+CTRL3\+\_\+C}~0x12U
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+CTRL4\+\_\+C}~0x13U
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+CTRL5\+\_\+C}~0x14U
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+CTRL6\+\_\+C}~0x15U
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+CTRL7\+\_\+G}~0x16U
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+CTRL8\+\_\+\+XL}~0x17U
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+CTRL9\+\_\+\+XL}~0x18U
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+CTRL10\+\_\+C}~0x19U
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+ALL\+\_\+\+INT\+\_\+\+SRC}~0x1\+AU
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+WAKE\+\_\+\+UP\+\_\+\+SRC}~0x1\+BU
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+TAP\+\_\+\+SRC}~0x1\+CU
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+D6\+D\+\_\+\+SRC}~0x1\+DU
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+STATUS\+\_\+\+REG}~0x1\+EU
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+OUT\+\_\+\+TEMP\+\_\+L}~0x20U
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+OUT\+\_\+\+TEMP\+\_\+H}~0x21U
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+OUTX\+\_\+\+L\+\_\+G}~0x22U
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+OUTX\+\_\+\+H\+\_\+G}~0x23U
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+OUTY\+\_\+\+L\+\_\+G}~0x24U
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+OUTY\+\_\+\+H\+\_\+G}~0x25U
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+OUTZ\+\_\+\+L\+\_\+G}~0x26U
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+OUTZ\+\_\+\+H\+\_\+G}~0x27U
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+OUTX\+\_\+\+L\+\_\+A}~0x28U
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+OUTX\+\_\+\+H\+\_\+A}~0x29U
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+OUTY\+\_\+\+L\+\_\+A}~0x2\+AU
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+OUTY\+\_\+\+H\+\_\+A}~0x2\+BU
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+OUTZ\+\_\+\+L\+\_\+A}~0x2\+CU
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+OUTZ\+\_\+\+H\+\_\+A}~0x2\+DU
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+EMB\+\_\+\+FUNC\+\_\+\+STATUS\+\_\+\+MAINPAGE}~0x35U
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+FSM\+\_\+\+STATUS\+\_\+\+A\+\_\+\+MAINPAGE}~0x36U
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+FSM\+\_\+\+STATUS\+\_\+\+B\+\_\+\+MAINPAGE}~0x37U
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+STATUS\+\_\+\+MASTER\+\_\+\+MAINPAGE}~0x39U
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+FIFO\+\_\+\+STATUS1}~0x3\+AU
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+FIFO\+\_\+\+STATUS2}~0x3B
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+TIMESTAMP0}~0x40U
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+TIMESTAMP1}~0x41U
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+TIMESTAMP2}~0x42U
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+TIMESTAMP3}~0x43U
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+TAP\+\_\+\+CFG0}~0x56U
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+TAP\+\_\+\+CFG1}~0x57U
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+TAP\+\_\+\+CFG2}~0x58U
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+TAP\+\_\+\+THS\+\_\+6D}~0x59U
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+INT\+\_\+\+DUR2}~0x5\+AU
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+WAKE\+\_\+\+UP\+\_\+\+THS}~0x5\+BU
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+WAKE\+\_\+\+UP\+\_\+\+DUR}~0x5\+CU
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+FREE\+\_\+\+FALL}~0x5\+DU
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+MD1\+\_\+\+CFG}~0x5\+EU
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+MD2\+\_\+\+CFG}~0x5\+FU
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+I3\+C\+\_\+\+BUS\+\_\+\+AVB}~0x62U
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+INTERNAL\+\_\+\+FREQ\+\_\+\+FINE}~0x63U
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+X\+\_\+\+OFS\+\_\+\+USR}~0x73U
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+Y\+\_\+\+OFS\+\_\+\+USR}~0x74U
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+Z\+\_\+\+OFS\+\_\+\+USR}~0x75U
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+FIFO\+\_\+\+DATA\+\_\+\+OUT\+\_\+\+TAG}~0x78U
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+FIFO\+\_\+\+DATA\+\_\+\+OUT\+\_\+\+X\+\_\+L}~0x79U
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+FIFO\+\_\+\+DATA\+\_\+\+OUT\+\_\+\+X\+\_\+H}~0x7\+AU
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+FIFO\+\_\+\+DATA\+\_\+\+OUT\+\_\+\+Y\+\_\+L}~0x7\+BU
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+FIFO\+\_\+\+DATA\+\_\+\+OUT\+\_\+\+Y\+\_\+H}~0x7\+CU
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+FIFO\+\_\+\+DATA\+\_\+\+OUT\+\_\+\+Z\+\_\+L}~0x7\+DU
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+FIFO\+\_\+\+DATA\+\_\+\+OUT\+\_\+\+Z\+\_\+H}~0x7\+EU
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+PAGE\+\_\+\+SEL}~0x02U
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+EMB\+\_\+\+FUNC\+\_\+\+EN\+\_\+A}~0x04U
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+EMB\+\_\+\+FUNC\+\_\+\+EN\+\_\+B}~0x05U
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+PAGE\+\_\+\+ADDRESS}~0x08U
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+PAGE\+\_\+\+VALUE}~0x09U
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+EMB\+\_\+\+FUNC\+\_\+\+INT1}~0x0\+AU
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+FSM\+\_\+\+INT1\+\_\+A}~0x0\+BU
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+FSM\+\_\+\+INT1\+\_\+B}~0x0\+CU
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+EMB\+\_\+\+FUNC\+\_\+\+INT2}~0x0\+EU
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+FSM\+\_\+\+INT2\+\_\+A}~0x0\+FU
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+FSM\+\_\+\+INT2\+\_\+B}~0x10U
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+EMB\+\_\+\+FUNC\+\_\+\+STATUS}~0x12U
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+FSM\+\_\+\+STATUS\+\_\+A}~0x13U
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+FSM\+\_\+\+STATUS\+\_\+B}~0x14U
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+PAGE\+\_\+\+RW}~0x17U
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+EMB\+\_\+\+FUNC\+\_\+\+FIFO\+\_\+\+CFG}~0x44U
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+FSM\+\_\+\+ENABLE\+\_\+A}~0x46U
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+FSM\+\_\+\+ENABLE\+\_\+B}~0x47U
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+FSM\+\_\+\+LONG\+\_\+\+COUNTER\+\_\+L}~0x48U
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+FSM\+\_\+\+LONG\+\_\+\+COUNTER\+\_\+H}~0x49U
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+FSM\+\_\+\+LONG\+\_\+\+COUNTER\+\_\+\+CLEAR}~0x4\+AU
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+FSM\+\_\+\+OUTS1}~0x4\+CU
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+FSM\+\_\+\+OUTS2}~0x4\+DU
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+FSM\+\_\+\+OUTS3}~0x4\+EU
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+FSM\+\_\+\+OUTS4}~0x4\+FU
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+FSM\+\_\+\+OUTS5}~0x50U
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+FSM\+\_\+\+OUTS6}~0x51U
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+FSM\+\_\+\+OUTS7}~0x52U
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+FSM\+\_\+\+OUTS8}~0x53U
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+FSM\+\_\+\+OUTS9}~0x54U
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+FSM\+\_\+\+OUTS10}~0x55U
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+FSM\+\_\+\+OUTS11}~0x56U
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+FSM\+\_\+\+OUTS12}~0x57U
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+FSM\+\_\+\+OUTS13}~0x58U
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+FSM\+\_\+\+OUTS14}~0x59U
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+FSM\+\_\+\+OUTS15}~0x5\+AU
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+FSM\+\_\+\+OUTS16}~0x5\+BU
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+EMB\+\_\+\+FUNC\+\_\+\+ODR\+\_\+\+CFG\+\_\+B}~0x5\+FU
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+STEP\+\_\+\+COUNTER\+\_\+L}~0x62U
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+STEP\+\_\+\+COUNTER\+\_\+H}~0x63U
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+EMB\+\_\+\+FUNC\+\_\+\+SRC}~0x64U
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+EMB\+\_\+\+FUNC\+\_\+\+INIT\+\_\+A}~0x66U
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+EMB\+\_\+\+FUNC\+\_\+\+INIT\+\_\+B}~0x67U
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+MAG\+\_\+\+SENSITIVITY\+\_\+L}~0x\+BAU
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+MAG\+\_\+\+SENSITIVITY\+\_\+H}~0x\+BBU
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+MAG\+\_\+\+OFFX\+\_\+L}~0x\+C0U
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+MAG\+\_\+\+OFFX\+\_\+H}~0x\+C1U
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+MAG\+\_\+\+OFFY\+\_\+L}~0x\+C2U
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+MAG\+\_\+\+OFFY\+\_\+H}~0x\+C3U
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+MAG\+\_\+\+OFFZ\+\_\+L}~0x\+C4U
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+MAG\+\_\+\+OFFZ\+\_\+H}~0x\+C5U
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+MAG\+\_\+\+SI\+\_\+\+XX\+\_\+L}~0x\+C6U
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+MAG\+\_\+\+SI\+\_\+\+XX\+\_\+H}~0x\+C7U
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+MAG\+\_\+\+SI\+\_\+\+XY\+\_\+L}~0x\+C8U
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+MAG\+\_\+\+SI\+\_\+\+XY\+\_\+H}~0x\+C9U
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+MAG\+\_\+\+SI\+\_\+\+XZ\+\_\+L}~0x\+CAU
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+MAG\+\_\+\+SI\+\_\+\+XZ\+\_\+H}~0x\+CBU
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+MAG\+\_\+\+SI\+\_\+\+YY\+\_\+L}~0x\+CCU
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+MAG\+\_\+\+SI\+\_\+\+YY\+\_\+H}~0x\+CDU
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+MAG\+\_\+\+SI\+\_\+\+YZ\+\_\+L}~0x\+CEU
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+MAG\+\_\+\+SI\+\_\+\+YZ\+\_\+H}~0x\+CFU
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+MAG\+\_\+\+SI\+\_\+\+ZZ\+\_\+L}~0x\+D0U
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+MAG\+\_\+\+SI\+\_\+\+ZZ\+\_\+H}~0x\+D1U
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+MAG\+\_\+\+CFG\+\_\+A}~0x\+D4U
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+MAG\+\_\+\+CFG\+\_\+B}~0x\+D5U
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+FSM\+\_\+\+LC\+\_\+\+TIMEOUT\+\_\+L}~0x17\+AU
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+FSM\+\_\+\+LC\+\_\+\+TIMEOUT\+\_\+H}~0x17\+BU
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+FSM\+\_\+\+PROGRAMS}~0x17\+CU
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+FSM\+\_\+\+START\+\_\+\+ADD\+\_\+L}~0x17\+EU
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+FSM\+\_\+\+START\+\_\+\+ADD\+\_\+H}~0x17\+FU
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+PEDO\+\_\+\+CMD\+\_\+\+REG}~0x183U
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+PEDO\+\_\+\+DEB\+\_\+\+STEPS\+\_\+\+CONF}~0x184U
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+PEDO\+\_\+\+SC\+\_\+\+DELTAT\+\_\+L}~0x1\+D0U
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+PEDO\+\_\+\+SC\+\_\+\+DELTAT\+\_\+H}~0x1\+D1U
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+SENSOR\+\_\+\+HUB\+\_\+1}~0x02U
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+SENSOR\+\_\+\+HUB\+\_\+2}~0x03U
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+SENSOR\+\_\+\+HUB\+\_\+3}~0x04U
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+SENSOR\+\_\+\+HUB\+\_\+4}~0x05U
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+SENSOR\+\_\+\+HUB\+\_\+5}~0x06U
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+SENSOR\+\_\+\+HUB\+\_\+6}~0x07U
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+SENSOR\+\_\+\+HUB\+\_\+7}~0x08U
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+SENSOR\+\_\+\+HUB\+\_\+8}~0x09U
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+SENSOR\+\_\+\+HUB\+\_\+9}~0x0\+AU
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+SENSOR\+\_\+\+HUB\+\_\+10}~0x0\+BU
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+SENSOR\+\_\+\+HUB\+\_\+11}~0x0\+CU
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+SENSOR\+\_\+\+HUB\+\_\+12}~0x0\+DU
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+SENSOR\+\_\+\+HUB\+\_\+13}~0x0\+EU
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+SENSOR\+\_\+\+HUB\+\_\+14}~0x0\+FU
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+SENSOR\+\_\+\+HUB\+\_\+15}~0x10U
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+SENSOR\+\_\+\+HUB\+\_\+16}~0x11U
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+SENSOR\+\_\+\+HUB\+\_\+17}~0x12U
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+SENSOR\+\_\+\+HUB\+\_\+18}~0x13U
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+MASTER\+\_\+\+CONFIG}~0x14U
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+SLV0\+\_\+\+ADD}~0x15U
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+SLV0\+\_\+\+SUBADD}~0x16U
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+SLV0\+\_\+\+CONFIG}~0x17U
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+SLV1\+\_\+\+ADD}~0x18U
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+SLV1\+\_\+\+SUBADD}~0x19U
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+SLV1\+\_\+\+CONFIG}~0x1\+AU
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+SLV2\+\_\+\+ADD}~0x1\+BU
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+SLV2\+\_\+\+SUBADD}~0x1\+CU
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+SLV2\+\_\+\+CONFIG}~0x1\+DU
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+SLV3\+\_\+\+ADD}~0x1\+EU
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+SLV3\+\_\+\+SUBADD}~0x1\+FU
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+SLV3\+\_\+\+CONFIG}~0x20U
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+DATAWRITE\+\_\+\+SLV0}~0x21U
+\item 
+\+\#define {\bfseries LSM6\+DSO32\+\_\+\+STATUS\+\_\+\+MASTER}~0x22U
+\item 
+\+\#define {\bfseries \+\_\+\+\_\+weak}~\+\_\+\+\_\+attribute\+\_\+\+\_\+((weak))
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef int32\+\_\+t(\texorpdfstring{$\ast$}{*} {\bfseries stmdev\+\_\+write\+\_\+ptr}) (void \texorpdfstring{$\ast$}{*}, uint8\+\_\+t, uint8\+\_\+t \texorpdfstring{$\ast$}{*}, uint16\+\_\+t)
+\item 
+typedef int32\+\_\+t(\texorpdfstring{$\ast$}{*} {\bfseries stmdev\+\_\+read\+\_\+ptr}) (void \texorpdfstring{$\ast$}{*}, uint8\+\_\+t, uint8\+\_\+t \texorpdfstring{$\ast$}{*}, uint16\+\_\+t)
+\item 
+typedef void(\texorpdfstring{$\ast$}{*} {\bfseries stmdev\+\_\+mdelay\+\_\+ptr}) (uint32\+\_\+t millisec)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{group___l_s_m6_d_s_o32_gade35e39478ba26b4039ec531b603c4ce}\label{group___l_s_m6_d_s_o32_gade35e39478ba26b4039ec531b603c4ce} 
+enum {\bfseries lsm6dso32\+\_\+fs\+\_\+xl\+\_\+t} \{ {\bfseries LSM6\+DSO32\+\_\+4g} = 0x00
+, {\bfseries LSM6\+DSO32\+\_\+8g} = 0x02
+, {\bfseries LSM6\+DSO32\+\_\+16g} = 0x03
+, {\bfseries LSM6\+DSO32\+\_\+32g} = 0x01
+ \}
+\item 
+\Hypertarget{group___l_s_m6_d_s_o32_ga854071707d69a3860d8e2df9394c5375}\label{group___l_s_m6_d_s_o32_ga854071707d69a3860d8e2df9394c5375} 
+enum {\bfseries lsm6dso32\+\_\+odr\+\_\+xl\+\_\+t} \{ \newline
+{\bfseries LSM6\+DSO32\+\_\+\+XL\+\_\+\+ODR\+\_\+\+OFF} = 0x00
+, {\bfseries LSM6\+DSO32\+\_\+\+XL\+\_\+\+ODR\+\_\+1\+Hz6\+\_\+\+LOW\+\_\+\+PW} = 0x1B
+, {\bfseries LSM6\+DSO32\+\_\+\+XL\+\_\+\+ODR\+\_\+12\+Hz5\+\_\+\+LOW\+\_\+\+PW} = 0x11
+, {\bfseries LSM6\+DSO32\+\_\+\+XL\+\_\+\+ODR\+\_\+26\+Hz\+\_\+\+LOW\+\_\+\+PW} = 0x12
+, \newline
+{\bfseries LSM6\+DSO32\+\_\+\+XL\+\_\+\+ODR\+\_\+52\+Hz\+\_\+\+LOW\+\_\+\+PW} = 0x13
+, {\bfseries LSM6\+DSO32\+\_\+\+XL\+\_\+\+ODR\+\_\+104\+Hz\+\_\+\+NORMAL\+\_\+\+MD} = 0x14
+, {\bfseries LSM6\+DSO32\+\_\+\+XL\+\_\+\+ODR\+\_\+208\+Hz\+\_\+\+NORMAL\+\_\+\+MD} = 0x15
+, {\bfseries LSM6\+DSO32\+\_\+\+XL\+\_\+\+ODR\+\_\+12\+Hz5\+\_\+\+HIGH\+\_\+\+PERF} = 0x01
+, \newline
+{\bfseries LSM6\+DSO32\+\_\+\+XL\+\_\+\+ODR\+\_\+26\+Hz\+\_\+\+HIGH\+\_\+\+PERF} = 0x02
+, {\bfseries LSM6\+DSO32\+\_\+\+XL\+\_\+\+ODR\+\_\+52\+Hz\+\_\+\+HIGH\+\_\+\+PERF} = 0x03
+, {\bfseries LSM6\+DSO32\+\_\+\+XL\+\_\+\+ODR\+\_\+104\+Hz\+\_\+\+HIGH\+\_\+\+PERF} = 0x04
+, {\bfseries LSM6\+DSO32\+\_\+\+XL\+\_\+\+ODR\+\_\+208\+Hz\+\_\+\+HIGH\+\_\+\+PERF} = 0x05
+, \newline
+{\bfseries LSM6\+DSO32\+\_\+\+XL\+\_\+\+ODR\+\_\+417\+Hz\+\_\+\+HIGH\+\_\+\+PERF} = 0x06
+, {\bfseries LSM6\+DSO32\+\_\+\+XL\+\_\+\+ODR\+\_\+833\+Hz\+\_\+\+HIGH\+\_\+\+PERF} = 0x07
+, {\bfseries LSM6\+DSO32\+\_\+\+XL\+\_\+\+ODR\+\_\+1667\+Hz\+\_\+\+HIGH\+\_\+\+PERF} = 0x08
+, {\bfseries LSM6\+DSO32\+\_\+\+XL\+\_\+\+ODR\+\_\+3333\+Hz\+\_\+\+HIGH\+\_\+\+PERF} = 0x09
+, \newline
+{\bfseries LSM6\+DSO32\+\_\+\+XL\+\_\+\+ODR\+\_\+6667\+Hz\+\_\+\+HIGH\+\_\+\+PERF} = 0x0A
+, {\bfseries LSM6\+DSO32\+\_\+\+XL\+\_\+\+ODR\+\_\+1\+Hz6\+\_\+\+ULTRA\+\_\+\+LOW\+\_\+\+PW} = 0x2B
+, {\bfseries LSM6\+DSO32\+\_\+\+XL\+\_\+\+ODR\+\_\+12\+Hz5\+\_\+\+ULTRA\+\_\+\+LOW\+\_\+\+PW} = 0x21
+, {\bfseries LSM6\+DSO32\+\_\+\+XL\+\_\+\+ODR\+\_\+26\+Hz\+\_\+\+ULTRA\+\_\+\+LOW\+\_\+\+PW} = 0x22
+, \newline
+{\bfseries LSM6\+DSO32\+\_\+\+XL\+\_\+\+ODR\+\_\+52\+Hz\+\_\+\+ULTRA\+\_\+\+LOW\+\_\+\+PW} = 0x23
+, {\bfseries LSM6\+DSO32\+\_\+\+XL\+\_\+\+ODR\+\_\+104\+Hz\+\_\+\+ULTRA\+\_\+\+LOW\+\_\+\+PW} = 0x24
+, {\bfseries LSM6\+DSO32\+\_\+\+XL\+\_\+\+ODR\+\_\+208\+Hz\+\_\+\+ULTRA\+\_\+\+LOW\+\_\+\+PW} = 0x25
+ \}
+\item 
+\Hypertarget{group___l_s_m6_d_s_o32_gac425892165cab74cfcc146afa93aca3d}\label{group___l_s_m6_d_s_o32_gac425892165cab74cfcc146afa93aca3d} 
+enum {\bfseries lsm6dso32\+\_\+fs\+\_\+g\+\_\+t} \{ \newline
+{\bfseries LSM6\+DSO32\+\_\+250dps} = 0
+, {\bfseries LSM6\+DSO32\+\_\+125dps} = 1
+, {\bfseries LSM6\+DSO32\+\_\+500dps} = 2
+, {\bfseries LSM6\+DSO32\+\_\+1000dps} = 4
+, \newline
+{\bfseries LSM6\+DSO32\+\_\+2000dps} = 6
+ \}
+\item 
+\Hypertarget{group___l_s_m6_d_s_o32_gac44146676871b1170eb2c64e693d1df8}\label{group___l_s_m6_d_s_o32_gac44146676871b1170eb2c64e693d1df8} 
+enum {\bfseries lsm6dso32\+\_\+odr\+\_\+g\+\_\+t} \{ \newline
+{\bfseries LSM6\+DSO32\+\_\+\+GY\+\_\+\+ODR\+\_\+\+OFF} = 0x00
+, {\bfseries LSM6\+DSO32\+\_\+\+GY\+\_\+\+ODR\+\_\+12\+Hz5\+\_\+\+HIGH\+\_\+\+PERF} = 0x01
+, {\bfseries LSM6\+DSO32\+\_\+\+GY\+\_\+\+ODR\+\_\+26\+Hz\+\_\+\+HIGH\+\_\+\+PERF} = 0x02
+, {\bfseries LSM6\+DSO32\+\_\+\+GY\+\_\+\+ODR\+\_\+52\+Hz\+\_\+\+HIGH\+\_\+\+PERF} = 0x03
+, \newline
+{\bfseries LSM6\+DSO32\+\_\+\+GY\+\_\+\+ODR\+\_\+104\+Hz\+\_\+\+HIGH\+\_\+\+PERF} = 0x04
+, {\bfseries LSM6\+DSO32\+\_\+\+GY\+\_\+\+ODR\+\_\+208\+Hz\+\_\+\+HIGH\+\_\+\+PERF} = 0x05
+, {\bfseries LSM6\+DSO32\+\_\+\+GY\+\_\+\+ODR\+\_\+417\+Hz\+\_\+\+HIGH\+\_\+\+PERF} = 0x06
+, {\bfseries LSM6\+DSO32\+\_\+\+GY\+\_\+\+ODR\+\_\+833\+Hz\+\_\+\+HIGH\+\_\+\+PERF} = 0x07
+, \newline
+{\bfseries LSM6\+DSO32\+\_\+\+GY\+\_\+\+ODR\+\_\+1667\+Hz\+\_\+\+HIGH\+\_\+\+PERF} = 0x08
+, {\bfseries LSM6\+DSO32\+\_\+\+GY\+\_\+\+ODR\+\_\+3333\+Hz\+\_\+\+HIGH\+\_\+\+PERF} = 0x09
+, {\bfseries LSM6\+DSO32\+\_\+\+GY\+\_\+\+ODR\+\_\+6667\+Hz\+\_\+\+HIGH\+\_\+\+PERF} = 0x0A
+, {\bfseries LSM6\+DSO32\+\_\+\+GY\+\_\+\+ODR\+\_\+104\+Hz\+\_\+\+NORMAL\+\_\+\+MD} = 0x14
+, \newline
+{\bfseries LSM6\+DSO32\+\_\+\+GY\+\_\+\+ODR\+\_\+208\+Hz\+\_\+\+NORMAL\+\_\+\+MD} = 0x15
+, {\bfseries LSM6\+DSO32\+\_\+\+GY\+\_\+\+ODR\+\_\+12\+Hz5\+\_\+\+LOW\+\_\+\+PW} = 0x11
+, {\bfseries LSM6\+DSO32\+\_\+\+GY\+\_\+\+ODR\+\_\+26\+Hz\+\_\+\+LOW\+\_\+\+PW} = 0x12
+, {\bfseries LSM6\+DSO32\+\_\+\+GY\+\_\+\+ODR\+\_\+52\+Hz\+\_\+\+LOW\+\_\+\+PW} = 0x13
+ \}
+\item 
+\Hypertarget{group___l_s_m6_d_s_o32_ga767afb056550d11758bfbafb7b7f2745}\label{group___l_s_m6_d_s_o32_ga767afb056550d11758bfbafb7b7f2745} 
+enum {\bfseries lsm6dso32\+\_\+usr\+\_\+off\+\_\+w\+\_\+t} \{ {\bfseries LSM6\+DSO32\+\_\+\+LSb\+\_\+1mg} = 0
+, {\bfseries LSM6\+DSO32\+\_\+\+LSb\+\_\+16mg} = 1
+ \}
+\item 
+\Hypertarget{group___l_s_m6_d_s_o32_ga1be389dea58b13c11667cccdc5a35ea3}\label{group___l_s_m6_d_s_o32_ga1be389dea58b13c11667cccdc5a35ea3} 
+enum {\bfseries lsm6dso32\+\_\+rounding\+\_\+t} \{ {\bfseries LSM6\+DSO32\+\_\+\+NO\+\_\+\+ROUND} = 0
+, {\bfseries LSM6\+DSO32\+\_\+\+ROUND\+\_\+\+XL} = 1
+, {\bfseries LSM6\+DSO32\+\_\+\+ROUND\+\_\+\+GY} = 2
+, {\bfseries LSM6\+DSO32\+\_\+\+ROUND\+\_\+\+GY\+\_\+\+XL} = 3
+ \}
+\item 
+\Hypertarget{group___l_s_m6_d_s_o32_ga3c35e30eece280acaf7ce471e01272e6}\label{group___l_s_m6_d_s_o32_ga3c35e30eece280acaf7ce471e01272e6} 
+enum {\bfseries lsm6dso32\+\_\+reg\+\_\+access\+\_\+t} \{ {\bfseries LSM6\+DSO32\+\_\+\+USER\+\_\+\+BANK} = 0
+, {\bfseries LSM6\+DSO32\+\_\+\+SENSOR\+\_\+\+HUB\+\_\+\+BANK} = 1
+, {\bfseries LSM6\+DSO32\+\_\+\+EMBEDDED\+\_\+\+FUNC\+\_\+\+BANK} = 2
+ \}
+\item 
+\Hypertarget{group___l_s_m6_d_s_o32_gaca01eda48340c66833cfed712f2c7550}\label{group___l_s_m6_d_s_o32_gaca01eda48340c66833cfed712f2c7550} 
+enum {\bfseries lsm6dso32\+\_\+dataready\+\_\+pulsed\+\_\+t} \{ {\bfseries LSM6\+DSO32\+\_\+\+DRDY\+\_\+\+LATCHED} = 0
+, {\bfseries LSM6\+DSO32\+\_\+\+DRDY\+\_\+\+PULSED} = 1
+ \}
+\item 
+\Hypertarget{group___l_s_m6_d_s_o32_ga15c11b741f147ef8023625d49bc7584c}\label{group___l_s_m6_d_s_o32_ga15c11b741f147ef8023625d49bc7584c} 
+enum {\bfseries lsm6dso32\+\_\+st\+\_\+xl\+\_\+t} \{ {\bfseries LSM6\+DSO32\+\_\+\+XL\+\_\+\+ST\+\_\+\+DISABLE} = 0
+, {\bfseries LSM6\+DSO32\+\_\+\+XL\+\_\+\+ST\+\_\+\+POSITIVE} = 1
+, {\bfseries LSM6\+DSO32\+\_\+\+XL\+\_\+\+ST\+\_\+\+NEGATIVE} = 2
+ \}
+\item 
+\Hypertarget{group___l_s_m6_d_s_o32_ga5a99ad8b9ac22ffdfe8c1e45738fa326}\label{group___l_s_m6_d_s_o32_ga5a99ad8b9ac22ffdfe8c1e45738fa326} 
+enum {\bfseries lsm6dso32\+\_\+st\+\_\+g\+\_\+t} \{ {\bfseries LSM6\+DSO32\+\_\+\+GY\+\_\+\+ST\+\_\+\+DISABLE} = 0
+, {\bfseries LSM6\+DSO32\+\_\+\+GY\+\_\+\+ST\+\_\+\+POSITIVE} = 1
+, {\bfseries LSM6\+DSO32\+\_\+\+GY\+\_\+\+ST\+\_\+\+NEGATIVE} = 3
+ \}
+\item 
+\Hypertarget{group___l_s_m6_d_s_o32_gaac14220714d43a382a3caaeeccf210c3}\label{group___l_s_m6_d_s_o32_gaac14220714d43a382a3caaeeccf210c3} 
+enum {\bfseries lsm6dso32\+\_\+ftype\+\_\+t} \{ \newline
+{\bfseries LSM6\+DSO32\+\_\+\+ULTRA\+\_\+\+LIGHT} = 0
+, {\bfseries LSM6\+DSO32\+\_\+\+VERY\+\_\+\+LIGHT} = 1
+, {\bfseries LSM6\+DSO32\+\_\+\+LIGHT} = 2
+, {\bfseries LSM6\+DSO32\+\_\+\+MEDIUM} = 3
+, \newline
+{\bfseries LSM6\+DSO32\+\_\+\+STRONG} = 4
+, {\bfseries LSM6\+DSO32\+\_\+\+VERY\+\_\+\+STRONG} = 5
+, {\bfseries LSM6\+DSO32\+\_\+\+AGGRESSIVE} = 6
+, {\bfseries LSM6\+DSO32\+\_\+\+XTREME} = 7
+ \}
+\item 
+\Hypertarget{group___l_s_m6_d_s_o32_ga0d4a3ff38b88198ff91e9787a596f07b}\label{group___l_s_m6_d_s_o32_ga0d4a3ff38b88198ff91e9787a596f07b} 
+enum {\bfseries lsm6dso32\+\_\+hp\+\_\+slope\+\_\+xl\+\_\+en\+\_\+t} \{ \newline
+{\bfseries LSM6\+DSO32\+\_\+\+HP\+\_\+\+PATH\+\_\+\+DISABLE\+\_\+\+ON\+\_\+\+OUT} = 0x00
+, {\bfseries LSM6\+DSO32\+\_\+\+SLOPE\+\_\+\+ODR\+\_\+\+DIV\+\_\+4} = 0x10
+, {\bfseries LSM6\+DSO32\+\_\+\+HP\+\_\+\+ODR\+\_\+\+DIV\+\_\+10} = 0x11
+, {\bfseries LSM6\+DSO32\+\_\+\+HP\+\_\+\+ODR\+\_\+\+DIV\+\_\+20} = 0x12
+, \newline
+{\bfseries LSM6\+DSO32\+\_\+\+HP\+\_\+\+ODR\+\_\+\+DIV\+\_\+45} = 0x13
+, {\bfseries LSM6\+DSO32\+\_\+\+HP\+\_\+\+ODR\+\_\+\+DIV\+\_\+100} = 0x14
+, {\bfseries LSM6\+DSO32\+\_\+\+HP\+\_\+\+ODR\+\_\+\+DIV\+\_\+200} = 0x15
+, {\bfseries LSM6\+DSO32\+\_\+\+HP\+\_\+\+ODR\+\_\+\+DIV\+\_\+400} = 0x16
+, \newline
+{\bfseries LSM6\+DSO32\+\_\+\+HP\+\_\+\+ODR\+\_\+\+DIV\+\_\+800} = 0x17
+, {\bfseries LSM6\+DSO32\+\_\+\+HP\+\_\+\+REF\+\_\+\+MD\+\_\+\+ODR\+\_\+\+DIV\+\_\+10} = 0x31
+, {\bfseries LSM6\+DSO32\+\_\+\+HP\+\_\+\+REF\+\_\+\+MD\+\_\+\+ODR\+\_\+\+DIV\+\_\+20} = 0x32
+, {\bfseries LSM6\+DSO32\+\_\+\+HP\+\_\+\+REF\+\_\+\+MD\+\_\+\+ODR\+\_\+\+DIV\+\_\+45} = 0x33
+, \newline
+{\bfseries LSM6\+DSO32\+\_\+\+HP\+\_\+\+REF\+\_\+\+MD\+\_\+\+ODR\+\_\+\+DIV\+\_\+100} = 0x34
+, {\bfseries LSM6\+DSO32\+\_\+\+HP\+\_\+\+REF\+\_\+\+MD\+\_\+\+ODR\+\_\+\+DIV\+\_\+200} = 0x35
+, {\bfseries LSM6\+DSO32\+\_\+\+HP\+\_\+\+REF\+\_\+\+MD\+\_\+\+ODR\+\_\+\+DIV\+\_\+400} = 0x36
+, {\bfseries LSM6\+DSO32\+\_\+\+HP\+\_\+\+REF\+\_\+\+MD\+\_\+\+ODR\+\_\+\+DIV\+\_\+800} = 0x37
+, \newline
+{\bfseries LSM6\+DSO32\+\_\+\+LP\+\_\+\+ODR\+\_\+\+DIV\+\_\+10} = 0x01
+, {\bfseries LSM6\+DSO32\+\_\+\+LP\+\_\+\+ODR\+\_\+\+DIV\+\_\+20} = 0x02
+, {\bfseries LSM6\+DSO32\+\_\+\+LP\+\_\+\+ODR\+\_\+\+DIV\+\_\+45} = 0x03
+, {\bfseries LSM6\+DSO32\+\_\+\+LP\+\_\+\+ODR\+\_\+\+DIV\+\_\+100} = 0x04
+, \newline
+{\bfseries LSM6\+DSO32\+\_\+\+LP\+\_\+\+ODR\+\_\+\+DIV\+\_\+200} = 0x05
+, {\bfseries LSM6\+DSO32\+\_\+\+LP\+\_\+\+ODR\+\_\+\+DIV\+\_\+400} = 0x06
+, {\bfseries LSM6\+DSO32\+\_\+\+LP\+\_\+\+ODR\+\_\+\+DIV\+\_\+800} = 0x07
+ \}
+\item 
+\Hypertarget{group___l_s_m6_d_s_o32_ga0799ec4f9f6652590e36580cc6b83b78}\label{group___l_s_m6_d_s_o32_ga0799ec4f9f6652590e36580cc6b83b78} 
+enum {\bfseries lsm6dso32\+\_\+slope\+\_\+fds\+\_\+t} \{ {\bfseries LSM6\+DSO32\+\_\+\+USE\+\_\+\+SLOPE} = 0
+, {\bfseries LSM6\+DSO32\+\_\+\+USE\+\_\+\+HPF} = 1
+ \}
+\item 
+\Hypertarget{group___l_s_m6_d_s_o32_gafeeab52602a6ecb4105b327db2ce90a5}\label{group___l_s_m6_d_s_o32_gafeeab52602a6ecb4105b327db2ce90a5} 
+enum {\bfseries lsm6dso32\+\_\+hpm\+\_\+g\+\_\+t} \{ \newline
+{\bfseries LSM6\+DSO32\+\_\+\+HP\+\_\+\+FILTER\+\_\+\+NONE} = 0x00
+, {\bfseries LSM6\+DSO32\+\_\+\+HP\+\_\+\+FILTER\+\_\+16m\+Hz} = 0x80
+, {\bfseries LSM6\+DSO32\+\_\+\+HP\+\_\+\+FILTER\+\_\+65m\+Hz} = 0x81
+, {\bfseries LSM6\+DSO32\+\_\+\+HP\+\_\+\+FILTER\+\_\+260m\+Hz} = 0x82
+, \newline
+{\bfseries LSM6\+DSO32\+\_\+\+HP\+\_\+\+FILTER\+\_\+1\+Hz04} = 0x83
+ \}
+\item 
+\Hypertarget{group___l_s_m6_d_s_o32_gaa7bcea267d2d64603049d447be1247a1}\label{group___l_s_m6_d_s_o32_gaa7bcea267d2d64603049d447be1247a1} 
+enum {\bfseries lsm6dso32\+\_\+sdo\+\_\+pu\+\_\+en\+\_\+t} \{ {\bfseries LSM6\+DSO32\+\_\+\+PULL\+\_\+\+UP\+\_\+\+DISC} = 0
+, {\bfseries LSM6\+DSO32\+\_\+\+PULL\+\_\+\+UP\+\_\+\+CONNECT} = 1
+ \}
+\item 
+\Hypertarget{group___l_s_m6_d_s_o32_ga802b32ee7b9b7f433c8719512cdea021}\label{group___l_s_m6_d_s_o32_ga802b32ee7b9b7f433c8719512cdea021} 
+enum {\bfseries lsm6dso32\+\_\+sim\+\_\+t} \{ {\bfseries LSM6\+DSO32\+\_\+\+SPI\+\_\+4\+\_\+\+WIRE} = 0
+, {\bfseries LSM6\+DSO32\+\_\+\+SPI\+\_\+3\+\_\+\+WIRE} = 1
+ \}
+\item 
+\Hypertarget{group___l_s_m6_d_s_o32_gab053feb23f968f3ba05c0f2d640e5ab5}\label{group___l_s_m6_d_s_o32_gab053feb23f968f3ba05c0f2d640e5ab5} 
+enum {\bfseries lsm6dso32\+\_\+i2c\+\_\+disable\+\_\+t} \{ {\bfseries LSM6\+DSO32\+\_\+\+I2\+C\+\_\+\+ENABLE} = 0
+, {\bfseries LSM6\+DSO32\+\_\+\+I2\+C\+\_\+\+DISABLE} = 1
+ \}
+\item 
+\Hypertarget{group___l_s_m6_d_s_o32_ga5733a9ed1831169fd17a555e5a9c77ac}\label{group___l_s_m6_d_s_o32_ga5733a9ed1831169fd17a555e5a9c77ac} 
+enum {\bfseries lsm6dso32\+\_\+i3c\+\_\+disable\+\_\+t} \{ \newline
+{\bfseries LSM6\+DSO32\+\_\+\+I3\+C\+\_\+\+DISABLE} = 0x80
+, {\bfseries LSM6\+DSO32\+\_\+\+I3\+C\+\_\+\+ENABLE\+\_\+\+T\+\_\+50us} = 0x00
+, {\bfseries LSM6\+DSO32\+\_\+\+I3\+C\+\_\+\+ENABLE\+\_\+\+T\+\_\+2us} = 0x01
+, {\bfseries LSM6\+DSO32\+\_\+\+I3\+C\+\_\+\+ENABLE\+\_\+\+T\+\_\+1ms} = 0x02
+, \newline
+{\bfseries LSM6\+DSO32\+\_\+\+I3\+C\+\_\+\+ENABLE\+\_\+\+T\+\_\+25ms} = 0x03
+ \}
+\item 
+\Hypertarget{group___l_s_m6_d_s_o32_gad38966ab0ce4d27d07ac0c78e1bab895}\label{group___l_s_m6_d_s_o32_gad38966ab0ce4d27d07ac0c78e1bab895} 
+enum {\bfseries lsm6dso32\+\_\+int1\+\_\+pd\+\_\+en\+\_\+t} \{ {\bfseries LSM6\+DSO32\+\_\+\+PULL\+\_\+\+DOWN\+\_\+\+DISC} = 0
+, {\bfseries LSM6\+DSO32\+\_\+\+PULL\+\_\+\+DOWN\+\_\+\+CONNECT} = 1
+ \}
+\item 
+\Hypertarget{group___l_s_m6_d_s_o32_gaed195ac1196c2140d58456315b7467cd}\label{group___l_s_m6_d_s_o32_gaed195ac1196c2140d58456315b7467cd} 
+enum {\bfseries lsm6dso32\+\_\+pp\+\_\+od\+\_\+t} \{ {\bfseries LSM6\+DSO32\+\_\+\+PUSH\+\_\+\+PULL} = 0
+, {\bfseries LSM6\+DSO32\+\_\+\+OPEN\+\_\+\+DRAIN} = 1
+ \}
+\item 
+\Hypertarget{group___l_s_m6_d_s_o32_ga55278b400d80ba80626622278db3b247}\label{group___l_s_m6_d_s_o32_ga55278b400d80ba80626622278db3b247} 
+enum {\bfseries lsm6dso32\+\_\+h\+\_\+lactive\+\_\+t} \{ {\bfseries LSM6\+DSO32\+\_\+\+ACTIVE\+\_\+\+HIGH} = 0
+, {\bfseries LSM6\+DSO32\+\_\+\+ACTIVE\+\_\+\+LOW} = 1
+ \}
+\item 
+\Hypertarget{group___l_s_m6_d_s_o32_gaaa40d3b09ee392543fde76f2f5e9ce9b}\label{group___l_s_m6_d_s_o32_gaaa40d3b09ee392543fde76f2f5e9ce9b} 
+enum {\bfseries lsm6dso32\+\_\+lir\+\_\+t} \{ {\bfseries LSM6\+DSO32\+\_\+\+ALL\+\_\+\+INT\+\_\+\+PULSED} = 0
+, {\bfseries LSM6\+DSO32\+\_\+\+BASE\+\_\+\+LATCHED\+\_\+\+EMB\+\_\+\+PULSED} = 1
+, {\bfseries LSM6\+DSO32\+\_\+\+BASE\+\_\+\+PULSED\+\_\+\+EMB\+\_\+\+LATCHED} = 2
+, {\bfseries LSM6\+DSO32\+\_\+\+ALL\+\_\+\+INT\+\_\+\+LATCHED} = 3
+ \}
+\item 
+\Hypertarget{group___l_s_m6_d_s_o32_ga15e86254731ce098919a518e6709cc2a}\label{group___l_s_m6_d_s_o32_ga15e86254731ce098919a518e6709cc2a} 
+enum {\bfseries lsm6dso32\+\_\+wake\+\_\+ths\+\_\+w\+\_\+t} \{ {\bfseries LSM6\+DSO32\+\_\+\+LSb\+\_\+\+FS\+\_\+\+DIV\+\_\+64} = 0
+, {\bfseries LSM6\+DSO32\+\_\+\+LSb\+\_\+\+FS\+\_\+\+DIV\+\_\+256} = 1
+ \}
+\item 
+\Hypertarget{group___l_s_m6_d_s_o32_ga89cedfc9966e16c5420fb7f3051ce75b}\label{group___l_s_m6_d_s_o32_ga89cedfc9966e16c5420fb7f3051ce75b} 
+enum {\bfseries lsm6dso32\+\_\+sleep\+\_\+status\+\_\+on\+\_\+int\+\_\+t} \{ {\bfseries LSM6\+DSO32\+\_\+\+DRIVE\+\_\+\+SLEEP\+\_\+\+CHG\+\_\+\+EVENT} = 0
+, {\bfseries LSM6\+DSO32\+\_\+\+DRIVE\+\_\+\+SLEEP\+\_\+\+STATUS} = 1
+ \}
+\item 
+\Hypertarget{group___l_s_m6_d_s_o32_gad94922259f3f65ce64aa7028fef14e28}\label{group___l_s_m6_d_s_o32_gad94922259f3f65ce64aa7028fef14e28} 
+enum {\bfseries lsm6dso32\+\_\+inact\+\_\+en\+\_\+t} \{ {\bfseries LSM6\+DSO32\+\_\+\+XL\+\_\+\+AND\+\_\+\+GY\+\_\+\+NOT\+\_\+\+AFFECTED} = 0
+, {\bfseries LSM6\+DSO32\+\_\+\+XL\+\_\+12\+Hz5\+\_\+\+GY\+\_\+\+NOT\+\_\+\+AFFECTED} = 1
+, {\bfseries LSM6\+DSO32\+\_\+\+XL\+\_\+12\+Hz5\+\_\+\+GY\+\_\+\+SLEEP} = 2
+, {\bfseries LSM6\+DSO32\+\_\+\+XL\+\_\+12\+Hz5\+\_\+\+GY\+\_\+\+PD} = 3
+ \}
+\item 
+\Hypertarget{group___l_s_m6_d_s_o32_ga62bf1a552053877bb2c803a098aee836}\label{group___l_s_m6_d_s_o32_ga62bf1a552053877bb2c803a098aee836} 
+enum {\bfseries lsm6dso32\+\_\+tap\+\_\+priority\+\_\+t} \{ \newline
+{\bfseries LSM6\+DSO32\+\_\+\+XYZ} = 0
+, {\bfseries LSM6\+DSO32\+\_\+\+YXZ} = 1
+, {\bfseries LSM6\+DSO32\+\_\+\+XZY} = 2
+, {\bfseries LSM6\+DSO32\+\_\+\+ZYX} = 3
+, \newline
+{\bfseries LSM6\+DSO32\+\_\+\+YZX} = 5
+, {\bfseries LSM6\+DSO32\+\_\+\+ZXY} = 6
+ \}
+\item 
+\Hypertarget{group___l_s_m6_d_s_o32_ga7f7e298dea808e28031bddf4f24534ef}\label{group___l_s_m6_d_s_o32_ga7f7e298dea808e28031bddf4f24534ef} 
+enum {\bfseries lsm6dso32\+\_\+single\+\_\+double\+\_\+tap\+\_\+t} \{ {\bfseries LSM6\+DSO32\+\_\+\+ONLY\+\_\+\+SINGLE} = 0
+, {\bfseries LSM6\+DSO32\+\_\+\+BOTH\+\_\+\+SINGLE\+\_\+\+DOUBLE} = 1
+ \}
+\item 
+\Hypertarget{group___l_s_m6_d_s_o32_ga426a50609c64dbecc4df7ce68cc3a212}\label{group___l_s_m6_d_s_o32_ga426a50609c64dbecc4df7ce68cc3a212} 
+enum {\bfseries lsm6dso32\+\_\+sixd\+\_\+ths\+\_\+t} \{ {\bfseries LSM6\+DSO32\+\_\+\+DEG\+\_\+68} = 0
+, {\bfseries LSM6\+DSO32\+\_\+\+DEG\+\_\+47} = 1
+ \}
+\item 
+\Hypertarget{group___l_s_m6_d_s_o32_gaedba821a39d7fc55b506d9caf94cfe70}\label{group___l_s_m6_d_s_o32_gaedba821a39d7fc55b506d9caf94cfe70} 
+enum {\bfseries lsm6dso32\+\_\+ff\+\_\+ths\+\_\+t} \{ {\bfseries LSM6\+DSO32\+\_\+\+FF\+\_\+\+TSH\+\_\+312mg} = 0
+, {\bfseries LSM6\+DSO32\+\_\+\+FF\+\_\+\+TSH\+\_\+438mg} = 1
+, {\bfseries LSM6\+DSO32\+\_\+\+FF\+\_\+\+TSH\+\_\+500mg} = 2
+ \}
+\item 
+\Hypertarget{group___l_s_m6_d_s_o32_ga869cf684ca3e9cb5e3fd98e625d3ff6d}\label{group___l_s_m6_d_s_o32_ga869cf684ca3e9cb5e3fd98e625d3ff6d} 
+enum {\bfseries lsm6dso32\+\_\+uncoptr\+\_\+rate\+\_\+t} \{ \newline
+{\bfseries LSM6\+DSO32\+\_\+\+CMP\+\_\+\+DISABLE} = 0x00
+, {\bfseries LSM6\+DSO32\+\_\+\+CMP\+\_\+\+ALWAYS} = 0x04
+, {\bfseries LSM6\+DSO32\+\_\+\+CMP\+\_\+8\+\_\+\+TO\+\_\+1} = 0x05
+, {\bfseries LSM6\+DSO32\+\_\+\+CMP\+\_\+16\+\_\+\+TO\+\_\+1} = 0x06
+, \newline
+{\bfseries LSM6\+DSO32\+\_\+\+CMP\+\_\+32\+\_\+\+TO\+\_\+1} = 0x07
+ \}
+\item 
+\Hypertarget{group___l_s_m6_d_s_o32_gaf3143bb9101e39db3bf93dda5d6755a8}\label{group___l_s_m6_d_s_o32_gaf3143bb9101e39db3bf93dda5d6755a8} 
+enum {\bfseries lsm6dso32\+\_\+bdr\+\_\+xl\+\_\+t} \{ \newline
+{\bfseries LSM6\+DSO32\+\_\+\+XL\+\_\+\+NOT\+\_\+\+BATCHED} = 0
+, {\bfseries LSM6\+DSO32\+\_\+\+XL\+\_\+\+BATCHED\+\_\+\+AT\+\_\+12\+Hz5} = 1
+, {\bfseries LSM6\+DSO32\+\_\+\+XL\+\_\+\+BATCHED\+\_\+\+AT\+\_\+26\+Hz} = 2
+, {\bfseries LSM6\+DSO32\+\_\+\+XL\+\_\+\+BATCHED\+\_\+\+AT\+\_\+52\+Hz} = 3
+, \newline
+{\bfseries LSM6\+DSO32\+\_\+\+XL\+\_\+\+BATCHED\+\_\+\+AT\+\_\+104\+Hz} = 4
+, {\bfseries LSM6\+DSO32\+\_\+\+XL\+\_\+\+BATCHED\+\_\+\+AT\+\_\+208\+Hz} = 5
+, {\bfseries LSM6\+DSO32\+\_\+\+XL\+\_\+\+BATCHED\+\_\+\+AT\+\_\+417\+Hz} = 6
+, {\bfseries LSM6\+DSO32\+\_\+\+XL\+\_\+\+BATCHED\+\_\+\+AT\+\_\+833\+Hz} = 7
+, \newline
+{\bfseries LSM6\+DSO32\+\_\+\+XL\+\_\+\+BATCHED\+\_\+\+AT\+\_\+1667\+Hz} = 8
+, {\bfseries LSM6\+DSO32\+\_\+\+XL\+\_\+\+BATCHED\+\_\+\+AT\+\_\+3333\+Hz} = 9
+, {\bfseries LSM6\+DSO32\+\_\+\+XL\+\_\+\+BATCHED\+\_\+\+AT\+\_\+6667\+Hz} = 10
+, {\bfseries LSM6\+DSO32\+\_\+\+XL\+\_\+\+BATCHED\+\_\+\+AT\+\_\+6\+Hz5} = 11
+ \}
+\item 
+\Hypertarget{group___l_s_m6_d_s_o32_ga80d7c34c660d2384685c4c935f42fc63}\label{group___l_s_m6_d_s_o32_ga80d7c34c660d2384685c4c935f42fc63} 
+enum {\bfseries lsm6dso32\+\_\+bdr\+\_\+gy\+\_\+t} \{ \newline
+{\bfseries LSM6\+DSO32\+\_\+\+GY\+\_\+\+NOT\+\_\+\+BATCHED} = 0
+, {\bfseries LSM6\+DSO32\+\_\+\+GY\+\_\+\+BATCHED\+\_\+\+AT\+\_\+12\+Hz5} = 1
+, {\bfseries LSM6\+DSO32\+\_\+\+GY\+\_\+\+BATCHED\+\_\+\+AT\+\_\+26\+Hz} = 2
+, {\bfseries LSM6\+DSO32\+\_\+\+GY\+\_\+\+BATCHED\+\_\+\+AT\+\_\+52\+Hz} = 3
+, \newline
+{\bfseries LSM6\+DSO32\+\_\+\+GY\+\_\+\+BATCHED\+\_\+\+AT\+\_\+104\+Hz} = 4
+, {\bfseries LSM6\+DSO32\+\_\+\+GY\+\_\+\+BATCHED\+\_\+\+AT\+\_\+208\+Hz} = 5
+, {\bfseries LSM6\+DSO32\+\_\+\+GY\+\_\+\+BATCHED\+\_\+\+AT\+\_\+417\+Hz} = 6
+, {\bfseries LSM6\+DSO32\+\_\+\+GY\+\_\+\+BATCHED\+\_\+\+AT\+\_\+833\+Hz} = 7
+, \newline
+{\bfseries LSM6\+DSO32\+\_\+\+GY\+\_\+\+BATCHED\+\_\+\+AT\+\_\+1667\+Hz} = 8
+, {\bfseries LSM6\+DSO32\+\_\+\+GY\+\_\+\+BATCHED\+\_\+\+AT\+\_\+3333\+Hz} = 9
+, {\bfseries LSM6\+DSO32\+\_\+\+GY\+\_\+\+BATCHED\+\_\+\+AT\+\_\+6667\+Hz} = 10
+, {\bfseries LSM6\+DSO32\+\_\+\+GY\+\_\+\+BATCHED\+\_\+\+AT\+\_\+6\+Hz5} = 11
+ \}
+\item 
+\Hypertarget{group___l_s_m6_d_s_o32_ga19c4f74de9f7c4fb2183f2cd950ffa87}\label{group___l_s_m6_d_s_o32_ga19c4f74de9f7c4fb2183f2cd950ffa87} 
+enum {\bfseries lsm6dso32\+\_\+fifo\+\_\+mode\+\_\+t} \{ \newline
+{\bfseries LSM6\+DSO32\+\_\+\+BYPASS\+\_\+\+MODE} = 0
+, {\bfseries LSM6\+DSO32\+\_\+\+FIFO\+\_\+\+MODE} = 1
+, {\bfseries LSM6\+DSO32\+\_\+\+STREAM\+\_\+\+TO\+\_\+\+FIFO\+\_\+\+MODE} = 3
+, {\bfseries LSM6\+DSO32\+\_\+\+BYPASS\+\_\+\+TO\+\_\+\+STREAM\+\_\+\+MODE} = 4
+, \newline
+{\bfseries LSM6\+DSO32\+\_\+\+STREAM\+\_\+\+MODE} = 6
+, {\bfseries LSM6\+DSO32\+\_\+\+BYPASS\+\_\+\+TO\+\_\+\+FIFO\+\_\+\+MODE} = 7
+ \}
+\item 
+\Hypertarget{group___l_s_m6_d_s_o32_ga3363d8679f11de7127cb1c96bf43c7e3}\label{group___l_s_m6_d_s_o32_ga3363d8679f11de7127cb1c96bf43c7e3} 
+enum {\bfseries lsm6dso32\+\_\+odr\+\_\+t\+\_\+batch\+\_\+t} \{ {\bfseries LSM6\+DSO32\+\_\+\+TEMP\+\_\+\+NOT\+\_\+\+BATCHED} = 0
+, {\bfseries LSM6\+DSO32\+\_\+\+TEMP\+\_\+\+BATCHED\+\_\+\+AT\+\_\+1\+Hz6} = 1
+, {\bfseries LSM6\+DSO32\+\_\+\+TEMP\+\_\+\+BATCHED\+\_\+\+AT\+\_\+12\+Hz5} = 2
+, {\bfseries LSM6\+DSO32\+\_\+\+TEMP\+\_\+\+BATCHED\+\_\+\+AT\+\_\+52\+Hz} = 3
+ \}
+\item 
+\Hypertarget{group___l_s_m6_d_s_o32_gaf189b3365a63c2c35e5c0103205f52cd}\label{group___l_s_m6_d_s_o32_gaf189b3365a63c2c35e5c0103205f52cd} 
+enum {\bfseries lsm6dso32\+\_\+odr\+\_\+ts\+\_\+batch\+\_\+t} \{ {\bfseries LSM6\+DSO32\+\_\+\+NO\+\_\+\+DECIMATION} = 0
+, {\bfseries LSM6\+DSO32\+\_\+\+DEC\+\_\+1} = 1
+, {\bfseries LSM6\+DSO32\+\_\+\+DEC\+\_\+8} = 2
+, {\bfseries LSM6\+DSO32\+\_\+\+DEC\+\_\+32} = 3
+ \}
+\item 
+\Hypertarget{group___l_s_m6_d_s_o32_ga8591a3b877399b4f56ce2e2f1805c9ed}\label{group___l_s_m6_d_s_o32_ga8591a3b877399b4f56ce2e2f1805c9ed} 
+enum {\bfseries lsm6dso32\+\_\+trig\+\_\+counter\+\_\+bdr\+\_\+t} \{ {\bfseries LSM6\+DSO32\+\_\+\+XL\+\_\+\+BATCH\+\_\+\+EVENT} = 0
+, {\bfseries LSM6\+DSO32\+\_\+\+GYRO\+\_\+\+BATCH\+\_\+\+EVENT} = 1
+ \}
+\item 
+\Hypertarget{group___l_s_m6_d_s_o32_ga2954cc819116269a3a40307fc4ac578b}\label{group___l_s_m6_d_s_o32_ga2954cc819116269a3a40307fc4ac578b} 
+enum {\bfseries lsm6dso32\+\_\+fifo\+\_\+tag\+\_\+t} \{ \newline
+{\bfseries LSM6\+DSO32\+\_\+\+GYRO\+\_\+\+NC\+\_\+\+TAG} = 1
+, {\bfseries LSM6\+DSO32\+\_\+\+XL\+\_\+\+NC\+\_\+\+TAG}
+, {\bfseries LSM6\+DSO32\+\_\+\+TEMPERATURE\+\_\+\+TAG}
+, {\bfseries LSM6\+DSO32\+\_\+\+TIMESTAMP\+\_\+\+TAG}
+, \newline
+{\bfseries LSM6\+DSO32\+\_\+\+CFG\+\_\+\+CHANGE\+\_\+\+TAG}
+, {\bfseries LSM6\+DSO32\+\_\+\+XL\+\_\+\+NC\+\_\+\+T\+\_\+2\+\_\+\+TAG}
+, {\bfseries LSM6\+DSO32\+\_\+\+XL\+\_\+\+NC\+\_\+\+T\+\_\+1\+\_\+\+TAG}
+, {\bfseries LSM6\+DSO32\+\_\+\+XL\+\_\+2\+XC\+\_\+\+TAG}
+, \newline
+{\bfseries LSM6\+DSO32\+\_\+\+XL\+\_\+3\+XC\+\_\+\+TAG}
+, {\bfseries LSM6\+DSO32\+\_\+\+GYRO\+\_\+\+NC\+\_\+\+T\+\_\+2\+\_\+\+TAG}
+, {\bfseries LSM6\+DSO32\+\_\+\+GYRO\+\_\+\+NC\+\_\+\+T\+\_\+1\+\_\+\+TAG}
+, {\bfseries LSM6\+DSO32\+\_\+\+GYRO\+\_\+2\+XC\+\_\+\+TAG}
+, \newline
+{\bfseries LSM6\+DSO32\+\_\+\+GYRO\+\_\+3\+XC\+\_\+\+TAG}
+, {\bfseries LSM6\+DSO32\+\_\+\+SENSORHUB\+\_\+\+SLAVE0\+\_\+\+TAG}
+, {\bfseries LSM6\+DSO32\+\_\+\+SENSORHUB\+\_\+\+SLAVE1\+\_\+\+TAG}
+, {\bfseries LSM6\+DSO32\+\_\+\+SENSORHUB\+\_\+\+SLAVE2\+\_\+\+TAG}
+, \newline
+{\bfseries LSM6\+DSO32\+\_\+\+SENSORHUB\+\_\+\+SLAVE3\+\_\+\+TAG}
+, {\bfseries LSM6\+DSO32\+\_\+\+STEP\+\_\+\+COUNTER\+\_\+\+TAG}
+, {\bfseries LSM6\+DSO32\+\_\+\+SENSORHUB\+\_\+\+NACK\+\_\+\+TAG} = 0x19
+ \}
+\item 
+\Hypertarget{group___l_s_m6_d_s_o32_ga57458710f2cabc99e63e89ded73a7004}\label{group___l_s_m6_d_s_o32_ga57458710f2cabc99e63e89ded73a7004} 
+enum {\bfseries lsm6dso32\+\_\+den\+\_\+mode\+\_\+t} \{ \newline
+{\bfseries LSM6\+DSO32\+\_\+\+DEN\+\_\+\+DISABLE} = 0
+, {\bfseries LSM6\+DSO32\+\_\+\+LEVEL\+\_\+\+FIFO} = 6
+, {\bfseries LSM6\+DSO32\+\_\+\+LEVEL\+\_\+\+LETCHED} = 3
+, {\bfseries LSM6\+DSO32\+\_\+\+LEVEL\+\_\+\+TRIGGER} = 2
+, \newline
+{\bfseries LSM6\+DSO32\+\_\+\+EDGE\+\_\+\+TRIGGER} = 4
+ \}
+\item 
+\Hypertarget{group___l_s_m6_d_s_o32_ga07e858df4e7239e7ae25bdaa4f697503}\label{group___l_s_m6_d_s_o32_ga07e858df4e7239e7ae25bdaa4f697503} 
+enum {\bfseries lsm6dso32\+\_\+den\+\_\+lh\+\_\+t} \{ {\bfseries LSM6\+DSO32\+\_\+\+DEN\+\_\+\+ACT\+\_\+\+LOW} = 0
+, {\bfseries LSM6\+DSO32\+\_\+\+DEN\+\_\+\+ACT\+\_\+\+HIGH} = 1
+ \}
+\item 
+\Hypertarget{group___l_s_m6_d_s_o32_gadf44a7f8ab660d1edd9c0ecbfac29e28}\label{group___l_s_m6_d_s_o32_gadf44a7f8ab660d1edd9c0ecbfac29e28} 
+enum {\bfseries lsm6dso32\+\_\+den\+\_\+xl\+\_\+g\+\_\+t} \{ {\bfseries LSM6\+DSO32\+\_\+\+STAMP\+\_\+\+IN\+\_\+\+GY\+\_\+\+DATA} = 0
+, {\bfseries LSM6\+DSO32\+\_\+\+STAMP\+\_\+\+IN\+\_\+\+XL\+\_\+\+DATA} = 1
+, {\bfseries LSM6\+DSO32\+\_\+\+STAMP\+\_\+\+IN\+\_\+\+GY\+\_\+\+XL\+\_\+\+DATA} = 2
+ \}
+\item 
+\Hypertarget{group___l_s_m6_d_s_o32_ga707256d94e80d9940568ae76b8ad5a27}\label{group___l_s_m6_d_s_o32_ga707256d94e80d9940568ae76b8ad5a27} 
+enum {\bfseries lsm6dso32\+\_\+pedo\+\_\+md\+\_\+t} \{ \newline
+{\bfseries LSM6\+DSO32\+\_\+\+PEDO\+\_\+\+DISABLE} = 0x00
+, {\bfseries LSM6\+DSO32\+\_\+\+PEDO\+\_\+\+BASE\+\_\+\+MODE} = 0x01
+, {\bfseries LSM6\+DSO32\+\_\+\+PEDO\+\_\+\+ADV\+\_\+\+MODE} = 0x03
+, {\bfseries LSM6\+DSO32\+\_\+\+FALSE\+\_\+\+STEP\+\_\+\+REJ} = 0x13
+, \newline
+{\bfseries LSM6\+DSO32\+\_\+\+FALSE\+\_\+\+STEP\+\_\+\+REJ\+\_\+\+ADV\+\_\+\+MODE} = 0x33
+ \}
+\item 
+\Hypertarget{group___l_s_m6_d_s_o32_ga9676118088b39570e42f60881bead313}\label{group___l_s_m6_d_s_o32_ga9676118088b39570e42f60881bead313} 
+enum {\bfseries lsm6dso32\+\_\+carry\+\_\+count\+\_\+en\+\_\+t} \{ {\bfseries LSM6\+DSO32\+\_\+\+EVERY\+\_\+\+STEP} = 0
+, {\bfseries LSM6\+DSO32\+\_\+\+COUNT\+\_\+\+OVERFLOW} = 1
+ \}
+\item 
+\Hypertarget{group___l_s_m6_d_s_o32_gab19c3a400547de38bf9ef1d0b99c9285}\label{group___l_s_m6_d_s_o32_gab19c3a400547de38bf9ef1d0b99c9285} 
+enum {\bfseries lsm6dso32\+\_\+mag\+\_\+z\+\_\+axis\+\_\+t} \{ \newline
+{\bfseries LSM6\+DSO32\+\_\+\+Z\+\_\+\+EQ\+\_\+Y} = 0
+, {\bfseries LSM6\+DSO32\+\_\+\+Z\+\_\+\+EQ\+\_\+\+MIN\+\_\+Y} = 1
+, {\bfseries LSM6\+DSO32\+\_\+\+Z\+\_\+\+EQ\+\_\+X} = 2
+, {\bfseries LSM6\+DSO32\+\_\+\+Z\+\_\+\+EQ\+\_\+\+MIN\+\_\+X} = 3
+, \newline
+{\bfseries LSM6\+DSO32\+\_\+\+Z\+\_\+\+EQ\+\_\+\+MIN\+\_\+Z} = 4
+, {\bfseries LSM6\+DSO32\+\_\+\+Z\+\_\+\+EQ\+\_\+Z} = 5
+ \}
+\item 
+\Hypertarget{group___l_s_m6_d_s_o32_gad848bbbbb15accc3669a8d10ec8424f1}\label{group___l_s_m6_d_s_o32_gad848bbbbb15accc3669a8d10ec8424f1} 
+enum {\bfseries lsm6dso32\+\_\+mag\+\_\+y\+\_\+axis\+\_\+t} \{ \newline
+{\bfseries LSM6\+DSO32\+\_\+\+Y\+\_\+\+EQ\+\_\+Y} = 0
+, {\bfseries LSM6\+DSO32\+\_\+\+Y\+\_\+\+EQ\+\_\+\+MIN\+\_\+Y} = 1
+, {\bfseries LSM6\+DSO32\+\_\+\+Y\+\_\+\+EQ\+\_\+X} = 2
+, {\bfseries LSM6\+DSO32\+\_\+\+Y\+\_\+\+EQ\+\_\+\+MIN\+\_\+X} = 3
+, \newline
+{\bfseries LSM6\+DSO32\+\_\+\+Y\+\_\+\+EQ\+\_\+\+MIN\+\_\+Z} = 4
+, {\bfseries LSM6\+DSO32\+\_\+\+Y\+\_\+\+EQ\+\_\+Z} = 5
+ \}
+\item 
+\Hypertarget{group___l_s_m6_d_s_o32_ga67d167751f98b46b183e2e9812016556}\label{group___l_s_m6_d_s_o32_ga67d167751f98b46b183e2e9812016556} 
+enum {\bfseries lsm6dso32\+\_\+mag\+\_\+x\+\_\+axis\+\_\+t} \{ \newline
+{\bfseries LSM6\+DSO32\+\_\+\+X\+\_\+\+EQ\+\_\+Y} = 0
+, {\bfseries LSM6\+DSO32\+\_\+\+X\+\_\+\+EQ\+\_\+\+MIN\+\_\+Y} = 1
+, {\bfseries LSM6\+DSO32\+\_\+\+X\+\_\+\+EQ\+\_\+X} = 2
+, {\bfseries LSM6\+DSO32\+\_\+\+X\+\_\+\+EQ\+\_\+\+MIN\+\_\+X} = 3
+, \newline
+{\bfseries LSM6\+DSO32\+\_\+\+X\+\_\+\+EQ\+\_\+\+MIN\+\_\+Z} = 4
+, {\bfseries LSM6\+DSO32\+\_\+\+X\+\_\+\+EQ\+\_\+Z} = 5
+ \}
+\item 
+\Hypertarget{group___l_s_m6_d_s_o32_ga0b69ea3fda1c0f2a1fa7012209df0e28}\label{group___l_s_m6_d_s_o32_ga0b69ea3fda1c0f2a1fa7012209df0e28} 
+enum {\bfseries lsm6dso32\+\_\+fsm\+\_\+lc\+\_\+clr\+\_\+t} \{ {\bfseries LSM6\+DSO32\+\_\+\+LC\+\_\+\+NORMAL} = 0
+, {\bfseries LSM6\+DSO32\+\_\+\+LC\+\_\+\+CLEAR} = 1
+, {\bfseries LSM6\+DSO32\+\_\+\+LC\+\_\+\+CLEAR\+\_\+\+DONE} = 2
+ \}
+\item 
+\Hypertarget{group___l_s_m6_d_s_o32_gae32d29a0f9d4ab74275fbbe4c9f8b323}\label{group___l_s_m6_d_s_o32_gae32d29a0f9d4ab74275fbbe4c9f8b323} 
+enum {\bfseries lsm6dso32\+\_\+fsm\+\_\+odr\+\_\+t} \{ {\bfseries LSM6\+DSO32\+\_\+\+ODR\+\_\+\+FSM\+\_\+12\+Hz5} = 0
+, {\bfseries LSM6\+DSO32\+\_\+\+ODR\+\_\+\+FSM\+\_\+26\+Hz} = 1
+, {\bfseries LSM6\+DSO32\+\_\+\+ODR\+\_\+\+FSM\+\_\+52\+Hz} = 2
+, {\bfseries LSM6\+DSO32\+\_\+\+ODR\+\_\+\+FSM\+\_\+104\+Hz} = 3
+ \}
+\item 
+\Hypertarget{group___l_s_m6_d_s_o32_ga3895c53b3051b1c5fc987554a8357875}\label{group___l_s_m6_d_s_o32_ga3895c53b3051b1c5fc987554a8357875} 
+enum {\bfseries lsm6dso32\+\_\+aux\+\_\+sens\+\_\+on\+\_\+t} \{ {\bfseries LSM6\+DSO32\+\_\+\+SLV\+\_\+0} = 0
+, {\bfseries LSM6\+DSO32\+\_\+\+SLV\+\_\+0\+\_\+1} = 1
+, {\bfseries LSM6\+DSO32\+\_\+\+SLV\+\_\+0\+\_\+1\+\_\+2} = 2
+, {\bfseries LSM6\+DSO32\+\_\+\+SLV\+\_\+0\+\_\+1\+\_\+2\+\_\+3} = 3
+ \}
+\item 
+\Hypertarget{group___l_s_m6_d_s_o32_ga93a17a71b5675dd1619058d3ed584bea}\label{group___l_s_m6_d_s_o32_ga93a17a71b5675dd1619058d3ed584bea} 
+enum {\bfseries lsm6dso32\+\_\+shub\+\_\+pu\+\_\+en\+\_\+t} \{ {\bfseries LSM6\+DSO32\+\_\+\+EXT\+\_\+\+PULL\+\_\+\+UP} = 0
+, {\bfseries LSM6\+DSO32\+\_\+\+INTERNAL\+\_\+\+PULL\+\_\+\+UP} = 1
+ \}
+\item 
+\Hypertarget{group___l_s_m6_d_s_o32_ga946a91cc6570f86865a2c5d3f203b2ba}\label{group___l_s_m6_d_s_o32_ga946a91cc6570f86865a2c5d3f203b2ba} 
+enum {\bfseries lsm6dso32\+\_\+start\+\_\+config\+\_\+t} \{ {\bfseries LSM6\+DSO32\+\_\+\+EXT\+\_\+\+ON\+\_\+\+INT2\+\_\+\+PIN} = 1
+, {\bfseries LSM6\+DSO32\+\_\+\+XL\+\_\+\+GY\+\_\+\+DRDY} = 0
+ \}
+\item 
+\Hypertarget{group___l_s_m6_d_s_o32_ga978f10c6f0c4d69e011d68a0abaa9d3b}\label{group___l_s_m6_d_s_o32_ga978f10c6f0c4d69e011d68a0abaa9d3b} 
+enum {\bfseries lsm6dso32\+\_\+write\+\_\+once\+\_\+t} \{ {\bfseries LSM6\+DSO32\+\_\+\+EACH\+\_\+\+SH\+\_\+\+CYCLE} = 0
+, {\bfseries LSM6\+DSO32\+\_\+\+ONLY\+\_\+\+FIRST\+\_\+\+CYCLE} = 1
+ \}
+\item 
+\Hypertarget{group___l_s_m6_d_s_o32_ga865146ed480c8d18d46a28cf01871dde}\label{group___l_s_m6_d_s_o32_ga865146ed480c8d18d46a28cf01871dde} 
+enum {\bfseries lsm6dso32\+\_\+shub\+\_\+odr\+\_\+t} \{ {\bfseries LSM6\+DSO32\+\_\+\+SH\+\_\+\+ODR\+\_\+104\+Hz} = 0
+, {\bfseries LSM6\+DSO32\+\_\+\+SH\+\_\+\+ODR\+\_\+52\+Hz} = 1
+, {\bfseries LSM6\+DSO32\+\_\+\+SH\+\_\+\+ODR\+\_\+26\+Hz} = 2
+, {\bfseries LSM6\+DSO32\+\_\+\+SH\+\_\+\+ODR\+\_\+13\+Hz} = 3
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_gade65512e272eb76c08e13eec36fd974f}{lsm6dso32\+\_\+read\+\_\+reg}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t reg, uint8\+\_\+t \texorpdfstring{$\ast$}{*}data, uint16\+\_\+t len)
+\begin{DoxyCompactList}\small\item\em Read generic device register. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga3c3ddd57abddf4ffcc0b1d4d2b40264a}{lsm6dso32\+\_\+write\+\_\+reg}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t reg, uint8\+\_\+t \texorpdfstring{$\ast$}{*}data, uint16\+\_\+t len)
+\begin{DoxyCompactList}\small\item\em Write generic device register. \end{DoxyCompactList}\item 
+float\+\_\+t {\bfseries lsm6dso32\+\_\+from\+\_\+fs4\+\_\+to\+\_\+mg} (int16\+\_\+t lsb)
+\item 
+float\+\_\+t {\bfseries lsm6dso32\+\_\+from\+\_\+fs8\+\_\+to\+\_\+mg} (int16\+\_\+t lsb)
+\item 
+float\+\_\+t {\bfseries lsm6dso32\+\_\+from\+\_\+fs16\+\_\+to\+\_\+mg} (int16\+\_\+t lsb)
+\item 
+float\+\_\+t {\bfseries lsm6dso32\+\_\+from\+\_\+fs32\+\_\+to\+\_\+mg} (int16\+\_\+t lsb)
+\item 
+float\+\_\+t {\bfseries lsm6dso32\+\_\+from\+\_\+fs4\+\_\+to\+\_\+ms2} (int16\+\_\+t lsb)
+\item 
+float\+\_\+t {\bfseries lsm6dso32\+\_\+from\+\_\+fs8\+\_\+to\+\_\+ms2} (int16\+\_\+t lsb)
+\item 
+float\+\_\+t {\bfseries lsm6dso32\+\_\+from\+\_\+fs16\+\_\+to\+\_\+ms2} (int16\+\_\+t lsb)
+\item 
+float\+\_\+t {\bfseries lsm6dso32\+\_\+from\+\_\+fs32\+\_\+to\+\_\+ms2} (int16\+\_\+t lsb)
+\item 
+float\+\_\+t {\bfseries lsm6dso32\+\_\+from\+\_\+fs125\+\_\+to\+\_\+mdps} (int16\+\_\+t lsb)
+\item 
+float\+\_\+t {\bfseries lsm6dso32\+\_\+from\+\_\+fs250\+\_\+to\+\_\+mdps} (int16\+\_\+t lsb)
+\item 
+float\+\_\+t {\bfseries lsm6dso32\+\_\+from\+\_\+fs500\+\_\+to\+\_\+mdps} (int16\+\_\+t lsb)
+\item 
+float\+\_\+t {\bfseries lsm6dso32\+\_\+from\+\_\+fs1000\+\_\+to\+\_\+mdps} (int16\+\_\+t lsb)
+\item 
+float\+\_\+t {\bfseries lsm6dso32\+\_\+from\+\_\+fs2000\+\_\+to\+\_\+mdps} (int16\+\_\+t lsb)
+\item 
+float\+\_\+t {\bfseries lsm6dso32\+\_\+from\+\_\+fs125\+\_\+to\+\_\+rads} (int16\+\_\+t lsb)
+\item 
+float\+\_\+t {\bfseries lsm6dso32\+\_\+from\+\_\+fs250\+\_\+to\+\_\+rads} (int16\+\_\+t lsb)
+\item 
+float\+\_\+t {\bfseries lsm6dso32\+\_\+from\+\_\+fs500\+\_\+to\+\_\+rads} (int16\+\_\+t lsb)
+\item 
+float\+\_\+t {\bfseries lsm6dso32\+\_\+from\+\_\+fs1000\+\_\+to\+\_\+rads} (int16\+\_\+t lsb)
+\item 
+float\+\_\+t {\bfseries lsm6dso32\+\_\+from\+\_\+fs2000\+\_\+to\+\_\+rads} (int16\+\_\+t lsb)
+\item 
+float\+\_\+t {\bfseries lsm6dso32\+\_\+from\+\_\+lsb\+\_\+to\+\_\+celsius} (int16\+\_\+t lsb)
+\item 
+float\+\_\+t {\bfseries lsm6dso32\+\_\+from\+\_\+lsb\+\_\+to\+\_\+nsec} (int16\+\_\+t lsb)
+\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga33efff764541fabe3a584c8a0d715bac}{lsm6dso32\+\_\+xl\+\_\+full\+\_\+scale\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+fs\+\_\+xl\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Accelerometer full-\/scale selection.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga6989fba8ecb8e1f045e1429b5b7fce59}{lsm6dso32\+\_\+xl\+\_\+full\+\_\+scale\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+fs\+\_\+xl\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Accelerometer full-\/scale selection.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga5527dec76a329855ff787a5d37a4a3f9}{lsm6dso32\+\_\+xl\+\_\+data\+\_\+rate\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+odr\+\_\+xl\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Accelerometer UI data rate and power mode selection.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_gad46746d131ee47d3a62627c7d8b1ef25}{lsm6dso32\+\_\+xl\+\_\+data\+\_\+rate\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+odr\+\_\+xl\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Accelerometer UI data rate selection.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga1e3494945ad1f9d2d29d26ff648c6a77}{lsm6dso32\+\_\+gy\+\_\+full\+\_\+scale\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+fs\+\_\+g\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Gyroscope UI chain full-\/scale selection.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_gaf972b7d48967600f86410f88ed937074}{lsm6dso32\+\_\+gy\+\_\+full\+\_\+scale\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+fs\+\_\+g\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Gyroscope UI chain full-\/scale selection.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga9f64752e926176e54b1eb6375bed7f8f}{lsm6dso32\+\_\+gy\+\_\+data\+\_\+rate\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+odr\+\_\+g\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Gyroscope UI data rate selection.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga12cd6c34eb655fca51e147d1157365b5}{lsm6dso32\+\_\+gy\+\_\+data\+\_\+rate\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+odr\+\_\+g\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Gyroscope UI data rate selection.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_gae1fc4815e8b9f92f8e17529df1f0a992}{lsm6dso32\+\_\+block\+\_\+data\+\_\+update\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Block data update.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga26594dd1ef1eff716aeb26f07623a4b4}{lsm6dso32\+\_\+block\+\_\+data\+\_\+update\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Block data update.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga52f2b6f8caeed4ff7d01b2c21860a9ec}{lsm6dso32\+\_\+xl\+\_\+offset\+\_\+weight\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+usr\+\_\+off\+\_\+w\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Weight of XL user offset bits of registers X\+\_\+\+OFS\+\_\+\+USR (73h), Y\+\_\+\+OFS\+\_\+\+USR (74h), Z\+\_\+\+OFS\+\_\+\+USR (75h).\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga0d3cc1d8ffec6667a86bfdd69a4dda00}{lsm6dso32\+\_\+xl\+\_\+offset\+\_\+weight\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+usr\+\_\+off\+\_\+w\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Weight of XL user offset bits of registers X\+\_\+\+OFS\+\_\+\+USR (73h), Y\+\_\+\+OFS\+\_\+\+USR (74h), Z\+\_\+\+OFS\+\_\+\+USR (75h).\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_gaba0a42a8e62d9ec7d1b3a7bb9239559a}{lsm6dso32\+\_\+all\+\_\+sources\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \doxymbox{\hyperlink{structlsm6dso32__all__sources__t}{lsm6dso32\+\_\+all\+\_\+sources\+\_\+t}} \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Read all the interrupt flag of the device.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga0a04ba239265bc995a27e1913793bfba}{lsm6dso32\+\_\+status\+\_\+reg\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \doxymbox{\hyperlink{structlsm6dso32__status__reg__t}{lsm6dso32\+\_\+status\+\_\+reg\+\_\+t}} \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em The STATUS\+\_\+\+REG register is read by the primary interface.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_gaf5da404b0d7876b7a9da1c2384d15d62}{lsm6dso32\+\_\+xl\+\_\+flag\+\_\+data\+\_\+ready\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Accelerometer new data available.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_gacad5b94dcde8cb2c58e45f97f3b7a273}{lsm6dso32\+\_\+gy\+\_\+flag\+\_\+data\+\_\+ready\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Gyroscope new data available.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga4340617a16ed8b265692f08b32ea82f3}{lsm6dso32\+\_\+temp\+\_\+flag\+\_\+data\+\_\+ready\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Temperature new data available.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_gaa707728a8deea085fdb72e29914fcb55}{lsm6dso32\+\_\+xl\+\_\+usr\+\_\+offset\+\_\+x\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}buff)
+\begin{DoxyCompactList}\small\item\em Accelerometer X-\/axis user offset correction expressed in two\textquotesingle{}s complement, weight depends on USR\+\_\+\+OFF\+\_\+W in CTRL6\+\_\+C (15h). The value must be in the range \+[-\/127 127]\+.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_gabf87a3beb64c50e2ffa9825be26e6265}{lsm6dso32\+\_\+xl\+\_\+usr\+\_\+offset\+\_\+x\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}buff)
+\begin{DoxyCompactList}\small\item\em Accelerometer X-\/axis user offset correction expressed in two\textquotesingle{}s complement, weight depends on USR\+\_\+\+OFF\+\_\+W in CTRL6\+\_\+C (15h). The value must be in the range \+[-\/127 127]\+.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga32a59792750e33d8797c0e4a948ae39a}{lsm6dso32\+\_\+xl\+\_\+usr\+\_\+offset\+\_\+y\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}buff)
+\begin{DoxyCompactList}\small\item\em Accelerometer Y-\/axis user offset correction expressed in two\textquotesingle{}s complement, weight depends on USR\+\_\+\+OFF\+\_\+W in CTRL6\+\_\+C (15h). The value must be in the range \+[-\/127 127]\+.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga97d4938cc32d13c14e38fdf2e09e58be}{lsm6dso32\+\_\+xl\+\_\+usr\+\_\+offset\+\_\+y\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}buff)
+\begin{DoxyCompactList}\small\item\em Accelerometer Y-\/axis user offset correction expressed in two\textquotesingle{}s complement, weight depends on USR\+\_\+\+OFF\+\_\+W in CTRL6\+\_\+C (15h). The value must be in the range \+[-\/127 127]\+.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga8e9cc4e19c90fd894fca7e72c498a669}{lsm6dso32\+\_\+xl\+\_\+usr\+\_\+offset\+\_\+z\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}buff)
+\begin{DoxyCompactList}\small\item\em Accelerometer Z-\/axis user offset correction expressed in two\textquotesingle{}s complement, weight depends on USR\+\_\+\+OFF\+\_\+W in CTRL6\+\_\+C (15h). The value must be in the range \+[-\/127 127]\+.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_gae906aa69e1c68db173e0e43aa46a1674}{lsm6dso32\+\_\+xl\+\_\+usr\+\_\+offset\+\_\+z\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}buff)
+\begin{DoxyCompactList}\small\item\em Accelerometer Z-\/axis user offset correction expressed in two\textquotesingle{}s complement, weight depends on USR\+\_\+\+OFF\+\_\+W in CTRL6\+\_\+C (15h). The value must be in the range \+[-\/127 127]\+.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_gaf6add70af8adf9f9e78d0b945a0d732a}{lsm6dso32\+\_\+xl\+\_\+usr\+\_\+offset\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Enables user offset on out.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_gaa5a84787f517bb0acce02dc18c8c0473}{lsm6dso32\+\_\+xl\+\_\+usr\+\_\+offset\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em User offset on out flag.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga2a7db0fa58edcd66dd7491a13ffe8e61}{lsm6dso32\+\_\+timestamp\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Enables timestamp counter.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga8eb127223ca06c021abff679f673bdf7}{lsm6dso32\+\_\+timestamp\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Enables timestamp counter.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga1a1b4d0e64568a88241cd60d2a588e2b}{lsm6dso32\+\_\+timestamp\+\_\+raw\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint32\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Timestamp first data output register (r). The value is expressed as a 32-\/bit word and the bit resolution is 25 us.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga8b69da14a469d9e49b782de28ce51ff0}{lsm6dso32\+\_\+rounding\+\_\+mode\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+rounding\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Circular burst-\/mode (rounding) read of the output registers.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga7a98cc3a7134e27cbbba97d1c5fad42a}{lsm6dso32\+\_\+rounding\+\_\+mode\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+rounding\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Gyroscope UI chain full-\/scale selection.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga404624a13657833081c3abb046f34a7c}{lsm6dso32\+\_\+temperature\+\_\+raw\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, int16\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Temperature data output register (r). L and H registers together express a 16-\/bit word in two\textquotesingle{}s complement.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga5409dd5177b7b2c24846b37037900f58}{lsm6dso32\+\_\+angular\+\_\+rate\+\_\+raw\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, int16\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Angular rate sensor. The value is expressed as a 16-\/bit word in two\textquotesingle{}s complement.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t {\bfseries lsm6dso32\+\_\+acceleration\+\_\+raw\+\_\+get} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, int16\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_gaa62235010b54dd7d6b3f35e0f6cfcaab}{lsm6dso32\+\_\+fifo\+\_\+out\+\_\+raw\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}buff)
+\begin{DoxyCompactList}\small\item\em FIFO data output \+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_gad2f9b13962388a448f2858050682c617}{lsm6dso32\+\_\+number\+\_\+of\+\_\+steps\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint16\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Step counter output register.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga6c91b56a17b3f96c1ea884aff2ae7539}{lsm6dso32\+\_\+steps\+\_\+reset}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx)
+\begin{DoxyCompactList}\small\item\em Reset step counter register.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_gae633968e89e8e68a3148153c9168350b}{lsm6dso32\+\_\+odr\+\_\+cal\+\_\+reg\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Difference in percentage of the effective ODR(and timestamp rate) with respect to the typical. Step:\+ 0.\+15\%. 8-\/bit format, 2\textquotesingle{}s complement.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga7a8bdff70f40e528fe1b8789abc5142d}{lsm6dso32\+\_\+odr\+\_\+cal\+\_\+reg\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Difference in percentage of the effective ODR(and timestamp rate) with respect to the typical. Step:\+ 0.\+15\%. 8-\/bit format, 2\textquotesingle{}s complement.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga72d0df37de3766f6d033f7f3c74523ee}{lsm6dso32\+\_\+mem\+\_\+bank\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+reg\+\_\+access\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Enable access to the embedded functions/\+sensor hub configuration registers.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga1d486a77be55503c97e4a559c3fd9a66}{lsm6dso32\+\_\+mem\+\_\+bank\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+reg\+\_\+access\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Enable access to the embedded functions/\+sensor hub configuration registers.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga87dfbec5d546712d75fb658395c01edb}{lsm6dso32\+\_\+ln\+\_\+pg\+\_\+write\+\_\+byte}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint16\+\_\+t address, uint8\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Write a line(byte) in a page.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_gab1d589a6b1796aa365e1ecf43a933465}{lsm6dso32\+\_\+ln\+\_\+pg\+\_\+read\+\_\+byte}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint16\+\_\+t address, uint8\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Read a line(byte) in a page.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_gaabc1f49bc54a60774355853aaf1c0abe}{lsm6dso32\+\_\+ln\+\_\+pg\+\_\+write}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint16\+\_\+t address, uint8\+\_\+t \texorpdfstring{$\ast$}{*}buf, uint8\+\_\+t len)
+\begin{DoxyCompactList}\small\item\em Write buffer in a page.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t {\bfseries lsm6dso32\+\_\+ln\+\_\+pg\+\_\+read} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint16\+\_\+t address, uint8\+\_\+t \texorpdfstring{$\ast$}{*}buf, uint8\+\_\+t len)
+\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_gade530671161c3e964fd606846db0c47e}{lsm6dso32\+\_\+data\+\_\+ready\+\_\+mode\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+dataready\+\_\+pulsed\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Data-\/ready pulsed /\+ letched mode.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_gaa7fc5f79af3ec81ecc94d9bcc5146b72}{lsm6dso32\+\_\+data\+\_\+ready\+\_\+mode\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+dataready\+\_\+pulsed\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Data-\/ready pulsed /\+ letched mode.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_gae4d6b7d657a0a77b74157b79e15e51c7}{lsm6dso32\+\_\+device\+\_\+id\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}buff)
+\begin{DoxyCompactList}\small\item\em Device "{}\+Who am I"{}.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_gad53e845fdd60add094b9650d36aafbb0}{lsm6dso32\+\_\+reset\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Software reset. Restore the default values in user registers\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_gaa15cca41179900bb066200da634c0c92}{lsm6dso32\+\_\+reset\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Software reset. Restore the default values in user registers.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_gaf9d5d9553ef97e980cb2fc929e3afd41}{lsm6dso32\+\_\+auto\+\_\+increment\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Register address automatically incremented during a multiple byte access with a serial interface.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_gaa7042892005da62fe9bbd9566d74f385}{lsm6dso32\+\_\+auto\+\_\+increment\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Register address automatically incremented during a multiple byte access with a serial interface.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga0fcf3b2471e32c5f5ac8441d880a349f}{lsm6dso32\+\_\+boot\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Reboot memory content. Reload the calibration parameters.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga562393a206bb21ac0c1093327d0c3d29}{lsm6dso32\+\_\+boot\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Reboot memory content. Reload the calibration parameters.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga9906cb4a2076462824db18db273cbf7a}{lsm6dso32\+\_\+xl\+\_\+self\+\_\+test\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+st\+\_\+xl\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Linear acceleration sensor self-\/test enable.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga90982a498e9c983a135e8e6c7ed5e204}{lsm6dso32\+\_\+xl\+\_\+self\+\_\+test\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+st\+\_\+xl\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Linear acceleration sensor self-\/test enable.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_gaa4b750a11622911522852fac76068eae}{lsm6dso32\+\_\+gy\+\_\+self\+\_\+test\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+st\+\_\+g\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Angular rate sensor self-\/test enable.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_gabcc5ce58a05a896d880b860417deff6b}{lsm6dso32\+\_\+gy\+\_\+self\+\_\+test\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+st\+\_\+g\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Angular rate sensor self-\/test enable.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga361aff959e0dd5c7733ff03ad4c9b56d}{lsm6dso32\+\_\+xl\+\_\+filter\+\_\+lp2\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Accelerometer output from LPF2 filtering stage selection.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_gae62da4e4888932894de3b5ef9b986fe7}{lsm6dso32\+\_\+xl\+\_\+filter\+\_\+lp2\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Accelerometer output from LPF2 filtering stage selection.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga51c80ae4eedd3eb991fc1cabb80f4358}{lsm6dso32\+\_\+gy\+\_\+filter\+\_\+lp1\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Enables gyroscope digital LPF1 if auxiliary SPI is disabled; the bandwidth can be selected through FTYPE \+[2:\+0]\+ in CTRL6\+\_\+C (15h).\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_gaca7796d70770497dbe16aaeba3fe2028}{lsm6dso32\+\_\+gy\+\_\+filter\+\_\+lp1\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Enables gyroscope digital LPF1 if auxiliary SPI is disabled; the bandwidth can be selected through FTYPE \+[2:\+0]\+ in CTRL6\+\_\+C (15h).\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga870b28de399e9f4cc0055446a29ccda6}{lsm6dso32\+\_\+filter\+\_\+settling\+\_\+mask\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Mask DRDY on pin (both XL \& Gyro) until filter settling ends (XL and Gyro independently masked).\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga3c3c0a440ba9eea6748d315be811983b}{lsm6dso32\+\_\+filter\+\_\+settling\+\_\+mask\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Mask DRDY on pin (both XL \& Gyro) until filter settling ends (XL and Gyro independently masked).\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga6fd9a8eaeafcdd6c9d577428f831bb00}{lsm6dso32\+\_\+gy\+\_\+lp1\+\_\+bandwidth\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+ftype\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Gyroscope lp1 bandwidth.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_gae3a441308f5e7193b16443bb94fa1961}{lsm6dso32\+\_\+gy\+\_\+lp1\+\_\+bandwidth\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+ftype\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Gyroscope lp1 bandwidth.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_gaba08daad7acf03b6853ae0b21aef462a}{lsm6dso32\+\_\+xl\+\_\+lp2\+\_\+on\+\_\+6d\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Low pass filter 2 on 6D function selection.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_gabdb429015778d538564ad411d172ca07}{lsm6dso32\+\_\+xl\+\_\+lp2\+\_\+on\+\_\+6d\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Low pass filter 2 on 6D function selection.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_gad861011d6751502f7e9b9a1aa8ee6fde}{lsm6dso32\+\_\+xl\+\_\+hp\+\_\+path\+\_\+on\+\_\+out\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+hp\+\_\+slope\+\_\+xl\+\_\+en\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Accelerometer slope filter /\+ high-\/pass filter selection on output.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga5ff3f3e6479f00a51e143d6ff15d3b0c}{lsm6dso32\+\_\+xl\+\_\+hp\+\_\+path\+\_\+on\+\_\+out\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+hp\+\_\+slope\+\_\+xl\+\_\+en\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Accelerometer slope filter /\+ high-\/pass filter selection on output.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga27231b073216f8b1ee965221d49d5144}{lsm6dso32\+\_\+xl\+\_\+fast\+\_\+settling\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Enables accelerometer LPF2 and HPF fast-\/settling mode. The filter sets the second samples after writing this bit. Active only during device exit from power-\/down mode.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga71113dbdd8fc1ab2f625ec8404a768d8}{lsm6dso32\+\_\+xl\+\_\+fast\+\_\+settling\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Enables accelerometer LPF2 and HPF fast-\/settling mode. The filter sets the second samples after writing this bit. Active only during device exit from power-\/down mode.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga3a804c4dc41a2e58fd13c3773c7b9329}{lsm6dso32\+\_\+xl\+\_\+hp\+\_\+path\+\_\+internal\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+slope\+\_\+fds\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em HPF or SLOPE filter selection on wake-\/up and Activity/\+\+Inactivity functions.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_gaf806a3f1d4cb2f3de6764f97fad24aca}{lsm6dso32\+\_\+xl\+\_\+hp\+\_\+path\+\_\+internal\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+slope\+\_\+fds\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em HPF or SLOPE filter selection on wake-\/up and Activity/\+\+Inactivity functions.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_gaf4c3c3db570042fb7f147a2a535a4d87}{lsm6dso32\+\_\+gy\+\_\+hp\+\_\+path\+\_\+internal\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+hpm\+\_\+g\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Enables gyroscope digital high-\/pass filter. The filter is enabled only if the gyro is in HP mode.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_gabfb6fab1937bef826667b5f0ffee2719}{lsm6dso32\+\_\+gy\+\_\+hp\+\_\+path\+\_\+internal\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+hpm\+\_\+g\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Enables gyroscope digital high-\/pass filter. The filter is enabled only if the gyro is in HP mode.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_gaaf6562ae80917157a3efc48250036c56}{lsm6dso32\+\_\+sdo\+\_\+sa0\+\_\+mode\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+sdo\+\_\+pu\+\_\+en\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Connect/\+\+Disconnect SDO/\+\+SA0 internal pull-\/up.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga09e78cb39e99c110edae58c9ddbefde9}{lsm6dso32\+\_\+sdo\+\_\+sa0\+\_\+mode\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+sdo\+\_\+pu\+\_\+en\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Connect/\+\+Disconnect SDO/\+\+SA0 internal pull-\/up.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga4bf2d8c9256dfbfad52f037f6d270ed9}{lsm6dso32\+\_\+spi\+\_\+mode\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+sim\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em SPI Serial Interface Mode selection.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga594b0a512dba7844079d38942a4d1f52}{lsm6dso32\+\_\+spi\+\_\+mode\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+sim\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em SPI Serial Interface Mode selection.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga7661b6e1420688c17fd4fa8e706c35fe}{lsm6dso32\+\_\+i2c\+\_\+interface\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+i2c\+\_\+disable\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Disable /\+ Enable I2C interface.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga0c8cefc2df0b782646daf8fb110b7400}{lsm6dso32\+\_\+i2c\+\_\+interface\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+i2c\+\_\+disable\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Disable /\+ Enable I2C interface.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga1ddaa55476eb41894b8a7799b5e41dfd}{lsm6dso32\+\_\+i3c\+\_\+disable\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+i3c\+\_\+disable\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em I3C Enable/\+\+Disable communication protocol\+[.set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_gaa04b0112612a114a2e37233ad74ece54}{lsm6dso32\+\_\+i3c\+\_\+disable\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+i3c\+\_\+disable\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em I3C Enable/\+\+Disable communication protocol.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_gacf086337abf77fcf3f8d36c3d2ba7da7}{lsm6dso32\+\_\+int1\+\_\+mode\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+int1\+\_\+pd\+\_\+en\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Connect/\+\+Disconnect INT1 internal pull-\/down.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga9d37ca35baef78dbedf9e0b41552408a}{lsm6dso32\+\_\+int1\+\_\+mode\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+int1\+\_\+pd\+\_\+en\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Connect/\+\+Disconnect INT1 internal pull-\/down.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga11973987f455ac6c6e9be20769437e0d}{lsm6dso32\+\_\+pin\+\_\+int1\+\_\+route\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \doxymbox{\hyperlink{structlsm6dso32__pin__int1__route__t}{lsm6dso32\+\_\+pin\+\_\+int1\+\_\+route\+\_\+t}} \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Select the signal that need to route on int1 pad.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_gabc4ab7602766cbd02aaa89b732c8ecb9}{lsm6dso32\+\_\+pin\+\_\+int1\+\_\+route\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \doxymbox{\hyperlink{structlsm6dso32__pin__int1__route__t}{lsm6dso32\+\_\+pin\+\_\+int1\+\_\+route\+\_\+t}} \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Select the signal that need to route on int1 pad.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_gaa5fc5229d33519b889d1cb5f762b8f3a}{lsm6dso32\+\_\+pin\+\_\+int2\+\_\+route\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \doxymbox{\hyperlink{structlsm6dso32__pin__int2__route__t}{lsm6dso32\+\_\+pin\+\_\+int2\+\_\+route\+\_\+t}} \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Select the signal that need to route on int2 pad.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga0ecee09945db6f606980f1bc32bc8967}{lsm6dso32\+\_\+pin\+\_\+int2\+\_\+route\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \doxymbox{\hyperlink{structlsm6dso32__pin__int2__route__t}{lsm6dso32\+\_\+pin\+\_\+int2\+\_\+route\+\_\+t}} \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Select the signal that need to route on int2 pad.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga24a573151f48d80d0e91377ef20e07b7}{lsm6dso32\+\_\+pin\+\_\+mode\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+pp\+\_\+od\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Push-\/pull/\+open drain selection on interrupt pads.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga63d600d81e68ace2ef9c88441fbdcb05}{lsm6dso32\+\_\+pin\+\_\+mode\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+pp\+\_\+od\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Push-\/pull/\+open drain selection on interrupt pads.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_gac0d69f9e337690e7f967083f855dc7e0}{lsm6dso32\+\_\+pin\+\_\+polarity\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+h\+\_\+lactive\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Interrupt active-\/high/\+low.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_gad51bf412e0da068be13a4f58604d9679}{lsm6dso32\+\_\+pin\+\_\+polarity\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+h\+\_\+lactive\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Interrupt active-\/high/\+low.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_gaac93b917e61fba02cf5b064cc7492ede}{lsm6dso32\+\_\+all\+\_\+on\+\_\+int1\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em All interrupt signals become available on INT1 pin.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga027908d5394a6b479a1f01153735b417}{lsm6dso32\+\_\+all\+\_\+on\+\_\+int1\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em All interrupt signals become available on INT1 pin.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga30699da08b0c30751b6344434a12a469}{lsm6dso32\+\_\+int\+\_\+notification\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+lir\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Interrupt notification mode.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_gabce594aff55527e691c663d2572089f9}{lsm6dso32\+\_\+int\+\_\+notification\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+lir\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Interrupt notification mode.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_gad76473c1fe763c5c7f35a02b154fa64a}{lsm6dso32\+\_\+wkup\+\_\+ths\+\_\+weight\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+wake\+\_\+ths\+\_\+w\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Weight of 1 LSB of wakeup threshold.\+[set]\+ 0:\+ 1 LSB =FS\+\_\+\+XL /\+ 64 1:\+ 1 LSB = FS\+\_\+\+XL /\+ 256. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga1f99084f4b668581b469ae3d82db032c}{lsm6dso32\+\_\+wkup\+\_\+ths\+\_\+weight\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+wake\+\_\+ths\+\_\+w\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Weight of 1 LSB of wakeup threshold.\+[get]\+ 0:\+ 1 LSB =FS\+\_\+\+XL /\+ 64 1:\+ 1 LSB = FS\+\_\+\+XL /\+ 256. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_gaf4b3909a876f6b30e0ce9bce59d29b48}{lsm6dso32\+\_\+wkup\+\_\+threshold\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Threshold for wakeup:\+ 1 LSB weight depends on WAKE\+\_\+\+THS\+\_\+W in WAKE\+\_\+\+UP\+\_\+\+DUR.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga58f73dba108d3705246510fe2215135c}{lsm6dso32\+\_\+wkup\+\_\+threshold\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Threshold for wakeup:\+ 1 LSB weight depends on WAKE\+\_\+\+THS\+\_\+W in WAKE\+\_\+\+UP\+\_\+\+DUR.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_gac1ec8a2cca9cdc5568f5359bd7253908}{lsm6dso32\+\_\+xl\+\_\+usr\+\_\+offset\+\_\+on\+\_\+wkup\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Wake up duration event.\+[set]\+ 1LSb = 1 /\+ ODR. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga2bd8a120b4f2d919a62d4e9b8c5faf87}{lsm6dso32\+\_\+xl\+\_\+usr\+\_\+offset\+\_\+on\+\_\+wkup\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Wake up duration event.\+[get]\+ 1LSb = 1 /\+ ODR. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_gac525b935995e3fb79880596b928c70f6}{lsm6dso32\+\_\+wkup\+\_\+dur\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Wake up duration event.\+[set]\+ 1LSb = 1 /\+ ODR. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga3a56e580d8bb1486dd87087e9c5a0e27}{lsm6dso32\+\_\+wkup\+\_\+dur\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Wake up duration event.\+[get]\+ 1LSb = 1 /\+ ODR. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_gaa77f28ef231c65da56ee3ed226cc79b8}{lsm6dso32\+\_\+gy\+\_\+sleep\+\_\+mode\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Enables gyroscope Sleep mode.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga06e5ad5de2b19da106eb3e79235a789f}{lsm6dso32\+\_\+gy\+\_\+sleep\+\_\+mode\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Enables gyroscope Sleep mode.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_gaa0300f599f84d04725a87469e4359ce8}{lsm6dso32\+\_\+act\+\_\+pin\+\_\+notification\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+sleep\+\_\+status\+\_\+on\+\_\+int\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Drives the sleep status instead of sleep change on INT pins (only if INT1\+\_\+\+SLEEP\+\_\+\+CHANGE or INT2\+\_\+\+SLEEP\+\_\+\+CHANGE bits are enabled).\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga37c223c9a716dfbc15c73ce588794723}{lsm6dso32\+\_\+act\+\_\+pin\+\_\+notification\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+sleep\+\_\+status\+\_\+on\+\_\+int\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Drives the sleep status instead of sleep change on INT pins (only if INT1\+\_\+\+SLEEP\+\_\+\+CHANGE or INT2\+\_\+\+SLEEP\+\_\+\+CHANGE bits are enabled).\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga8afabfbe2efbe3eee2fd8c76e711c2dc}{lsm6dso32\+\_\+act\+\_\+mode\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+inact\+\_\+en\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Enable inactivity function.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_gacdb540842d88f81075531fcf49c07685}{lsm6dso32\+\_\+act\+\_\+mode\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+inact\+\_\+en\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Enable inactivity function.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga3671923c82ed2abc23a3a9d67ff7cee5}{lsm6dso32\+\_\+act\+\_\+sleep\+\_\+dur\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Duration to go in sleep mode.\+[set]\+ 1 LSb = 512 /\+ ODR. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga1768707e6f43a2ea58e0aa2715a36849}{lsm6dso32\+\_\+act\+\_\+sleep\+\_\+dur\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Duration to go in sleep mode.\+[get]\+ 1 LSb = 512 /\+ ODR. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga2ca0027f9d62ad8b3efd3c9dc24520e0}{lsm6dso32\+\_\+tap\+\_\+detection\+\_\+on\+\_\+z\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Enable Z direction in tap recognition.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_gaaaf712dd79b85b45432ad0e54a0fcbde}{lsm6dso32\+\_\+tap\+\_\+detection\+\_\+on\+\_\+z\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Enable Z direction in tap recognition.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga67ae54537cfbf7cf8114d6a27e72d51a}{lsm6dso32\+\_\+tap\+\_\+detection\+\_\+on\+\_\+y\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Enable Y direction in tap recognition.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_gaf651ff44fe58a0343391b078c790eb90}{lsm6dso32\+\_\+tap\+\_\+detection\+\_\+on\+\_\+y\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Enable Y direction in tap recognition.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga2a3afe4212909b3fb69da57799e332ef}{lsm6dso32\+\_\+tap\+\_\+detection\+\_\+on\+\_\+x\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Enable X direction in tap recognition.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga0782716ac7f31a2fd16a8d6d76a1f693}{lsm6dso32\+\_\+tap\+\_\+detection\+\_\+on\+\_\+x\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Enable X direction in tap recognition.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_gacb6bb476b59665daec0483a5abae52a1}{lsm6dso32\+\_\+tap\+\_\+threshold\+\_\+x\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em X-\/axis tap recognition threshold.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_gaa82e4258f7a944183b9f8309bcb48147}{lsm6dso32\+\_\+tap\+\_\+threshold\+\_\+x\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em X-\/axis tap recognition threshold.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga2d2a26237ccecfef4315f50131e311e2}{lsm6dso32\+\_\+tap\+\_\+axis\+\_\+priority\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+tap\+\_\+priority\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Selection of axis priority for TAP detection.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_gac40fde843ae3f5c33c49a95d2b034cc9}{lsm6dso32\+\_\+tap\+\_\+axis\+\_\+priority\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+tap\+\_\+priority\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Selection of axis priority for TAP detection.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga44b2d63b7fad771a352efc4172d304bc}{lsm6dso32\+\_\+tap\+\_\+threshold\+\_\+y\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Y-\/axis tap recognition threshold.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga3792c9b68bd0fa458c8e2dcda4c4e7f1}{lsm6dso32\+\_\+tap\+\_\+threshold\+\_\+y\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Y-\/axis tap recognition threshold.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_gaef223d47606847083fa21a91c5a021dd}{lsm6dso32\+\_\+tap\+\_\+threshold\+\_\+z\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Z-\/axis recognition threshold.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_gadb0eee2405295952053fe12e5fe89a8d}{lsm6dso32\+\_\+tap\+\_\+threshold\+\_\+z\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Z-\/axis recognition threshold.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_gaee1147dc3e6d178c51444643dbe71ca7}{lsm6dso32\+\_\+tap\+\_\+shock\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Maximum duration is the maximum time of an over threshold signal detection to be recognized as a tap event. The default value of these bits is 00b which corresponds to 4\texorpdfstring{$\ast$}{*}\+ODR\+\_\+\+XL time. If the SHOCK\+[1:\+0]\+ bits are set to a different value, 1LSB corresponds to 8\texorpdfstring{$\ast$}{*}\+ODR\+\_\+\+XL time.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga5624d1c9bd6d1adf1123b388313cae5a}{lsm6dso32\+\_\+tap\+\_\+shock\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Maximum duration is the maximum time of an over threshold signal detection to be recognized as a tap event. The default value of these bits is 00b which corresponds to 4\texorpdfstring{$\ast$}{*}\+ODR\+\_\+\+XL time. If the SHOCK\+[1:\+0]\+ bits are set to a different value, 1LSB corresponds to 8\texorpdfstring{$\ast$}{*}\+ODR\+\_\+\+XL time.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_gabc45b6d7addf9d3f94239cc21988ab1f}{lsm6dso32\+\_\+tap\+\_\+quiet\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Quiet time is the time after the first detected tap in which there must not be any over threshold event. The default value of these bits is 00b which corresponds to 2\texorpdfstring{$\ast$}{*}\+ODR\+\_\+\+XL time. If the QUIET\+[1:\+0]\+ bits are set to a different value, 1LSB corresponds to 4\texorpdfstring{$\ast$}{*}\+ODR\+\_\+\+XL time.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga9dfb2c077aa563ba6d73b2862bad3ecc}{lsm6dso32\+\_\+tap\+\_\+quiet\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Quiet time is the time after the first detected tap in which there must not be any over threshold event. The default value of these bits is 00b which corresponds to 2\texorpdfstring{$\ast$}{*}\+ODR\+\_\+\+XL time. If the QUIET\+[1:\+0]\+ bits are set to a different value, 1LSB corresponds to 4\texorpdfstring{$\ast$}{*}\+ODR\+\_\+\+XL time.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_gac8465d147e9a34a28042fc7a75ba660c}{lsm6dso32\+\_\+tap\+\_\+dur\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em When double tap recognition is enabled, this register expresses the maximum time between two consecutive detected taps to determine a double tap event. The default value of these bits is 0000b which corresponds to 16\texorpdfstring{$\ast$}{*}\+ODR\+\_\+\+XL time. If the DUR\+[3:\+0]\+ bits are set to a different value, 1LSB corresponds to 32\texorpdfstring{$\ast$}{*}\+ODR\+\_\+\+XL time.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_gab494eb8e9e05c91a7a1df20c6d2b6630}{lsm6dso32\+\_\+tap\+\_\+dur\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em When double tap recognition is enabled, this register expresses the maximum time between two consecutive detected taps to determine a double tap event. The default value of these bits is 0000b which corresponds to 16\texorpdfstring{$\ast$}{*}\+ODR\+\_\+\+XL time. If the DUR\+[3:\+0]\+ bits are set to a different value, 1LSB corresponds to 32\texorpdfstring{$\ast$}{*}\+ODR\+\_\+\+XL time.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_gaa267b4ddb56529ec4392d46b855998ec}{lsm6dso32\+\_\+tap\+\_\+mode\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+single\+\_\+double\+\_\+tap\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Single/\+double-\/tap event enable.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga6ba61801b97c1e40964404e3107360a7}{lsm6dso32\+\_\+tap\+\_\+mode\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+single\+\_\+double\+\_\+tap\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Single/\+double-\/tap event enable.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_gab06f6cdd0c94e26b095730b54e652125}{lsm6dso32\+\_\+6d\+\_\+threshold\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+sixd\+\_\+ths\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Threshold for 4D/\+6D function.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga092fb82c580d01745590cf0acd3666fe}{lsm6dso32\+\_\+6d\+\_\+threshold\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+sixd\+\_\+ths\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Threshold for 4D/\+6D function.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_gaec5c7441bc69f44618251483633dda24}{lsm6dso32\+\_\+4d\+\_\+mode\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em 4D orientation detection enable.\+[set]\+ \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga215098b62f55446c03afd174dd5baa67}{lsm6dso32\+\_\+4d\+\_\+mode\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em 4D orientation detection enable.\+[get]\+ \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_gae68bb2fc5d2a1552d2a6eb7197b9ed32}{lsm6dso32\+\_\+ff\+\_\+threshold\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+ff\+\_\+ths\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Free fall threshold setting.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga2054c3d7233b9b3b04558a3965c87b22}{lsm6dso32\+\_\+ff\+\_\+threshold\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+ff\+\_\+ths\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Free fall threshold setting.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_gad05b3131c22270c35c5cc6f3b3886e20}{lsm6dso32\+\_\+ff\+\_\+dur\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Free-\/fall duration event.\+[set]\+ 1LSb = 1 /\+ ODR. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_gafcd0912e5631829e4b483d68002f8787}{lsm6dso32\+\_\+ff\+\_\+dur\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Free-\/fall duration event.\+[get]\+ 1LSb = 1 /\+ ODR. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga7058e995b238136b930032a60521bf5e}{lsm6dso32\+\_\+fifo\+\_\+watermark\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint16\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em FIFO watermark level selection.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga05c83a8cfce46ec1d691736008d25eed}{lsm6dso32\+\_\+fifo\+\_\+watermark\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint16\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em FIFO watermark level selection.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_gacb20c65c9d32a426247d7a7eb57ce31d}{lsm6dso32\+\_\+compression\+\_\+algo\+\_\+init\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em FIFO compression feature initialization request \+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_gabf29df0cfc8dcbb3a9539bee3ee5a908}{lsm6dso32\+\_\+compression\+\_\+algo\+\_\+init\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em FIFO compression feature initialization request \+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga4d02ef107ce3b72996d1989ad38a5573}{lsm6dso32\+\_\+compression\+\_\+algo\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+uncoptr\+\_\+rate\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Enable and configure compression algo.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_gadb8a36abd3607016269c4d46cc9eb938}{lsm6dso32\+\_\+compression\+\_\+algo\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+uncoptr\+\_\+rate\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Enable and configure compression algo.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga73081c50c5677d52c94dd1e58c616856}{lsm6dso32\+\_\+fifo\+\_\+virtual\+\_\+sens\+\_\+odr\+\_\+chg\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Enables ODR CHANGE virtual sensor to be batched in FIFO.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_gade6d875aee255f41e06ef6c3407a2905}{lsm6dso32\+\_\+fifo\+\_\+virtual\+\_\+sens\+\_\+odr\+\_\+chg\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Enables ODR CHANGE virtual sensor to be batched in FIFO.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga9ee149359e7c856735c98fb08c0f06dc}{lsm6dso32\+\_\+compression\+\_\+algo\+\_\+real\+\_\+time\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Enables/\+\+Disables compression algorithm runtime.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga023af4542ca61eafdcbfcaad064f0094}{lsm6dso32\+\_\+compression\+\_\+algo\+\_\+real\+\_\+time\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Enables/\+\+Disables compression algorithm runtime.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga00ad03fc66cd59f556317225da65604a}{lsm6dso32\+\_\+fifo\+\_\+stop\+\_\+on\+\_\+wtm\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Sensing chain FIFO stop values memorization at threshold level.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga2b1067a8327de9a5bfd92bbbd431f7b0}{lsm6dso32\+\_\+fifo\+\_\+stop\+\_\+on\+\_\+wtm\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Sensing chain FIFO stop values memorization at threshold level.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_gab97957b67d44cf40de135e9d401cf4ff}{lsm6dso32\+\_\+fifo\+\_\+xl\+\_\+batch\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+bdr\+\_\+xl\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Selects Batching Data Rate (writing frequency in FIFO) for accelerometer data.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga328f9468da6554392846d6008815e89d}{lsm6dso32\+\_\+fifo\+\_\+xl\+\_\+batch\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+bdr\+\_\+xl\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Selects Batching Data Rate (writing frequency in FIFO) for accelerometer data.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga7f937b145af6fecc31daae24222d1f78}{lsm6dso32\+\_\+fifo\+\_\+gy\+\_\+batch\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+bdr\+\_\+gy\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Selects Batching Data Rate (writing frequency in FIFO) for gyroscope data.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga3333bb2fbdfa4d527749d9ecd21dc00d}{lsm6dso32\+\_\+fifo\+\_\+gy\+\_\+batch\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+bdr\+\_\+gy\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Selects Batching Data Rate (writing frequency in FIFO) for gyroscope data.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_gabb358a7e702191a3a168f1d3d0a9eb25}{lsm6dso32\+\_\+fifo\+\_\+mode\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+fifo\+\_\+mode\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em FIFO mode selection.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_gab541268dfd0aa3112e9de4bb447aba57}{lsm6dso32\+\_\+fifo\+\_\+mode\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+fifo\+\_\+mode\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em FIFO mode selection.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_gaf5c5fc9385f0bbcb2cc9322cc7448b75}{lsm6dso32\+\_\+fifo\+\_\+temp\+\_\+batch\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+odr\+\_\+t\+\_\+batch\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Selects Batching Data Rate (writing frequency in FIFO) for temperature data.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga37820355e95f57faaa9226d51d333197}{lsm6dso32\+\_\+fifo\+\_\+temp\+\_\+batch\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+odr\+\_\+t\+\_\+batch\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Selects Batching Data Rate (writing frequency in FIFO) for temperature data.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga6087e1e3393af895e801c1beae2730e0}{lsm6dso32\+\_\+fifo\+\_\+timestamp\+\_\+decimation\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+odr\+\_\+ts\+\_\+batch\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Selects decimation for timestamp batching in FIFO. Writing rate will be the maximum rate between XL and GYRO BDR divided by decimation decoder.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga33e457fc5be75a8a4c512e34e6d4a3bc}{lsm6dso32\+\_\+fifo\+\_\+timestamp\+\_\+decimation\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+odr\+\_\+ts\+\_\+batch\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Selects decimation for timestamp batching in FIFO. Writing rate will be the maximum rate between XL and GYRO BDR divided by decimation decoder.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga30b8f29c090879aa2425baac3efb597e}{lsm6dso32\+\_\+fifo\+\_\+cnt\+\_\+event\+\_\+batch\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+trig\+\_\+counter\+\_\+bdr\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Selects the trigger for the internal counter of batching events between XL and gyro.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga402aef02a05740c0031b98e8ed4cc8c8}{lsm6dso32\+\_\+fifo\+\_\+cnt\+\_\+event\+\_\+batch\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+trig\+\_\+counter\+\_\+bdr\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Selects the trigger for the internal counter of batching events between XL and gyro.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga0a13f0c1bc4f3ca7e077ceecbb60e3a2}{lsm6dso32\+\_\+rst\+\_\+batch\+\_\+counter\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Resets the internal counter of batching vents for a single sensor. This bit is automatically reset to zero if it was set to \textquotesingle{}1\textquotesingle{}.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_gaca92e1736e95a0c2fb76339e79aaf3f3}{lsm6dso32\+\_\+rst\+\_\+batch\+\_\+counter\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Resets the internal counter of batching events for a single sensor. This bit is automatically reset to zero if it was set to \textquotesingle{}1\textquotesingle{}.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga57625d1ef21800f8b12a069413a3097a}{lsm6dso32\+\_\+batch\+\_\+counter\+\_\+threshold\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint16\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Batch data rate counter.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_gacfcf476a65699071c99cc1d712bf8f0c}{lsm6dso32\+\_\+batch\+\_\+counter\+\_\+threshold\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint16\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Batch data rate counter.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_gac5a5a32076a88b3aad5d87c32663e93b}{lsm6dso32\+\_\+fifo\+\_\+data\+\_\+level\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint16\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Number of unread sensor data(TAG + 6 bytes) stored in FIFO.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga9de68d9ce9f9e6eb702bc01693cf79b0}{lsm6dso32\+\_\+fifo\+\_\+status\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \doxymbox{\hyperlink{structlsm6dso32__fifo__status2__t}{lsm6dso32\+\_\+fifo\+\_\+status2\+\_\+t}} \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em FIFO status.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_gae6da6d1092a7b19d83263cdd87a36144}{lsm6dso32\+\_\+fifo\+\_\+full\+\_\+flag\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Smart FIFO full status.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_gaeae895280b6c39b06b9a784f3414c102}{lsm6dso32\+\_\+fifo\+\_\+ovr\+\_\+flag\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em FIFO overrun status.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_gac04d1ca605185063767d39fb86104945}{lsm6dso32\+\_\+fifo\+\_\+wtm\+\_\+flag\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em FIFO watermark status.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_gaae47126f264d2352b0280267781b5433}{lsm6dso32\+\_\+fifo\+\_\+sensor\+\_\+tag\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+fifo\+\_\+tag\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Identifies the sensor in FIFO\+\_\+\+DATA\+\_\+\+OUT.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga6a3f6d2311911e530a7c89f98042a7a2}{lsm6dso32\+\_\+fifo\+\_\+pedo\+\_\+batch\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em :\+ Enable FIFO batching of pedometer embedded function values.\+[set]\+ \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga38406093e74c44366f48044bf8006367}{lsm6dso32\+\_\+fifo\+\_\+pedo\+\_\+batch\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Enable FIFO batching of pedometer embedded function values.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_gaf31cd7cd9301529bc4b3f686d6ca5fff}{lsm6dso32\+\_\+sh\+\_\+batch\+\_\+slave\+\_\+0\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Enable FIFO batching data of first slave.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga010499b751cf181695704d8f4200f47f}{lsm6dso32\+\_\+sh\+\_\+batch\+\_\+slave\+\_\+0\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Enable FIFO batching data of first slave.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga2e6569483e66b3dd38962ea673d1a53c}{lsm6dso32\+\_\+sh\+\_\+batch\+\_\+slave\+\_\+1\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Enable FIFO batching data of second slave.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga980e80cbe93815bc000220e51b5ca9b5}{lsm6dso32\+\_\+sh\+\_\+batch\+\_\+slave\+\_\+1\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Enable FIFO batching data of second slave.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga419e21a3f1725e8bf71d16fa289ebd91}{lsm6dso32\+\_\+sh\+\_\+batch\+\_\+slave\+\_\+2\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Enable FIFO batching data of third slave.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga34a00368da4e95c6d977e1b8dafe56c3}{lsm6dso32\+\_\+sh\+\_\+batch\+\_\+slave\+\_\+2\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Enable FIFO batching data of third slave.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_gadb9659c229a0712b084bae6c3fd09e03}{lsm6dso32\+\_\+sh\+\_\+batch\+\_\+slave\+\_\+3\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Enable FIFO batching data of fourth slave.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_gabb9704fbd8b04987cb5336d23048858a}{lsm6dso32\+\_\+sh\+\_\+batch\+\_\+slave\+\_\+3\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Enable FIFO batching data of fourth slave.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga3b2f583da79ce2d11075fe2e22d04295}{lsm6dso32\+\_\+den\+\_\+mode\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+den\+\_\+mode\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em DEN functionality marking mode.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga561b2d4e718ed05e41136e14df8ec89d}{lsm6dso32\+\_\+den\+\_\+mode\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+den\+\_\+mode\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em DEN functionality marking mode.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_gac76a78c7a02331a7120457b7c491a952}{lsm6dso32\+\_\+den\+\_\+polarity\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+den\+\_\+lh\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em DEN active level configuration.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_gad8cc02f1e04ed1dc7a14df75a3857e26}{lsm6dso32\+\_\+den\+\_\+polarity\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+den\+\_\+lh\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em DEN active level configuration.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga9c77aea84b84dd2cfcd98966fb20c55e}{lsm6dso32\+\_\+den\+\_\+enable\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+den\+\_\+xl\+\_\+g\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em DEN enable.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_gace97c87ee5dcc02a7f753d51577d827d}{lsm6dso32\+\_\+den\+\_\+enable\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+den\+\_\+xl\+\_\+g\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em DEN enable.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga975752818d92f9a63b0f4de5494c049d}{lsm6dso32\+\_\+den\+\_\+mark\+\_\+axis\+\_\+x\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em DEN value stored in LSB of X-\/axis.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_gae0a6163761a725fc03f427392ea6b429}{lsm6dso32\+\_\+den\+\_\+mark\+\_\+axis\+\_\+x\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em DEN value stored in LSB of X-\/axis.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga089eff71e8d5d9484c1ced7a183368e1}{lsm6dso32\+\_\+den\+\_\+mark\+\_\+axis\+\_\+y\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em DEN value stored in LSB of Y-\/axis.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga342f9b2f506fbf3e4b423ba9033eaa06}{lsm6dso32\+\_\+den\+\_\+mark\+\_\+axis\+\_\+y\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em DEN value stored in LSB of Y-\/axis.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_gac17eb859cdbfdff0540c61de79e77048}{lsm6dso32\+\_\+den\+\_\+mark\+\_\+axis\+\_\+z\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em DEN value stored in LSB of Z-\/axis.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_gabe36b47a20e3ab7ff95013e4c6546a11}{lsm6dso32\+\_\+den\+\_\+mark\+\_\+axis\+\_\+z\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em DEN value stored in LSB of Z-\/axis.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga6f60a6e4bf02081c88bfc4bb84505835}{lsm6dso32\+\_\+pedo\+\_\+sens\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+pedo\+\_\+md\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Enable pedometer algorithm.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga31c0d8cc05717fd88f599bf431205289}{lsm6dso32\+\_\+pedo\+\_\+sens\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+pedo\+\_\+md\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Enable pedometer algorithm.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga5d8547185365aac0358476f7eeeb6059}{lsm6dso32\+\_\+pedo\+\_\+step\+\_\+detect\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Interrupt status bit for step detection.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga38035cc66689652e3a02d6ec60bb3473}{lsm6dso32\+\_\+pedo\+\_\+debounce\+\_\+steps\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}buff)
+\begin{DoxyCompactList}\small\item\em Pedometer debounce configuration register (r/\+w).\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga38831ea2e6ed0e05e435508c794d73da}{lsm6dso32\+\_\+pedo\+\_\+debounce\+\_\+steps\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}buff)
+\begin{DoxyCompactList}\small\item\em Pedometer debounce configuration register (r/\+w).\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_gaa7748439752c04948f9909ed41c1fcbb}{lsm6dso32\+\_\+pedo\+\_\+steps\+\_\+period\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint16\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Time period register for step detection on delta time (r/\+w).\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_gad255efb94a32a6b0ced9290c72d5c0d8}{lsm6dso32\+\_\+pedo\+\_\+steps\+\_\+period\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint16\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Time period register for step detection on delta time (r/\+w).\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga2d5938d44dad4f0421c9f1fa99dfcd85}{lsm6dso32\+\_\+pedo\+\_\+int\+\_\+mode\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+carry\+\_\+count\+\_\+en\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Set when user wants to generate interrupt on count overflow event/\+every step.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_gaea9f6667457b94b05817b77ddb3fbd1a}{lsm6dso32\+\_\+pedo\+\_\+int\+\_\+mode\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+carry\+\_\+count\+\_\+en\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Set when user wants to generate interrupt on count overflow event/\+every step.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_gaa4692a8980cc74c69119dc90b316027a}{lsm6dso32\+\_\+motion\+\_\+sens\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Enable significant motion detection function.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_gaf6ce8767af7ddb602cbe8291b781f797}{lsm6dso32\+\_\+motion\+\_\+sens\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Enable significant motion detection function.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga7fef88c08857cbec8b4f4b4fc008cec4}{lsm6dso32\+\_\+motion\+\_\+flag\+\_\+data\+\_\+ready\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Interrupt status bit for significant motion detection.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga45d2285bb30986a4dbc2b24121a0b573}{lsm6dso32\+\_\+tilt\+\_\+sens\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Enable tilt calculation.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_gad4c17a74f4650b998196f59c5c061174}{lsm6dso32\+\_\+tilt\+\_\+sens\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Enable tilt calculation.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_gacc37ed4f0539eb21127b6ffd95df4654}{lsm6dso32\+\_\+tilt\+\_\+flag\+\_\+data\+\_\+ready\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Interrupt status bit for tilt detection.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_gaeac9517b327bd07ca6a83988d17233e4}{lsm6dso32\+\_\+mag\+\_\+sensitivity\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint16\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em External magnetometer sensitivity value register.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_gaef88aa84aee8de665dd78d99c97ef6b3}{lsm6dso32\+\_\+mag\+\_\+sensitivity\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint16\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em External magnetometer sensitivity value register.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga0383722d977fcaf3745cadb9b7c43342}{lsm6dso32\+\_\+mag\+\_\+offset\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, int16\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Offset for hard-\/iron compensation register (r/\+w).\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga7ce5eb8596e18aa64f3a87d593a219ee}{lsm6dso32\+\_\+mag\+\_\+offset\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, int16\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Offset for hard-\/iron compensation register (r/\+w).\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga5d3533ff8cebac4cf84ee2d11856f64f}{lsm6dso32\+\_\+mag\+\_\+soft\+\_\+iron\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, int16\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Soft-\/iron (3x3 symmetric) matrix correction register (r/\+w). The value is expressed as half-\/precision floating-\/point format:\+ SEEEEEFFFFFFFFFF S:\+ 1 sign bit; E:\+ 5 exponent bits; F:\+ 10 fraction bits).\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_gaf97c4393e037dd7dc8ecf94682e50144}{lsm6dso32\+\_\+mag\+\_\+soft\+\_\+iron\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, int16\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Soft-\/iron (3x3 symmetric) matrix correction register (r/\+w). The value is expressed as half-\/precision floating-\/point format:\+ SEEEEEFFFFFFFFFF S:\+ 1 sign bit; E:\+ 5 exponent bits; F:\+ 10 fraction bits.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_gaf1991aab3610fc5ce80a1e20768836f2}{lsm6dso32\+\_\+mag\+\_\+z\+\_\+orient\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+mag\+\_\+z\+\_\+axis\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Magnetometer Z-\/axis coordinates rotation (to be aligned to accelerometer/\+gyroscope axes orientation).\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga3f3befeb63639881438daeeb6b8de291}{lsm6dso32\+\_\+mag\+\_\+z\+\_\+orient\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+mag\+\_\+z\+\_\+axis\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Magnetometer Z-\/axis coordinates rotation (to be aligned to accelerometer/\+gyroscope axes orientation).\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga5a25549611479c3ffc427d991094f95b}{lsm6dso32\+\_\+mag\+\_\+y\+\_\+orient\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+mag\+\_\+y\+\_\+axis\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Magnetometer Y-\/axis coordinates rotation (to be aligned to accelerometer/\+gyroscope axes orientation).\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga304cd37ecaf77fc4b7ee558f57b7ee9a}{lsm6dso32\+\_\+mag\+\_\+y\+\_\+orient\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+mag\+\_\+y\+\_\+axis\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Magnetometer Y-\/axis coordinates rotation (to be aligned to accelerometer/\+gyroscope axes orientation).\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga8a403dd3b852c95edbf9d328c2305510}{lsm6dso32\+\_\+mag\+\_\+x\+\_\+orient\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+mag\+\_\+x\+\_\+axis\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Magnetometer X-\/axis coordinates rotation (to be aligned to accelerometer/\+gyroscope axes orientation).\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga915bc658256257eb7501c55f1bb18073}{lsm6dso32\+\_\+mag\+\_\+x\+\_\+orient\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+mag\+\_\+x\+\_\+axis\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Magnetometer X-\/axis coordinates rotation (to be aligned to accelerometer/\+gyroscope axes orientation).\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_gae106c57b1362fb011fc26a4773ea7fef}{lsm6dso32\+\_\+long\+\_\+cnt\+\_\+flag\+\_\+data\+\_\+ready\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Interrupt status bit for FSM long counter timeout interrupt event.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga6438b11908fee053eaf81f6173bbe8de}{lsm6dso32\+\_\+emb\+\_\+fsm\+\_\+en\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Final State Machine global enable.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_gac1167b9d85f68306d25fedeb59911b5f}{lsm6dso32\+\_\+emb\+\_\+fsm\+\_\+en\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Final State Machine global enable.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_gaeabd366b4a9db6394911c433d70f400d}{lsm6dso32\+\_\+fsm\+\_\+enable\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \doxymbox{\hyperlink{structlsm6dso32__emb__fsm__enable__t}{lsm6dso32\+\_\+emb\+\_\+fsm\+\_\+enable\+\_\+t}} \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Final State Machine enable.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga28504d3fb1cf0cb92c9eae4e1ff60027}{lsm6dso32\+\_\+fsm\+\_\+enable\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \doxymbox{\hyperlink{structlsm6dso32__emb__fsm__enable__t}{lsm6dso32\+\_\+emb\+\_\+fsm\+\_\+enable\+\_\+t}} \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Final State Machine enable.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga50af0dadb8b5e3fbf01fd6f6659d73f7}{lsm6dso32\+\_\+long\+\_\+cnt\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint16\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em FSM long counter status register. Long counter value is an unsigned integer value (16-\/bit format).\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_gadd458e2f2026ef2b3896614903141ccf}{lsm6dso32\+\_\+long\+\_\+cnt\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint16\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em FSM long counter status register. Long counter value is an unsigned integer value (16-\/bit format).\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_gaa2aee4db6133c324dbd599c3b68f2964}{lsm6dso32\+\_\+long\+\_\+clr\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+fsm\+\_\+lc\+\_\+clr\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Clear FSM long counter value.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga592f0962266dcbc6a64c293a839c28d4}{lsm6dso32\+\_\+long\+\_\+clr\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+fsm\+\_\+lc\+\_\+clr\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Clear FSM long counter value.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga8b141068ec34c0361e721fe0eb0a0722}{lsm6dso32\+\_\+fsm\+\_\+out\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \doxymbox{\hyperlink{structlsm6dso32__fsm__out__t}{lsm6dso32\+\_\+fsm\+\_\+out\+\_\+t}} \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em FSM output registers\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga92a719dc5ad789de8addabb56b5ef896}{lsm6dso32\+\_\+fsm\+\_\+data\+\_\+rate\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+fsm\+\_\+odr\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Finite State Machine ODR configuration.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga7103d7624641bea9c1317fb52e658bf7}{lsm6dso32\+\_\+fsm\+\_\+data\+\_\+rate\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+fsm\+\_\+odr\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Finite State Machine ODR configuration.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga21fb983a88253a82c6fd71c9216898bb}{lsm6dso32\+\_\+fsm\+\_\+init\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em FSM initialization request.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_gaccfa51d2354352c75af3a676186c9740}{lsm6dso32\+\_\+fsm\+\_\+init\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em FSM initialization request.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga18063fb0fbd8e1459732706628042a97}{lsm6dso32\+\_\+long\+\_\+cnt\+\_\+int\+\_\+value\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint16\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em FSM long counter timeout register (r/\+w). The long counter timeout value is an unsigned integer value (16-\/bit format). When the long counter value reached this value, the FSM generates an interrupt.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga5a6548191006986cef44275e6027141e}{lsm6dso32\+\_\+long\+\_\+cnt\+\_\+int\+\_\+value\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint16\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em FSM long counter timeout register (r/\+w). The long counter timeout value is an unsigned integer value (16-\/bit format). When the long counter value reached this value, the FSM generates an interrupt.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_gabe21839a19eeaf9bc18a3f53cf89fdaf}{lsm6dso32\+\_\+fsm\+\_\+number\+\_\+of\+\_\+programs\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}buff)
+\begin{DoxyCompactList}\small\item\em FSM number of programs register.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga96f569be634beea812c38e59fc7eb3cf}{lsm6dso32\+\_\+fsm\+\_\+number\+\_\+of\+\_\+programs\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}buff)
+\begin{DoxyCompactList}\small\item\em FSM number of programs register.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga5beb6b3c69b6bb1b5375c1e70ed34fd4}{lsm6dso32\+\_\+fsm\+\_\+start\+\_\+address\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint16\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em FSM start address register (r/\+w). First available address is 0x033C.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_gae3c8a2933b6cea30ef767ff290120b43}{lsm6dso32\+\_\+fsm\+\_\+start\+\_\+address\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint16\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em FSM start address register (r/\+w). First available address is 0x033C.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga6705aaa9ae77ddc42812b642280208b8}{lsm6dso32\+\_\+sh\+\_\+read\+\_\+data\+\_\+raw\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \doxymbox{\hyperlink{structlsm6dso32__emb__sh__read__t}{lsm6dso32\+\_\+emb\+\_\+sh\+\_\+read\+\_\+t}} \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Sensor hub output registers.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga1685856c29b16c85be0e2517fb9e858a}{lsm6dso32\+\_\+sh\+\_\+slave\+\_\+connected\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+aux\+\_\+sens\+\_\+on\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Number of external sensors to be read by the sensor hub.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga247f656346952e1f62298ad347c62fed}{lsm6dso32\+\_\+sh\+\_\+slave\+\_\+connected\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+aux\+\_\+sens\+\_\+on\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Number of external sensors to be read by the sensor hub.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga217c3ab42c59544a5fd0d690be1cf49c}{lsm6dso32\+\_\+sh\+\_\+master\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Sensor hub I2C master enable.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga290060cfc510755ce6781c34a99d0355}{lsm6dso32\+\_\+sh\+\_\+master\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Sensor hub I2C master enable.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_gaa70978e8c0f46f1b4863cd031202a05d}{lsm6dso32\+\_\+sh\+\_\+pin\+\_\+mode\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+shub\+\_\+pu\+\_\+en\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Master I2C pull-\/up enable.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_gab5c6cb534577410a29a800b40022c65e}{lsm6dso32\+\_\+sh\+\_\+pin\+\_\+mode\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+shub\+\_\+pu\+\_\+en\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Master I2C pull-\/up enable.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga66362abb752f7f1c987bd1eda07095c6}{lsm6dso32\+\_\+sh\+\_\+pass\+\_\+through\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em I2C interface pass-\/through.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga5dd263f61a07559bb5b02d2d1214569e}{lsm6dso32\+\_\+sh\+\_\+pass\+\_\+through\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em I2C interface pass-\/through.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_gabf9e9cf31780bf394ec9a5bde840f588}{lsm6dso32\+\_\+sh\+\_\+syncro\+\_\+mode\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+start\+\_\+config\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Sensor hub trigger signal selection.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_gaee2e610d88d66b2182e4a0a1f733e44b}{lsm6dso32\+\_\+sh\+\_\+syncro\+\_\+mode\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+start\+\_\+config\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Sensor hub trigger signal selection.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga0e1852c9a3a8e4290fe528f46dbbcb9f}{lsm6dso32\+\_\+sh\+\_\+write\+\_\+mode\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+write\+\_\+once\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Slave 0 write operation is performed only at the first sensor hub cycle.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_gafc9d75fd5d6b1816a53b0dd9fd912f03}{lsm6dso32\+\_\+sh\+\_\+write\+\_\+mode\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+write\+\_\+once\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Slave 0 write operation is performed only at the first sensor hub cycle.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga43a181186192be54158843b362d44c30}{lsm6dso32\+\_\+sh\+\_\+reset\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx)
+\begin{DoxyCompactList}\small\item\em Reset Master logic and output registers.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga84b265026ba4c9cc436d434396ccc456}{lsm6dso32\+\_\+sh\+\_\+reset\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Reset Master logic and output registers.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_gaa02de053c5b2a0ba87ffbfd4a730cd1d}{lsm6dso32\+\_\+sh\+\_\+data\+\_\+rate\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+shub\+\_\+odr\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Rate at which the master communicates.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga2a7563ce007c602845f4a59387efc10c}{lsm6dso32\+\_\+sh\+\_\+data\+\_\+rate\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+shub\+\_\+odr\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Rate at which the master communicates.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga86f90cf65a6301c559ef1ccd1dc9d2f1}{lsm6dso32\+\_\+sh\+\_\+cfg\+\_\+write}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \doxymbox{\hyperlink{structlsm6dso32__sh__cfg__write__t}{lsm6dso32\+\_\+sh\+\_\+cfg\+\_\+write\+\_\+t}} \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Configure slave 0 for perform a write.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga7b2a7b0bdef9ebcb572eb144384099b4}{lsm6dso32\+\_\+sh\+\_\+slv0\+\_\+cfg\+\_\+read}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \doxymbox{\hyperlink{structlsm6dso32__sh__cfg__read__t}{lsm6dso32\+\_\+sh\+\_\+cfg\+\_\+read\+\_\+t}} \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Configure slave 0 for perform a read.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga064769ff8f31797d6540ed20fc40f7d4}{lsm6dso32\+\_\+sh\+\_\+slv1\+\_\+cfg\+\_\+read}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \doxymbox{\hyperlink{structlsm6dso32__sh__cfg__read__t}{lsm6dso32\+\_\+sh\+\_\+cfg\+\_\+read\+\_\+t}} \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Configure slave 0 for perform a write/\+read.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga30b271bc551e956489aa21e3d5be8a56}{lsm6dso32\+\_\+sh\+\_\+slv2\+\_\+cfg\+\_\+read}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \doxymbox{\hyperlink{structlsm6dso32__sh__cfg__read__t}{lsm6dso32\+\_\+sh\+\_\+cfg\+\_\+read\+\_\+t}} \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Configure slave 0 for perform a write/\+read.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_ga701c09fd06eed9527d209e7fba974230}{lsm6dso32\+\_\+sh\+\_\+slv3\+\_\+cfg\+\_\+read}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \doxymbox{\hyperlink{structlsm6dso32__sh__cfg__read__t}{lsm6dso32\+\_\+sh\+\_\+cfg\+\_\+read\+\_\+t}} \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Configure slave 0 for perform a write/\+read.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32_gade87b8613449832811ce2ad54bed4927}{lsm6dso32\+\_\+sh\+\_\+status\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \doxymbox{\hyperlink{structlsm6dso32__status__master__t}{lsm6dso32\+\_\+status\+\_\+master\+\_\+t}} \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Sensor hub source register.\+[get]\+. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file contains all the functions prototypes for the \doxylink{lsm6dso32__reg_8c}{lsm6dso32\+\_\+reg.\+c} driver. 
+
+\begin{DoxyAuthor}{Author}
+Sensors Software Solution Team 
+\end{DoxyAuthor}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+Copyright (c) 2021 STMicroelectronics. All rights reserved.
+
+This software is licensed under terms that can be found in the LICENSE file in the root directory of this software component. If no LICENSE file comes with this software, it is provided AS-\/\+IS. 

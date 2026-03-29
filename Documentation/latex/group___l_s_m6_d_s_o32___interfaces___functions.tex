@@ -1,0 +1,78 @@
+\doxysubsubsubsection{LSM6\+DSO32\+\_\+\+Interfaces\+\_\+\+Functions }
+\hypertarget{group___l_s_m6_d_s_o32___interfaces___functions}{}\label{group___l_s_m6_d_s_o32___interfaces___functions}\index{LSM6DSO32\_Interfaces\_Functions@{LSM6DSO32\_Interfaces\_Functions}}
+
+
+This section provide a set of functions used to read and write a generic register of the device. MANDATORY:\+ return 0 -\/\texorpdfstring{$>$}{>} no Error.  
+
+
+Collaboration diagram for LSM6\+DSO32\+\_\+\+Interfaces\+\_\+\+Functions:\+
+% FIG 0
+\doxysubsubsubsubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int32\+\_\+t \+\_\+\+\_\+weak \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___interfaces___functions_gae892e8f9832e0b4769acc967fca14369}{lsm6dso32\+\_\+read\+\_\+reg}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t reg, uint8\+\_\+t \texorpdfstring{$\ast$}{*}data, uint16\+\_\+t len)
+\begin{DoxyCompactList}\small\item\em Read generic device register. \end{DoxyCompactList}\item 
+int32\+\_\+t \+\_\+\+\_\+weak \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___interfaces___functions_ga7aa73f040e87b1e6c55157988f0e89c5}{lsm6dso32\+\_\+write\+\_\+reg}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t reg, uint8\+\_\+t \texorpdfstring{$\ast$}{*}data, uint16\+\_\+t len)
+\begin{DoxyCompactList}\small\item\em Write generic device register. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsubsubsubsection{Detailed Description}
+This section provide a set of functions used to read and write a generic register of the device. MANDATORY:\+ return 0 -\/\texorpdfstring{$>$}{>} no Error. 
+
+
+
+\label{doc-func-members}
+\Hypertarget{group___l_s_m6_d_s_o32___interfaces___functions_doc-func-members}
+\doxysubsubsubsubsection{Function Documentation}
+\Hypertarget{group___l_s_m6_d_s_o32___interfaces___functions_gae892e8f9832e0b4769acc967fca14369}\index{LSM6DSO32\_Interfaces\_Functions@{LSM6DSO32\_Interfaces\_Functions}!lsm6dso32\_read\_reg@{lsm6dso32\_read\_reg}}
+\index{lsm6dso32\_read\_reg@{lsm6dso32\_read\_reg}!LSM6DSO32\_Interfaces\_Functions@{LSM6DSO32\_Interfaces\_Functions}}
+\doxysubsubsubsubsubsection{\texorpdfstring{lsm6dso32\_read\_reg()}{lsm6dso32\_read\_reg()}}
+{\footnotesize\ttfamily \label{group___l_s_m6_d_s_o32___interfaces___functions_gae892e8f9832e0b4769acc967fca14369} 
+int32\+\_\+t \+\_\+\+\_\+weak lsm6dso32\+\_\+read\+\_\+reg (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx}{, }\item[{uint8\+\_\+t}]{reg}{, }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{data}{, }\item[{uint16\+\_\+t}]{len}{}\end{DoxyParamCaption})}
+
+
+
+Read generic device register. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read /\+ write interface definitions(ptr) \\
+\hline
+{\em reg} & register to read \\
+\hline
+{\em data} & pointer to buffer that store the data read(ptr) \\
+\hline
+{\em len} & number of consecutive register to read \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY:\+ return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group___l_s_m6_d_s_o32___interfaces___functions_ga7aa73f040e87b1e6c55157988f0e89c5}\index{LSM6DSO32\_Interfaces\_Functions@{LSM6DSO32\_Interfaces\_Functions}!lsm6dso32\_write\_reg@{lsm6dso32\_write\_reg}}
+\index{lsm6dso32\_write\_reg@{lsm6dso32\_write\_reg}!LSM6DSO32\_Interfaces\_Functions@{LSM6DSO32\_Interfaces\_Functions}}
+\doxysubsubsubsubsubsection{\texorpdfstring{lsm6dso32\_write\_reg()}{lsm6dso32\_write\_reg()}}
+{\footnotesize\ttfamily \label{group___l_s_m6_d_s_o32___interfaces___functions_ga7aa73f040e87b1e6c55157988f0e89c5} 
+int32\+\_\+t \+\_\+\+\_\+weak lsm6dso32\+\_\+write\+\_\+reg (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx}{, }\item[{uint8\+\_\+t}]{reg}{, }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{data}{, }\item[{uint16\+\_\+t}]{len}{}\end{DoxyParamCaption})}
+
+
+
+Write generic device register. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read /\+ write interface definitions(ptr) \\
+\hline
+{\em reg} & register to write \\
+\hline
+{\em data} & pointer to data to write in register reg(ptr) \\
+\hline
+{\em len} & number of consecutive register to write \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY:\+ return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}

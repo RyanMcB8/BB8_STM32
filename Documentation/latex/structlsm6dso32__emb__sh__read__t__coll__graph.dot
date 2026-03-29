@@ -1,0 +1,63 @@
+digraph "lsm6dso32_emb_sh_read_t"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [id="Node000001",label="lsm6dso32_emb_sh_read_t",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node2 -> Node1 [id="edge19_Node000001_Node000002",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=<<TABLE CELLBORDER="0" BORDER="0"><TR><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">sh_byte_1</TD></TR>
+</TABLE>> ,fontcolor="grey" ];
+  Node2 [id="Node000002",label="lsm6dso32_sensor_hub_1_t",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",URL="$structlsm6dso32__sensor__hub__1__t.html",tooltip=" "];
+  Node3 -> Node1 [id="edge20_Node000001_Node000003",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=<<TABLE CELLBORDER="0" BORDER="0"><TR><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">sh_byte_2</TD></TR>
+</TABLE>> ,fontcolor="grey" ];
+  Node3 [id="Node000003",label="lsm6dso32_sensor_hub_2_t",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",URL="$structlsm6dso32__sensor__hub__2__t.html",tooltip=" "];
+  Node4 -> Node1 [id="edge21_Node000001_Node000004",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=<<TABLE CELLBORDER="0" BORDER="0"><TR><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">sh_byte_3</TD></TR>
+</TABLE>> ,fontcolor="grey" ];
+  Node4 [id="Node000004",label="lsm6dso32_sensor_hub_3_t",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",URL="$structlsm6dso32__sensor__hub__3__t.html",tooltip=" "];
+  Node5 -> Node1 [id="edge22_Node000001_Node000005",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=<<TABLE CELLBORDER="0" BORDER="0"><TR><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">sh_byte_4</TD></TR>
+</TABLE>> ,fontcolor="grey" ];
+  Node5 [id="Node000005",label="lsm6dso32_sensor_hub_4_t",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",URL="$structlsm6dso32__sensor__hub__4__t.html",tooltip=" "];
+  Node6 -> Node1 [id="edge23_Node000001_Node000006",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=<<TABLE CELLBORDER="0" BORDER="0"><TR><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">sh_byte_5</TD></TR>
+</TABLE>> ,fontcolor="grey" ];
+  Node6 [id="Node000006",label="lsm6dso32_sensor_hub_5_t",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",URL="$structlsm6dso32__sensor__hub__5__t.html",tooltip=" "];
+  Node7 -> Node1 [id="edge24_Node000001_Node000007",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=<<TABLE CELLBORDER="0" BORDER="0"><TR><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">sh_byte_6</TD></TR>
+</TABLE>> ,fontcolor="grey" ];
+  Node7 [id="Node000007",label="lsm6dso32_sensor_hub_6_t",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",URL="$structlsm6dso32__sensor__hub__6__t.html",tooltip=" "];
+  Node8 -> Node1 [id="edge25_Node000001_Node000008",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=<<TABLE CELLBORDER="0" BORDER="0"><TR><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">sh_byte_7</TD></TR>
+</TABLE>> ,fontcolor="grey" ];
+  Node8 [id="Node000008",label="lsm6dso32_sensor_hub_7_t",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",URL="$structlsm6dso32__sensor__hub__7__t.html",tooltip=" "];
+  Node9 -> Node1 [id="edge26_Node000001_Node000009",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=<<TABLE CELLBORDER="0" BORDER="0"><TR><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">sh_byte_8</TD></TR>
+</TABLE>> ,fontcolor="grey" ];
+  Node9 [id="Node000009",label="lsm6dso32_sensor_hub_8_t",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",URL="$structlsm6dso32__sensor__hub__8__t.html",tooltip=" "];
+  Node10 -> Node1 [id="edge27_Node000001_Node000010",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=<<TABLE CELLBORDER="0" BORDER="0"><TR><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">sh_byte_9</TD></TR>
+</TABLE>> ,fontcolor="grey" ];
+  Node10 [id="Node000010",label="lsm6dso32_sensor_hub_9_t",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",URL="$structlsm6dso32__sensor__hub__9__t.html",tooltip=" "];
+  Node11 -> Node1 [id="edge28_Node000001_Node000011",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=<<TABLE CELLBORDER="0" BORDER="0"><TR><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">sh_byte_10</TD></TR>
+</TABLE>> ,fontcolor="grey" ];
+  Node11 [id="Node000011",label="lsm6dso32_sensor_hub_10_t",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",URL="$structlsm6dso32__sensor__hub__10__t.html",tooltip=" "];
+  Node12 -> Node1 [id="edge29_Node000001_Node000012",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=<<TABLE CELLBORDER="0" BORDER="0"><TR><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">sh_byte_11</TD></TR>
+</TABLE>> ,fontcolor="grey" ];
+  Node12 [id="Node000012",label="lsm6dso32_sensor_hub_11_t",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",URL="$structlsm6dso32__sensor__hub__11__t.html",tooltip=" "];
+  Node13 -> Node1 [id="edge30_Node000001_Node000013",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=<<TABLE CELLBORDER="0" BORDER="0"><TR><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">sh_byte_12</TD></TR>
+</TABLE>> ,fontcolor="grey" ];
+  Node13 [id="Node000013",label="lsm6dso32_sensor_hub_12_t",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",URL="$structlsm6dso32__sensor__hub__12__t.html",tooltip=" "];
+  Node14 -> Node1 [id="edge31_Node000001_Node000014",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=<<TABLE CELLBORDER="0" BORDER="0"><TR><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">sh_byte_13</TD></TR>
+</TABLE>> ,fontcolor="grey" ];
+  Node14 [id="Node000014",label="lsm6dso32_sensor_hub_13_t",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",URL="$structlsm6dso32__sensor__hub__13__t.html",tooltip=" "];
+  Node15 -> Node1 [id="edge32_Node000001_Node000015",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=<<TABLE CELLBORDER="0" BORDER="0"><TR><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">sh_byte_14</TD></TR>
+</TABLE>> ,fontcolor="grey" ];
+  Node15 [id="Node000015",label="lsm6dso32_sensor_hub_14_t",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",URL="$structlsm6dso32__sensor__hub__14__t.html",tooltip=" "];
+  Node16 -> Node1 [id="edge33_Node000001_Node000016",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=<<TABLE CELLBORDER="0" BORDER="0"><TR><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">sh_byte_15</TD></TR>
+</TABLE>> ,fontcolor="grey" ];
+  Node16 [id="Node000016",label="lsm6dso32_sensor_hub_15_t",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",URL="$structlsm6dso32__sensor__hub__15__t.html",tooltip=" "];
+  Node17 -> Node1 [id="edge34_Node000001_Node000017",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=<<TABLE CELLBORDER="0" BORDER="0"><TR><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">sh_byte_16</TD></TR>
+</TABLE>> ,fontcolor="grey" ];
+  Node17 [id="Node000017",label="lsm6dso32_sensor_hub_16_t",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",URL="$structlsm6dso32__sensor__hub__16__t.html",tooltip=" "];
+  Node18 -> Node1 [id="edge35_Node000001_Node000018",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=<<TABLE CELLBORDER="0" BORDER="0"><TR><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">sh_byte_17</TD></TR>
+</TABLE>> ,fontcolor="grey" ];
+  Node18 [id="Node000018",label="lsm6dso32_sensor_hub_17_t",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",URL="$structlsm6dso32__sensor__hub__17__t.html",tooltip=" "];
+  Node19 -> Node1 [id="edge36_Node000001_Node000019",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=<<TABLE CELLBORDER="0" BORDER="0"><TR><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">sh_byte_18</TD></TR>
+</TABLE>> ,fontcolor="grey" ];
+  Node19 [id="Node000019",label="lsm6dso32_sensor_hub_18_t",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",URL="$structlsm6dso32__sensor__hub__18__t.html",tooltip=" "];
+}

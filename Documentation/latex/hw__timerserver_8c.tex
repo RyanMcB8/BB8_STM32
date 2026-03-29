@@ -1,0 +1,591 @@
+\doxysection{C:\+/\+\+Users/\+ryanm/\+\+Documents/\+\+Design\+Group/\+\+BB8\+\_\+\+STM32/\+\+Firmware/\+\+Core/\+\+Src/\+hw\+\_\+timerserver.c File Reference}
+\hypertarget{hw__timerserver_8c}{}\label{hw__timerserver_8c}\index{C:/Users/ryanm/Documents/DesignGroup/BB8\_STM32/Firmware/Core/Src/hw\_timerserver.c@{C:/Users/ryanm/Documents/DesignGroup/BB8\_STM32/Firmware/Core/Src/hw\_timerserver.c}}
+
+
+Hardware timerserver source file for STM32\+WPAN Middleware.  
+
+
+{\ttfamily \+\#include "{}app\+\_\+common.\+h"{}}\newline
+{\ttfamily \+\#include "{}hw\+\_\+conf.\+h"{}}\newline
+Include dependency graph for hw\+\_\+timerserver.\+c:\+
+% FIG 0
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{struct_timer_context__t}{Timer\+Context\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{hw__timerserver_8c_a16880f2236ab29f12120ae7605ee221c}\label{hw__timerserver_8c_a16880f2236ab29f12120ae7605ee221c} 
+\+\#define {\bfseries SSR\+\_\+\+FORBIDDEN\+\_\+\+VALUE}~0x\+FFFFFFFF
+\item 
+\Hypertarget{hw__timerserver_8c_ac5a70a1b76c284c542248a7c7b99a394}\label{hw__timerserver_8c_ac5a70a1b76c284c542248a7c7b99a394} 
+\+\#define {\bfseries TIMER\+\_\+\+LIST\+\_\+\+EMPTY}~0x\+FFFF
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{hw__timerserver_8c_ac742fc8189bd7f231b346e94305df40c}\label{hw__timerserver_8c_ac742fc8189bd7f231b346e94305df40c} 
+enum {\bfseries Timer\+IDStatus\+\_\+t} \{ {\bfseries Timer\+ID\+\_\+\+Free}
+, {\bfseries Timer\+ID\+\_\+\+Created}
+, {\bfseries Timer\+ID\+\_\+\+Running}
+ \}
+\item 
+\Hypertarget{hw__timerserver_8c_aa3b9497257bf452b39242756217532ad}\label{hw__timerserver_8c_aa3b9497257bf452b39242756217532ad} 
+enum {\bfseries Request\+Read\+SSR\+\_\+t} \{ {\bfseries SSR\+\_\+\+Read\+\_\+\+Requested}
+, {\bfseries SSR\+\_\+\+Read\+\_\+\+Not\+\_\+\+Requested}
+ \}
+\item 
+\Hypertarget{hw__timerserver_8c_a1f94e057739b3e0b96e4278d86c74886}\label{hw__timerserver_8c_a1f94e057739b3e0b96e4278d86c74886} 
+enum {\bfseries Wakeup\+Timer\+Limitation\+\_\+\+Status\+\_\+t} \{ {\bfseries Wakeup\+Timer\+Value\+\_\+\+Overpassed}
+, {\bfseries Wakeup\+Timer\+Value\+\_\+\+Large\+Enough}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \doxymbox{\hyperlink{hw__timerserver_8c_a97ecceb15fc1ada12b37656339109fae}{Restart\+Wakeup\+Counter}} (uint16\+\_\+t Value)
+\begin{DoxyCompactList}\small\item\em Set the wakeup counter. \end{DoxyCompactList}\item 
+static uint16\+\_\+t \doxymbox{\hyperlink{hw__timerserver_8c_aad180adc078d380b64ad78fb1606995c}{Return\+Time\+Elapsed}} (void)
+\begin{DoxyCompactList}\small\item\em Return the number of ticks counted by the wakeuptimer since it has been started. \end{DoxyCompactList}\item 
+static void \doxymbox{\hyperlink{hw__timerserver_8c_a184a77dbef2577f4a12248082ac925a6}{Reschedule\+Timer\+List}} (void)
+\begin{DoxyCompactList}\small\item\em Reschedule the list of timer. \end{DoxyCompactList}\item 
+static void \doxymbox{\hyperlink{hw__timerserver_8c_aa55d38b36fd60356f077569dacc938cc}{Unlink\+Timer}} (uint8\+\_\+t Timer\+ID, Request\+Read\+SSR\+\_\+t Request\+Read\+SSR)
+\begin{DoxyCompactList}\small\item\em Remove a Timer from the list. \end{DoxyCompactList}\item 
+static void \doxymbox{\hyperlink{hw__timerserver_8c_a305402dfc89c9b2006f547ad50d7c2fc}{Link\+Timer\+Before}} (uint8\+\_\+t Timer\+ID, uint8\+\_\+t Ref\+Timer\+ID)
+\begin{DoxyCompactList}\small\item\em Insert a Timer in the list before the ID specified. \end{DoxyCompactList}\item 
+static void \doxymbox{\hyperlink{hw__timerserver_8c_a39bebc1137fa6bf61c780c6f78f19f5b}{Link\+Timer\+After}} (uint8\+\_\+t Timer\+ID, uint8\+\_\+t Ref\+Timer\+ID)
+\begin{DoxyCompactList}\small\item\em Insert a Timer in the list after the Timer ID specified. \end{DoxyCompactList}\item 
+static uint16\+\_\+t \doxymbox{\hyperlink{hw__timerserver_8c_a755e53f530fc6eac94a3591e6fd67684}{link\+Timer}} (uint8\+\_\+t Timer\+ID)
+\begin{DoxyCompactList}\small\item\em Insert a Timer in the list. \end{DoxyCompactList}\item 
+static uint32\+\_\+t \doxymbox{\hyperlink{hw__timerserver_8c_a8d95e786b8629757303092d8bd95a98d}{Read\+Rtc\+Ssr\+Value}} (void)
+\begin{DoxyCompactList}\small\item\em Read the RTC\+\_\+\+SSR value As described in the reference manual, the RTC\+\_\+\+SSR shall be read twice to ensure reliability of the value. \end{DoxyCompactList}\item 
+\Hypertarget{hw__timerserver_8c_ac56e6c283af9e85b59fb563736c7ce6a}\label{hw__timerserver_8c_ac56e6c283af9e85b59fb563736c7ce6a} 
+\+\_\+\+\_\+weak void {\bfseries HW\+\_\+\+TS\+\_\+\+RTC\+\_\+\+Count\+Updated\+\_\+\+App\+Not} (void)
+\item 
+void \doxymbox{\hyperlink{hw__timerserver_8c_a438915fc276ab03daede51b18d8eefdf}{HW\+\_\+\+TS\+\_\+\+RTC\+\_\+\+Wakeup\+\_\+\+Handler}} (void)
+\begin{DoxyCompactList}\small\item\em Schedule the timer list on the timer interrupt handler This interrupt handler shall be called by the application in the RTC interrupt handler. This handler takes care of clearing all status flag required in the RTC and EXTI peripherals. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{hw__timerserver_8c_af799d2d9c53c216f43248c24cf07a52f}{HW\+\_\+\+TS\+\_\+\+Init}} (\doxymbox{\hyperlink{hw__if_8h_abbb5103d2d21f00d5906cdb8b7742378}{HW\+\_\+\+TS\+\_\+\+Init\+Mode\+\_\+t}} Timer\+Init\+Mode, RTC\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}phrtc)
+\begin{DoxyCompactList}\small\item\em Initialize the timer server This API shall be called by the application before any timer is requested to the timer server. It configures the RTC module to be connected to the LSI input clock. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{hw__if_8h_ae79a2e207e9a55efeed2364f0a51b811}{HW\+\_\+\+TS\+\_\+\+Return\+Status\+\_\+t}} \doxymbox{\hyperlink{hw__timerserver_8c_a502fd0dd0e3c08dac7711e23b86b7311}{HW\+\_\+\+TS\+\_\+\+Create}} (uint32\+\_\+t Timer\+Process\+ID, uint8\+\_\+t \texorpdfstring{$\ast$}{*}p\+Timer\+Id, \doxymbox{\hyperlink{hw__if_8h_ada8bd2cd1859456fee3bec6ce9e26fcd}{HW\+\_\+\+TS\+\_\+\+Mode\+\_\+t}} Timer\+Mode, HW\+\_\+\+TS\+\_\+p\+Timer\+Cb\+\_\+t pftimeout\+\_\+handler)
+\begin{DoxyCompactList}\small\item\em Interface to create a virtual timer The user shall call this API to create a timer. Once created, the timer is reserved to the module until it has been deleted. When creating a timer, the user shall specify the mode (single shot or repeated), the callback to be notified when the timer expires and a module ID to identify in the timer interrupt handler which module is concerned. In return, the user gets a timer ID to handle it. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{hw__timerserver_8c_aecc8be21516a6ba3e239cddc2b58ed6a}{HW\+\_\+\+TS\+\_\+\+Delete}} (uint8\+\_\+t timer\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Delete a virtual timer from the list This API should be used when a timer is not needed anymore by the user. A deleted timer is removed from the timer list managed by the timer server. It cannot be restarted again. The user has to go with the creation of a new timer if required and may get a different timer id. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{hw__timerserver_8c_a6fc84765b26ae0117ffe4833c3501bad}{HW\+\_\+\+TS\+\_\+\+Stop}} (uint8\+\_\+t timer\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Stop a virtual timer This API may be used to stop a running timer. A timer which is stopped is move to the pending state. A pending timer may be restarted at any time with a different timeout value but the mode cannot be changed. Nothing is done when it is called to stop a timer which has been already stopped. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{hw__timerserver_8c_abd6a1d2b7761598b87499a11e7f75db6}{HW\+\_\+\+TS\+\_\+\+Start}} (uint8\+\_\+t timer\+\_\+id, uint32\+\_\+t timeout\+\_\+ticks)
+\begin{DoxyCompactList}\small\item\em Start a virtual timer This API shall be used to start a timer. The timeout value is specified and may be different each time. When the timer is in the single shot mode, it will move to the pending state when it expires. The user may restart it at any time with a different timeout value. When the timer is in the repeated mode, it always stay in the running state. When the timer expires, it will be restarted with the same timeout value. This API shall not be called on a running timer. \end{DoxyCompactList}\item 
+uint16\+\_\+t \doxymbox{\hyperlink{hw__timerserver_8c_a23a72a096e30fa51ad7f0519255b28b8}{HW\+\_\+\+TS\+\_\+\+RTC\+\_\+\+Read\+Left\+Ticks\+To\+Count}} (void)
+\begin{DoxyCompactList}\small\item\em Return the number of ticks to count before the interrupt This API returns the number of ticks left to be counted before an interrupt is generated by the Timer Server. This API may be used by the application for power management optimization. When the system enters low power mode, the mode selection is a tradeoff between the wakeup time where the CPU is running and the time while the CPU will be kept in low power mode before next wakeup. The deeper is the low power mode used, the longer is the wakeup time. The low power mode management considering wakeup time versus time in low power mode is implementation specific When the timer is disabled (No timer in the list), it returns 0x\+FFFF. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+weak void \doxymbox{\hyperlink{hw__timerserver_8c_ad90c798eae61174bbdf130861c25f91d}{HW\+\_\+\+TS\+\_\+\+RTC\+\_\+\+Int\+\_\+\+App\+Not}} (uint32\+\_\+t Timer\+Process\+ID, uint8\+\_\+t Timer\+ID, HW\+\_\+\+TS\+\_\+p\+Timer\+Cb\+\_\+t p\+Timer\+Call\+Back)
+\begin{DoxyCompactList}\small\item\em Notify the application that a registered timer has expired This API shall be implemented by the user application. This API notifies the application that a timer expires. This API is running in the RTC Wakeup interrupt context. The application may implement an Operating System to change the context priority where the timer callback may be handled. This API provides the module ID to identify which module is concerned and to allow sending the information to the correct task. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static volatile \doxymbox{\hyperlink{struct_timer_context__t}{Timer\+Context\+\_\+t}} \doxymbox{\hyperlink{hw__timerserver_8c_aadab6ca9965999a63a205bcffa29b8fe}{a\+Timer\+Context}} \+[\doxymbox{\hyperlink{hw__conf_8h_a2d96796369010ac19baec44a11fce3c3}{CFG\+\_\+\+HW\+\_\+\+TS\+\_\+\+MAX\+\_\+\+NBR\+\_\+\+CONCURRENT\+\_\+\+TIMER}}]\+
+\item 
+\Hypertarget{hw__timerserver_8c_a85e04df427130292bf55977728354f1e}\label{hw__timerserver_8c_a85e04df427130292bf55977728354f1e} 
+static volatile uint8\+\_\+t {\bfseries Current\+Running\+Timer\+ID}
+\item 
+\Hypertarget{hw__timerserver_8c_a1edbc107fb06d757b547913065560e29}\label{hw__timerserver_8c_a1edbc107fb06d757b547913065560e29} 
+static volatile uint8\+\_\+t {\bfseries Previous\+Running\+Timer\+ID}
+\item 
+\Hypertarget{hw__timerserver_8c_ad7c1369d5256852296bc80902b458e53}\label{hw__timerserver_8c_ad7c1369d5256852296bc80902b458e53} 
+static volatile uint32\+\_\+t {\bfseries SSRValue\+On\+Last\+Setup}
+\item 
+\Hypertarget{hw__timerserver_8c_a4311988784a669a7f8480475b782a058}\label{hw__timerserver_8c_a4311988784a669a7f8480475b782a058} 
+static volatile Wakeup\+Timer\+Limitation\+\_\+\+Status\+\_\+t {\bfseries Wakeup\+Timer\+Limitation}
+\item 
+static uint8\+\_\+t \doxymbox{\hyperlink{hw__timerserver_8c_af0ce92e0b06e2619c23246e1e983ae41}{Wakeup\+Timer\+Divider}}
+\item 
+\Hypertarget{hw__timerserver_8c_a3e85ff100645b0e2f4461c4f50f8a835}\label{hw__timerserver_8c_a3e85ff100645b0e2f4461c4f50f8a835} 
+static uint8\+\_\+t {\bfseries Asynch\+Prescaler\+User\+Config}
+\item 
+\Hypertarget{hw__timerserver_8c_a689474090dbe75dd91d37f950485dc7d}\label{hw__timerserver_8c_a689474090dbe75dd91d37f950485dc7d} 
+static uint16\+\_\+t {\bfseries Synch\+Prescaler\+User\+Config}
+\item 
+\Hypertarget{hw__timerserver_8c_ab6aab2c50f385005acd33f1223cc1be3}\label{hw__timerserver_8c_ab6aab2c50f385005acd33f1223cc1be3} 
+static volatile uint16\+\_\+t {\bfseries Max\+Wakeup\+Timer\+Setup}
+\item 
+\Hypertarget{hw__timerserver_8c_aa0c7fca836406ade332e1e3f1039d8ab}\label{hw__timerserver_8c_aa0c7fca836406ade332e1e3f1039d8ab} 
+RTC\+\_\+\+Handle\+Type\+Def {\bfseries hrtc}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Hardware timerserver source file for STM32\+WPAN Middleware. 
+
+\begin{DoxyAuthor}{Author}
+MCD Application Team 
+\end{DoxyAuthor}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+Copyright (c) 2026 STMicroelectronics. All rights reserved.
+
+This software is licensed under terms that can be found in the LICENSE file in the root directory of this software component. If no LICENSE file comes with this software, it is provided AS-\/\+IS. 
+
+\label{doc-func-members}
+\Hypertarget{hw__timerserver_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{hw__timerserver_8c_a502fd0dd0e3c08dac7711e23b86b7311}\index{hw\_timerserver.c@{hw\_timerserver.c}!HW\_TS\_Create@{HW\_TS\_Create}}
+\index{HW\_TS\_Create@{HW\_TS\_Create}!hw\_timerserver.c@{hw\_timerserver.c}}
+\doxysubsubsection{\texorpdfstring{HW\_TS\_Create()}{HW\_TS\_Create()}}
+{\footnotesize\ttfamily \label{hw__timerserver_8c_a502fd0dd0e3c08dac7711e23b86b7311} 
+\doxymbox{\hyperlink{hw__if_8h_ae79a2e207e9a55efeed2364f0a51b811}{HW\+\_\+\+TS\+\_\+\+Return\+Status\+\_\+t}} HW\+\_\+\+TS\+\_\+\+Create (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Timer\+Process\+ID}{, }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{p\+Timer\+Id}{, }\item[{\doxymbox{\hyperlink{hw__if_8h_ada8bd2cd1859456fee3bec6ce9e26fcd}{HW\+\_\+\+TS\+\_\+\+Mode\+\_\+t}}}]{Timer\+Mode}{, }\item[{HW\+\_\+\+TS\+\_\+p\+Timer\+Cb\+\_\+t}]{p\+Timer\+Call\+Back}{}\end{DoxyParamCaption})}
+
+
+
+Interface to create a virtual timer The user shall call this API to create a timer. Once created, the timer is reserved to the module until it has been deleted. When creating a timer, the user shall specify the mode (single shot or repeated), the callback to be notified when the timer expires and a module ID to identify in the timer interrupt handler which module is concerned. In return, the user gets a timer ID to handle it. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Timer\+Process\+ID} & This is an identifier provided by the user and returned in the callback to allow identification of the requester \\
+\hline
+{\em p\+Timer\+Id} & Timer Id returned to the user to request operation (start, stop, delete) \\
+\hline
+{\em Timer\+Mode} & Mode of the virtual timer (Single shot or repeated) \\
+\hline
+{\em p\+Timer\+Call\+Back} & Callback when the virtual timer expires \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \doxylink{hw__if_8h_ae79a2e207e9a55efeed2364f0a51b811}{HW\+\_\+\+TS\+\_\+\+Return\+Status\+\_\+t}} & Return whether the creation is successful or not \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{hw__timerserver_8c_aecc8be21516a6ba3e239cddc2b58ed6a}\index{hw\_timerserver.c@{hw\_timerserver.c}!HW\_TS\_Delete@{HW\_TS\_Delete}}
+\index{HW\_TS\_Delete@{HW\_TS\_Delete}!hw\_timerserver.c@{hw\_timerserver.c}}
+\doxysubsubsection{\texorpdfstring{HW\_TS\_Delete()}{HW\_TS\_Delete()}}
+{\footnotesize\ttfamily \label{hw__timerserver_8c_aecc8be21516a6ba3e239cddc2b58ed6a} 
+void HW\+\_\+\+TS\+\_\+\+Delete (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{Timer\+ID}{}\end{DoxyParamCaption})}
+
+
+
+Delete a virtual timer from the list This API should be used when a timer is not needed anymore by the user. A deleted timer is removed from the timer list managed by the timer server. It cannot be restarted again. The user has to go with the creation of a new timer if required and may get a different timer id. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Timer\+ID} & The ID of the timer to remove from the list \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\texorpdfstring{$<$}{<} release ID\Hypertarget{hw__timerserver_8c_af799d2d9c53c216f43248c24cf07a52f}\index{hw\_timerserver.c@{hw\_timerserver.c}!HW\_TS\_Init@{HW\_TS\_Init}}
+\index{HW\_TS\_Init@{HW\_TS\_Init}!hw\_timerserver.c@{hw\_timerserver.c}}
+\doxysubsubsection{\texorpdfstring{HW\_TS\_Init()}{HW\_TS\_Init()}}
+{\footnotesize\ttfamily \label{hw__timerserver_8c_af799d2d9c53c216f43248c24cf07a52f} 
+void HW\+\_\+\+TS\+\_\+\+Init (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{hw__if_8h_abbb5103d2d21f00d5906cdb8b7742378}{HW\+\_\+\+TS\+\_\+\+Init\+Mode\+\_\+t}}}]{Timer\+Init\+Mode}{, }\item[{RTC\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}}]{hrtc}{}\end{DoxyParamCaption})}
+
+
+
+Initialize the timer server This API shall be called by the application before any timer is requested to the timer server. It configures the RTC module to be connected to the LSI input clock. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Timer\+Init\+Mode} & When the device restarts from Standby, it should request hw\+\_\+ts\+\_\+\+Init\+Mode\+\_\+\+Limited so that the Timer context is not re-\/initialized. Otherwise, hw\+\_\+ts\+\_\+\+Init\+Mode\+\_\+\+Full should be requested \\
+\hline
+{\em hrtc} & RTC Handle \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+Readout the user config
+
+Margin is taken to avoid wrong calculation when the wrap around is there and some application interrupts may have delayed the reading
+
+Configure EXTI module
+
+Initialize the timer server
+
+\texorpdfstring{$<$}{<} Set ID to non valid value
+
+\texorpdfstring{$<$}{<} Disable the Wakeup Timer
+
+\texorpdfstring{$<$}{<} Clear flag in RTC module
+
+\texorpdfstring{$<$}{<} Clear flag in EXTI module ~\newline
+
+
+\texorpdfstring{$<$}{<} Clear pending bit in NVIC ~\newline
+
+
+\texorpdfstring{$<$}{<} Enable interrupt in RTC module ~\newline
+
+
+Simulate that the Timer expired
+
+\texorpdfstring{$<$}{<} Set NVIC priority
+
+\texorpdfstring{$<$}{<} Enable NVIC\Hypertarget{hw__timerserver_8c_ad90c798eae61174bbdf130861c25f91d}\index{hw\_timerserver.c@{hw\_timerserver.c}!HW\_TS\_RTC\_Int\_AppNot@{HW\_TS\_RTC\_Int\_AppNot}}
+\index{HW\_TS\_RTC\_Int\_AppNot@{HW\_TS\_RTC\_Int\_AppNot}!hw\_timerserver.c@{hw\_timerserver.c}}
+\doxysubsubsection{\texorpdfstring{HW\_TS\_RTC\_Int\_AppNot()}{HW\_TS\_RTC\_Int\_AppNot()}}
+{\footnotesize\ttfamily \label{hw__timerserver_8c_ad90c798eae61174bbdf130861c25f91d} 
+\+\_\+\+\_\+weak void HW\+\_\+\+TS\+\_\+\+RTC\+\_\+\+Int\+\_\+\+App\+Not (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Timer\+Process\+ID}{, }\item[{uint8\+\_\+t}]{Timer\+ID}{, }\item[{HW\+\_\+\+TS\+\_\+p\+Timer\+Cb\+\_\+t}]{p\+Timer\+Call\+Back}{}\end{DoxyParamCaption})}
+
+
+
+Notify the application that a registered timer has expired This API shall be implemented by the user application. This API notifies the application that a timer expires. This API is running in the RTC Wakeup interrupt context. The application may implement an Operating System to change the context priority where the timer callback may be handled. This API provides the module ID to identify which module is concerned and to allow sending the information to the correct task. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Timer\+Process\+ID} & The Timer\+Process\+Id associated with the timer when it has been created \\
+\hline
+{\em Timer\+ID} & The Timer\+ID of the expired timer \\
+\hline
+{\em p\+Timer\+Call\+Back} & The Callback associated with the timer when it has been created \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{hw__timerserver_8c_a23a72a096e30fa51ad7f0519255b28b8}\index{hw\_timerserver.c@{hw\_timerserver.c}!HW\_TS\_RTC\_ReadLeftTicksToCount@{HW\_TS\_RTC\_ReadLeftTicksToCount}}
+\index{HW\_TS\_RTC\_ReadLeftTicksToCount@{HW\_TS\_RTC\_ReadLeftTicksToCount}!hw\_timerserver.c@{hw\_timerserver.c}}
+\doxysubsubsection{\texorpdfstring{HW\_TS\_RTC\_ReadLeftTicksToCount()}{HW\_TS\_RTC\_ReadLeftTicksToCount()}}
+{\footnotesize\ttfamily \label{hw__timerserver_8c_a23a72a096e30fa51ad7f0519255b28b8} 
+uint16\+\_\+t HW\+\_\+\+TS\+\_\+\+RTC\+\_\+\+Read\+Left\+Ticks\+To\+Count (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Return the number of ticks to count before the interrupt This API returns the number of ticks left to be counted before an interrupt is generated by the Timer Server. This API may be used by the application for power management optimization. When the system enters low power mode, the mode selection is a tradeoff between the wakeup time where the CPU is running and the time while the CPU will be kept in low power mode before next wakeup. The deeper is the low power mode used, the longer is the wakeup time. The low power mode management considering wakeup time versus time in low power mode is implementation specific When the timer is disabled (No timer in the list), it returns 0x\+FFFF. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em The} & number of ticks left to count \\
+\hline
+\end{DoxyRetVals}
+\texorpdfstring{$<$}{<} backup PRIMASK bit
+
+\texorpdfstring{$<$}{<} Disable all interrupts by setting PRIMASK bit on Cortex
+
+\texorpdfstring{$<$}{<} Restore PRIMASK bit\Hypertarget{hw__timerserver_8c_a438915fc276ab03daede51b18d8eefdf}\index{hw\_timerserver.c@{hw\_timerserver.c}!HW\_TS\_RTC\_Wakeup\_Handler@{HW\_TS\_RTC\_Wakeup\_Handler}}
+\index{HW\_TS\_RTC\_Wakeup\_Handler@{HW\_TS\_RTC\_Wakeup\_Handler}!hw\_timerserver.c@{hw\_timerserver.c}}
+\doxysubsubsection{\texorpdfstring{HW\_TS\_RTC\_Wakeup\_Handler()}{HW\_TS\_RTC\_Wakeup\_Handler()}}
+{\footnotesize\ttfamily \label{hw__timerserver_8c_a438915fc276ab03daede51b18d8eefdf} 
+void HW\+\_\+\+TS\+\_\+\+RTC\+\_\+\+Wakeup\+\_\+\+Handler (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Schedule the timer list on the timer interrupt handler This interrupt handler shall be called by the application in the RTC interrupt handler. This handler takes care of clearing all status flag required in the RTC and EXTI peripherals. 
+
+For all public interface except that may need write access to the RTC, the RTC shall be unlock at the beginning and locked at the output In order to ease maintainability, the unlock is done at the top and the lock at then end in case some new implementation is coming in the future Disable the Wakeup Timer This may speed up a bit the processing to wait the timer to be disabled The timer is still counting 2 RTCCLK
+
+It should be good to check whether the Time\+Elapsed is greater or not than the tick left to be counted However, due to the inaccuracy of the reading of the time elapsed, it may return there is 1 tick to be left whereas the count is over A more secure implementation has been done with a flag to state whereas the full count has been written in the wakeuptimer or not
+
+We should never end up in this case However, if due to any bug in the timer server this is the case, the mistake may not impact the user. We could just clean the interrupt flag and get out from this unexpected interrupt
+
+make sure to clear the flags after checking the WUTWF. It takes 2 RTCCLK between the time the WUTE bit is disabled and the time the timer is disabled. The WUTWF bit somehow guarantee the system is stable Otherwise, when the timer is periodic with 1 Tick, it may generate an extra interrupt in between due to the autoreload feature
+
+\texorpdfstring{$<$}{<} Clear flag in RTC module
+
+\texorpdfstring{$<$}{<} Clear flag in EXTI module\Hypertarget{hw__timerserver_8c_abd6a1d2b7761598b87499a11e7f75db6}\index{hw\_timerserver.c@{hw\_timerserver.c}!HW\_TS\_Start@{HW\_TS\_Start}}
+\index{HW\_TS\_Start@{HW\_TS\_Start}!hw\_timerserver.c@{hw\_timerserver.c}}
+\doxysubsubsection{\texorpdfstring{HW\_TS\_Start()}{HW\_TS\_Start()}}
+{\footnotesize\ttfamily \label{hw__timerserver_8c_abd6a1d2b7761598b87499a11e7f75db6} 
+void HW\+\_\+\+TS\+\_\+\+Start (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{Timer\+ID}{, }\item[{uint32\+\_\+t}]{timeout\+\_\+ticks}{}\end{DoxyParamCaption})}
+
+
+
+Start a virtual timer This API shall be used to start a timer. The timeout value is specified and may be different each time. When the timer is in the single shot mode, it will move to the pending state when it expires. The user may restart it at any time with a different timeout value. When the timer is in the repeated mode, it always stay in the running state. When the timer expires, it will be restarted with the same timeout value. This API shall not be called on a running timer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Timer\+ID} & The ID Id of the timer to start \\
+\hline
+{\em timeout\+\_\+ticks} & Number of ticks of the virtual timer (Maximum value is (0x\+FFFFFFFF-\/0x\+FFFF = 0x\+FFFF0000) \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\texorpdfstring{$<$}{<} Disable NVIC
+
+\texorpdfstring{$<$}{<} Enable NVIC\Hypertarget{hw__timerserver_8c_a6fc84765b26ae0117ffe4833c3501bad}\index{hw\_timerserver.c@{hw\_timerserver.c}!HW\_TS\_Stop@{HW\_TS\_Stop}}
+\index{HW\_TS\_Stop@{HW\_TS\_Stop}!hw\_timerserver.c@{hw\_timerserver.c}}
+\doxysubsubsection{\texorpdfstring{HW\_TS\_Stop()}{HW\_TS\_Stop()}}
+{\footnotesize\ttfamily \label{hw__timerserver_8c_a6fc84765b26ae0117ffe4833c3501bad} 
+void HW\+\_\+\+TS\+\_\+\+Stop (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{Timer\+ID}{}\end{DoxyParamCaption})}
+
+
+
+Stop a virtual timer This API may be used to stop a running timer. A timer which is stopped is move to the pending state. A pending timer may be restarted at any time with a different timeout value but the mode cannot be changed. Nothing is done when it is called to stop a timer which has been already stopped. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Timer\+ID} & Id of the timer to stop \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\texorpdfstring{$<$}{<} Disable NVIC
+
+List is empty
+
+Disable the timer
+
+Wait for the flag to be back to 0 when the wakeup timer is enabled
+
+\texorpdfstring{$<$}{<} Disable the Wakeup Timer
+
+make sure to clear the flags after checking the WUTWF. It takes 2 RTCCLK between the time the WUTE bit is disabled and the time the timer is disabled. The WUTWF bit somehow guarantee the system is stable Otherwise, when the timer is periodic with 1 Tick, it may generate an extra interrupt in between due to the autoreload feature
+
+\texorpdfstring{$<$}{<} Clear flag in RTC module
+
+\texorpdfstring{$<$}{<} Clear flag in EXTI module
+
+\texorpdfstring{$<$}{<} Clear pending bit in NVIC
+
+\texorpdfstring{$<$}{<} Enable NVIC\Hypertarget{hw__timerserver_8c_a755e53f530fc6eac94a3591e6fd67684}\index{hw\_timerserver.c@{hw\_timerserver.c}!linkTimer@{linkTimer}}
+\index{linkTimer@{linkTimer}!hw\_timerserver.c@{hw\_timerserver.c}}
+\doxysubsubsection{\texorpdfstring{linkTimer()}{linkTimer()}}
+{\footnotesize\ttfamily \label{hw__timerserver_8c_a755e53f530fc6eac94a3591e6fd67684} 
+uint16\+\_\+t link\+Timer (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{Timer\+ID}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Insert a Timer in the list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Timer\+ID} & The ID of the Timer \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+No timer in the list
+
+update count of the timer to be linked
+
+Search for index where the new timer shall be linked
+
+Search for the ID after the first one
+
+Link after the ID
+
+Link before the first ID\Hypertarget{hw__timerserver_8c_a39bebc1137fa6bf61c780c6f78f19f5b}\index{hw\_timerserver.c@{hw\_timerserver.c}!LinkTimerAfter@{LinkTimerAfter}}
+\index{LinkTimerAfter@{LinkTimerAfter}!hw\_timerserver.c@{hw\_timerserver.c}}
+\doxysubsubsection{\texorpdfstring{LinkTimerAfter()}{LinkTimerAfter()}}
+{\footnotesize\ttfamily \label{hw__timerserver_8c_a39bebc1137fa6bf61c780c6f78f19f5b} 
+void Link\+Timer\+After (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{Timer\+ID}{, }\item[{uint8\+\_\+t}]{Ref\+Timer\+ID}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Insert a Timer in the list after the Timer ID specified. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Timer\+ID} & The ID of the Timer \\
+\hline
+{\em Ref\+Timer\+ID} & The ID of the Timer to be linked after \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{hw__timerserver_8c_a305402dfc89c9b2006f547ad50d7c2fc}\index{hw\_timerserver.c@{hw\_timerserver.c}!LinkTimerBefore@{LinkTimerBefore}}
+\index{LinkTimerBefore@{LinkTimerBefore}!hw\_timerserver.c@{hw\_timerserver.c}}
+\doxysubsubsection{\texorpdfstring{LinkTimerBefore()}{LinkTimerBefore()}}
+{\footnotesize\ttfamily \label{hw__timerserver_8c_a305402dfc89c9b2006f547ad50d7c2fc} 
+void Link\+Timer\+Before (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{Timer\+ID}{, }\item[{uint8\+\_\+t}]{Ref\+Timer\+ID}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Insert a Timer in the list before the ID specified. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Timer\+ID} & The ID of the Timer \\
+\hline
+{\em Ref\+Timer\+ID} & The ID of the Timer to be linked before \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{hw__timerserver_8c_a8d95e786b8629757303092d8bd95a98d}\index{hw\_timerserver.c@{hw\_timerserver.c}!ReadRtcSsrValue@{ReadRtcSsrValue}}
+\index{ReadRtcSsrValue@{ReadRtcSsrValue}!hw\_timerserver.c@{hw\_timerserver.c}}
+\doxysubsubsection{\texorpdfstring{ReadRtcSsrValue()}{ReadRtcSsrValue()}}
+{\footnotesize\ttfamily \label{hw__timerserver_8c_a8d95e786b8629757303092d8bd95a98d} 
+uint32\+\_\+t Read\+Rtc\+Ssr\+Value (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Read the RTC\+\_\+\+SSR value As described in the reference manual, the RTC\+\_\+\+SSR shall be read twice to ensure reliability of the value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em SSR} & value read \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{hw__timerserver_8c_a184a77dbef2577f4a12248082ac925a6}\index{hw\_timerserver.c@{hw\_timerserver.c}!RescheduleTimerList@{RescheduleTimerList}}
+\index{RescheduleTimerList@{RescheduleTimerList}!hw\_timerserver.c@{hw\_timerserver.c}}
+\doxysubsubsection{\texorpdfstring{RescheduleTimerList()}{RescheduleTimerList()}}
+{\footnotesize\ttfamily \label{hw__timerserver_8c_a184a77dbef2577f4a12248082ac925a6} 
+void Reschedule\+Timer\+List (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Reschedule the list of timer. 
+
+\begin{DoxyNote}{Note}
+1) Update the count left for each timer in the list 2) Setup the wakeuptimer 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+The wakeuptimer is disabled now to reduce the time to poll the WUTWF FLAG when the new value will have to be written
+
+Wait for the flag to be back to 0 when the wakeup timer is enabled
+
+\texorpdfstring{$<$}{<} Disable the Wakeup Timer
+
+Calculate what will be the value to write in the wakeuptimer
+
+Read how much has been counted
+
+There is no tick left to count
+
+The number of tick left is greater than the Wakeuptimer maximum value
+
+update ticks left to be counted for each timer
+
+Write next count\Hypertarget{hw__timerserver_8c_a97ecceb15fc1ada12b37656339109fae}\index{hw\_timerserver.c@{hw\_timerserver.c}!RestartWakeupCounter@{RestartWakeupCounter}}
+\index{RestartWakeupCounter@{RestartWakeupCounter}!hw\_timerserver.c@{hw\_timerserver.c}}
+\doxysubsubsection{\texorpdfstring{RestartWakeupCounter()}{RestartWakeupCounter()}}
+{\footnotesize\ttfamily \label{hw__timerserver_8c_a97ecceb15fc1ada12b37656339109fae} 
+void Restart\+Wakeup\+Counter (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Set the wakeup counter. 
+
+\begin{DoxyNote}{Note}
+The API is writing the counter value so that the value is decreased by one to cope with the fact the interrupt is generated with 1 extra clock cycle (See Ref\+Manuel) It assumes all condition are met to be allowed to write the wakeup counter 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em Value} & Value to be written in the counter \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+The wakeuptimer has been disabled in the calling function to reduce the time to poll the WUTWF FLAG when the new value will have to be written \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+WAKEUPTIMER\+\_\+\+DISABLE(\&hrtc);
+
+Simulate that the Timer expired
+
+make sure to clear the flags after checking the WUTWF. It takes 2 RTCCLK between the time the WUTE bit is disabled and the time the timer is disabled. The WUTWF bit somehow guarantee the system is stable Otherwise, when the timer is periodic with 1 Tick, it may generate an extra interrupt in between due to the autoreload feature
+
+\texorpdfstring{$<$}{<} Clear flag in RTC module
+
+\texorpdfstring{$<$}{<} Clear flag in EXTI module
+
+\texorpdfstring{$<$}{<} Clear pending bit in NVIC
+
+Update the value here after the WUTWF polling that may take some time
+
+\texorpdfstring{$<$}{<} Enable the Wakeup Timer\Hypertarget{hw__timerserver_8c_aad180adc078d380b64ad78fb1606995c}\index{hw\_timerserver.c@{hw\_timerserver.c}!ReturnTimeElapsed@{ReturnTimeElapsed}}
+\index{ReturnTimeElapsed@{ReturnTimeElapsed}!hw\_timerserver.c@{hw\_timerserver.c}}
+\doxysubsubsection{\texorpdfstring{ReturnTimeElapsed()}{ReturnTimeElapsed()}}
+{\footnotesize\ttfamily \label{hw__timerserver_8c_aad180adc078d380b64ad78fb1606995c} 
+uint16\+\_\+t Return\+Time\+Elapsed (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Return the number of ticks counted by the wakeuptimer since it has been started. 
+
+\begin{DoxyNote}{Note}
+The API is reading the SSR register to get how many ticks have been counted since the time the timer has been started 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em Time} & expired in Ticks \\
+\hline
+\end{DoxyRetVals}
+\texorpdfstring{$<$}{<} Read SSR register first
+
+At this stage, Return\+Value holds the number of ticks counted by SSR Need to translate in number of ticks counted by the Wakeuptimer\Hypertarget{hw__timerserver_8c_aa55d38b36fd60356f077569dacc938cc}\index{hw\_timerserver.c@{hw\_timerserver.c}!UnlinkTimer@{UnlinkTimer}}
+\index{UnlinkTimer@{UnlinkTimer}!hw\_timerserver.c@{hw\_timerserver.c}}
+\doxysubsubsection{\texorpdfstring{UnlinkTimer()}{UnlinkTimer()}}
+{\footnotesize\ttfamily \label{hw__timerserver_8c_aa55d38b36fd60356f077569dacc938cc} 
+void Unlink\+Timer (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{Timer\+ID}{, }\item[{Request\+Read\+SSR\+\_\+t}]{Request\+Read\+SSR}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Remove a Timer from the list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Timer\+ID} & The ID of the Timer \\
+\hline
+{\em Request\+Read\+SSR} & Request to read the SSR register or not \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+Timer is out of the list
+
+\label{doc-var-members}
+\Hypertarget{hw__timerserver_8c_doc-var-members}
+\doxysubsection{Variable Documentation}
+\Hypertarget{hw__timerserver_8c_aadab6ca9965999a63a205bcffa29b8fe}\index{hw\_timerserver.c@{hw\_timerserver.c}!aTimerContext@{aTimerContext}}
+\index{aTimerContext@{aTimerContext}!hw\_timerserver.c@{hw\_timerserver.c}}
+\doxysubsubsection{\texorpdfstring{aTimerContext}{aTimerContext}}
+{\footnotesize\ttfamily \label{hw__timerserver_8c_aadab6ca9965999a63a205bcffa29b8fe} 
+volatile \doxymbox{\hyperlink{struct_timer_context__t}{Timer\+Context\+\_\+t}} a\+Timer\+Context\+[\doxymbox{\hyperlink{hw__conf_8h_a2d96796369010ac19baec44a11fce3c3}{CFG\+\_\+\+HW\+\_\+\+TS\+\_\+\+MAX\+\_\+\+NBR\+\_\+\+CONCURRENT\+\_\+\+TIMER}}]\+\hspace{0.3cm}{\ttfamily [static]}}
+
+START of Section TIMERSERVER\+\_\+\+CONTEXT \Hypertarget{hw__timerserver_8c_af0ce92e0b06e2619c23246e1e983ae41}\index{hw\_timerserver.c@{hw\_timerserver.c}!WakeupTimerDivider@{WakeupTimerDivider}}
+\index{WakeupTimerDivider@{WakeupTimerDivider}!hw\_timerserver.c@{hw\_timerserver.c}}
+\doxysubsubsection{\texorpdfstring{WakeupTimerDivider}{WakeupTimerDivider}}
+{\footnotesize\ttfamily \label{hw__timerserver_8c_af0ce92e0b06e2619c23246e1e983ae41} 
+uint8\+\_\+t Wakeup\+Timer\+Divider\hspace{0.3cm}{\ttfamily [static]}}
+
+END of Section TIMERSERVER\+\_\+\+CONTEXT 

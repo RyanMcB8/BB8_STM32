@@ -1,0 +1,452 @@
+\doxysection{LSM6\+DSO32\+\_\+filters }
+\hypertarget{group___l_s_m6_d_s_o32__filters}{}\label{group___l_s_m6_d_s_o32__filters}\index{LSM6DSO32\_filters@{LSM6DSO32\_filters}}
+
+
+This section group all the functions concerning the filters configuration.  
+
+
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32__filters_ga361aff959e0dd5c7733ff03ad4c9b56d}{lsm6dso32\+\_\+xl\+\_\+filter\+\_\+lp2\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Accelerometer output from LPF2 filtering stage selection.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32__filters_gae62da4e4888932894de3b5ef9b986fe7}{lsm6dso32\+\_\+xl\+\_\+filter\+\_\+lp2\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Accelerometer output from LPF2 filtering stage selection.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32__filters_ga51c80ae4eedd3eb991fc1cabb80f4358}{lsm6dso32\+\_\+gy\+\_\+filter\+\_\+lp1\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Enables gyroscope digital LPF1 if auxiliary SPI is disabled; the bandwidth can be selected through FTYPE \+[2:\+0]\+ in CTRL6\+\_\+C (15h).\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32__filters_gaca7796d70770497dbe16aaeba3fe2028}{lsm6dso32\+\_\+gy\+\_\+filter\+\_\+lp1\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Enables gyroscope digital LPF1 if auxiliary SPI is disabled; the bandwidth can be selected through FTYPE \+[2:\+0]\+ in CTRL6\+\_\+C (15h).\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32__filters_ga870b28de399e9f4cc0055446a29ccda6}{lsm6dso32\+\_\+filter\+\_\+settling\+\_\+mask\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Mask DRDY on pin (both XL \& Gyro) until filter settling ends (XL and Gyro independently masked).\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32__filters_ga3c3c0a440ba9eea6748d315be811983b}{lsm6dso32\+\_\+filter\+\_\+settling\+\_\+mask\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Mask DRDY on pin (both XL \& Gyro) until filter settling ends (XL and Gyro independently masked).\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32__filters_ga6fd9a8eaeafcdd6c9d577428f831bb00}{lsm6dso32\+\_\+gy\+\_\+lp1\+\_\+bandwidth\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+ftype\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Gyroscope lp1 bandwidth.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32__filters_gae3a441308f5e7193b16443bb94fa1961}{lsm6dso32\+\_\+gy\+\_\+lp1\+\_\+bandwidth\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+ftype\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Gyroscope lp1 bandwidth.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32__filters_gaba08daad7acf03b6853ae0b21aef462a}{lsm6dso32\+\_\+xl\+\_\+lp2\+\_\+on\+\_\+6d\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Low pass filter 2 on 6D function selection.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32__filters_gabdb429015778d538564ad411d172ca07}{lsm6dso32\+\_\+xl\+\_\+lp2\+\_\+on\+\_\+6d\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Low pass filter 2 on 6D function selection.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32__filters_gad861011d6751502f7e9b9a1aa8ee6fde}{lsm6dso32\+\_\+xl\+\_\+hp\+\_\+path\+\_\+on\+\_\+out\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+hp\+\_\+slope\+\_\+xl\+\_\+en\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Accelerometer slope filter /\+ high-\/pass filter selection on output.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32__filters_ga5ff3f3e6479f00a51e143d6ff15d3b0c}{lsm6dso32\+\_\+xl\+\_\+hp\+\_\+path\+\_\+on\+\_\+out\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+hp\+\_\+slope\+\_\+xl\+\_\+en\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Accelerometer slope filter /\+ high-\/pass filter selection on output.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32__filters_ga27231b073216f8b1ee965221d49d5144}{lsm6dso32\+\_\+xl\+\_\+fast\+\_\+settling\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Enables accelerometer LPF2 and HPF fast-\/settling mode. The filter sets the second samples after writing this bit. Active only during device exit from power-\/down mode.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32__filters_ga71113dbdd8fc1ab2f625ec8404a768d8}{lsm6dso32\+\_\+xl\+\_\+fast\+\_\+settling\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Enables accelerometer LPF2 and HPF fast-\/settling mode. The filter sets the second samples after writing this bit. Active only during device exit from power-\/down mode.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32__filters_ga3a804c4dc41a2e58fd13c3773c7b9329}{lsm6dso32\+\_\+xl\+\_\+hp\+\_\+path\+\_\+internal\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+slope\+\_\+fds\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em HPF or SLOPE filter selection on wake-\/up and Activity/\+\+Inactivity functions.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32__filters_gaf806a3f1d4cb2f3de6764f97fad24aca}{lsm6dso32\+\_\+xl\+\_\+hp\+\_\+path\+\_\+internal\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+slope\+\_\+fds\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em HPF or SLOPE filter selection on wake-\/up and Activity/\+\+Inactivity functions.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32__filters_gaf4c3c3db570042fb7f147a2a535a4d87}{lsm6dso32\+\_\+gy\+\_\+hp\+\_\+path\+\_\+internal\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+hpm\+\_\+g\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Enables gyroscope digital high-\/pass filter. The filter is enabled only if the gyro is in HP mode.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32__filters_gabfb6fab1937bef826667b5f0ffee2719}{lsm6dso32\+\_\+gy\+\_\+hp\+\_\+path\+\_\+internal\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+hpm\+\_\+g\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Enables gyroscope digital high-\/pass filter. The filter is enabled only if the gyro is in HP mode.\+[get]\+. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This section group all the functions concerning the filters configuration. 
+
+
+
+\label{doc-func-members}
+\Hypertarget{group___l_s_m6_d_s_o32__filters_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{group___l_s_m6_d_s_o32__filters_ga3c3c0a440ba9eea6748d315be811983b}\index{LSM6DSO32\_filters@{LSM6DSO32\_filters}!lsm6dso32\_filter\_settling\_mask\_get@{lsm6dso32\_filter\_settling\_mask\_get}}
+\index{lsm6dso32\_filter\_settling\_mask\_get@{lsm6dso32\_filter\_settling\_mask\_get}!LSM6DSO32\_filters@{LSM6DSO32\_filters}}
+\doxysubsubsection{\texorpdfstring{lsm6dso32\_filter\_settling\_mask\_get()}{lsm6dso32\_filter\_settling\_mask\_get()}}
+{\footnotesize\ttfamily \label{group___l_s_m6_d_s_o32__filters_ga3c3c0a440ba9eea6748d315be811983b} 
+int32\+\_\+t lsm6dso32\+\_\+filter\+\_\+settling\+\_\+mask\+\_\+get (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx}{, }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{val}{}\end{DoxyParamCaption})}
+
+
+
+Mask DRDY on pin (both XL \& Gyro) until filter settling ends (XL and Gyro independently masked).\+[get]\+. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read /\+ write interface definitions \\
+\hline
+{\em val} & change the values of drdy\+\_\+mask in reg CTRL4\+\_\+C \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY:\+ return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group___l_s_m6_d_s_o32__filters_ga870b28de399e9f4cc0055446a29ccda6}\index{LSM6DSO32\_filters@{LSM6DSO32\_filters}!lsm6dso32\_filter\_settling\_mask\_set@{lsm6dso32\_filter\_settling\_mask\_set}}
+\index{lsm6dso32\_filter\_settling\_mask\_set@{lsm6dso32\_filter\_settling\_mask\_set}!LSM6DSO32\_filters@{LSM6DSO32\_filters}}
+\doxysubsubsection{\texorpdfstring{lsm6dso32\_filter\_settling\_mask\_set()}{lsm6dso32\_filter\_settling\_mask\_set()}}
+{\footnotesize\ttfamily \label{group___l_s_m6_d_s_o32__filters_ga870b28de399e9f4cc0055446a29ccda6} 
+int32\+\_\+t lsm6dso32\+\_\+filter\+\_\+settling\+\_\+mask\+\_\+set (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx}{, }\item[{uint8\+\_\+t}]{val}{}\end{DoxyParamCaption})}
+
+
+
+Mask DRDY on pin (both XL \& Gyro) until filter settling ends (XL and Gyro independently masked).\+[set]\+. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read /\+ write interface definitions \\
+\hline
+{\em val} & change the values of drdy\+\_\+mask in reg CTRL4\+\_\+C \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY:\+ return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group___l_s_m6_d_s_o32__filters_gaca7796d70770497dbe16aaeba3fe2028}\index{LSM6DSO32\_filters@{LSM6DSO32\_filters}!lsm6dso32\_gy\_filter\_lp1\_get@{lsm6dso32\_gy\_filter\_lp1\_get}}
+\index{lsm6dso32\_gy\_filter\_lp1\_get@{lsm6dso32\_gy\_filter\_lp1\_get}!LSM6DSO32\_filters@{LSM6DSO32\_filters}}
+\doxysubsubsection{\texorpdfstring{lsm6dso32\_gy\_filter\_lp1\_get()}{lsm6dso32\_gy\_filter\_lp1\_get()}}
+{\footnotesize\ttfamily \label{group___l_s_m6_d_s_o32__filters_gaca7796d70770497dbe16aaeba3fe2028} 
+int32\+\_\+t lsm6dso32\+\_\+gy\+\_\+filter\+\_\+lp1\+\_\+get (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx}{, }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{val}{}\end{DoxyParamCaption})}
+
+
+
+Enables gyroscope digital LPF1 if auxiliary SPI is disabled; the bandwidth can be selected through FTYPE \+[2:\+0]\+ in CTRL6\+\_\+C (15h).\+[get]\+. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read /\+ write interface definitions \\
+\hline
+{\em val} & change the values of lpf1\+\_\+sel\+\_\+g in reg CTRL4\+\_\+C \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY:\+ return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group___l_s_m6_d_s_o32__filters_ga51c80ae4eedd3eb991fc1cabb80f4358}\index{LSM6DSO32\_filters@{LSM6DSO32\_filters}!lsm6dso32\_gy\_filter\_lp1\_set@{lsm6dso32\_gy\_filter\_lp1\_set}}
+\index{lsm6dso32\_gy\_filter\_lp1\_set@{lsm6dso32\_gy\_filter\_lp1\_set}!LSM6DSO32\_filters@{LSM6DSO32\_filters}}
+\doxysubsubsection{\texorpdfstring{lsm6dso32\_gy\_filter\_lp1\_set()}{lsm6dso32\_gy\_filter\_lp1\_set()}}
+{\footnotesize\ttfamily \label{group___l_s_m6_d_s_o32__filters_ga51c80ae4eedd3eb991fc1cabb80f4358} 
+int32\+\_\+t lsm6dso32\+\_\+gy\+\_\+filter\+\_\+lp1\+\_\+set (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx}{, }\item[{uint8\+\_\+t}]{val}{}\end{DoxyParamCaption})}
+
+
+
+Enables gyroscope digital LPF1 if auxiliary SPI is disabled; the bandwidth can be selected through FTYPE \+[2:\+0]\+ in CTRL6\+\_\+C (15h).\+[set]\+. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read /\+ write interface definitions \\
+\hline
+{\em val} & change the values of lpf1\+\_\+sel\+\_\+g in reg CTRL4\+\_\+C \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY:\+ return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group___l_s_m6_d_s_o32__filters_gabfb6fab1937bef826667b5f0ffee2719}\index{LSM6DSO32\_filters@{LSM6DSO32\_filters}!lsm6dso32\_gy\_hp\_path\_internal\_get@{lsm6dso32\_gy\_hp\_path\_internal\_get}}
+\index{lsm6dso32\_gy\_hp\_path\_internal\_get@{lsm6dso32\_gy\_hp\_path\_internal\_get}!LSM6DSO32\_filters@{LSM6DSO32\_filters}}
+\doxysubsubsection{\texorpdfstring{lsm6dso32\_gy\_hp\_path\_internal\_get()}{lsm6dso32\_gy\_hp\_path\_internal\_get()}}
+{\footnotesize\ttfamily \label{group___l_s_m6_d_s_o32__filters_gabfb6fab1937bef826667b5f0ffee2719} 
+int32\+\_\+t lsm6dso32\+\_\+gy\+\_\+hp\+\_\+path\+\_\+internal\+\_\+get (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx}{, }\item[{lsm6dso32\+\_\+hpm\+\_\+g\+\_\+t \texorpdfstring{$\ast$}{*}}]{val}{}\end{DoxyParamCaption})}
+
+
+
+Enables gyroscope digital high-\/pass filter. The filter is enabled only if the gyro is in HP mode.\+[get]\+. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read /\+ write interface definitions \\
+\hline
+{\em val} & Get the values of hp\+\_\+en\+\_\+g and hp\+\_\+en\+\_\+g in reg CTRL7\+\_\+G \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY:\+ return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group___l_s_m6_d_s_o32__filters_gaf4c3c3db570042fb7f147a2a535a4d87}\index{LSM6DSO32\_filters@{LSM6DSO32\_filters}!lsm6dso32\_gy\_hp\_path\_internal\_set@{lsm6dso32\_gy\_hp\_path\_internal\_set}}
+\index{lsm6dso32\_gy\_hp\_path\_internal\_set@{lsm6dso32\_gy\_hp\_path\_internal\_set}!LSM6DSO32\_filters@{LSM6DSO32\_filters}}
+\doxysubsubsection{\texorpdfstring{lsm6dso32\_gy\_hp\_path\_internal\_set()}{lsm6dso32\_gy\_hp\_path\_internal\_set()}}
+{\footnotesize\ttfamily \label{group___l_s_m6_d_s_o32__filters_gaf4c3c3db570042fb7f147a2a535a4d87} 
+int32\+\_\+t lsm6dso32\+\_\+gy\+\_\+hp\+\_\+path\+\_\+internal\+\_\+set (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx}{, }\item[{lsm6dso32\+\_\+hpm\+\_\+g\+\_\+t}]{val}{}\end{DoxyParamCaption})}
+
+
+
+Enables gyroscope digital high-\/pass filter. The filter is enabled only if the gyro is in HP mode.\+[set]\+. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read /\+ write interface definitions \\
+\hline
+{\em val} & Get the values of hp\+\_\+en\+\_\+g and hp\+\_\+en\+\_\+g in reg CTRL7\+\_\+G \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY:\+ return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group___l_s_m6_d_s_o32__filters_gae3a441308f5e7193b16443bb94fa1961}\index{LSM6DSO32\_filters@{LSM6DSO32\_filters}!lsm6dso32\_gy\_lp1\_bandwidth\_get@{lsm6dso32\_gy\_lp1\_bandwidth\_get}}
+\index{lsm6dso32\_gy\_lp1\_bandwidth\_get@{lsm6dso32\_gy\_lp1\_bandwidth\_get}!LSM6DSO32\_filters@{LSM6DSO32\_filters}}
+\doxysubsubsection{\texorpdfstring{lsm6dso32\_gy\_lp1\_bandwidth\_get()}{lsm6dso32\_gy\_lp1\_bandwidth\_get()}}
+{\footnotesize\ttfamily \label{group___l_s_m6_d_s_o32__filters_gae3a441308f5e7193b16443bb94fa1961} 
+int32\+\_\+t lsm6dso32\+\_\+gy\+\_\+lp1\+\_\+bandwidth\+\_\+get (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx}{, }\item[{lsm6dso32\+\_\+ftype\+\_\+t \texorpdfstring{$\ast$}{*}}]{val}{}\end{DoxyParamCaption})}
+
+
+
+Gyroscope lp1 bandwidth.\+[get]\+. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read /\+ write interface definitions \\
+\hline
+{\em val} & Get the values of ftype in reg CTRL6\+\_\+C \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY:\+ return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group___l_s_m6_d_s_o32__filters_ga6fd9a8eaeafcdd6c9d577428f831bb00}\index{LSM6DSO32\_filters@{LSM6DSO32\_filters}!lsm6dso32\_gy\_lp1\_bandwidth\_set@{lsm6dso32\_gy\_lp1\_bandwidth\_set}}
+\index{lsm6dso32\_gy\_lp1\_bandwidth\_set@{lsm6dso32\_gy\_lp1\_bandwidth\_set}!LSM6DSO32\_filters@{LSM6DSO32\_filters}}
+\doxysubsubsection{\texorpdfstring{lsm6dso32\_gy\_lp1\_bandwidth\_set()}{lsm6dso32\_gy\_lp1\_bandwidth\_set()}}
+{\footnotesize\ttfamily \label{group___l_s_m6_d_s_o32__filters_ga6fd9a8eaeafcdd6c9d577428f831bb00} 
+int32\+\_\+t lsm6dso32\+\_\+gy\+\_\+lp1\+\_\+bandwidth\+\_\+set (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx}{, }\item[{lsm6dso32\+\_\+ftype\+\_\+t}]{val}{}\end{DoxyParamCaption})}
+
+
+
+Gyroscope lp1 bandwidth.\+[set]\+. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read /\+ write interface definitions \\
+\hline
+{\em val} & change the values of ftype in reg CTRL6\+\_\+C \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY:\+ return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group___l_s_m6_d_s_o32__filters_ga71113dbdd8fc1ab2f625ec8404a768d8}\index{LSM6DSO32\_filters@{LSM6DSO32\_filters}!lsm6dso32\_xl\_fast\_settling\_get@{lsm6dso32\_xl\_fast\_settling\_get}}
+\index{lsm6dso32\_xl\_fast\_settling\_get@{lsm6dso32\_xl\_fast\_settling\_get}!LSM6DSO32\_filters@{LSM6DSO32\_filters}}
+\doxysubsubsection{\texorpdfstring{lsm6dso32\_xl\_fast\_settling\_get()}{lsm6dso32\_xl\_fast\_settling\_get()}}
+{\footnotesize\ttfamily \label{group___l_s_m6_d_s_o32__filters_ga71113dbdd8fc1ab2f625ec8404a768d8} 
+int32\+\_\+t lsm6dso32\+\_\+xl\+\_\+fast\+\_\+settling\+\_\+get (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx}{, }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{val}{}\end{DoxyParamCaption})}
+
+
+
+Enables accelerometer LPF2 and HPF fast-\/settling mode. The filter sets the second samples after writing this bit. Active only during device exit from power-\/down mode.\+[get]\+. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read /\+ write interface definitions \\
+\hline
+{\em val} & change the values of fastsettl\+\_\+mode\+\_\+xl in reg CTRL8\+\_\+\+XL \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY:\+ return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group___l_s_m6_d_s_o32__filters_ga27231b073216f8b1ee965221d49d5144}\index{LSM6DSO32\_filters@{LSM6DSO32\_filters}!lsm6dso32\_xl\_fast\_settling\_set@{lsm6dso32\_xl\_fast\_settling\_set}}
+\index{lsm6dso32\_xl\_fast\_settling\_set@{lsm6dso32\_xl\_fast\_settling\_set}!LSM6DSO32\_filters@{LSM6DSO32\_filters}}
+\doxysubsubsection{\texorpdfstring{lsm6dso32\_xl\_fast\_settling\_set()}{lsm6dso32\_xl\_fast\_settling\_set()}}
+{\footnotesize\ttfamily \label{group___l_s_m6_d_s_o32__filters_ga27231b073216f8b1ee965221d49d5144} 
+int32\+\_\+t lsm6dso32\+\_\+xl\+\_\+fast\+\_\+settling\+\_\+set (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx}{, }\item[{uint8\+\_\+t}]{val}{}\end{DoxyParamCaption})}
+
+
+
+Enables accelerometer LPF2 and HPF fast-\/settling mode. The filter sets the second samples after writing this bit. Active only during device exit from power-\/down mode.\+[set]\+. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read /\+ write interface definitions \\
+\hline
+{\em val} & change the values of fastsettl\+\_\+mode\+\_\+xl in reg CTRL8\+\_\+\+XL \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY:\+ return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group___l_s_m6_d_s_o32__filters_gae62da4e4888932894de3b5ef9b986fe7}\index{LSM6DSO32\_filters@{LSM6DSO32\_filters}!lsm6dso32\_xl\_filter\_lp2\_get@{lsm6dso32\_xl\_filter\_lp2\_get}}
+\index{lsm6dso32\_xl\_filter\_lp2\_get@{lsm6dso32\_xl\_filter\_lp2\_get}!LSM6DSO32\_filters@{LSM6DSO32\_filters}}
+\doxysubsubsection{\texorpdfstring{lsm6dso32\_xl\_filter\_lp2\_get()}{lsm6dso32\_xl\_filter\_lp2\_get()}}
+{\footnotesize\ttfamily \label{group___l_s_m6_d_s_o32__filters_gae62da4e4888932894de3b5ef9b986fe7} 
+int32\+\_\+t lsm6dso32\+\_\+xl\+\_\+filter\+\_\+lp2\+\_\+get (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx}{, }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{val}{}\end{DoxyParamCaption})}
+
+
+
+Accelerometer output from LPF2 filtering stage selection.\+[get]\+. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read /\+ write interface definitions \\
+\hline
+{\em val} & change the values of lpf2\+\_\+xl\+\_\+en in reg CTRL1\+\_\+\+XL \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY:\+ return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group___l_s_m6_d_s_o32__filters_ga361aff959e0dd5c7733ff03ad4c9b56d}\index{LSM6DSO32\_filters@{LSM6DSO32\_filters}!lsm6dso32\_xl\_filter\_lp2\_set@{lsm6dso32\_xl\_filter\_lp2\_set}}
+\index{lsm6dso32\_xl\_filter\_lp2\_set@{lsm6dso32\_xl\_filter\_lp2\_set}!LSM6DSO32\_filters@{LSM6DSO32\_filters}}
+\doxysubsubsection{\texorpdfstring{lsm6dso32\_xl\_filter\_lp2\_set()}{lsm6dso32\_xl\_filter\_lp2\_set()}}
+{\footnotesize\ttfamily \label{group___l_s_m6_d_s_o32__filters_ga361aff959e0dd5c7733ff03ad4c9b56d} 
+int32\+\_\+t lsm6dso32\+\_\+xl\+\_\+filter\+\_\+lp2\+\_\+set (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx}{, }\item[{uint8\+\_\+t}]{val}{}\end{DoxyParamCaption})}
+
+
+
+Accelerometer output from LPF2 filtering stage selection.\+[set]\+. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read /\+ write interface definitions \\
+\hline
+{\em val} & change the values of lpf2\+\_\+xl\+\_\+en in reg CTRL1\+\_\+\+XL \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY:\+ return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group___l_s_m6_d_s_o32__filters_gaf806a3f1d4cb2f3de6764f97fad24aca}\index{LSM6DSO32\_filters@{LSM6DSO32\_filters}!lsm6dso32\_xl\_hp\_path\_internal\_get@{lsm6dso32\_xl\_hp\_path\_internal\_get}}
+\index{lsm6dso32\_xl\_hp\_path\_internal\_get@{lsm6dso32\_xl\_hp\_path\_internal\_get}!LSM6DSO32\_filters@{LSM6DSO32\_filters}}
+\doxysubsubsection{\texorpdfstring{lsm6dso32\_xl\_hp\_path\_internal\_get()}{lsm6dso32\_xl\_hp\_path\_internal\_get()}}
+{\footnotesize\ttfamily \label{group___l_s_m6_d_s_o32__filters_gaf806a3f1d4cb2f3de6764f97fad24aca} 
+int32\+\_\+t lsm6dso32\+\_\+xl\+\_\+hp\+\_\+path\+\_\+internal\+\_\+get (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx}{, }\item[{lsm6dso32\+\_\+slope\+\_\+fds\+\_\+t \texorpdfstring{$\ast$}{*}}]{val}{}\end{DoxyParamCaption})}
+
+
+
+HPF or SLOPE filter selection on wake-\/up and Activity/\+\+Inactivity functions.\+[get]\+. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read /\+ write interface definitions \\
+\hline
+{\em val} & Get the values of slope\+\_\+fds in reg TAP\+\_\+\+CFG0 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY:\+ return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group___l_s_m6_d_s_o32__filters_ga3a804c4dc41a2e58fd13c3773c7b9329}\index{LSM6DSO32\_filters@{LSM6DSO32\_filters}!lsm6dso32\_xl\_hp\_path\_internal\_set@{lsm6dso32\_xl\_hp\_path\_internal\_set}}
+\index{lsm6dso32\_xl\_hp\_path\_internal\_set@{lsm6dso32\_xl\_hp\_path\_internal\_set}!LSM6DSO32\_filters@{LSM6DSO32\_filters}}
+\doxysubsubsection{\texorpdfstring{lsm6dso32\_xl\_hp\_path\_internal\_set()}{lsm6dso32\_xl\_hp\_path\_internal\_set()}}
+{\footnotesize\ttfamily \label{group___l_s_m6_d_s_o32__filters_ga3a804c4dc41a2e58fd13c3773c7b9329} 
+int32\+\_\+t lsm6dso32\+\_\+xl\+\_\+hp\+\_\+path\+\_\+internal\+\_\+set (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx}{, }\item[{lsm6dso32\+\_\+slope\+\_\+fds\+\_\+t}]{val}{}\end{DoxyParamCaption})}
+
+
+
+HPF or SLOPE filter selection on wake-\/up and Activity/\+\+Inactivity functions.\+[set]\+. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read /\+ write interface definitions \\
+\hline
+{\em val} & change the values of slope\+\_\+fds in reg TAP\+\_\+\+CFG0 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY:\+ return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group___l_s_m6_d_s_o32__filters_ga5ff3f3e6479f00a51e143d6ff15d3b0c}\index{LSM6DSO32\_filters@{LSM6DSO32\_filters}!lsm6dso32\_xl\_hp\_path\_on\_out\_get@{lsm6dso32\_xl\_hp\_path\_on\_out\_get}}
+\index{lsm6dso32\_xl\_hp\_path\_on\_out\_get@{lsm6dso32\_xl\_hp\_path\_on\_out\_get}!LSM6DSO32\_filters@{LSM6DSO32\_filters}}
+\doxysubsubsection{\texorpdfstring{lsm6dso32\_xl\_hp\_path\_on\_out\_get()}{lsm6dso32\_xl\_hp\_path\_on\_out\_get()}}
+{\footnotesize\ttfamily \label{group___l_s_m6_d_s_o32__filters_ga5ff3f3e6479f00a51e143d6ff15d3b0c} 
+int32\+\_\+t lsm6dso32\+\_\+xl\+\_\+hp\+\_\+path\+\_\+on\+\_\+out\+\_\+get (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx}{, }\item[{lsm6dso32\+\_\+hp\+\_\+slope\+\_\+xl\+\_\+en\+\_\+t \texorpdfstring{$\ast$}{*}}]{val}{}\end{DoxyParamCaption})}
+
+
+
+Accelerometer slope filter /\+ high-\/pass filter selection on output.\+[get]\+. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read /\+ write interface definitions \\
+\hline
+{\em val} & Get the values of hp\+\_\+slope\+\_\+xl\+\_\+en in reg CTRL8\+\_\+\+XL \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY:\+ return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group___l_s_m6_d_s_o32__filters_gad861011d6751502f7e9b9a1aa8ee6fde}\index{LSM6DSO32\_filters@{LSM6DSO32\_filters}!lsm6dso32\_xl\_hp\_path\_on\_out\_set@{lsm6dso32\_xl\_hp\_path\_on\_out\_set}}
+\index{lsm6dso32\_xl\_hp\_path\_on\_out\_set@{lsm6dso32\_xl\_hp\_path\_on\_out\_set}!LSM6DSO32\_filters@{LSM6DSO32\_filters}}
+\doxysubsubsection{\texorpdfstring{lsm6dso32\_xl\_hp\_path\_on\_out\_set()}{lsm6dso32\_xl\_hp\_path\_on\_out\_set()}}
+{\footnotesize\ttfamily \label{group___l_s_m6_d_s_o32__filters_gad861011d6751502f7e9b9a1aa8ee6fde} 
+int32\+\_\+t lsm6dso32\+\_\+xl\+\_\+hp\+\_\+path\+\_\+on\+\_\+out\+\_\+set (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx}{, }\item[{lsm6dso32\+\_\+hp\+\_\+slope\+\_\+xl\+\_\+en\+\_\+t}]{val}{}\end{DoxyParamCaption})}
+
+
+
+Accelerometer slope filter /\+ high-\/pass filter selection on output.\+[set]\+. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read /\+ write interface definitions \\
+\hline
+{\em val} & change the values of hp\+\_\+slope\+\_\+xl\+\_\+en in reg CTRL8\+\_\+\+XL \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY:\+ return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group___l_s_m6_d_s_o32__filters_gabdb429015778d538564ad411d172ca07}\index{LSM6DSO32\_filters@{LSM6DSO32\_filters}!lsm6dso32\_xl\_lp2\_on\_6d\_get@{lsm6dso32\_xl\_lp2\_on\_6d\_get}}
+\index{lsm6dso32\_xl\_lp2\_on\_6d\_get@{lsm6dso32\_xl\_lp2\_on\_6d\_get}!LSM6DSO32\_filters@{LSM6DSO32\_filters}}
+\doxysubsubsection{\texorpdfstring{lsm6dso32\_xl\_lp2\_on\_6d\_get()}{lsm6dso32\_xl\_lp2\_on\_6d\_get()}}
+{\footnotesize\ttfamily \label{group___l_s_m6_d_s_o32__filters_gabdb429015778d538564ad411d172ca07} 
+int32\+\_\+t lsm6dso32\+\_\+xl\+\_\+lp2\+\_\+on\+\_\+6d\+\_\+get (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx}{, }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{val}{}\end{DoxyParamCaption})}
+
+
+
+Low pass filter 2 on 6D function selection.\+[get]\+. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read /\+ write interface definitions \\
+\hline
+{\em val} & change the values of low\+\_\+pass\+\_\+on\+\_\+6d in reg CTRL8\+\_\+\+XL \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY:\+ return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group___l_s_m6_d_s_o32__filters_gaba08daad7acf03b6853ae0b21aef462a}\index{LSM6DSO32\_filters@{LSM6DSO32\_filters}!lsm6dso32\_xl\_lp2\_on\_6d\_set@{lsm6dso32\_xl\_lp2\_on\_6d\_set}}
+\index{lsm6dso32\_xl\_lp2\_on\_6d\_set@{lsm6dso32\_xl\_lp2\_on\_6d\_set}!LSM6DSO32\_filters@{LSM6DSO32\_filters}}
+\doxysubsubsection{\texorpdfstring{lsm6dso32\_xl\_lp2\_on\_6d\_set()}{lsm6dso32\_xl\_lp2\_on\_6d\_set()}}
+{\footnotesize\ttfamily \label{group___l_s_m6_d_s_o32__filters_gaba08daad7acf03b6853ae0b21aef462a} 
+int32\+\_\+t lsm6dso32\+\_\+xl\+\_\+lp2\+\_\+on\+\_\+6d\+\_\+set (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx}{, }\item[{uint8\+\_\+t}]{val}{}\end{DoxyParamCaption})}
+
+
+
+Low pass filter 2 on 6D function selection.\+[set]\+. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read /\+ write interface definitions \\
+\hline
+{\em val} & change the values of low\+\_\+pass\+\_\+on\+\_\+6d in reg CTRL8\+\_\+\+XL \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY:\+ return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}

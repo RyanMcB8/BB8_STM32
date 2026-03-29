@@ -1,0 +1,102 @@
+\doxysection{app\+\_\+common.\+h}
+\hypertarget{app__common_8h_source}{}\label{app__common_8h_source}\index{C:/Users/ryanm/Documents/DesignGroup/BB8\_STM32/Firmware/Core/Inc/app\_common.h@{C:/Users/ryanm/Documents/DesignGroup/BB8\_STM32/Firmware/Core/Inc/app\_common.h}}
+\doxymbox{\hyperlink{app__common_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ Header\ */}}
+\DoxyCodeLine{00019\ \textcolor{comment}{/*\ USER\ CODE\ END\ Header\ */}}
+\DoxyCodeLine{00020\ \textcolor{comment}{/*\ Define\ to\ prevent\ recursive\ inclusion\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#ifndef\ APP\_COMMON\_H}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#define\ APP\_COMMON\_H}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00025\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}\{}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ <string.h>}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#include\ <stdlib.h>}}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#include\ <stdarg.h>}}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{app__conf_8h}{app\_conf.h}}"{}}}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{comment}{/*\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ *}}
+\DoxyCodeLine{00037\ \textcolor{comment}{\ *\ \ Basic\ definitions\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ *}}
+\DoxyCodeLine{00038\ \textcolor{comment}{\ *\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{\#undef\ NULL}}
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#define\ NULL\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0}}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \textcolor{preprocessor}{\#undef\ FALSE}}
+\DoxyCodeLine{00043\ \textcolor{preprocessor}{\#define\ FALSE\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0}}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \textcolor{preprocessor}{\#undef\ TRUE}}
+\DoxyCodeLine{00046\ \textcolor{preprocessor}{\#define\ TRUE\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (!0)}}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \textcolor{comment}{/*\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ *}}
+\DoxyCodeLine{00049\ \textcolor{comment}{\ *\ \ Critical\ Section\ definition\ \ \ \ \ *}}
+\DoxyCodeLine{00050\ \textcolor{comment}{\ *\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{00051\ \textcolor{preprocessor}{\#define\ BACKUP\_PRIMASK()\ \ \ \ uint32\_t\ primask\_bit=\ \_\_get\_PRIMASK()}}
+\DoxyCodeLine{00052\ \textcolor{preprocessor}{\#define\ DISABLE\_IRQ()\ \ \ \ \ \ \ \_\_disable\_irq()}}
+\DoxyCodeLine{00053\ \textcolor{preprocessor}{\#define\ RESTORE\_PRIMASK()\ \ \ \_\_set\_PRIMASK(primask\_bit)}}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \textcolor{comment}{/*\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ *}}
+\DoxyCodeLine{00056\ \textcolor{comment}{\ *\ \ Macro\ delimiters\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ *}}
+\DoxyCodeLine{00057\ \textcolor{comment}{\ *\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{00058\ \textcolor{preprocessor}{\#define\ M\_BEGIN\ \ \ \ \ do\ \{}}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \textcolor{preprocessor}{\#define\ M\_END\ \ \ \ \ \ \ \}\ while(0)}}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \textcolor{comment}{/*\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ *}}
+\DoxyCodeLine{00063\ \textcolor{comment}{\ *\ \ Some\ useful\ macro\ definitions\ \ \ *}}
+\DoxyCodeLine{00064\ \textcolor{comment}{\ *\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{00065\ \textcolor{preprocessor}{\#ifndef\ MAX}}
+\DoxyCodeLine{00066\ \textcolor{preprocessor}{\#define\ MAX(\ x,\ y\ )\ \ \ \ \ \ \ \ \ \ (((x)>(y))?(x):(y))}}
+\DoxyCodeLine{00067\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \textcolor{preprocessor}{\#ifndef\ MIN}}
+\DoxyCodeLine{00070\ \textcolor{preprocessor}{\#define\ MIN(\ x,\ y\ )\ \ \ \ \ \ \ \ \ \ (((x)<(y))?(x):(y))}}
+\DoxyCodeLine{00071\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \textcolor{preprocessor}{\#define\ MODINC(\ a,\ m\ )\ \ \ \ \ \ \ M\_BEGIN\ \ (a)++;\ \ if\ ((a)>=(m))\ (a)=0;\ \ M\_END}}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \textcolor{preprocessor}{\#define\ MODDEC(\ a,\ m\ )\ \ \ \ \ \ \ M\_BEGIN\ \ if\ ((a)==0)\ (a)=(m);\ \ (a)-\/-\/;\ \ M\_END}}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \textcolor{preprocessor}{\#define\ MODADD(\ a,\ b,\ m\ )\ \ \ \ M\_BEGIN\ \ (a)+=(b);\ \ if\ ((a)>=(m))\ (a)-\/=(m);\ \ M\_END}}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \textcolor{preprocessor}{\#define\ MODSUB(\ a,\ b,\ m\ )\ \ \ \ MODADD(\ a,\ (m)-\/(b),\ m\ )}}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ \textcolor{preprocessor}{\#define\ PAUSE(\ t\ )\ \ \ \ \ \ \ \ \ \ \ M\_BEGIN\ \(\backslash\)}}
+\DoxyCodeLine{00082\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\_IO\ int\ \_i;\ \(\backslash\)}}
+\DoxyCodeLine{00083\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ for\ (\ \_i\ =\ t;\ \_i\ >\ 0;\ \_i\ -\/-\/\ );\ \(\backslash\)}}
+\DoxyCodeLine{00084\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ M\_END}}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \textcolor{preprocessor}{\#define\ DIVF(\ x,\ y\ )\ \ \ \ \ \ \ \ \ ((x)/(y))}}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ \textcolor{preprocessor}{\#define\ DIVC(\ x,\ y\ )\ \ \ \ \ \ \ \ \ (((x)+(y)-\/1)/(y))}}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00090\ \textcolor{preprocessor}{\#define\ DIVR(\ x,\ y\ )\ \ \ \ \ \ \ \ \ (((x)+((y)/2))/(y))}}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00092\ \textcolor{preprocessor}{\#define\ SHRR(\ x,\ n\ )\ \ \ \ \ \ \ \ \ ((((x)>>((n)-\/1))+1)>>1)}}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00094\ \textcolor{preprocessor}{\#define\ BITN(\ w,\ n\ )\ \ \ \ \ \ \ \ \ (((w)[(n)/32]\ >>\ ((n)\%32))\ \&\ 1)}}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00096\ \textcolor{preprocessor}{\#define\ BITNSET(\ w,\ n,\ b\ )\ \ \ M\_BEGIN\ (w)[(n)/32]\ |=\ ((U32)(b))<<((n)\%32);\ M\_END}}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00098\ \textcolor{comment}{/*\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ *}}
+\DoxyCodeLine{00099\ \textcolor{comment}{\ *\ \ Compiler\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ *}}
+\DoxyCodeLine{00100\ \textcolor{comment}{\ *\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{00101\ \textcolor{preprocessor}{\#define\ PLACE\_IN\_SECTION(\ \_\_x\_\_\ )\ \ \_\_attribute\_\_((section\ (\_\_x\_\_)))}}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00103\ \textcolor{preprocessor}{\#ifdef\ WIN32}}
+\DoxyCodeLine{00104\ \textcolor{preprocessor}{\#define\ ALIGN(n)}}
+\DoxyCodeLine{00105\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00106\ \textcolor{preprocessor}{\#define\ ALIGN(n)\ \ \ \ \ \ \ \ \ \ \ \ \ \_\_attribute\_\_((aligned(n)))}}
+\DoxyCodeLine{00107\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00109\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00110\ \}\ \textcolor{comment}{/*\ extern\ "{}C"{}\ */}}
+\DoxyCodeLine{00111\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00113\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*APP\_COMMON\_H\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

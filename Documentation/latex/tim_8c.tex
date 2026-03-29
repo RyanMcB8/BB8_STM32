@@ -1,0 +1,60 @@
+\doxysection{C:\+/\+\+Users/\+ryanm/\+\+Documents/\+\+Design\+Group/\+\+BB8\+\_\+\+STM32/\+\+Firmware/\+\+Core/\+\+Src/\+tim.c File Reference}
+\hypertarget{tim_8c}{}\label{tim_8c}\index{C:/Users/ryanm/Documents/DesignGroup/BB8\_STM32/Firmware/Core/Src/tim.c@{C:/Users/ryanm/Documents/DesignGroup/BB8\_STM32/Firmware/Core/Src/tim.c}}
+
+
+This file provides code for the configuration of the TIM instances.  
+
+
+{\ttfamily \+\#include "{}tim.\+h"{}}\newline
+Include dependency graph for tim.\+c:\+
+% FIG 0
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{tim_8c_ad1f9d42690163f73f73e5b820c81ca14}\label{tim_8c_ad1f9d42690163f73f73e5b820c81ca14} 
+void {\bfseries MX\+\_\+\+TIM1\+\_\+\+Init} (void)
+\item 
+\Hypertarget{tim_8c_a4b8ff887fd3fdf26605e35927e4ff202}\label{tim_8c_a4b8ff887fd3fdf26605e35927e4ff202} 
+void {\bfseries MX\+\_\+\+TIM2\+\_\+\+Init} (void)
+\item 
+\Hypertarget{tim_8c_a59716af159bfbbb6023b31354fb23af8}\label{tim_8c_a59716af159bfbbb6023b31354fb23af8} 
+void {\bfseries HAL\+\_\+\+TIM\+\_\+\+Base\+\_\+\+Msp\+Init} (TIM\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}tim\+\_\+base\+Handle)
+\item 
+void \doxymbox{\hyperlink{tim_8c_a708f19bbc41b292fccf38f2d9796c46a}{HAL\+\_\+\+TIM\+\_\+\+Msp\+Post\+Init}} (TIM\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}tim\+Handle)
+\item 
+\Hypertarget{tim_8c_adee8ed7d3ebb3a217c27ac10af86ce2f}\label{tim_8c_adee8ed7d3ebb3a217c27ac10af86ce2f} 
+void {\bfseries HAL\+\_\+\+TIM\+\_\+\+Base\+\_\+\+Msp\+De\+Init} (TIM\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}tim\+\_\+base\+Handle)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{tim_8c_a25fc663547539bc49fecc0011bd76ab5}\label{tim_8c_a25fc663547539bc49fecc0011bd76ab5} 
+TIM\+\_\+\+Handle\+Type\+Def {\bfseries htim1}
+\item 
+\Hypertarget{tim_8c_a2c80fd5510e2990a59a5c90d745c716c}\label{tim_8c_a2c80fd5510e2990a59a5c90d745c716c} 
+TIM\+\_\+\+Handle\+Type\+Def {\bfseries htim2}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file provides code for the configuration of the TIM instances. 
+
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+Copyright (c) 2026 STMicroelectronics. All rights reserved.
+
+This software is licensed under terms that can be found in the LICENSE file in the root directory of this software component. If no LICENSE file comes with this software, it is provided AS-\/\+IS. 
+
+\label{doc-func-members}
+\Hypertarget{tim_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{tim_8c_a708f19bbc41b292fccf38f2d9796c46a}\index{tim.c@{tim.c}!HAL\_TIM\_MspPostInit@{HAL\_TIM\_MspPostInit}}
+\index{HAL\_TIM\_MspPostInit@{HAL\_TIM\_MspPostInit}!tim.c@{tim.c}}
+\doxysubsubsection{\texorpdfstring{HAL\_TIM\_MspPostInit()}{HAL\_TIM\_MspPostInit()}}
+{\footnotesize\ttfamily \label{tim_8c_a708f19bbc41b292fccf38f2d9796c46a} 
+void HAL\+\_\+\+TIM\+\_\+\+Msp\+Post\+Init (\begin{DoxyParamCaption}\item[{TIM\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}}]{tim\+Handle}{}\end{DoxyParamCaption})}
+
+TIM1 GPIO Configuration PA11 -\/-\/-\/-\/-\/-\/\texorpdfstring{$>$}{>} TIM1\+\_\+\+CH4
+
+TIM2 GPIO Configuration PA0 -\/-\/-\/-\/-\/-\/\texorpdfstring{$>$}{>} TIM2\+\_\+\+CH1

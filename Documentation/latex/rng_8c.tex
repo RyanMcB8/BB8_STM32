@@ -1,0 +1,49 @@
+\doxysection{C:\+/\+\+Users/\+ryanm/\+\+Documents/\+\+Design\+Group/\+\+BB8\+\_\+\+STM32/\+\+Firmware/\+\+Core/\+\+Src/\+rng.c File Reference}
+\hypertarget{rng_8c}{}\label{rng_8c}\index{C:/Users/ryanm/Documents/DesignGroup/BB8\_STM32/Firmware/Core/Src/rng.c@{C:/Users/ryanm/Documents/DesignGroup/BB8\_STM32/Firmware/Core/Src/rng.c}}
+
+
+This file provides code for the configuration of the RNG instances.  
+
+
+{\ttfamily \+\#include "{}rng.\+h"{}}\newline
+Include dependency graph for rng.\+c:\+
+% FIG 0
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{rng_8c_a5d8378b18a5f83ad6ab8281b5e390604}\label{rng_8c_a5d8378b18a5f83ad6ab8281b5e390604} 
+void {\bfseries MX\+\_\+\+RNG\+\_\+\+Init} (void)
+\item 
+void \doxymbox{\hyperlink{rng_8c_a128ee913b1860fb5af48e2dfad960c15}{HAL\+\_\+\+RNG\+\_\+\+Msp\+Init}} (RNG\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}rng\+Handle)
+\item 
+\Hypertarget{rng_8c_a166b16a91025a4a254c4e42df6699a9f}\label{rng_8c_a166b16a91025a4a254c4e42df6699a9f} 
+void {\bfseries HAL\+\_\+\+RNG\+\_\+\+Msp\+De\+Init} (RNG\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}rng\+Handle)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{rng_8c_aac2dceb5bba58c53cf7a0be6934c4df6}\label{rng_8c_aac2dceb5bba58c53cf7a0be6934c4df6} 
+RNG\+\_\+\+Handle\+Type\+Def {\bfseries hrng}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file provides code for the configuration of the RNG instances. 
+
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+Copyright (c) 2026 STMicroelectronics. All rights reserved.
+
+This software is licensed under terms that can be found in the LICENSE file in the root directory of this software component. If no LICENSE file comes with this software, it is provided AS-\/\+IS. 
+
+\label{doc-func-members}
+\Hypertarget{rng_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{rng_8c_a128ee913b1860fb5af48e2dfad960c15}\index{rng.c@{rng.c}!HAL\_RNG\_MspInit@{HAL\_RNG\_MspInit}}
+\index{HAL\_RNG\_MspInit@{HAL\_RNG\_MspInit}!rng.c@{rng.c}}
+\doxysubsubsection{\texorpdfstring{HAL\_RNG\_MspInit()}{HAL\_RNG\_MspInit()}}
+{\footnotesize\ttfamily \label{rng_8c_a128ee913b1860fb5af48e2dfad960c15} 
+void HAL\+\_\+\+RNG\+\_\+\+Msp\+Init (\begin{DoxyParamCaption}\item[{RNG\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}}]{rng\+Handle}{}\end{DoxyParamCaption})}
+
+Initializes the peripherals clock

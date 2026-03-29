@@ -1,0 +1,109 @@
+\doxysection{C:\+/\+\+Users/\+ryanm/\+\+Documents/\+\+Design\+Group/\+\+BB8\+\_\+\+STM32/\+\+Firmware/\+\+Core/\+\+Src/\+hw\+\_\+uart.c File Reference}
+\hypertarget{hw__uart_8c}{}\label{hw__uart_8c}\index{C:/Users/ryanm/Documents/DesignGroup/BB8\_STM32/Firmware/Core/Src/hw\_uart.c@{C:/Users/ryanm/Documents/DesignGroup/BB8\_STM32/Firmware/Core/Src/hw\_uart.c}}
+
+
+HW UART source file for STM32\+WPAN Middleware.  
+
+
+{\ttfamily \+\#include "{}app\+\_\+common.\+h"{}}\newline
+{\ttfamily \+\#include "{}hw\+\_\+conf.\+h"{}}\newline
+Include dependency graph for hw\+\_\+uart.\+c:\+
+% FIG 0
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\+\#define \doxymbox{\hyperlink{hw__uart_8c_a95d5d5364431e8712abb16dc9cde7027}{HW\+\_\+\+UART\+\_\+\+RX\+\_\+\+IT}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+USART\+\_\+\+BASE\+\_\+\+\_\+)
+\item 
+\+\#define \doxymbox{\hyperlink{hw__uart_8c_accaf27d529baf8ac2b5e5a9520f705be}{HW\+\_\+\+UART\+\_\+\+TX\+\_\+\+IT}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+USART\+\_\+\+BASE\+\_\+\+\_\+)
+\item 
+\+\#define \doxymbox{\hyperlink{hw__uart_8c_a7b2344526687d9f42b773a6242084a20}{HW\+\_\+\+UART\+\_\+\+TX}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+USART\+\_\+\+BASE\+\_\+\+\_\+)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{hw__uart_8c_a6888f5fb891631fb6fde3defa5316422}\label{hw__uart_8c_a6888f5fb891631fb6fde3defa5316422} 
+void {\bfseries HW\+\_\+\+UART\+\_\+\+Receive\+\_\+\+IT} (hw\+\_\+uart\+\_\+id\+\_\+t hw\+\_\+uart\+\_\+id, uint8\+\_\+t \texorpdfstring{$\ast$}{*}p\+\_\+data, uint16\+\_\+t size, void(\texorpdfstring{$\ast$}{*}cb)(void))
+\item 
+\Hypertarget{hw__uart_8c_a0c5baad6f788b97d182ebf1fc8584542}\label{hw__uart_8c_a0c5baad6f788b97d182ebf1fc8584542} 
+void {\bfseries HW\+\_\+\+UART\+\_\+\+Transmit\+\_\+\+IT} (hw\+\_\+uart\+\_\+id\+\_\+t hw\+\_\+uart\+\_\+id, uint8\+\_\+t \texorpdfstring{$\ast$}{*}p\+\_\+data, uint16\+\_\+t size, void(\texorpdfstring{$\ast$}{*}cb)(void))
+\item 
+\Hypertarget{hw__uart_8c_a1c22e8482dedc51b6fbafa1234b8bc54}\label{hw__uart_8c_a1c22e8482dedc51b6fbafa1234b8bc54} 
+hw\+\_\+status\+\_\+t {\bfseries HW\+\_\+\+UART\+\_\+\+Transmit} (hw\+\_\+uart\+\_\+id\+\_\+t hw\+\_\+uart\+\_\+id, uint8\+\_\+t \texorpdfstring{$\ast$}{*}p\+\_\+data, uint16\+\_\+t size, uint32\+\_\+t timeout)
+\item 
+\Hypertarget{hw__uart_8c_a8e04b1a82d083e02626f4530db5643cf}\label{hw__uart_8c_a8e04b1a82d083e02626f4530db5643cf} 
+hw\+\_\+status\+\_\+t {\bfseries HW\+\_\+\+UART\+\_\+\+Transmit\+\_\+\+DMA} (hw\+\_\+uart\+\_\+id\+\_\+t hw\+\_\+uart\+\_\+id, uint8\+\_\+t \texorpdfstring{$\ast$}{*}p\+\_\+data, uint16\+\_\+t size, void(\texorpdfstring{$\ast$}{*}cb)(void))
+\item 
+\Hypertarget{hw__uart_8c_a45979c1d0a6913bcc8ce2820aa0d47af}\label{hw__uart_8c_a45979c1d0a6913bcc8ce2820aa0d47af} 
+void {\bfseries HW\+\_\+\+UART\+\_\+\+Interrupt\+\_\+\+Handler} (hw\+\_\+uart\+\_\+id\+\_\+t hw\+\_\+uart\+\_\+id)
+\item 
+\Hypertarget{hw__uart_8c_a498a1ac1637012d0b3b4c74b1f3b212c}\label{hw__uart_8c_a498a1ac1637012d0b3b4c74b1f3b212c} 
+void {\bfseries HW\+\_\+\+UART\+\_\+\+DMA\+\_\+\+Interrupt\+\_\+\+Handler} (hw\+\_\+uart\+\_\+id\+\_\+t hw\+\_\+uart\+\_\+id)
+\item 
+\Hypertarget{hw__uart_8c_ae494a9643f29b87d6d81e5264e60e57b}\label{hw__uart_8c_ae494a9643f29b87d6d81e5264e60e57b} 
+void {\bfseries HAL\+\_\+\+UART\+\_\+\+Rx\+Cplt\+Callback} (UART\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}huart)
+\item 
+\Hypertarget{hw__uart_8c_abcdf9b59049eccbc87d54042f9235b1a}\label{hw__uart_8c_abcdf9b59049eccbc87d54042f9235b1a} 
+void {\bfseries HAL\+\_\+\+UART\+\_\+\+Tx\+Cplt\+Callback} (UART\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}huart)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+HW UART source file for STM32\+WPAN Middleware. 
+
+\begin{DoxyAuthor}{Author}
+MCD Application Team 
+\end{DoxyAuthor}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+Copyright (c) 2026 STMicroelectronics. All rights reserved.
+
+This software is licensed under terms that can be found in the LICENSE file in the root directory of this software component. If no LICENSE file comes with this software, it is provided AS-\/\+IS. 
+
+\label{doc-define-members}
+\Hypertarget{hw__uart_8c_doc-define-members}
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{hw__uart_8c_a95d5d5364431e8712abb16dc9cde7027}\index{hw\_uart.c@{hw\_uart.c}!HW\_UART\_RX\_IT@{HW\_UART\_RX\_IT}}
+\index{HW\_UART\_RX\_IT@{HW\_UART\_RX\_IT}!hw\_uart.c@{hw\_uart.c}}
+\doxysubsubsection{\texorpdfstring{HW\_UART\_RX\_IT}{HW\_UART\_RX\_IT}}
+{\footnotesize\ttfamily \label{hw__uart_8c_a95d5d5364431e8712abb16dc9cde7027} 
+\+\#define HW\+\_\+\+UART\+\_\+\+RX\+\_\+\+IT(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+}{, }\item[{}]{\+\_\+\+\_\+\+USART\+\_\+\+BASE\+\_\+\+\_\+}{}\end{DoxyParamCaption})}
+
+{\bfseries Value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{do}\{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ HW\_\#\#\_\_HANDLE\_\_\#\#RxCb\ =\ cb;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ (\_\_HANDLE\_\_).Instance\ =\ (\_\_USART\_BASE\_\_);\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ HAL\_UART\_Receive\_IT(\&(\_\_HANDLE\_\_),\ p\_data,\ size);\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\}\ \textcolor{keywordflow}{while}(0)}
+
+\end{DoxyCode}
+\Hypertarget{hw__uart_8c_a7b2344526687d9f42b773a6242084a20}\index{hw\_uart.c@{hw\_uart.c}!HW\_UART\_TX@{HW\_UART\_TX}}
+\index{HW\_UART\_TX@{HW\_UART\_TX}!hw\_uart.c@{hw\_uart.c}}
+\doxysubsubsection{\texorpdfstring{HW\_UART\_TX}{HW\_UART\_TX}}
+{\footnotesize\ttfamily \label{hw__uart_8c_a7b2344526687d9f42b773a6242084a20} 
+\+\#define HW\+\_\+\+UART\+\_\+\+TX(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+}{, }\item[{}]{\+\_\+\+\_\+\+USART\+\_\+\+BASE\+\_\+\+\_\+}{}\end{DoxyParamCaption})}
+
+{\bfseries Value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{do}\{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ (\_\_HANDLE\_\_).Instance\ =\ (\_\_USART\_BASE\_\_);\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ hal\_status\ =\ HAL\_UART\_Transmit(\&(\_\_HANDLE\_\_),\ p\_data,\ size,\ timeout);\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\}\ \textcolor{keywordflow}{while}(0)}
+
+\end{DoxyCode}
+\Hypertarget{hw__uart_8c_accaf27d529baf8ac2b5e5a9520f705be}\index{hw\_uart.c@{hw\_uart.c}!HW\_UART\_TX\_IT@{HW\_UART\_TX\_IT}}
+\index{HW\_UART\_TX\_IT@{HW\_UART\_TX\_IT}!hw\_uart.c@{hw\_uart.c}}
+\doxysubsubsection{\texorpdfstring{HW\_UART\_TX\_IT}{HW\_UART\_TX\_IT}}
+{\footnotesize\ttfamily \label{hw__uart_8c_accaf27d529baf8ac2b5e5a9520f705be} 
+\+\#define HW\+\_\+\+UART\+\_\+\+TX\+\_\+\+IT(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+}{, }\item[{}]{\+\_\+\+\_\+\+USART\+\_\+\+BASE\+\_\+\+\_\+}{}\end{DoxyParamCaption})}
+
+{\bfseries Value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{do}\{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ HW\_\#\#\_\_HANDLE\_\_\#\#TxCb\ =\ cb;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ (\_\_HANDLE\_\_).Instance\ =\ (\_\_USART\_BASE\_\_);\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ HAL\_UART\_Transmit\_IT(\&(\_\_HANDLE\_\_),\ p\_data,\ size);\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\}\ \textcolor{keywordflow}{while}(0)}
+
+\end{DoxyCode}

@@ -1,0 +1,119 @@
+\doxysection{hw\+\_\+if.\+h}
+\hypertarget{hw__if_8h_source}{}\label{hw__if_8h_source}\index{C:/Users/ryanm/Documents/DesignGroup/BB8\_STM32/Firmware/Core/Inc/hw\_if.h@{C:/Users/ryanm/Documents/DesignGroup/BB8\_STM32/Firmware/Core/Inc/hw\_if.h}}
+\doxymbox{\hyperlink{hw__if_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ Header\ */}}
+\DoxyCodeLine{00019\ \textcolor{comment}{/*\ USER\ CODE\ END\ Header\ */}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{comment}{/*\ Define\ to\ prevent\ recursive\ inclusion\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#ifndef\ HW\_IF\_H}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#define\ HW\_IF\_H}}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00026\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}\ \{}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \textcolor{comment}{/*\ Includes\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#include\ "{}stm32wbxx.h"{}}}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#include\ "{}stm32wbxx\_ll\_exti.h"{}}}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#include\ "{}stm32wbxx\_ll\_system.h"{}}}
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#include\ "{}stm32wbxx\_ll\_rcc.h"{}}}
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#include\ "{}stm32wbxx\_ll\_ipcc.h"{}}}
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#include\ "{}stm32wbxx\_ll\_bus.h"{}}}
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#include\ "{}stm32wbxx\_ll\_pwr.h"{}}}
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#include\ "{}stm32wbxx\_ll\_cortex.h"{}}}
+\DoxyCodeLine{00038\ \textcolor{preprocessor}{\#include\ "{}stm32wbxx\_ll\_utils.h"{}}}
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{\#include\ "{}stm32wbxx\_ll\_hsem.h"{}}}
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#include\ "{}stm32wbxx\_ll\_gpio.h"{}}}
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#include\ "{}stm32wbxx\_ll\_rtc.h"{}}}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \textcolor{preprocessor}{\#ifdef\ \ USE\_STM32WBXX\_USB\_DONGLE}}
+\DoxyCodeLine{00044\ \textcolor{preprocessor}{\#include\ "{}stm32wbxx\_usb\_dongle.h"{}}}
+\DoxyCodeLine{00045\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00046\ \textcolor{preprocessor}{\#ifdef\ \ USE\_STM32WBXX\_NUCLEO}}
+\DoxyCodeLine{00047\ \textcolor{preprocessor}{\#include\ "{}stm32wbxx\_nucleo.h"{}}}
+\DoxyCodeLine{00048\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00049\ \textcolor{preprocessor}{\#ifdef\ \ USE\_X\_NUCLEO\_EPD}}
+\DoxyCodeLine{00050\ \textcolor{preprocessor}{\#include\ "{}x\_nucleo\_epd.h"{}}}
+\DoxyCodeLine{00051\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \textcolor{comment}{/*\ Private\ includes\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00054\ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ Includes\ */}}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \textcolor{comment}{/*\ USER\ CODE\ END\ Includes\ */}}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \textcolor{comment}{\ \ /******************************************************************************}}
+\DoxyCodeLine{00059\ \textcolor{comment}{\ \ \ *\ HW\ UART}}
+\DoxyCodeLine{00060\ \textcolor{comment}{\ \ \ ******************************************************************************/}}
+\DoxyCodeLine{00061\ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00062\ \ \ \{}
+\DoxyCodeLine{00063\ \ \ \ \ hw\_uart1,}
+\DoxyCodeLine{00064\ \ \ \ \ hw\_uart2,}
+\DoxyCodeLine{00065\ \ \ \ \ hw\_lpuart1,}
+\DoxyCodeLine{00066\ \ \ \}\ hw\_uart\_id\_t;}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00069\ \ \ \{}
+\DoxyCodeLine{00070\ \ \ \ \ hw\_uart\_ok,}
+\DoxyCodeLine{00071\ \ \ \ \ hw\_uart\_error,}
+\DoxyCodeLine{00072\ \ \ \ \ hw\_uart\_busy,}
+\DoxyCodeLine{00073\ \ \ \ \ hw\_uart\_to,}
+\DoxyCodeLine{00074\ \ \ \}\ hw\_status\_t;}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \ \ \textcolor{keywordtype}{void}\ HW\_UART\_Init(hw\_uart\_id\_t\ hw\_uart\_id);}
+\DoxyCodeLine{00077\ \ \ \textcolor{keywordtype}{void}\ HW\_UART\_Receive\_IT(hw\_uart\_id\_t\ hw\_uart\_id,\ uint8\_t\ *pData,\ uint16\_t\ Size,\ \textcolor{keywordtype}{void}\ (*Callback)(\textcolor{keywordtype}{void}));}
+\DoxyCodeLine{00078\ \ \ \textcolor{keywordtype}{void}\ HW\_UART\_Transmit\_IT(hw\_uart\_id\_t\ hw\_uart\_id,\ uint8\_t\ *pData,\ uint16\_t\ Size,\ \ \textcolor{keywordtype}{void}\ (*Callback)(\textcolor{keywordtype}{void}));}
+\DoxyCodeLine{00079\ \ \ hw\_status\_t\ HW\_UART\_Transmit(hw\_uart\_id\_t\ hw\_uart\_id,\ uint8\_t\ *p\_data,\ uint16\_t\ size,\ \ uint32\_t\ timeout);}
+\DoxyCodeLine{00080\ \ \ hw\_status\_t\ HW\_UART\_Transmit\_DMA(hw\_uart\_id\_t\ hw\_uart\_id,\ uint8\_t\ *p\_data,\ uint16\_t\ size,\ \textcolor{keywordtype}{void}\ (*Callback)(\textcolor{keywordtype}{void}));}
+\DoxyCodeLine{00081\ \ \ \textcolor{keywordtype}{void}\ HW\_UART\_Interrupt\_Handler(hw\_uart\_id\_t\ hw\_uart\_id);}
+\DoxyCodeLine{00082\ \ \ \textcolor{keywordtype}{void}\ HW\_UART\_DMA\_Interrupt\_Handler(hw\_uart\_id\_t\ hw\_uart\_id);}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \textcolor{comment}{\ \ /******************************************************************************}}
+\DoxyCodeLine{00085\ \textcolor{comment}{\ \ \ *\ HW\ TimerServer}}
+\DoxyCodeLine{00086\ \textcolor{comment}{\ \ \ ******************************************************************************/}}
+\DoxyCodeLine{00087\ \ \ \textcolor{comment}{/*\ Exported\ types\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00094\ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00095\ \ \ \{}
+\DoxyCodeLine{00096\ \ \ \ \ hw\_ts\_InitMode\_Full,}
+\DoxyCodeLine{00097\ \ \ \ \ hw\_ts\_InitMode\_Limited,}
+\DoxyCodeLine{00098\ \ \ \}\ \doxymbox{\hyperlink{hw__if_8h_abbb5103d2d21f00d5906cdb8b7742378}{HW\_TS\_InitMode\_t}};}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00106\ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00107\ \ \ \{}
+\DoxyCodeLine{00108\ \ \ \ \ hw\_ts\_SingleShot,}
+\DoxyCodeLine{00109\ \ \ \ \ hw\_ts\_Repeated}
+\DoxyCodeLine{00110\ \ \ \}\ \doxymbox{\hyperlink{hw__if_8h_ada8bd2cd1859456fee3bec6ce9e26fcd}{HW\_TS\_Mode\_t}};}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00117\ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00118\ \ \ \{}
+\DoxyCodeLine{00119\ \ \ \ \ hw\_ts\_Successful,}
+\DoxyCodeLine{00120\ \ \ \ \ hw\_ts\_Failed,}
+\DoxyCodeLine{00121\ \ \ \}\doxymbox{\hyperlink{hw__if_8h_ae79a2e207e9a55efeed2364f0a51b811}{HW\_TS\_ReturnStatus\_t}};}
+\DoxyCodeLine{00122\ }
+\DoxyCodeLine{00123\ \ \ \textcolor{keyword}{typedef}\ void\ (*HW\_TS\_pTimerCb\_t)(void);}
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00135\ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{hw__if_8h_af4a005724bd5f5d5a421fb98aead33dc}{HW\_TS\_Init}}(\doxymbox{\hyperlink{hw__if_8h_abbb5103d2d21f00d5906cdb8b7742378}{HW\_TS\_InitMode\_t}}\ TimerInitMode,\ RTC\_HandleTypeDef\ *hrtc);}
+\DoxyCodeLine{00136\ }
+\DoxyCodeLine{00151\ \ \ \doxymbox{\hyperlink{hw__if_8h_ae79a2e207e9a55efeed2364f0a51b811}{HW\_TS\_ReturnStatus\_t}}\ \doxymbox{\hyperlink{hw__if_8h_a0a42b4a5b750fc7ca4c140381735e75d}{HW\_TS\_Create}}(uint32\_t\ TimerProcessID,\ uint8\_t\ *pTimerId,\ \doxymbox{\hyperlink{hw__if_8h_ada8bd2cd1859456fee3bec6ce9e26fcd}{HW\_TS\_Mode\_t}}\ TimerMode,\ HW\_TS\_pTimerCb\_t\ pTimerCallBack);}
+\DoxyCodeLine{00152\ }
+\DoxyCodeLine{00162\ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{hw__if_8h_a074c5891343632fda3b0ebad42b64564}{HW\_TS\_Stop}}(uint8\_t\ TimerID);}
+\DoxyCodeLine{00163\ }
+\DoxyCodeLine{00176\ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{hw__if_8h_ae5a2404f3ca4d38bfcfa19b26d921b0f}{HW\_TS\_Start}}(uint8\_t\ TimerID,\ uint32\_t\ timeout\_ticks);}
+\DoxyCodeLine{00177\ }
+\DoxyCodeLine{00187\ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{hw__if_8h_a1020012c98fa0f1085910c3712538869}{HW\_TS\_Delete}}(uint8\_t\ TimerID);}
+\DoxyCodeLine{00188\ }
+\DoxyCodeLine{00197\ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{hw__if_8h_a438915fc276ab03daede51b18d8eefdf}{HW\_TS\_RTC\_Wakeup\_Handler}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00198\ }
+\DoxyCodeLine{00212\ \ \ uint16\_t\ \doxymbox{\hyperlink{hw__if_8h_a23a72a096e30fa51ad7f0519255b28b8}{HW\_TS\_RTC\_ReadLeftTicksToCount}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00213\ }
+\DoxyCodeLine{00227\ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{hw__if_8h_a5f1641ac33ad9aae267d2a51e3a6b107}{HW\_TS\_RTC\_Int\_AppNot}}(uint32\_t\ TimerProcessID,\ uint8\_t\ TimerID,\ HW\_TS\_pTimerCb\_t\ pTimerCallBack);}
+\DoxyCodeLine{00228\ }
+\DoxyCodeLine{00241\ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{hw__if_8h_aaa37a3224cc7fb14624fd6c7d4f7da2c}{HW\_TS\_RTC\_CountUpdated\_AppNot}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00242\ }
+\DoxyCodeLine{00243\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00244\ \}}
+\DoxyCodeLine{00245\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00246\ }
+\DoxyCodeLine{00247\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*HW\_IF\_H\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

@@ -1,0 +1,290 @@
+\doxysection{C:\+/\+\+Users/\+ryanm/\+\+Documents/\+\+Design\+Group/\+\+BB8\+\_\+\+STM32/\+\+Firmware/\+\+Core/\+\+Inc/\+app\+\_\+common.h File Reference}
+\hypertarget{app__common_8h}{}\label{app__common_8h}\index{C:/Users/ryanm/Documents/DesignGroup/BB8\_STM32/Firmware/Core/Inc/app\_common.h@{C:/Users/ryanm/Documents/DesignGroup/BB8\_STM32/Firmware/Core/Inc/app\_common.h}}
+
+
+App Common application configuration file for STM32\+WPAN Middleware.  
+
+
+{\ttfamily \+\#include $<$stdint.\+h$>$}\newline
+{\ttfamily \+\#include $<$string.\+h$>$}\newline
+{\ttfamily \+\#include $<$stdio.\+h$>$}\newline
+{\ttfamily \+\#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \+\#include $<$stdarg.\+h$>$}\newline
+{\ttfamily \+\#include "{}app\+\_\+conf.\+h"{}}\newline
+Include dependency graph for app\+\_\+common.\+h:\+
+% FIG 0
+This graph shows which files directly or indirectly include this file:\+
+% FIG 1
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{app__common_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}\label{app__common_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4} 
+\+\#define {\bfseries NULL}~0
+\item 
+\Hypertarget{app__common_8h_aa93f0eb578d23995850d61f7d61c55c1}\label{app__common_8h_aa93f0eb578d23995850d61f7d61c55c1} 
+\+\#define {\bfseries FALSE}~0
+\item 
+\Hypertarget{app__common_8h_aa8cecfc5c5c054d2875c03e77b7be15d}\label{app__common_8h_aa8cecfc5c5c054d2875c03e77b7be15d} 
+\+\#define {\bfseries TRUE}~(!0)
+\item 
+\+\#define \doxymbox{\hyperlink{app__common_8h_a6b5ac3331353a25a25e666b004b3aaef}{BACKUP\+\_\+\+PRIMASK}}()
+\item 
+\+\#define \doxymbox{\hyperlink{app__common_8h_a8b665b7df8fbc1b5d693fa71fd48a7b7}{DISABLE\+\_\+\+IRQ}}()
+\item 
+\+\#define \doxymbox{\hyperlink{app__common_8h_afc5e26acf22c121720851b2242a38a54}{RESTORE\+\_\+\+PRIMASK}}()
+\item 
+\Hypertarget{app__common_8h_abb0d8a028a41b5f418d657fee7f94df5}\label{app__common_8h_abb0d8a028a41b5f418d657fee7f94df5} 
+\+\#define {\bfseries M\+\_\+\+BEGIN}~do \{
+\item 
+\Hypertarget{app__common_8h_af2f55d4a13583f606a2fddb7b1a9965f}\label{app__common_8h_af2f55d4a13583f606a2fddb7b1a9965f} 
+\+\#define {\bfseries M\+\_\+\+END}~\} while(0)
+\item 
+\+\#define \doxymbox{\hyperlink{app__common_8h_aacc3ee1a7f283f8ef65cea31f4436a95}{MAX}}(x,  y)
+\item 
+\+\#define \doxymbox{\hyperlink{app__common_8h_a74e75242132eaabbc1c512488a135926}{MIN}}(x,  y)
+\item 
+\+\#define \doxymbox{\hyperlink{app__common_8h_a02a447c506da81a0799a68a404abdfc1}{MODINC}}(a,  m)
+\item 
+\+\#define \doxymbox{\hyperlink{app__common_8h_a934fe4c60cc178422bf5398abc33d77c}{MODDEC}}(a,  m)
+\item 
+\+\#define \doxymbox{\hyperlink{app__common_8h_a3d8d44349b7fa35b1272ff05167e8c57}{MODADD}}(a,  b,  m)
+\item 
+\+\#define \doxymbox{\hyperlink{app__common_8h_aa30ff5008c756666234953ca6c5ee1c9}{MODSUB}}(a,  b,  m)
+\item 
+\+\#define \doxymbox{\hyperlink{app__common_8h_a6e31c87c0bb99c91aad97b1af6c88952}{PAUSE}}(t)
+\item 
+\+\#define \doxymbox{\hyperlink{app__common_8h_a0c05329a6f92d9bc0df21a82b6ca3cc0}{DIVF}}(x,  y)
+\item 
+\+\#define \doxymbox{\hyperlink{app__common_8h_aa81454e61f6dca77380a230dd92a0b67}{DIVC}}(x,  y)
+\item 
+\+\#define \doxymbox{\hyperlink{app__common_8h_a3a1a055d766495892f8d84a2ef5021a2}{DIVR}}(x,  y)
+\item 
+\+\#define \doxymbox{\hyperlink{app__common_8h_ab1e41b581a78c33a418a713e9d07ba8f}{SHRR}}(x,  n)
+\item 
+\+\#define \doxymbox{\hyperlink{app__common_8h_a42e2de11bb6aa4fd883587cd193e93a1}{BITN}}(w,  n)
+\item 
+\+\#define \doxymbox{\hyperlink{app__common_8h_a18508eea74d083469314ef7e34340fe4}{BITNSET}}(w,  n,  b)
+\item 
+\+\#define \doxymbox{\hyperlink{app__common_8h_ac5cc4290f789c1b4dfad1d906719e34e}{PLACE\+\_\+\+IN\+\_\+\+SECTION}}(\+\_\+\+\_\+x\+\_\+\+\_\+)
+\item 
+\+\#define \doxymbox{\hyperlink{app__common_8h_ada9d7622865275ae4289dff050f1589e}{ALIGN}}(n)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+App Common application configuration file for STM32\+WPAN Middleware. 
+
+\begin{DoxyAuthor}{Author}
+MCD Application Team 
+\end{DoxyAuthor}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+Copyright (c) 2026 STMicroelectronics. All rights reserved.
+
+This software is licensed under terms that can be found in the LICENSE file in the root directory of this software component. If no LICENSE file comes with this software, it is provided AS-\/\+IS. 
+
+\label{doc-define-members}
+\Hypertarget{app__common_8h_doc-define-members}
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{app__common_8h_ada9d7622865275ae4289dff050f1589e}\index{app\_common.h@{app\_common.h}!ALIGN@{ALIGN}}
+\index{ALIGN@{ALIGN}!app\_common.h@{app\_common.h}}
+\doxysubsubsection{\texorpdfstring{ALIGN}{ALIGN}}
+{\footnotesize\ttfamily \label{app__common_8h_ada9d7622865275ae4289dff050f1589e} 
+\+\#define ALIGN(\begin{DoxyParamCaption}\item[{}]{n}{}\end{DoxyParamCaption})}
+
+{\bfseries Value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\_\_attribute\_\_((aligned(n)))}
+
+\end{DoxyCode}
+\Hypertarget{app__common_8h_a6b5ac3331353a25a25e666b004b3aaef}\index{app\_common.h@{app\_common.h}!BACKUP\_PRIMASK@{BACKUP\_PRIMASK}}
+\index{BACKUP\_PRIMASK@{BACKUP\_PRIMASK}!app\_common.h@{app\_common.h}}
+\doxysubsubsection{\texorpdfstring{BACKUP\_PRIMASK}{BACKUP\_PRIMASK}}
+{\footnotesize\ttfamily \label{app__common_8h_a6b5ac3331353a25a25e666b004b3aaef} 
+\+\#define BACKUP\+\_\+\+PRIMASK(\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+{\bfseries Value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{uint32\_t\ primask\_bit=\ \_\_get\_PRIMASK()}
+
+\end{DoxyCode}
+\Hypertarget{app__common_8h_a42e2de11bb6aa4fd883587cd193e93a1}\index{app\_common.h@{app\_common.h}!BITN@{BITN}}
+\index{BITN@{BITN}!app\_common.h@{app\_common.h}}
+\doxysubsubsection{\texorpdfstring{BITN}{BITN}}
+{\footnotesize\ttfamily \label{app__common_8h_a42e2de11bb6aa4fd883587cd193e93a1} 
+\+\#define BITN(\begin{DoxyParamCaption}\item[{}]{w}{, }\item[{}]{n}{}\end{DoxyParamCaption})}
+
+{\bfseries Value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((w)[(n)/32]\ >>\ ((n)\%32))\ \&\ 1)}
+
+\end{DoxyCode}
+\Hypertarget{app__common_8h_a18508eea74d083469314ef7e34340fe4}\index{app\_common.h@{app\_common.h}!BITNSET@{BITNSET}}
+\index{BITNSET@{BITNSET}!app\_common.h@{app\_common.h}}
+\doxysubsubsection{\texorpdfstring{BITNSET}{BITNSET}}
+{\footnotesize\ttfamily \label{app__common_8h_a18508eea74d083469314ef7e34340fe4} 
+\+\#define BITNSET(\begin{DoxyParamCaption}\item[{}]{w}{, }\item[{}]{n}{, }\item[{}]{b}{}\end{DoxyParamCaption})}
+
+{\bfseries Value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{M\_BEGIN\ (w)[(n)/32]\ |=\ ((U32)(b))<<((n)\%32);\ M\_END}
+
+\end{DoxyCode}
+\Hypertarget{app__common_8h_a8b665b7df8fbc1b5d693fa71fd48a7b7}\index{app\_common.h@{app\_common.h}!DISABLE\_IRQ@{DISABLE\_IRQ}}
+\index{DISABLE\_IRQ@{DISABLE\_IRQ}!app\_common.h@{app\_common.h}}
+\doxysubsubsection{\texorpdfstring{DISABLE\_IRQ}{DISABLE\_IRQ}}
+{\footnotesize\ttfamily \label{app__common_8h_a8b665b7df8fbc1b5d693fa71fd48a7b7} 
+\+\#define DISABLE\+\_\+\+IRQ(\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+{\bfseries Value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\_\_disable\_irq()}
+
+\end{DoxyCode}
+\Hypertarget{app__common_8h_aa81454e61f6dca77380a230dd92a0b67}\index{app\_common.h@{app\_common.h}!DIVC@{DIVC}}
+\index{DIVC@{DIVC}!app\_common.h@{app\_common.h}}
+\doxysubsubsection{\texorpdfstring{DIVC}{DIVC}}
+{\footnotesize\ttfamily \label{app__common_8h_aa81454e61f6dca77380a230dd92a0b67} 
+\+\#define DIVC(\begin{DoxyParamCaption}\item[{}]{x}{, }\item[{}]{y}{}\end{DoxyParamCaption})}
+
+{\bfseries Value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((x)+(y)-\/1)/(y))}
+
+\end{DoxyCode}
+\Hypertarget{app__common_8h_a0c05329a6f92d9bc0df21a82b6ca3cc0}\index{app\_common.h@{app\_common.h}!DIVF@{DIVF}}
+\index{DIVF@{DIVF}!app\_common.h@{app\_common.h}}
+\doxysubsubsection{\texorpdfstring{DIVF}{DIVF}}
+{\footnotesize\ttfamily \label{app__common_8h_a0c05329a6f92d9bc0df21a82b6ca3cc0} 
+\+\#define DIVF(\begin{DoxyParamCaption}\item[{}]{x}{, }\item[{}]{y}{}\end{DoxyParamCaption})}
+
+{\bfseries Value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{((x)/(y))}
+
+\end{DoxyCode}
+\Hypertarget{app__common_8h_a3a1a055d766495892f8d84a2ef5021a2}\index{app\_common.h@{app\_common.h}!DIVR@{DIVR}}
+\index{DIVR@{DIVR}!app\_common.h@{app\_common.h}}
+\doxysubsubsection{\texorpdfstring{DIVR}{DIVR}}
+{\footnotesize\ttfamily \label{app__common_8h_a3a1a055d766495892f8d84a2ef5021a2} 
+\+\#define DIVR(\begin{DoxyParamCaption}\item[{}]{x}{, }\item[{}]{y}{}\end{DoxyParamCaption})}
+
+{\bfseries Value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((x)+((y)/2))/(y))}
+
+\end{DoxyCode}
+\Hypertarget{app__common_8h_aacc3ee1a7f283f8ef65cea31f4436a95}\index{app\_common.h@{app\_common.h}!MAX@{MAX}}
+\index{MAX@{MAX}!app\_common.h@{app\_common.h}}
+\doxysubsubsection{\texorpdfstring{MAX}{MAX}}
+{\footnotesize\ttfamily \label{app__common_8h_aacc3ee1a7f283f8ef65cea31f4436a95} 
+\+\#define MAX(\begin{DoxyParamCaption}\item[{}]{x}{, }\item[{}]{y}{}\end{DoxyParamCaption})}
+
+{\bfseries Value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((x)>(y))?(x):(y))}
+
+\end{DoxyCode}
+\Hypertarget{app__common_8h_a74e75242132eaabbc1c512488a135926}\index{app\_common.h@{app\_common.h}!MIN@{MIN}}
+\index{MIN@{MIN}!app\_common.h@{app\_common.h}}
+\doxysubsubsection{\texorpdfstring{MIN}{MIN}}
+{\footnotesize\ttfamily \label{app__common_8h_a74e75242132eaabbc1c512488a135926} 
+\+\#define MIN(\begin{DoxyParamCaption}\item[{}]{x}{, }\item[{}]{y}{}\end{DoxyParamCaption})}
+
+{\bfseries Value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((x)<(y))?(x):(y))}
+
+\end{DoxyCode}
+\Hypertarget{app__common_8h_a3d8d44349b7fa35b1272ff05167e8c57}\index{app\_common.h@{app\_common.h}!MODADD@{MODADD}}
+\index{MODADD@{MODADD}!app\_common.h@{app\_common.h}}
+\doxysubsubsection{\texorpdfstring{MODADD}{MODADD}}
+{\footnotesize\ttfamily \label{app__common_8h_a3d8d44349b7fa35b1272ff05167e8c57} 
+\+\#define MODADD(\begin{DoxyParamCaption}\item[{}]{a}{, }\item[{}]{b}{, }\item[{}]{m}{}\end{DoxyParamCaption})}
+
+{\bfseries Value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{M\_BEGIN\ \ (a)+=(b);\ \ \textcolor{keywordflow}{if}\ ((a)>=(m))\ (a)-\/=(m);\ \ M\_END}
+
+\end{DoxyCode}
+\Hypertarget{app__common_8h_a934fe4c60cc178422bf5398abc33d77c}\index{app\_common.h@{app\_common.h}!MODDEC@{MODDEC}}
+\index{MODDEC@{MODDEC}!app\_common.h@{app\_common.h}}
+\doxysubsubsection{\texorpdfstring{MODDEC}{MODDEC}}
+{\footnotesize\ttfamily \label{app__common_8h_a934fe4c60cc178422bf5398abc33d77c} 
+\+\#define MODDEC(\begin{DoxyParamCaption}\item[{}]{a}{, }\item[{}]{m}{}\end{DoxyParamCaption})}
+
+{\bfseries Value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{M\_BEGIN\ \ \textcolor{keywordflow}{if}\ ((a)==0)\ (a)=(m);\ \ (a)-\/-\/;\ \ M\_END}
+
+\end{DoxyCode}
+\Hypertarget{app__common_8h_a02a447c506da81a0799a68a404abdfc1}\index{app\_common.h@{app\_common.h}!MODINC@{MODINC}}
+\index{MODINC@{MODINC}!app\_common.h@{app\_common.h}}
+\doxysubsubsection{\texorpdfstring{MODINC}{MODINC}}
+{\footnotesize\ttfamily \label{app__common_8h_a02a447c506da81a0799a68a404abdfc1} 
+\+\#define MODINC(\begin{DoxyParamCaption}\item[{}]{a}{, }\item[{}]{m}{}\end{DoxyParamCaption})}
+
+{\bfseries Value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{M\_BEGIN\ \ (a)++;\ \ \textcolor{keywordflow}{if}\ ((a)>=(m))\ (a)=0;\ \ M\_END}
+
+\end{DoxyCode}
+\Hypertarget{app__common_8h_aa30ff5008c756666234953ca6c5ee1c9}\index{app\_common.h@{app\_common.h}!MODSUB@{MODSUB}}
+\index{MODSUB@{MODSUB}!app\_common.h@{app\_common.h}}
+\doxysubsubsection{\texorpdfstring{MODSUB}{MODSUB}}
+{\footnotesize\ttfamily \label{app__common_8h_aa30ff5008c756666234953ca6c5ee1c9} 
+\+\#define MODSUB(\begin{DoxyParamCaption}\item[{}]{a}{, }\item[{}]{b}{, }\item[{}]{m}{}\end{DoxyParamCaption})}
+
+{\bfseries Value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{MODADD(\ a,\ (m)-\/(b),\ m\ )}
+
+\end{DoxyCode}
+\Hypertarget{app__common_8h_a6e31c87c0bb99c91aad97b1af6c88952}\index{app\_common.h@{app\_common.h}!PAUSE@{PAUSE}}
+\index{PAUSE@{PAUSE}!app\_common.h@{app\_common.h}}
+\doxysubsubsection{\texorpdfstring{PAUSE}{PAUSE}}
+{\footnotesize\ttfamily \label{app__common_8h_a6e31c87c0bb99c91aad97b1af6c88952} 
+\+\#define PAUSE(\begin{DoxyParamCaption}\item[{}]{t}{}\end{DoxyParamCaption})}
+
+{\bfseries Value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ M\_BEGIN\ \(\backslash\)}
+\DoxyCodeLine{\ \ \_\_IO\ \textcolor{keywordtype}{int}\ \_i;\ \(\backslash\)}
+\DoxyCodeLine{\ \ for\ (\ \_i\ =\ t;\ \_i\ >\ 0;\ \_i\ -\/-\/\ );\ \(\backslash\)}
+\DoxyCodeLine{M\_END}
+
+\end{DoxyCode}
+\Hypertarget{app__common_8h_ac5cc4290f789c1b4dfad1d906719e34e}\index{app\_common.h@{app\_common.h}!PLACE\_IN\_SECTION@{PLACE\_IN\_SECTION}}
+\index{PLACE\_IN\_SECTION@{PLACE\_IN\_SECTION}!app\_common.h@{app\_common.h}}
+\doxysubsubsection{\texorpdfstring{PLACE\_IN\_SECTION}{PLACE\_IN\_SECTION}}
+{\footnotesize\ttfamily \label{app__common_8h_ac5cc4290f789c1b4dfad1d906719e34e} 
+\+\#define PLACE\+\_\+\+IN\+\_\+\+SECTION(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+x\+\_\+\+\_\+}{}\end{DoxyParamCaption})}
+
+{\bfseries Value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\_\_attribute\_\_((section\ (\_\_x\_\_)))}
+
+\end{DoxyCode}
+\Hypertarget{app__common_8h_afc5e26acf22c121720851b2242a38a54}\index{app\_common.h@{app\_common.h}!RESTORE\_PRIMASK@{RESTORE\_PRIMASK}}
+\index{RESTORE\_PRIMASK@{RESTORE\_PRIMASK}!app\_common.h@{app\_common.h}}
+\doxysubsubsection{\texorpdfstring{RESTORE\_PRIMASK}{RESTORE\_PRIMASK}}
+{\footnotesize\ttfamily \label{app__common_8h_afc5e26acf22c121720851b2242a38a54} 
+\+\#define RESTORE\+\_\+\+PRIMASK(\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+{\bfseries Value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\_\_set\_PRIMASK(primask\_bit)}
+
+\end{DoxyCode}
+\Hypertarget{app__common_8h_ab1e41b581a78c33a418a713e9d07ba8f}\index{app\_common.h@{app\_common.h}!SHRR@{SHRR}}
+\index{SHRR@{SHRR}!app\_common.h@{app\_common.h}}
+\doxysubsubsection{\texorpdfstring{SHRR}{SHRR}}
+{\footnotesize\ttfamily \label{app__common_8h_ab1e41b581a78c33a418a713e9d07ba8f} 
+\+\#define SHRR(\begin{DoxyParamCaption}\item[{}]{x}{, }\item[{}]{n}{}\end{DoxyParamCaption})}
+
+{\bfseries Value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{((((x)>>((n)-\/1))+1)>>1)}
+
+\end{DoxyCode}

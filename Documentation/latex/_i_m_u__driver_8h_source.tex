@@ -1,0 +1,63 @@
+\doxysection{IMU\+\_\+driver.\+h}
+\hypertarget{_i_m_u__driver_8h_source}{}\label{_i_m_u__driver_8h_source}\index{C:/Users/ryanm/Documents/DesignGroup/BB8\_STM32/Firmware/Custom\_Drivers/Inc/IMU\_driver.h@{C:/Users/ryanm/Documents/DesignGroup/BB8\_STM32/Firmware/Custom\_Drivers/Inc/IMU\_driver.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*\ Header\ file\ for\ the\ folder\ which\ will\ use\ the\ }}
+\DoxyCodeLine{00002\ \textcolor{comment}{LSM6DSO32\ library\ and\ integrate\ it\ with\ the\ necessary}}
+\DoxyCodeLine{00003\ \textcolor{comment}{hardware\ specific\ functions\ to\ make\ it\ work\ for\ this}}
+\DoxyCodeLine{00004\ \textcolor{comment}{device.\ This\ will\ also\ store\ the\ function\ declarations}}
+\DoxyCodeLine{00005\ \textcolor{comment}{for\ the\ high\ level\ functions\ to\ complete\ basic\ needs}}
+\DoxyCodeLine{00006\ \textcolor{comment}{such\ as\ reading\ all\ sensor\ data.\ */}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{comment}{/*\ Preventing\ recurssive\ definitions.\ */}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#ifndef\ \_IMU\_DRIVER\_H\_}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#define\ \_IMU\_DRIVER\_H\_}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{comment}{/*\ Addition\ of\ the\ necessary\ include\ header\ files.\ */}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{main_8h}{main.h}}"{}}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{lsm6dso32_8h}{lsm6dso32.h}}"{}}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{lsm6dso32__reg_8h}{lsm6dso32\_reg.h}}"{}}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{comment}{/*\ Type\ definitions.\ */}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{comment}{/*\ A\ struct\ to\ hold\ floating\ point\ pitch,\ yaw\ and\ roll}}
+\DoxyCodeLine{00020\ \textcolor{comment}{\ values.\ */}}
+\DoxyCodeLine{00021\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}\{}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{float}\ pitch;}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{float}\ roll;}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{float}\ yaw;}
+\DoxyCodeLine{00025\ \}\ \doxymbox{\hyperlink{structeuler_angles__t}{eulerAngles\_t}};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{comment}{/*\ ==========\ Function\ \ declarations\ ==========\ */}}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00042\ \textcolor{keyword}{extern}\ int32\_t\ IMU\_read(\textcolor{keywordtype}{void}\ *handle,\ uint8\_t\ reg,\ uint8\_t\ *bufp,}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint16\_t\ len);}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00057\ \textcolor{keyword}{extern}\ int32\_t\ IMU\_write(\textcolor{keywordtype}{void}\ *handle,\ uint8\_t\ reg,\ uint8\_t\ *bufp,}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint16\_t\ len);}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00067\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ platform\_delay(uint32\_t\ ms);}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00076\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ IMUInit(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\_ctx\_t}}\ dev\_ctx);}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00083\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ IMUDeinit();}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00095\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ IMUUpdate(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\_ctx\_t}}\ *dev\_ctx,\ \doxymbox{\hyperlink{structeuler_angles__t}{eulerAngles\_t}}\ *angles);}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00104\ \textcolor{keyword}{extern}\ float\_t\ Deg2rad(\textcolor{keywordtype}{float}\ angle);}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00106\ \textcolor{comment}{/*\ ==========\ Variable\ declarations\ ==========\ */}}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00108\ \textcolor{comment}{/*\ ==========\ Definitions\ ==========\ */}}
+\DoxyCodeLine{00109\ \textcolor{comment}{/*\ Defining\ the\ offset\ values\ for\ this\ specific\ IMU.\ */}}
+\DoxyCodeLine{00110\ \textcolor{preprocessor}{\#define\ A\_xOffset\ \ \ \ \ \ \ 0.0f}}
+\DoxyCodeLine{00111\ \textcolor{preprocessor}{\#define\ A\_yOffset\ \ \ \ \ \ \ 0.0f}}
+\DoxyCodeLine{00112\ \textcolor{preprocessor}{\#define\ A\_zOffset\ \ \ \ \ \ \ 0.0f}}
+\DoxyCodeLine{00113\ \textcolor{preprocessor}{\#define\ G\_xOffset\ \ \ \ \ \ \ 0.0f}}
+\DoxyCodeLine{00114\ \textcolor{preprocessor}{\#define\ G\_yOffset\ \ \ \ \ \ \ 0.0f}}
+\DoxyCodeLine{00115\ \textcolor{preprocessor}{\#define\ G\_zOffset\ \ \ \ \ \ \ 0.0f}}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00117\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{/*\ End\ of\ recurssion\ prevention.\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

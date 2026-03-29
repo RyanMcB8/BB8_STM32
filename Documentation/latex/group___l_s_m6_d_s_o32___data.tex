@@ -1,0 +1,224 @@
+\doxysection{output }
+\hypertarget{group___l_s_m6_d_s_o32___data}{}\label{group___l_s_m6_d_s_o32___data}\index{output@{output}}
+
+
+This section groups all the data output functions.  
+
+
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___data_ga8b69da14a469d9e49b782de28ce51ff0}{lsm6dso32\+\_\+rounding\+\_\+mode\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+rounding\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Circular burst-\/mode (rounding) read of the output registers.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___data_ga7a98cc3a7134e27cbbba97d1c5fad42a}{lsm6dso32\+\_\+rounding\+\_\+mode\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+rounding\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Gyroscope UI chain full-\/scale selection.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___data_ga404624a13657833081c3abb046f34a7c}{lsm6dso32\+\_\+temperature\+\_\+raw\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, int16\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Temperature data output register (r). L and H registers together express a 16-\/bit word in two\textquotesingle{}s complement.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___data_ga5409dd5177b7b2c24846b37037900f58}{lsm6dso32\+\_\+angular\+\_\+rate\+\_\+raw\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, int16\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Angular rate sensor. The value is expressed as a 16-\/bit word in two\textquotesingle{}s complement.\+[get]\+. \end{DoxyCompactList}\item 
+\Hypertarget{group___l_s_m6_d_s_o32___data_ga361302f78b5028fffbd06a787754e5e8}\label{group___l_s_m6_d_s_o32___data_ga361302f78b5028fffbd06a787754e5e8} 
+int32\+\_\+t {\bfseries lsm6dso32\+\_\+acceleration\+\_\+raw\+\_\+get} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, int16\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___data_gaa62235010b54dd7d6b3f35e0f6cfcaab}{lsm6dso32\+\_\+fifo\+\_\+out\+\_\+raw\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}buff)
+\begin{DoxyCompactList}\small\item\em FIFO data output \+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___data_gad2f9b13962388a448f2858050682c617}{lsm6dso32\+\_\+number\+\_\+of\+\_\+steps\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint16\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Step counter output register.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___data_ga6c91b56a17b3f96c1ea884aff2ae7539}{lsm6dso32\+\_\+steps\+\_\+reset}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx)
+\begin{DoxyCompactList}\small\item\em Reset step counter register.\+[get]\+. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___data_gab9ba0a236922319ce742a327f6ce5b2a}{ret}}
+\begin{DoxyCompactList}\small\item\em Linear acceleration output register. The value is expressed as a 16-\/bit word in two\textquotesingle{}s complement.\+[get]\+. \end{DoxyCompactList}\item 
+\Hypertarget{group___l_s_m6_d_s_o32___data_ga4e975dfc237d565b018c48f04e729a26}\label{group___l_s_m6_d_s_o32___data_ga4e975dfc237d565b018c48f04e729a26} 
+uint8\+\_\+t {\bfseries buff} \+[6]\+
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This section groups all the data output functions. 
+
+
+
+\label{doc-func-members}
+\Hypertarget{group___l_s_m6_d_s_o32___data_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{group___l_s_m6_d_s_o32___data_ga5409dd5177b7b2c24846b37037900f58}\index{output@{output}!lsm6dso32\_angular\_rate\_raw\_get@{lsm6dso32\_angular\_rate\_raw\_get}}
+\index{lsm6dso32\_angular\_rate\_raw\_get@{lsm6dso32\_angular\_rate\_raw\_get}!output@{output}}
+\doxysubsubsection{\texorpdfstring{lsm6dso32\_angular\_rate\_raw\_get()}{lsm6dso32\_angular\_rate\_raw\_get()}}
+{\footnotesize\ttfamily \label{group___l_s_m6_d_s_o32___data_ga5409dd5177b7b2c24846b37037900f58} 
+int32\+\_\+t lsm6dso32\+\_\+angular\+\_\+rate\+\_\+raw\+\_\+get (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx}{, }\item[{int16\+\_\+t \texorpdfstring{$\ast$}{*}}]{val}{}\end{DoxyParamCaption})}
+
+
+
+Angular rate sensor. The value is expressed as a 16-\/bit word in two\textquotesingle{}s complement.\+[get]\+. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read /\+ write interface definitions \\
+\hline
+{\em buff} & buffer that stores data read \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY:\+ return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group___l_s_m6_d_s_o32___data_gaa62235010b54dd7d6b3f35e0f6cfcaab}\index{output@{output}!lsm6dso32\_fifo\_out\_raw\_get@{lsm6dso32\_fifo\_out\_raw\_get}}
+\index{lsm6dso32\_fifo\_out\_raw\_get@{lsm6dso32\_fifo\_out\_raw\_get}!output@{output}}
+\doxysubsubsection{\texorpdfstring{lsm6dso32\_fifo\_out\_raw\_get()}{lsm6dso32\_fifo\_out\_raw\_get()}}
+{\footnotesize\ttfamily \label{group___l_s_m6_d_s_o32___data_gaa62235010b54dd7d6b3f35e0f6cfcaab} 
+int32\+\_\+t lsm6dso32\+\_\+fifo\+\_\+out\+\_\+raw\+\_\+get (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx}{, }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{buff}{}\end{DoxyParamCaption})}
+
+
+
+FIFO data output \+[get]\+. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read /\+ write interface definitions \\
+\hline
+{\em buff} & buffer that stores data read \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY:\+ return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group___l_s_m6_d_s_o32___data_gad2f9b13962388a448f2858050682c617}\index{output@{output}!lsm6dso32\_number\_of\_steps\_get@{lsm6dso32\_number\_of\_steps\_get}}
+\index{lsm6dso32\_number\_of\_steps\_get@{lsm6dso32\_number\_of\_steps\_get}!output@{output}}
+\doxysubsubsection{\texorpdfstring{lsm6dso32\_number\_of\_steps\_get()}{lsm6dso32\_number\_of\_steps\_get()}}
+{\footnotesize\ttfamily \label{group___l_s_m6_d_s_o32___data_gad2f9b13962388a448f2858050682c617} 
+int32\+\_\+t lsm6dso32\+\_\+number\+\_\+of\+\_\+steps\+\_\+get (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx}{, }\item[{uint16\+\_\+t \texorpdfstring{$\ast$}{*}}]{val}{}\end{DoxyParamCaption})}
+
+
+
+Step counter output register.\+[get]\+. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read /\+ write interface definitions \\
+\hline
+{\em buff} & buffer that stores data read \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY:\+ return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group___l_s_m6_d_s_o32___data_ga7a98cc3a7134e27cbbba97d1c5fad42a}\index{output@{output}!lsm6dso32\_rounding\_mode\_get@{lsm6dso32\_rounding\_mode\_get}}
+\index{lsm6dso32\_rounding\_mode\_get@{lsm6dso32\_rounding\_mode\_get}!output@{output}}
+\doxysubsubsection{\texorpdfstring{lsm6dso32\_rounding\_mode\_get()}{lsm6dso32\_rounding\_mode\_get()}}
+{\footnotesize\ttfamily \label{group___l_s_m6_d_s_o32___data_ga7a98cc3a7134e27cbbba97d1c5fad42a} 
+int32\+\_\+t lsm6dso32\+\_\+rounding\+\_\+mode\+\_\+get (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx}{, }\item[{lsm6dso32\+\_\+rounding\+\_\+t \texorpdfstring{$\ast$}{*}}]{val}{}\end{DoxyParamCaption})}
+
+
+
+Gyroscope UI chain full-\/scale selection.\+[get]\+. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read /\+ write interface definitions \\
+\hline
+{\em val} & Get the values of rounding in reg CTRL5\+\_\+C \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY:\+ return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group___l_s_m6_d_s_o32___data_ga8b69da14a469d9e49b782de28ce51ff0}\index{output@{output}!lsm6dso32\_rounding\_mode\_set@{lsm6dso32\_rounding\_mode\_set}}
+\index{lsm6dso32\_rounding\_mode\_set@{lsm6dso32\_rounding\_mode\_set}!output@{output}}
+\doxysubsubsection{\texorpdfstring{lsm6dso32\_rounding\_mode\_set()}{lsm6dso32\_rounding\_mode\_set()}}
+{\footnotesize\ttfamily \label{group___l_s_m6_d_s_o32___data_ga8b69da14a469d9e49b782de28ce51ff0} 
+int32\+\_\+t lsm6dso32\+\_\+rounding\+\_\+mode\+\_\+set (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx}{, }\item[{lsm6dso32\+\_\+rounding\+\_\+t}]{val}{}\end{DoxyParamCaption})}
+
+
+
+Circular burst-\/mode (rounding) read of the output registers.\+[set]\+. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read /\+ write interface definitions \\
+\hline
+{\em val} & change the values of rounding in reg CTRL5\+\_\+C \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY:\+ return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group___l_s_m6_d_s_o32___data_ga6c91b56a17b3f96c1ea884aff2ae7539}\index{output@{output}!lsm6dso32\_steps\_reset@{lsm6dso32\_steps\_reset}}
+\index{lsm6dso32\_steps\_reset@{lsm6dso32\_steps\_reset}!output@{output}}
+\doxysubsubsection{\texorpdfstring{lsm6dso32\_steps\_reset()}{lsm6dso32\_steps\_reset()}}
+{\footnotesize\ttfamily \label{group___l_s_m6_d_s_o32___data_ga6c91b56a17b3f96c1ea884aff2ae7539} 
+int32\+\_\+t lsm6dso32\+\_\+steps\+\_\+reset (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx}{}\end{DoxyParamCaption})}
+
+
+
+Reset step counter register.\+[get]\+. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read /\+ write interface definitions \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY:\+ return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group___l_s_m6_d_s_o32___data_ga404624a13657833081c3abb046f34a7c}\index{output@{output}!lsm6dso32\_temperature\_raw\_get@{lsm6dso32\_temperature\_raw\_get}}
+\index{lsm6dso32\_temperature\_raw\_get@{lsm6dso32\_temperature\_raw\_get}!output@{output}}
+\doxysubsubsection{\texorpdfstring{lsm6dso32\_temperature\_raw\_get()}{lsm6dso32\_temperature\_raw\_get()}}
+{\footnotesize\ttfamily \label{group___l_s_m6_d_s_o32___data_ga404624a13657833081c3abb046f34a7c} 
+int32\+\_\+t lsm6dso32\+\_\+temperature\+\_\+raw\+\_\+get (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx}{, }\item[{int16\+\_\+t \texorpdfstring{$\ast$}{*}}]{val}{}\end{DoxyParamCaption})}
+
+
+
+Temperature data output register (r). L and H registers together express a 16-\/bit word in two\textquotesingle{}s complement.\+[get]\+. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read /\+ write interface definitions \\
+\hline
+{\em buff} & buffer that stores data read \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY:\+ return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+
+
+\label{doc-var-members}
+\Hypertarget{group___l_s_m6_d_s_o32___data_doc-var-members}
+\doxysubsection{Variable Documentation}
+\Hypertarget{group___l_s_m6_d_s_o32___data_gab9ba0a236922319ce742a327f6ce5b2a}\index{output@{output}!ret@{ret}}
+\index{ret@{ret}!output@{output}}
+\doxysubsubsection{\texorpdfstring{ret}{ret}}
+{\footnotesize\ttfamily \label{group___l_s_m6_d_s_o32___data_gab9ba0a236922319ce742a327f6ce5b2a} 
+int32\+\_\+t ret}
+
+
+
+Linear acceleration output register. The value is expressed as a 16-\/bit word in two\textquotesingle{}s complement.\+[get]\+. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read /\+ write interface definitions \\
+\hline
+{\em buff} & buffer that stores data read \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY:\+ return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}

@@ -1,0 +1,107 @@
+\doxysection{hw\+\_\+conf.\+h}
+\hypertarget{hw__conf_8h_source}{}\label{hw__conf_8h_source}\index{C:/Users/ryanm/Documents/DesignGroup/BB8\_STM32/Firmware/Core/Inc/hw\_conf.h@{C:/Users/ryanm/Documents/DesignGroup/BB8\_STM32/Firmware/Core/Inc/hw\_conf.h}}
+\doxymbox{\hyperlink{hw__conf_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ Header\ */}}
+\DoxyCodeLine{00019\ \textcolor{comment}{/*\ USER\ CODE\ END\ Header\ */}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{comment}{/*\ Define\ to\ prevent\ recursive\ inclusion\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#ifndef\ HW\_CONF\_H}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#define\ HW\_CONF\_H}}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{00026\ \textcolor{comment}{\ *\ Semaphores}}
+\DoxyCodeLine{00027\ \textcolor{comment}{\ *\ THIS\ SHALL\ NO\ BE\ CHANGED\ AS\ THESE\ SEMAPHORES\ ARE\ USED\ AS\ WELL\ ON\ THE\ CM0+}}
+\DoxyCodeLine{00028\ \textcolor{comment}{\ *****************************************************************************/}}
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#define\ CFG\_HW\_THREAD\_NVM\_SRAM\_SEMID\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 9}}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00053\ \textcolor{preprocessor}{\#define\ CFG\_HW\_BLE\_NVM\_SRAM\_SEMID\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 8}}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00066\ \textcolor{preprocessor}{\#define\ CFG\_HW\_BLOCK\_FLASH\_REQ\_BY\_CPU2\_SEMID\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 7}}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00074\ \textcolor{preprocessor}{\#define\ CFG\_HW\_BLOCK\_FLASH\_REQ\_BY\_CPU1\_SEMID\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 6}}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00083\ \textcolor{preprocessor}{\#define\ CFG\_HW\_CLK48\_CONFIG\_SEMID\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 5}}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \textcolor{comment}{/*\ Index\ of\ the\ semaphore\ used\ to\ manage\ the\ entry\ Stop\ Mode\ procedure\ */}}
+\DoxyCodeLine{00086\ \textcolor{preprocessor}{\#define\ CFG\_HW\_ENTRY\_STOP\_MODE\_SEMID\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 4}}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ \textcolor{comment}{/*\ Index\ of\ the\ semaphore\ used\ to\ access\ the\ RCC\ */}}
+\DoxyCodeLine{00089\ \textcolor{preprocessor}{\#define\ CFG\_HW\_RCC\_SEMID\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 3}}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \textcolor{comment}{/*\ Index\ of\ the\ semaphore\ used\ to\ access\ the\ FLASH\ */}}
+\DoxyCodeLine{00092\ \textcolor{preprocessor}{\#define\ CFG\_HW\_FLASH\_SEMID\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 2}}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00094\ \textcolor{comment}{/*\ Index\ of\ the\ semaphore\ used\ to\ access\ the\ PKA\ */}}
+\DoxyCodeLine{00095\ \textcolor{preprocessor}{\#define\ CFG\_HW\_PKA\_SEMID\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 1}}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00097\ \textcolor{comment}{/*\ Index\ of\ the\ semaphore\ used\ to\ access\ the\ RNG\ */}}
+\DoxyCodeLine{00098\ \textcolor{preprocessor}{\#define\ CFG\_HW\_RNG\_SEMID\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0}}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00100\ \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{00101\ \textcolor{comment}{\ *\ HW\ TIMER\ SERVER}}
+\DoxyCodeLine{00102\ \textcolor{comment}{\ *****************************************************************************/}}
+\DoxyCodeLine{00107\ \textcolor{preprocessor}{\#define\ CFG\_HW\_TS\_MAX\_NBR\_CONCURRENT\_TIMER\ \ 6}}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00114\ \textcolor{preprocessor}{\#define\ CFG\_HW\_TS\_NVIC\_RTC\_WAKEUP\_IT\_PREEMPTPRIO\ \ 3}}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00122\ \textcolor{preprocessor}{\#define\ CFG\_HW\_TS\_NVIC\_RTC\_WAKEUP\_IT\_SUBPRIO\ \ 0}}
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00138\ \textcolor{preprocessor}{\#define\ CFG\_HW\_TS\_USE\_PRIMASK\_AS\_CRITICAL\_SECTION\ \ 1}}
+\DoxyCodeLine{00139\ }
+\DoxyCodeLine{00151\ \textcolor{preprocessor}{\#define\ CFG\_HW\_TS\_RTC\_HANDLER\_MAX\_DELAY\ \ (\ 10\ *\ (LSI\_VALUE/1000)\ )}}
+\DoxyCodeLine{00152\ }
+\DoxyCodeLine{00157\ \textcolor{preprocessor}{\#define\ CFG\_HW\_TS\_RTC\_WAKEUP\_HANDLER\_ID\ \ RTC\_WKUP\_IRQn}}
+\DoxyCodeLine{00158\ }
+\DoxyCodeLine{00159\ \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{00160\ \textcolor{comment}{\ *\ HW\ UART}}
+\DoxyCodeLine{00161\ \textcolor{comment}{\ *****************************************************************************/}}
+\DoxyCodeLine{00162\ \textcolor{preprocessor}{\#define\ CFG\_HW\_LPUART1\_ENABLED\ \ \ \ \ \ \ \ \ \ \ 0}}
+\DoxyCodeLine{00163\ \textcolor{preprocessor}{\#define\ CFG\_HW\_LPUART1\_DMA\_TX\_SUPPORTED\ \ 0}}
+\DoxyCodeLine{00164\ }
+\DoxyCodeLine{00165\ \textcolor{preprocessor}{\#define\ CFG\_HW\_USART1\_ENABLED\ \ \ \ \ \ \ \ \ \ \ 1}}
+\DoxyCodeLine{00166\ \textcolor{preprocessor}{\#define\ CFG\_HW\_USART1\_DMA\_TX\_SUPPORTED\ \ 1}}
+\DoxyCodeLine{00167\ }
+\DoxyCodeLine{00171\ \textcolor{preprocessor}{\#define\ CFG\_HW\_USART1\_PREEMPTPRIORITY\ \ \ \ \ \ \ \ \ 0x0F}}
+\DoxyCodeLine{00172\ \textcolor{preprocessor}{\#define\ CFG\_HW\_USART1\_SUBPRIORITY\ \ \ \ \ \ \ \ \ \ \ \ \ 0}}
+\DoxyCodeLine{00173\ }
+\DoxyCodeLine{00175\ \textcolor{preprocessor}{\#define\ CFG\_HW\_USART1\_SOURCE\_CLOCK\ \ \ \ \ \ \ \ \ \ \ \ \ \ RCC\_USART1CLKSOURCE\_SYSCLK}}
+\DoxyCodeLine{00176\ }
+\DoxyCodeLine{00177\ \textcolor{preprocessor}{\#define\ CFG\_HW\_USART1\_BAUDRATE\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 115200}}
+\DoxyCodeLine{00178\ \textcolor{preprocessor}{\#define\ CFG\_HW\_USART1\_WORDLENGTH\ \ \ \ \ \ \ \ \ \ \ \ \ \ UART\_WORDLENGTH\_8B}}
+\DoxyCodeLine{00179\ \textcolor{preprocessor}{\#define\ CFG\_HW\_USART1\_STOPBITS\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ UART\_STOPBITS\_1}}
+\DoxyCodeLine{00180\ \textcolor{preprocessor}{\#define\ CFG\_HW\_USART1\_PARITY\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ UART\_PARITY\_NONE}}
+\DoxyCodeLine{00181\ \textcolor{preprocessor}{\#define\ CFG\_HW\_USART1\_HWFLOWCTL\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ UART\_HWCONTROL\_NONE}}
+\DoxyCodeLine{00182\ \textcolor{preprocessor}{\#define\ CFG\_HW\_USART1\_MODE\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ UART\_MODE\_TX\_RX}}
+\DoxyCodeLine{00183\ \textcolor{preprocessor}{\#define\ CFG\_HW\_USART1\_ADVFEATUREINIT\ \ \ \ \ \ \ \ \ \ UART\_ADVFEATURE\_NO\_INIT}}
+\DoxyCodeLine{00184\ \textcolor{preprocessor}{\#define\ CFG\_HW\_USART1\_OVERSAMPLING\ \ \ \ \ \ \ \ \ \ \ \ UART\_OVERSAMPLING\_8}}
+\DoxyCodeLine{00185\ }
+\DoxyCodeLine{00186\ \textcolor{preprocessor}{\#define\ CFG\_HW\_USART1\_TX\_PORT\_CLK\_ENABLE\ \ \ \ \ \ \_\_HAL\_RCC\_GPIOB\_CLK\_ENABLE}}
+\DoxyCodeLine{00187\ \textcolor{preprocessor}{\#define\ CFG\_HW\_USART1\_TX\_PORT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ GPIOB}}
+\DoxyCodeLine{00188\ \textcolor{preprocessor}{\#define\ CFG\_HW\_USART1\_TX\_PIN\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ GPIO\_PIN\_6}}
+\DoxyCodeLine{00189\ \textcolor{preprocessor}{\#define\ CFG\_HW\_USART1\_TX\_MODE\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ GPIO\_MODE\_AF\_PP}}
+\DoxyCodeLine{00190\ \textcolor{preprocessor}{\#define\ CFG\_HW\_USART1\_TX\_PULL\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ GPIO\_NOPULL}}
+\DoxyCodeLine{00191\ \textcolor{preprocessor}{\#define\ CFG\_HW\_USART1\_TX\_SPEED\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ GPIO\_SPEED\_FREQ\_VERY\_HIGH}}
+\DoxyCodeLine{00192\ \textcolor{preprocessor}{\#define\ CFG\_HW\_USART1\_TX\_ALTERNATE\ \ \ \ \ \ \ \ \ \ \ \ GPIO\_AF7\_USART1}}
+\DoxyCodeLine{00193\ }
+\DoxyCodeLine{00194\ \textcolor{preprocessor}{\#define\ CFG\_HW\_USART1\_RX\_PORT\_CLK\_ENABLE\ \ \ \ \ \ \_\_HAL\_RCC\_GPIOB\_CLK\_ENABLE}}
+\DoxyCodeLine{00195\ \textcolor{preprocessor}{\#define\ CFG\_HW\_USART1\_RX\_PORT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ GPIOB}}
+\DoxyCodeLine{00196\ \textcolor{preprocessor}{\#define\ CFG\_HW\_USART1\_RX\_PIN\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ GPIO\_PIN\_7}}
+\DoxyCodeLine{00197\ \textcolor{preprocessor}{\#define\ CFG\_HW\_USART1\_RX\_MODE\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ GPIO\_MODE\_AF\_PP}}
+\DoxyCodeLine{00198\ \textcolor{preprocessor}{\#define\ CFG\_HW\_USART1\_RX\_PULL\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ GPIO\_NOPULL}}
+\DoxyCodeLine{00199\ \textcolor{preprocessor}{\#define\ CFG\_HW\_USART1\_RX\_SPEED\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ GPIO\_SPEED\_FREQ\_VERY\_HIGH}}
+\DoxyCodeLine{00200\ \textcolor{preprocessor}{\#define\ CFG\_HW\_USART1\_RX\_ALTERNATE\ \ \ \ \ \ \ \ \ \ \ \ GPIO\_AF7\_USART1}}
+\DoxyCodeLine{00201\ }
+\DoxyCodeLine{00202\ \textcolor{preprocessor}{\#define\ CFG\_HW\_USART1\_DMA\_TX\_PREEMPTPRIORITY\ \ 0x0F}}
+\DoxyCodeLine{00203\ \textcolor{preprocessor}{\#define\ CFG\_HW\_USART1\_DMA\_TX\_SUBPRIORITY\ \ \ \ \ \ 0}}
+\DoxyCodeLine{00204\ }
+\DoxyCodeLine{00205\ \textcolor{preprocessor}{\#define\ CFG\_HW\_USART1\_DMAMUX\_CLK\_ENABLE\ \ \ \ \ \ \ \_\_HAL\_RCC\_DMAMUX1\_CLK\_ENABLE}}
+\DoxyCodeLine{00206\ \textcolor{preprocessor}{\#define\ CFG\_HW\_USART1\_DMA\_CLK\_ENABLE\ \ \ \ \ \ \ \ \ \ \_\_HAL\_RCC\_DMA2\_CLK\_ENABLE}}
+\DoxyCodeLine{00207\ \textcolor{preprocessor}{\#define\ CFG\_HW\_USART1\_TX\_DMA\_REQ\ \ \ \ \ \ \ \ \ \ \ \ \ \ DMA\_REQUEST\_USART1\_TX}}
+\DoxyCodeLine{00208\ \textcolor{preprocessor}{\#define\ CFG\_HW\_USART1\_TX\_DMA\_CHANNEL\ \ \ \ \ \ \ \ \ \ DMA2\_Channel4}}
+\DoxyCodeLine{00209\ \textcolor{preprocessor}{\#define\ CFG\_HW\_USART1\_TX\_DMA\_IRQn\ \ \ \ \ \ \ \ \ \ \ \ \ DMA2\_Channel4\_IRQn}}
+\DoxyCodeLine{00210\ \textcolor{preprocessor}{\#define\ CFG\_HW\_USART1\_DMA\_TX\_IRQHandler\ \ \ \ \ \ \ DMA2\_Channel4\_IRQHandler}}
+\DoxyCodeLine{00211\ }
+\DoxyCodeLine{00212\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*HW\_CONF\_H\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

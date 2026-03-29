@@ -1,0 +1,212 @@
+\doxysection{LSM6\+DSO32\+\_\+\+Wake\+\_\+\+Up\+\_\+event }
+\hypertarget{group___l_s_m6_d_s_o32___wake___up__event}{}\label{group___l_s_m6_d_s_o32___wake___up__event}\index{LSM6DSO32\_Wake\_Up\_event@{LSM6DSO32\_Wake\_Up\_event}}
+
+
+This section groups all the functions that manage the Wake Up event generation.  
+
+
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___wake___up__event_gad76473c1fe763c5c7f35a02b154fa64a}{lsm6dso32\+\_\+wkup\+\_\+ths\+\_\+weight\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+wake\+\_\+ths\+\_\+w\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Weight of 1 LSB of wakeup threshold.\+[set]\+ 0:\+ 1 LSB =FS\+\_\+\+XL /\+ 64 1:\+ 1 LSB = FS\+\_\+\+XL /\+ 256. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___wake___up__event_ga1f99084f4b668581b469ae3d82db032c}{lsm6dso32\+\_\+wkup\+\_\+ths\+\_\+weight\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+wake\+\_\+ths\+\_\+w\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Weight of 1 LSB of wakeup threshold.\+[get]\+ 0:\+ 1 LSB =FS\+\_\+\+XL /\+ 64 1:\+ 1 LSB = FS\+\_\+\+XL /\+ 256. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___wake___up__event_gaf4b3909a876f6b30e0ce9bce59d29b48}{lsm6dso32\+\_\+wkup\+\_\+threshold\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Threshold for wakeup:\+ 1 LSB weight depends on WAKE\+\_\+\+THS\+\_\+W in WAKE\+\_\+\+UP\+\_\+\+DUR.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___wake___up__event_ga58f73dba108d3705246510fe2215135c}{lsm6dso32\+\_\+wkup\+\_\+threshold\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Threshold for wakeup:\+ 1 LSB weight depends on WAKE\+\_\+\+THS\+\_\+W in WAKE\+\_\+\+UP\+\_\+\+DUR.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___wake___up__event_gac1ec8a2cca9cdc5568f5359bd7253908}{lsm6dso32\+\_\+xl\+\_\+usr\+\_\+offset\+\_\+on\+\_\+wkup\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Wake up duration event.\+[set]\+ 1LSb = 1 /\+ ODR. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___wake___up__event_ga2bd8a120b4f2d919a62d4e9b8c5faf87}{lsm6dso32\+\_\+xl\+\_\+usr\+\_\+offset\+\_\+on\+\_\+wkup\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Wake up duration event.\+[get]\+ 1LSb = 1 /\+ ODR. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___wake___up__event_gac525b935995e3fb79880596b928c70f6}{lsm6dso32\+\_\+wkup\+\_\+dur\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Wake up duration event.\+[set]\+ 1LSb = 1 /\+ ODR. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___wake___up__event_ga3a56e580d8bb1486dd87087e9c5a0e27}{lsm6dso32\+\_\+wkup\+\_\+dur\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Wake up duration event.\+[get]\+ 1LSb = 1 /\+ ODR. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This section groups all the functions that manage the Wake Up event generation. 
+
+
+
+\label{doc-func-members}
+\Hypertarget{group___l_s_m6_d_s_o32___wake___up__event_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{group___l_s_m6_d_s_o32___wake___up__event_ga3a56e580d8bb1486dd87087e9c5a0e27}\index{LSM6DSO32\_Wake\_Up\_event@{LSM6DSO32\_Wake\_Up\_event}!lsm6dso32\_wkup\_dur\_get@{lsm6dso32\_wkup\_dur\_get}}
+\index{lsm6dso32\_wkup\_dur\_get@{lsm6dso32\_wkup\_dur\_get}!LSM6DSO32\_Wake\_Up\_event@{LSM6DSO32\_Wake\_Up\_event}}
+\doxysubsubsection{\texorpdfstring{lsm6dso32\_wkup\_dur\_get()}{lsm6dso32\_wkup\_dur\_get()}}
+{\footnotesize\ttfamily \label{group___l_s_m6_d_s_o32___wake___up__event_ga3a56e580d8bb1486dd87087e9c5a0e27} 
+int32\+\_\+t lsm6dso32\+\_\+wkup\+\_\+dur\+\_\+get (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx}{, }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{val}{}\end{DoxyParamCaption})}
+
+
+
+Wake up duration event.\+[get]\+ 1LSb = 1 /\+ ODR. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read /\+ write interface definitions \\
+\hline
+{\em val} & change the values of wake\+\_\+dur in reg WAKE\+\_\+\+UP\+\_\+\+DUR \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY:\+ return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group___l_s_m6_d_s_o32___wake___up__event_gac525b935995e3fb79880596b928c70f6}\index{LSM6DSO32\_Wake\_Up\_event@{LSM6DSO32\_Wake\_Up\_event}!lsm6dso32\_wkup\_dur\_set@{lsm6dso32\_wkup\_dur\_set}}
+\index{lsm6dso32\_wkup\_dur\_set@{lsm6dso32\_wkup\_dur\_set}!LSM6DSO32\_Wake\_Up\_event@{LSM6DSO32\_Wake\_Up\_event}}
+\doxysubsubsection{\texorpdfstring{lsm6dso32\_wkup\_dur\_set()}{lsm6dso32\_wkup\_dur\_set()}}
+{\footnotesize\ttfamily \label{group___l_s_m6_d_s_o32___wake___up__event_gac525b935995e3fb79880596b928c70f6} 
+int32\+\_\+t lsm6dso32\+\_\+wkup\+\_\+dur\+\_\+set (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx}{, }\item[{uint8\+\_\+t}]{val}{}\end{DoxyParamCaption})}
+
+
+
+Wake up duration event.\+[set]\+ 1LSb = 1 /\+ ODR. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read /\+ write interface definitions \\
+\hline
+{\em val} & change the values of wake\+\_\+dur in reg WAKE\+\_\+\+UP\+\_\+\+DUR \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY:\+ return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group___l_s_m6_d_s_o32___wake___up__event_ga58f73dba108d3705246510fe2215135c}\index{LSM6DSO32\_Wake\_Up\_event@{LSM6DSO32\_Wake\_Up\_event}!lsm6dso32\_wkup\_threshold\_get@{lsm6dso32\_wkup\_threshold\_get}}
+\index{lsm6dso32\_wkup\_threshold\_get@{lsm6dso32\_wkup\_threshold\_get}!LSM6DSO32\_Wake\_Up\_event@{LSM6DSO32\_Wake\_Up\_event}}
+\doxysubsubsection{\texorpdfstring{lsm6dso32\_wkup\_threshold\_get()}{lsm6dso32\_wkup\_threshold\_get()}}
+{\footnotesize\ttfamily \label{group___l_s_m6_d_s_o32___wake___up__event_ga58f73dba108d3705246510fe2215135c} 
+int32\+\_\+t lsm6dso32\+\_\+wkup\+\_\+threshold\+\_\+get (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx}{, }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{val}{}\end{DoxyParamCaption})}
+
+
+
+Threshold for wakeup:\+ 1 LSB weight depends on WAKE\+\_\+\+THS\+\_\+W in WAKE\+\_\+\+UP\+\_\+\+DUR.\+[get]\+. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read /\+ write interface definitions \\
+\hline
+{\em val} & change the values of wk\+\_\+ths in reg WAKE\+\_\+\+UP\+\_\+\+THS \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY:\+ return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group___l_s_m6_d_s_o32___wake___up__event_gaf4b3909a876f6b30e0ce9bce59d29b48}\index{LSM6DSO32\_Wake\_Up\_event@{LSM6DSO32\_Wake\_Up\_event}!lsm6dso32\_wkup\_threshold\_set@{lsm6dso32\_wkup\_threshold\_set}}
+\index{lsm6dso32\_wkup\_threshold\_set@{lsm6dso32\_wkup\_threshold\_set}!LSM6DSO32\_Wake\_Up\_event@{LSM6DSO32\_Wake\_Up\_event}}
+\doxysubsubsection{\texorpdfstring{lsm6dso32\_wkup\_threshold\_set()}{lsm6dso32\_wkup\_threshold\_set()}}
+{\footnotesize\ttfamily \label{group___l_s_m6_d_s_o32___wake___up__event_gaf4b3909a876f6b30e0ce9bce59d29b48} 
+int32\+\_\+t lsm6dso32\+\_\+wkup\+\_\+threshold\+\_\+set (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx}{, }\item[{uint8\+\_\+t}]{val}{}\end{DoxyParamCaption})}
+
+
+
+Threshold for wakeup:\+ 1 LSB weight depends on WAKE\+\_\+\+THS\+\_\+W in WAKE\+\_\+\+UP\+\_\+\+DUR.\+[set]\+. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read /\+ write interface definitions \\
+\hline
+{\em val} & change the values of wk\+\_\+ths in reg WAKE\+\_\+\+UP\+\_\+\+THS \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY:\+ return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group___l_s_m6_d_s_o32___wake___up__event_ga1f99084f4b668581b469ae3d82db032c}\index{LSM6DSO32\_Wake\_Up\_event@{LSM6DSO32\_Wake\_Up\_event}!lsm6dso32\_wkup\_ths\_weight\_get@{lsm6dso32\_wkup\_ths\_weight\_get}}
+\index{lsm6dso32\_wkup\_ths\_weight\_get@{lsm6dso32\_wkup\_ths\_weight\_get}!LSM6DSO32\_Wake\_Up\_event@{LSM6DSO32\_Wake\_Up\_event}}
+\doxysubsubsection{\texorpdfstring{lsm6dso32\_wkup\_ths\_weight\_get()}{lsm6dso32\_wkup\_ths\_weight\_get()}}
+{\footnotesize\ttfamily \label{group___l_s_m6_d_s_o32___wake___up__event_ga1f99084f4b668581b469ae3d82db032c} 
+int32\+\_\+t lsm6dso32\+\_\+wkup\+\_\+ths\+\_\+weight\+\_\+get (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx}{, }\item[{lsm6dso32\+\_\+wake\+\_\+ths\+\_\+w\+\_\+t \texorpdfstring{$\ast$}{*}}]{val}{}\end{DoxyParamCaption})}
+
+
+
+Weight of 1 LSB of wakeup threshold.\+[get]\+ 0:\+ 1 LSB =FS\+\_\+\+XL /\+ 64 1:\+ 1 LSB = FS\+\_\+\+XL /\+ 256. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read /\+ write interface definitions \\
+\hline
+{\em val} & Get the values of wake\+\_\+ths\+\_\+w in reg WAKE\+\_\+\+UP\+\_\+\+DUR \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY:\+ return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group___l_s_m6_d_s_o32___wake___up__event_gad76473c1fe763c5c7f35a02b154fa64a}\index{LSM6DSO32\_Wake\_Up\_event@{LSM6DSO32\_Wake\_Up\_event}!lsm6dso32\_wkup\_ths\_weight\_set@{lsm6dso32\_wkup\_ths\_weight\_set}}
+\index{lsm6dso32\_wkup\_ths\_weight\_set@{lsm6dso32\_wkup\_ths\_weight\_set}!LSM6DSO32\_Wake\_Up\_event@{LSM6DSO32\_Wake\_Up\_event}}
+\doxysubsubsection{\texorpdfstring{lsm6dso32\_wkup\_ths\_weight\_set()}{lsm6dso32\_wkup\_ths\_weight\_set()}}
+{\footnotesize\ttfamily \label{group___l_s_m6_d_s_o32___wake___up__event_gad76473c1fe763c5c7f35a02b154fa64a} 
+int32\+\_\+t lsm6dso32\+\_\+wkup\+\_\+ths\+\_\+weight\+\_\+set (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx}{, }\item[{lsm6dso32\+\_\+wake\+\_\+ths\+\_\+w\+\_\+t}]{val}{}\end{DoxyParamCaption})}
+
+
+
+Weight of 1 LSB of wakeup threshold.\+[set]\+ 0:\+ 1 LSB =FS\+\_\+\+XL /\+ 64 1:\+ 1 LSB = FS\+\_\+\+XL /\+ 256. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read /\+ write interface definitions \\
+\hline
+{\em val} & change the values of wake\+\_\+ths\+\_\+w in reg WAKE\+\_\+\+UP\+\_\+\+DUR \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY:\+ return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group___l_s_m6_d_s_o32___wake___up__event_ga2bd8a120b4f2d919a62d4e9b8c5faf87}\index{LSM6DSO32\_Wake\_Up\_event@{LSM6DSO32\_Wake\_Up\_event}!lsm6dso32\_xl\_usr\_offset\_on\_wkup\_get@{lsm6dso32\_xl\_usr\_offset\_on\_wkup\_get}}
+\index{lsm6dso32\_xl\_usr\_offset\_on\_wkup\_get@{lsm6dso32\_xl\_usr\_offset\_on\_wkup\_get}!LSM6DSO32\_Wake\_Up\_event@{LSM6DSO32\_Wake\_Up\_event}}
+\doxysubsubsection{\texorpdfstring{lsm6dso32\_xl\_usr\_offset\_on\_wkup\_get()}{lsm6dso32\_xl\_usr\_offset\_on\_wkup\_get()}}
+{\footnotesize\ttfamily \label{group___l_s_m6_d_s_o32___wake___up__event_ga2bd8a120b4f2d919a62d4e9b8c5faf87} 
+int32\+\_\+t lsm6dso32\+\_\+xl\+\_\+usr\+\_\+offset\+\_\+on\+\_\+wkup\+\_\+get (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx}{, }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{val}{}\end{DoxyParamCaption})}
+
+
+
+Wake up duration event.\+[get]\+ 1LSb = 1 /\+ ODR. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read /\+ write interface definitions \\
+\hline
+{\em val} & change the values of usr\+\_\+off\+\_\+on\+\_\+wu in reg WAKE\+\_\+\+UP\+\_\+\+THS \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY:\+ return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group___l_s_m6_d_s_o32___wake___up__event_gac1ec8a2cca9cdc5568f5359bd7253908}\index{LSM6DSO32\_Wake\_Up\_event@{LSM6DSO32\_Wake\_Up\_event}!lsm6dso32\_xl\_usr\_offset\_on\_wkup\_set@{lsm6dso32\_xl\_usr\_offset\_on\_wkup\_set}}
+\index{lsm6dso32\_xl\_usr\_offset\_on\_wkup\_set@{lsm6dso32\_xl\_usr\_offset\_on\_wkup\_set}!LSM6DSO32\_Wake\_Up\_event@{LSM6DSO32\_Wake\_Up\_event}}
+\doxysubsubsection{\texorpdfstring{lsm6dso32\_xl\_usr\_offset\_on\_wkup\_set()}{lsm6dso32\_xl\_usr\_offset\_on\_wkup\_set()}}
+{\footnotesize\ttfamily \label{group___l_s_m6_d_s_o32___wake___up__event_gac1ec8a2cca9cdc5568f5359bd7253908} 
+int32\+\_\+t lsm6dso32\+\_\+xl\+\_\+usr\+\_\+offset\+\_\+on\+\_\+wkup\+\_\+set (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx}{, }\item[{uint8\+\_\+t}]{val}{}\end{DoxyParamCaption})}
+
+
+
+Wake up duration event.\+[set]\+ 1LSb = 1 /\+ ODR. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read /\+ write interface definitions \\
+\hline
+{\em val} & change the values of usr\+\_\+off\+\_\+on\+\_\+wu in reg WAKE\+\_\+\+UP\+\_\+\+THS \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY:\+ return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}

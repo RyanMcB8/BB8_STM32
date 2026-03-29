@@ -1,0 +1,595 @@
+\doxysection{LSM6\+DSO32\+\_\+\+Sensor\+\_\+hub }
+\hypertarget{group___l_s_m6_d_s_o32___sensor__hub}{}\label{group___l_s_m6_d_s_o32___sensor__hub}\index{LSM6DSO32\_Sensor\_hub@{LSM6DSO32\_Sensor\_hub}}
+
+
+This section groups all the functions that manage the sensor hub.  
+
+
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___sensor__hub_ga6705aaa9ae77ddc42812b642280208b8}{lsm6dso32\+\_\+sh\+\_\+read\+\_\+data\+\_\+raw\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \doxymbox{\hyperlink{structlsm6dso32__emb__sh__read__t}{lsm6dso32\+\_\+emb\+\_\+sh\+\_\+read\+\_\+t}} \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Sensor hub output registers.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___sensor__hub_ga1685856c29b16c85be0e2517fb9e858a}{lsm6dso32\+\_\+sh\+\_\+slave\+\_\+connected\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+aux\+\_\+sens\+\_\+on\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Number of external sensors to be read by the sensor hub.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___sensor__hub_ga247f656346952e1f62298ad347c62fed}{lsm6dso32\+\_\+sh\+\_\+slave\+\_\+connected\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+aux\+\_\+sens\+\_\+on\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Number of external sensors to be read by the sensor hub.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___sensor__hub_ga217c3ab42c59544a5fd0d690be1cf49c}{lsm6dso32\+\_\+sh\+\_\+master\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Sensor hub I2C master enable.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___sensor__hub_ga290060cfc510755ce6781c34a99d0355}{lsm6dso32\+\_\+sh\+\_\+master\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Sensor hub I2C master enable.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___sensor__hub_gaa70978e8c0f46f1b4863cd031202a05d}{lsm6dso32\+\_\+sh\+\_\+pin\+\_\+mode\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+shub\+\_\+pu\+\_\+en\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Master I2C pull-\/up enable.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___sensor__hub_gab5c6cb534577410a29a800b40022c65e}{lsm6dso32\+\_\+sh\+\_\+pin\+\_\+mode\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+shub\+\_\+pu\+\_\+en\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Master I2C pull-\/up enable.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___sensor__hub_ga66362abb752f7f1c987bd1eda07095c6}{lsm6dso32\+\_\+sh\+\_\+pass\+\_\+through\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em I2C interface pass-\/through.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___sensor__hub_ga5dd263f61a07559bb5b02d2d1214569e}{lsm6dso32\+\_\+sh\+\_\+pass\+\_\+through\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em I2C interface pass-\/through.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___sensor__hub_gabf9e9cf31780bf394ec9a5bde840f588}{lsm6dso32\+\_\+sh\+\_\+syncro\+\_\+mode\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+start\+\_\+config\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Sensor hub trigger signal selection.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___sensor__hub_gaee2e610d88d66b2182e4a0a1f733e44b}{lsm6dso32\+\_\+sh\+\_\+syncro\+\_\+mode\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+start\+\_\+config\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Sensor hub trigger signal selection.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___sensor__hub_ga0e1852c9a3a8e4290fe528f46dbbcb9f}{lsm6dso32\+\_\+sh\+\_\+write\+\_\+mode\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+write\+\_\+once\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Slave 0 write operation is performed only at the first sensor hub cycle.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___sensor__hub_gafc9d75fd5d6b1816a53b0dd9fd912f03}{lsm6dso32\+\_\+sh\+\_\+write\+\_\+mode\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+write\+\_\+once\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Slave 0 write operation is performed only at the first sensor hub cycle.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___sensor__hub_ga43a181186192be54158843b362d44c30}{lsm6dso32\+\_\+sh\+\_\+reset\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx)
+\begin{DoxyCompactList}\small\item\em Reset Master logic and output registers.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___sensor__hub_ga84b265026ba4c9cc436d434396ccc456}{lsm6dso32\+\_\+sh\+\_\+reset\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Reset Master logic and output registers.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___sensor__hub_gaa02de053c5b2a0ba87ffbfd4a730cd1d}{lsm6dso32\+\_\+sh\+\_\+data\+\_\+rate\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+shub\+\_\+odr\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Rate at which the master communicates.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___sensor__hub_ga2a7563ce007c602845f4a59387efc10c}{lsm6dso32\+\_\+sh\+\_\+data\+\_\+rate\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+shub\+\_\+odr\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Rate at which the master communicates.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___sensor__hub_ga86f90cf65a6301c559ef1ccd1dc9d2f1}{lsm6dso32\+\_\+sh\+\_\+cfg\+\_\+write}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \doxymbox{\hyperlink{structlsm6dso32__sh__cfg__write__t}{lsm6dso32\+\_\+sh\+\_\+cfg\+\_\+write\+\_\+t}} \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Configure slave 0 for perform a write.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___sensor__hub_ga7b2a7b0bdef9ebcb572eb144384099b4}{lsm6dso32\+\_\+sh\+\_\+slv0\+\_\+cfg\+\_\+read}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \doxymbox{\hyperlink{structlsm6dso32__sh__cfg__read__t}{lsm6dso32\+\_\+sh\+\_\+cfg\+\_\+read\+\_\+t}} \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Configure slave 0 for perform a read.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___sensor__hub_ga064769ff8f31797d6540ed20fc40f7d4}{lsm6dso32\+\_\+sh\+\_\+slv1\+\_\+cfg\+\_\+read}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \doxymbox{\hyperlink{structlsm6dso32__sh__cfg__read__t}{lsm6dso32\+\_\+sh\+\_\+cfg\+\_\+read\+\_\+t}} \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Configure slave 0 for perform a write/\+read.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___sensor__hub_ga30b271bc551e956489aa21e3d5be8a56}{lsm6dso32\+\_\+sh\+\_\+slv2\+\_\+cfg\+\_\+read}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \doxymbox{\hyperlink{structlsm6dso32__sh__cfg__read__t}{lsm6dso32\+\_\+sh\+\_\+cfg\+\_\+read\+\_\+t}} \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Configure slave 0 for perform a write/\+read.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___sensor__hub_ga701c09fd06eed9527d209e7fba974230}{lsm6dso32\+\_\+sh\+\_\+slv3\+\_\+cfg\+\_\+read}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \doxymbox{\hyperlink{structlsm6dso32__sh__cfg__read__t}{lsm6dso32\+\_\+sh\+\_\+cfg\+\_\+read\+\_\+t}} \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Configure slave 0 for perform a write/\+read.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___sensor__hub_gade87b8613449832811ce2ad54bed4927}{lsm6dso32\+\_\+sh\+\_\+status\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, \doxymbox{\hyperlink{structlsm6dso32__status__master__t}{lsm6dso32\+\_\+status\+\_\+master\+\_\+t}} \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Sensor hub source register.\+[get]\+. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This section groups all the functions that manage the sensor hub. 
+
+
+
+\label{doc-func-members}
+\Hypertarget{group___l_s_m6_d_s_o32___sensor__hub_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{group___l_s_m6_d_s_o32___sensor__hub_ga86f90cf65a6301c559ef1ccd1dc9d2f1}\index{LSM6DSO32\_Sensor\_hub@{LSM6DSO32\_Sensor\_hub}!lsm6dso32\_sh\_cfg\_write@{lsm6dso32\_sh\_cfg\_write}}
+\index{lsm6dso32\_sh\_cfg\_write@{lsm6dso32\_sh\_cfg\_write}!LSM6DSO32\_Sensor\_hub@{LSM6DSO32\_Sensor\_hub}}
+\doxysubsubsection{\texorpdfstring{lsm6dso32\_sh\_cfg\_write()}{lsm6dso32\_sh\_cfg\_write()}}
+{\footnotesize\ttfamily \label{group___l_s_m6_d_s_o32___sensor__hub_ga86f90cf65a6301c559ef1ccd1dc9d2f1} 
+int32\+\_\+t lsm6dso32\+\_\+sh\+\_\+cfg\+\_\+write (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx}{, }\item[{\doxymbox{\hyperlink{structlsm6dso32__sh__cfg__write__t}{lsm6dso32\+\_\+sh\+\_\+cfg\+\_\+write\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{val}{}\end{DoxyParamCaption})}
+
+
+
+Configure slave 0 for perform a write.\+[set]\+. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read /\+ write interface definitions \\
+\hline
+{\em val} & a structure that contain
+\begin{DoxyItemize}
+\item uint8\+\_\+t slv1\+\_\+add; 8 bit i2c device address
+\item uint8\+\_\+t slv1\+\_\+subadd; 8 bit register device address
+\item uint8\+\_\+t slv1\+\_\+data; 8 bit data to write 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY:\+ return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group___l_s_m6_d_s_o32___sensor__hub_ga2a7563ce007c602845f4a59387efc10c}\index{LSM6DSO32\_Sensor\_hub@{LSM6DSO32\_Sensor\_hub}!lsm6dso32\_sh\_data\_rate\_get@{lsm6dso32\_sh\_data\_rate\_get}}
+\index{lsm6dso32\_sh\_data\_rate\_get@{lsm6dso32\_sh\_data\_rate\_get}!LSM6DSO32\_Sensor\_hub@{LSM6DSO32\_Sensor\_hub}}
+\doxysubsubsection{\texorpdfstring{lsm6dso32\_sh\_data\_rate\_get()}{lsm6dso32\_sh\_data\_rate\_get()}}
+{\footnotesize\ttfamily \label{group___l_s_m6_d_s_o32___sensor__hub_ga2a7563ce007c602845f4a59387efc10c} 
+int32\+\_\+t lsm6dso32\+\_\+sh\+\_\+data\+\_\+rate\+\_\+get (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx}{, }\item[{lsm6dso32\+\_\+shub\+\_\+odr\+\_\+t \texorpdfstring{$\ast$}{*}}]{val}{}\end{DoxyParamCaption})}
+
+
+
+Rate at which the master communicates.\+[get]\+. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read /\+ write interface definitions \\
+\hline
+{\em val} & Get the values of shub\+\_\+odr in reg slv1\+\_\+\+CONFIG \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY:\+ return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group___l_s_m6_d_s_o32___sensor__hub_gaa02de053c5b2a0ba87ffbfd4a730cd1d}\index{LSM6DSO32\_Sensor\_hub@{LSM6DSO32\_Sensor\_hub}!lsm6dso32\_sh\_data\_rate\_set@{lsm6dso32\_sh\_data\_rate\_set}}
+\index{lsm6dso32\_sh\_data\_rate\_set@{lsm6dso32\_sh\_data\_rate\_set}!LSM6DSO32\_Sensor\_hub@{LSM6DSO32\_Sensor\_hub}}
+\doxysubsubsection{\texorpdfstring{lsm6dso32\_sh\_data\_rate\_set()}{lsm6dso32\_sh\_data\_rate\_set()}}
+{\footnotesize\ttfamily \label{group___l_s_m6_d_s_o32___sensor__hub_gaa02de053c5b2a0ba87ffbfd4a730cd1d} 
+int32\+\_\+t lsm6dso32\+\_\+sh\+\_\+data\+\_\+rate\+\_\+set (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx}{, }\item[{lsm6dso32\+\_\+shub\+\_\+odr\+\_\+t}]{val}{}\end{DoxyParamCaption})}
+
+
+
+Rate at which the master communicates.\+[set]\+. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read /\+ write interface definitions \\
+\hline
+{\em val} & change the values of shub\+\_\+odr in reg slv1\+\_\+\+CONFIG \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY:\+ return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group___l_s_m6_d_s_o32___sensor__hub_ga290060cfc510755ce6781c34a99d0355}\index{LSM6DSO32\_Sensor\_hub@{LSM6DSO32\_Sensor\_hub}!lsm6dso32\_sh\_master\_get@{lsm6dso32\_sh\_master\_get}}
+\index{lsm6dso32\_sh\_master\_get@{lsm6dso32\_sh\_master\_get}!LSM6DSO32\_Sensor\_hub@{LSM6DSO32\_Sensor\_hub}}
+\doxysubsubsection{\texorpdfstring{lsm6dso32\_sh\_master\_get()}{lsm6dso32\_sh\_master\_get()}}
+{\footnotesize\ttfamily \label{group___l_s_m6_d_s_o32___sensor__hub_ga290060cfc510755ce6781c34a99d0355} 
+int32\+\_\+t lsm6dso32\+\_\+sh\+\_\+master\+\_\+get (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx}{, }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{val}{}\end{DoxyParamCaption})}
+
+
+
+Sensor hub I2C master enable.\+[get]\+. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read /\+ write interface definitions \\
+\hline
+{\em val} & change the values of master\+\_\+on in reg MASTER\+\_\+\+CONFIG \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY:\+ return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group___l_s_m6_d_s_o32___sensor__hub_ga217c3ab42c59544a5fd0d690be1cf49c}\index{LSM6DSO32\_Sensor\_hub@{LSM6DSO32\_Sensor\_hub}!lsm6dso32\_sh\_master\_set@{lsm6dso32\_sh\_master\_set}}
+\index{lsm6dso32\_sh\_master\_set@{lsm6dso32\_sh\_master\_set}!LSM6DSO32\_Sensor\_hub@{LSM6DSO32\_Sensor\_hub}}
+\doxysubsubsection{\texorpdfstring{lsm6dso32\_sh\_master\_set()}{lsm6dso32\_sh\_master\_set()}}
+{\footnotesize\ttfamily \label{group___l_s_m6_d_s_o32___sensor__hub_ga217c3ab42c59544a5fd0d690be1cf49c} 
+int32\+\_\+t lsm6dso32\+\_\+sh\+\_\+master\+\_\+set (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx}{, }\item[{uint8\+\_\+t}]{val}{}\end{DoxyParamCaption})}
+
+
+
+Sensor hub I2C master enable.\+[set]\+. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read /\+ write interface definitions \\
+\hline
+{\em val} & change the values of master\+\_\+on in reg MASTER\+\_\+\+CONFIG \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY:\+ return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group___l_s_m6_d_s_o32___sensor__hub_ga5dd263f61a07559bb5b02d2d1214569e}\index{LSM6DSO32\_Sensor\_hub@{LSM6DSO32\_Sensor\_hub}!lsm6dso32\_sh\_pass\_through\_get@{lsm6dso32\_sh\_pass\_through\_get}}
+\index{lsm6dso32\_sh\_pass\_through\_get@{lsm6dso32\_sh\_pass\_through\_get}!LSM6DSO32\_Sensor\_hub@{LSM6DSO32\_Sensor\_hub}}
+\doxysubsubsection{\texorpdfstring{lsm6dso32\_sh\_pass\_through\_get()}{lsm6dso32\_sh\_pass\_through\_get()}}
+{\footnotesize\ttfamily \label{group___l_s_m6_d_s_o32___sensor__hub_ga5dd263f61a07559bb5b02d2d1214569e} 
+int32\+\_\+t lsm6dso32\+\_\+sh\+\_\+pass\+\_\+through\+\_\+get (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx}{, }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{val}{}\end{DoxyParamCaption})}
+
+
+
+I2C interface pass-\/through.\+[get]\+. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read /\+ write interface definitions \\
+\hline
+{\em val} & change the values of pass\+\_\+through\+\_\+mode in reg MASTER\+\_\+\+CONFIG \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY:\+ return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group___l_s_m6_d_s_o32___sensor__hub_ga66362abb752f7f1c987bd1eda07095c6}\index{LSM6DSO32\_Sensor\_hub@{LSM6DSO32\_Sensor\_hub}!lsm6dso32\_sh\_pass\_through\_set@{lsm6dso32\_sh\_pass\_through\_set}}
+\index{lsm6dso32\_sh\_pass\_through\_set@{lsm6dso32\_sh\_pass\_through\_set}!LSM6DSO32\_Sensor\_hub@{LSM6DSO32\_Sensor\_hub}}
+\doxysubsubsection{\texorpdfstring{lsm6dso32\_sh\_pass\_through\_set()}{lsm6dso32\_sh\_pass\_through\_set()}}
+{\footnotesize\ttfamily \label{group___l_s_m6_d_s_o32___sensor__hub_ga66362abb752f7f1c987bd1eda07095c6} 
+int32\+\_\+t lsm6dso32\+\_\+sh\+\_\+pass\+\_\+through\+\_\+set (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx}{, }\item[{uint8\+\_\+t}]{val}{}\end{DoxyParamCaption})}
+
+
+
+I2C interface pass-\/through.\+[set]\+. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read /\+ write interface definitions \\
+\hline
+{\em val} & change the values of pass\+\_\+through\+\_\+mode in reg MASTER\+\_\+\+CONFIG \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY:\+ return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group___l_s_m6_d_s_o32___sensor__hub_gab5c6cb534577410a29a800b40022c65e}\index{LSM6DSO32\_Sensor\_hub@{LSM6DSO32\_Sensor\_hub}!lsm6dso32\_sh\_pin\_mode\_get@{lsm6dso32\_sh\_pin\_mode\_get}}
+\index{lsm6dso32\_sh\_pin\_mode\_get@{lsm6dso32\_sh\_pin\_mode\_get}!LSM6DSO32\_Sensor\_hub@{LSM6DSO32\_Sensor\_hub}}
+\doxysubsubsection{\texorpdfstring{lsm6dso32\_sh\_pin\_mode\_get()}{lsm6dso32\_sh\_pin\_mode\_get()}}
+{\footnotesize\ttfamily \label{group___l_s_m6_d_s_o32___sensor__hub_gab5c6cb534577410a29a800b40022c65e} 
+int32\+\_\+t lsm6dso32\+\_\+sh\+\_\+pin\+\_\+mode\+\_\+get (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx}{, }\item[{lsm6dso32\+\_\+shub\+\_\+pu\+\_\+en\+\_\+t \texorpdfstring{$\ast$}{*}}]{val}{}\end{DoxyParamCaption})}
+
+
+
+Master I2C pull-\/up enable.\+[get]\+. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read /\+ write interface definitions \\
+\hline
+{\em val} & Get the values of shub\+\_\+pu\+\_\+en in reg MASTER\+\_\+\+CONFIG \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY:\+ return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group___l_s_m6_d_s_o32___sensor__hub_gaa70978e8c0f46f1b4863cd031202a05d}\index{LSM6DSO32\_Sensor\_hub@{LSM6DSO32\_Sensor\_hub}!lsm6dso32\_sh\_pin\_mode\_set@{lsm6dso32\_sh\_pin\_mode\_set}}
+\index{lsm6dso32\_sh\_pin\_mode\_set@{lsm6dso32\_sh\_pin\_mode\_set}!LSM6DSO32\_Sensor\_hub@{LSM6DSO32\_Sensor\_hub}}
+\doxysubsubsection{\texorpdfstring{lsm6dso32\_sh\_pin\_mode\_set()}{lsm6dso32\_sh\_pin\_mode\_set()}}
+{\footnotesize\ttfamily \label{group___l_s_m6_d_s_o32___sensor__hub_gaa70978e8c0f46f1b4863cd031202a05d} 
+int32\+\_\+t lsm6dso32\+\_\+sh\+\_\+pin\+\_\+mode\+\_\+set (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx}{, }\item[{lsm6dso32\+\_\+shub\+\_\+pu\+\_\+en\+\_\+t}]{val}{}\end{DoxyParamCaption})}
+
+
+
+Master I2C pull-\/up enable.\+[set]\+. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read /\+ write interface definitions \\
+\hline
+{\em val} & change the values of shub\+\_\+pu\+\_\+en in reg MASTER\+\_\+\+CONFIG \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY:\+ return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group___l_s_m6_d_s_o32___sensor__hub_ga6705aaa9ae77ddc42812b642280208b8}\index{LSM6DSO32\_Sensor\_hub@{LSM6DSO32\_Sensor\_hub}!lsm6dso32\_sh\_read\_data\_raw\_get@{lsm6dso32\_sh\_read\_data\_raw\_get}}
+\index{lsm6dso32\_sh\_read\_data\_raw\_get@{lsm6dso32\_sh\_read\_data\_raw\_get}!LSM6DSO32\_Sensor\_hub@{LSM6DSO32\_Sensor\_hub}}
+\doxysubsubsection{\texorpdfstring{lsm6dso32\_sh\_read\_data\_raw\_get()}{lsm6dso32\_sh\_read\_data\_raw\_get()}}
+{\footnotesize\ttfamily \label{group___l_s_m6_d_s_o32___sensor__hub_ga6705aaa9ae77ddc42812b642280208b8} 
+int32\+\_\+t lsm6dso32\+\_\+sh\+\_\+read\+\_\+data\+\_\+raw\+\_\+get (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx}{, }\item[{\doxymbox{\hyperlink{structlsm6dso32__emb__sh__read__t}{lsm6dso32\+\_\+emb\+\_\+sh\+\_\+read\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{val}{}\end{DoxyParamCaption})}
+
+
+
+Sensor hub output registers.\+[get]\+. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read /\+ write interface definitions \\
+\hline
+{\em val} & union of registers from SENSOR\+\_\+\+HUB\+\_\+1 to SENSOR\+\_\+\+HUB\+\_\+18 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY:\+ return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group___l_s_m6_d_s_o32___sensor__hub_ga84b265026ba4c9cc436d434396ccc456}\index{LSM6DSO32\_Sensor\_hub@{LSM6DSO32\_Sensor\_hub}!lsm6dso32\_sh\_reset\_get@{lsm6dso32\_sh\_reset\_get}}
+\index{lsm6dso32\_sh\_reset\_get@{lsm6dso32\_sh\_reset\_get}!LSM6DSO32\_Sensor\_hub@{LSM6DSO32\_Sensor\_hub}}
+\doxysubsubsection{\texorpdfstring{lsm6dso32\_sh\_reset\_get()}{lsm6dso32\_sh\_reset\_get()}}
+{\footnotesize\ttfamily \label{group___l_s_m6_d_s_o32___sensor__hub_ga84b265026ba4c9cc436d434396ccc456} 
+int32\+\_\+t lsm6dso32\+\_\+sh\+\_\+reset\+\_\+get (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx}{, }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{val}{}\end{DoxyParamCaption})}
+
+
+
+Reset Master logic and output registers.\+[get]\+. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read /\+ write interface definitions \\
+\hline
+{\em val} & change the values of rst\+\_\+master\+\_\+regs in reg MASTER\+\_\+\+CONFIG \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY:\+ return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group___l_s_m6_d_s_o32___sensor__hub_ga43a181186192be54158843b362d44c30}\index{LSM6DSO32\_Sensor\_hub@{LSM6DSO32\_Sensor\_hub}!lsm6dso32\_sh\_reset\_set@{lsm6dso32\_sh\_reset\_set}}
+\index{lsm6dso32\_sh\_reset\_set@{lsm6dso32\_sh\_reset\_set}!LSM6DSO32\_Sensor\_hub@{LSM6DSO32\_Sensor\_hub}}
+\doxysubsubsection{\texorpdfstring{lsm6dso32\_sh\_reset\_set()}{lsm6dso32\_sh\_reset\_set()}}
+{\footnotesize\ttfamily \label{group___l_s_m6_d_s_o32___sensor__hub_ga43a181186192be54158843b362d44c30} 
+int32\+\_\+t lsm6dso32\+\_\+sh\+\_\+reset\+\_\+set (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx}{}\end{DoxyParamCaption})}
+
+
+
+Reset Master logic and output registers.\+[set]\+. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read /\+ write interface definitions \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY:\+ return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group___l_s_m6_d_s_o32___sensor__hub_ga247f656346952e1f62298ad347c62fed}\index{LSM6DSO32\_Sensor\_hub@{LSM6DSO32\_Sensor\_hub}!lsm6dso32\_sh\_slave\_connected\_get@{lsm6dso32\_sh\_slave\_connected\_get}}
+\index{lsm6dso32\_sh\_slave\_connected\_get@{lsm6dso32\_sh\_slave\_connected\_get}!LSM6DSO32\_Sensor\_hub@{LSM6DSO32\_Sensor\_hub}}
+\doxysubsubsection{\texorpdfstring{lsm6dso32\_sh\_slave\_connected\_get()}{lsm6dso32\_sh\_slave\_connected\_get()}}
+{\footnotesize\ttfamily \label{group___l_s_m6_d_s_o32___sensor__hub_ga247f656346952e1f62298ad347c62fed} 
+int32\+\_\+t lsm6dso32\+\_\+sh\+\_\+slave\+\_\+connected\+\_\+get (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx}{, }\item[{lsm6dso32\+\_\+aux\+\_\+sens\+\_\+on\+\_\+t \texorpdfstring{$\ast$}{*}}]{val}{}\end{DoxyParamCaption})}
+
+
+
+Number of external sensors to be read by the sensor hub.\+[get]\+. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read /\+ write interface definitions \\
+\hline
+{\em val} & Get the values of aux\+\_\+sens\+\_\+on in reg MASTER\+\_\+\+CONFIG \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY:\+ return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group___l_s_m6_d_s_o32___sensor__hub_ga1685856c29b16c85be0e2517fb9e858a}\index{LSM6DSO32\_Sensor\_hub@{LSM6DSO32\_Sensor\_hub}!lsm6dso32\_sh\_slave\_connected\_set@{lsm6dso32\_sh\_slave\_connected\_set}}
+\index{lsm6dso32\_sh\_slave\_connected\_set@{lsm6dso32\_sh\_slave\_connected\_set}!LSM6DSO32\_Sensor\_hub@{LSM6DSO32\_Sensor\_hub}}
+\doxysubsubsection{\texorpdfstring{lsm6dso32\_sh\_slave\_connected\_set()}{lsm6dso32\_sh\_slave\_connected\_set()}}
+{\footnotesize\ttfamily \label{group___l_s_m6_d_s_o32___sensor__hub_ga1685856c29b16c85be0e2517fb9e858a} 
+int32\+\_\+t lsm6dso32\+\_\+sh\+\_\+slave\+\_\+connected\+\_\+set (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx}{, }\item[{lsm6dso32\+\_\+aux\+\_\+sens\+\_\+on\+\_\+t}]{val}{}\end{DoxyParamCaption})}
+
+
+
+Number of external sensors to be read by the sensor hub.\+[set]\+. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read /\+ write interface definitions \\
+\hline
+{\em val} & change the values of aux\+\_\+sens\+\_\+on in reg MASTER\+\_\+\+CONFIG \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY:\+ return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group___l_s_m6_d_s_o32___sensor__hub_ga7b2a7b0bdef9ebcb572eb144384099b4}\index{LSM6DSO32\_Sensor\_hub@{LSM6DSO32\_Sensor\_hub}!lsm6dso32\_sh\_slv0\_cfg\_read@{lsm6dso32\_sh\_slv0\_cfg\_read}}
+\index{lsm6dso32\_sh\_slv0\_cfg\_read@{lsm6dso32\_sh\_slv0\_cfg\_read}!LSM6DSO32\_Sensor\_hub@{LSM6DSO32\_Sensor\_hub}}
+\doxysubsubsection{\texorpdfstring{lsm6dso32\_sh\_slv0\_cfg\_read()}{lsm6dso32\_sh\_slv0\_cfg\_read()}}
+{\footnotesize\ttfamily \label{group___l_s_m6_d_s_o32___sensor__hub_ga7b2a7b0bdef9ebcb572eb144384099b4} 
+int32\+\_\+t lsm6dso32\+\_\+sh\+\_\+slv0\+\_\+cfg\+\_\+read (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx}{, }\item[{\doxymbox{\hyperlink{structlsm6dso32__sh__cfg__read__t}{lsm6dso32\+\_\+sh\+\_\+cfg\+\_\+read\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{val}{}\end{DoxyParamCaption})}
+
+
+
+Configure slave 0 for perform a read.\+[set]\+. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read /\+ write interface definitions \\
+\hline
+{\em val} & Structure that contain
+\begin{DoxyItemize}
+\item uint8\+\_\+t slv1\+\_\+add; 8 bit i2c device address
+\item uint8\+\_\+t slv1\+\_\+subadd; 8 bit register device address
+\item uint8\+\_\+t slv1\+\_\+len; num of bit to read 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY:\+ return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group___l_s_m6_d_s_o32___sensor__hub_ga064769ff8f31797d6540ed20fc40f7d4}\index{LSM6DSO32\_Sensor\_hub@{LSM6DSO32\_Sensor\_hub}!lsm6dso32\_sh\_slv1\_cfg\_read@{lsm6dso32\_sh\_slv1\_cfg\_read}}
+\index{lsm6dso32\_sh\_slv1\_cfg\_read@{lsm6dso32\_sh\_slv1\_cfg\_read}!LSM6DSO32\_Sensor\_hub@{LSM6DSO32\_Sensor\_hub}}
+\doxysubsubsection{\texorpdfstring{lsm6dso32\_sh\_slv1\_cfg\_read()}{lsm6dso32\_sh\_slv1\_cfg\_read()}}
+{\footnotesize\ttfamily \label{group___l_s_m6_d_s_o32___sensor__hub_ga064769ff8f31797d6540ed20fc40f7d4} 
+int32\+\_\+t lsm6dso32\+\_\+sh\+\_\+slv1\+\_\+cfg\+\_\+read (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx}{, }\item[{\doxymbox{\hyperlink{structlsm6dso32__sh__cfg__read__t}{lsm6dso32\+\_\+sh\+\_\+cfg\+\_\+read\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{val}{}\end{DoxyParamCaption})}
+
+
+
+Configure slave 0 for perform a write/\+read.\+[set]\+. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read /\+ write interface definitions \\
+\hline
+{\em val} & Structure that contain
+\begin{DoxyItemize}
+\item uint8\+\_\+t slv1\+\_\+add; 8 bit i2c device address
+\item uint8\+\_\+t slv1\+\_\+subadd; 8 bit register device address
+\item uint8\+\_\+t slv1\+\_\+len; num of bit to read 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY:\+ return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group___l_s_m6_d_s_o32___sensor__hub_ga30b271bc551e956489aa21e3d5be8a56}\index{LSM6DSO32\_Sensor\_hub@{LSM6DSO32\_Sensor\_hub}!lsm6dso32\_sh\_slv2\_cfg\_read@{lsm6dso32\_sh\_slv2\_cfg\_read}}
+\index{lsm6dso32\_sh\_slv2\_cfg\_read@{lsm6dso32\_sh\_slv2\_cfg\_read}!LSM6DSO32\_Sensor\_hub@{LSM6DSO32\_Sensor\_hub}}
+\doxysubsubsection{\texorpdfstring{lsm6dso32\_sh\_slv2\_cfg\_read()}{lsm6dso32\_sh\_slv2\_cfg\_read()}}
+{\footnotesize\ttfamily \label{group___l_s_m6_d_s_o32___sensor__hub_ga30b271bc551e956489aa21e3d5be8a56} 
+int32\+\_\+t lsm6dso32\+\_\+sh\+\_\+slv2\+\_\+cfg\+\_\+read (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx}{, }\item[{\doxymbox{\hyperlink{structlsm6dso32__sh__cfg__read__t}{lsm6dso32\+\_\+sh\+\_\+cfg\+\_\+read\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{val}{}\end{DoxyParamCaption})}
+
+
+
+Configure slave 0 for perform a write/\+read.\+[set]\+. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read /\+ write interface definitions \\
+\hline
+{\em val} & Structure that contain
+\begin{DoxyItemize}
+\item uint8\+\_\+t slv2\+\_\+add; 8 bit i2c device address
+\item uint8\+\_\+t slv2\+\_\+subadd; 8 bit register device address
+\item uint8\+\_\+t slv2\+\_\+len; num of bit to read 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY:\+ return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group___l_s_m6_d_s_o32___sensor__hub_ga701c09fd06eed9527d209e7fba974230}\index{LSM6DSO32\_Sensor\_hub@{LSM6DSO32\_Sensor\_hub}!lsm6dso32\_sh\_slv3\_cfg\_read@{lsm6dso32\_sh\_slv3\_cfg\_read}}
+\index{lsm6dso32\_sh\_slv3\_cfg\_read@{lsm6dso32\_sh\_slv3\_cfg\_read}!LSM6DSO32\_Sensor\_hub@{LSM6DSO32\_Sensor\_hub}}
+\doxysubsubsection{\texorpdfstring{lsm6dso32\_sh\_slv3\_cfg\_read()}{lsm6dso32\_sh\_slv3\_cfg\_read()}}
+{\footnotesize\ttfamily \label{group___l_s_m6_d_s_o32___sensor__hub_ga701c09fd06eed9527d209e7fba974230} 
+int32\+\_\+t lsm6dso32\+\_\+sh\+\_\+slv3\+\_\+cfg\+\_\+read (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx}{, }\item[{\doxymbox{\hyperlink{structlsm6dso32__sh__cfg__read__t}{lsm6dso32\+\_\+sh\+\_\+cfg\+\_\+read\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{val}{}\end{DoxyParamCaption})}
+
+
+
+Configure slave 0 for perform a write/\+read.\+[set]\+. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read /\+ write interface definitions \\
+\hline
+{\em val} & Structure that contain
+\begin{DoxyItemize}
+\item uint8\+\_\+t slv3\+\_\+add; 8 bit i2c device address
+\item uint8\+\_\+t slv3\+\_\+subadd; 8 bit register device address
+\item uint8\+\_\+t slv3\+\_\+len; num of bit to read 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY:\+ return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group___l_s_m6_d_s_o32___sensor__hub_gade87b8613449832811ce2ad54bed4927}\index{LSM6DSO32\_Sensor\_hub@{LSM6DSO32\_Sensor\_hub}!lsm6dso32\_sh\_status\_get@{lsm6dso32\_sh\_status\_get}}
+\index{lsm6dso32\_sh\_status\_get@{lsm6dso32\_sh\_status\_get}!LSM6DSO32\_Sensor\_hub@{LSM6DSO32\_Sensor\_hub}}
+\doxysubsubsection{\texorpdfstring{lsm6dso32\_sh\_status\_get()}{lsm6dso32\_sh\_status\_get()}}
+{\footnotesize\ttfamily \label{group___l_s_m6_d_s_o32___sensor__hub_gade87b8613449832811ce2ad54bed4927} 
+int32\+\_\+t lsm6dso32\+\_\+sh\+\_\+status\+\_\+get (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx}{, }\item[{\doxymbox{\hyperlink{structlsm6dso32__status__master__t}{lsm6dso32\+\_\+status\+\_\+master\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{val}{}\end{DoxyParamCaption})}
+
+
+
+Sensor hub source register.\+[get]\+. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read /\+ write interface definitions \\
+\hline
+{\em val} & union of registers from STATUS\+\_\+\+MASTER to \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY:\+ return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group___l_s_m6_d_s_o32___sensor__hub_gaee2e610d88d66b2182e4a0a1f733e44b}\index{LSM6DSO32\_Sensor\_hub@{LSM6DSO32\_Sensor\_hub}!lsm6dso32\_sh\_syncro\_mode\_get@{lsm6dso32\_sh\_syncro\_mode\_get}}
+\index{lsm6dso32\_sh\_syncro\_mode\_get@{lsm6dso32\_sh\_syncro\_mode\_get}!LSM6DSO32\_Sensor\_hub@{LSM6DSO32\_Sensor\_hub}}
+\doxysubsubsection{\texorpdfstring{lsm6dso32\_sh\_syncro\_mode\_get()}{lsm6dso32\_sh\_syncro\_mode\_get()}}
+{\footnotesize\ttfamily \label{group___l_s_m6_d_s_o32___sensor__hub_gaee2e610d88d66b2182e4a0a1f733e44b} 
+int32\+\_\+t lsm6dso32\+\_\+sh\+\_\+syncro\+\_\+mode\+\_\+get (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx}{, }\item[{lsm6dso32\+\_\+start\+\_\+config\+\_\+t \texorpdfstring{$\ast$}{*}}]{val}{}\end{DoxyParamCaption})}
+
+
+
+Sensor hub trigger signal selection.\+[get]\+. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read /\+ write interface definitions \\
+\hline
+{\em val} & Get the values of start\+\_\+config in reg MASTER\+\_\+\+CONFIG \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY:\+ return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group___l_s_m6_d_s_o32___sensor__hub_gabf9e9cf31780bf394ec9a5bde840f588}\index{LSM6DSO32\_Sensor\_hub@{LSM6DSO32\_Sensor\_hub}!lsm6dso32\_sh\_syncro\_mode\_set@{lsm6dso32\_sh\_syncro\_mode\_set}}
+\index{lsm6dso32\_sh\_syncro\_mode\_set@{lsm6dso32\_sh\_syncro\_mode\_set}!LSM6DSO32\_Sensor\_hub@{LSM6DSO32\_Sensor\_hub}}
+\doxysubsubsection{\texorpdfstring{lsm6dso32\_sh\_syncro\_mode\_set()}{lsm6dso32\_sh\_syncro\_mode\_set()}}
+{\footnotesize\ttfamily \label{group___l_s_m6_d_s_o32___sensor__hub_gabf9e9cf31780bf394ec9a5bde840f588} 
+int32\+\_\+t lsm6dso32\+\_\+sh\+\_\+syncro\+\_\+mode\+\_\+set (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx}{, }\item[{lsm6dso32\+\_\+start\+\_\+config\+\_\+t}]{val}{}\end{DoxyParamCaption})}
+
+
+
+Sensor hub trigger signal selection.\+[set]\+. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read /\+ write interface definitions \\
+\hline
+{\em val} & change the values of start\+\_\+config in reg MASTER\+\_\+\+CONFIG \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY:\+ return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group___l_s_m6_d_s_o32___sensor__hub_gafc9d75fd5d6b1816a53b0dd9fd912f03}\index{LSM6DSO32\_Sensor\_hub@{LSM6DSO32\_Sensor\_hub}!lsm6dso32\_sh\_write\_mode\_get@{lsm6dso32\_sh\_write\_mode\_get}}
+\index{lsm6dso32\_sh\_write\_mode\_get@{lsm6dso32\_sh\_write\_mode\_get}!LSM6DSO32\_Sensor\_hub@{LSM6DSO32\_Sensor\_hub}}
+\doxysubsubsection{\texorpdfstring{lsm6dso32\_sh\_write\_mode\_get()}{lsm6dso32\_sh\_write\_mode\_get()}}
+{\footnotesize\ttfamily \label{group___l_s_m6_d_s_o32___sensor__hub_gafc9d75fd5d6b1816a53b0dd9fd912f03} 
+int32\+\_\+t lsm6dso32\+\_\+sh\+\_\+write\+\_\+mode\+\_\+get (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx}{, }\item[{lsm6dso32\+\_\+write\+\_\+once\+\_\+t \texorpdfstring{$\ast$}{*}}]{val}{}\end{DoxyParamCaption})}
+
+
+
+Slave 0 write operation is performed only at the first sensor hub cycle.\+[get]\+. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read /\+ write interface definitions \\
+\hline
+{\em val} & Get the values of write\+\_\+once in reg MASTER\+\_\+\+CONFIG \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY:\+ return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group___l_s_m6_d_s_o32___sensor__hub_ga0e1852c9a3a8e4290fe528f46dbbcb9f}\index{LSM6DSO32\_Sensor\_hub@{LSM6DSO32\_Sensor\_hub}!lsm6dso32\_sh\_write\_mode\_set@{lsm6dso32\_sh\_write\_mode\_set}}
+\index{lsm6dso32\_sh\_write\_mode\_set@{lsm6dso32\_sh\_write\_mode\_set}!LSM6DSO32\_Sensor\_hub@{LSM6DSO32\_Sensor\_hub}}
+\doxysubsubsection{\texorpdfstring{lsm6dso32\_sh\_write\_mode\_set()}{lsm6dso32\_sh\_write\_mode\_set()}}
+{\footnotesize\ttfamily \label{group___l_s_m6_d_s_o32___sensor__hub_ga0e1852c9a3a8e4290fe528f46dbbcb9f} 
+int32\+\_\+t lsm6dso32\+\_\+sh\+\_\+write\+\_\+mode\+\_\+set (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx}{, }\item[{lsm6dso32\+\_\+write\+\_\+once\+\_\+t}]{val}{}\end{DoxyParamCaption})}
+
+
+
+Slave 0 write operation is performed only at the first sensor hub cycle.\+[set]\+. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read /\+ write interface definitions \\
+\hline
+{\em val} & change the values of write\+\_\+once in reg MASTER\+\_\+\+CONFIG \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY:\+ return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}

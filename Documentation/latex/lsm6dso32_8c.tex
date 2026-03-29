@@ -1,0 +1,108 @@
+\doxysection{C:\+/\+\+Users/\+ryanm/\+\+Documents/\+\+Design\+Group/\+\+BB8\+\_\+\+STM32/\+\+Firmware/\+\+Custom\+\_\+\+Drivers/\+\+Src/\+lsm6dso32.c File Reference}
+\hypertarget{lsm6dso32_8c}{}\label{lsm6dso32_8c}\index{C:/Users/ryanm/Documents/DesignGroup/BB8\_STM32/Firmware/Custom\_Drivers/Src/lsm6dso32.c@{C:/Users/ryanm/Documents/DesignGroup/BB8\_STM32/Firmware/Custom\_Drivers/Src/lsm6dso32.c}}
+
+
+LSM6\+DSO32 driver file.  
+
+
+{\ttfamily \+\#include "{}lsm6dso32.\+h"{}}\newline
+Include dependency graph for lsm6dso32.\+c:\+
+% FIG 0
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___private___function___prototypes_gaa2ecd76ab5ba9c6b023f4fba5f9e0a04}{LSM6\+DSO32\+\_\+\+ACC\+\_\+\+Set\+Output\+Data\+Rate\+\_\+\+When\+\_\+\+Enabled}} (\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6\+DSO32\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj, float\+\_\+t Odr)
+\begin{DoxyCompactList}\small\item\em Set the LSM6\+DSO32 accelerometer sensor output data rate when enabled. \end{DoxyCompactList}\item 
+static int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___private___function___prototypes_ga82ef14233487f76df328f61775e5d593}{LSM6\+DSO32\+\_\+\+ACC\+\_\+\+Set\+Output\+Data\+Rate\+\_\+\+When\+\_\+\+Disabled}} (\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6\+DSO32\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj, float\+\_\+t Odr)
+\begin{DoxyCompactList}\small\item\em Set the LSM6\+DSO32 accelerometer sensor output data rate when disabled. \end{DoxyCompactList}\item 
+static int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___private___function___prototypes_gabe9d5510a7f8bee64e2cd9765ad5ea17}{LSM6\+DSO32\+\_\+\+GYRO\+\_\+\+Set\+Output\+Data\+Rate\+\_\+\+When\+\_\+\+Enabled}} (\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6\+DSO32\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj, float\+\_\+t Odr)
+\begin{DoxyCompactList}\small\item\em Set the LSM6\+DSO32 gyroscope sensor output data rate when enabled. \end{DoxyCompactList}\item 
+static int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___private___function___prototypes_gaac634ba7de77657fcce67c2b1da4d9cc}{LSM6\+DSO32\+\_\+\+GYRO\+\_\+\+Set\+Output\+Data\+Rate\+\_\+\+When\+\_\+\+Disabled}} (\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6\+DSO32\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj, float\+\_\+t Odr)
+\begin{DoxyCompactList}\small\item\em Set the LSM6\+DSO32 gyroscope sensor output data rate when disabled. \end{DoxyCompactList}\item 
+static int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___private___function___prototypes_gaa4e12aec5b728f310304706268197a7f}{Read\+Reg\+Wrap}} (void \texorpdfstring{$\ast$}{*}Handle, uint8\+\_\+t Reg, uint8\+\_\+t \texorpdfstring{$\ast$}{*}p\+Data, uint16\+\_\+t Length)
+\begin{DoxyCompactList}\small\item\em Wrap Read register component function to Bus IO function. \end{DoxyCompactList}\item 
+static int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___private___function___prototypes_ga17d48f6c1367c01b249fa77c939c68a6}{Write\+Reg\+Wrap}} (void \texorpdfstring{$\ast$}{*}Handle, uint8\+\_\+t Reg, uint8\+\_\+t \texorpdfstring{$\ast$}{*}p\+Data, uint16\+\_\+t Length)
+\begin{DoxyCompactList}\small\item\em Wrap Write register component function to Bus IO function. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___exported___functions_ga11aff8499ff27572ea29326de162d850}{LSM6\+DSO32\+\_\+\+Register\+Bus\+IO}} (\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6\+DSO32\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj, \doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___i_o__t}{LSM6\+DSO32\+\_\+\+IO\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+IO)
+\begin{DoxyCompactList}\small\item\em Register Component Bus IO operations. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___exported___functions_gae1cef97d1d85138a04cd70da5892a342}{LSM6\+DSO32\+\_\+\+Init}} (\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6\+DSO32\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj)
+\begin{DoxyCompactList}\small\item\em Initialize the LSM6\+DSO32 sensor. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___exported___functions_ga5de0f6c94656a1aa25cc725a801f0a3d}{LSM6\+DSO32\+\_\+\+De\+Init}} (\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6\+DSO32\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj)
+\begin{DoxyCompactList}\small\item\em Deinitialize the LSM6\+DSO32 sensor. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___exported___functions_ga150360ba7ffb226d5de0c9451cbcac84}{LSM6\+DSO32\+\_\+\+Read\+ID}} (\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6\+DSO32\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj, uint8\+\_\+t \texorpdfstring{$\ast$}{*}Id)
+\begin{DoxyCompactList}\small\item\em Read component ID. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___exported___functions_ga84bcc198f533e55a8c7091374ce25502}{LSM6\+DSO32\+\_\+\+Get\+Capabilities}} (\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6\+DSO32\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj, \doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___capabilities__t}{LSM6\+DSO32\+\_\+\+Capabilities\+\_\+t}} \texorpdfstring{$\ast$}{*}Capabilities)
+\begin{DoxyCompactList}\small\item\em Get LSM6\+DSO32 sensor capabilities. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___exported___functions_ga93eb810fa2dc6fbf7071edfcd906ba55}{LSM6\+DSO32\+\_\+\+ACC\+\_\+\+Enable}} (\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6\+DSO32\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj)
+\begin{DoxyCompactList}\small\item\em Enable the LSM6\+DSO32 accelerometer sensor. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___exported___functions_ga00514bcd708417d8133993500eb9d03b}{LSM6\+DSO32\+\_\+\+ACC\+\_\+\+Disable}} (\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6\+DSO32\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj)
+\begin{DoxyCompactList}\small\item\em Disable the LSM6\+DSO32 accelerometer sensor. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___exported___functions_ga3d227e1d7e6707b7d0d93fd6a672a324}{LSM6\+DSO32\+\_\+\+ACC\+\_\+\+Get\+Sensitivity}} (\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6\+DSO32\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj, float\+\_\+t \texorpdfstring{$\ast$}{*}Sensitivity)
+\begin{DoxyCompactList}\small\item\em Get the LSM6\+DSO32 accelerometer sensor sensitivity. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___exported___functions_ga7e71a862f860bafef5e76ccbcd932187}{LSM6\+DSO32\+\_\+\+ACC\+\_\+\+Get\+Output\+Data\+Rate}} (\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6\+DSO32\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj, float\+\_\+t \texorpdfstring{$\ast$}{*}Odr)
+\begin{DoxyCompactList}\small\item\em Get the LSM6\+DSO32 accelerometer sensor output data rate. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___exported___functions_ga7d3787de56f4fd3f6e47c71503fb8e59}{LSM6\+DSO32\+\_\+\+ACC\+\_\+\+Set\+Output\+Data\+Rate}} (\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6\+DSO32\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj, float\+\_\+t Odr)
+\begin{DoxyCompactList}\small\item\em Set the LSM6\+DSO32 accelerometer sensor output data rate. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___exported___functions_gabb91f51cda3310f73135bdf7e3eadb7e}{LSM6\+DSO32\+\_\+\+ACC\+\_\+\+Set\+Output\+Data\+Rate\+\_\+\+With\+\_\+\+Mode}} (\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6\+DSO32\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj, float\+\_\+t Odr, LSM6\+DSO32\+\_\+\+ACC\+\_\+\+Operating\+\_\+\+Mode\+\_\+t Mode)
+\begin{DoxyCompactList}\small\item\em Set the LSM6\+DSO32 accelerometer sensor output data rate with operating mode. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___exported___functions_ga3602b42981f8b1d9bd78a2e9347f5ffd}{LSM6\+DSO32\+\_\+\+ACC\+\_\+\+Get\+Full\+Scale}} (\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6\+DSO32\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj, int32\+\_\+t \texorpdfstring{$\ast$}{*}Full\+Scale)
+\begin{DoxyCompactList}\small\item\em Get the LSM6\+DSO32 accelerometer sensor full scale. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___exported___functions_ga3202b692b7e1753b92c1f00206172867}{LSM6\+DSO32\+\_\+\+ACC\+\_\+\+Set\+Full\+Scale}} (\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6\+DSO32\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj, int32\+\_\+t Full\+Scale)
+\begin{DoxyCompactList}\small\item\em Set the LSM6\+DSO32 accelerometer sensor full scale. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___exported___functions_ga1deb0b5d91ce6afa7cace7765c3adfab}{LSM6\+DSO32\+\_\+\+ACC\+\_\+\+Get\+Axes\+Raw}} (\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6\+DSO32\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj, \doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___axes_raw__t}{LSM6\+DSO32\+\_\+\+Axes\+Raw\+\_\+t}} \texorpdfstring{$\ast$}{*}Value)
+\begin{DoxyCompactList}\small\item\em Get the LSM6\+DSO32 accelerometer sensor raw axes. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___exported___functions_ga743ce4d5e7a50b7d29970ed6b7e1f818}{LSM6\+DSO32\+\_\+\+ACC\+\_\+\+Get\+Axes}} (\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6\+DSO32\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj, \doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___axes__t}{LSM6\+DSO32\+\_\+\+Axes\+\_\+t}} \texorpdfstring{$\ast$}{*}Acceleration)
+\begin{DoxyCompactList}\small\item\em Get the LSM6\+DSO32 accelerometer sensor axes. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___exported___functions_ga67bb91b304ae1221925c23749de5d864}{LSM6\+DSO32\+\_\+\+GYRO\+\_\+\+Enable}} (\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6\+DSO32\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj)
+\begin{DoxyCompactList}\small\item\em Enable the LSM6\+DSO32 gyroscope sensor. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___exported___functions_ga998615e31de94c531025722231fb8d78}{LSM6\+DSO32\+\_\+\+GYRO\+\_\+\+Disable}} (\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6\+DSO32\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj)
+\begin{DoxyCompactList}\small\item\em Disable the LSM6\+DSO32 gyroscope sensor. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___exported___functions_gaf66bc1f6fe95635d7cb835b28bed8800}{LSM6\+DSO32\+\_\+\+GYRO\+\_\+\+Get\+Sensitivity}} (\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6\+DSO32\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj, float\+\_\+t \texorpdfstring{$\ast$}{*}Sensitivity)
+\begin{DoxyCompactList}\small\item\em Get the LSM6\+DSO32 gyroscope sensor sensitivity. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___exported___functions_gab227ad1c2216cb9c0128b1885b09d33b}{LSM6\+DSO32\+\_\+\+GYRO\+\_\+\+Get\+Output\+Data\+Rate}} (\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6\+DSO32\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj, float\+\_\+t \texorpdfstring{$\ast$}{*}Odr)
+\begin{DoxyCompactList}\small\item\em Get the LSM6\+DSO32 gyroscope sensor output data rate. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___exported___functions_ga0eb3f9628e321a955be9b2f8bc5ed9f2}{LSM6\+DSO32\+\_\+\+GYRO\+\_\+\+Set\+Output\+Data\+Rate}} (\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6\+DSO32\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj, float\+\_\+t Odr)
+\begin{DoxyCompactList}\small\item\em Set the LSM6\+DSO32 gyroscope sensor output data rate. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___exported___functions_gad47e8acc9908af596db33cfb55876805}{LSM6\+DSO32\+\_\+\+GYRO\+\_\+\+Set\+Output\+Data\+Rate\+\_\+\+With\+\_\+\+Mode}} (\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6\+DSO32\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj, float\+\_\+t Odr, LSM6\+DSO32\+\_\+\+GYRO\+\_\+\+Operating\+\_\+\+Mode\+\_\+t Mode)
+\begin{DoxyCompactList}\small\item\em Set the LSM6\+DSO32 gyroscope sensor output data rate with operating mode. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___exported___functions_gadc011c2c0ea0b598b3c1a8d3d618424f}{LSM6\+DSO32\+\_\+\+GYRO\+\_\+\+Get\+Full\+Scale}} (\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6\+DSO32\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj, int32\+\_\+t \texorpdfstring{$\ast$}{*}Full\+Scale)
+\begin{DoxyCompactList}\small\item\em Get the LSM6\+DSO32 gyroscope sensor full scale. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___exported___functions_gacb2df6b47c5d6ef897261758160ad610}{LSM6\+DSO32\+\_\+\+GYRO\+\_\+\+Set\+Full\+Scale}} (\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6\+DSO32\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj, int32\+\_\+t Full\+Scale)
+\begin{DoxyCompactList}\small\item\em Set the LSM6\+DSO32 gyroscope sensor full scale. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___exported___functions_gabb6ebb641850efc5ee3f8090eeed06cf}{LSM6\+DSO32\+\_\+\+GYRO\+\_\+\+Get\+Axes\+Raw}} (\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6\+DSO32\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj, \doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___axes_raw__t}{LSM6\+DSO32\+\_\+\+Axes\+Raw\+\_\+t}} \texorpdfstring{$\ast$}{*}Value)
+\begin{DoxyCompactList}\small\item\em Get the LSM6\+DSO32 gyroscope sensor raw axes. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___exported___functions_ga551615b8ea5610e625918d817e717c87}{LSM6\+DSO32\+\_\+\+GYRO\+\_\+\+Get\+Axes}} (\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6\+DSO32\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj, \doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___axes__t}{LSM6\+DSO32\+\_\+\+Axes\+\_\+t}} \texorpdfstring{$\ast$}{*}Angular\+Rate)
+\begin{DoxyCompactList}\small\item\em Get the LSM6\+DSO32 gyroscope sensor axes. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___exported___functions_gab2a8496b45fe6317364fd3863e2d82e3}{LSM6\+DSO32\+\_\+\+Read\+\_\+\+Reg}} (\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6\+DSO32\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj, uint8\+\_\+t Reg, uint8\+\_\+t \texorpdfstring{$\ast$}{*}Data)
+\begin{DoxyCompactList}\small\item\em Get the LSM6\+DSO32 register value. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___exported___functions_ga0b22103b87f6e5a4c5fea54a026bc851}{LSM6\+DSO32\+\_\+\+Write\+\_\+\+Reg}} (\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6\+DSO32\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj, uint8\+\_\+t Reg, uint8\+\_\+t Data)
+\begin{DoxyCompactList}\small\item\em Set the LSM6\+DSO32 register value. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___exported___functions_ga8c23fe107242bb6a8c1a2cc9009494b9}{LSM6\+DSO32\+\_\+\+ACC\+\_\+\+Get\+\_\+\+DRDY\+\_\+\+Status}} (\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6\+DSO32\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj, uint8\+\_\+t \texorpdfstring{$\ast$}{*}Status)
+\begin{DoxyCompactList}\small\item\em Get the LSM6\+DSO32 ACC data ready bit value. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___exported___functions_ga15b750708d0060fe358893a849b29016}{LSM6\+DSO32\+\_\+\+GYRO\+\_\+\+Get\+\_\+\+DRDY\+\_\+\+Status}} (\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6\+DSO32\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj, uint8\+\_\+t \texorpdfstring{$\ast$}{*}Status)
+\begin{DoxyCompactList}\small\item\em Get the LSM6\+DSO32 GYRO data ready bit value. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___exported___functions_gabaca91335633231a82e28d1c06d2dbd2}{LSM6\+DSO32\+\_\+\+Set\+\_\+\+Mem\+\_\+\+Bank}} (\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6\+DSO32\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj, uint8\+\_\+t Val)
+\begin{DoxyCompactList}\small\item\em Set memory bank. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___common_drv__t}{LSM6\+DSO32\+\_\+\+Common\+Drv\+\_\+t}} \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___exported___variables_ga1c19a120d51365477ac7e4c5f329c6a3}{LSM6\+DSO32\+\_\+\+COMMON\+\_\+\+Driver}}
+\item 
+\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___a_c_c___drv__t}{LSM6\+DSO32\+\_\+\+ACC\+\_\+\+Drv\+\_\+t}} \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___exported___variables_ga8e78b3852241e443154353d5eec8237f}{LSM6\+DSO32\+\_\+\+ACC\+\_\+\+Driver}}
+\item 
+\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___g_y_r_o___drv__t}{LSM6\+DSO32\+\_\+\+GYRO\+\_\+\+Drv\+\_\+t}} \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___exported___variables_gab512064f39890854a1926dbb77249846}{LSM6\+DSO32\+\_\+\+GYRO\+\_\+\+Driver}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+LSM6\+DSO32 driver file. 
+
+\begin{DoxyAuthor}{Author}
+MEMS Software Solutions Team 
+\end{DoxyAuthor}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+Copyright (c) 2020 STMicroelectronics. All rights reserved.
+
+This software is licensed under terms that can be found in the LICENSE file in the root directory of this software component. If no LICENSE file comes with this software, it is provided AS-\/\+IS. 

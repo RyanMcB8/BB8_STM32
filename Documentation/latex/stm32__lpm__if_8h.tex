@@ -1,0 +1,189 @@
+\doxysection{C:\+/\+\+Users/\+ryanm/\+\+Documents/\+\+Design\+Group/\+\+BB8\+\_\+\+STM32/\+\+Firmware/\+\+Core/\+\+Inc/\+stm32\+\_\+lpm\+\_\+if.h File Reference}
+\hypertarget{stm32__lpm__if_8h}{}\label{stm32__lpm__if_8h}\index{C:/Users/ryanm/Documents/DesignGroup/BB8\_STM32/Firmware/Core/Inc/stm32\_lpm\_if.h@{C:/Users/ryanm/Documents/DesignGroup/BB8\_STM32/Firmware/Core/Inc/stm32\_lpm\_if.h}}
+
+
+Header for \doxylink{stm32__lpm__if_8c}{stm32\+\_\+lpm\+\_\+if.\+c} module (device specific LP management).  
+
+
+This graph shows which files directly or indirectly include this file:\+
+% FIG 0
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{stm32__lpm__if_8h_a648894be5d2f6e33a3f2b0039876c2e4}{PWR\+\_\+\+Enter\+Off\+Mode}} (void)
+\begin{DoxyCompactList}\small\item\em Enters Low Power Off Mode. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{stm32__lpm__if_8h_ad93ba741a36386c0fcdc796e61b181c7}{PWR\+\_\+\+Exit\+Off\+Mode}} (void)
+\begin{DoxyCompactList}\small\item\em Exits Low Power Off Mode. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{stm32__lpm__if_8h_aa25e976f1a9f4cb9c1589a2cb73fc332}{PWR\+\_\+\+Enter\+Stop\+Mode}} (void)
+\begin{DoxyCompactList}\small\item\em Enters Low Power Stop Mode. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{stm32__lpm__if_8h_a507c329a96b1a05bb3d2f2d04adb7749}{PWR\+\_\+\+Exit\+Stop\+Mode}} (void)
+\begin{DoxyCompactList}\small\item\em Exits Low Power Stop Mode. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{stm32__lpm__if_8h_a6c47734e6423729e14f55e89c81afadb}{PWR\+\_\+\+Enter\+Sleep\+Mode}} (void)
+\begin{DoxyCompactList}\small\item\em Enters Low Power Sleep Mode. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{stm32__lpm__if_8h_aa342c7ac52b0128773881c7eefce3576}{PWR\+\_\+\+Exit\+Sleep\+Mode}} (void)
+\begin{DoxyCompactList}\small\item\em Exits Low Power Sleep Mode. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Header for \doxylink{stm32__lpm__if_8c}{stm32\+\_\+lpm\+\_\+if.\+c} module (device specific LP management). 
+
+\begin{DoxyAuthor}{Author}
+MCD Application Team 
+\end{DoxyAuthor}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+Copyright (c) 2026 STMicroelectronics. All rights reserved.
+
+This software is licensed under terms that can be found in the LICENSE file in the root directory of this software component. If no LICENSE file comes with this software, it is provided AS-\/\+IS. 
+
+\label{doc-func-members}
+\Hypertarget{stm32__lpm__if_8h_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{stm32__lpm__if_8h_a648894be5d2f6e33a3f2b0039876c2e4}\index{stm32\_lpm\_if.h@{stm32\_lpm\_if.h}!PWR\_EnterOffMode@{PWR\_EnterOffMode}}
+\index{PWR\_EnterOffMode@{PWR\_EnterOffMode}!stm32\_lpm\_if.h@{stm32\_lpm\_if.h}}
+\doxysubsubsection{\texorpdfstring{PWR\_EnterOffMode()}{PWR\_EnterOffMode()}}
+{\footnotesize\ttfamily \label{stm32__lpm__if_8h_a648894be5d2f6e33a3f2b0039876c2e4} 
+void PWR\+\_\+\+Enter\+Off\+Mode (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Enters Low Power Off Mode. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em none} & \\
+\hline
+\end{DoxyRetVals}
+The systick should be disabled for the same reason than when the device enters stop mode because at this time, the device may enter either Off\+Mode or Stop\+Mode.
+
+\texorpdfstring{$<$}{<} Set SLEEPDEEP bit of Cortex System Control Register
+
+This option is used to ensure that store operations are completed\Hypertarget{stm32__lpm__if_8h_a6c47734e6423729e14f55e89c81afadb}\index{stm32\_lpm\_if.h@{stm32\_lpm\_if.h}!PWR\_EnterSleepMode@{PWR\_EnterSleepMode}}
+\index{PWR\_EnterSleepMode@{PWR\_EnterSleepMode}!stm32\_lpm\_if.h@{stm32\_lpm\_if.h}}
+\doxysubsubsection{\texorpdfstring{PWR\_EnterSleepMode()}{PWR\_EnterSleepMode()}}
+{\footnotesize\ttfamily \label{stm32__lpm__if_8h_a6c47734e6423729e14f55e89c81afadb} 
+void PWR\+\_\+\+Enter\+Sleep\+Mode (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Enters Low Power Sleep Mode. 
+
+\begin{DoxyNote}{Note}
+ARM exits the function when waking up 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em none} & \\
+\hline
+\end{DoxyRetVals}
+\texorpdfstring{$<$}{<} Clear SLEEPDEEP bit of Cortex System Control Register
+
+This option is used to ensure that store operations are completed\Hypertarget{stm32__lpm__if_8h_aa25e976f1a9f4cb9c1589a2cb73fc332}\index{stm32\_lpm\_if.h@{stm32\_lpm\_if.h}!PWR\_EnterStopMode@{PWR\_EnterStopMode}}
+\index{PWR\_EnterStopMode@{PWR\_EnterStopMode}!stm32\_lpm\_if.h@{stm32\_lpm\_if.h}}
+\doxysubsubsection{\texorpdfstring{PWR\_EnterStopMode()}{PWR\_EnterStopMode()}}
+{\footnotesize\ttfamily \label{stm32__lpm__if_8h_aa25e976f1a9f4cb9c1589a2cb73fc332} 
+void PWR\+\_\+\+Enter\+Stop\+Mode (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Enters Low Power Stop Mode. 
+
+\begin{DoxyNote}{Note}
+ARM exists the function when waking up 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em none} & \\
+\hline
+\end{DoxyRetVals}
+When HAL\+\_\+\+DBGMCU\+\_\+\+Enable\+DBGStop\+Mode() is called to keep the debugger active in Stop Mode, the systick shall be disabled otherwise the cpu may crash when moving out from stop mode
+
+When in production, the HAL\+\_\+\+DBGMCU\+\_\+\+Enable\+DBGStop\+Mode() is not called so that the device can reach best power consumption However, the systick should be disabled anyway to avoid the case when it is about to expire at the same time the device enters stop mode (this will abort the Stop Mode entry).
+
+This function is called from CRITICAL SECTION
+
+\texorpdfstring{$<$}{<} Set SLEEPDEEP bit of Cortex System Control Register
+
+This option is used to ensure that store operations are completed\Hypertarget{stm32__lpm__if_8h_ad93ba741a36386c0fcdc796e61b181c7}\index{stm32\_lpm\_if.h@{stm32\_lpm\_if.h}!PWR\_ExitOffMode@{PWR\_ExitOffMode}}
+\index{PWR\_ExitOffMode@{PWR\_ExitOffMode}!stm32\_lpm\_if.h@{stm32\_lpm\_if.h}}
+\doxysubsubsection{\texorpdfstring{PWR\_ExitOffMode()}{PWR\_ExitOffMode()}}
+{\footnotesize\ttfamily \label{stm32__lpm__if_8h_ad93ba741a36386c0fcdc796e61b181c7} 
+void PWR\+\_\+\+Exit\+Off\+Mode (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Exits Low Power Off Mode. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em none} & \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{stm32__lpm__if_8h_aa342c7ac52b0128773881c7eefce3576}\index{stm32\_lpm\_if.h@{stm32\_lpm\_if.h}!PWR\_ExitSleepMode@{PWR\_ExitSleepMode}}
+\index{PWR\_ExitSleepMode@{PWR\_ExitSleepMode}!stm32\_lpm\_if.h@{stm32\_lpm\_if.h}}
+\doxysubsubsection{\texorpdfstring{PWR\_ExitSleepMode()}{PWR\_ExitSleepMode()}}
+{\footnotesize\ttfamily \label{stm32__lpm__if_8h_aa342c7ac52b0128773881c7eefce3576} 
+void PWR\+\_\+\+Exit\+Sleep\+Mode (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Exits Low Power Sleep Mode. 
+
+\begin{DoxyNote}{Note}
+ARM exits the function when waking up 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em none} & \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{stm32__lpm__if_8h_a507c329a96b1a05bb3d2f2d04adb7749}\index{stm32\_lpm\_if.h@{stm32\_lpm\_if.h}!PWR\_ExitStopMode@{PWR\_ExitStopMode}}
+\index{PWR\_ExitStopMode@{PWR\_ExitStopMode}!stm32\_lpm\_if.h@{stm32\_lpm\_if.h}}
+\doxysubsubsection{\texorpdfstring{PWR\_ExitStopMode()}{PWR\_ExitStopMode()}}
+{\footnotesize\ttfamily \label{stm32__lpm__if_8h_a507c329a96b1a05bb3d2f2d04adb7749} 
+void PWR\+\_\+\+Exit\+Stop\+Mode (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Exits Low Power Stop Mode. 
+
+\begin{DoxyNote}{Note}
+Enable the pll at 32MHz 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em none} & \\
+\hline
+\end{DoxyRetVals}
+This function is called from CRITICAL SECTION

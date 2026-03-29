@@ -1,0 +1,598 @@
+\doxysection{Activity/\+\+Inactivity\+\_\+detection }
+\hypertarget{group___l_s_m6_d_s_o32__}{}\label{group___l_s_m6_d_s_o32__}\index{Activity/Inactivity\_detection@{Activity/Inactivity\_detection}}
+
+
+This section groups all the functions concerning activity/\+inactivity detection.  
+
+
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___gaa77f28ef231c65da56ee3ed226cc79b8}{lsm6dso32\+\_\+gy\+\_\+sleep\+\_\+mode\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Enables gyroscope Sleep mode.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___ga06e5ad5de2b19da106eb3e79235a789f}{lsm6dso32\+\_\+gy\+\_\+sleep\+\_\+mode\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Enables gyroscope Sleep mode.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___gaa0300f599f84d04725a87469e4359ce8}{lsm6dso32\+\_\+act\+\_\+pin\+\_\+notification\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+sleep\+\_\+status\+\_\+on\+\_\+int\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Drives the sleep status instead of sleep change on INT pins (only if INT1\+\_\+\+SLEEP\+\_\+\+CHANGE or INT2\+\_\+\+SLEEP\+\_\+\+CHANGE bits are enabled).\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___ga37c223c9a716dfbc15c73ce588794723}{lsm6dso32\+\_\+act\+\_\+pin\+\_\+notification\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+sleep\+\_\+status\+\_\+on\+\_\+int\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Drives the sleep status instead of sleep change on INT pins (only if INT1\+\_\+\+SLEEP\+\_\+\+CHANGE or INT2\+\_\+\+SLEEP\+\_\+\+CHANGE bits are enabled).\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___ga8afabfbe2efbe3eee2fd8c76e711c2dc}{lsm6dso32\+\_\+act\+\_\+mode\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+inact\+\_\+en\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Enable inactivity function.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___gacdb540842d88f81075531fcf49c07685}{lsm6dso32\+\_\+act\+\_\+mode\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+inact\+\_\+en\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Enable inactivity function.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___ga3671923c82ed2abc23a3a9d67ff7cee5}{lsm6dso32\+\_\+act\+\_\+sleep\+\_\+dur\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Duration to go in sleep mode.\+[set]\+ 1 LSb = 512 /\+ ODR. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___ga1768707e6f43a2ea58e0aa2715a36849}{lsm6dso32\+\_\+act\+\_\+sleep\+\_\+dur\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Duration to go in sleep mode.\+[get]\+ 1 LSb = 512 /\+ ODR. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___gab06f6cdd0c94e26b095730b54e652125}{lsm6dso32\+\_\+6d\+\_\+threshold\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+sixd\+\_\+ths\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Threshold for 4D/\+6D function.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___ga092fb82c580d01745590cf0acd3666fe}{lsm6dso32\+\_\+6d\+\_\+threshold\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+sixd\+\_\+ths\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Threshold for 4D/\+6D function.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___gaec5c7441bc69f44618251483633dda24}{lsm6dso32\+\_\+4d\+\_\+mode\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em 4D orientation detection enable.\+[set]\+ \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___ga215098b62f55446c03afd174dd5baa67}{lsm6dso32\+\_\+4d\+\_\+mode\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint8\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em 4D orientation detection enable.\+[get]\+ \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___gaeac9517b327bd07ca6a83988d17233e4}{lsm6dso32\+\_\+mag\+\_\+sensitivity\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint16\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em External magnetometer sensitivity value register.\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___gaef88aa84aee8de665dd78d99c97ef6b3}{lsm6dso32\+\_\+mag\+\_\+sensitivity\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, uint16\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em External magnetometer sensitivity value register.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___ga0383722d977fcaf3745cadb9b7c43342}{lsm6dso32\+\_\+mag\+\_\+offset\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, int16\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Offset for hard-\/iron compensation register (r/\+w).\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___ga7ce5eb8596e18aa64f3a87d593a219ee}{lsm6dso32\+\_\+mag\+\_\+offset\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, int16\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Offset for hard-\/iron compensation register (r/\+w).\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___ga5d3533ff8cebac4cf84ee2d11856f64f}{lsm6dso32\+\_\+mag\+\_\+soft\+\_\+iron\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, int16\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Soft-\/iron (3x3 symmetric) matrix correction register (r/\+w). The value is expressed as half-\/precision floating-\/point format:\+ SEEEEEFFFFFFFFFF S:\+ 1 sign bit; E:\+ 5 exponent bits; F:\+ 10 fraction bits).\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___gaf97c4393e037dd7dc8ecf94682e50144}{lsm6dso32\+\_\+mag\+\_\+soft\+\_\+iron\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, int16\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Soft-\/iron (3x3 symmetric) matrix correction register (r/\+w). The value is expressed as half-\/precision floating-\/point format:\+ SEEEEEFFFFFFFFFF S:\+ 1 sign bit; E:\+ 5 exponent bits; F:\+ 10 fraction bits.\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___gaf1991aab3610fc5ce80a1e20768836f2}{lsm6dso32\+\_\+mag\+\_\+z\+\_\+orient\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+mag\+\_\+z\+\_\+axis\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Magnetometer Z-\/axis coordinates rotation (to be aligned to accelerometer/\+gyroscope axes orientation).\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___ga3f3befeb63639881438daeeb6b8de291}{lsm6dso32\+\_\+mag\+\_\+z\+\_\+orient\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+mag\+\_\+z\+\_\+axis\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Magnetometer Z-\/axis coordinates rotation (to be aligned to accelerometer/\+gyroscope axes orientation).\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___ga5a25549611479c3ffc427d991094f95b}{lsm6dso32\+\_\+mag\+\_\+y\+\_\+orient\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+mag\+\_\+y\+\_\+axis\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Magnetometer Y-\/axis coordinates rotation (to be aligned to accelerometer/\+gyroscope axes orientation).\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___ga304cd37ecaf77fc4b7ee558f57b7ee9a}{lsm6dso32\+\_\+mag\+\_\+y\+\_\+orient\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+mag\+\_\+y\+\_\+axis\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Magnetometer Y-\/axis coordinates rotation (to be aligned to accelerometer/\+gyroscope axes orientation).\+[get]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___ga8a403dd3b852c95edbf9d328c2305510}{lsm6dso32\+\_\+mag\+\_\+x\+\_\+orient\+\_\+set}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+mag\+\_\+x\+\_\+axis\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Magnetometer X-\/axis coordinates rotation (to be aligned to accelerometer/\+gyroscope axes orientation).\+[set]\+. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___ga915bc658256257eb7501c55f1bb18073}{lsm6dso32\+\_\+mag\+\_\+x\+\_\+orient\+\_\+get}} (const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}ctx, lsm6dso32\+\_\+mag\+\_\+x\+\_\+axis\+\_\+t \texorpdfstring{$\ast$}{*}val)
+\begin{DoxyCompactList}\small\item\em Magnetometer X-\/axis coordinates rotation (to be aligned to accelerometer/\+gyroscope axes orientation).\+[get]\+. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This section groups all the functions concerning activity/\+inactivity detection. 
+
+This section groups all the functions that manage additional magnetometer sensor.
+
+This section groups all the functions concerning six position detection (6D).
+
+\label{doc-func-members}
+\Hypertarget{group___l_s_m6_d_s_o32___doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{group___l_s_m6_d_s_o32___ga215098b62f55446c03afd174dd5baa67}\index{Activity/Inactivity\_detection@{Activity/Inactivity\_detection}!lsm6dso32\_4d\_mode\_get@{lsm6dso32\_4d\_mode\_get}}
+\index{lsm6dso32\_4d\_mode\_get@{lsm6dso32\_4d\_mode\_get}!Activity/Inactivity\_detection@{Activity/Inactivity\_detection}}
+\doxysubsubsection{\texorpdfstring{lsm6dso32\_4d\_mode\_get()}{lsm6dso32\_4d\_mode\_get()}}
+{\footnotesize\ttfamily \label{group___l_s_m6_d_s_o32___ga215098b62f55446c03afd174dd5baa67} 
+int32\+\_\+t lsm6dso32\+\_\+4d\+\_\+mode\+\_\+get (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx}{, }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{val}{}\end{DoxyParamCaption})}
+
+
+
+4D orientation detection enable.\+[get]\+ 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read /\+ write interface definitions \\
+\hline
+{\em val} & change the values of d4d\+\_\+en in reg TAP\+\_\+\+THS\+\_\+6D \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY:\+ return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group___l_s_m6_d_s_o32___gaec5c7441bc69f44618251483633dda24}\index{Activity/Inactivity\_detection@{Activity/Inactivity\_detection}!lsm6dso32\_4d\_mode\_set@{lsm6dso32\_4d\_mode\_set}}
+\index{lsm6dso32\_4d\_mode\_set@{lsm6dso32\_4d\_mode\_set}!Activity/Inactivity\_detection@{Activity/Inactivity\_detection}}
+\doxysubsubsection{\texorpdfstring{lsm6dso32\_4d\_mode\_set()}{lsm6dso32\_4d\_mode\_set()}}
+{\footnotesize\ttfamily \label{group___l_s_m6_d_s_o32___gaec5c7441bc69f44618251483633dda24} 
+int32\+\_\+t lsm6dso32\+\_\+4d\+\_\+mode\+\_\+set (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx}{, }\item[{uint8\+\_\+t}]{val}{}\end{DoxyParamCaption})}
+
+
+
+4D orientation detection enable.\+[set]\+ 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read /\+ write interface definitions \\
+\hline
+{\em val} & change the values of d4d\+\_\+en in reg TAP\+\_\+\+THS\+\_\+6D \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY:\+ return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group___l_s_m6_d_s_o32___ga092fb82c580d01745590cf0acd3666fe}\index{Activity/Inactivity\_detection@{Activity/Inactivity\_detection}!lsm6dso32\_6d\_threshold\_get@{lsm6dso32\_6d\_threshold\_get}}
+\index{lsm6dso32\_6d\_threshold\_get@{lsm6dso32\_6d\_threshold\_get}!Activity/Inactivity\_detection@{Activity/Inactivity\_detection}}
+\doxysubsubsection{\texorpdfstring{lsm6dso32\_6d\_threshold\_get()}{lsm6dso32\_6d\_threshold\_get()}}
+{\footnotesize\ttfamily \label{group___l_s_m6_d_s_o32___ga092fb82c580d01745590cf0acd3666fe} 
+int32\+\_\+t lsm6dso32\+\_\+6d\+\_\+threshold\+\_\+get (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx}{, }\item[{lsm6dso32\+\_\+sixd\+\_\+ths\+\_\+t \texorpdfstring{$\ast$}{*}}]{val}{}\end{DoxyParamCaption})}
+
+
+
+Threshold for 4D/\+6D function.\+[get]\+. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read /\+ write interface definitions \\
+\hline
+{\em val} & Get the values of sixd\+\_\+ths in reg TAP\+\_\+\+THS\+\_\+6D \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY:\+ return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group___l_s_m6_d_s_o32___gab06f6cdd0c94e26b095730b54e652125}\index{Activity/Inactivity\_detection@{Activity/Inactivity\_detection}!lsm6dso32\_6d\_threshold\_set@{lsm6dso32\_6d\_threshold\_set}}
+\index{lsm6dso32\_6d\_threshold\_set@{lsm6dso32\_6d\_threshold\_set}!Activity/Inactivity\_detection@{Activity/Inactivity\_detection}}
+\doxysubsubsection{\texorpdfstring{lsm6dso32\_6d\_threshold\_set()}{lsm6dso32\_6d\_threshold\_set()}}
+{\footnotesize\ttfamily \label{group___l_s_m6_d_s_o32___gab06f6cdd0c94e26b095730b54e652125} 
+int32\+\_\+t lsm6dso32\+\_\+6d\+\_\+threshold\+\_\+set (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx}{, }\item[{lsm6dso32\+\_\+sixd\+\_\+ths\+\_\+t}]{val}{}\end{DoxyParamCaption})}
+
+
+
+Threshold for 4D/\+6D function.\+[set]\+. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read /\+ write interface definitions \\
+\hline
+{\em val} & change the values of sixd\+\_\+ths in reg TAP\+\_\+\+THS\+\_\+6D \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY:\+ return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group___l_s_m6_d_s_o32___gacdb540842d88f81075531fcf49c07685}\index{Activity/Inactivity\_detection@{Activity/Inactivity\_detection}!lsm6dso32\_act\_mode\_get@{lsm6dso32\_act\_mode\_get}}
+\index{lsm6dso32\_act\_mode\_get@{lsm6dso32\_act\_mode\_get}!Activity/Inactivity\_detection@{Activity/Inactivity\_detection}}
+\doxysubsubsection{\texorpdfstring{lsm6dso32\_act\_mode\_get()}{lsm6dso32\_act\_mode\_get()}}
+{\footnotesize\ttfamily \label{group___l_s_m6_d_s_o32___gacdb540842d88f81075531fcf49c07685} 
+int32\+\_\+t lsm6dso32\+\_\+act\+\_\+mode\+\_\+get (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx}{, }\item[{lsm6dso32\+\_\+inact\+\_\+en\+\_\+t \texorpdfstring{$\ast$}{*}}]{val}{}\end{DoxyParamCaption})}
+
+
+
+Enable inactivity function.\+[get]\+. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read /\+ write interface definitions \\
+\hline
+{\em val} & Get the values of inact\+\_\+en in reg TAP\+\_\+\+CFG2 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY:\+ return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group___l_s_m6_d_s_o32___ga8afabfbe2efbe3eee2fd8c76e711c2dc}\index{Activity/Inactivity\_detection@{Activity/Inactivity\_detection}!lsm6dso32\_act\_mode\_set@{lsm6dso32\_act\_mode\_set}}
+\index{lsm6dso32\_act\_mode\_set@{lsm6dso32\_act\_mode\_set}!Activity/Inactivity\_detection@{Activity/Inactivity\_detection}}
+\doxysubsubsection{\texorpdfstring{lsm6dso32\_act\_mode\_set()}{lsm6dso32\_act\_mode\_set()}}
+{\footnotesize\ttfamily \label{group___l_s_m6_d_s_o32___ga8afabfbe2efbe3eee2fd8c76e711c2dc} 
+int32\+\_\+t lsm6dso32\+\_\+act\+\_\+mode\+\_\+set (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx}{, }\item[{lsm6dso32\+\_\+inact\+\_\+en\+\_\+t}]{val}{}\end{DoxyParamCaption})}
+
+
+
+Enable inactivity function.\+[set]\+. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read /\+ write interface definitions \\
+\hline
+{\em val} & change the values of inact\+\_\+en in reg TAP\+\_\+\+CFG2 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY:\+ return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group___l_s_m6_d_s_o32___ga37c223c9a716dfbc15c73ce588794723}\index{Activity/Inactivity\_detection@{Activity/Inactivity\_detection}!lsm6dso32\_act\_pin\_notification\_get@{lsm6dso32\_act\_pin\_notification\_get}}
+\index{lsm6dso32\_act\_pin\_notification\_get@{lsm6dso32\_act\_pin\_notification\_get}!Activity/Inactivity\_detection@{Activity/Inactivity\_detection}}
+\doxysubsubsection{\texorpdfstring{lsm6dso32\_act\_pin\_notification\_get()}{lsm6dso32\_act\_pin\_notification\_get()}}
+{\footnotesize\ttfamily \label{group___l_s_m6_d_s_o32___ga37c223c9a716dfbc15c73ce588794723} 
+int32\+\_\+t lsm6dso32\+\_\+act\+\_\+pin\+\_\+notification\+\_\+get (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx}{, }\item[{lsm6dso32\+\_\+sleep\+\_\+status\+\_\+on\+\_\+int\+\_\+t \texorpdfstring{$\ast$}{*}}]{val}{}\end{DoxyParamCaption})}
+
+
+
+Drives the sleep status instead of sleep change on INT pins (only if INT1\+\_\+\+SLEEP\+\_\+\+CHANGE or INT2\+\_\+\+SLEEP\+\_\+\+CHANGE bits are enabled).\+[get]\+. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read /\+ write interface definitions \\
+\hline
+{\em val} & Get the values of sleep\+\_\+status\+\_\+on\+\_\+int in reg TAP\+\_\+\+CFG0 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY:\+ return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group___l_s_m6_d_s_o32___gaa0300f599f84d04725a87469e4359ce8}\index{Activity/Inactivity\_detection@{Activity/Inactivity\_detection}!lsm6dso32\_act\_pin\_notification\_set@{lsm6dso32\_act\_pin\_notification\_set}}
+\index{lsm6dso32\_act\_pin\_notification\_set@{lsm6dso32\_act\_pin\_notification\_set}!Activity/Inactivity\_detection@{Activity/Inactivity\_detection}}
+\doxysubsubsection{\texorpdfstring{lsm6dso32\_act\_pin\_notification\_set()}{lsm6dso32\_act\_pin\_notification\_set()}}
+{\footnotesize\ttfamily \label{group___l_s_m6_d_s_o32___gaa0300f599f84d04725a87469e4359ce8} 
+int32\+\_\+t lsm6dso32\+\_\+act\+\_\+pin\+\_\+notification\+\_\+set (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx}{, }\item[{lsm6dso32\+\_\+sleep\+\_\+status\+\_\+on\+\_\+int\+\_\+t}]{val}{}\end{DoxyParamCaption})}
+
+
+
+Drives the sleep status instead of sleep change on INT pins (only if INT1\+\_\+\+SLEEP\+\_\+\+CHANGE or INT2\+\_\+\+SLEEP\+\_\+\+CHANGE bits are enabled).\+[set]\+. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read /\+ write interface definitions \\
+\hline
+{\em val} & change the values of sleep\+\_\+status\+\_\+on\+\_\+int in reg TAP\+\_\+\+CFG0 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY:\+ return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group___l_s_m6_d_s_o32___ga1768707e6f43a2ea58e0aa2715a36849}\index{Activity/Inactivity\_detection@{Activity/Inactivity\_detection}!lsm6dso32\_act\_sleep\_dur\_get@{lsm6dso32\_act\_sleep\_dur\_get}}
+\index{lsm6dso32\_act\_sleep\_dur\_get@{lsm6dso32\_act\_sleep\_dur\_get}!Activity/Inactivity\_detection@{Activity/Inactivity\_detection}}
+\doxysubsubsection{\texorpdfstring{lsm6dso32\_act\_sleep\_dur\_get()}{lsm6dso32\_act\_sleep\_dur\_get()}}
+{\footnotesize\ttfamily \label{group___l_s_m6_d_s_o32___ga1768707e6f43a2ea58e0aa2715a36849} 
+int32\+\_\+t lsm6dso32\+\_\+act\+\_\+sleep\+\_\+dur\+\_\+get (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx}{, }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{val}{}\end{DoxyParamCaption})}
+
+
+
+Duration to go in sleep mode.\+[get]\+ 1 LSb = 512 /\+ ODR. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read /\+ write interface definitions \\
+\hline
+{\em val} & change the values of sleep\+\_\+dur in reg WAKE\+\_\+\+UP\+\_\+\+DUR \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY:\+ return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group___l_s_m6_d_s_o32___ga3671923c82ed2abc23a3a9d67ff7cee5}\index{Activity/Inactivity\_detection@{Activity/Inactivity\_detection}!lsm6dso32\_act\_sleep\_dur\_set@{lsm6dso32\_act\_sleep\_dur\_set}}
+\index{lsm6dso32\_act\_sleep\_dur\_set@{lsm6dso32\_act\_sleep\_dur\_set}!Activity/Inactivity\_detection@{Activity/Inactivity\_detection}}
+\doxysubsubsection{\texorpdfstring{lsm6dso32\_act\_sleep\_dur\_set()}{lsm6dso32\_act\_sleep\_dur\_set()}}
+{\footnotesize\ttfamily \label{group___l_s_m6_d_s_o32___ga3671923c82ed2abc23a3a9d67ff7cee5} 
+int32\+\_\+t lsm6dso32\+\_\+act\+\_\+sleep\+\_\+dur\+\_\+set (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx}{, }\item[{uint8\+\_\+t}]{val}{}\end{DoxyParamCaption})}
+
+
+
+Duration to go in sleep mode.\+[set]\+ 1 LSb = 512 /\+ ODR. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read /\+ write interface definitions \\
+\hline
+{\em val} & change the values of sleep\+\_\+dur in reg WAKE\+\_\+\+UP\+\_\+\+DUR \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY:\+ return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group___l_s_m6_d_s_o32___ga06e5ad5de2b19da106eb3e79235a789f}\index{Activity/Inactivity\_detection@{Activity/Inactivity\_detection}!lsm6dso32\_gy\_sleep\_mode\_get@{lsm6dso32\_gy\_sleep\_mode\_get}}
+\index{lsm6dso32\_gy\_sleep\_mode\_get@{lsm6dso32\_gy\_sleep\_mode\_get}!Activity/Inactivity\_detection@{Activity/Inactivity\_detection}}
+\doxysubsubsection{\texorpdfstring{lsm6dso32\_gy\_sleep\_mode\_get()}{lsm6dso32\_gy\_sleep\_mode\_get()}}
+{\footnotesize\ttfamily \label{group___l_s_m6_d_s_o32___ga06e5ad5de2b19da106eb3e79235a789f} 
+int32\+\_\+t lsm6dso32\+\_\+gy\+\_\+sleep\+\_\+mode\+\_\+get (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx}{, }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{val}{}\end{DoxyParamCaption})}
+
+
+
+Enables gyroscope Sleep mode.\+[get]\+. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read /\+ write interface definitions \\
+\hline
+{\em val} & change the values of sleep\+\_\+g in reg CTRL4\+\_\+C \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY:\+ return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group___l_s_m6_d_s_o32___gaa77f28ef231c65da56ee3ed226cc79b8}\index{Activity/Inactivity\_detection@{Activity/Inactivity\_detection}!lsm6dso32\_gy\_sleep\_mode\_set@{lsm6dso32\_gy\_sleep\_mode\_set}}
+\index{lsm6dso32\_gy\_sleep\_mode\_set@{lsm6dso32\_gy\_sleep\_mode\_set}!Activity/Inactivity\_detection@{Activity/Inactivity\_detection}}
+\doxysubsubsection{\texorpdfstring{lsm6dso32\_gy\_sleep\_mode\_set()}{lsm6dso32\_gy\_sleep\_mode\_set()}}
+{\footnotesize\ttfamily \label{group___l_s_m6_d_s_o32___gaa77f28ef231c65da56ee3ed226cc79b8} 
+int32\+\_\+t lsm6dso32\+\_\+gy\+\_\+sleep\+\_\+mode\+\_\+set (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx}{, }\item[{uint8\+\_\+t}]{val}{}\end{DoxyParamCaption})}
+
+
+
+Enables gyroscope Sleep mode.\+[set]\+. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read /\+ write interface definitions \\
+\hline
+{\em val} & change the values of sleep\+\_\+g in reg CTRL4\+\_\+C \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY:\+ return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group___l_s_m6_d_s_o32___ga7ce5eb8596e18aa64f3a87d593a219ee}\index{Activity/Inactivity\_detection@{Activity/Inactivity\_detection}!lsm6dso32\_mag\_offset\_get@{lsm6dso32\_mag\_offset\_get}}
+\index{lsm6dso32\_mag\_offset\_get@{lsm6dso32\_mag\_offset\_get}!Activity/Inactivity\_detection@{Activity/Inactivity\_detection}}
+\doxysubsubsection{\texorpdfstring{lsm6dso32\_mag\_offset\_get()}{lsm6dso32\_mag\_offset\_get()}}
+{\footnotesize\ttfamily \label{group___l_s_m6_d_s_o32___ga7ce5eb8596e18aa64f3a87d593a219ee} 
+int32\+\_\+t lsm6dso32\+\_\+mag\+\_\+offset\+\_\+get (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx}{, }\item[{int16\+\_\+t \texorpdfstring{$\ast$}{*}}]{val}{}\end{DoxyParamCaption})}
+
+
+
+Offset for hard-\/iron compensation register (r/\+w).\+[get]\+. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read /\+ write interface definitions \\
+\hline
+{\em buff} & buffer that stores data read \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY:\+ return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group___l_s_m6_d_s_o32___ga0383722d977fcaf3745cadb9b7c43342}\index{Activity/Inactivity\_detection@{Activity/Inactivity\_detection}!lsm6dso32\_mag\_offset\_set@{lsm6dso32\_mag\_offset\_set}}
+\index{lsm6dso32\_mag\_offset\_set@{lsm6dso32\_mag\_offset\_set}!Activity/Inactivity\_detection@{Activity/Inactivity\_detection}}
+\doxysubsubsection{\texorpdfstring{lsm6dso32\_mag\_offset\_set()}{lsm6dso32\_mag\_offset\_set()}}
+{\footnotesize\ttfamily \label{group___l_s_m6_d_s_o32___ga0383722d977fcaf3745cadb9b7c43342} 
+int32\+\_\+t lsm6dso32\+\_\+mag\+\_\+offset\+\_\+set (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx}{, }\item[{int16\+\_\+t \texorpdfstring{$\ast$}{*}}]{val}{}\end{DoxyParamCaption})}
+
+
+
+Offset for hard-\/iron compensation register (r/\+w).\+[set]\+. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read /\+ write interface definitions \\
+\hline
+{\em buff} & buffer that contains data to write \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY:\+ return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group___l_s_m6_d_s_o32___gaef88aa84aee8de665dd78d99c97ef6b3}\index{Activity/Inactivity\_detection@{Activity/Inactivity\_detection}!lsm6dso32\_mag\_sensitivity\_get@{lsm6dso32\_mag\_sensitivity\_get}}
+\index{lsm6dso32\_mag\_sensitivity\_get@{lsm6dso32\_mag\_sensitivity\_get}!Activity/Inactivity\_detection@{Activity/Inactivity\_detection}}
+\doxysubsubsection{\texorpdfstring{lsm6dso32\_mag\_sensitivity\_get()}{lsm6dso32\_mag\_sensitivity\_get()}}
+{\footnotesize\ttfamily \label{group___l_s_m6_d_s_o32___gaef88aa84aee8de665dd78d99c97ef6b3} 
+int32\+\_\+t lsm6dso32\+\_\+mag\+\_\+sensitivity\+\_\+get (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx}{, }\item[{uint16\+\_\+t \texorpdfstring{$\ast$}{*}}]{val}{}\end{DoxyParamCaption})}
+
+
+
+External magnetometer sensitivity value register.\+[get]\+. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read /\+ write interface definitions \\
+\hline
+{\em buff} & buffer that stores data read \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY:\+ return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group___l_s_m6_d_s_o32___gaeac9517b327bd07ca6a83988d17233e4}\index{Activity/Inactivity\_detection@{Activity/Inactivity\_detection}!lsm6dso32\_mag\_sensitivity\_set@{lsm6dso32\_mag\_sensitivity\_set}}
+\index{lsm6dso32\_mag\_sensitivity\_set@{lsm6dso32\_mag\_sensitivity\_set}!Activity/Inactivity\_detection@{Activity/Inactivity\_detection}}
+\doxysubsubsection{\texorpdfstring{lsm6dso32\_mag\_sensitivity\_set()}{lsm6dso32\_mag\_sensitivity\_set()}}
+{\footnotesize\ttfamily \label{group___l_s_m6_d_s_o32___gaeac9517b327bd07ca6a83988d17233e4} 
+int32\+\_\+t lsm6dso32\+\_\+mag\+\_\+sensitivity\+\_\+set (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx}{, }\item[{uint16\+\_\+t}]{val}{}\end{DoxyParamCaption})}
+
+
+
+External magnetometer sensitivity value register.\+[set]\+. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read /\+ write interface definitions \\
+\hline
+{\em buff} & buffer that contains data to write \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY:\+ return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group___l_s_m6_d_s_o32___gaf97c4393e037dd7dc8ecf94682e50144}\index{Activity/Inactivity\_detection@{Activity/Inactivity\_detection}!lsm6dso32\_mag\_soft\_iron\_get@{lsm6dso32\_mag\_soft\_iron\_get}}
+\index{lsm6dso32\_mag\_soft\_iron\_get@{lsm6dso32\_mag\_soft\_iron\_get}!Activity/Inactivity\_detection@{Activity/Inactivity\_detection}}
+\doxysubsubsection{\texorpdfstring{lsm6dso32\_mag\_soft\_iron\_get()}{lsm6dso32\_mag\_soft\_iron\_get()}}
+{\footnotesize\ttfamily \label{group___l_s_m6_d_s_o32___gaf97c4393e037dd7dc8ecf94682e50144} 
+int32\+\_\+t lsm6dso32\+\_\+mag\+\_\+soft\+\_\+iron\+\_\+get (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx}{, }\item[{int16\+\_\+t \texorpdfstring{$\ast$}{*}}]{val}{}\end{DoxyParamCaption})}
+
+
+
+Soft-\/iron (3x3 symmetric) matrix correction register (r/\+w). The value is expressed as half-\/precision floating-\/point format:\+ SEEEEEFFFFFFFFFF S:\+ 1 sign bit; E:\+ 5 exponent bits; F:\+ 10 fraction bits.\+[get]\+. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read /\+ write interface definitions \\
+\hline
+{\em buff} & buffer that stores data read \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY:\+ return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group___l_s_m6_d_s_o32___ga5d3533ff8cebac4cf84ee2d11856f64f}\index{Activity/Inactivity\_detection@{Activity/Inactivity\_detection}!lsm6dso32\_mag\_soft\_iron\_set@{lsm6dso32\_mag\_soft\_iron\_set}}
+\index{lsm6dso32\_mag\_soft\_iron\_set@{lsm6dso32\_mag\_soft\_iron\_set}!Activity/Inactivity\_detection@{Activity/Inactivity\_detection}}
+\doxysubsubsection{\texorpdfstring{lsm6dso32\_mag\_soft\_iron\_set()}{lsm6dso32\_mag\_soft\_iron\_set()}}
+{\footnotesize\ttfamily \label{group___l_s_m6_d_s_o32___ga5d3533ff8cebac4cf84ee2d11856f64f} 
+int32\+\_\+t lsm6dso32\+\_\+mag\+\_\+soft\+\_\+iron\+\_\+set (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx}{, }\item[{int16\+\_\+t \texorpdfstring{$\ast$}{*}}]{val}{}\end{DoxyParamCaption})}
+
+
+
+Soft-\/iron (3x3 symmetric) matrix correction register (r/\+w). The value is expressed as half-\/precision floating-\/point format:\+ SEEEEEFFFFFFFFFF S:\+ 1 sign bit; E:\+ 5 exponent bits; F:\+ 10 fraction bits).\+[set]\+. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read /\+ write interface definitions \\
+\hline
+{\em buff} & buffer that contains data to write \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY:\+ return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group___l_s_m6_d_s_o32___ga915bc658256257eb7501c55f1bb18073}\index{Activity/Inactivity\_detection@{Activity/Inactivity\_detection}!lsm6dso32\_mag\_x\_orient\_get@{lsm6dso32\_mag\_x\_orient\_get}}
+\index{lsm6dso32\_mag\_x\_orient\_get@{lsm6dso32\_mag\_x\_orient\_get}!Activity/Inactivity\_detection@{Activity/Inactivity\_detection}}
+\doxysubsubsection{\texorpdfstring{lsm6dso32\_mag\_x\_orient\_get()}{lsm6dso32\_mag\_x\_orient\_get()}}
+{\footnotesize\ttfamily \label{group___l_s_m6_d_s_o32___ga915bc658256257eb7501c55f1bb18073} 
+int32\+\_\+t lsm6dso32\+\_\+mag\+\_\+x\+\_\+orient\+\_\+get (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx}{, }\item[{lsm6dso32\+\_\+mag\+\_\+x\+\_\+axis\+\_\+t \texorpdfstring{$\ast$}{*}}]{val}{}\end{DoxyParamCaption})}
+
+
+
+Magnetometer X-\/axis coordinates rotation (to be aligned to accelerometer/\+gyroscope axes orientation).\+[get]\+. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read /\+ write interface definitions \\
+\hline
+{\em val} & Get the values of mag\+\_\+x\+\_\+axis in reg MAG\+\_\+\+CFG\+\_\+B \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY:\+ return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group___l_s_m6_d_s_o32___ga8a403dd3b852c95edbf9d328c2305510}\index{Activity/Inactivity\_detection@{Activity/Inactivity\_detection}!lsm6dso32\_mag\_x\_orient\_set@{lsm6dso32\_mag\_x\_orient\_set}}
+\index{lsm6dso32\_mag\_x\_orient\_set@{lsm6dso32\_mag\_x\_orient\_set}!Activity/Inactivity\_detection@{Activity/Inactivity\_detection}}
+\doxysubsubsection{\texorpdfstring{lsm6dso32\_mag\_x\_orient\_set()}{lsm6dso32\_mag\_x\_orient\_set()}}
+{\footnotesize\ttfamily \label{group___l_s_m6_d_s_o32___ga8a403dd3b852c95edbf9d328c2305510} 
+int32\+\_\+t lsm6dso32\+\_\+mag\+\_\+x\+\_\+orient\+\_\+set (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx}{, }\item[{lsm6dso32\+\_\+mag\+\_\+x\+\_\+axis\+\_\+t}]{val}{}\end{DoxyParamCaption})}
+
+
+
+Magnetometer X-\/axis coordinates rotation (to be aligned to accelerometer/\+gyroscope axes orientation).\+[set]\+. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read /\+ write interface definitions \\
+\hline
+{\em val} & change the values of mag\+\_\+x\+\_\+axis in reg MAG\+\_\+\+CFG\+\_\+B \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY:\+ return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group___l_s_m6_d_s_o32___ga304cd37ecaf77fc4b7ee558f57b7ee9a}\index{Activity/Inactivity\_detection@{Activity/Inactivity\_detection}!lsm6dso32\_mag\_y\_orient\_get@{lsm6dso32\_mag\_y\_orient\_get}}
+\index{lsm6dso32\_mag\_y\_orient\_get@{lsm6dso32\_mag\_y\_orient\_get}!Activity/Inactivity\_detection@{Activity/Inactivity\_detection}}
+\doxysubsubsection{\texorpdfstring{lsm6dso32\_mag\_y\_orient\_get()}{lsm6dso32\_mag\_y\_orient\_get()}}
+{\footnotesize\ttfamily \label{group___l_s_m6_d_s_o32___ga304cd37ecaf77fc4b7ee558f57b7ee9a} 
+int32\+\_\+t lsm6dso32\+\_\+mag\+\_\+y\+\_\+orient\+\_\+get (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx}{, }\item[{lsm6dso32\+\_\+mag\+\_\+y\+\_\+axis\+\_\+t \texorpdfstring{$\ast$}{*}}]{val}{}\end{DoxyParamCaption})}
+
+
+
+Magnetometer Y-\/axis coordinates rotation (to be aligned to accelerometer/\+gyroscope axes orientation).\+[get]\+. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read /\+ write interface definitions \\
+\hline
+{\em val} & Get the values of mag\+\_\+y\+\_\+axis in reg MAG\+\_\+\+CFG\+\_\+A \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY:\+ return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group___l_s_m6_d_s_o32___ga5a25549611479c3ffc427d991094f95b}\index{Activity/Inactivity\_detection@{Activity/Inactivity\_detection}!lsm6dso32\_mag\_y\_orient\_set@{lsm6dso32\_mag\_y\_orient\_set}}
+\index{lsm6dso32\_mag\_y\_orient\_set@{lsm6dso32\_mag\_y\_orient\_set}!Activity/Inactivity\_detection@{Activity/Inactivity\_detection}}
+\doxysubsubsection{\texorpdfstring{lsm6dso32\_mag\_y\_orient\_set()}{lsm6dso32\_mag\_y\_orient\_set()}}
+{\footnotesize\ttfamily \label{group___l_s_m6_d_s_o32___ga5a25549611479c3ffc427d991094f95b} 
+int32\+\_\+t lsm6dso32\+\_\+mag\+\_\+y\+\_\+orient\+\_\+set (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx}{, }\item[{lsm6dso32\+\_\+mag\+\_\+y\+\_\+axis\+\_\+t}]{val}{}\end{DoxyParamCaption})}
+
+
+
+Magnetometer Y-\/axis coordinates rotation (to be aligned to accelerometer/\+gyroscope axes orientation).\+[set]\+. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read /\+ write interface definitions \\
+\hline
+{\em val} & change the values of mag\+\_\+y\+\_\+axis in reg MAG\+\_\+\+CFG\+\_\+A \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY:\+ return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group___l_s_m6_d_s_o32___ga3f3befeb63639881438daeeb6b8de291}\index{Activity/Inactivity\_detection@{Activity/Inactivity\_detection}!lsm6dso32\_mag\_z\_orient\_get@{lsm6dso32\_mag\_z\_orient\_get}}
+\index{lsm6dso32\_mag\_z\_orient\_get@{lsm6dso32\_mag\_z\_orient\_get}!Activity/Inactivity\_detection@{Activity/Inactivity\_detection}}
+\doxysubsubsection{\texorpdfstring{lsm6dso32\_mag\_z\_orient\_get()}{lsm6dso32\_mag\_z\_orient\_get()}}
+{\footnotesize\ttfamily \label{group___l_s_m6_d_s_o32___ga3f3befeb63639881438daeeb6b8de291} 
+int32\+\_\+t lsm6dso32\+\_\+mag\+\_\+z\+\_\+orient\+\_\+get (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx}{, }\item[{lsm6dso32\+\_\+mag\+\_\+z\+\_\+axis\+\_\+t \texorpdfstring{$\ast$}{*}}]{val}{}\end{DoxyParamCaption})}
+
+
+
+Magnetometer Z-\/axis coordinates rotation (to be aligned to accelerometer/\+gyroscope axes orientation).\+[get]\+. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read /\+ write interface definitions \\
+\hline
+{\em val} & Get the values of mag\+\_\+z\+\_\+axis in reg MAG\+\_\+\+CFG\+\_\+A \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY:\+ return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group___l_s_m6_d_s_o32___gaf1991aab3610fc5ce80a1e20768836f2}\index{Activity/Inactivity\_detection@{Activity/Inactivity\_detection}!lsm6dso32\_mag\_z\_orient\_set@{lsm6dso32\_mag\_z\_orient\_set}}
+\index{lsm6dso32\_mag\_z\_orient\_set@{lsm6dso32\_mag\_z\_orient\_set}!Activity/Inactivity\_detection@{Activity/Inactivity\_detection}}
+\doxysubsubsection{\texorpdfstring{lsm6dso32\_mag\_z\_orient\_set()}{lsm6dso32\_mag\_z\_orient\_set()}}
+{\footnotesize\ttfamily \label{group___l_s_m6_d_s_o32___gaf1991aab3610fc5ce80a1e20768836f2} 
+int32\+\_\+t lsm6dso32\+\_\+mag\+\_\+z\+\_\+orient\+\_\+set (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\+\_\+ctx\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{ctx}{, }\item[{lsm6dso32\+\_\+mag\+\_\+z\+\_\+axis\+\_\+t}]{val}{}\end{DoxyParamCaption})}
+
+
+
+Magnetometer Z-\/axis coordinates rotation (to be aligned to accelerometer/\+gyroscope axes orientation).\+[set]\+. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & read /\+ write interface definitions \\
+\hline
+{\em val} & change the values of mag\+\_\+z\+\_\+axis in reg MAG\+\_\+\+CFG\+\_\+A \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em interface} & status (MANDATORY:\+ return 0 -\/\texorpdfstring{$>$}{>} no Error) \\
+\hline
+\end{DoxyRetVals}

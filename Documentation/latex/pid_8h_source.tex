@@ -1,0 +1,36 @@
+\doxysection{pid.\+h}
+\hypertarget{pid_8h_source}{}\label{pid_8h_source}\index{C:/Users/ryanm/Documents/DesignGroup/BB8\_STM32/Firmware/Custom\_Drivers/Inc/pid.h@{C:/Users/ryanm/Documents/DesignGroup/BB8\_STM32/Firmware/Custom\_Drivers/Inc/pid.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ \_\_PID\_H\_\_}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ \_\_PID\_H\_\_}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}}
+\DoxyCodeLine{00005\ \{}
+\DoxyCodeLine{00006\ \ \ \ \ \textcolor{keywordtype}{float}\ Kp;}
+\DoxyCodeLine{00007\ \ \ \ \ \textcolor{keywordtype}{float}\ Ki;}
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{keywordtype}{float}\ Kd;}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keywordtype}{float}\ integral;}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keywordtype}{float}\ prev\_measurement;}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordtype}{float}\ output\_min;}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{float}\ output\_max;}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \}\ \doxymbox{\hyperlink{struct_p_i_d_controller__t}{PIDController\_t}};}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{keywordtype}{void}\ PID\_Init(\doxymbox{\hyperlink{struct_p_i_d_controller__t}{PIDController\_t}}\ *pid,}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ Kp,}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ Ki,}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ Kd,}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ out\_min,}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ out\_max);}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{keywordtype}{float}\ PID\_Update(\doxymbox{\hyperlink{struct_p_i_d_controller__t}{PIDController\_t}}\ *pid,}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ setpoint,}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ measurement,}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ dt);}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

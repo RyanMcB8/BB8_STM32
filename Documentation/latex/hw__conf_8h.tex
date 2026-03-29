@@ -1,0 +1,265 @@
+\doxysection{C:\+/\+\+Users/\+ryanm/\+\+Documents/\+\+Design\+Group/\+\+BB8\+\_\+\+STM32/\+\+Firmware/\+\+Core/\+\+Inc/\+hw\+\_\+conf.h File Reference}
+\hypertarget{hw__conf_8h}{}\label{hw__conf_8h}\index{C:/Users/ryanm/Documents/DesignGroup/BB8\_STM32/Firmware/Core/Inc/hw\_conf.h@{C:/Users/ryanm/Documents/DesignGroup/BB8\_STM32/Firmware/Core/Inc/hw\_conf.h}}
+
+
+Configuration of hardware interface.  
+
+
+This graph shows which files directly or indirectly include this file:\+
+% FIG 0
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\+\#define \doxymbox{\hyperlink{hw__conf_8h_a33ffd7ce57717af843e0d8fa47e2f70f}{CFG\+\_\+\+HW\+\_\+\+THREAD\+\_\+\+NVM\+\_\+\+SRAM\+\_\+\+SEMID}}~9
+\item 
+\+\#define \doxymbox{\hyperlink{hw__conf_8h_a6bd830b43f8b88f90e13aa0b07db86fe}{CFG\+\_\+\+HW\+\_\+\+BLE\+\_\+\+NVM\+\_\+\+SRAM\+\_\+\+SEMID}}~8
+\item 
+\+\#define \doxymbox{\hyperlink{hw__conf_8h_af32646bd78e0f5e56196713d0a38b551}{CFG\+\_\+\+HW\+\_\+\+BLOCK\+\_\+\+FLASH\+\_\+\+REQ\+\_\+\+BY\+\_\+\+CPU2\+\_\+\+SEMID}}~7
+\item 
+\+\#define \doxymbox{\hyperlink{hw__conf_8h_a47d92470a355fcab2af3b1c77377f367}{CFG\+\_\+\+HW\+\_\+\+BLOCK\+\_\+\+FLASH\+\_\+\+REQ\+\_\+\+BY\+\_\+\+CPU1\+\_\+\+SEMID}}~6
+\item 
+\+\#define \doxymbox{\hyperlink{hw__conf_8h_ac8e1feb234a7d92148b61341e619406c}{CFG\+\_\+\+HW\+\_\+\+CLK48\+\_\+\+CONFIG\+\_\+\+SEMID}}~5
+\item 
+\Hypertarget{hw__conf_8h_aa6a932807c2abe1b5a58a203bad318b9}\label{hw__conf_8h_aa6a932807c2abe1b5a58a203bad318b9} 
+\+\#define {\bfseries CFG\+\_\+\+HW\+\_\+\+ENTRY\+\_\+\+STOP\+\_\+\+MODE\+\_\+\+SEMID}~4
+\item 
+\Hypertarget{hw__conf_8h_a6ac138b73973094a8f1f85668743d0fe}\label{hw__conf_8h_a6ac138b73973094a8f1f85668743d0fe} 
+\+\#define {\bfseries CFG\+\_\+\+HW\+\_\+\+RCC\+\_\+\+SEMID}~3
+\item 
+\Hypertarget{hw__conf_8h_a629b27519f1cffbc1abaa6882d729b32}\label{hw__conf_8h_a629b27519f1cffbc1abaa6882d729b32} 
+\+\#define {\bfseries CFG\+\_\+\+HW\+\_\+\+FLASH\+\_\+\+SEMID}~2
+\item 
+\Hypertarget{hw__conf_8h_aafc651f85070efd8d0fd3ba516543d74}\label{hw__conf_8h_aafc651f85070efd8d0fd3ba516543d74} 
+\+\#define {\bfseries CFG\+\_\+\+HW\+\_\+\+PKA\+\_\+\+SEMID}~1
+\item 
+\Hypertarget{hw__conf_8h_aaff99ecf3081f747672be2c4341a52e7}\label{hw__conf_8h_aaff99ecf3081f747672be2c4341a52e7} 
+\+\#define {\bfseries CFG\+\_\+\+HW\+\_\+\+RNG\+\_\+\+SEMID}~0
+\item 
+\+\#define \doxymbox{\hyperlink{hw__conf_8h_a2d96796369010ac19baec44a11fce3c3}{CFG\+\_\+\+HW\+\_\+\+TS\+\_\+\+MAX\+\_\+\+NBR\+\_\+\+CONCURRENT\+\_\+\+TIMER}}~6
+\item 
+\+\#define \doxymbox{\hyperlink{hw__conf_8h_a02c36ea61714eb54bacc5b28cfe461b7}{CFG\+\_\+\+HW\+\_\+\+TS\+\_\+\+NVIC\+\_\+\+RTC\+\_\+\+WAKEUP\+\_\+\+IT\+\_\+\+PREEMPTPRIO}}~3
+\item 
+\+\#define \doxymbox{\hyperlink{hw__conf_8h_a464b56d7953e83306d7231a4f97a80d4}{CFG\+\_\+\+HW\+\_\+\+TS\+\_\+\+NVIC\+\_\+\+RTC\+\_\+\+WAKEUP\+\_\+\+IT\+\_\+\+SUBPRIO}}~0
+\item 
+\+\#define \doxymbox{\hyperlink{hw__conf_8h_a3eaf86fa3ec27befff69aa4c429b9bff}{CFG\+\_\+\+HW\+\_\+\+TS\+\_\+\+USE\+\_\+\+PRIMASK\+\_\+\+AS\+\_\+\+CRITICAL\+\_\+\+SECTION}}~1
+\item 
+\+\#define \doxymbox{\hyperlink{hw__conf_8h_a3fa1fb93ee056623cf5422b462ad86ea}{CFG\+\_\+\+HW\+\_\+\+TS\+\_\+\+RTC\+\_\+\+HANDLER\+\_\+\+MAX\+\_\+\+DELAY}}~( 10 \texorpdfstring{$\ast$}{*} (\doxymbox{\hyperlink{group__stm32_w_bxx___system___private___includes_ga4872023e65449c0506aac3ea6bec99e9}{LSI\+\_\+\+VALUE}}/\+1000) )
+\item 
+\+\#define \doxymbox{\hyperlink{hw__conf_8h_ab25731ccca96dfd44f211bf48f666c82}{CFG\+\_\+\+HW\+\_\+\+TS\+\_\+\+RTC\+\_\+\+WAKEUP\+\_\+\+HANDLER\+\_\+\+ID}}~RTC\+\_\+\+WKUP\+\_\+\+IRQn
+\item 
+\Hypertarget{hw__conf_8h_a90eed3f0630ecc5515852f228c7ba551}\label{hw__conf_8h_a90eed3f0630ecc5515852f228c7ba551} 
+\+\#define {\bfseries CFG\+\_\+\+HW\+\_\+\+LPUART1\+\_\+\+ENABLED}~0
+\item 
+\Hypertarget{hw__conf_8h_ae2d179b0b5c1216e5b5e92ce8464df09}\label{hw__conf_8h_ae2d179b0b5c1216e5b5e92ce8464df09} 
+\+\#define {\bfseries CFG\+\_\+\+HW\+\_\+\+LPUART1\+\_\+\+DMA\+\_\+\+TX\+\_\+\+SUPPORTED}~0
+\item 
+\Hypertarget{hw__conf_8h_ad8d25437dc3130244b72dc38217e64c5}\label{hw__conf_8h_ad8d25437dc3130244b72dc38217e64c5} 
+\+\#define {\bfseries CFG\+\_\+\+HW\+\_\+\+USART1\+\_\+\+ENABLED}~1
+\item 
+\Hypertarget{hw__conf_8h_a7948523736716e554e6c8eefa8122e21}\label{hw__conf_8h_a7948523736716e554e6c8eefa8122e21} 
+\+\#define {\bfseries CFG\+\_\+\+HW\+\_\+\+USART1\+\_\+\+DMA\+\_\+\+TX\+\_\+\+SUPPORTED}~1
+\item 
+\+\#define \doxymbox{\hyperlink{hw__conf_8h_a3a92ba41479f6dda82b74b1aebac8a8a}{CFG\+\_\+\+HW\+\_\+\+USART1\+\_\+\+PREEMPTPRIORITY}}~0x0F
+\item 
+\Hypertarget{hw__conf_8h_a6c5906fdd130634500da4994ff7740be}\label{hw__conf_8h_a6c5906fdd130634500da4994ff7740be} 
+\+\#define {\bfseries CFG\+\_\+\+HW\+\_\+\+USART1\+\_\+\+SUBPRIORITY}~0
+\item 
+\+\#define \doxymbox{\hyperlink{hw__conf_8h_a5cd960b1f93d9eba2517d03987dc406f}{CFG\+\_\+\+HW\+\_\+\+USART1\+\_\+\+SOURCE\+\_\+\+CLOCK}}~RCC\+\_\+\+USART1\+CLKSOURCE\+\_\+\+SYSCLK
+\item 
+\Hypertarget{hw__conf_8h_ad932aa5e64fbd2486767a229fb9f9641}\label{hw__conf_8h_ad932aa5e64fbd2486767a229fb9f9641} 
+\+\#define {\bfseries CFG\+\_\+\+HW\+\_\+\+USART1\+\_\+\+BAUDRATE}~115200
+\item 
+\Hypertarget{hw__conf_8h_a9463e1f6c826d86be4cca422f47b5678}\label{hw__conf_8h_a9463e1f6c826d86be4cca422f47b5678} 
+\+\#define {\bfseries CFG\+\_\+\+HW\+\_\+\+USART1\+\_\+\+WORDLENGTH}~UART\+\_\+\+WORDLENGTH\+\_\+8B
+\item 
+\Hypertarget{hw__conf_8h_abf0d29c642c2f19f26e3fc35a25120cb}\label{hw__conf_8h_abf0d29c642c2f19f26e3fc35a25120cb} 
+\+\#define {\bfseries CFG\+\_\+\+HW\+\_\+\+USART1\+\_\+\+STOPBITS}~UART\+\_\+\+STOPBITS\+\_\+1
+\item 
+\Hypertarget{hw__conf_8h_aa52ade0c3c3c92b7733bc6454eb165ec}\label{hw__conf_8h_aa52ade0c3c3c92b7733bc6454eb165ec} 
+\+\#define {\bfseries CFG\+\_\+\+HW\+\_\+\+USART1\+\_\+\+PARITY}~UART\+\_\+\+PARITY\+\_\+\+NONE
+\item 
+\Hypertarget{hw__conf_8h_ad061980d30f6fd9e9331fbc204ec21df}\label{hw__conf_8h_ad061980d30f6fd9e9331fbc204ec21df} 
+\+\#define {\bfseries CFG\+\_\+\+HW\+\_\+\+USART1\+\_\+\+HWFLOWCTL}~UART\+\_\+\+HWCONTROL\+\_\+\+NONE
+\item 
+\Hypertarget{hw__conf_8h_ad8095aaee35f63464cf1ec82787dede5}\label{hw__conf_8h_ad8095aaee35f63464cf1ec82787dede5} 
+\+\#define {\bfseries CFG\+\_\+\+HW\+\_\+\+USART1\+\_\+\+MODE}~UART\+\_\+\+MODE\+\_\+\+TX\+\_\+\+RX
+\item 
+\Hypertarget{hw__conf_8h_a79ebc7c5c4d2576e31d4ded479dc02d1}\label{hw__conf_8h_a79ebc7c5c4d2576e31d4ded479dc02d1} 
+\+\#define {\bfseries CFG\+\_\+\+HW\+\_\+\+USART1\+\_\+\+ADVFEATUREINIT}~UART\+\_\+\+ADVFEATURE\+\_\+\+NO\+\_\+\+INIT
+\item 
+\Hypertarget{hw__conf_8h_a1118071f35e5deed19392c69f5011940}\label{hw__conf_8h_a1118071f35e5deed19392c69f5011940} 
+\+\#define {\bfseries CFG\+\_\+\+HW\+\_\+\+USART1\+\_\+\+OVERSAMPLING}~UART\+\_\+\+OVERSAMPLING\+\_\+8
+\item 
+\Hypertarget{hw__conf_8h_a19457ed7440c803022278319cb737d89}\label{hw__conf_8h_a19457ed7440c803022278319cb737d89} 
+\+\#define {\bfseries CFG\+\_\+\+HW\+\_\+\+USART1\+\_\+\+TX\+\_\+\+PORT\+\_\+\+CLK\+\_\+\+ENABLE}~\+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+GPIOB\+\_\+\+CLK\+\_\+\+ENABLE
+\item 
+\Hypertarget{hw__conf_8h_a519ec54b9681a154b3f61da5b12c9c85}\label{hw__conf_8h_a519ec54b9681a154b3f61da5b12c9c85} 
+\+\#define {\bfseries CFG\+\_\+\+HW\+\_\+\+USART1\+\_\+\+TX\+\_\+\+PORT}~GPIOB
+\item 
+\Hypertarget{hw__conf_8h_ae2ee6648c8a77bfc0b1189750e870acf}\label{hw__conf_8h_ae2ee6648c8a77bfc0b1189750e870acf} 
+\+\#define {\bfseries CFG\+\_\+\+HW\+\_\+\+USART1\+\_\+\+TX\+\_\+\+PIN}~GPIO\+\_\+\+PIN\+\_\+6
+\item 
+\Hypertarget{hw__conf_8h_a4ceb0f0e9a8b1bd663eb005674b75ec1}\label{hw__conf_8h_a4ceb0f0e9a8b1bd663eb005674b75ec1} 
+\+\#define {\bfseries CFG\+\_\+\+HW\+\_\+\+USART1\+\_\+\+TX\+\_\+\+MODE}~GPIO\+\_\+\+MODE\+\_\+\+AF\+\_\+\+PP
+\item 
+\Hypertarget{hw__conf_8h_ae38e521d1dd081af165d70fe99a3f3a5}\label{hw__conf_8h_ae38e521d1dd081af165d70fe99a3f3a5} 
+\+\#define {\bfseries CFG\+\_\+\+HW\+\_\+\+USART1\+\_\+\+TX\+\_\+\+PULL}~GPIO\+\_\+\+NOPULL
+\item 
+\Hypertarget{hw__conf_8h_aa8f355ba1f11402c8646470af5fd5eb3}\label{hw__conf_8h_aa8f355ba1f11402c8646470af5fd5eb3} 
+\+\#define {\bfseries CFG\+\_\+\+HW\+\_\+\+USART1\+\_\+\+TX\+\_\+\+SPEED}~GPIO\+\_\+\+SPEED\+\_\+\+FREQ\+\_\+\+VERY\+\_\+\+HIGH
+\item 
+\Hypertarget{hw__conf_8h_ae92961f7df6f66b417d9ffc4b161abd6}\label{hw__conf_8h_ae92961f7df6f66b417d9ffc4b161abd6} 
+\+\#define {\bfseries CFG\+\_\+\+HW\+\_\+\+USART1\+\_\+\+TX\+\_\+\+ALTERNATE}~GPIO\+\_\+\+AF7\+\_\+\+USART1
+\item 
+\Hypertarget{hw__conf_8h_adccf5c12fdc19c43cff665120482cf53}\label{hw__conf_8h_adccf5c12fdc19c43cff665120482cf53} 
+\+\#define {\bfseries CFG\+\_\+\+HW\+\_\+\+USART1\+\_\+\+RX\+\_\+\+PORT\+\_\+\+CLK\+\_\+\+ENABLE}~\+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+GPIOB\+\_\+\+CLK\+\_\+\+ENABLE
+\item 
+\Hypertarget{hw__conf_8h_a45f20b979195fc61788065de80d22d5e}\label{hw__conf_8h_a45f20b979195fc61788065de80d22d5e} 
+\+\#define {\bfseries CFG\+\_\+\+HW\+\_\+\+USART1\+\_\+\+RX\+\_\+\+PORT}~GPIOB
+\item 
+\Hypertarget{hw__conf_8h_a1674985dc2c3f006fe8d8c1ddffb8681}\label{hw__conf_8h_a1674985dc2c3f006fe8d8c1ddffb8681} 
+\+\#define {\bfseries CFG\+\_\+\+HW\+\_\+\+USART1\+\_\+\+RX\+\_\+\+PIN}~GPIO\+\_\+\+PIN\+\_\+7
+\item 
+\Hypertarget{hw__conf_8h_a40552dc0169771d3cf58162ba79fcc1e}\label{hw__conf_8h_a40552dc0169771d3cf58162ba79fcc1e} 
+\+\#define {\bfseries CFG\+\_\+\+HW\+\_\+\+USART1\+\_\+\+RX\+\_\+\+MODE}~GPIO\+\_\+\+MODE\+\_\+\+AF\+\_\+\+PP
+\item 
+\Hypertarget{hw__conf_8h_a4350517f99f14f0142e34db16660aa79}\label{hw__conf_8h_a4350517f99f14f0142e34db16660aa79} 
+\+\#define {\bfseries CFG\+\_\+\+HW\+\_\+\+USART1\+\_\+\+RX\+\_\+\+PULL}~GPIO\+\_\+\+NOPULL
+\item 
+\Hypertarget{hw__conf_8h_a0a04a0fa6acd5edf25da5dfba2c81938}\label{hw__conf_8h_a0a04a0fa6acd5edf25da5dfba2c81938} 
+\+\#define {\bfseries CFG\+\_\+\+HW\+\_\+\+USART1\+\_\+\+RX\+\_\+\+SPEED}~GPIO\+\_\+\+SPEED\+\_\+\+FREQ\+\_\+\+VERY\+\_\+\+HIGH
+\item 
+\Hypertarget{hw__conf_8h_af827bf897003587d538cc48f476954c5}\label{hw__conf_8h_af827bf897003587d538cc48f476954c5} 
+\+\#define {\bfseries CFG\+\_\+\+HW\+\_\+\+USART1\+\_\+\+RX\+\_\+\+ALTERNATE}~GPIO\+\_\+\+AF7\+\_\+\+USART1
+\item 
+\Hypertarget{hw__conf_8h_a7f9517c2f49c8c81947b29f5400b963d}\label{hw__conf_8h_a7f9517c2f49c8c81947b29f5400b963d} 
+\+\#define {\bfseries CFG\+\_\+\+HW\+\_\+\+USART1\+\_\+\+DMA\+\_\+\+TX\+\_\+\+PREEMPTPRIORITY}~0x0F
+\item 
+\Hypertarget{hw__conf_8h_a52aaac978760346de40b7c914dc6a3cb}\label{hw__conf_8h_a52aaac978760346de40b7c914dc6a3cb} 
+\+\#define {\bfseries CFG\+\_\+\+HW\+\_\+\+USART1\+\_\+\+DMA\+\_\+\+TX\+\_\+\+SUBPRIORITY}~0
+\item 
+\Hypertarget{hw__conf_8h_a66d77917263587d6807135c491286871}\label{hw__conf_8h_a66d77917263587d6807135c491286871} 
+\+\#define {\bfseries CFG\+\_\+\+HW\+\_\+\+USART1\+\_\+\+DMAMUX\+\_\+\+CLK\+\_\+\+ENABLE}~\+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+DMAMUX1\+\_\+\+CLK\+\_\+\+ENABLE
+\item 
+\Hypertarget{hw__conf_8h_a6aec3c33ba539f9fe9e653d952cb47ac}\label{hw__conf_8h_a6aec3c33ba539f9fe9e653d952cb47ac} 
+\+\#define {\bfseries CFG\+\_\+\+HW\+\_\+\+USART1\+\_\+\+DMA\+\_\+\+CLK\+\_\+\+ENABLE}~\+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+DMA2\+\_\+\+CLK\+\_\+\+ENABLE
+\item 
+\Hypertarget{hw__conf_8h_a2afeecbcdd7b41185cb0e1288bffa116}\label{hw__conf_8h_a2afeecbcdd7b41185cb0e1288bffa116} 
+\+\#define {\bfseries CFG\+\_\+\+HW\+\_\+\+USART1\+\_\+\+TX\+\_\+\+DMA\+\_\+\+REQ}~DMA\+\_\+\+REQUEST\+\_\+\+USART1\+\_\+\+TX
+\item 
+\Hypertarget{hw__conf_8h_a3ad1dafeac02c1ffaf0cf3ade256f96b}\label{hw__conf_8h_a3ad1dafeac02c1ffaf0cf3ade256f96b} 
+\+\#define {\bfseries CFG\+\_\+\+HW\+\_\+\+USART1\+\_\+\+TX\+\_\+\+DMA\+\_\+\+CHANNEL}~DMA2\+\_\+\+Channel4
+\item 
+\Hypertarget{hw__conf_8h_ae0d3bc8799cd1ffe621cc88cceba1e9e}\label{hw__conf_8h_ae0d3bc8799cd1ffe621cc88cceba1e9e} 
+\+\#define {\bfseries CFG\+\_\+\+HW\+\_\+\+USART1\+\_\+\+TX\+\_\+\+DMA\+\_\+\+IRQn}~DMA2\+\_\+\+Channel4\+\_\+\+IRQn
+\item 
+\Hypertarget{hw__conf_8h_a629a98777c79bfb5e37abd397108dab7}\label{hw__conf_8h_a629a98777c79bfb5e37abd397108dab7} 
+\+\#define {\bfseries CFG\+\_\+\+HW\+\_\+\+USART1\+\_\+\+DMA\+\_\+\+TX\+\_\+\+IRQHandler}~\doxymbox{\hyperlink{stm32wbxx__it_8h_a9cf33be80dab6b6bcaa67ab256a463e9}{DMA2\+\_\+\+Channel4\+\_\+\+IRQHandler}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Configuration of hardware interface. 
+
+\begin{DoxyAuthor}{Author}
+MCD Application Team 
+\end{DoxyAuthor}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+Copyright (c) 2026 STMicroelectronics. All rights reserved.
+
+This software is licensed under terms that can be found in the LICENSE file in the root directory of this software component. If no LICENSE file comes with this software, it is provided AS-\/\+IS. 
+
+\label{doc-define-members}
+\Hypertarget{hw__conf_8h_doc-define-members}
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{hw__conf_8h_a6bd830b43f8b88f90e13aa0b07db86fe}\index{hw\_conf.h@{hw\_conf.h}!CFG\_HW\_BLE\_NVM\_SRAM\_SEMID@{CFG\_HW\_BLE\_NVM\_SRAM\_SEMID}}
+\index{CFG\_HW\_BLE\_NVM\_SRAM\_SEMID@{CFG\_HW\_BLE\_NVM\_SRAM\_SEMID}!hw\_conf.h@{hw\_conf.h}}
+\doxysubsubsection{\texorpdfstring{CFG\_HW\_BLE\_NVM\_SRAM\_SEMID}{CFG\_HW\_BLE\_NVM\_SRAM\_SEMID}}
+{\footnotesize\ttfamily \label{hw__conf_8h_a6bd830b43f8b88f90e13aa0b07db86fe} 
+\+\#define CFG\+\_\+\+HW\+\_\+\+BLE\+\_\+\+NVM\+\_\+\+SRAM\+\_\+\+SEMID~8}
+
+The CPU2 may be configured to store the BLE persistent data either in internal NVM storage on CPU2 or in SRAM2 buffer provided by the user application. This can be configured with the system command SHCI\+\_\+\+C2\+\_\+\+Config() When the CPU2 is requested to store persistent data in SRAM2, it can write data in this buffer at any time when needed. In order to read consistent data with the CPU1 from the SRAM2 buffer, the flow should be:\+
+\begin{DoxyItemize}
+\item CPU1 takes CFG\+\_\+\+HW\+\_\+\+BLE\+\_\+\+NVM\+\_\+\+SRAM\+\_\+\+SEMID semaphore
+\item CPU1 reads all persistent data from SRAM2 (most of the time, the goal is to write these data into an NVM managed by CPU1)
+\item CPU1 releases CFG\+\_\+\+HW\+\_\+\+BLE\+\_\+\+NVM\+\_\+\+SRAM\+\_\+\+SEMID semaphore CFG\+\_\+\+HW\+\_\+\+BLE\+\_\+\+NVM\+\_\+\+SRAM\+\_\+\+SEMID semaphore makes sure CPU2 does not update the persistent data in SRAM2 at the same time CPU1 is reading them. There is no timing constraint on how long this semaphore can be kept. 
+\end{DoxyItemize}\Hypertarget{hw__conf_8h_a47d92470a355fcab2af3b1c77377f367}\index{hw\_conf.h@{hw\_conf.h}!CFG\_HW\_BLOCK\_FLASH\_REQ\_BY\_CPU1\_SEMID@{CFG\_HW\_BLOCK\_FLASH\_REQ\_BY\_CPU1\_SEMID}}
+\index{CFG\_HW\_BLOCK\_FLASH\_REQ\_BY\_CPU1\_SEMID@{CFG\_HW\_BLOCK\_FLASH\_REQ\_BY\_CPU1\_SEMID}!hw\_conf.h@{hw\_conf.h}}
+\doxysubsubsection{\texorpdfstring{CFG\_HW\_BLOCK\_FLASH\_REQ\_BY\_CPU1\_SEMID}{CFG\_HW\_BLOCK\_FLASH\_REQ\_BY\_CPU1\_SEMID}}
+{\footnotesize\ttfamily \label{hw__conf_8h_a47d92470a355fcab2af3b1c77377f367} 
+\+\#define CFG\+\_\+\+HW\+\_\+\+BLOCK\+\_\+\+FLASH\+\_\+\+REQ\+\_\+\+BY\+\_\+\+CPU1\+\_\+\+SEMID~6}
+
+Index of the semaphore used by CPU1 to prevent the CPU2 to either write or erase data in flash In order to protect its timing, the CPU1 may get this semaphore to prevent the CPU2 to either write or erase in flash (as this will stall both CPUs) The PES bit shall not be used as this may stall the CPU2 in some cases. \Hypertarget{hw__conf_8h_af32646bd78e0f5e56196713d0a38b551}\index{hw\_conf.h@{hw\_conf.h}!CFG\_HW\_BLOCK\_FLASH\_REQ\_BY\_CPU2\_SEMID@{CFG\_HW\_BLOCK\_FLASH\_REQ\_BY\_CPU2\_SEMID}}
+\index{CFG\_HW\_BLOCK\_FLASH\_REQ\_BY\_CPU2\_SEMID@{CFG\_HW\_BLOCK\_FLASH\_REQ\_BY\_CPU2\_SEMID}!hw\_conf.h@{hw\_conf.h}}
+\doxysubsubsection{\texorpdfstring{CFG\_HW\_BLOCK\_FLASH\_REQ\_BY\_CPU2\_SEMID}{CFG\_HW\_BLOCK\_FLASH\_REQ\_BY\_CPU2\_SEMID}}
+{\footnotesize\ttfamily \label{hw__conf_8h_af32646bd78e0f5e56196713d0a38b551} 
+\+\#define CFG\+\_\+\+HW\+\_\+\+BLOCK\+\_\+\+FLASH\+\_\+\+REQ\+\_\+\+BY\+\_\+\+CPU2\+\_\+\+SEMID~7}
+
+Index of the semaphore used by CPU2 to prevent the CPU1 to either write or erase data in flash The CPU1 shall not either write or erase in flash when this semaphore is taken by the CPU2 When the CPU1 needs to either write or erase in flash, it shall first get the semaphore and release it just after writing a raw (64bits data) or erasing one sector. Once the Semaphore has been released, there shall be at least 1us before it can be taken again. This is required to give the opportunity to CPU2 to take it. On v1.\+4.\+0 and older CPU2 wireless firmware, this semaphore is unused and CPU2 is using PES bit. By default, CPU2 is using the PES bit to protect its timing. The CPU1 may request the CPU2 to use the semaphore instead of the PES bit by sending the system command SHCI\+\_\+\+C2\+\_\+\+Set\+Flash\+Activity\+Control() \Hypertarget{hw__conf_8h_ac8e1feb234a7d92148b61341e619406c}\index{hw\_conf.h@{hw\_conf.h}!CFG\_HW\_CLK48\_CONFIG\_SEMID@{CFG\_HW\_CLK48\_CONFIG\_SEMID}}
+\index{CFG\_HW\_CLK48\_CONFIG\_SEMID@{CFG\_HW\_CLK48\_CONFIG\_SEMID}!hw\_conf.h@{hw\_conf.h}}
+\doxysubsubsection{\texorpdfstring{CFG\_HW\_CLK48\_CONFIG\_SEMID}{CFG\_HW\_CLK48\_CONFIG\_SEMID}}
+{\footnotesize\ttfamily \label{hw__conf_8h_ac8e1feb234a7d92148b61341e619406c} 
+\+\#define CFG\+\_\+\+HW\+\_\+\+CLK48\+\_\+\+CONFIG\+\_\+\+SEMID~5}
+
+Index of the semaphore used to manage the CLK48 clock configuration When the USB is required, this semaphore shall be taken before configuring te CLK48 for USB and should be released after the application switch OFF the clock when the USB is not used anymore When using the RNG, it is good enough to use CFG\+\_\+\+HW\+\_\+\+RNG\+\_\+\+SEMID to control CLK48. More details in AN5289 \Hypertarget{hw__conf_8h_a33ffd7ce57717af843e0d8fa47e2f70f}\index{hw\_conf.h@{hw\_conf.h}!CFG\_HW\_THREAD\_NVM\_SRAM\_SEMID@{CFG\_HW\_THREAD\_NVM\_SRAM\_SEMID}}
+\index{CFG\_HW\_THREAD\_NVM\_SRAM\_SEMID@{CFG\_HW\_THREAD\_NVM\_SRAM\_SEMID}!hw\_conf.h@{hw\_conf.h}}
+\doxysubsubsection{\texorpdfstring{CFG\_HW\_THREAD\_NVM\_SRAM\_SEMID}{CFG\_HW\_THREAD\_NVM\_SRAM\_SEMID}}
+{\footnotesize\ttfamily \label{hw__conf_8h_a33ffd7ce57717af843e0d8fa47e2f70f} 
+\+\#define CFG\+\_\+\+HW\+\_\+\+THREAD\+\_\+\+NVM\+\_\+\+SRAM\+\_\+\+SEMID~9}
+
+The CPU2 may be configured to store the Thread persistent data either in internal NVM storage on CPU2 or in SRAM2 buffer provided by the user application. This can be configured with the system command SHCI\+\_\+\+C2\+\_\+\+Config() When the CPU2 is requested to store persistent data in SRAM2, it can write data in this buffer at any time when needed. In order to read consistent data with the CPU1 from the SRAM2 buffer, the flow should be:\+
+\begin{DoxyItemize}
+\item CPU1 takes CFG\+\_\+\+HW\+\_\+\+THREAD\+\_\+\+NVM\+\_\+\+SRAM\+\_\+\+SEMID semaphore
+\item CPU1 reads all persistent data from SRAM2 (most of the time, the goal is to write these data into an NVM managed by CPU1)
+\item CPU1 releases CFG\+\_\+\+HW\+\_\+\+THREAD\+\_\+\+NVM\+\_\+\+SRAM\+\_\+\+SEMID semaphore CFG\+\_\+\+HW\+\_\+\+THREAD\+\_\+\+NVM\+\_\+\+SRAM\+\_\+\+SEMID semaphore makes sure CPU2 does not update the persistent data in SRAM2 at the same time CPU1 is reading them. There is no timing constraint on how long this semaphore can be kept. 
+\end{DoxyItemize}\Hypertarget{hw__conf_8h_a2d96796369010ac19baec44a11fce3c3}\index{hw\_conf.h@{hw\_conf.h}!CFG\_HW\_TS\_MAX\_NBR\_CONCURRENT\_TIMER@{CFG\_HW\_TS\_MAX\_NBR\_CONCURRENT\_TIMER}}
+\index{CFG\_HW\_TS\_MAX\_NBR\_CONCURRENT\_TIMER@{CFG\_HW\_TS\_MAX\_NBR\_CONCURRENT\_TIMER}!hw\_conf.h@{hw\_conf.h}}
+\doxysubsubsection{\texorpdfstring{CFG\_HW\_TS\_MAX\_NBR\_CONCURRENT\_TIMER}{CFG\_HW\_TS\_MAX\_NBR\_CONCURRENT\_TIMER}}
+{\footnotesize\ttfamily \label{hw__conf_8h_a2d96796369010ac19baec44a11fce3c3} 
+\+\#define CFG\+\_\+\+HW\+\_\+\+TS\+\_\+\+MAX\+\_\+\+NBR\+\_\+\+CONCURRENT\+\_\+\+TIMER~6}
+
+The user may define the maximum number of virtual timers supported. It shall not exceed 255 \Hypertarget{hw__conf_8h_a02c36ea61714eb54bacc5b28cfe461b7}\index{hw\_conf.h@{hw\_conf.h}!CFG\_HW\_TS\_NVIC\_RTC\_WAKEUP\_IT\_PREEMPTPRIO@{CFG\_HW\_TS\_NVIC\_RTC\_WAKEUP\_IT\_PREEMPTPRIO}}
+\index{CFG\_HW\_TS\_NVIC\_RTC\_WAKEUP\_IT\_PREEMPTPRIO@{CFG\_HW\_TS\_NVIC\_RTC\_WAKEUP\_IT\_PREEMPTPRIO}!hw\_conf.h@{hw\_conf.h}}
+\doxysubsubsection{\texorpdfstring{CFG\_HW\_TS\_NVIC\_RTC\_WAKEUP\_IT\_PREEMPTPRIO}{CFG\_HW\_TS\_NVIC\_RTC\_WAKEUP\_IT\_PREEMPTPRIO}}
+{\footnotesize\ttfamily \label{hw__conf_8h_a02c36ea61714eb54bacc5b28cfe461b7} 
+\+\#define CFG\+\_\+\+HW\+\_\+\+TS\+\_\+\+NVIC\+\_\+\+RTC\+\_\+\+WAKEUP\+\_\+\+IT\+\_\+\+PREEMPTPRIO~3}
+
+The user may define the priority in the NVIC of the RTC\+\_\+\+WKUP interrupt handler that is used to manage the wakeup timer. This setting is the preemptpriority part of the NVIC. \Hypertarget{hw__conf_8h_a464b56d7953e83306d7231a4f97a80d4}\index{hw\_conf.h@{hw\_conf.h}!CFG\_HW\_TS\_NVIC\_RTC\_WAKEUP\_IT\_SUBPRIO@{CFG\_HW\_TS\_NVIC\_RTC\_WAKEUP\_IT\_SUBPRIO}}
+\index{CFG\_HW\_TS\_NVIC\_RTC\_WAKEUP\_IT\_SUBPRIO@{CFG\_HW\_TS\_NVIC\_RTC\_WAKEUP\_IT\_SUBPRIO}!hw\_conf.h@{hw\_conf.h}}
+\doxysubsubsection{\texorpdfstring{CFG\_HW\_TS\_NVIC\_RTC\_WAKEUP\_IT\_SUBPRIO}{CFG\_HW\_TS\_NVIC\_RTC\_WAKEUP\_IT\_SUBPRIO}}
+{\footnotesize\ttfamily \label{hw__conf_8h_a464b56d7953e83306d7231a4f97a80d4} 
+\+\#define CFG\+\_\+\+HW\+\_\+\+TS\+\_\+\+NVIC\+\_\+\+RTC\+\_\+\+WAKEUP\+\_\+\+IT\+\_\+\+SUBPRIO~0}
+
+The user may define the priority in the NVIC of the RTC\+\_\+\+WKUP interrupt handler that is used to manage the wakeup timer. This setting is the subpriority part of the NVIC. It does not exist on all processors. When it is not supported on the CPU, the setting is ignored \Hypertarget{hw__conf_8h_a3fa1fb93ee056623cf5422b462ad86ea}\index{hw\_conf.h@{hw\_conf.h}!CFG\_HW\_TS\_RTC\_HANDLER\_MAX\_DELAY@{CFG\_HW\_TS\_RTC\_HANDLER\_MAX\_DELAY}}
+\index{CFG\_HW\_TS\_RTC\_HANDLER\_MAX\_DELAY@{CFG\_HW\_TS\_RTC\_HANDLER\_MAX\_DELAY}!hw\_conf.h@{hw\_conf.h}}
+\doxysubsubsection{\texorpdfstring{CFG\_HW\_TS\_RTC\_HANDLER\_MAX\_DELAY}{CFG\_HW\_TS\_RTC\_HANDLER\_MAX\_DELAY}}
+{\footnotesize\ttfamily \label{hw__conf_8h_a3fa1fb93ee056623cf5422b462ad86ea} 
+\+\#define CFG\+\_\+\+HW\+\_\+\+TS\+\_\+\+RTC\+\_\+\+HANDLER\+\_\+\+MAX\+\_\+\+DELAY~( 10 \texorpdfstring{$\ast$}{*} (\doxymbox{\hyperlink{group__stm32_w_bxx___system___private___includes_ga4872023e65449c0506aac3ea6bec99e9}{LSI\+\_\+\+VALUE}}/\+1000) )}
+
+This value shall reflect the maximum delay there could be in the application between the time the RTC interrupt is generated by the Hardware and the time when the RTC interrupt handler is called. This time is measured in number of RTCCLK ticks. A relaxed timing would be 10ms When the value is too short, the timerserver will not be able to count properly and all timeout may be random. When the value is too long, the device may wake up more often than the most optimal configuration. However, the impact on power consumption would be marginal (unless the value selected is extremely too long). It is strongly recommended to select a value large enough to make sure it is not too short to ensure reliability of the system as this will have marginal impact on low power mode \Hypertarget{hw__conf_8h_ab25731ccca96dfd44f211bf48f666c82}\index{hw\_conf.h@{hw\_conf.h}!CFG\_HW\_TS\_RTC\_WAKEUP\_HANDLER\_ID@{CFG\_HW\_TS\_RTC\_WAKEUP\_HANDLER\_ID}}
+\index{CFG\_HW\_TS\_RTC\_WAKEUP\_HANDLER\_ID@{CFG\_HW\_TS\_RTC\_WAKEUP\_HANDLER\_ID}!hw\_conf.h@{hw\_conf.h}}
+\doxysubsubsection{\texorpdfstring{CFG\_HW\_TS\_RTC\_WAKEUP\_HANDLER\_ID}{CFG\_HW\_TS\_RTC\_WAKEUP\_HANDLER\_ID}}
+{\footnotesize\ttfamily \label{hw__conf_8h_ab25731ccca96dfd44f211bf48f666c82} 
+\+\#define CFG\+\_\+\+HW\+\_\+\+TS\+\_\+\+RTC\+\_\+\+WAKEUP\+\_\+\+HANDLER\+\_\+\+ID~RTC\+\_\+\+WKUP\+\_\+\+IRQn}
+
+Interrupt ID in the NVIC of the RTC Wakeup interrupt handler It shall be type of IRQn\+\_\+\+Type \Hypertarget{hw__conf_8h_a3eaf86fa3ec27befff69aa4c429b9bff}\index{hw\_conf.h@{hw\_conf.h}!CFG\_HW\_TS\_USE\_PRIMASK\_AS\_CRITICAL\_SECTION@{CFG\_HW\_TS\_USE\_PRIMASK\_AS\_CRITICAL\_SECTION}}
+\index{CFG\_HW\_TS\_USE\_PRIMASK\_AS\_CRITICAL\_SECTION@{CFG\_HW\_TS\_USE\_PRIMASK\_AS\_CRITICAL\_SECTION}!hw\_conf.h@{hw\_conf.h}}
+\doxysubsubsection{\texorpdfstring{CFG\_HW\_TS\_USE\_PRIMASK\_AS\_CRITICAL\_SECTION}{CFG\_HW\_TS\_USE\_PRIMASK\_AS\_CRITICAL\_SECTION}}
+{\footnotesize\ttfamily \label{hw__conf_8h_a3eaf86fa3ec27befff69aa4c429b9bff} 
+\+\#define CFG\+\_\+\+HW\+\_\+\+TS\+\_\+\+USE\+\_\+\+PRIMASK\+\_\+\+AS\+\_\+\+CRITICAL\+\_\+\+SECTION~1}
+
+Define a critical section in the Timer server The Timer server does not support the API to be nested The Application shall either:\+ a) Ensure this will never happen b) Define the critical section The default implementations is masking all interrupts using the PRIMASK bit The Timer\+Server driver uses critical sections to avoid context corruption. This is achieved with the macro TIMER\+\_\+\+ENTER\+\_\+\+CRITICAL\+\_\+\+SECTION and TIMER\+\_\+\+EXIT\+\_\+\+CRITICAL\+\_\+\+SECTION. When CFG\+\_\+\+HW\+\_\+\+TS\+\_\+\+USE\+\_\+\+PRIMASK\+\_\+\+AS\+\_\+\+CRITICAL\+\_\+\+SECTION is set to 1, all STM32 interrupts are masked with the PRIMASK bit of the CortexM CPU. It is possible to use the BASEPRI register of the CortexM CPU to keep allowed some interrupts with high priority. In that case, the user shall re-\/implement TIMER\+\_\+\+ENTER\+\_\+\+CRITICAL\+\_\+\+SECTION and TIMER\+\_\+\+EXIT\+\_\+\+CRITICAL\+\_\+\+SECTION and shall make sure that no Timer\+Server API are called when the TIMER critical section is entered \Hypertarget{hw__conf_8h_a3a92ba41479f6dda82b74b1aebac8a8a}\index{hw\_conf.h@{hw\_conf.h}!CFG\_HW\_USART1\_PREEMPTPRIORITY@{CFG\_HW\_USART1\_PREEMPTPRIORITY}}
+\index{CFG\_HW\_USART1\_PREEMPTPRIORITY@{CFG\_HW\_USART1\_PREEMPTPRIORITY}!hw\_conf.h@{hw\_conf.h}}
+\doxysubsubsection{\texorpdfstring{CFG\_HW\_USART1\_PREEMPTPRIORITY}{CFG\_HW\_USART1\_PREEMPTPRIORITY}}
+{\footnotesize\ttfamily \label{hw__conf_8h_a3a92ba41479f6dda82b74b1aebac8a8a} 
+\+\#define CFG\+\_\+\+HW\+\_\+\+USART1\+\_\+\+PREEMPTPRIORITY~0x0F}
+
+UART1 \Hypertarget{hw__conf_8h_a5cd960b1f93d9eba2517d03987dc406f}\index{hw\_conf.h@{hw\_conf.h}!CFG\_HW\_USART1\_SOURCE\_CLOCK@{CFG\_HW\_USART1\_SOURCE\_CLOCK}}
+\index{CFG\_HW\_USART1\_SOURCE\_CLOCK@{CFG\_HW\_USART1\_SOURCE\_CLOCK}!hw\_conf.h@{hw\_conf.h}}
+\doxysubsubsection{\texorpdfstring{CFG\_HW\_USART1\_SOURCE\_CLOCK}{CFG\_HW\_USART1\_SOURCE\_CLOCK}}
+{\footnotesize\ttfamily \label{hw__conf_8h_a5cd960b1f93d9eba2517d03987dc406f} 
+\+\#define CFG\+\_\+\+HW\+\_\+\+USART1\+\_\+\+SOURCE\+\_\+\+CLOCK~RCC\+\_\+\+USART1\+CLKSOURCE\+\_\+\+SYSCLK}
+
+\texorpdfstring{$<$}{<} The application shall check the selected source clock is enable 

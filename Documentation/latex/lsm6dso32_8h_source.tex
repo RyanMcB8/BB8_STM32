@@ -1,0 +1,249 @@
+\doxysection{lsm6dso32.\+h}
+\hypertarget{lsm6dso32_8h_source}{}\label{lsm6dso32_8h_source}\index{C:/Users/ryanm/Documents/DesignGroup/BB8\_STM32/Firmware/Custom\_Drivers/Inc/lsm6dso32.h@{C:/Users/ryanm/Documents/DesignGroup/BB8\_STM32/Firmware/Custom\_Drivers/Inc/lsm6dso32.h}}
+\doxymbox{\hyperlink{lsm6dso32_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{comment}{/*\ Define\ to\ prevent\ recursive\ inclusion\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#ifndef\ LSM6DSO32\_H}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#define\ LSM6DSO32\_H}}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00024\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}}
+\DoxyCodeLine{00025\ \{}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{comment}{/*\ Includes\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{lsm6dso32__reg_8h}{lsm6dso32\_reg.h}}"{}}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#include\ <string.h>}}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \textcolor{keyword}{typedef}\ int32\_t\ (*LSM6DSO32\_Init\_Func)(void);}
+\DoxyCodeLine{00049\ \textcolor{keyword}{typedef}\ int32\_t\ (*LSM6DSO32\_DeInit\_Func)(void);}
+\DoxyCodeLine{00050\ \textcolor{keyword}{typedef}\ int32\_t\ (*LSM6DSO32\_GetTick\_Func)(void);}
+\DoxyCodeLine{00051\ \textcolor{keyword}{typedef}\ void\ \ \ \ (*LSM6DSO32\_Delay\_Func)(uint32\_t);}
+\DoxyCodeLine{00052\ \textcolor{keyword}{typedef}\ int32\_t\ (*LSM6DSO32\_WriteReg\_Func)(uint16\_t,\ uint16\_t,\ uint8\_t\ *,\ uint16\_t);}
+\DoxyCodeLine{00053\ \textcolor{keyword}{typedef}\ int32\_t\ (*LSM6DSO32\_ReadReg\_Func)(uint16\_t,\ uint16\_t,\ uint8\_t\ *,\ uint16\_t);}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00056\ \{}
+\DoxyCodeLine{00057\ \ \ LSM6DSO32\_INT1\_PIN,}
+\DoxyCodeLine{00058\ \ \ LSM6DSO32\_INT2\_PIN,}
+\DoxyCodeLine{00059\ \}\ LSM6DSO32\_SensorIntPin\_t;}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00062\ \{}
+\DoxyCodeLine{00063\ \ \ LSM6DSO32\_ACC\_HIGH\_PERFORMANCE\_MODE,}
+\DoxyCodeLine{00064\ \ \ LSM6DSO32\_ACC\_LOW\_POWER\_NORMAL\_MODE,}
+\DoxyCodeLine{00065\ \ \ LSM6DSO32\_ACC\_ULTRA\_LOW\_POWER\_MODE}
+\DoxyCodeLine{00066\ \}\ LSM6DSO32\_ACC\_Operating\_Mode\_t;}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00069\ \{}
+\DoxyCodeLine{00070\ \ \ LSM6DSO32\_GYRO\_HIGH\_PERFORMANCE\_MODE,}
+\DoxyCodeLine{00071\ \ \ LSM6DSO32\_GYRO\_LOW\_POWER\_NORMAL\_MODE}
+\DoxyCodeLine{00072\ \}\ LSM6DSO32\_GYRO\_Operating\_Mode\_t;}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}}
+\DoxyCodeLine{00075\ \{}
+\DoxyCodeLine{00076\ \ \ LSM6DSO32\_Init\_Func\ \ \ \ \ \ \ \ Init;}
+\DoxyCodeLine{00077\ \ \ LSM6DSO32\_DeInit\_Func\ \ \ \ \ \ DeInit;}
+\DoxyCodeLine{00078\ \ \ uint32\_t\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ BusType;\ \textcolor{comment}{/*0\ means\ I2C,\ 1\ means\ SPI\ 4-\/Wires,\ 2\ means\ SPI-\/3-\/Wires,\ 3\ means\ I3C\ */}}
+\DoxyCodeLine{00079\ \ \ uint8\_t\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Address;}
+\DoxyCodeLine{00080\ \ \ LSM6DSO32\_WriteReg\_Func\ \ \ \ WriteReg;}
+\DoxyCodeLine{00081\ \ \ LSM6DSO32\_ReadReg\_Func\ \ \ \ \ ReadReg;}
+\DoxyCodeLine{00082\ \ \ LSM6DSO32\_GetTick\_Func\ \ \ \ \ GetTick;}
+\DoxyCodeLine{00083\ \ \ LSM6DSO32\_Delay\_Func\ \ \ \ \ \ \ Delay;}
+\DoxyCodeLine{00084\ \}\ \doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___i_o__t}{LSM6DSO32\_IO\_t}};}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}}
+\DoxyCodeLine{00088\ \{}
+\DoxyCodeLine{00089\ \ \ int16\_t\ x;}
+\DoxyCodeLine{00090\ \ \ int16\_t\ y;}
+\DoxyCodeLine{00091\ \ \ int16\_t\ z;}
+\DoxyCodeLine{00092\ \}\ \doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___axes_raw__t}{LSM6DSO32\_AxesRaw\_t}};}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00094\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}}
+\DoxyCodeLine{00095\ \{}
+\DoxyCodeLine{00096\ \ \ int32\_t\ x;}
+\DoxyCodeLine{00097\ \ \ int32\_t\ y;}
+\DoxyCodeLine{00098\ \ \ int32\_t\ z;}
+\DoxyCodeLine{00099\ \}\ \doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___axes__t}{LSM6DSO32\_Axes\_t}};}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00101\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}}
+\DoxyCodeLine{00102\ \{}
+\DoxyCodeLine{00103\ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ FreeFallStatus\ \ \ \ \ \ \ :\ 1;}
+\DoxyCodeLine{00104\ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ TapStatus\ \ \ \ \ \ \ \ \ \ \ \ :\ 1;}
+\DoxyCodeLine{00105\ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ DoubleTapStatus\ \ \ \ \ \ :\ 1;}
+\DoxyCodeLine{00106\ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ WakeUpStatus\ \ \ \ \ \ \ \ \ :\ 1;}
+\DoxyCodeLine{00107\ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ StepStatus\ \ \ \ \ \ \ \ \ \ \ :\ 1;}
+\DoxyCodeLine{00108\ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ TiltStatus\ \ \ \ \ \ \ \ \ \ \ :\ 1;}
+\DoxyCodeLine{00109\ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ D6DOrientationStatus\ :\ 1;}
+\DoxyCodeLine{00110\ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ SleepStatus\ \ \ \ \ \ \ \ \ \ :\ 1;}
+\DoxyCodeLine{00111\ \}\ \doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___event___status__t}{LSM6DSO32\_Event\_Status\_t}};}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00113\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}}
+\DoxyCodeLine{00114\ \{}
+\DoxyCodeLine{00115\ \ \ \doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___i_o__t}{LSM6DSO32\_IO\_t}}\ \ \ \ \ \ IO;}
+\DoxyCodeLine{00116\ \ \ \doxymbox{\hyperlink{structstmdev__ctx__t}{stmdev\_ctx\_t}}\ \ \ \ \ \ \ \ Ctx;}
+\DoxyCodeLine{00117\ \ \ uint8\_t\ \ \ \ \ \ \ \ \ \ \ \ \ is\_initialized;}
+\DoxyCodeLine{00118\ \ \ uint8\_t\ \ \ \ \ \ \ \ \ \ \ \ \ acc\_is\_enabled;}
+\DoxyCodeLine{00119\ \ \ uint8\_t\ \ \ \ \ \ \ \ \ \ \ \ \ gyro\_is\_enabled;}
+\DoxyCodeLine{00120\ \ \ lsm6dso32\_odr\_xl\_t\ \ acc\_odr;}
+\DoxyCodeLine{00121\ \ \ lsm6dso32\_odr\_g\_t\ \ \ gyro\_odr;}
+\DoxyCodeLine{00122\ \}\ \doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6DSO32\_Object\_t}};}
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00124\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}}
+\DoxyCodeLine{00125\ \{}
+\DoxyCodeLine{00126\ \ \ uint8\_t\ \ \ Acc;}
+\DoxyCodeLine{00127\ \ \ uint8\_t\ \ \ Gyro;}
+\DoxyCodeLine{00128\ \ \ uint8\_t\ \ \ Magneto;}
+\DoxyCodeLine{00129\ \ \ uint8\_t\ \ \ LowPower;}
+\DoxyCodeLine{00130\ \ \ uint32\_t\ \ GyroMaxFS;}
+\DoxyCodeLine{00131\ \ \ uint32\_t\ \ AccMaxFS;}
+\DoxyCodeLine{00132\ \ \ uint32\_t\ \ MagMaxFS;}
+\DoxyCodeLine{00133\ \ \ float\_t\ \ \ GyroMaxOdr;}
+\DoxyCodeLine{00134\ \ \ float\_t\ \ \ AccMaxOdr;}
+\DoxyCodeLine{00135\ \ \ float\_t\ \ \ MagMaxOdr;}
+\DoxyCodeLine{00136\ \}\ \doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___capabilities__t}{LSM6DSO32\_Capabilities\_t}};}
+\DoxyCodeLine{00137\ }
+\DoxyCodeLine{00138\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}}
+\DoxyCodeLine{00139\ \{}
+\DoxyCodeLine{00140\ \ \ int32\_t\ (*Init)(\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6DSO32\_Object\_t}}\ *);}
+\DoxyCodeLine{00141\ \ \ int32\_t\ (*DeInit)(\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6DSO32\_Object\_t}}\ *);}
+\DoxyCodeLine{00142\ \ \ int32\_t\ (*ReadID)(\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6DSO32\_Object\_t}}\ *,\ uint8\_t\ *);}
+\DoxyCodeLine{00143\ \ \ int32\_t\ (*GetCapabilities)(\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6DSO32\_Object\_t}}\ *,\ \doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___capabilities__t}{LSM6DSO32\_Capabilities\_t}}\ *);}
+\DoxyCodeLine{00144\ \}\ \doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___common_drv__t}{LSM6DSO32\_CommonDrv\_t}};}
+\DoxyCodeLine{00145\ }
+\DoxyCodeLine{00146\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}}
+\DoxyCodeLine{00147\ \{}
+\DoxyCodeLine{00148\ \ \ int32\_t\ (*Enable)(\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6DSO32\_Object\_t}}\ *);}
+\DoxyCodeLine{00149\ \ \ int32\_t\ (*Disable)(\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6DSO32\_Object\_t}}\ *);}
+\DoxyCodeLine{00150\ \ \ int32\_t\ (*GetSensitivity)(\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6DSO32\_Object\_t}}\ *,\ float\_t\ *);}
+\DoxyCodeLine{00151\ \ \ int32\_t\ (*GetOutputDataRate)(\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6DSO32\_Object\_t}}\ *,\ float\_t\ *);}
+\DoxyCodeLine{00152\ \ \ int32\_t\ (*SetOutputDataRate)(\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6DSO32\_Object\_t}}\ *,\ float\_t);}
+\DoxyCodeLine{00153\ \ \ int32\_t\ (*GetFullScale)(\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6DSO32\_Object\_t}}\ *,\ int32\_t\ *);}
+\DoxyCodeLine{00154\ \ \ int32\_t\ (*SetFullScale)(\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6DSO32\_Object\_t}}\ *,\ int32\_t);}
+\DoxyCodeLine{00155\ \ \ int32\_t\ (*GetAxes)(\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6DSO32\_Object\_t}}\ *,\ \doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___axes__t}{LSM6DSO32\_Axes\_t}}\ *);}
+\DoxyCodeLine{00156\ \ \ int32\_t\ (*GetAxesRaw)(\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6DSO32\_Object\_t}}\ *,\ \doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___axes_raw__t}{LSM6DSO32\_AxesRaw\_t}}\ *);}
+\DoxyCodeLine{00157\ \}\ \doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___a_c_c___drv__t}{LSM6DSO32\_ACC\_Drv\_t}};}
+\DoxyCodeLine{00158\ }
+\DoxyCodeLine{00159\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}}
+\DoxyCodeLine{00160\ \{}
+\DoxyCodeLine{00161\ \ \ int32\_t\ (*Enable)(\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6DSO32\_Object\_t}}\ *);}
+\DoxyCodeLine{00162\ \ \ int32\_t\ (*Disable)(\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6DSO32\_Object\_t}}\ *);}
+\DoxyCodeLine{00163\ \ \ int32\_t\ (*GetSensitivity)(\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6DSO32\_Object\_t}}\ *,\ float\_t\ *);}
+\DoxyCodeLine{00164\ \ \ int32\_t\ (*GetOutputDataRate)(\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6DSO32\_Object\_t}}\ *,\ float\_t\ *);}
+\DoxyCodeLine{00165\ \ \ int32\_t\ (*SetOutputDataRate)(\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6DSO32\_Object\_t}}\ *,\ float\_t);}
+\DoxyCodeLine{00166\ \ \ int32\_t\ (*GetFullScale)(\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6DSO32\_Object\_t}}\ *,\ int32\_t\ *);}
+\DoxyCodeLine{00167\ \ \ int32\_t\ (*SetFullScale)(\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6DSO32\_Object\_t}}\ *,\ int32\_t);}
+\DoxyCodeLine{00168\ \ \ int32\_t\ (*GetAxes)(\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6DSO32\_Object\_t}}\ *,\ \doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___axes__t}{LSM6DSO32\_Axes\_t}}\ *);}
+\DoxyCodeLine{00169\ \ \ int32\_t\ (*GetAxesRaw)(\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6DSO32\_Object\_t}}\ *,\ \doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___axes_raw__t}{LSM6DSO32\_AxesRaw\_t}}\ *);}
+\DoxyCodeLine{00170\ \}\ \doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___g_y_r_o___drv__t}{LSM6DSO32\_GYRO\_Drv\_t}};}
+\DoxyCodeLine{00171\ }
+\DoxyCodeLine{00172\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{union}}
+\DoxyCodeLine{00173\ \{}
+\DoxyCodeLine{00174\ \ \ int16\_t\ i16bit[3];}
+\DoxyCodeLine{00175\ \ \ uint8\_t\ u8bit[6];}
+\DoxyCodeLine{00176\ \}\ \doxymbox{\hyperlink{unionlsm6dso32__axis3bit16__t}{lsm6dso32\_axis3bit16\_t}};}
+\DoxyCodeLine{00177\ }
+\DoxyCodeLine{00178\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{union}}
+\DoxyCodeLine{00179\ \{}
+\DoxyCodeLine{00180\ \ \ int16\_t\ i16bit;}
+\DoxyCodeLine{00181\ \ \ uint8\_t\ u8bit[2];}
+\DoxyCodeLine{00182\ \}\ \doxymbox{\hyperlink{unionlsm6dso32__axis1bit16__t}{lsm6dso32\_axis1bit16\_t}};}
+\DoxyCodeLine{00183\ }
+\DoxyCodeLine{00184\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{union}}
+\DoxyCodeLine{00185\ \{}
+\DoxyCodeLine{00186\ \ \ int32\_t\ i32bit[3];}
+\DoxyCodeLine{00187\ \ \ uint8\_t\ u8bit[12];}
+\DoxyCodeLine{00188\ \}\ \doxymbox{\hyperlink{unionlsm6dso32__axis3bit32__t}{lsm6dso32\_axis3bit32\_t}};}
+\DoxyCodeLine{00189\ }
+\DoxyCodeLine{00190\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{union}}
+\DoxyCodeLine{00191\ \{}
+\DoxyCodeLine{00192\ \ \ int32\_t\ i32bit;}
+\DoxyCodeLine{00193\ \ \ uint8\_t\ u8bit[4];}
+\DoxyCodeLine{00194\ \}\ \doxymbox{\hyperlink{unionlsm6dso32__axis1bit32__t}{lsm6dso32\_axis1bit32\_t}};}
+\DoxyCodeLine{00195\ }
+\DoxyCodeLine{00199\ }
+\DoxyCodeLine{00203\ }
+\DoxyCodeLine{00204\ \textcolor{preprocessor}{\#define\ LSM6DSO32\_OK\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0}}
+\DoxyCodeLine{00205\ \textcolor{preprocessor}{\#define\ LSM6DSO32\_ERROR\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ -\/1}}
+\DoxyCodeLine{00206\ }
+\DoxyCodeLine{00207\ \textcolor{preprocessor}{\#define\ LSM6DSO32\_I2C\_BUS\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0U}}
+\DoxyCodeLine{00208\ \textcolor{preprocessor}{\#define\ LSM6DSO32\_SPI\_4WIRES\_BUS\ \ \ \ \ \ \ \ \ \ 1U}}
+\DoxyCodeLine{00209\ \textcolor{preprocessor}{\#define\ LSM6DSO32\_SPI\_3WIRES\_BUS\ \ \ \ \ \ \ \ \ \ 2U}}
+\DoxyCodeLine{00210\ \textcolor{preprocessor}{\#define\ LSM6DSO32\_I3C\_BUS\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 3U}}
+\DoxyCodeLine{00211\ }
+\DoxyCodeLine{00212\ \textcolor{preprocessor}{\#define\ LSM6DSO32\_ACC\_SENSITIVITY\_FS\_4G\ \ \ 0.122f}}
+\DoxyCodeLine{00213\ \textcolor{preprocessor}{\#define\ LSM6DSO32\_ACC\_SENSITIVITY\_FS\_8G\ \ \ 0.244f}}
+\DoxyCodeLine{00214\ \textcolor{preprocessor}{\#define\ LSM6DSO32\_ACC\_SENSITIVITY\_FS\_16G\ \ 0.488f}}
+\DoxyCodeLine{00215\ \textcolor{preprocessor}{\#define\ LSM6DSO32\_ACC\_SENSITIVITY\_FS\_32G\ \ 0.976f}}
+\DoxyCodeLine{00216\ }
+\DoxyCodeLine{00217\ \textcolor{preprocessor}{\#define\ LSM6DSO32\_GYRO\_SENSITIVITY\_FS\_125DPS\ \ \ \ 4.375f}}
+\DoxyCodeLine{00218\ \textcolor{preprocessor}{\#define\ LSM6DSO32\_GYRO\_SENSITIVITY\_FS\_250DPS\ \ \ \ 8.750f}}
+\DoxyCodeLine{00219\ \textcolor{preprocessor}{\#define\ LSM6DSO32\_GYRO\_SENSITIVITY\_FS\_500DPS\ \ \ 17.500f}}
+\DoxyCodeLine{00220\ \textcolor{preprocessor}{\#define\ LSM6DSO32\_GYRO\_SENSITIVITY\_FS\_1000DPS\ \ 35.000f}}
+\DoxyCodeLine{00221\ \textcolor{preprocessor}{\#define\ LSM6DSO32\_GYRO\_SENSITIVITY\_FS\_2000DPS\ \ 70.000f}}
+\DoxyCodeLine{00222\ }
+\DoxyCodeLine{00226\ }
+\DoxyCodeLine{00230\ }
+\DoxyCodeLine{00231\ int32\_t\ \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___exported___functions_ga11aff8499ff27572ea29326de162d850}{LSM6DSO32\_RegisterBusIO}}(\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6DSO32\_Object\_t}}\ *pObj,\ \doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___i_o__t}{LSM6DSO32\_IO\_t}}\ *pIO);}
+\DoxyCodeLine{00232\ int32\_t\ \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___exported___functions_gae1cef97d1d85138a04cd70da5892a342}{LSM6DSO32\_Init}}(\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6DSO32\_Object\_t}}\ *pObj);}
+\DoxyCodeLine{00233\ int32\_t\ \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___exported___functions_ga5de0f6c94656a1aa25cc725a801f0a3d}{LSM6DSO32\_DeInit}}(\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6DSO32\_Object\_t}}\ *pObj);}
+\DoxyCodeLine{00234\ int32\_t\ \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___exported___functions_ga150360ba7ffb226d5de0c9451cbcac84}{LSM6DSO32\_ReadID}}(\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6DSO32\_Object\_t}}\ *pObj,\ uint8\_t\ *Id);}
+\DoxyCodeLine{00235\ int32\_t\ \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___exported___functions_ga84bcc198f533e55a8c7091374ce25502}{LSM6DSO32\_GetCapabilities}}(\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6DSO32\_Object\_t}}\ *pObj,\ \doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___capabilities__t}{LSM6DSO32\_Capabilities\_t}}\ *Capabilities);}
+\DoxyCodeLine{00236\ }
+\DoxyCodeLine{00237\ int32\_t\ \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___exported___functions_ga93eb810fa2dc6fbf7071edfcd906ba55}{LSM6DSO32\_ACC\_Enable}}(\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6DSO32\_Object\_t}}\ *pObj);}
+\DoxyCodeLine{00238\ int32\_t\ \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___exported___functions_ga00514bcd708417d8133993500eb9d03b}{LSM6DSO32\_ACC\_Disable}}(\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6DSO32\_Object\_t}}\ *pObj);}
+\DoxyCodeLine{00239\ int32\_t\ \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___exported___functions_ga3d227e1d7e6707b7d0d93fd6a672a324}{LSM6DSO32\_ACC\_GetSensitivity}}(\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6DSO32\_Object\_t}}\ *pObj,\ float\_t\ *Sensitivity);}
+\DoxyCodeLine{00240\ int32\_t\ \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___exported___functions_ga7e71a862f860bafef5e76ccbcd932187}{LSM6DSO32\_ACC\_GetOutputDataRate}}(\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6DSO32\_Object\_t}}\ *pObj,\ float\_t\ *Odr);}
+\DoxyCodeLine{00241\ int32\_t\ \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___exported___functions_ga7d3787de56f4fd3f6e47c71503fb8e59}{LSM6DSO32\_ACC\_SetOutputDataRate}}(\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6DSO32\_Object\_t}}\ *pObj,\ float\_t\ Odr);}
+\DoxyCodeLine{00242\ int32\_t\ \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___exported___functions_gabb91f51cda3310f73135bdf7e3eadb7e}{LSM6DSO32\_ACC\_SetOutputDataRate\_With\_Mode}}(\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6DSO32\_Object\_t}}\ *pObj,\ float\_t\ Odr,}
+\DoxyCodeLine{00243\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ LSM6DSO32\_ACC\_Operating\_Mode\_t\ Mode);}
+\DoxyCodeLine{00244\ int32\_t\ \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___exported___functions_ga3602b42981f8b1d9bd78a2e9347f5ffd}{LSM6DSO32\_ACC\_GetFullScale}}(\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6DSO32\_Object\_t}}\ *pObj,\ int32\_t\ *FullScale);}
+\DoxyCodeLine{00245\ int32\_t\ \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___exported___functions_ga3202b692b7e1753b92c1f00206172867}{LSM6DSO32\_ACC\_SetFullScale}}(\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6DSO32\_Object\_t}}\ *pObj,\ int32\_t\ FullScale);}
+\DoxyCodeLine{00246\ int32\_t\ \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___exported___functions_ga1deb0b5d91ce6afa7cace7765c3adfab}{LSM6DSO32\_ACC\_GetAxesRaw}}(\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6DSO32\_Object\_t}}\ *pObj,\ \doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___axes_raw__t}{LSM6DSO32\_AxesRaw\_t}}\ *Value);}
+\DoxyCodeLine{00247\ int32\_t\ \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___exported___functions_ga743ce4d5e7a50b7d29970ed6b7e1f818}{LSM6DSO32\_ACC\_GetAxes}}(\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6DSO32\_Object\_t}}\ *pObj,\ \doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___axes__t}{LSM6DSO32\_Axes\_t}}\ *Acceleration);}
+\DoxyCodeLine{00248\ }
+\DoxyCodeLine{00249\ int32\_t\ \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___exported___functions_ga67bb91b304ae1221925c23749de5d864}{LSM6DSO32\_GYRO\_Enable}}(\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6DSO32\_Object\_t}}\ *pObj);}
+\DoxyCodeLine{00250\ int32\_t\ \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___exported___functions_ga998615e31de94c531025722231fb8d78}{LSM6DSO32\_GYRO\_Disable}}(\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6DSO32\_Object\_t}}\ *pObj);}
+\DoxyCodeLine{00251\ int32\_t\ \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___exported___functions_gaf66bc1f6fe95635d7cb835b28bed8800}{LSM6DSO32\_GYRO\_GetSensitivity}}(\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6DSO32\_Object\_t}}\ *pObj,\ float\_t\ *Sensitivity);}
+\DoxyCodeLine{00252\ int32\_t\ \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___exported___functions_gab227ad1c2216cb9c0128b1885b09d33b}{LSM6DSO32\_GYRO\_GetOutputDataRate}}(\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6DSO32\_Object\_t}}\ *pObj,\ float\_t\ *Odr);}
+\DoxyCodeLine{00253\ int32\_t\ \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___exported___functions_ga0eb3f9628e321a955be9b2f8bc5ed9f2}{LSM6DSO32\_GYRO\_SetOutputDataRate}}(\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6DSO32\_Object\_t}}\ *pObj,\ float\_t\ Odr);}
+\DoxyCodeLine{00254\ int32\_t\ \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___exported___functions_gad47e8acc9908af596db33cfb55876805}{LSM6DSO32\_GYRO\_SetOutputDataRate\_With\_Mode}}(\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6DSO32\_Object\_t}}\ *pObj,\ float\_t\ Odr,}
+\DoxyCodeLine{00255\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ LSM6DSO32\_GYRO\_Operating\_Mode\_t\ Mode);}
+\DoxyCodeLine{00256\ int32\_t\ \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___exported___functions_gadc011c2c0ea0b598b3c1a8d3d618424f}{LSM6DSO32\_GYRO\_GetFullScale}}(\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6DSO32\_Object\_t}}\ *pObj,\ int32\_t\ *FullScale);}
+\DoxyCodeLine{00257\ int32\_t\ \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___exported___functions_gacb2df6b47c5d6ef897261758160ad610}{LSM6DSO32\_GYRO\_SetFullScale}}(\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6DSO32\_Object\_t}}\ *pObj,\ int32\_t\ FullScale);}
+\DoxyCodeLine{00258\ int32\_t\ \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___exported___functions_gabb6ebb641850efc5ee3f8090eeed06cf}{LSM6DSO32\_GYRO\_GetAxesRaw}}(\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6DSO32\_Object\_t}}\ *pObj,\ \doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___axes_raw__t}{LSM6DSO32\_AxesRaw\_t}}\ *Value);}
+\DoxyCodeLine{00259\ int32\_t\ \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___exported___functions_ga551615b8ea5610e625918d817e717c87}{LSM6DSO32\_GYRO\_GetAxes}}(\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6DSO32\_Object\_t}}\ *pObj,\ \doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___axes__t}{LSM6DSO32\_Axes\_t}}\ *AngularRate);}
+\DoxyCodeLine{00260\ }
+\DoxyCodeLine{00261\ int32\_t\ \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___exported___functions_gab2a8496b45fe6317364fd3863e2d82e3}{LSM6DSO32\_Read\_Reg}}(\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6DSO32\_Object\_t}}\ *pObj,\ uint8\_t\ reg,\ uint8\_t\ *Data);}
+\DoxyCodeLine{00262\ int32\_t\ \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___exported___functions_ga0b22103b87f6e5a4c5fea54a026bc851}{LSM6DSO32\_Write\_Reg}}(\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6DSO32\_Object\_t}}\ *pObj,\ uint8\_t\ reg,\ uint8\_t\ Data);}
+\DoxyCodeLine{00263\ }
+\DoxyCodeLine{00264\ int32\_t\ \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___exported___functions_ga8c23fe107242bb6a8c1a2cc9009494b9}{LSM6DSO32\_ACC\_Get\_DRDY\_Status}}(\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6DSO32\_Object\_t}}\ *pObj,\ uint8\_t\ *Status);}
+\DoxyCodeLine{00265\ int32\_t\ \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___exported___functions_ga15b750708d0060fe358893a849b29016}{LSM6DSO32\_GYRO\_Get\_DRDY\_Status}}(\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6DSO32\_Object\_t}}\ *pObj,\ uint8\_t\ *Status);}
+\DoxyCodeLine{00266\ }
+\DoxyCodeLine{00267\ int32\_t\ \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___exported___functions_gabaca91335633231a82e28d1c06d2dbd2}{LSM6DSO32\_Set\_Mem\_Bank}}(\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6DSO32\_Object\_t}}\ *pObj,\ uint8\_t\ Val);}
+\DoxyCodeLine{00268\ }
+\DoxyCodeLine{00272\ }
+\DoxyCodeLine{00276\ }
+\DoxyCodeLine{00277\ \textcolor{keyword}{extern}\ \doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___common_drv__t}{LSM6DSO32\_CommonDrv\_t}}\ LSM6DSO32\_COMMON\_Driver;}
+\DoxyCodeLine{00278\ \textcolor{keyword}{extern}\ \doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___a_c_c___drv__t}{LSM6DSO32\_ACC\_Drv\_t}}\ LSM6DSO32\_ACC\_Driver;}
+\DoxyCodeLine{00279\ \textcolor{keyword}{extern}\ \doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___g_y_r_o___drv__t}{LSM6DSO32\_GYRO\_Drv\_t}}\ LSM6DSO32\_GYRO\_Driver;}
+\DoxyCodeLine{00280\ }
+\DoxyCodeLine{00284\ }
+\DoxyCodeLine{00285\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00286\ \}}
+\DoxyCodeLine{00287\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00288\ }
+\DoxyCodeLine{00289\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00290\ }
+\DoxyCodeLine{00294\ }
+\DoxyCodeLine{00298\ }
+
+\end{DoxyCode}

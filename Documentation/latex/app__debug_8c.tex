@@ -1,0 +1,154 @@
+\doxysection{C:\+/\+\+Users/\+ryanm/\+\+Documents/\+\+Design\+Group/\+\+BB8\+\_\+\+STM32/\+\+Firmware/\+\+Core/\+\+Src/\+app\+\_\+debug.c File Reference}
+\hypertarget{app__debug_8c}{}\label{app__debug_8c}\index{C:/Users/ryanm/Documents/DesignGroup/BB8\_STM32/Firmware/Core/Src/app\_debug.c@{C:/Users/ryanm/Documents/DesignGroup/BB8\_STM32/Firmware/Core/Src/app\_debug.c}}
+
+
+Debug capabilities source file for STM32\+WPAN Middleware.  
+
+
+{\ttfamily \+\#include "{}app\+\_\+common.\+h"{}}\newline
+{\ttfamily \+\#include "{}app\+\_\+debug.\+h"{}}\newline
+{\ttfamily \+\#include "{}utilities\+\_\+common.\+h"{}}\newline
+{\ttfamily \+\#include "{}shci.\+h"{}}\newline
+{\ttfamily \+\#include "{}tl.\+h"{}}\newline
+{\ttfamily \+\#include "{}dbg\+\_\+trace.\+h"{}}\newline
+Include dependency graph for app\+\_\+debug.\+c:\+
+% FIG 0
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{app__debug_8c_adc1f0816fa5d976065ac790f7225e2b9}\label{app__debug_8c_adc1f0816fa5d976065ac790f7225e2b9} 
+\+\#define {\bfseries GPIO\+\_\+\+NBR\+\_\+\+OF\+\_\+\+RF\+\_\+\+SIGNALS}~9
+\item 
+\Hypertarget{app__debug_8c_abf74d42c07a982a8187d28920c169a36}\label{app__debug_8c_abf74d42c07a982a8187d28920c169a36} 
+\+\#define {\bfseries GPIO\+\_\+\+CFG\+\_\+\+NBR\+\_\+\+OF\+\_\+\+FEATURES}~38
+\item 
+\Hypertarget{app__debug_8c_a98fd896da283f3a5085ba9092b9bbc98}\label{app__debug_8c_a98fd896da283f3a5085ba9092b9bbc98} 
+\+\#define {\bfseries NBR\+\_\+\+OF\+\_\+\+TRACES\+\_\+\+CONFIG\+\_\+\+PARAMETERS}~4
+\item 
+\Hypertarget{app__debug_8c_acf7ed101c6dba77924de04570d598b0e}\label{app__debug_8c_acf7ed101c6dba77924de04570d598b0e} 
+\+\#define {\bfseries NBR\+\_\+\+OF\+\_\+\+GENERAL\+\_\+\+CONFIG\+\_\+\+PARAMETERS}~4
+\item 
+\+\#define \doxymbox{\hyperlink{app__debug_8c_ab5f357d6834e1bac1ce356f51cdafc92}{BLE\+\_\+\+DTB\+\_\+\+CFG}}~0
+\item 
+\+\#define \doxymbox{\hyperlink{app__debug_8c_a31c76bb5b77b89b2507cab3af9f81aa6}{SYS\+\_\+\+DBG\+\_\+\+CFG1}}~(SHCI\+\_\+\+C2\+\_\+\+DEBUG\+\_\+\+OPTIONS\+\_\+\+IPCORE\+\_\+\+LP \texorpdfstring{$\vert$}{|} SHCI\+\_\+\+C2\+\_\+\+DEBUG\+\_\+\+OPTIONS\+\_\+\+CPU2\+\_\+\+STOP\+\_\+\+EN)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{app__debug_8c_ac866233e18dd7f11d0703a6e5df4b8e6}\label{app__debug_8c_ac866233e18dd7f11d0703a6e5df4b8e6} 
+{\bfseries PLACE\+\_\+\+IN\+\_\+\+SECTION} ("{}MB\+\_\+\+MEM2"{})
+\item 
+static void \doxymbox{\hyperlink{app__debug_8c_a7579142e696d7816830ab9ac635007fb}{APPD\+\_\+\+Set\+CPU2\+Gpio\+Config}} (void)
+\item 
+\Hypertarget{app__debug_8c_a6d85368d51419338e47c37de05992cd5}\label{app__debug_8c_a6d85368d51419338e47c37de05992cd5} 
+static void {\bfseries APPD\+\_\+\+Ble\+Dtb\+Cfg} (void)
+\item 
+\Hypertarget{app__debug_8c_ac5b6e827bd8a3ff74ceaf568bc3e1a4f}\label{app__debug_8c_ac5b6e827bd8a3ff74ceaf568bc3e1a4f} 
+void {\bfseries APPD\+\_\+\+Init} (void)
+\item 
+void \doxymbox{\hyperlink{app__debug_8c_a8e13b6550bae1951561cc97cb921efc2}{APPD\+\_\+\+Enable\+CPU2}} (void)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+typedef \doxymbox{\hyperlink{app__debug_8c_a4233297bd31be5c273d4fb0758cc54d7}{PACKED\+\_\+\+STRUCT}}
+\item 
+\Hypertarget{app__debug_8c_a4144813adfa4dfe7e7cbeea17d1b06eb}\label{app__debug_8c_a4144813adfa4dfe7e7cbeea17d1b06eb} 
+uint16\+\_\+t {\bfseries pin}
+\item 
+\Hypertarget{app__debug_8c_a324d63698d720716b386efb308337af8}\label{app__debug_8c_a324d63698d720716b386efb308337af8} 
+uint8\+\_\+t {\bfseries enable}
+\item 
+\Hypertarget{app__debug_8c_acb7bc06bed6f6408d719334fc41698c7}\label{app__debug_8c_acb7bc06bed6f6408d719334fc41698c7} 
+uint8\+\_\+t {\bfseries reserved}
+\item 
+\Hypertarget{app__debug_8c_a02d79975184bd4710aa19e85f8e581b1}\label{app__debug_8c_a02d79975184bd4710aa19e85f8e581b1} 
+{\bfseries APPD\+\_\+\+Gpio\+Config\+\_\+t}
+\item 
+static const APPD\+\_\+\+Gpio\+Config\+\_\+t \doxymbox{\hyperlink{app__debug_8c_a359c70b99fe47b148ea252aaed0aba91}{a\+Gpio\+Config\+List}} \+[GPIO\+\_\+\+CFG\+\_\+\+NBR\+\_\+\+OF\+\_\+\+FEATURES]\+
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Debug capabilities source file for STM32\+WPAN Middleware. 
+
+\begin{DoxyAuthor}{Author}
+MCD Application Team 
+\end{DoxyAuthor}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+Copyright (c) 2026 STMicroelectronics. All rights reserved.
+
+This software is licensed under terms that can be found in the LICENSE file in the root directory of this software component. If no LICENSE file comes with this software, it is provided AS-\/\+IS. 
+
+\label{doc-define-members}
+\Hypertarget{app__debug_8c_doc-define-members}
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{app__debug_8c_ab5f357d6834e1bac1ce356f51cdafc92}\index{app\_debug.c@{app\_debug.c}!BLE\_DTB\_CFG@{BLE\_DTB\_CFG}}
+\index{BLE\_DTB\_CFG@{BLE\_DTB\_CFG}!app\_debug.c@{app\_debug.c}}
+\doxysubsubsection{\texorpdfstring{BLE\_DTB\_CFG}{BLE\_DTB\_CFG}}
+{\footnotesize\ttfamily \label{app__debug_8c_ab5f357d6834e1bac1ce356f51cdafc92} 
+\+\#define BLE\+\_\+\+DTB\+\_\+\+CFG~0}
+
+THIS SHALL BE SET TO A VALUE DIFFERENT FROM 0 ONLY ON REQUEST FROM ST SUPPORT \Hypertarget{app__debug_8c_a31c76bb5b77b89b2507cab3af9f81aa6}\index{app\_debug.c@{app\_debug.c}!SYS\_DBG\_CFG1@{SYS\_DBG\_CFG1}}
+\index{SYS\_DBG\_CFG1@{SYS\_DBG\_CFG1}!app\_debug.c@{app\_debug.c}}
+\doxysubsubsection{\texorpdfstring{SYS\_DBG\_CFG1}{SYS\_DBG\_CFG1}}
+{\footnotesize\ttfamily \label{app__debug_8c_a31c76bb5b77b89b2507cab3af9f81aa6} 
+\+\#define SYS\+\_\+\+DBG\+\_\+\+CFG1~(SHCI\+\_\+\+C2\+\_\+\+DEBUG\+\_\+\+OPTIONS\+\_\+\+IPCORE\+\_\+\+LP \texorpdfstring{$\vert$}{|} SHCI\+\_\+\+C2\+\_\+\+DEBUG\+\_\+\+OPTIONS\+\_\+\+CPU2\+\_\+\+STOP\+\_\+\+EN)}
+
+System Debug Options flags to be configured with:\+
+\begin{DoxyItemize}
+\item SHCI\+\_\+\+C2\+\_\+\+DEBUG\+\_\+\+OPTIONS\+\_\+\+IPCORE\+\_\+\+LP
+\item SHCI\+\_\+\+C2\+\_\+\+DEBUG\+\_\+\+OPTIONS\+\_\+\+IPCORE\+\_\+\+NO\+\_\+\+LP
+\item SHCI\+\_\+\+C2\+\_\+\+DEBUG\+\_\+\+OPTIONS\+\_\+\+CPU2\+\_\+\+STOP\+\_\+\+EN
+\item SHCI\+\_\+\+C2\+\_\+\+DEBUG\+\_\+\+OPTIONS\+\_\+\+CPU2\+\_\+\+STOP\+\_\+\+DIS which are used to set following configuration bits:\+
+\begin{DoxyItemize}
+\item bit 0:\+ 0:\+ IP BLE core in LP mode 1:\+ IP BLE core in run mode (no LP supported)
+\item bit 1:\+ 0:\+ CPU2 STOP mode Enable 1:\+ CPU2 STOP mode Disable
+\item bit \+[2-\/7]\+:\+ bits reserved ( shall be set to 0) 
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+\label{doc-func-members}
+\Hypertarget{app__debug_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{app__debug_8c_a8e13b6550bae1951561cc97cb921efc2}\index{app\_debug.c@{app\_debug.c}!APPD\_EnableCPU2@{APPD\_EnableCPU2}}
+\index{APPD\_EnableCPU2@{APPD\_EnableCPU2}!app\_debug.c@{app\_debug.c}}
+\doxysubsubsection{\texorpdfstring{APPD\_EnableCPU2()}{APPD\_EnableCPU2()}}
+{\footnotesize\ttfamily \label{app__debug_8c_a8e13b6550bae1951561cc97cb921efc2} 
+void APPD\+\_\+\+Enable\+CPU2 (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+\texorpdfstring{$<$}{<} Does not need to be initialized
+
+\texorpdfstring{$<$}{<} Traces channel initialization
+
+GPIO DEBUG Initialization\Hypertarget{app__debug_8c_a7579142e696d7816830ab9ac635007fb}\index{app\_debug.c@{app\_debug.c}!APPD\_SetCPU2GpioConfig@{APPD\_SetCPU2GpioConfig}}
+\index{APPD\_SetCPU2GpioConfig@{APPD\_SetCPU2GpioConfig}!app\_debug.c@{app\_debug.c}}
+\doxysubsubsection{\texorpdfstring{APPD\_SetCPU2GpioConfig()}{APPD\_SetCPU2GpioConfig()}}
+{\footnotesize\ttfamily \label{app__debug_8c_a7579142e696d7816830ab9ac635007fb} 
+void APPD\+\_\+\+Set\+CPU2\+Gpio\+Config (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+THE DEBUG ON GPIO FOR CPU2 IS INTENDED TO BE USED ONLY ON REQUEST FROM ST SUPPORT This table is relevant only for BLE It provides timing information on BLE RF activity. New signals may be allocated at any location when requested by ST The GPIO allocated to each signal depend on the BLE\+\_\+\+DTB\+\_\+\+CFG value and cannot be changed 
+
+\label{doc-var-members}
+\Hypertarget{app__debug_8c_doc-var-members}
+\doxysubsection{Variable Documentation}
+\Hypertarget{app__debug_8c_a359c70b99fe47b148ea252aaed0aba91}\index{app\_debug.c@{app\_debug.c}!aGpioConfigList@{aGpioConfigList}}
+\index{aGpioConfigList@{aGpioConfigList}!app\_debug.c@{app\_debug.c}}
+\doxysubsubsection{\texorpdfstring{aGpioConfigList}{aGpioConfigList}}
+{\footnotesize\ttfamily \label{app__debug_8c_a359c70b99fe47b148ea252aaed0aba91} 
+const APPD\+\_\+\+Gpio\+Config\+\_\+t a\+Gpio\+Config\+List\+[GPIO\+\_\+\+CFG\+\_\+\+NBR\+\_\+\+OF\+\_\+\+FEATURES]\+\hspace{0.3cm}{\ttfamily [static]}}
+
+THE DEBUG ON GPIO FOR CPU2 IS INTENDED TO BE USED ONLY ON REQUEST FROM ST SUPPORT It provides timing information on the CPU2 activity. All configuration of (port, pin) is supported for each features and can be selected by the user depending on the availability \Hypertarget{app__debug_8c_a4233297bd31be5c273d4fb0758cc54d7}\index{app\_debug.c@{app\_debug.c}!PACKED\_STRUCT@{PACKED\_STRUCT}}
+\index{PACKED\_STRUCT@{PACKED\_STRUCT}!app\_debug.c@{app\_debug.c}}
+\doxysubsubsection{\texorpdfstring{PACKED\_STRUCT}{PACKED\_STRUCT}}
+{\footnotesize\ttfamily \label{app__debug_8c_a4233297bd31be5c273d4fb0758cc54d7} 
+typedef PACKED\+\_\+\+STRUCT}
+
+{\bfseries Initial value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ GPIO\_TypeDef*\ port}
+
+\end{DoxyCode}

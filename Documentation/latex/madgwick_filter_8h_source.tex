@@ -1,0 +1,113 @@
+\doxysection{madgwick\+Filter.\+h}
+\hypertarget{madgwick_filter_8h_source}{}\label{madgwick_filter_8h_source}\index{C:/Users/ryanm/Documents/DesignGroup/BB8\_STM32/Firmware/Custom\_Drivers/Inc/madgwickFilter.h@{C:/Users/ryanm/Documents/DesignGroup/BB8\_STM32/Firmware/Custom\_Drivers/Inc/madgwickFilter.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ \ madgwickFilter.h}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//\ \ madgwickFilter}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//}}
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ Created\ by\ Blake\ Johnson\ on\ 4/28/20.}}
+\DoxyCodeLine{00006\ \textcolor{comment}{//}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ MADGWICK\_FILTER\_H}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ MADGWICK\_FILTER\_H}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ Include\ a\ hardware\ specific\ header\ file\ to\ redefine\ these\ predetermined\ values}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#ifndef\ DELTA\_T}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\ \ \ \ \#define\ DELTA\_T\ 0.0048f\ }\textcolor{comment}{//\ 208Hz\ sampling\ frequency}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#ifndef\ PI\ \ }}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\ \ \ \ \#define\ PI\ 3.14159265358979f}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#ifndef\ GYRO\_MEAN\_ERROR}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\ \ \ \ \#define\ GYRO\_MEAN\_ERROR\ PI\ *\ (5.0f\ /\ 180.0f)\ }\textcolor{comment}{//\ 5\ deg/s\ gyroscope\ measurement\ error\ (in\ rad/s)\ \ *from\ paper*}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#ifndef\ BETA}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\ \ \ \ \#define\ BETA\ sqrt(3.0f/4.0f)\ *\ GYRO\_MEAN\_ERROR\ \ \ \ }\textcolor{comment}{//*from\ paper*}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ <math.h>}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{structquaternion}{quaternion}}\{}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{float}\ q1;}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{float}\ q2;}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{float}\ q3;}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{float}\ q4;}
+\DoxyCodeLine{00036\ \};}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \textcolor{comment}{//\ global\ variables}}
+\DoxyCodeLine{00039\ \textcolor{keyword}{extern}\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{structquaternion}{quaternion}}\ q\_est;}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \textcolor{comment}{//\ Multiply\ two\ quaternions\ and\ return\ a\ copy\ of\ the\ result,\ prod\ =\ L\ *\ R}}
+\DoxyCodeLine{00042\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{structquaternion}{quaternion}}\ quat\_mult\ (struct\ \doxymbox{\hyperlink{structquaternion}{quaternion}}\ q\_L,\ struct\ \doxymbox{\hyperlink{structquaternion}{quaternion}}\ q\_R);}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \textcolor{comment}{//\ Multiply\ a\ reference\ of\ a\ quaternion\ by\ a\ scalar,\ q\ =\ s*q}}
+\DoxyCodeLine{00045\ \textcolor{keyword}{static}\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ quat\_scalar(\textcolor{keyword}{struct}\ \doxymbox{\hyperlink{structquaternion}{quaternion}}\ *\ q,\ \textcolor{keywordtype}{float}\ scalar)\{}
+\DoxyCodeLine{00046\ \ \ \ \ q\ -\/>\ q1\ *=\ scalar;}
+\DoxyCodeLine{00047\ \ \ \ \ q\ -\/>\ q2\ *=\ scalar;}
+\DoxyCodeLine{00048\ \ \ \ \ q\ -\/>\ q3\ *=\ scalar;}
+\DoxyCodeLine{00049\ \ \ \ \ q\ -\/>\ q4\ *=\ scalar;}
+\DoxyCodeLine{00050\ \}}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \textcolor{comment}{//\ Adds\ two\ quaternions\ together\ and\ the\ sum\ is\ the\ pointer\ to\ another\ quaternion,\ Sum\ =\ L\ +\ R}}
+\DoxyCodeLine{00053\ \textcolor{keyword}{static}\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ quat\_add(\textcolor{keyword}{struct}\ \doxymbox{\hyperlink{structquaternion}{quaternion}}\ *\ Sum,\ \textcolor{keyword}{struct}\ \doxymbox{\hyperlink{structquaternion}{quaternion}}\ L,\ \textcolor{keyword}{struct}\ \doxymbox{\hyperlink{structquaternion}{quaternion}}\ R)\{}
+\DoxyCodeLine{00054\ \ \ \ \ Sum\ -\/>\ q1\ =\ L.q1\ +\ R.q1;}
+\DoxyCodeLine{00055\ \ \ \ \ Sum\ -\/>\ q2\ =\ L.q2\ +\ R.q2;}
+\DoxyCodeLine{00056\ \ \ \ \ Sum\ -\/>\ q3\ =\ L.q3\ +\ R.q3;}
+\DoxyCodeLine{00057\ \ \ \ \ Sum\ -\/>\ q4\ =\ L.q4\ +\ R.q4;}
+\DoxyCodeLine{00058\ \}}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \textcolor{comment}{//\ Subtracts\ two\ quaternions\ together\ and\ the\ sum\ is\ the\ pointer\ to\ another\ quaternion,\ sum\ =\ L\ -\/\ R}}
+\DoxyCodeLine{00061\ \textcolor{keyword}{static}\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ quat\_sub(\textcolor{keyword}{struct}\ \doxymbox{\hyperlink{structquaternion}{quaternion}}\ *\ Sum,\ \textcolor{keyword}{struct}\ \doxymbox{\hyperlink{structquaternion}{quaternion}}\ L,\ \textcolor{keyword}{struct}\ \doxymbox{\hyperlink{structquaternion}{quaternion}}\ R)\{}
+\DoxyCodeLine{00062\ \ \ \ \ Sum\ -\/>\ q1\ =\ L.q1\ -\/\ R.q1;}
+\DoxyCodeLine{00063\ \ \ \ \ Sum\ -\/>\ q2\ =\ L.q2\ -\/\ R.q2;}
+\DoxyCodeLine{00064\ \ \ \ \ Sum\ -\/>\ q3\ =\ L.q3\ -\/\ R.q3;}
+\DoxyCodeLine{00065\ \ \ \ \ Sum\ -\/>\ q4\ =\ L.q4\ -\/\ R.q4;}
+\DoxyCodeLine{00066\ \}}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \textcolor{comment}{//\ the\ conjugate\ of\ a\ quaternion\ is\ it's\ imaginary\ component\ sign\ changed\ \ q*\ =\ [s,\ -\/v]\ if\ q\ =\ [s,\ v]}}
+\DoxyCodeLine{00070\ \textcolor{keyword}{static}\ \textcolor{keyword}{inline}\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{structquaternion}{quaternion}}\ quat\_conjugate(struct\ \doxymbox{\hyperlink{structquaternion}{quaternion}}\ q)\{}
+\DoxyCodeLine{00071\ \ \ \ \ q.q2\ =\ -\/q.q2;}
+\DoxyCodeLine{00072\ \ \ \ \ q.q3\ =\ -\/q.q3;}
+\DoxyCodeLine{00073\ \ \ \ \ q.q4\ =\ -\/q.q4;}
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordflow}{return}\ q;}
+\DoxyCodeLine{00075\ \}}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \textcolor{comment}{//\ norm\ of\ a\ quaternion\ is\ the\ same\ as\ a\ complex\ number}}
+\DoxyCodeLine{00078\ \textcolor{comment}{//\ sqrt(\ q1\string^2\ +\ q2\string^2\ +\ q3\string^2\ +\ q4\string^2)}}
+\DoxyCodeLine{00079\ \textcolor{comment}{//\ the\ norm\ is\ also\ the\ sqrt(q\ *\ conjugate(q)),\ but\ thats\ a\ lot\ of\ operations\ in\ the\ quaternion\ multiplication}}
+\DoxyCodeLine{00080\ \textcolor{keyword}{static}\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{double}\ quat\_Norm\ (\textcolor{keyword}{struct}\ \doxymbox{\hyperlink{structquaternion}{quaternion}}\ q)}
+\DoxyCodeLine{00081\ \{}
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keywordflow}{return}\ sqrt((\textcolor{keywordtype}{double})\ q.q1*(\textcolor{keywordtype}{double})\ q.q1\ +\ (\textcolor{keywordtype}{double})\ q.q2*(\textcolor{keywordtype}{double})\ q.q2\ +}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (\textcolor{keywordtype}{double})\ q.q3*(\textcolor{keywordtype}{double})\ q.q3\ +\ (\textcolor{keywordtype}{double})\ q.q4*(\textcolor{keywordtype}{double})\ q.q4);}
+\DoxyCodeLine{00084\ \}}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \textcolor{comment}{//\ Normalizes\ pointer\ q\ by\ calling\ quat\_Norm(q),}}
+\DoxyCodeLine{00087\ \textcolor{keyword}{static}\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ quat\_Normalization(\textcolor{keyword}{struct}\ \doxymbox{\hyperlink{structquaternion}{quaternion}}\ *\ q)\{}
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keywordtype}{float}\ norm\ =\ quat\_Norm(*q);}
+\DoxyCodeLine{00089\ \ \ \ \ q\ -\/>\ q1\ /=\ norm;}
+\DoxyCodeLine{00090\ \ \ \ \ q\ -\/>\ q2\ /=\ norm;}
+\DoxyCodeLine{00091\ \ \ \ \ q\ -\/>\ q3\ /=\ norm;}
+\DoxyCodeLine{00092\ \ \ \ \ q\ -\/>\ q4\ /=\ norm;}
+\DoxyCodeLine{00093\ \}}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00095\ \textcolor{keyword}{static}\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ printQuaternion\ (\textcolor{keyword}{struct}\ \doxymbox{\hyperlink{structquaternion}{quaternion}}\ q)\{}
+\DoxyCodeLine{00096\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%f\ \%f\ \%f\ \%f\(\backslash\)n"{}},\ (\textcolor{keywordtype}{double})\ q.q1,\ (\textcolor{keywordtype}{double})\ q.q2,\ (\textcolor{keywordtype}{double})\ q.q3,\ (\textcolor{keywordtype}{double})\ q.q4);}
+\DoxyCodeLine{00097\ \}}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00100\ \textcolor{comment}{//\ IMU\ consists\ of\ a\ Gyroscope\ plus\ Accelerometer\ sensor\ fusion}}
+\DoxyCodeLine{00101\ \textcolor{keywordtype}{void}\ imu\_filter(\textcolor{keywordtype}{float}\ ax,\ \textcolor{keywordtype}{float}\ ay,\ \textcolor{keywordtype}{float}\ az,\ \textcolor{keywordtype}{float}\ gx,\ \textcolor{keywordtype}{float}\ gy,\ \textcolor{keywordtype}{float}\ gz);}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00103\ \textcolor{keywordtype}{void}\ eulerAngles(\textcolor{keyword}{struct}\ \doxymbox{\hyperlink{structquaternion}{quaternion}}\ q,\ \textcolor{keywordtype}{float}*\ roll,\ \textcolor{keywordtype}{float}*\ pitch,\ \textcolor{keywordtype}{float}*\ yaw);}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00107\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ MADGWICK\_FILTER\_H\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

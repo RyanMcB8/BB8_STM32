@@ -1,0 +1,56 @@
+\doxysection{C:\+/\+\+Users/\+ryanm/\+\+Documents/\+\+Design\+Group/\+\+BB8\+\_\+\+STM32/\+\+Firmware/\+\+Core/\+\+Src/\+rtc.c File Reference}
+\hypertarget{rtc_8c}{}\label{rtc_8c}\index{C:/Users/ryanm/Documents/DesignGroup/BB8\_STM32/Firmware/Core/Src/rtc.c@{C:/Users/ryanm/Documents/DesignGroup/BB8\_STM32/Firmware/Core/Src/rtc.c}}
+
+
+This file provides code for the configuration of the RTC instances.  
+
+
+{\ttfamily \+\#include "{}rtc.\+h"{}}\newline
+Include dependency graph for rtc.\+c:\+
+% FIG 0
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{rtc_8c_abf4accd1ce479030808e546f3d4642c9}{MX\+\_\+\+RTC\+\_\+\+Init}} (void)
+\item 
+void \doxymbox{\hyperlink{rtc_8c_a453bd7b485bdb49c54872947f546655c}{HAL\+\_\+\+RTC\+\_\+\+Msp\+Init}} (RTC\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}rtc\+Handle)
+\item 
+\Hypertarget{rtc_8c_a17b728569834d5a73fb8713b6a41806f}\label{rtc_8c_a17b728569834d5a73fb8713b6a41806f} 
+void {\bfseries HAL\+\_\+\+RTC\+\_\+\+Msp\+De\+Init} (RTC\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}rtc\+Handle)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{rtc_8c_aa0c7fca836406ade332e1e3f1039d8ab}\label{rtc_8c_aa0c7fca836406ade332e1e3f1039d8ab} 
+RTC\+\_\+\+Handle\+Type\+Def {\bfseries hrtc}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file provides code for the configuration of the RTC instances. 
+
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+Copyright (c) 2026 STMicroelectronics. All rights reserved.
+
+This software is licensed under terms that can be found in the LICENSE file in the root directory of this software component. If no LICENSE file comes with this software, it is provided AS-\/\+IS. 
+
+\label{doc-func-members}
+\Hypertarget{rtc_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{rtc_8c_a453bd7b485bdb49c54872947f546655c}\index{rtc.c@{rtc.c}!HAL\_RTC\_MspInit@{HAL\_RTC\_MspInit}}
+\index{HAL\_RTC\_MspInit@{HAL\_RTC\_MspInit}!rtc.c@{rtc.c}}
+\doxysubsubsection{\texorpdfstring{HAL\_RTC\_MspInit()}{HAL\_RTC\_MspInit()}}
+{\footnotesize\ttfamily \label{rtc_8c_a453bd7b485bdb49c54872947f546655c} 
+void HAL\+\_\+\+RTC\+\_\+\+Msp\+Init (\begin{DoxyParamCaption}\item[{RTC\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}}]{rtc\+Handle}{}\end{DoxyParamCaption})}
+
+Initializes the peripherals clock\Hypertarget{rtc_8c_abf4accd1ce479030808e546f3d4642c9}\index{rtc.c@{rtc.c}!MX\_RTC\_Init@{MX\_RTC\_Init}}
+\index{MX\_RTC\_Init@{MX\_RTC\_Init}!rtc.c@{rtc.c}}
+\doxysubsubsection{\texorpdfstring{MX\_RTC\_Init()}{MX\_RTC\_Init()}}
+{\footnotesize\ttfamily \label{rtc_8c_abf4accd1ce479030808e546f3d4642c9} 
+void MX\+\_\+\+RTC\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+Initialize RTC Only
+
+Enable the Wake\+Up

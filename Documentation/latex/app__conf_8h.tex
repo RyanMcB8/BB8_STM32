@@ -1,0 +1,863 @@
+\doxysection{C:\+/\+\+Users/\+ryanm/\+\+Documents/\+\+Design\+Group/\+\+BB8\+\_\+\+STM32/\+\+Firmware/\+\+Core/\+\+Inc/\+app\+\_\+conf.h File Reference}
+\hypertarget{app__conf_8h}{}\label{app__conf_8h}\index{C:/Users/ryanm/Documents/DesignGroup/BB8\_STM32/Firmware/Core/Inc/app\_conf.h@{C:/Users/ryanm/Documents/DesignGroup/BB8\_STM32/Firmware/Core/Inc/app\_conf.h}}
+
+
+Application configuration file for STM32\+WPAN Middleware.  
+
+
+{\ttfamily \+\#include "{}hw.\+h"{}}\newline
+{\ttfamily \+\#include "{}hw\+\_\+conf.\+h"{}}\newline
+{\ttfamily \+\#include "{}hw\+\_\+if.\+h"{}}\newline
+{\ttfamily \+\#include "{}ble\+\_\+bufsize.\+h"{}}\newline
+Include dependency graph for app\+\_\+conf.\+h:\+
+% FIG 0
+This graph shows which files directly or indirectly include this file:\+
+% FIG 1
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\+\#define \doxymbox{\hyperlink{app__conf_8h_ac644b14f0fc28d591f8cbbdc53a32fdd}{CFG\+\_\+\+TX\+\_\+\+POWER}}~(0x18) /\+\texorpdfstring{$\ast$}{*} -\/0.\+15d\+Bm \texorpdfstring{$\ast$}{*}/\+
+\item 
+\+\#define \doxymbox{\hyperlink{app__conf_8h_abf3b052a0ad4ba695a386368310087ab}{CFG\+\_\+\+ADV\+\_\+\+BD\+\_\+\+ADDRESS}}~(0x11aabbccddee)
+\item 
+\+\#define \doxymbox{\hyperlink{app__conf_8h_a60d7ec652f024b2b28897159eb253552}{CFG\+\_\+\+IDENTITY\+\_\+\+ADDRESS}}~GAP\+\_\+\+PUBLIC\+\_\+\+ADDR
+\item 
+\+\#define \doxymbox{\hyperlink{app__conf_8h_a797d86cf30739859be1c01ceba5177be}{CFG\+\_\+\+PRIVACY}}~PRIVACY\+\_\+\+DISABLED
+\item 
+\+\#define \doxymbox{\hyperlink{app__conf_8h_adf53dcaed3668e4a7939ee025a1b5fb7}{CFG\+\_\+\+BLE\+\_\+\+ADDRESS\+\_\+\+TYPE}}~GAP\+\_\+\+PUBLIC\+\_\+\+ADDR
+\item 
+\+\#define \doxymbox{\hyperlink{app__conf_8h_a9b9012d7591384f67782c922f39c617b}{CFG\+\_\+\+FAST\+\_\+\+CONN\+\_\+\+ADV\+\_\+\+INTERVAL\+\_\+\+MIN}}~(0x0080)
+\item 
+\+\#define \doxymbox{\hyperlink{app__conf_8h_a4f040288d382970d27a475076baf4005}{CFG\+\_\+\+FAST\+\_\+\+CONN\+\_\+\+ADV\+\_\+\+INTERVAL\+\_\+\+MAX}}~(0x00\+A0)
+\item 
+\+\#define \doxymbox{\hyperlink{app__conf_8h_abfa30cc1be49966eda1ea455a16fa2e6}{CFG\+\_\+\+LP\+\_\+\+CONN\+\_\+\+ADV\+\_\+\+INTERVAL\+\_\+\+MIN}}~(0x640)
+\item 
+\+\#define \doxymbox{\hyperlink{app__conf_8h_a98c896cee21940e82f9d3bb1abe434e4}{CFG\+\_\+\+LP\+\_\+\+CONN\+\_\+\+ADV\+\_\+\+INTERVAL\+\_\+\+MAX}}~(0x\+FA0)
+\item 
+\Hypertarget{app__conf_8h_a24cd1a8cbe06a15f01352e1c1bb96f80}\label{app__conf_8h_a24cd1a8cbe06a15f01352e1c1bb96f80} 
+\+\#define {\bfseries ADV\+\_\+\+TYPE}~ADV\+\_\+\+IND
+\item 
+\Hypertarget{app__conf_8h_a0813252ffd712963d8d3d82a540fcfb9}\label{app__conf_8h_a0813252ffd712963d8d3d82a540fcfb9} 
+\+\#define {\bfseries BLE\+\_\+\+ADDR\+\_\+\+TYPE}~GAP\+\_\+\+PUBLIC\+\_\+\+ADDR
+\item 
+\Hypertarget{app__conf_8h_a05995ef6676622b27268ab532582df22}\label{app__conf_8h_a05995ef6676622b27268ab532582df22} 
+\+\#define {\bfseries ADV\+\_\+\+FILTER}~NO\+\_\+\+WHITE\+\_\+\+LIST\+\_\+\+USE
+\item 
+\+\#define \doxymbox{\hyperlink{app__conf_8h_abce23ea06b2c6715f93a5b102c248122}{CFG\+\_\+\+BONDING\+\_\+\+MODE}}~(0)
+\item 
+\Hypertarget{app__conf_8h_aea3a0529877eac7ce6e6b5a166642863}\label{app__conf_8h_aea3a0529877eac7ce6e6b5a166642863} 
+\+\#define {\bfseries CFG\+\_\+\+FIXED\+\_\+\+PIN}~(111111)
+\item 
+\Hypertarget{app__conf_8h_a8f01cb3619ed46e80590ef3322e11b54}\label{app__conf_8h_a8f01cb3619ed46e80590ef3322e11b54} 
+\+\#define {\bfseries CFG\+\_\+\+USED\+\_\+\+FIXED\+\_\+\+PIN}~(0)
+\item 
+\Hypertarget{app__conf_8h_a5f119c4c356762a416e2e8bf82c293ca}\label{app__conf_8h_a5f119c4c356762a416e2e8bf82c293ca} 
+\+\#define {\bfseries CFG\+\_\+\+ENCRYPTION\+\_\+\+KEY\+\_\+\+SIZE\+\_\+\+MAX}~(16)
+\item 
+\Hypertarget{app__conf_8h_a16b045bb11e50135ab041f65f52c5a58}\label{app__conf_8h_a16b045bb11e50135ab041f65f52c5a58} 
+\+\#define {\bfseries CFG\+\_\+\+ENCRYPTION\+\_\+\+KEY\+\_\+\+SIZE\+\_\+\+MIN}~(8)
+\item 
+\+\#define \doxymbox{\hyperlink{app__conf_8h_ac37a6f5b5a160addad67966b84ecdbbe}{CFG\+\_\+\+IO\+\_\+\+CAPABILITY\+\_\+\+DISPLAY\+\_\+\+ONLY}}~(0x00)
+\item 
+\Hypertarget{app__conf_8h_aec0db95335f0c3c22ddb1b6952f1069e}\label{app__conf_8h_aec0db95335f0c3c22ddb1b6952f1069e} 
+\+\#define {\bfseries CFG\+\_\+\+IO\+\_\+\+CAPABILITY\+\_\+\+DISPLAY\+\_\+\+YES\+\_\+\+NO}~(0x01)
+\item 
+\Hypertarget{app__conf_8h_a0839d66c5eead71e2310b0fbcffc1aac}\label{app__conf_8h_a0839d66c5eead71e2310b0fbcffc1aac} 
+\+\#define {\bfseries CFG\+\_\+\+IO\+\_\+\+CAPABILITY\+\_\+\+KEYBOARD\+\_\+\+ONLY}~(0x02)
+\item 
+\Hypertarget{app__conf_8h_aeaf87838f1960441f3090963442636e7}\label{app__conf_8h_aeaf87838f1960441f3090963442636e7} 
+\+\#define {\bfseries CFG\+\_\+\+IO\+\_\+\+CAPABILITY\+\_\+\+NO\+\_\+\+INPUT\+\_\+\+NO\+\_\+\+OUTPUT}~(0x03)
+\item 
+\Hypertarget{app__conf_8h_a681d321df71a90ae022e8bc90fbfc045}\label{app__conf_8h_a681d321df71a90ae022e8bc90fbfc045} 
+\+\#define {\bfseries CFG\+\_\+\+IO\+\_\+\+CAPABILITY\+\_\+\+KEYBOARD\+\_\+\+DISPLAY}~(0x04)
+\item 
+\Hypertarget{app__conf_8h_a7076e2a6117d14fc928769194b12e900}\label{app__conf_8h_a7076e2a6117d14fc928769194b12e900} 
+\+\#define {\bfseries CFG\+\_\+\+IO\+\_\+\+CAPABILITY}~CFG\+\_\+\+IO\+\_\+\+CAPABILITY\+\_\+\+DISPLAY\+\_\+\+YES\+\_\+\+NO
+\item 
+\+\#define \doxymbox{\hyperlink{app__conf_8h_af615ffecccbbda26364f4385f7fc1932}{CFG\+\_\+\+MITM\+\_\+\+PROTECTION\+\_\+\+NOT\+\_\+\+REQUIRED}}~(0x00)
+\item 
+\Hypertarget{app__conf_8h_aab2e98868d24f776cb5ec1ccd9d98eaf}\label{app__conf_8h_aab2e98868d24f776cb5ec1ccd9d98eaf} 
+\+\#define {\bfseries CFG\+\_\+\+MITM\+\_\+\+PROTECTION\+\_\+\+REQUIRED}~(0x01)
+\item 
+\Hypertarget{app__conf_8h_a9808b78206250f57ce55c854f5740141}\label{app__conf_8h_a9808b78206250f57ce55c854f5740141} 
+\+\#define {\bfseries CFG\+\_\+\+MITM\+\_\+\+PROTECTION}~CFG\+\_\+\+MITM\+\_\+\+PROTECTION\+\_\+\+REQUIRED
+\item 
+\+\#define \doxymbox{\hyperlink{app__conf_8h_aae247814ceff1d3ebb03ca25fbb40e24}{CFG\+\_\+\+SECURE\+\_\+\+NOT\+\_\+\+SUPPORTED}}~(0x00)
+\item 
+\Hypertarget{app__conf_8h_a4e809cd715949a265fb7f09f795c25da}\label{app__conf_8h_a4e809cd715949a265fb7f09f795c25da} 
+\+\#define {\bfseries CFG\+\_\+\+SECURE\+\_\+\+OPTIONAL}~(0x01)
+\item 
+\Hypertarget{app__conf_8h_a8a7afb5ef078bc57ea1ae0cdfecb1ec6}\label{app__conf_8h_a8a7afb5ef078bc57ea1ae0cdfecb1ec6} 
+\+\#define {\bfseries CFG\+\_\+\+SECURE\+\_\+\+MANDATORY}~(0x02)
+\item 
+\Hypertarget{app__conf_8h_a9275efb45dd0cd3c0a9209204de16a7b}\label{app__conf_8h_a9275efb45dd0cd3c0a9209204de16a7b} 
+\+\#define {\bfseries CFG\+\_\+\+SC\+\_\+\+SUPPORT}~CFG\+\_\+\+SECURE\+\_\+\+OPTIONAL
+\item 
+\+\#define \doxymbox{\hyperlink{app__conf_8h_a69320a660d2a1a9caa8b6c8aeb80d389}{CFG\+\_\+\+KEYPRESS\+\_\+\+NOT\+\_\+\+SUPPORTED}}~(0x00)
+\item 
+\Hypertarget{app__conf_8h_a6279776a46f1b387414a86b90ef6d09b}\label{app__conf_8h_a6279776a46f1b387414a86b90ef6d09b} 
+\+\#define {\bfseries CFG\+\_\+\+KEYPRESS\+\_\+\+SUPPORTED}~(0x01)
+\item 
+\Hypertarget{app__conf_8h_a90baf437465aa1c6fafb4a7bc06bc3db}\label{app__conf_8h_a90baf437465aa1c6fafb4a7bc06bc3db} 
+\+\#define {\bfseries CFG\+\_\+\+KEYPRESS\+\_\+\+NOTIFICATION\+\_\+\+SUPPORT}~\doxymbox{\hyperlink{app__conf_8h_a69320a660d2a1a9caa8b6c8aeb80d389}{CFG\+\_\+\+KEYPRESS\+\_\+\+NOT\+\_\+\+SUPPORTED}}
+\item 
+\+\#define \doxymbox{\hyperlink{app__conf_8h_a7ebc9a785e5ab85457c98595aac81589}{YES}}~(0x01)
+\item 
+\Hypertarget{app__conf_8h_a996bde01ecac342918f0a2c4e7ce7bd5}\label{app__conf_8h_a996bde01ecac342918f0a2c4e7ce7bd5} 
+\+\#define {\bfseries NO}~(0x00)
+\item 
+\+\#define \doxymbox{\hyperlink{app__conf_8h_a93286d99ce3f61a616205c5c185d5ed9}{CFG\+\_\+\+GAP\+\_\+\+DEVICE\+\_\+\+NAME}}~"{}BB8\+\_\+\+Main"{}
+\item 
+\Hypertarget{app__conf_8h_a3f904c1bc2df5826b4f0a93602566d70}\label{app__conf_8h_a3f904c1bc2df5826b4f0a93602566d70} 
+\+\#define {\bfseries CFG\+\_\+\+GAP\+\_\+\+DEVICE\+\_\+\+NAME\+\_\+\+LENGTH}~(9)
+\item 
+\+\#define \doxymbox{\hyperlink{app__conf_8h_a4616409f327e9fa4a7b9650a28b1a2f7}{ALL\+\_\+\+PHYS\+\_\+\+PREFERENCE}}~0x00
+\item 
+\Hypertarget{app__conf_8h_a80bcd58f34d9677fcb175259f4fe98aa}\label{app__conf_8h_a80bcd58f34d9677fcb175259f4fe98aa} 
+\+\#define {\bfseries RX\+\_\+2\+M\+\_\+\+PREFERRED}~0x02
+\item 
+\Hypertarget{app__conf_8h_a069cf7386f25f2fa8e7eded04dd68011}\label{app__conf_8h_a069cf7386f25f2fa8e7eded04dd68011} 
+\+\#define {\bfseries TX\+\_\+2\+M\+\_\+\+PREFERRED}~0x02
+\item 
+\Hypertarget{app__conf_8h_aa7dc82f0bf2431f33332929ec4ca15cc}\label{app__conf_8h_aa7dc82f0bf2431f33332929ec4ca15cc} 
+\+\#define {\bfseries TX\+\_\+1M}~0x01
+\item 
+\Hypertarget{app__conf_8h_a3f8a021a898b27f8e04f608216dcd004}\label{app__conf_8h_a3f8a021a898b27f8e04f608216dcd004} 
+\+\#define {\bfseries TX\+\_\+2M}~0x02
+\item 
+\Hypertarget{app__conf_8h_a96293183fb379b9f106b74f9d0c31d18}\label{app__conf_8h_a96293183fb379b9f106b74f9d0c31d18} 
+\+\#define {\bfseries RX\+\_\+1M}~0x01
+\item 
+\Hypertarget{app__conf_8h_a6a1fc0f6d0e5a1977156f295c5014c7e}\label{app__conf_8h_a6a1fc0f6d0e5a1977156f295c5014c7e} 
+\+\#define {\bfseries RX\+\_\+2M}~0x02
+\item 
+\+\#define \doxymbox{\hyperlink{app__conf_8h_aa47415e659db3370b2a3265207573c18}{CFG\+\_\+\+BLE\+\_\+\+IR}}~\{0x12, 0x34, 0x56, 0x78, 0x9A, 0x\+BC, 0x\+DE, 0x\+F0, 0x12, 0x34, 0x56, 0x78, 0x9A, 0x\+BC, 0x\+DE, 0x\+F0\}
+\item 
+\+\#define \doxymbox{\hyperlink{app__conf_8h_ad36a5889c398a1880c8ea341bfe5b606}{CFG\+\_\+\+BLE\+\_\+\+ER}}~\{0x\+FE, 0x\+DC, 0x\+BA, 0x09, 0x87, 0x65, 0x43, 0x21, 0x\+FE, 0x\+DC, 0x\+BA, 0x09, 0x87, 0x65, 0x43, 0x21\}
+\item 
+\+\#define \doxymbox{\hyperlink{app__conf_8h_a17051b45f90fed76158d3a1b956df8d6}{CFG\+\_\+\+USE\+\_\+\+SMPS}}~0
+\item 
+\+\#define \doxymbox{\hyperlink{app__conf_8h_a819255fece2b08c3a49887f3afd88016}{RADIO\+\_\+\+ACTIVITY\+\_\+\+EVENT}}~1          /\+\texorpdfstring{$\ast$}{*} 1 for OOB Demo \texorpdfstring{$\ast$}{*}/\+
+\item 
+\+\#define \doxymbox{\hyperlink{app__conf_8h_a29d33eb2cd6c19cec591e44118cd04b2}{CFG\+\_\+\+FEATURE\+\_\+\+THREAD\+\_\+\+SWITCH}}~(0x40)
+\item 
+\Hypertarget{app__conf_8h_aaa4758c9e7d0b20d6e8f006ed0f59602}\label{app__conf_8h_aaa4758c9e7d0b20d6e8f006ed0f59602} 
+\+\#define {\bfseries CFG\+\_\+\+FEATURE\+\_\+\+OTA\+\_\+\+REBOOT}~(0x20)
+\item 
+\+\#define \doxymbox{\hyperlink{app__conf_8h_a0e92686144c8e0557158f448370fe1bb}{CONN\+\_\+L}}(x)
+\item 
+\+\#define \doxymbox{\hyperlink{app__conf_8h_a064fc4bcba96fc2f35eafa555407d88a}{CONN\+\_\+P}}(x)
+\item 
+\Hypertarget{app__conf_8h_aa54ab8baa8e90bf364159d15ca47fa52}\label{app__conf_8h_aa54ab8baa8e90bf364159d15ca47fa52} 
+\+\#define {\bfseries L2\+CAP\+\_\+\+REQUEST\+\_\+\+NEW\+\_\+\+CONN\+\_\+\+PARAM}~0
+\item 
+\Hypertarget{app__conf_8h_a6ee88751ac89f23529321c3e868e769c}\label{app__conf_8h_a6ee88751ac89f23529321c3e868e769c} 
+\+\#define {\bfseries L2\+CAP\+\_\+\+INTERVAL\+\_\+\+MIN}~CONN\+\_\+P(1000) /\+\texorpdfstring{$\ast$}{*} 1s \texorpdfstring{$\ast$}{*}/\+
+\item 
+\Hypertarget{app__conf_8h_af5d8bed477f1311a5d9292a39f19b1bb}\label{app__conf_8h_af5d8bed477f1311a5d9292a39f19b1bb} 
+\+\#define {\bfseries L2\+CAP\+\_\+\+INTERVAL\+\_\+\+MAX}~CONN\+\_\+P(1000) /\+\texorpdfstring{$\ast$}{*} 1s \texorpdfstring{$\ast$}{*}/\+
+\item 
+\Hypertarget{app__conf_8h_a6295b80d8f48b5cd6e24bbd235427589}\label{app__conf_8h_a6295b80d8f48b5cd6e24bbd235427589} 
+\+\#define {\bfseries L2\+CAP\+\_\+\+PERIPHERAL\+\_\+\+LATENCY}~0x0000
+\item 
+\Hypertarget{app__conf_8h_aa38925accee51c4cf5976825449bcc89}\label{app__conf_8h_aa38925accee51c4cf5976825449bcc89} 
+\+\#define {\bfseries L2\+CAP\+\_\+\+TIMEOUT\+\_\+\+MULTIPLIER}~0x1\+F4
+\item 
+\+\#define \doxymbox{\hyperlink{app__conf_8h_a228b02b463c4431e4968ac531864839a}{CFG\+\_\+\+BLE\+\_\+\+NUM\+\_\+\+LINK}}~2
+\item 
+\+\#define \doxymbox{\hyperlink{app__conf_8h_a90bf8d853b18b376a12686672947293c}{CFG\+\_\+\+BLE\+\_\+\+NUM\+\_\+\+GATT\+\_\+\+SERVICES}}~4
+\item 
+\+\#define \doxymbox{\hyperlink{app__conf_8h_acbf1d7b4c629c1b759e5c857b9f251f0}{CFG\+\_\+\+BLE\+\_\+\+NUM\+\_\+\+GATT\+\_\+\+ATTRIBUTES}}~30
+\item 
+\+\#define \doxymbox{\hyperlink{app__conf_8h_a2f9a260234ebc5f95c2cdea4a09ead6c}{CFG\+\_\+\+BLE\+\_\+\+MAX\+\_\+\+ATT\+\_\+\+MTU}}~(156)
+\item 
+\+\#define \doxymbox{\hyperlink{app__conf_8h_af02e6e474b7b73496579a416cc27127a}{CFG\+\_\+\+BLE\+\_\+\+ATT\+\_\+\+VALUE\+\_\+\+ARRAY\+\_\+\+SIZE}}~(1290)
+\item 
+\+\#define \doxymbox{\hyperlink{app__conf_8h_a00a3f3e7f9b7a6e1406b34c89da5fcb6}{CFG\+\_\+\+BLE\+\_\+\+PREPARE\+\_\+\+WRITE\+\_\+\+LIST\+\_\+\+SIZE}}~BLE\+\_\+\+PREP\+\_\+\+WRITE\+\_\+\+X\+\_\+\+ATT(\doxymbox{\hyperlink{app__conf_8h_a2f9a260234ebc5f95c2cdea4a09ead6c}{CFG\+\_\+\+BLE\+\_\+\+MAX\+\_\+\+ATT\+\_\+\+MTU}})
+\item 
+\+\#define \doxymbox{\hyperlink{app__conf_8h_a9b2acb95577df705aa678fbc6fbf5628}{CFG\+\_\+\+BLE\+\_\+\+MBLOCK\+\_\+\+COUNT}}~(BLE\+\_\+\+MBLOCKS\+\_\+\+CALC(\doxymbox{\hyperlink{app__conf_8h_a00a3f3e7f9b7a6e1406b34c89da5fcb6}{CFG\+\_\+\+BLE\+\_\+\+PREPARE\+\_\+\+WRITE\+\_\+\+LIST\+\_\+\+SIZE}}, \doxymbox{\hyperlink{app__conf_8h_a2f9a260234ebc5f95c2cdea4a09ead6c}{CFG\+\_\+\+BLE\+\_\+\+MAX\+\_\+\+ATT\+\_\+\+MTU}}, \doxymbox{\hyperlink{app__conf_8h_a228b02b463c4431e4968ac531864839a}{CFG\+\_\+\+BLE\+\_\+\+NUM\+\_\+\+LINK}}))
+\item 
+\+\#define \doxymbox{\hyperlink{app__conf_8h_a00e787755bc10600af13227fcaadabef}{CFG\+\_\+\+BLE\+\_\+\+DATA\+\_\+\+LENGTH\+\_\+\+EXTENSION}}~1
+\item 
+\+\#define \doxymbox{\hyperlink{app__conf_8h_a212526347d453560efa2c63768287270}{CFG\+\_\+\+BLE\+\_\+\+PERIPHERAL\+\_\+\+SCA}}~500
+\item 
+\+\#define \doxymbox{\hyperlink{app__conf_8h_a7f4c1c1f7ef39646d7d64201e8223d18}{CFG\+\_\+\+BLE\+\_\+\+CENTRAL\+\_\+\+SCA}}~0
+\item 
+\+\#define \doxymbox{\hyperlink{app__conf_8h_aef8b5b996a9b3acfbaaf2620933c51da}{CFG\+\_\+\+BLE\+\_\+\+LS\+\_\+\+SOURCE}}~(SHCI\+\_\+\+C2\+\_\+\+BLE\+\_\+\+INIT\+\_\+\+CFG\+\_\+\+BLE\+\_\+\+LS\+\_\+\+CALIB \texorpdfstring{$\vert$}{|} SHCI\+\_\+\+C2\+\_\+\+BLE\+\_\+\+INIT\+\_\+\+CFG\+\_\+\+BLE\+\_\+\+LS\+\_\+\+OTHER\+\_\+\+DEV \texorpdfstring{$\vert$}{|} SHCI\+\_\+\+C2\+\_\+\+BLE\+\_\+\+INIT\+\_\+\+CFG\+\_\+\+BLE\+\_\+\+LS\+\_\+\+CLK\+\_\+\+LSE)
+\item 
+\+\#define \doxymbox{\hyperlink{app__conf_8h_a6ae86cdec1dab70a1e58c2438c741571}{CFG\+\_\+\+BLE\+\_\+\+HSE\+\_\+\+STARTUP\+\_\+\+TIME}}~0x148
+\item 
+\+\#define \doxymbox{\hyperlink{app__conf_8h_ac7c727608cad31937192a61a8a2ddab4}{CFG\+\_\+\+BLE\+\_\+\+MAX\+\_\+\+CONN\+\_\+\+EVENT\+\_\+\+LENGTH}}~(0x\+FFFFFFFF)
+\item 
+\+\#define \doxymbox{\hyperlink{app__conf_8h_a4ec78d708c597f3efc3f333a3eba446d}{CFG\+\_\+\+BLE\+\_\+\+VITERBI\+\_\+\+MODE}}~1
+\item 
+\+\#define \doxymbox{\hyperlink{app__conf_8h_a83939187dc74aa874452656a5dad2f89}{CFG\+\_\+\+BLE\+\_\+\+OPTIONS}}~(SHCI\+\_\+\+C2\+\_\+\+BLE\+\_\+\+INIT\+\_\+\+OPTIONS\+\_\+\+LL\+\_\+\+HOST \texorpdfstring{$\vert$}{|} SHCI\+\_\+\+C2\+\_\+\+BLE\+\_\+\+INIT\+\_\+\+OPTIONS\+\_\+\+WITH\+\_\+\+SVC\+\_\+\+CHANGE\+\_\+\+DESC \texorpdfstring{$\vert$}{|} SHCI\+\_\+\+C2\+\_\+\+BLE\+\_\+\+INIT\+\_\+\+OPTIONS\+\_\+\+DEVICE\+\_\+\+NAME\+\_\+\+RW \texorpdfstring{$\vert$}{|} SHCI\+\_\+\+C2\+\_\+\+BLE\+\_\+\+INIT\+\_\+\+OPTIONS\+\_\+\+NO\+\_\+\+EXT\+\_\+\+ADV \texorpdfstring{$\vert$}{|} SHCI\+\_\+\+C2\+\_\+\+BLE\+\_\+\+INIT\+\_\+\+OPTIONS\+\_\+\+NO\+\_\+\+CS\+\_\+\+ALGO2 \texorpdfstring{$\vert$}{|} SHCI\+\_\+\+C2\+\_\+\+BLE\+\_\+\+INIT\+\_\+\+OPTIONS\+\_\+\+FULL\+\_\+\+GATTDB\+\_\+\+NVM \texorpdfstring{$\vert$}{|} SHCI\+\_\+\+C2\+\_\+\+BLE\+\_\+\+INIT\+\_\+\+OPTIONS\+\_\+\+GATT\+\_\+\+CACHING\+\_\+\+NOTUSED \texorpdfstring{$\vert$}{|} SHCI\+\_\+\+C2\+\_\+\+BLE\+\_\+\+INIT\+\_\+\+OPTIONS\+\_\+\+POWER\+\_\+\+CLASS\+\_\+2\+\_\+3)
+\item 
+\+\#define \doxymbox{\hyperlink{app__conf_8h_a24dd022eb62f00651ef1137796a334cb}{CFG\+\_\+\+BLE\+\_\+\+OPTIONS\+\_\+\+EXT}}~(SHCI\+\_\+\+C2\+\_\+\+BLE\+\_\+\+INIT\+\_\+\+OPTIONS\+\_\+\+APPEARANCE\+\_\+\+READONLY \texorpdfstring{$\vert$}{|} SHCI\+\_\+\+C2\+\_\+\+BLE\+\_\+\+INIT\+\_\+\+OPTIONS\+\_\+\+ENHANCED\+\_\+\+ATT\+\_\+\+NOTSUPPORTED)
+\item 
+\Hypertarget{app__conf_8h_a9923f2975e80b1c3b1479d894078d4b7}\label{app__conf_8h_a9923f2975e80b1c3b1479d894078d4b7} 
+\+\#define {\bfseries CFG\+\_\+\+BLE\+\_\+\+MAX\+\_\+\+COC\+\_\+\+INITIATOR\+\_\+\+NBR}~(32)
+\item 
+\Hypertarget{app__conf_8h_a5000a130d0e50437167e4f8b426d8a5c}\label{app__conf_8h_a5000a130d0e50437167e4f8b426d8a5c} 
+\+\#define {\bfseries CFG\+\_\+\+BLE\+\_\+\+MIN\+\_\+\+TX\+\_\+\+POWER}~(0)
+\item 
+\Hypertarget{app__conf_8h_a7a6315e7a19712362d40d9b62dd3193f}\label{app__conf_8h_a7a6315e7a19712362d40d9b62dd3193f} 
+\+\#define {\bfseries CFG\+\_\+\+BLE\+\_\+\+MAX\+\_\+\+TX\+\_\+\+POWER}~(0)
+\item 
+\+\#define \doxymbox{\hyperlink{app__conf_8h_ad766e2368759def4db6ff465188bb1ac}{CFG\+\_\+\+BLE\+\_\+\+MAX\+\_\+\+ADD\+\_\+\+EATT\+\_\+\+BEARERS}}~(4)
+\item 
+\+\#define \doxymbox{\hyperlink{app__conf_8h_a897d78b8764da8b7c77bbc81014860cf}{CFG\+\_\+\+BLE\+\_\+\+RX\+\_\+\+MODEL\+\_\+\+CONFIG}}~(SHCI\+\_\+\+C2\+\_\+\+BLE\+\_\+\+INIT\+\_\+\+RX\+\_\+\+MODEL\+\_\+\+AGC\+\_\+\+RSSI\+\_\+\+LEGACY)
+\item 
+\Hypertarget{app__conf_8h_abce48da984fedb30a570052ec247dc26}\label{app__conf_8h_abce48da984fedb30a570052ec247dc26} 
+\+\#define {\bfseries CFG\+\_\+\+BLE\+\_\+\+MAX\+\_\+\+ADV\+\_\+\+SET\+\_\+\+NBR}~(2)
+\item 
+\Hypertarget{app__conf_8h_a6ded7b90c63fd7330c925489bc67723c}\label{app__conf_8h_a6ded7b90c63fd7330c925489bc67723c} 
+\+\#define {\bfseries CFG\+\_\+\+BLE\+\_\+\+MAX\+\_\+\+ADV\+\_\+\+DATA\+\_\+\+LEN}~(1650)
+\item 
+\Hypertarget{app__conf_8h_a722d458566a0ef39f8b5549e0958d338}\label{app__conf_8h_a722d458566a0ef39f8b5549e0958d338} 
+\+\#define {\bfseries CFG\+\_\+\+BLE\+\_\+\+TX\+\_\+\+PATH\+\_\+\+COMPENS}~(0)
+\item 
+\Hypertarget{app__conf_8h_a71aedee7624dc66d35b26f0d833b6de8}\label{app__conf_8h_a71aedee7624dc66d35b26f0d833b6de8} 
+\+\#define {\bfseries CFG\+\_\+\+BLE\+\_\+\+RX\+\_\+\+PATH\+\_\+\+COMPENS}~(0)
+\item 
+\Hypertarget{app__conf_8h_a16207a8b3713965312ad240f9f01f2bb}\label{app__conf_8h_a16207a8b3713965312ad240f9f01f2bb} 
+\+\#define {\bfseries CFG\+\_\+\+BLE\+\_\+\+CORE\+\_\+\+VERSION}~(SHCI\+\_\+\+C2\+\_\+\+BLE\+\_\+\+INIT\+\_\+\+BLE\+\_\+\+CORE\+\_\+5\+\_\+4)
+\item 
+\+\#define \doxymbox{\hyperlink{app__conf_8h_a501e1da937d31f57747eaa19e3a05312}{CFG\+\_\+\+TLBLE\+\_\+\+EVT\+\_\+\+QUEUE\+\_\+\+LENGTH}}~5
+\item 
+\+\#define \doxymbox{\hyperlink{app__conf_8h_aedff8f1df2551377b61a4129c6e9c1c1}{CFG\+\_\+\+TLBLE\+\_\+\+MOST\+\_\+\+EVENT\+\_\+\+PAYLOAD\+\_\+\+SIZE}}~255
+\item 
+\Hypertarget{app__conf_8h_ab257ace8b747dccae819d58f2ede3979}\label{app__conf_8h_ab257ace8b747dccae819d58f2ede3979} 
+\+\#define {\bfseries TL\+\_\+\+BLE\+\_\+\+EVENT\+\_\+\+FRAME\+\_\+\+SIZE}~( TL\+\_\+\+EVT\+\_\+\+HDR\+\_\+\+SIZE + \doxymbox{\hyperlink{app__conf_8h_aedff8f1df2551377b61a4129c6e9c1c1}{CFG\+\_\+\+TLBLE\+\_\+\+MOST\+\_\+\+EVENT\+\_\+\+PAYLOAD\+\_\+\+SIZE}} )
+\item 
+\+\#define \doxymbox{\hyperlink{app__conf_8h_a11c849ab8898b88263ff7f953d17124e}{CFG\+\_\+\+DEBUG\+\_\+\+TRACE\+\_\+\+UART}}~0
+\item 
+\Hypertarget{app__conf_8h_a98343c75dd3eb41198788d488c15c38b}\label{app__conf_8h_a98343c75dd3eb41198788d488c15c38b} 
+\+\#define {\bfseries CFG\+\_\+\+CONSOLE\+\_\+\+MENU}~0
+\item 
+\+\#define \doxymbox{\hyperlink{app__conf_8h_a702994beacd62f09c1f86af57f2d516e}{CFG\+\_\+\+USB\+\_\+\+INTERFACE\+\_\+\+ENABLE}}~0
+\item 
+\+\#define \doxymbox{\hyperlink{app__conf_8h_a7e57685a0ca5156e0c38b0c42d4e2080}{HAL\+\_\+\+IPCC\+\_\+\+TX\+\_\+\+IRQHandler}}(...)
+\item 
+\+\#define \doxymbox{\hyperlink{app__conf_8h_a36b5d239f8352e623ae8940051abc1e1}{HAL\+\_\+\+IPCC\+\_\+\+RX\+\_\+\+IRQHandler}}(...)
+\item 
+\+\#define \doxymbox{\hyperlink{app__conf_8h_a52de1f461299b1a0ed98709deb478942}{CFG\+\_\+\+LPM\+\_\+\+SUPPORTED}}~0
+\item 
+\+\#define \doxymbox{\hyperlink{app__conf_8h_a6a0aaffe7b96f43a5fd1f0ef957249bd}{CFG\+\_\+\+LPM\+\_\+\+STANDBY\+\_\+\+SUPPORTED}}~0
+\item 
+\+\#define \doxymbox{\hyperlink{app__conf_8h_a9212d6bf36d48eea393012f0cf54893b}{HAL\+\_\+\+RTCEx\+\_\+\+Wake\+Up\+Timer\+IRQHandler}}(...)
+\item 
+\+\#define \doxymbox{\hyperlink{app__conf_8h_aad53b053c5a381f2d4496670c88a88c9}{CFG\+\_\+\+RTCCLK\+\_\+\+DIVIDER\+\_\+\+CONF}}~0
+\item 
+\+\#define \doxymbox{\hyperlink{app__conf_8h_aab480743c1daf5daac0141ff9381f709}{CFG\+\_\+\+RTCCLK\+\_\+\+DIV}}~(16)
+\item 
+\Hypertarget{app__conf_8h_a8e921f8920bd329440d56fd6f66d2c59}\label{app__conf_8h_a8e921f8920bd329440d56fd6f66d2c59} 
+\+\#define {\bfseries CFG\+\_\+\+RTC\+\_\+\+WUCKSEL\+\_\+\+DIVIDER}~(0)
+\item 
+\Hypertarget{app__conf_8h_aa083c16bbd3899073581655967f9319f}\label{app__conf_8h_aa083c16bbd3899073581655967f9319f} 
+\+\#define {\bfseries CFG\+\_\+\+RTC\+\_\+\+ASYNCH\+\_\+\+PRESCALER}~(0x0F)
+\item 
+\Hypertarget{app__conf_8h_a7fa8553429789e570a50ead0e595fe37}\label{app__conf_8h_a7fa8553429789e570a50ead0e595fe37} 
+\+\#define {\bfseries CFG\+\_\+\+RTC\+\_\+\+SYNCH\+\_\+\+PRESCALER}~(0x7\+FFF)
+\item 
+\+\#define \doxymbox{\hyperlink{app__conf_8h_abaa838c445cf1bdea5052138ae3b04d8}{CFG\+\_\+\+TS\+\_\+\+TICK\+\_\+\+VAL}}~DIVR( (\doxymbox{\hyperlink{app__conf_8h_aab480743c1daf5daac0141ff9381f709}{CFG\+\_\+\+RTCCLK\+\_\+\+DIV}} \texorpdfstring{$\ast$}{*} 1000000), \doxymbox{\hyperlink{stm32wbxx__hal__conf_8h_a7bbb9d19e5189a6ccd0fb6fa6177d20d}{LSE\+\_\+\+VALUE}} )
+\item 
+\Hypertarget{app__conf_8h_aad5f77cc001b4e4920207bb9ceb7c43d}\label{app__conf_8h_aad5f77cc001b4e4920207bb9ceb7c43d} 
+\+\#define {\bfseries CFG\+\_\+\+TS\+\_\+\+TICK\+\_\+\+VAL\+\_\+\+PS}~DIVR( ((uint64\+\_\+t)\doxymbox{\hyperlink{app__conf_8h_aab480743c1daf5daac0141ff9381f709}{CFG\+\_\+\+RTCCLK\+\_\+\+DIV}} \texorpdfstring{$\ast$}{*} 1e12), (uint64\+\_\+t)\doxymbox{\hyperlink{stm32wbxx__hal__conf_8h_a7bbb9d19e5189a6ccd0fb6fa6177d20d}{LSE\+\_\+\+VALUE}} )
+\item 
+\+\#define \doxymbox{\hyperlink{app__conf_8h_a3b61c066e8d8362dfc7698368448edb1}{CFG\+\_\+\+HW\+\_\+\+RESET\+\_\+\+BY\+\_\+\+FW}}~0
+\item 
+\+\#define \doxymbox{\hyperlink{app__conf_8h_a614c6eab72cd2ca80afc15c3992b003f}{CFG\+\_\+\+DEBUGGER\+\_\+\+SUPPORTED}}~1
+\item 
+\+\#define \doxymbox{\hyperlink{app__conf_8h_aa7de434606bceebadc82a78ad56d67fc}{CFG\+\_\+\+DEBUG\+\_\+\+BLE\+\_\+\+TRACE}}~0
+\item 
+\+\#define \doxymbox{\hyperlink{app__conf_8h_ada9b994724bfc406f4b3881e6a96da2d}{CFG\+\_\+\+DEBUG\+\_\+\+APP\+\_\+\+TRACE}}~0
+\item 
+\Hypertarget{app__conf_8h_a2b2c2d566c41f3c35985b3c52be418fb}\label{app__conf_8h_a2b2c2d566c41f3c35985b3c52be418fb} 
+\+\#define {\bfseries APP\+\_\+\+DBG\+\_\+\+MSG}~PRINT\+\_\+\+NO\+\_\+\+MESG
+\item 
+\+\#define \doxymbox{\hyperlink{app__conf_8h_a81a22ab97ffe1348b57eda5eb3cec1e8}{CFG\+\_\+\+DEBUG\+\_\+\+TRACE\+\_\+\+LIGHT}}~0
+\item 
+\Hypertarget{app__conf_8h_acf8e9324cd39485d3d54f19d1a54467a}\label{app__conf_8h_acf8e9324cd39485d3d54f19d1a54467a} 
+\+\#define {\bfseries CFG\+\_\+\+DEBUG\+\_\+\+TRACE\+\_\+\+FULL}~0
+\item 
+\Hypertarget{app__conf_8h_a336e6d55d9f69741f588ef59840452ff}\label{app__conf_8h_a336e6d55d9f69741f588ef59840452ff} 
+\+\#define {\bfseries CFG\+\_\+\+DEBUG\+\_\+\+TRACE\+\_\+\+FULL}~0
+\item 
+\+\#define \doxymbox{\hyperlink{app__conf_8h_a605ad4235f6829048eaf1342594b4733}{CFG\+\_\+\+DEBUG\+\_\+\+TRACE\+\_\+\+LIGHT}}~0
+\item 
+\+\#define \doxymbox{\hyperlink{app__conf_8h_a074e64073f50bffd0e4e8cbd1bef3868}{DBG\+\_\+\+TRACE\+\_\+\+USE\+\_\+\+CIRCULAR\+\_\+\+QUEUE}}~1
+\item 
+\+\#define \doxymbox{\hyperlink{app__conf_8h_abfae08243d2da5b4acb67374e9c3d376}{DBG\+\_\+\+TRACE\+\_\+\+MSG\+\_\+\+QUEUE\+\_\+\+SIZE}}~4096
+\item 
+\Hypertarget{app__conf_8h_aab39688147caf150a3af14e698c16da8}\label{app__conf_8h_aab39688147caf150a3af14e698c16da8} 
+\+\#define {\bfseries MAX\+\_\+\+DBG\+\_\+\+TRACE\+\_\+\+MSG\+\_\+\+SIZE}~1024
+\item 
+\Hypertarget{app__conf_8h_a4ccc3b374ee9ee7fde3330280f16fab9}\label{app__conf_8h_a4ccc3b374ee9ee7fde3330280f16fab9} 
+\+\#define {\bfseries CFG\+\_\+\+TASK\+\_\+\+NBR}~\doxymbox{\hyperlink{app__conf_8h_afbcedc9d0a24d60cdc1c673d0baafdd2ac50300beb7c0584fc5664ffe8944a0e6}{CFG\+\_\+\+LAST\+\_\+\+TASK\+\_\+\+ID\+\_\+\+WITH\+\_\+\+NO\+\_\+\+HCICMD}}
+\item 
+\Hypertarget{app__conf_8h_a20fd5809548623a24270011a718576f5}\label{app__conf_8h_a20fd5809548623a24270011a718576f5} 
+\+\#define {\bfseries CFG\+\_\+\+OTP\+\_\+\+BASE\+\_\+\+ADDRESS}~OTP\+\_\+\+AREA\+\_\+\+BASE
+\item 
+\Hypertarget{app__conf_8h_a6ef7eed5aeac7554ec9db5953c0d2538}\label{app__conf_8h_a6ef7eed5aeac7554ec9db5953c0d2538} 
+\+\#define {\bfseries CFG\+\_\+\+OTP\+\_\+\+END\+\_\+\+ADRESS}~OTP\+\_\+\+AREA\+\_\+\+END\+\_\+\+ADDR
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{app__conf_8h_aee27eadaa05eb7d6cca14b19a21b6eca}\label{app__conf_8h_aee27eadaa05eb7d6cca14b19a21b6eca} 
+enum {\bfseries CFG\+\_\+\+Tim\+Proc\+ID\+\_\+t} \{ {\bfseries CFG\+\_\+\+TIM\+\_\+\+PROC\+\_\+\+ID\+\_\+\+ISR}
+ \}
+\item 
+enum \doxymbox{\hyperlink{app__conf_8h_a0e32006f284ff35f22096e28d0e911d1}{CFG\+\_\+\+Task\+\_\+\+Id\+\_\+\+With\+\_\+\+HCI\+\_\+\+Cmd\+\_\+t}} \{ {\bfseries CFG\+\_\+\+TASK\+\_\+\+ADV\+\_\+\+CANCEL\+\_\+\+ID}
+, {\bfseries CFG\+\_\+\+TASK\+\_\+\+HCI\+\_\+\+ASYNCH\+\_\+\+EVT\+\_\+\+ID}
+, {\bfseries CFG\+\_\+\+TASK\+\_\+\+NOTIFY\+\_\+\+ACC\+\_\+\+GYRO\+\_\+\+MAG\+\_\+\+ID}
+, \doxymbox{\hyperlink{app__conf_8h_a0e32006f284ff35f22096e28d0e911d1ad307373770ccbdcfbc56e66a2aa917bc}{CFG\+\_\+\+LAST\+\_\+\+TASK\+\_\+\+ID\+\_\+\+WITH\+\_\+\+HCICMD}}
+ \}
+\item 
+enum \doxymbox{\hyperlink{app__conf_8h_afbcedc9d0a24d60cdc1c673d0baafdd2}{CFG\+\_\+\+Task\+\_\+\+Id\+\_\+\+With\+\_\+\+NO\+\_\+\+HCI\+\_\+\+Cmd\+\_\+t}} \{ \doxymbox{\hyperlink{app__conf_8h_afbcedc9d0a24d60cdc1c673d0baafdd2a87a853b7bebadc576d9e4882f585269d}{CFG\+\_\+\+FIRST\+\_\+\+TASK\+\_\+\+ID\+\_\+\+WITH\+\_\+\+NO\+\_\+\+HCICMD}} = CFG\+\_\+\+LAST\+\_\+\+TASK\+\_\+\+ID\+\_\+\+WITH\+\_\+\+HCICMD -\/ 1
+, {\bfseries CFG\+\_\+\+TASK\+\_\+\+SYSTEM\+\_\+\+HCI\+\_\+\+ASYNCH\+\_\+\+EVT\+\_\+\+ID}
+, \doxymbox{\hyperlink{app__conf_8h_afbcedc9d0a24d60cdc1c673d0baafdd2ac50300beb7c0584fc5664ffe8944a0e6}{CFG\+\_\+\+LAST\+\_\+\+TASK\+\_\+\+ID\+\_\+\+WITH\+\_\+\+NO\+\_\+\+HCICMD}}
+ \}
+\item 
+enum \doxymbox{\hyperlink{app__conf_8h_a46598237a352a5f7dd90bb8511dfd40c}{CFG\+\_\+\+SCH\+\_\+\+Prio\+\_\+\+Id\+\_\+t}} \{ {\bfseries CFG\+\_\+\+SCH\+\_\+\+PRIO\+\_\+0}
+, {\bfseries CFG\+\_\+\+SCH\+\_\+\+PRIO\+\_\+\+NBR}
+ \}
+\item 
+enum \doxymbox{\hyperlink{app__conf_8h_af26fd0fc9eafa3f37bd04d0b80ec0698}{CFG\+\_\+\+Idle\+Evt\+\_\+\+Id\+\_\+t}} \{ {\bfseries CFG\+\_\+\+IDLEEVT\+\_\+\+HCI\+\_\+\+CMD\+\_\+\+EVT\+\_\+\+RSP\+\_\+\+ID}
+, {\bfseries CFG\+\_\+\+IDLEEVT\+\_\+\+SYSTEM\+\_\+\+HCI\+\_\+\+CMD\+\_\+\+EVT\+\_\+\+RSP\+\_\+\+ID}
+ \}
+\item 
+enum \doxymbox{\hyperlink{app__conf_8h_afd9ad46737b8eea19a26faae59cdab6e}{CFG\+\_\+\+LPM\+\_\+\+Id\+\_\+t}} \{ {\bfseries CFG\+\_\+\+LPM\+\_\+\+APP}
+, {\bfseries CFG\+\_\+\+LPM\+\_\+\+APP\+\_\+\+BLE}
+ \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Application configuration file for STM32\+WPAN Middleware. 
+
+\begin{DoxyAuthor}{Author}
+MCD Application Team 
+\end{DoxyAuthor}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+Copyright (c) 2025 STMicroelectronics. All rights reserved.
+
+This software is licensed under terms that can be found in the LICENSE file in the root directory of this software component. If no LICENSE file comes with this software, it is provided AS-\/\+IS. 
+
+\label{doc-define-members}
+\Hypertarget{app__conf_8h_doc-define-members}
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{app__conf_8h_a4616409f327e9fa4a7b9650a28b1a2f7}\index{app\_conf.h@{app\_conf.h}!ALL\_PHYS\_PREFERENCE@{ALL\_PHYS\_PREFERENCE}}
+\index{ALL\_PHYS\_PREFERENCE@{ALL\_PHYS\_PREFERENCE}!app\_conf.h@{app\_conf.h}}
+\doxysubsubsection{\texorpdfstring{ALL\_PHYS\_PREFERENCE}{ALL\_PHYS\_PREFERENCE}}
+{\footnotesize\ttfamily \label{app__conf_8h_a4616409f327e9fa4a7b9650a28b1a2f7} 
+\+\#define ALL\+\_\+\+PHYS\+\_\+\+PREFERENCE~0x00}
+
+Define PHY \Hypertarget{app__conf_8h_abf3b052a0ad4ba695a386368310087ab}\index{app\_conf.h@{app\_conf.h}!CFG\_ADV\_BD\_ADDRESS@{CFG\_ADV\_BD\_ADDRESS}}
+\index{CFG\_ADV\_BD\_ADDRESS@{CFG\_ADV\_BD\_ADDRESS}!app\_conf.h@{app\_conf.h}}
+\doxysubsubsection{\texorpdfstring{CFG\_ADV\_BD\_ADDRESS}{CFG\_ADV\_BD\_ADDRESS}}
+{\footnotesize\ttfamily \label{app__conf_8h_abf3b052a0ad4ba695a386368310087ab} 
+\+\#define CFG\+\_\+\+ADV\+\_\+\+BD\+\_\+\+ADDRESS~(0x11aabbccddee)}
+
+Define Advertising parameters \Hypertarget{app__conf_8h_adf53dcaed3668e4a7939ee025a1b5fb7}\index{app\_conf.h@{app\_conf.h}!CFG\_BLE\_ADDRESS\_TYPE@{CFG\_BLE\_ADDRESS\_TYPE}}
+\index{CFG\_BLE\_ADDRESS\_TYPE@{CFG\_BLE\_ADDRESS\_TYPE}!app\_conf.h@{app\_conf.h}}
+\doxysubsubsection{\texorpdfstring{CFG\_BLE\_ADDRESS\_TYPE}{CFG\_BLE\_ADDRESS\_TYPE}}
+{\footnotesize\ttfamily \label{app__conf_8h_adf53dcaed3668e4a7939ee025a1b5fb7} 
+\+\#define CFG\+\_\+\+BLE\+\_\+\+ADDRESS\+\_\+\+TYPE~GAP\+\_\+\+PUBLIC\+\_\+\+ADDR}
+
+Define BLE Address Type Bluetooth address types defined in ble\+\_\+legacy.\+h if CFG\+\_\+\+PRIVACY equals PRIVACY\+\_\+\+DISABLED, CFG\+\_\+\+BLE\+\_\+\+ADDRESS\+\_\+\+TYPE has 2 allowed values:\+ GAP\+\_\+\+PUBLIC\+\_\+\+ADDR or GAP\+\_\+\+STATIC\+\_\+\+RANDOM\+\_\+\+ADDR if CFG\+\_\+\+PRIVACY equals PRIVACY\+\_\+\+ENABLED, CFG\+\_\+\+BLE\+\_\+\+ADDRESS\+\_\+\+TYPE has 2 allowed values:\+ GAP\+\_\+\+RESOLVABLE\+\_\+\+PRIVATE\+\_\+\+ADDR or GAP\+\_\+\+NON\+\_\+\+RESOLVABLE\+\_\+\+PRIVATE\+\_\+\+ADDR \Hypertarget{app__conf_8h_af02e6e474b7b73496579a416cc27127a}\index{app\_conf.h@{app\_conf.h}!CFG\_BLE\_ATT\_VALUE\_ARRAY\_SIZE@{CFG\_BLE\_ATT\_VALUE\_ARRAY\_SIZE}}
+\index{CFG\_BLE\_ATT\_VALUE\_ARRAY\_SIZE@{CFG\_BLE\_ATT\_VALUE\_ARRAY\_SIZE}!app\_conf.h@{app\_conf.h}}
+\doxysubsubsection{\texorpdfstring{CFG\_BLE\_ATT\_VALUE\_ARRAY\_SIZE}{CFG\_BLE\_ATT\_VALUE\_ARRAY\_SIZE}}
+{\footnotesize\ttfamily \label{app__conf_8h_af02e6e474b7b73496579a416cc27127a} 
+\+\#define CFG\+\_\+\+BLE\+\_\+\+ATT\+\_\+\+VALUE\+\_\+\+ARRAY\+\_\+\+SIZE~(1290)}
+
+Size of the storage area for Attribute values This value depends on the number of attributes used by application. In particular the sum of the following quantities (in octets) should be made for each attribute:\+
+\begin{DoxyItemize}
+\item attribute value length
+\item 5, if UUID is 16 bit; 19, if UUID is 128 bit
+\item 2, if server configuration descriptor is used
+\item 2\texorpdfstring{$\ast$}{*}\+DTM\+\_\+\+NUM\+\_\+\+LINK, if client configuration descriptor is used
+\item 2, if extended properties is used The total amount of memory needed is the sum of the above quantities for each attribute. This parameter is ignored by the CPU2 when CFG\+\_\+\+BLE\+\_\+\+OPTIONS has SHCI\+\_\+\+C2\+\_\+\+BLE\+\_\+\+INIT\+\_\+\+OPTIONS\+\_\+\+LL\+\_\+\+ONLY flag set 
+\end{DoxyItemize}\Hypertarget{app__conf_8h_a7f4c1c1f7ef39646d7d64201e8223d18}\index{app\_conf.h@{app\_conf.h}!CFG\_BLE\_CENTRAL\_SCA@{CFG\_BLE\_CENTRAL\_SCA}}
+\index{CFG\_BLE\_CENTRAL\_SCA@{CFG\_BLE\_CENTRAL\_SCA}!app\_conf.h@{app\_conf.h}}
+\doxysubsubsection{\texorpdfstring{CFG\_BLE\_CENTRAL\_SCA}{CFG\_BLE\_CENTRAL\_SCA}}
+{\footnotesize\ttfamily \label{app__conf_8h_a7f4c1c1f7ef39646d7d64201e8223d18} 
+\+\#define CFG\+\_\+\+BLE\+\_\+\+CENTRAL\+\_\+\+SCA~0}
+
+Sleep clock accuracy in Central mode 0 :\+ 251 ppm to 500 ppm 1 :\+ 151 ppm to 250 ppm 2 :\+ 101 ppm to 150 ppm 3 :\+ 76 ppm to 100 ppm 4 :\+ 51 ppm to 75 ppm 5 :\+ 31 ppm to 50 ppm 6 :\+ 21 ppm to 30 ppm 7 :\+ 0 ppm to 20 ppm \Hypertarget{app__conf_8h_a00e787755bc10600af13227fcaadabef}\index{app\_conf.h@{app\_conf.h}!CFG\_BLE\_DATA\_LENGTH\_EXTENSION@{CFG\_BLE\_DATA\_LENGTH\_EXTENSION}}
+\index{CFG\_BLE\_DATA\_LENGTH\_EXTENSION@{CFG\_BLE\_DATA\_LENGTH\_EXTENSION}!app\_conf.h@{app\_conf.h}}
+\doxysubsubsection{\texorpdfstring{CFG\_BLE\_DATA\_LENGTH\_EXTENSION}{CFG\_BLE\_DATA\_LENGTH\_EXTENSION}}
+{\footnotesize\ttfamily \label{app__conf_8h_a00e787755bc10600af13227fcaadabef} 
+\+\#define CFG\+\_\+\+BLE\+\_\+\+DATA\+\_\+\+LENGTH\+\_\+\+EXTENSION~1}
+
+Enable or disable the Extended Packet length feature. Valid values are 0 or 1. \Hypertarget{app__conf_8h_ad36a5889c398a1880c8ea341bfe5b606}\index{app\_conf.h@{app\_conf.h}!CFG\_BLE\_ER@{CFG\_BLE\_ER}}
+\index{CFG\_BLE\_ER@{CFG\_BLE\_ER}!app\_conf.h@{app\_conf.h}}
+\doxysubsubsection{\texorpdfstring{CFG\_BLE\_ER}{CFG\_BLE\_ER}}
+{\footnotesize\ttfamily \label{app__conf_8h_ad36a5889c398a1880c8ea341bfe5b606} 
+\+\#define CFG\+\_\+\+BLE\+\_\+\+ER~\{0x\+FE, 0x\+DC, 0x\+BA, 0x09, 0x87, 0x65, 0x43, 0x21, 0x\+FE, 0x\+DC, 0x\+BA, 0x09, 0x87, 0x65, 0x43, 0x21\}}
+
+Encryption root key used to derive LTK(\+Legacy) and CSRK \Hypertarget{app__conf_8h_a6ae86cdec1dab70a1e58c2438c741571}\index{app\_conf.h@{app\_conf.h}!CFG\_BLE\_HSE\_STARTUP\_TIME@{CFG\_BLE\_HSE\_STARTUP\_TIME}}
+\index{CFG\_BLE\_HSE\_STARTUP\_TIME@{CFG\_BLE\_HSE\_STARTUP\_TIME}!app\_conf.h@{app\_conf.h}}
+\doxysubsubsection{\texorpdfstring{CFG\_BLE\_HSE\_STARTUP\_TIME}{CFG\_BLE\_HSE\_STARTUP\_TIME}}
+{\footnotesize\ttfamily \label{app__conf_8h_a6ae86cdec1dab70a1e58c2438c741571} 
+\+\#define CFG\+\_\+\+BLE\+\_\+\+HSE\+\_\+\+STARTUP\+\_\+\+TIME~0x148}
+
+Start up time of the high speed (16 or 32 MHz) crystal oscillator in units of 625/\+256 us (\texorpdfstring{$\sim$}{\string~}2.44 us) \Hypertarget{app__conf_8h_aa47415e659db3370b2a3265207573c18}\index{app\_conf.h@{app\_conf.h}!CFG\_BLE\_IR@{CFG\_BLE\_IR}}
+\index{CFG\_BLE\_IR@{CFG\_BLE\_IR}!app\_conf.h@{app\_conf.h}}
+\doxysubsubsection{\texorpdfstring{CFG\_BLE\_IR}{CFG\_BLE\_IR}}
+{\footnotesize\ttfamily \label{app__conf_8h_aa47415e659db3370b2a3265207573c18} 
+\+\#define CFG\+\_\+\+BLE\+\_\+\+IR~\{0x12, 0x34, 0x56, 0x78, 0x9A, 0x\+BC, 0x\+DE, 0x\+F0, 0x12, 0x34, 0x56, 0x78, 0x9A, 0x\+BC, 0x\+DE, 0x\+F0\}}
+
+Identity root key used to derive IRK and DHK(\+Legacy) \Hypertarget{app__conf_8h_aef8b5b996a9b3acfbaaf2620933c51da}\index{app\_conf.h@{app\_conf.h}!CFG\_BLE\_LS\_SOURCE@{CFG\_BLE\_LS\_SOURCE}}
+\index{CFG\_BLE\_LS\_SOURCE@{CFG\_BLE\_LS\_SOURCE}!app\_conf.h@{app\_conf.h}}
+\doxysubsubsection{\texorpdfstring{CFG\_BLE\_LS\_SOURCE}{CFG\_BLE\_LS\_SOURCE}}
+{\footnotesize\ttfamily \label{app__conf_8h_aef8b5b996a9b3acfbaaf2620933c51da} 
+\+\#define CFG\+\_\+\+BLE\+\_\+\+LS\+\_\+\+SOURCE~(SHCI\+\_\+\+C2\+\_\+\+BLE\+\_\+\+INIT\+\_\+\+CFG\+\_\+\+BLE\+\_\+\+LS\+\_\+\+CALIB \texorpdfstring{$\vert$}{|} SHCI\+\_\+\+C2\+\_\+\+BLE\+\_\+\+INIT\+\_\+\+CFG\+\_\+\+BLE\+\_\+\+LS\+\_\+\+OTHER\+\_\+\+DEV \texorpdfstring{$\vert$}{|} SHCI\+\_\+\+C2\+\_\+\+BLE\+\_\+\+INIT\+\_\+\+CFG\+\_\+\+BLE\+\_\+\+LS\+\_\+\+CLK\+\_\+\+LSE)}
+
+Ls\+Source Some information for Low speed clock mapped in bits field
+\begin{DoxyItemize}
+\item bit 0:\+ 1:\+ Calibration for the RF system wakeup clock source 0:\+ No calibration for the RF system wakeup clock source
+\item bit 1:\+ 1:\+ STM32\+WB5M Module device 0:\+ Other devices as STM32\+WBxx SOC, STM32\+WB1M module
+\item bit 2:\+ 1:\+ HSE/\+1024 Clock config 0:\+ LSE Clock config Note:\+ Enable Calibration when LSI selected as RF system wakeup clock and "{}bit 2"{} is meaningless with LSI 
+\end{DoxyItemize}\Hypertarget{app__conf_8h_ad766e2368759def4db6ff465188bb1ac}\index{app\_conf.h@{app\_conf.h}!CFG\_BLE\_MAX\_ADD\_EATT\_BEARERS@{CFG\_BLE\_MAX\_ADD\_EATT\_BEARERS}}
+\index{CFG\_BLE\_MAX\_ADD\_EATT\_BEARERS@{CFG\_BLE\_MAX\_ADD\_EATT\_BEARERS}!app\_conf.h@{app\_conf.h}}
+\doxysubsubsection{\texorpdfstring{CFG\_BLE\_MAX\_ADD\_EATT\_BEARERS}{CFG\_BLE\_MAX\_ADD\_EATT\_BEARERS}}
+{\footnotesize\ttfamily \label{app__conf_8h_ad766e2368759def4db6ff465188bb1ac} 
+\+\#define CFG\+\_\+\+BLE\+\_\+\+MAX\+\_\+\+ADD\+\_\+\+EATT\+\_\+\+BEARERS~(4)}
+
+BLE stack Maximum number of created Enhanced ATT bearers to be configured in addition to the number of links
+\begin{DoxyItemize}
+\item Range:\+ 0 .. 4 
+\end{DoxyItemize}\Hypertarget{app__conf_8h_a2f9a260234ebc5f95c2cdea4a09ead6c}\index{app\_conf.h@{app\_conf.h}!CFG\_BLE\_MAX\_ATT\_MTU@{CFG\_BLE\_MAX\_ATT\_MTU}}
+\index{CFG\_BLE\_MAX\_ATT\_MTU@{CFG\_BLE\_MAX\_ATT\_MTU}!app\_conf.h@{app\_conf.h}}
+\doxysubsubsection{\texorpdfstring{CFG\_BLE\_MAX\_ATT\_MTU}{CFG\_BLE\_MAX\_ATT\_MTU}}
+{\footnotesize\ttfamily \label{app__conf_8h_a2f9a260234ebc5f95c2cdea4a09ead6c} 
+\+\#define CFG\+\_\+\+BLE\+\_\+\+MAX\+\_\+\+ATT\+\_\+\+MTU~(156)}
+
+Maximum supported ATT\+\_\+\+MTU size This parameter is ignored by the CPU2 when CFG\+\_\+\+BLE\+\_\+\+OPTIONS has SHCI\+\_\+\+C2\+\_\+\+BLE\+\_\+\+INIT\+\_\+\+OPTIONS\+\_\+\+LL\+\_\+\+ONLY flag set \Hypertarget{app__conf_8h_ac7c727608cad31937192a61a8a2ddab4}\index{app\_conf.h@{app\_conf.h}!CFG\_BLE\_MAX\_CONN\_EVENT\_LENGTH@{CFG\_BLE\_MAX\_CONN\_EVENT\_LENGTH}}
+\index{CFG\_BLE\_MAX\_CONN\_EVENT\_LENGTH@{CFG\_BLE\_MAX\_CONN\_EVENT\_LENGTH}!app\_conf.h@{app\_conf.h}}
+\doxysubsubsection{\texorpdfstring{CFG\_BLE\_MAX\_CONN\_EVENT\_LENGTH}{CFG\_BLE\_MAX\_CONN\_EVENT\_LENGTH}}
+{\footnotesize\ttfamily \label{app__conf_8h_ac7c727608cad31937192a61a8a2ddab4} 
+\+\#define CFG\+\_\+\+BLE\+\_\+\+MAX\+\_\+\+CONN\+\_\+\+EVENT\+\_\+\+LENGTH~(0x\+FFFFFFFF)}
+
+Maximum duration of the connection event when the device is in Peripheral mode in units of 625/\+256 us (\texorpdfstring{$\sim$}{\string~}2.44 us) \Hypertarget{app__conf_8h_a9b2acb95577df705aa678fbc6fbf5628}\index{app\_conf.h@{app\_conf.h}!CFG\_BLE\_MBLOCK\_COUNT@{CFG\_BLE\_MBLOCK\_COUNT}}
+\index{CFG\_BLE\_MBLOCK\_COUNT@{CFG\_BLE\_MBLOCK\_COUNT}!app\_conf.h@{app\_conf.h}}
+\doxysubsubsection{\texorpdfstring{CFG\_BLE\_MBLOCK\_COUNT}{CFG\_BLE\_MBLOCK\_COUNT}}
+{\footnotesize\ttfamily \label{app__conf_8h_a9b2acb95577df705aa678fbc6fbf5628} 
+\+\#define CFG\+\_\+\+BLE\+\_\+\+MBLOCK\+\_\+\+COUNT~(BLE\+\_\+\+MBLOCKS\+\_\+\+CALC(\doxymbox{\hyperlink{app__conf_8h_a00a3f3e7f9b7a6e1406b34c89da5fcb6}{CFG\+\_\+\+BLE\+\_\+\+PREPARE\+\_\+\+WRITE\+\_\+\+LIST\+\_\+\+SIZE}}, \doxymbox{\hyperlink{app__conf_8h_a2f9a260234ebc5f95c2cdea4a09ead6c}{CFG\+\_\+\+BLE\+\_\+\+MAX\+\_\+\+ATT\+\_\+\+MTU}}, \doxymbox{\hyperlink{app__conf_8h_a228b02b463c4431e4968ac531864839a}{CFG\+\_\+\+BLE\+\_\+\+NUM\+\_\+\+LINK}}))}
+
+Number of allocated memory blocks This parameter is overwritten by the CPU2 with an hardcoded optimal value when the parameter CFG\+\_\+\+BLE\+\_\+\+OPTIONS has SHCI\+\_\+\+C2\+\_\+\+BLE\+\_\+\+INIT\+\_\+\+OPTIONS\+\_\+\+LL\+\_\+\+ONLY flag set \Hypertarget{app__conf_8h_acbf1d7b4c629c1b759e5c857b9f251f0}\index{app\_conf.h@{app\_conf.h}!CFG\_BLE\_NUM\_GATT\_ATTRIBUTES@{CFG\_BLE\_NUM\_GATT\_ATTRIBUTES}}
+\index{CFG\_BLE\_NUM\_GATT\_ATTRIBUTES@{CFG\_BLE\_NUM\_GATT\_ATTRIBUTES}!app\_conf.h@{app\_conf.h}}
+\doxysubsubsection{\texorpdfstring{CFG\_BLE\_NUM\_GATT\_ATTRIBUTES}{CFG\_BLE\_NUM\_GATT\_ATTRIBUTES}}
+{\footnotesize\ttfamily \label{app__conf_8h_acbf1d7b4c629c1b759e5c857b9f251f0} 
+\+\#define CFG\+\_\+\+BLE\+\_\+\+NUM\+\_\+\+GATT\+\_\+\+ATTRIBUTES~30}
+
+Maximum number of Attributes (i.\+e. the number of characteristic + the number of characteristic values + the number of descriptors, excluding the services) that can be stored in the GATT database. Note that certain characteristics and relative descriptors are added automatically during device initialization so this parameters should be 9 plus the number of user Attributes \Hypertarget{app__conf_8h_a90bf8d853b18b376a12686672947293c}\index{app\_conf.h@{app\_conf.h}!CFG\_BLE\_NUM\_GATT\_SERVICES@{CFG\_BLE\_NUM\_GATT\_SERVICES}}
+\index{CFG\_BLE\_NUM\_GATT\_SERVICES@{CFG\_BLE\_NUM\_GATT\_SERVICES}!app\_conf.h@{app\_conf.h}}
+\doxysubsubsection{\texorpdfstring{CFG\_BLE\_NUM\_GATT\_SERVICES}{CFG\_BLE\_NUM\_GATT\_SERVICES}}
+{\footnotesize\ttfamily \label{app__conf_8h_a90bf8d853b18b376a12686672947293c} 
+\+\#define CFG\+\_\+\+BLE\+\_\+\+NUM\+\_\+\+GATT\+\_\+\+SERVICES~4}
+
+Maximum number of Services that can be stored in the GATT database. Note that the GAP and GATT services are automatically added so this parameter should be 2 plus the number of user services \Hypertarget{app__conf_8h_a228b02b463c4431e4968ac531864839a}\index{app\_conf.h@{app\_conf.h}!CFG\_BLE\_NUM\_LINK@{CFG\_BLE\_NUM\_LINK}}
+\index{CFG\_BLE\_NUM\_LINK@{CFG\_BLE\_NUM\_LINK}!app\_conf.h@{app\_conf.h}}
+\doxysubsubsection{\texorpdfstring{CFG\_BLE\_NUM\_LINK}{CFG\_BLE\_NUM\_LINK}}
+{\footnotesize\ttfamily \label{app__conf_8h_a228b02b463c4431e4968ac531864839a} 
+\+\#define CFG\+\_\+\+BLE\+\_\+\+NUM\+\_\+\+LINK~2}
+
+Maximum number of simultaneous connections that the device will support. Valid values are from 1 to 8 \Hypertarget{app__conf_8h_a83939187dc74aa874452656a5dad2f89}\index{app\_conf.h@{app\_conf.h}!CFG\_BLE\_OPTIONS@{CFG\_BLE\_OPTIONS}}
+\index{CFG\_BLE\_OPTIONS@{CFG\_BLE\_OPTIONS}!app\_conf.h@{app\_conf.h}}
+\doxysubsubsection{\texorpdfstring{CFG\_BLE\_OPTIONS}{CFG\_BLE\_OPTIONS}}
+{\footnotesize\ttfamily \label{app__conf_8h_a83939187dc74aa874452656a5dad2f89} 
+\+\#define CFG\+\_\+\+BLE\+\_\+\+OPTIONS~(SHCI\+\_\+\+C2\+\_\+\+BLE\+\_\+\+INIT\+\_\+\+OPTIONS\+\_\+\+LL\+\_\+\+HOST \texorpdfstring{$\vert$}{|} SHCI\+\_\+\+C2\+\_\+\+BLE\+\_\+\+INIT\+\_\+\+OPTIONS\+\_\+\+WITH\+\_\+\+SVC\+\_\+\+CHANGE\+\_\+\+DESC \texorpdfstring{$\vert$}{|} SHCI\+\_\+\+C2\+\_\+\+BLE\+\_\+\+INIT\+\_\+\+OPTIONS\+\_\+\+DEVICE\+\_\+\+NAME\+\_\+\+RW \texorpdfstring{$\vert$}{|} SHCI\+\_\+\+C2\+\_\+\+BLE\+\_\+\+INIT\+\_\+\+OPTIONS\+\_\+\+NO\+\_\+\+EXT\+\_\+\+ADV \texorpdfstring{$\vert$}{|} SHCI\+\_\+\+C2\+\_\+\+BLE\+\_\+\+INIT\+\_\+\+OPTIONS\+\_\+\+NO\+\_\+\+CS\+\_\+\+ALGO2 \texorpdfstring{$\vert$}{|} SHCI\+\_\+\+C2\+\_\+\+BLE\+\_\+\+INIT\+\_\+\+OPTIONS\+\_\+\+FULL\+\_\+\+GATTDB\+\_\+\+NVM \texorpdfstring{$\vert$}{|} SHCI\+\_\+\+C2\+\_\+\+BLE\+\_\+\+INIT\+\_\+\+OPTIONS\+\_\+\+GATT\+\_\+\+CACHING\+\_\+\+NOTUSED \texorpdfstring{$\vert$}{|} SHCI\+\_\+\+C2\+\_\+\+BLE\+\_\+\+INIT\+\_\+\+OPTIONS\+\_\+\+POWER\+\_\+\+CLASS\+\_\+2\+\_\+3)}
+
+BLE stack Options flags to be configured with:\+
+\begin{DoxyItemize}
+\item SHCI\+\_\+\+C2\+\_\+\+BLE\+\_\+\+INIT\+\_\+\+OPTIONS\+\_\+\+LL\+\_\+\+ONLY
+\item SHCI\+\_\+\+C2\+\_\+\+BLE\+\_\+\+INIT\+\_\+\+OPTIONS\+\_\+\+LL\+\_\+\+HOST
+\item SHCI\+\_\+\+C2\+\_\+\+BLE\+\_\+\+INIT\+\_\+\+OPTIONS\+\_\+\+NO\+\_\+\+SVC\+\_\+\+CHANGE\+\_\+\+DESC
+\item SHCI\+\_\+\+C2\+\_\+\+BLE\+\_\+\+INIT\+\_\+\+OPTIONS\+\_\+\+WITH\+\_\+\+SVC\+\_\+\+CHANGE\+\_\+\+DESC
+\item SHCI\+\_\+\+C2\+\_\+\+BLE\+\_\+\+INIT\+\_\+\+OPTIONS\+\_\+\+DEVICE\+\_\+\+NAME\+\_\+\+RO
+\item SHCI\+\_\+\+C2\+\_\+\+BLE\+\_\+\+INIT\+\_\+\+OPTIONS\+\_\+\+DEVICE\+\_\+\+NAME\+\_\+\+RW
+\item SHCI\+\_\+\+C2\+\_\+\+BLE\+\_\+\+INIT\+\_\+\+OPTIONS\+\_\+\+EXT\+\_\+\+ADV
+\item SHCI\+\_\+\+C2\+\_\+\+BLE\+\_\+\+INIT\+\_\+\+OPTIONS\+\_\+\+NO\+\_\+\+EXT\+\_\+\+ADV
+\item SHCI\+\_\+\+C2\+\_\+\+BLE\+\_\+\+INIT\+\_\+\+OPTIONS\+\_\+\+CS\+\_\+\+ALGO2
+\item SHCI\+\_\+\+C2\+\_\+\+BLE\+\_\+\+INIT\+\_\+\+OPTIONS\+\_\+\+NO\+\_\+\+CS\+\_\+\+ALGO2
+\item SHCI\+\_\+\+C2\+\_\+\+BLE\+\_\+\+INIT\+\_\+\+OPTIONS\+\_\+\+REDUC\+\_\+\+GATTDB\+\_\+\+NVM
+\item SHCI\+\_\+\+C2\+\_\+\+BLE\+\_\+\+INIT\+\_\+\+OPTIONS\+\_\+\+FULL\+\_\+\+GATTDB\+\_\+\+NVM
+\item SHCI\+\_\+\+C2\+\_\+\+BLE\+\_\+\+INIT\+\_\+\+OPTIONS\+\_\+\+GATT\+\_\+\+CACHING\+\_\+\+USED
+\item SHCI\+\_\+\+C2\+\_\+\+BLE\+\_\+\+INIT\+\_\+\+OPTIONS\+\_\+\+GATT\+\_\+\+CACHING\+\_\+\+NOTUSED
+\item SHCI\+\_\+\+C2\+\_\+\+BLE\+\_\+\+INIT\+\_\+\+OPTIONS\+\_\+\+POWER\+\_\+\+CLASS\+\_\+1
+\item SHCI\+\_\+\+C2\+\_\+\+BLE\+\_\+\+INIT\+\_\+\+OPTIONS\+\_\+\+POWER\+\_\+\+CLASS\+\_\+2\+\_\+3 which are used to set following configuration bits:\+ (bit 0):\+ 1:\+ LL only 0:\+ LL + host (bit 1):\+ 1:\+ no service change desc. 0:\+ with service change desc. (bit 2):\+ 1:\+ device name Read-\/\+Only 0:\+ device name R/\+W (bit 3):\+ 1:\+ extended advertizing supported 0:\+ extended advertizing not supported (bit 4):\+ 1:\+ CS Algo \#2 supported 0:\+ CS Algo \#2 not supported (bit 5):\+ 1:\+ Reduced GATT database in NVM 0:\+ Full GATT database in NVM (bit 6):\+ 1:\+ GATT caching is used 0:\+ GATT caching is not used (bit 7):\+ 1:\+ LE Power Class 1 0:\+ LE Power Class 2-\/3 other bits:\+ complete with Options\+\_\+extension flag 
+\end{DoxyItemize}\Hypertarget{app__conf_8h_a24dd022eb62f00651ef1137796a334cb}\index{app\_conf.h@{app\_conf.h}!CFG\_BLE\_OPTIONS\_EXT@{CFG\_BLE\_OPTIONS\_EXT}}
+\index{CFG\_BLE\_OPTIONS\_EXT@{CFG\_BLE\_OPTIONS\_EXT}!app\_conf.h@{app\_conf.h}}
+\doxysubsubsection{\texorpdfstring{CFG\_BLE\_OPTIONS\_EXT}{CFG\_BLE\_OPTIONS\_EXT}}
+{\footnotesize\ttfamily \label{app__conf_8h_a24dd022eb62f00651ef1137796a334cb} 
+\+\#define CFG\+\_\+\+BLE\+\_\+\+OPTIONS\+\_\+\+EXT~(SHCI\+\_\+\+C2\+\_\+\+BLE\+\_\+\+INIT\+\_\+\+OPTIONS\+\_\+\+APPEARANCE\+\_\+\+READONLY \texorpdfstring{$\vert$}{|} SHCI\+\_\+\+C2\+\_\+\+BLE\+\_\+\+INIT\+\_\+\+OPTIONS\+\_\+\+ENHANCED\+\_\+\+ATT\+\_\+\+NOTSUPPORTED)}
+
+BLE stack Options\+\_\+extension flags to be configured with:\+
+\begin{DoxyItemize}
+\item SHCI\+\_\+\+C2\+\_\+\+BLE\+\_\+\+INIT\+\_\+\+OPTIONS\+\_\+\+APPEARANCE\+\_\+\+WRITABLE
+\item SHCI\+\_\+\+C2\+\_\+\+BLE\+\_\+\+INIT\+\_\+\+OPTIONS\+\_\+\+APPEARANCE\+\_\+\+READONLY
+\item SHCI\+\_\+\+C2\+\_\+\+BLE\+\_\+\+INIT\+\_\+\+OPTIONS\+\_\+\+ENHANCED\+\_\+\+ATT\+\_\+\+SUPPORTED
+\item SHCI\+\_\+\+C2\+\_\+\+BLE\+\_\+\+INIT\+\_\+\+OPTIONS\+\_\+\+ENHANCED\+\_\+\+ATT\+\_\+\+NOTSUPPORTED which are used to set following configuration bits:\+ (bit 0):\+ 1:\+ appearance Writable 0:\+ appearance Read-\/\+Only (bit 1):\+ 1:\+ Enhanced ATT supported 0:\+ Enhanced ATT not supported other bits:\+ reserved (shall be set to 0) 
+\end{DoxyItemize}\Hypertarget{app__conf_8h_a212526347d453560efa2c63768287270}\index{app\_conf.h@{app\_conf.h}!CFG\_BLE\_PERIPHERAL\_SCA@{CFG\_BLE\_PERIPHERAL\_SCA}}
+\index{CFG\_BLE\_PERIPHERAL\_SCA@{CFG\_BLE\_PERIPHERAL\_SCA}!app\_conf.h@{app\_conf.h}}
+\doxysubsubsection{\texorpdfstring{CFG\_BLE\_PERIPHERAL\_SCA}{CFG\_BLE\_PERIPHERAL\_SCA}}
+{\footnotesize\ttfamily \label{app__conf_8h_a212526347d453560efa2c63768287270} 
+\+\#define CFG\+\_\+\+BLE\+\_\+\+PERIPHERAL\+\_\+\+SCA~500}
+
+Sleep clock accuracy in Peripheral mode (ppm value) \Hypertarget{app__conf_8h_a00a3f3e7f9b7a6e1406b34c89da5fcb6}\index{app\_conf.h@{app\_conf.h}!CFG\_BLE\_PREPARE\_WRITE\_LIST\_SIZE@{CFG\_BLE\_PREPARE\_WRITE\_LIST\_SIZE}}
+\index{CFG\_BLE\_PREPARE\_WRITE\_LIST\_SIZE@{CFG\_BLE\_PREPARE\_WRITE\_LIST\_SIZE}!app\_conf.h@{app\_conf.h}}
+\doxysubsubsection{\texorpdfstring{CFG\_BLE\_PREPARE\_WRITE\_LIST\_SIZE}{CFG\_BLE\_PREPARE\_WRITE\_LIST\_SIZE}}
+{\footnotesize\ttfamily \label{app__conf_8h_a00a3f3e7f9b7a6e1406b34c89da5fcb6} 
+\+\#define CFG\+\_\+\+BLE\+\_\+\+PREPARE\+\_\+\+WRITE\+\_\+\+LIST\+\_\+\+SIZE~BLE\+\_\+\+PREP\+\_\+\+WRITE\+\_\+\+X\+\_\+\+ATT(\doxymbox{\hyperlink{app__conf_8h_a2f9a260234ebc5f95c2cdea4a09ead6c}{CFG\+\_\+\+BLE\+\_\+\+MAX\+\_\+\+ATT\+\_\+\+MTU}})}
+
+Prepare Write List size in terms of number of packet This parameter is ignored by the CPU2 when CFG\+\_\+\+BLE\+\_\+\+OPTIONS has SHCI\+\_\+\+C2\+\_\+\+BLE\+\_\+\+INIT\+\_\+\+OPTIONS\+\_\+\+LL\+\_\+\+ONLY flag set \Hypertarget{app__conf_8h_a897d78b8764da8b7c77bbc81014860cf}\index{app\_conf.h@{app\_conf.h}!CFG\_BLE\_RX\_MODEL\_CONFIG@{CFG\_BLE\_RX\_MODEL\_CONFIG}}
+\index{CFG\_BLE\_RX\_MODEL\_CONFIG@{CFG\_BLE\_RX\_MODEL\_CONFIG}!app\_conf.h@{app\_conf.h}}
+\doxysubsubsection{\texorpdfstring{CFG\_BLE\_RX\_MODEL\_CONFIG}{CFG\_BLE\_RX\_MODEL\_CONFIG}}
+{\footnotesize\ttfamily \label{app__conf_8h_a897d78b8764da8b7c77bbc81014860cf} 
+\+\#define CFG\+\_\+\+BLE\+\_\+\+RX\+\_\+\+MODEL\+\_\+\+CONFIG~(SHCI\+\_\+\+C2\+\_\+\+BLE\+\_\+\+INIT\+\_\+\+RX\+\_\+\+MODEL\+\_\+\+AGC\+\_\+\+RSSI\+\_\+\+LEGACY)}
+
+BLE Rx model configuration flags to be configured with:\+
+\begin{DoxyItemize}
+\item SHCI\+\_\+\+C2\+\_\+\+BLE\+\_\+\+INIT\+\_\+\+RX\+\_\+\+MODEL\+\_\+\+AGC\+\_\+\+RSSI\+\_\+\+LEGACY
+\item SHCI\+\_\+\+C2\+\_\+\+BLE\+\_\+\+INIT\+\_\+\+RX\+\_\+\+MODEL\+\_\+\+AGC\+\_\+\+RSSI\+\_\+\+BLOCKER which are used to set following configuration bits:\+ (bit 0):\+ 1:\+ agc\+\_\+rssi model improved vs RF blockers 0:\+ Legacy agc\+\_\+rssi model other bits:\+ reserved (shall be set to 0) 
+\end{DoxyItemize}\Hypertarget{app__conf_8h_a4ec78d708c597f3efc3f333a3eba446d}\index{app\_conf.h@{app\_conf.h}!CFG\_BLE\_VITERBI\_MODE@{CFG\_BLE\_VITERBI\_MODE}}
+\index{CFG\_BLE\_VITERBI\_MODE@{CFG\_BLE\_VITERBI\_MODE}!app\_conf.h@{app\_conf.h}}
+\doxysubsubsection{\texorpdfstring{CFG\_BLE\_VITERBI\_MODE}{CFG\_BLE\_VITERBI\_MODE}}
+{\footnotesize\ttfamily \label{app__conf_8h_a4ec78d708c597f3efc3f333a3eba446d} 
+\+\#define CFG\+\_\+\+BLE\+\_\+\+VITERBI\+\_\+\+MODE~1}
+
+Viterbi Mode 1 :\+ enabled 0 :\+ disabled \Hypertarget{app__conf_8h_abce23ea06b2c6715f93a5b102c248122}\index{app\_conf.h@{app\_conf.h}!CFG\_BONDING\_MODE@{CFG\_BONDING\_MODE}}
+\index{CFG\_BONDING\_MODE@{CFG\_BONDING\_MODE}!app\_conf.h@{app\_conf.h}}
+\doxysubsubsection{\texorpdfstring{CFG\_BONDING\_MODE}{CFG\_BONDING\_MODE}}
+{\footnotesize\ttfamily \label{app__conf_8h_abce23ea06b2c6715f93a5b102c248122} 
+\+\#define CFG\+\_\+\+BONDING\+\_\+\+MODE~(0)}
+
+Define IO Authentication \Hypertarget{app__conf_8h_ada9b994724bfc406f4b3881e6a96da2d}\index{app\_conf.h@{app\_conf.h}!CFG\_DEBUG\_APP\_TRACE@{CFG\_DEBUG\_APP\_TRACE}}
+\index{CFG\_DEBUG\_APP\_TRACE@{CFG\_DEBUG\_APP\_TRACE}!app\_conf.h@{app\_conf.h}}
+\doxysubsubsection{\texorpdfstring{CFG\_DEBUG\_APP\_TRACE}{CFG\_DEBUG\_APP\_TRACE}}
+{\footnotesize\ttfamily \label{app__conf_8h_ada9b994724bfc406f4b3881e6a96da2d} 
+\+\#define CFG\+\_\+\+DEBUG\+\_\+\+APP\+\_\+\+TRACE~0}
+
+Enable or Disable traces in application \Hypertarget{app__conf_8h_aa7de434606bceebadc82a78ad56d67fc}\index{app\_conf.h@{app\_conf.h}!CFG\_DEBUG\_BLE\_TRACE@{CFG\_DEBUG\_BLE\_TRACE}}
+\index{CFG\_DEBUG\_BLE\_TRACE@{CFG\_DEBUG\_BLE\_TRACE}!app\_conf.h@{app\_conf.h}}
+\doxysubsubsection{\texorpdfstring{CFG\_DEBUG\_BLE\_TRACE}{CFG\_DEBUG\_BLE\_TRACE}}
+{\footnotesize\ttfamily \label{app__conf_8h_aa7de434606bceebadc82a78ad56d67fc} 
+\+\#define CFG\+\_\+\+DEBUG\+\_\+\+BLE\+\_\+\+TRACE~0}
+
+When set to 1, the traces are enabled in the BLE services \Hypertarget{app__conf_8h_a605ad4235f6829048eaf1342594b4733}\index{app\_conf.h@{app\_conf.h}!CFG\_DEBUG\_TRACE\_LIGHT@{CFG\_DEBUG\_TRACE\_LIGHT}}
+\index{CFG\_DEBUG\_TRACE\_LIGHT@{CFG\_DEBUG\_TRACE\_LIGHT}!app\_conf.h@{app\_conf.h}}
+\doxysubsubsection{\texorpdfstring{CFG\_DEBUG\_TRACE\_LIGHT}{CFG\_DEBUG\_TRACE\_LIGHT}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{app__conf_8h_a605ad4235f6829048eaf1342594b4733} 
+\+\#define CFG\+\_\+\+DEBUG\+\_\+\+TRACE\+\_\+\+LIGHT~0}
+
+When CFG\+\_\+\+DEBUG\+\_\+\+TRACE\+\_\+\+FULL is set to 1, the trace are output with the API name, the file name and the line number When CFG\+\_\+\+DEBUG\+\_\+\+TRACE\+\_\+\+LIGHT is set to 1, only the debug message is output
+
+When both are set to 0, no trace are output When both are set to 1, CFG\+\_\+\+DEBUG\+\_\+\+TRACE\+\_\+\+FULL is selected \Hypertarget{app__conf_8h_a81a22ab97ffe1348b57eda5eb3cec1e8}\index{app\_conf.h@{app\_conf.h}!CFG\_DEBUG\_TRACE\_LIGHT@{CFG\_DEBUG\_TRACE\_LIGHT}}
+\index{CFG\_DEBUG\_TRACE\_LIGHT@{CFG\_DEBUG\_TRACE\_LIGHT}!app\_conf.h@{app\_conf.h}}
+\doxysubsubsection{\texorpdfstring{CFG\_DEBUG\_TRACE\_LIGHT}{CFG\_DEBUG\_TRACE\_LIGHT}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{app__conf_8h_a81a22ab97ffe1348b57eda5eb3cec1e8} 
+\+\#define CFG\+\_\+\+DEBUG\+\_\+\+TRACE\+\_\+\+LIGHT~0}
+
+When CFG\+\_\+\+DEBUG\+\_\+\+TRACE\+\_\+\+FULL is set to 1, the trace are output with the API name, the file name and the line number When CFG\+\_\+\+DEBUG\+\_\+\+TRACE\+\_\+\+LIGHT is set to 1, only the debug message is output
+
+When both are set to 0, no trace are output When both are set to 1, CFG\+\_\+\+DEBUG\+\_\+\+TRACE\+\_\+\+FULL is selected \Hypertarget{app__conf_8h_a11c849ab8898b88263ff7f953d17124e}\index{app\_conf.h@{app\_conf.h}!CFG\_DEBUG\_TRACE\_UART@{CFG\_DEBUG\_TRACE\_UART}}
+\index{CFG\_DEBUG\_TRACE\_UART@{CFG\_DEBUG\_TRACE\_UART}!app\_conf.h@{app\_conf.h}}
+\doxysubsubsection{\texorpdfstring{CFG\_DEBUG\_TRACE\_UART}{CFG\_DEBUG\_TRACE\_UART}}
+{\footnotesize\ttfamily \label{app__conf_8h_a11c849ab8898b88263ff7f953d17124e} 
+\+\#define CFG\+\_\+\+DEBUG\+\_\+\+TRACE\+\_\+\+UART~0}
+
+Select UART interfaces \Hypertarget{app__conf_8h_a614c6eab72cd2ca80afc15c3992b003f}\index{app\_conf.h@{app\_conf.h}!CFG\_DEBUGGER\_SUPPORTED@{CFG\_DEBUGGER\_SUPPORTED}}
+\index{CFG\_DEBUGGER\_SUPPORTED@{CFG\_DEBUGGER\_SUPPORTED}!app\_conf.h@{app\_conf.h}}
+\doxysubsubsection{\texorpdfstring{CFG\_DEBUGGER\_SUPPORTED}{CFG\_DEBUGGER\_SUPPORTED}}
+{\footnotesize\ttfamily \label{app__conf_8h_a614c6eab72cd2ca80afc15c3992b003f} 
+\+\#define CFG\+\_\+\+DEBUGGER\+\_\+\+SUPPORTED~1}
+
+keep debugger enabled while in any low power mode when set to 1 should be set to 0 in production \Hypertarget{app__conf_8h_a4f040288d382970d27a475076baf4005}\index{app\_conf.h@{app\_conf.h}!CFG\_FAST\_CONN\_ADV\_INTERVAL\_MAX@{CFG\_FAST\_CONN\_ADV\_INTERVAL\_MAX}}
+\index{CFG\_FAST\_CONN\_ADV\_INTERVAL\_MAX@{CFG\_FAST\_CONN\_ADV\_INTERVAL\_MAX}!app\_conf.h@{app\_conf.h}}
+\doxysubsubsection{\texorpdfstring{CFG\_FAST\_CONN\_ADV\_INTERVAL\_MAX}{CFG\_FAST\_CONN\_ADV\_INTERVAL\_MAX}}
+{\footnotesize\ttfamily \label{app__conf_8h_a4f040288d382970d27a475076baf4005} 
+\+\#define CFG\+\_\+\+FAST\+\_\+\+CONN\+\_\+\+ADV\+\_\+\+INTERVAL\+\_\+\+MAX~(0x00\+A0)}
+
+100ms \Hypertarget{app__conf_8h_a9b9012d7591384f67782c922f39c617b}\index{app\_conf.h@{app\_conf.h}!CFG\_FAST\_CONN\_ADV\_INTERVAL\_MIN@{CFG\_FAST\_CONN\_ADV\_INTERVAL\_MIN}}
+\index{CFG\_FAST\_CONN\_ADV\_INTERVAL\_MIN@{CFG\_FAST\_CONN\_ADV\_INTERVAL\_MIN}!app\_conf.h@{app\_conf.h}}
+\doxysubsubsection{\texorpdfstring{CFG\_FAST\_CONN\_ADV\_INTERVAL\_MIN}{CFG\_FAST\_CONN\_ADV\_INTERVAL\_MIN}}
+{\footnotesize\ttfamily \label{app__conf_8h_a9b9012d7591384f67782c922f39c617b} 
+\+\#define CFG\+\_\+\+FAST\+\_\+\+CONN\+\_\+\+ADV\+\_\+\+INTERVAL\+\_\+\+MIN~(0x0080)}
+
+80ms \Hypertarget{app__conf_8h_a29d33eb2cd6c19cec591e44118cd04b2}\index{app\_conf.h@{app\_conf.h}!CFG\_FEATURE\_THREAD\_SWITCH@{CFG\_FEATURE\_THREAD\_SWITCH}}
+\index{CFG\_FEATURE\_THREAD\_SWITCH@{CFG\_FEATURE\_THREAD\_SWITCH}!app\_conf.h@{app\_conf.h}}
+\doxysubsubsection{\texorpdfstring{CFG\_FEATURE\_THREAD\_SWITCH}{CFG\_FEATURE\_THREAD\_SWITCH}}
+{\footnotesize\ttfamily \label{app__conf_8h_a29d33eb2cd6c19cec591e44118cd04b2} 
+\+\#define CFG\+\_\+\+FEATURE\+\_\+\+THREAD\+\_\+\+SWITCH~(0x40)}
+
+AD Element -\/ Group B Feature \Hypertarget{app__conf_8h_a93286d99ce3f61a616205c5c185d5ed9}\index{app\_conf.h@{app\_conf.h}!CFG\_GAP\_DEVICE\_NAME@{CFG\_GAP\_DEVICE\_NAME}}
+\index{CFG\_GAP\_DEVICE\_NAME@{CFG\_GAP\_DEVICE\_NAME}!app\_conf.h@{app\_conf.h}}
+\doxysubsubsection{\texorpdfstring{CFG\_GAP\_DEVICE\_NAME}{CFG\_GAP\_DEVICE\_NAME}}
+{\footnotesize\ttfamily \label{app__conf_8h_a93286d99ce3f61a616205c5c185d5ed9} 
+\+\#define CFG\+\_\+\+GAP\+\_\+\+DEVICE\+\_\+\+NAME~"{}BB8\+\_\+\+Main"{}}
+
+Device name configuration for Generic Access Service \Hypertarget{app__conf_8h_a3b61c066e8d8362dfc7698368448edb1}\index{app\_conf.h@{app\_conf.h}!CFG\_HW\_RESET\_BY\_FW@{CFG\_HW\_RESET\_BY\_FW}}
+\index{CFG\_HW\_RESET\_BY\_FW@{CFG\_HW\_RESET\_BY\_FW}!app\_conf.h@{app\_conf.h}}
+\doxysubsubsection{\texorpdfstring{CFG\_HW\_RESET\_BY\_FW}{CFG\_HW\_RESET\_BY\_FW}}
+{\footnotesize\ttfamily \label{app__conf_8h_a3b61c066e8d8362dfc7698368448edb1} 
+\+\#define CFG\+\_\+\+HW\+\_\+\+RESET\+\_\+\+BY\+\_\+\+FW~0}
+
+When set, this resets some hw resources to put the device in the same state as at power up. It resets only register that may prevent the FW to run properly.
+
+This shall be set to 0 in a final product \Hypertarget{app__conf_8h_a60d7ec652f024b2b28897159eb253552}\index{app\_conf.h@{app\_conf.h}!CFG\_IDENTITY\_ADDRESS@{CFG\_IDENTITY\_ADDRESS}}
+\index{CFG\_IDENTITY\_ADDRESS@{CFG\_IDENTITY\_ADDRESS}!app\_conf.h@{app\_conf.h}}
+\doxysubsubsection{\texorpdfstring{CFG\_IDENTITY\_ADDRESS}{CFG\_IDENTITY\_ADDRESS}}
+{\footnotesize\ttfamily \label{app__conf_8h_a60d7ec652f024b2b28897159eb253552} 
+\+\#define CFG\+\_\+\+IDENTITY\+\_\+\+ADDRESS~GAP\+\_\+\+PUBLIC\+\_\+\+ADDR}
+
+Define BD\+\_\+\+ADDR type:\+ define proper address. Can only be GAP\+\_\+\+PUBLIC\+\_\+\+ADDR (0x00) or GAP\+\_\+\+STATIC\+\_\+\+RANDOM\+\_\+\+ADDR (0x01) \Hypertarget{app__conf_8h_ac37a6f5b5a160addad67966b84ecdbbe}\index{app\_conf.h@{app\_conf.h}!CFG\_IO\_CAPABILITY\_DISPLAY\_ONLY@{CFG\_IO\_CAPABILITY\_DISPLAY\_ONLY}}
+\index{CFG\_IO\_CAPABILITY\_DISPLAY\_ONLY@{CFG\_IO\_CAPABILITY\_DISPLAY\_ONLY}!app\_conf.h@{app\_conf.h}}
+\doxysubsubsection{\texorpdfstring{CFG\_IO\_CAPABILITY\_DISPLAY\_ONLY}{CFG\_IO\_CAPABILITY\_DISPLAY\_ONLY}}
+{\footnotesize\ttfamily \label{app__conf_8h_ac37a6f5b5a160addad67966b84ecdbbe} 
+\+\#define CFG\+\_\+\+IO\+\_\+\+CAPABILITY\+\_\+\+DISPLAY\+\_\+\+ONLY~(0x00)}
+
+Define IO capabilities \Hypertarget{app__conf_8h_a69320a660d2a1a9caa8b6c8aeb80d389}\index{app\_conf.h@{app\_conf.h}!CFG\_KEYPRESS\_NOT\_SUPPORTED@{CFG\_KEYPRESS\_NOT\_SUPPORTED}}
+\index{CFG\_KEYPRESS\_NOT\_SUPPORTED@{CFG\_KEYPRESS\_NOT\_SUPPORTED}!app\_conf.h@{app\_conf.h}}
+\doxysubsubsection{\texorpdfstring{CFG\_KEYPRESS\_NOT\_SUPPORTED}{CFG\_KEYPRESS\_NOT\_SUPPORTED}}
+{\footnotesize\ttfamily \label{app__conf_8h_a69320a660d2a1a9caa8b6c8aeb80d389} 
+\+\#define CFG\+\_\+\+KEYPRESS\+\_\+\+NOT\+\_\+\+SUPPORTED~(0x00)}
+
+Define Keypress Notification Support \Hypertarget{app__conf_8h_a98c896cee21940e82f9d3bb1abe434e4}\index{app\_conf.h@{app\_conf.h}!CFG\_LP\_CONN\_ADV\_INTERVAL\_MAX@{CFG\_LP\_CONN\_ADV\_INTERVAL\_MAX}}
+\index{CFG\_LP\_CONN\_ADV\_INTERVAL\_MAX@{CFG\_LP\_CONN\_ADV\_INTERVAL\_MAX}!app\_conf.h@{app\_conf.h}}
+\doxysubsubsection{\texorpdfstring{CFG\_LP\_CONN\_ADV\_INTERVAL\_MAX}{CFG\_LP\_CONN\_ADV\_INTERVAL\_MAX}}
+{\footnotesize\ttfamily \label{app__conf_8h_a98c896cee21940e82f9d3bb1abe434e4} 
+\+\#define CFG\+\_\+\+LP\+\_\+\+CONN\+\_\+\+ADV\+\_\+\+INTERVAL\+\_\+\+MAX~(0x\+FA0)}
+
+2.\+5s \Hypertarget{app__conf_8h_abfa30cc1be49966eda1ea455a16fa2e6}\index{app\_conf.h@{app\_conf.h}!CFG\_LP\_CONN\_ADV\_INTERVAL\_MIN@{CFG\_LP\_CONN\_ADV\_INTERVAL\_MIN}}
+\index{CFG\_LP\_CONN\_ADV\_INTERVAL\_MIN@{CFG\_LP\_CONN\_ADV\_INTERVAL\_MIN}!app\_conf.h@{app\_conf.h}}
+\doxysubsubsection{\texorpdfstring{CFG\_LP\_CONN\_ADV\_INTERVAL\_MIN}{CFG\_LP\_CONN\_ADV\_INTERVAL\_MIN}}
+{\footnotesize\ttfamily \label{app__conf_8h_abfa30cc1be49966eda1ea455a16fa2e6} 
+\+\#define CFG\+\_\+\+LP\+\_\+\+CONN\+\_\+\+ADV\+\_\+\+INTERVAL\+\_\+\+MIN~(0x640)}
+
+1s \Hypertarget{app__conf_8h_a6a0aaffe7b96f43a5fd1f0ef957249bd}\index{app\_conf.h@{app\_conf.h}!CFG\_LPM\_STANDBY\_SUPPORTED@{CFG\_LPM\_STANDBY\_SUPPORTED}}
+\index{CFG\_LPM\_STANDBY\_SUPPORTED@{CFG\_LPM\_STANDBY\_SUPPORTED}!app\_conf.h@{app\_conf.h}}
+\doxysubsubsection{\texorpdfstring{CFG\_LPM\_STANDBY\_SUPPORTED}{CFG\_LPM\_STANDBY\_SUPPORTED}}
+{\footnotesize\ttfamily \label{app__conf_8h_a6a0aaffe7b96f43a5fd1f0ef957249bd} 
+\+\#define CFG\+\_\+\+LPM\+\_\+\+STANDBY\+\_\+\+SUPPORTED~0}
+
+This shall be set to 1 when standby is supported while the wireless stack on CPU2 is running (i.\+e the CPU2 is allowed to enter standby between RF activity) Otherwise, it should be set to 0 for marginal code and test execution saving In this case the lowest power mode available will be Stop 1 Note that keeping that setting to 1 when standby is not supported does not hurt \Hypertarget{app__conf_8h_a52de1f461299b1a0ed98709deb478942}\index{app\_conf.h@{app\_conf.h}!CFG\_LPM\_SUPPORTED@{CFG\_LPM\_SUPPORTED}}
+\index{CFG\_LPM\_SUPPORTED@{CFG\_LPM\_SUPPORTED}!app\_conf.h@{app\_conf.h}}
+\doxysubsubsection{\texorpdfstring{CFG\_LPM\_SUPPORTED}{CFG\_LPM\_SUPPORTED}}
+{\footnotesize\ttfamily \label{app__conf_8h_a52de1f461299b1a0ed98709deb478942} 
+\+\#define CFG\+\_\+\+LPM\+\_\+\+SUPPORTED~0}
+
+When set to 1, the low power mode is enable When set to 0, the device stays in RUN mode \Hypertarget{app__conf_8h_af615ffecccbbda26364f4385f7fc1932}\index{app\_conf.h@{app\_conf.h}!CFG\_MITM\_PROTECTION\_NOT\_REQUIRED@{CFG\_MITM\_PROTECTION\_NOT\_REQUIRED}}
+\index{CFG\_MITM\_PROTECTION\_NOT\_REQUIRED@{CFG\_MITM\_PROTECTION\_NOT\_REQUIRED}!app\_conf.h@{app\_conf.h}}
+\doxysubsubsection{\texorpdfstring{CFG\_MITM\_PROTECTION\_NOT\_REQUIRED}{CFG\_MITM\_PROTECTION\_NOT\_REQUIRED}}
+{\footnotesize\ttfamily \label{app__conf_8h_af615ffecccbbda26364f4385f7fc1932} 
+\+\#define CFG\+\_\+\+MITM\+\_\+\+PROTECTION\+\_\+\+NOT\+\_\+\+REQUIRED~(0x00)}
+
+Define MITM modes \Hypertarget{app__conf_8h_a797d86cf30739859be1c01ceba5177be}\index{app\_conf.h@{app\_conf.h}!CFG\_PRIVACY@{CFG\_PRIVACY}}
+\index{CFG\_PRIVACY@{CFG\_PRIVACY}!app\_conf.h@{app\_conf.h}}
+\doxysubsubsection{\texorpdfstring{CFG\_PRIVACY}{CFG\_PRIVACY}}
+{\footnotesize\ttfamily \label{app__conf_8h_a797d86cf30739859be1c01ceba5177be} 
+\+\#define CFG\+\_\+\+PRIVACY~PRIVACY\+\_\+\+DISABLED}
+
+Define privacy:\+ PRIVACY\+\_\+\+DISABLED or PRIVACY\+\_\+\+ENABLED \Hypertarget{app__conf_8h_aab480743c1daf5daac0141ff9381f709}\index{app\_conf.h@{app\_conf.h}!CFG\_RTCCLK\_DIV@{CFG\_RTCCLK\_DIV}}
+\index{CFG\_RTCCLK\_DIV@{CFG\_RTCCLK\_DIV}!app\_conf.h@{app\_conf.h}}
+\doxysubsubsection{\texorpdfstring{CFG\_RTCCLK\_DIV}{CFG\_RTCCLK\_DIV}}
+{\footnotesize\ttfamily \label{app__conf_8h_aab480743c1daf5daac0141ff9381f709} 
+\+\#define CFG\+\_\+\+RTCCLK\+\_\+\+DIV~(16)}
+
+Custom configuration It does not support 1Hz calendar It divides the RTC CLK by 16 \Hypertarget{app__conf_8h_aad53b053c5a381f2d4496670c88a88c9}\index{app\_conf.h@{app\_conf.h}!CFG\_RTCCLK\_DIVIDER\_CONF@{CFG\_RTCCLK\_DIVIDER\_CONF}}
+\index{CFG\_RTCCLK\_DIVIDER\_CONF@{CFG\_RTCCLK\_DIVIDER\_CONF}!app\_conf.h@{app\_conf.h}}
+\doxysubsubsection{\texorpdfstring{CFG\_RTCCLK\_DIVIDER\_CONF}{CFG\_RTCCLK\_DIVIDER\_CONF}}
+{\footnotesize\ttfamily \label{app__conf_8h_aad53b053c5a381f2d4496670c88a88c9} 
+\+\#define CFG\+\_\+\+RTCCLK\+\_\+\+DIVIDER\+\_\+\+CONF~0}
+
+CFG\+\_\+\+RTC\+\_\+\+WUCKSEL\+\_\+\+DIVIDER:\+ This sets the RTCCLK divider to the wakeup timer. The lower is the value, the better is the power consumption and the accuracy of the timerserver The higher is the value, the finest is the granularity
+
+CFG\+\_\+\+RTC\+\_\+\+ASYNCH\+\_\+\+PRESCALER:\+ This sets the asynchronous prescaler of the RTC. It should as high as possible ( to output clock as low as possible) but the output clock should be equal or higher frequency compare to the clock feeding the wakeup timer. A lower clock speed would impact the accuracy of the timer server.
+
+CFG\+\_\+\+RTC\+\_\+\+SYNCH\+\_\+\+PRESCALER:\+ This sets the synchronous prescaler of the RTC. When the 1Hz calendar clock is required, it shall be sets according to other settings When the 1Hz calendar clock is not needed, CFG\+\_\+\+RTC\+\_\+\+SYNCH\+\_\+\+PRESCALER should be set to 0x7\+FFF (MAX VALUE)
+
+CFG\+\_\+\+RTCCLK\+\_\+\+DIVIDER\+\_\+\+CONF:\+ Shall be set to either 0,2,4,8,16 When set to either 2,4,8,16, the 1Hhz calendar is supported When set to 0, the user sets its own configuration
+
+The following settings are computed with LSI as input to the RTC \Hypertarget{app__conf_8h_aae247814ceff1d3ebb03ca25fbb40e24}\index{app\_conf.h@{app\_conf.h}!CFG\_SECURE\_NOT\_SUPPORTED@{CFG\_SECURE\_NOT\_SUPPORTED}}
+\index{CFG\_SECURE\_NOT\_SUPPORTED@{CFG\_SECURE\_NOT\_SUPPORTED}!app\_conf.h@{app\_conf.h}}
+\doxysubsubsection{\texorpdfstring{CFG\_SECURE\_NOT\_SUPPORTED}{CFG\_SECURE\_NOT\_SUPPORTED}}
+{\footnotesize\ttfamily \label{app__conf_8h_aae247814ceff1d3ebb03ca25fbb40e24} 
+\+\#define CFG\+\_\+\+SECURE\+\_\+\+NOT\+\_\+\+SUPPORTED~(0x00)}
+
+Define Secure Connections Support \Hypertarget{app__conf_8h_a501e1da937d31f57747eaa19e3a05312}\index{app\_conf.h@{app\_conf.h}!CFG\_TLBLE\_EVT\_QUEUE\_LENGTH@{CFG\_TLBLE\_EVT\_QUEUE\_LENGTH}}
+\index{CFG\_TLBLE\_EVT\_QUEUE\_LENGTH@{CFG\_TLBLE\_EVT\_QUEUE\_LENGTH}!app\_conf.h@{app\_conf.h}}
+\doxysubsubsection{\texorpdfstring{CFG\_TLBLE\_EVT\_QUEUE\_LENGTH}{CFG\_TLBLE\_EVT\_QUEUE\_LENGTH}}
+{\footnotesize\ttfamily \label{app__conf_8h_a501e1da937d31f57747eaa19e3a05312} 
+\+\#define CFG\+\_\+\+TLBLE\+\_\+\+EVT\+\_\+\+QUEUE\+\_\+\+LENGTH~5}
+
+Queue length of BLE Event This parameter defines the number of asynchronous events that can be stored in the HCI layer before being reported to the application. When a command is sent to the BLE core coprocessor, the HCI layer is waiting for the event with the Num\+\_\+\+HCI\+\_\+\+Command\+\_\+\+Packets set to 1. The receive queue shall be large enough to store all asynchronous events received in between. When CFG\+\_\+\+TLBLE\+\_\+\+MOST\+\_\+\+EVENT\+\_\+\+PAYLOAD\+\_\+\+SIZE is set to 27, this allow to store three 255 bytes long asynchronous events between the HCI command and its event. This parameter depends on the value given to CFG\+\_\+\+TLBLE\+\_\+\+MOST\+\_\+\+EVENT\+\_\+\+PAYLOAD\+\_\+\+SIZE. When the queue size is to small, the system may hang if the queue is full with asynchronous events and the HCI layer is still waiting for a CC/\+\+CS event, In that case, the notification TL\+\_\+\+BLE\+\_\+\+HCI\+\_\+\+To\+Not() is called to indicate to the application a HCI command did not receive its command event within 30s (Default HCI Timeout). \Hypertarget{app__conf_8h_aedff8f1df2551377b61a4129c6e9c1c1}\index{app\_conf.h@{app\_conf.h}!CFG\_TLBLE\_MOST\_EVENT\_PAYLOAD\_SIZE@{CFG\_TLBLE\_MOST\_EVENT\_PAYLOAD\_SIZE}}
+\index{CFG\_TLBLE\_MOST\_EVENT\_PAYLOAD\_SIZE@{CFG\_TLBLE\_MOST\_EVENT\_PAYLOAD\_SIZE}!app\_conf.h@{app\_conf.h}}
+\doxysubsubsection{\texorpdfstring{CFG\_TLBLE\_MOST\_EVENT\_PAYLOAD\_SIZE}{CFG\_TLBLE\_MOST\_EVENT\_PAYLOAD\_SIZE}}
+{\footnotesize\ttfamily \label{app__conf_8h_aedff8f1df2551377b61a4129c6e9c1c1} 
+\+\#define CFG\+\_\+\+TLBLE\+\_\+\+MOST\+\_\+\+EVENT\+\_\+\+PAYLOAD\+\_\+\+SIZE~255}
+
+This parameter should be set to fit most events received by the HCI layer. It defines the buffer size of each element allocated in the queue of received events and can be used to optimize the amount of RAM allocated by the Memory Manager. It should not exceed 255 which is the maximum HCI packet payload size (a greater value is a lost of memory as it will never be used) It shall be at least 4 to receive the command status event in one frame. The default value is set to 27 to allow receiving an event of MTU size in a single buffer. This value maybe reduced further depending on the application. Set to 255 with the memory manager and the mailbox \Hypertarget{app__conf_8h_abaa838c445cf1bdea5052138ae3b04d8}\index{app\_conf.h@{app\_conf.h}!CFG\_TS\_TICK\_VAL@{CFG\_TS\_TICK\_VAL}}
+\index{CFG\_TS\_TICK\_VAL@{CFG\_TS\_TICK\_VAL}!app\_conf.h@{app\_conf.h}}
+\doxysubsubsection{\texorpdfstring{CFG\_TS\_TICK\_VAL}{CFG\_TS\_TICK\_VAL}}
+{\footnotesize\ttfamily \label{app__conf_8h_abaa838c445cf1bdea5052138ae3b04d8} 
+\+\#define CFG\+\_\+\+TS\+\_\+\+TICK\+\_\+\+VAL~DIVR( (\doxymbox{\hyperlink{app__conf_8h_aab480743c1daf5daac0141ff9381f709}{CFG\+\_\+\+RTCCLK\+\_\+\+DIV}} \texorpdfstring{$\ast$}{*} 1000000), \doxymbox{\hyperlink{stm32wbxx__hal__conf_8h_a7bbb9d19e5189a6ccd0fb6fa6177d20d}{LSE\+\_\+\+VALUE}} )}
+
+tick timer values \Hypertarget{app__conf_8h_ac644b14f0fc28d591f8cbbdc53a32fdd}\index{app\_conf.h@{app\_conf.h}!CFG\_TX\_POWER@{CFG\_TX\_POWER}}
+\index{CFG\_TX\_POWER@{CFG\_TX\_POWER}!app\_conf.h@{app\_conf.h}}
+\doxysubsubsection{\texorpdfstring{CFG\_TX\_POWER}{CFG\_TX\_POWER}}
+{\footnotesize\ttfamily \label{app__conf_8h_ac644b14f0fc28d591f8cbbdc53a32fdd} 
+\+\#define CFG\+\_\+\+TX\+\_\+\+POWER~(0x18) /\+\texorpdfstring{$\ast$}{*} -\/0.\+15d\+Bm \texorpdfstring{$\ast$}{*}/\+}
+
+\texorpdfstring{$<$}{<} generic parameters Define Tx Power \Hypertarget{app__conf_8h_a702994beacd62f09c1f86af57f2d516e}\index{app\_conf.h@{app\_conf.h}!CFG\_USB\_INTERFACE\_ENABLE@{CFG\_USB\_INTERFACE\_ENABLE}}
+\index{CFG\_USB\_INTERFACE\_ENABLE@{CFG\_USB\_INTERFACE\_ENABLE}!app\_conf.h@{app\_conf.h}}
+\doxysubsubsection{\texorpdfstring{CFG\_USB\_INTERFACE\_ENABLE}{CFG\_USB\_INTERFACE\_ENABLE}}
+{\footnotesize\ttfamily \label{app__conf_8h_a702994beacd62f09c1f86af57f2d516e} 
+\+\#define CFG\+\_\+\+USB\+\_\+\+INTERFACE\+\_\+\+ENABLE~0}
+
+Enable/\+\+Disable USB interface \Hypertarget{app__conf_8h_a17051b45f90fed76158d3a1b956df8d6}\index{app\_conf.h@{app\_conf.h}!CFG\_USE\_SMPS@{CFG\_USE\_SMPS}}
+\index{CFG\_USE\_SMPS@{CFG\_USE\_SMPS}!app\_conf.h@{app\_conf.h}}
+\doxysubsubsection{\texorpdfstring{CFG\_USE\_SMPS}{CFG\_USE\_SMPS}}
+{\footnotesize\ttfamily \label{app__conf_8h_a17051b45f90fed76158d3a1b956df8d6} 
+\+\#define CFG\+\_\+\+USE\+\_\+\+SMPS~0}
+
+SMPS supply SMPS not used when Set to 0 SMPS used when Set to 1 \Hypertarget{app__conf_8h_a0e92686144c8e0557158f448370fe1bb}\index{app\_conf.h@{app\_conf.h}!CONN\_L@{CONN\_L}}
+\index{CONN\_L@{CONN\_L}!app\_conf.h@{app\_conf.h}}
+\doxysubsubsection{\texorpdfstring{CONN\_L}{CONN\_L}}
+{\footnotesize\ttfamily \label{app__conf_8h_a0e92686144c8e0557158f448370fe1bb} 
+\+\#define CONN\+\_\+L(\begin{DoxyParamCaption}\item[{}]{x}{}\end{DoxyParamCaption})}
+
+{\bfseries Value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{((int)((x)/0.625f))}
+
+\end{DoxyCode}
+\Hypertarget{app__conf_8h_a064fc4bcba96fc2f35eafa555407d88a}\index{app\_conf.h@{app\_conf.h}!CONN\_P@{CONN\_P}}
+\index{CONN\_P@{CONN\_P}!app\_conf.h@{app\_conf.h}}
+\doxysubsubsection{\texorpdfstring{CONN\_P}{CONN\_P}}
+{\footnotesize\ttfamily \label{app__conf_8h_a064fc4bcba96fc2f35eafa555407d88a} 
+\+\#define CONN\+\_\+P(\begin{DoxyParamCaption}\item[{}]{x}{}\end{DoxyParamCaption})}
+
+{\bfseries Value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{((int)((x)/1.25f))}
+
+\end{DoxyCode}
+\Hypertarget{app__conf_8h_abfae08243d2da5b4acb67374e9c3d376}\index{app\_conf.h@{app\_conf.h}!DBG\_TRACE\_MSG\_QUEUE\_SIZE@{DBG\_TRACE\_MSG\_QUEUE\_SIZE}}
+\index{DBG\_TRACE\_MSG\_QUEUE\_SIZE@{DBG\_TRACE\_MSG\_QUEUE\_SIZE}!app\_conf.h@{app\_conf.h}}
+\doxysubsubsection{\texorpdfstring{DBG\_TRACE\_MSG\_QUEUE\_SIZE}{DBG\_TRACE\_MSG\_QUEUE\_SIZE}}
+{\footnotesize\ttfamily \label{app__conf_8h_abfae08243d2da5b4acb67374e9c3d376} 
+\+\#define DBG\+\_\+\+TRACE\+\_\+\+MSG\+\_\+\+QUEUE\+\_\+\+SIZE~4096}
+
+max buffer Size to queue data traces and max data trace allowed. Only Used if DBG\+\_\+\+TRACE\+\_\+\+USE\+\_\+\+CIRCULAR\+\_\+\+QUEUE is defined \Hypertarget{app__conf_8h_a074e64073f50bffd0e4e8cbd1bef3868}\index{app\_conf.h@{app\_conf.h}!DBG\_TRACE\_USE\_CIRCULAR\_QUEUE@{DBG\_TRACE\_USE\_CIRCULAR\_QUEUE}}
+\index{DBG\_TRACE\_USE\_CIRCULAR\_QUEUE@{DBG\_TRACE\_USE\_CIRCULAR\_QUEUE}!app\_conf.h@{app\_conf.h}}
+\doxysubsubsection{\texorpdfstring{DBG\_TRACE\_USE\_CIRCULAR\_QUEUE}{DBG\_TRACE\_USE\_CIRCULAR\_QUEUE}}
+{\footnotesize\ttfamily \label{app__conf_8h_a074e64073f50bffd0e4e8cbd1bef3868} 
+\+\#define DBG\+\_\+\+TRACE\+\_\+\+USE\+\_\+\+CIRCULAR\+\_\+\+QUEUE~1}
+
+When not set, the traces is looping on sending the trace over UART \Hypertarget{app__conf_8h_a36b5d239f8352e623ae8940051abc1e1}\index{app\_conf.h@{app\_conf.h}!HAL\_IPCC\_RX\_IRQHandler@{HAL\_IPCC\_RX\_IRQHandler}}
+\index{HAL\_IPCC\_RX\_IRQHandler@{HAL\_IPCC\_RX\_IRQHandler}!app\_conf.h@{app\_conf.h}}
+\doxysubsubsection{\texorpdfstring{HAL\_IPCC\_RX\_IRQHandler}{HAL\_IPCC\_RX\_IRQHandler}}
+{\footnotesize\ttfamily \label{app__conf_8h_a36b5d239f8352e623ae8940051abc1e1} 
+\+\#define HAL\+\_\+\+IPCC\+\_\+\+RX\+\_\+\+IRQHandler(\begin{DoxyParamCaption}\item[{}]{}...{}\end{DoxyParamCaption})}
+
+{\bfseries Value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{HW\_IPCC\_Rx\_Handler(\ )}
+
+\end{DoxyCode}
+\Hypertarget{app__conf_8h_a7e57685a0ca5156e0c38b0c42d4e2080}\index{app\_conf.h@{app\_conf.h}!HAL\_IPCC\_TX\_IRQHandler@{HAL\_IPCC\_TX\_IRQHandler}}
+\index{HAL\_IPCC\_TX\_IRQHandler@{HAL\_IPCC\_TX\_IRQHandler}!app\_conf.h@{app\_conf.h}}
+\doxysubsubsection{\texorpdfstring{HAL\_IPCC\_TX\_IRQHandler}{HAL\_IPCC\_TX\_IRQHandler}}
+{\footnotesize\ttfamily \label{app__conf_8h_a7e57685a0ca5156e0c38b0c42d4e2080} 
+\+\#define HAL\+\_\+\+IPCC\+\_\+\+TX\+\_\+\+IRQHandler(\begin{DoxyParamCaption}\item[{}]{}...{}\end{DoxyParamCaption})}
+
+{\bfseries Value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{HW\_IPCC\_Tx\_Handler(\ )}
+
+\end{DoxyCode}
+The IPCC is dedicated to the communication between the CPU2 and the CPU1 and shall not be modified by the application The two following definitions shall not be modified \Hypertarget{app__conf_8h_a9212d6bf36d48eea393012f0cf54893b}\index{app\_conf.h@{app\_conf.h}!HAL\_RTCEx\_WakeUpTimerIRQHandler@{HAL\_RTCEx\_WakeUpTimerIRQHandler}}
+\index{HAL\_RTCEx\_WakeUpTimerIRQHandler@{HAL\_RTCEx\_WakeUpTimerIRQHandler}!app\_conf.h@{app\_conf.h}}
+\doxysubsubsection{\texorpdfstring{HAL\_RTCEx\_WakeUpTimerIRQHandler}{HAL\_RTCEx\_WakeUpTimerIRQHandler}}
+{\footnotesize\ttfamily \label{app__conf_8h_a9212d6bf36d48eea393012f0cf54893b} 
+\+\#define HAL\+\_\+\+RTCEx\+\_\+\+Wake\+Up\+Timer\+IRQHandler(\begin{DoxyParamCaption}\item[{}]{}...{}\end{DoxyParamCaption})}
+
+{\bfseries Value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\doxymbox{\hyperlink{hw__if_8h_a438915fc276ab03daede51b18d8eefdf}{HW\_TS\_RTC\_Wakeup\_Handler}}(\ )}
+
+\end{DoxyCode}
+\Hypertarget{app__conf_8h_a819255fece2b08c3a49887f3afd88016}\index{app\_conf.h@{app\_conf.h}!RADIO\_ACTIVITY\_EVENT@{RADIO\_ACTIVITY\_EVENT}}
+\index{RADIO\_ACTIVITY\_EVENT@{RADIO\_ACTIVITY\_EVENT}!app\_conf.h@{app\_conf.h}}
+\doxysubsubsection{\texorpdfstring{RADIO\_ACTIVITY\_EVENT}{RADIO\_ACTIVITY\_EVENT}}
+{\footnotesize\ttfamily \label{app__conf_8h_a819255fece2b08c3a49887f3afd88016} 
+\+\#define RADIO\+\_\+\+ACTIVITY\+\_\+\+EVENT~1          /\+\texorpdfstring{$\ast$}{*} 1 for OOB Demo \texorpdfstring{$\ast$}{*}/\+}
+
+\texorpdfstring{$<$}{<} specific parameters \Hypertarget{app__conf_8h_a7ebc9a785e5ab85457c98595aac81589}\index{app\_conf.h@{app\_conf.h}!YES@{YES}}
+\index{YES@{YES}!app\_conf.h@{app\_conf.h}}
+\doxysubsubsection{\texorpdfstring{YES}{YES}}
+{\footnotesize\ttfamily \label{app__conf_8h_a7ebc9a785e5ab85457c98595aac81589} 
+\+\#define YES~(0x01)}
+
+Numeric Comparison Answers 
+
+\label{doc-enum-members}
+\Hypertarget{app__conf_8h_doc-enum-members}
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{app__conf_8h_af26fd0fc9eafa3f37bd04d0b80ec0698}\index{app\_conf.h@{app\_conf.h}!CFG\_IdleEvt\_Id\_t@{CFG\_IdleEvt\_Id\_t}}
+\index{CFG\_IdleEvt\_Id\_t@{CFG\_IdleEvt\_Id\_t}!app\_conf.h@{app\_conf.h}}
+\doxysubsubsection{\texorpdfstring{CFG\_IdleEvt\_Id\_t}{CFG\_IdleEvt\_Id\_t}}
+{\footnotesize\ttfamily \label{app__conf_8h_af26fd0fc9eafa3f37bd04d0b80ec0698} 
+enum \doxymbox{\hyperlink{app__conf_8h_af26fd0fc9eafa3f37bd04d0b80ec0698}{CFG\+\_\+\+Idle\+Evt\+\_\+\+Id\+\_\+t}}}
+
+This is a bit mapping over 32bits listing all events id supported in the application \Hypertarget{app__conf_8h_afd9ad46737b8eea19a26faae59cdab6e}\index{app\_conf.h@{app\_conf.h}!CFG\_LPM\_Id\_t@{CFG\_LPM\_Id\_t}}
+\index{CFG\_LPM\_Id\_t@{CFG\_LPM\_Id\_t}!app\_conf.h@{app\_conf.h}}
+\doxysubsubsection{\texorpdfstring{CFG\_LPM\_Id\_t}{CFG\_LPM\_Id\_t}}
+{\footnotesize\ttfamily \label{app__conf_8h_afd9ad46737b8eea19a26faae59cdab6e} 
+enum \doxymbox{\hyperlink{app__conf_8h_afd9ad46737b8eea19a26faae59cdab6e}{CFG\+\_\+\+LPM\+\_\+\+Id\+\_\+t}}}
+
+Supported requester to the MCU Low Power Manager -\/ can be increased up to 32 It list a bit mapping of all user of the Low Power Manager \Hypertarget{app__conf_8h_a46598237a352a5f7dd90bb8511dfd40c}\index{app\_conf.h@{app\_conf.h}!CFG\_SCH\_Prio\_Id\_t@{CFG\_SCH\_Prio\_Id\_t}}
+\index{CFG\_SCH\_Prio\_Id\_t@{CFG\_SCH\_Prio\_Id\_t}!app\_conf.h@{app\_conf.h}}
+\doxysubsubsection{\texorpdfstring{CFG\_SCH\_Prio\_Id\_t}{CFG\_SCH\_Prio\_Id\_t}}
+{\footnotesize\ttfamily \label{app__conf_8h_a46598237a352a5f7dd90bb8511dfd40c} 
+enum \doxymbox{\hyperlink{app__conf_8h_a46598237a352a5f7dd90bb8511dfd40c}{CFG\+\_\+\+SCH\+\_\+\+Prio\+\_\+\+Id\+\_\+t}}}
+
+This is the list of priority required by the application Each Id shall be in the range 0..31 \Hypertarget{app__conf_8h_a0e32006f284ff35f22096e28d0e911d1}\index{app\_conf.h@{app\_conf.h}!CFG\_Task\_Id\_With\_HCI\_Cmd\_t@{CFG\_Task\_Id\_With\_HCI\_Cmd\_t}}
+\index{CFG\_Task\_Id\_With\_HCI\_Cmd\_t@{CFG\_Task\_Id\_With\_HCI\_Cmd\_t}!app\_conf.h@{app\_conf.h}}
+\doxysubsubsection{\texorpdfstring{CFG\_Task\_Id\_With\_HCI\_Cmd\_t}{CFG\_Task\_Id\_With\_HCI\_Cmd\_t}}
+{\footnotesize\ttfamily \label{app__conf_8h_a0e32006f284ff35f22096e28d0e911d1} 
+enum \doxymbox{\hyperlink{app__conf_8h_a0e32006f284ff35f22096e28d0e911d1}{CFG\+\_\+\+Task\+\_\+\+Id\+\_\+\+With\+\_\+\+HCI\+\_\+\+Cmd\+\_\+t}}}
+
+These are the lists of task id registered to the scheduler Each task id shall be in the range \+[0:\+31]\+ This mechanism allows to implement a generic code in the API TL\+\_\+\+BLE\+\_\+\+HCI\+\_\+\+Status\+Not() to comply with the requirement that a HCI/\+\+ACI command shall never be sent if there is already one pending \texorpdfstring{$<$}{<} Add in that list all tasks that may send a ACI/\+\+HCI command \begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CFG\_LAST\_TASK\_ID\_WITH\_HCICMD@{CFG\_LAST\_TASK\_ID\_WITH\_HCICMD}!app\_conf.h@{app\_conf.h}}
+\index{app\_conf.h@{app\_conf.h}!CFG\_LAST\_TASK\_ID\_WITH\_HCICMD@{CFG\_LAST\_TASK\_ID\_WITH\_HCICMD}}
+}\Hypertarget{app__conf_8h_a0e32006f284ff35f22096e28d0e911d1ad307373770ccbdcfbc56e66a2aa917bc}\label{app__conf_8h_a0e32006f284ff35f22096e28d0e911d1ad307373770ccbdcfbc56e66a2aa917bc} 
+CFG\+\_\+\+LAST\+\_\+\+TASK\+\_\+\+ID\+\_\+\+WITH\+\_\+\+HCICMD&Shall be LAST in the list \\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{app__conf_8h_afbcedc9d0a24d60cdc1c673d0baafdd2}\index{app\_conf.h@{app\_conf.h}!CFG\_Task\_Id\_With\_NO\_HCI\_Cmd\_t@{CFG\_Task\_Id\_With\_NO\_HCI\_Cmd\_t}}
+\index{CFG\_Task\_Id\_With\_NO\_HCI\_Cmd\_t@{CFG\_Task\_Id\_With\_NO\_HCI\_Cmd\_t}!app\_conf.h@{app\_conf.h}}
+\doxysubsubsection{\texorpdfstring{CFG\_Task\_Id\_With\_NO\_HCI\_Cmd\_t}{CFG\_Task\_Id\_With\_NO\_HCI\_Cmd\_t}}
+{\footnotesize\ttfamily \label{app__conf_8h_afbcedc9d0a24d60cdc1c673d0baafdd2} 
+enum \doxymbox{\hyperlink{app__conf_8h_afbcedc9d0a24d60cdc1c673d0baafdd2}{CFG\+\_\+\+Task\+\_\+\+Id\+\_\+\+With\+\_\+\+NO\+\_\+\+HCI\+\_\+\+Cmd\+\_\+t}}}
+
+\begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CFG\_FIRST\_TASK\_ID\_WITH\_NO\_HCICMD@{CFG\_FIRST\_TASK\_ID\_WITH\_NO\_HCICMD}!app\_conf.h@{app\_conf.h}}
+\index{app\_conf.h@{app\_conf.h}!CFG\_FIRST\_TASK\_ID\_WITH\_NO\_HCICMD@{CFG\_FIRST\_TASK\_ID\_WITH\_NO\_HCICMD}}
+}\Hypertarget{app__conf_8h_afbcedc9d0a24d60cdc1c673d0baafdd2a87a853b7bebadc576d9e4882f585269d}\label{app__conf_8h_afbcedc9d0a24d60cdc1c673d0baafdd2a87a853b7bebadc576d9e4882f585269d} 
+CFG\+\_\+\+FIRST\+\_\+\+TASK\+\_\+\+ID\+\_\+\+WITH\+\_\+\+NO\+\_\+\+HCICMD&Shall be FIRST in the list \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CFG\_LAST\_TASK\_ID\_WITH\_NO\_HCICMD@{CFG\_LAST\_TASK\_ID\_WITH\_NO\_HCICMD}!app\_conf.h@{app\_conf.h}}
+\index{app\_conf.h@{app\_conf.h}!CFG\_LAST\_TASK\_ID\_WITH\_NO\_HCICMD@{CFG\_LAST\_TASK\_ID\_WITH\_NO\_HCICMD}}
+}\Hypertarget{app__conf_8h_afbcedc9d0a24d60cdc1c673d0baafdd2ac50300beb7c0584fc5664ffe8944a0e6}\label{app__conf_8h_afbcedc9d0a24d60cdc1c673d0baafdd2ac50300beb7c0584fc5664ffe8944a0e6} 
+CFG\+\_\+\+LAST\+\_\+\+TASK\+\_\+\+ID\+\_\+\+WITH\+\_\+\+NO\+\_\+\+HCICMD&Shall be LAST in the list \\
+\hline
+
+\end{DoxyEnumFields}

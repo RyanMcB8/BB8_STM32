@@ -1,0 +1,57 @@
+\doxysection{C:\+/\+\+Users/\+ryanm/\+\+Documents/\+\+Design\+Group/\+\+BB8\+\_\+\+STM32/\+\+Firmware/\+\+Core/\+\+Inc/\+app\+\_\+entry.h File Reference}
+\hypertarget{app__entry_8h}{}\label{app__entry_8h}\index{C:/Users/ryanm/Documents/DesignGroup/BB8\_STM32/Firmware/Core/Inc/app\_entry.h@{C:/Users/ryanm/Documents/DesignGroup/BB8\_STM32/Firmware/Core/Inc/app\_entry.h}}
+
+
+Interface to the application.  
+
+
+This graph shows which files directly or indirectly include this file:\+
+% FIG 0
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{app__entry_8h_a9dc02a6962ba7669b26ebf609799eceb}\label{app__entry_8h_a9dc02a6962ba7669b26ebf609799eceb} 
+void {\bfseries MX\+\_\+\+APPE\+\_\+\+Config} (void)
+\item 
+void \doxymbox{\hyperlink{app__entry_8h_a4d1fb9c131dd2089107322bec3b3d9bd}{MX\+\_\+\+APPE\+\_\+\+Init}} (void)
+\item 
+\Hypertarget{app__entry_8h_a3fb12c54a4603818d8be588d313872dd}\label{app__entry_8h_a3fb12c54a4603818d8be588d313872dd} 
+void {\bfseries MX\+\_\+\+APPE\+\_\+\+Process} (void)
+\item 
+\Hypertarget{app__entry_8h_a575be45f9c1ffea11900110c0ef3445f}\label{app__entry_8h_a575be45f9c1ffea11900110c0ef3445f} 
+void {\bfseries Init\+\_\+\+Exti} (void)
+\item 
+\Hypertarget{app__entry_8h_a6289913b3632c63f5aa53e29ffc9f03f}\label{app__entry_8h_a6289913b3632c63f5aa53e29ffc9f03f} 
+void {\bfseries Init\+\_\+\+Smps} (void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interface to the application. 
+
+\begin{DoxyAuthor}{Author}
+MCD Application Team 
+\end{DoxyAuthor}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+Copyright (c) 2026 STMicroelectronics. All rights reserved.
+
+This software is licensed under terms that can be found in the LICENSE file in the root directory of this software component. If no LICENSE file comes with this software, it is provided AS-\/\+IS. 
+
+\label{doc-func-members}
+\Hypertarget{app__entry_8h_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{app__entry_8h_a4d1fb9c131dd2089107322bec3b3d9bd}\index{app\_entry.h@{app\_entry.h}!MX\_APPE\_Init@{MX\_APPE\_Init}}
+\index{MX\_APPE\_Init@{MX\_APPE\_Init}!app\_entry.h@{app\_entry.h}}
+\doxysubsubsection{\texorpdfstring{MX\_APPE\_Init()}{MX\_APPE\_Init()}}
+{\footnotesize\ttfamily \label{app__entry_8h_a4d1fb9c131dd2089107322bec3b3d9bd} 
+void MX\+\_\+\+APPE\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+\texorpdfstring{$<$}{<} System initialization
+
+\texorpdfstring{$<$}{<} Configure the system Power Mode
+
+\texorpdfstring{$<$}{<} Initialize the Timer\+Server
+
+From now, the application is waiting for the ready event (VS\+\_\+\+HCI\+\_\+\+C2\+\_\+\+Ready) received on the system channel before starting the Stack This system event is received with \doxylink{app__entry_8c_a27b9b353c606559878803ff4764c00fa}{APPE\+\_\+\+Sys\+User\+Evt\+Rx()}

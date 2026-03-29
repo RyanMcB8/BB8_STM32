@@ -1,0 +1,74 @@
+\doxysection{C:\+/\+\+Users/\+ryanm/\+\+Documents/\+\+Design\+Group/\+\+BB8\+\_\+\+STM32/\+\+Firmware/\+\+Core/\+\+Src/\+usart.c File Reference}
+\hypertarget{usart_8c}{}\label{usart_8c}\index{C:/Users/ryanm/Documents/DesignGroup/BB8\_STM32/Firmware/Core/Src/usart.c@{C:/Users/ryanm/Documents/DesignGroup/BB8\_STM32/Firmware/Core/Src/usart.c}}
+
+
+This file provides code for the configuration of the USART instances.  
+
+
+{\ttfamily \+\#include "{}usart.\+h"{}}\newline
+Include dependency graph for usart.\+c:\+
+% FIG 0
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{usart_8c_a2d6e29406e35a65323b382515e095cd4}\label{usart_8c_a2d6e29406e35a65323b382515e095cd4} 
+void {\bfseries MX\+\_\+\+LPUART1\+\_\+\+UART\+\_\+\+Init} (void)
+\item 
+\Hypertarget{usart_8c_a57d1167735baafab8e3288526c424929}\label{usart_8c_a57d1167735baafab8e3288526c424929} 
+void {\bfseries MX\+\_\+\+USART1\+\_\+\+UART\+\_\+\+Init} (void)
+\item 
+void \doxymbox{\hyperlink{usart_8c_a62a25476866998c7aadfb5c0864fa349}{HAL\+\_\+\+UART\+\_\+\+Msp\+Init}} (UART\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}uart\+Handle)
+\item 
+void \doxymbox{\hyperlink{usart_8c_a94cd2c58add4f2549895a03bf267622e}{HAL\+\_\+\+UART\+\_\+\+Msp\+De\+Init}} (UART\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}uart\+Handle)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{usart_8c_a5c3f9dccaa7cebcc70e1657af9e5e5dc}\label{usart_8c_a5c3f9dccaa7cebcc70e1657af9e5e5dc} 
+UART\+\_\+\+Handle\+Type\+Def {\bfseries hlpuart1}
+\item 
+\Hypertarget{usart_8c_a2cf715bef37f7e8ef385a30974a5f0d5}\label{usart_8c_a2cf715bef37f7e8ef385a30974a5f0d5} 
+UART\+\_\+\+Handle\+Type\+Def {\bfseries huart1}
+\item 
+\Hypertarget{usart_8c_a833f20cff151535a9256b33f747ff866}\label{usart_8c_a833f20cff151535a9256b33f747ff866} 
+DMA\+\_\+\+Handle\+Type\+Def {\bfseries hdma\+\_\+lpuart1\+\_\+tx}
+\item 
+\Hypertarget{usart_8c_a5af94ab36bfe698db3e6beea96d10a90}\label{usart_8c_a5af94ab36bfe698db3e6beea96d10a90} 
+DMA\+\_\+\+Handle\+Type\+Def {\bfseries hdma\+\_\+usart1\+\_\+tx}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file provides code for the configuration of the USART instances. 
+
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+Copyright (c) 2026 STMicroelectronics. All rights reserved.
+
+This software is licensed under terms that can be found in the LICENSE file in the root directory of this software component. If no LICENSE file comes with this software, it is provided AS-\/\+IS. 
+
+\label{doc-func-members}
+\Hypertarget{usart_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{usart_8c_a94cd2c58add4f2549895a03bf267622e}\index{usart.c@{usart.c}!HAL\_UART\_MspDeInit@{HAL\_UART\_MspDeInit}}
+\index{HAL\_UART\_MspDeInit@{HAL\_UART\_MspDeInit}!usart.c@{usart.c}}
+\doxysubsubsection{\texorpdfstring{HAL\_UART\_MspDeInit()}{HAL\_UART\_MspDeInit()}}
+{\footnotesize\ttfamily \label{usart_8c_a94cd2c58add4f2549895a03bf267622e} 
+void HAL\+\_\+\+UART\+\_\+\+Msp\+De\+Init (\begin{DoxyParamCaption}\item[{UART\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}}]{uart\+Handle}{}\end{DoxyParamCaption})}
+
+LPUART1 GPIO Configuration PA2 -\/-\/-\/-\/-\/-\/\texorpdfstring{$>$}{>} LPUART1\+\_\+\+TX PA3 -\/-\/-\/-\/-\/-\/\texorpdfstring{$>$}{>} LPUART1\+\_\+\+RX
+
+USART1 GPIO Configuration PB6 -\/-\/-\/-\/-\/-\/\texorpdfstring{$>$}{>} USART1\+\_\+\+TX PB7 -\/-\/-\/-\/-\/-\/\texorpdfstring{$>$}{>} USART1\+\_\+\+RX\Hypertarget{usart_8c_a62a25476866998c7aadfb5c0864fa349}\index{usart.c@{usart.c}!HAL\_UART\_MspInit@{HAL\_UART\_MspInit}}
+\index{HAL\_UART\_MspInit@{HAL\_UART\_MspInit}!usart.c@{usart.c}}
+\doxysubsubsection{\texorpdfstring{HAL\_UART\_MspInit()}{HAL\_UART\_MspInit()}}
+{\footnotesize\ttfamily \label{usart_8c_a62a25476866998c7aadfb5c0864fa349} 
+void HAL\+\_\+\+UART\+\_\+\+Msp\+Init (\begin{DoxyParamCaption}\item[{UART\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}}]{uart\+Handle}{}\end{DoxyParamCaption})}
+
+Initializes the peripherals clock
+
+LPUART1 GPIO Configuration PA2 -\/-\/-\/-\/-\/-\/\texorpdfstring{$>$}{>} LPUART1\+\_\+\+TX PA3 -\/-\/-\/-\/-\/-\/\texorpdfstring{$>$}{>} LPUART1\+\_\+\+RX
+
+Initializes the peripherals clock
+
+USART1 GPIO Configuration PB6 -\/-\/-\/-\/-\/-\/\texorpdfstring{$>$}{>} USART1\+\_\+\+TX PB7 -\/-\/-\/-\/-\/-\/\texorpdfstring{$>$}{>} USART1\+\_\+\+RX

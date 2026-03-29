@@ -1,0 +1,732 @@
+\doxysubsubsubsection{LSM6\+DSO32 Exported Functions }
+\hypertarget{group___l_s_m6_d_s_o32___exported___functions}{}\label{group___l_s_m6_d_s_o32___exported___functions}\index{LSM6DSO32 Exported Functions@{LSM6DSO32 Exported Functions}}
+Collaboration diagram for LSM6\+DSO32 Exported Functions:\+
+% FIG 0
+\doxysubsubsubsubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___exported___functions_ga11aff8499ff27572ea29326de162d850}{LSM6\+DSO32\+\_\+\+Register\+Bus\+IO}} (\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6\+DSO32\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj, \doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___i_o__t}{LSM6\+DSO32\+\_\+\+IO\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+IO)
+\begin{DoxyCompactList}\small\item\em Register Component Bus IO operations. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___exported___functions_gae1cef97d1d85138a04cd70da5892a342}{LSM6\+DSO32\+\_\+\+Init}} (\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6\+DSO32\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj)
+\begin{DoxyCompactList}\small\item\em Initialize the LSM6\+DSO32 sensor. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___exported___functions_ga5de0f6c94656a1aa25cc725a801f0a3d}{LSM6\+DSO32\+\_\+\+De\+Init}} (\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6\+DSO32\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj)
+\begin{DoxyCompactList}\small\item\em Deinitialize the LSM6\+DSO32 sensor. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___exported___functions_ga150360ba7ffb226d5de0c9451cbcac84}{LSM6\+DSO32\+\_\+\+Read\+ID}} (\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6\+DSO32\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj, uint8\+\_\+t \texorpdfstring{$\ast$}{*}Id)
+\begin{DoxyCompactList}\small\item\em Read component ID. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___exported___functions_ga84bcc198f533e55a8c7091374ce25502}{LSM6\+DSO32\+\_\+\+Get\+Capabilities}} (\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6\+DSO32\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj, \doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___capabilities__t}{LSM6\+DSO32\+\_\+\+Capabilities\+\_\+t}} \texorpdfstring{$\ast$}{*}Capabilities)
+\begin{DoxyCompactList}\small\item\em Get LSM6\+DSO32 sensor capabilities. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___exported___functions_ga93eb810fa2dc6fbf7071edfcd906ba55}{LSM6\+DSO32\+\_\+\+ACC\+\_\+\+Enable}} (\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6\+DSO32\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj)
+\begin{DoxyCompactList}\small\item\em Enable the LSM6\+DSO32 accelerometer sensor. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___exported___functions_ga00514bcd708417d8133993500eb9d03b}{LSM6\+DSO32\+\_\+\+ACC\+\_\+\+Disable}} (\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6\+DSO32\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj)
+\begin{DoxyCompactList}\small\item\em Disable the LSM6\+DSO32 accelerometer sensor. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___exported___functions_ga3d227e1d7e6707b7d0d93fd6a672a324}{LSM6\+DSO32\+\_\+\+ACC\+\_\+\+Get\+Sensitivity}} (\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6\+DSO32\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj, float\+\_\+t \texorpdfstring{$\ast$}{*}Sensitivity)
+\begin{DoxyCompactList}\small\item\em Get the LSM6\+DSO32 accelerometer sensor sensitivity. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___exported___functions_ga7e71a862f860bafef5e76ccbcd932187}{LSM6\+DSO32\+\_\+\+ACC\+\_\+\+Get\+Output\+Data\+Rate}} (\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6\+DSO32\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj, float\+\_\+t \texorpdfstring{$\ast$}{*}Odr)
+\begin{DoxyCompactList}\small\item\em Get the LSM6\+DSO32 accelerometer sensor output data rate. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___exported___functions_ga7d3787de56f4fd3f6e47c71503fb8e59}{LSM6\+DSO32\+\_\+\+ACC\+\_\+\+Set\+Output\+Data\+Rate}} (\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6\+DSO32\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj, float\+\_\+t Odr)
+\begin{DoxyCompactList}\small\item\em Set the LSM6\+DSO32 accelerometer sensor output data rate. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___exported___functions_gabb91f51cda3310f73135bdf7e3eadb7e}{LSM6\+DSO32\+\_\+\+ACC\+\_\+\+Set\+Output\+Data\+Rate\+\_\+\+With\+\_\+\+Mode}} (\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6\+DSO32\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj, float\+\_\+t Odr, LSM6\+DSO32\+\_\+\+ACC\+\_\+\+Operating\+\_\+\+Mode\+\_\+t Mode)
+\begin{DoxyCompactList}\small\item\em Set the LSM6\+DSO32 accelerometer sensor output data rate with operating mode. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___exported___functions_ga3602b42981f8b1d9bd78a2e9347f5ffd}{LSM6\+DSO32\+\_\+\+ACC\+\_\+\+Get\+Full\+Scale}} (\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6\+DSO32\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj, int32\+\_\+t \texorpdfstring{$\ast$}{*}Full\+Scale)
+\begin{DoxyCompactList}\small\item\em Get the LSM6\+DSO32 accelerometer sensor full scale. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___exported___functions_ga3202b692b7e1753b92c1f00206172867}{LSM6\+DSO32\+\_\+\+ACC\+\_\+\+Set\+Full\+Scale}} (\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6\+DSO32\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj, int32\+\_\+t Full\+Scale)
+\begin{DoxyCompactList}\small\item\em Set the LSM6\+DSO32 accelerometer sensor full scale. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___exported___functions_ga1deb0b5d91ce6afa7cace7765c3adfab}{LSM6\+DSO32\+\_\+\+ACC\+\_\+\+Get\+Axes\+Raw}} (\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6\+DSO32\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj, \doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___axes_raw__t}{LSM6\+DSO32\+\_\+\+Axes\+Raw\+\_\+t}} \texorpdfstring{$\ast$}{*}Value)
+\begin{DoxyCompactList}\small\item\em Get the LSM6\+DSO32 accelerometer sensor raw axes. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___exported___functions_ga743ce4d5e7a50b7d29970ed6b7e1f818}{LSM6\+DSO32\+\_\+\+ACC\+\_\+\+Get\+Axes}} (\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6\+DSO32\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj, \doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___axes__t}{LSM6\+DSO32\+\_\+\+Axes\+\_\+t}} \texorpdfstring{$\ast$}{*}Acceleration)
+\begin{DoxyCompactList}\small\item\em Get the LSM6\+DSO32 accelerometer sensor axes. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___exported___functions_ga67bb91b304ae1221925c23749de5d864}{LSM6\+DSO32\+\_\+\+GYRO\+\_\+\+Enable}} (\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6\+DSO32\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj)
+\begin{DoxyCompactList}\small\item\em Enable the LSM6\+DSO32 gyroscope sensor. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___exported___functions_ga998615e31de94c531025722231fb8d78}{LSM6\+DSO32\+\_\+\+GYRO\+\_\+\+Disable}} (\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6\+DSO32\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj)
+\begin{DoxyCompactList}\small\item\em Disable the LSM6\+DSO32 gyroscope sensor. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___exported___functions_gaf66bc1f6fe95635d7cb835b28bed8800}{LSM6\+DSO32\+\_\+\+GYRO\+\_\+\+Get\+Sensitivity}} (\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6\+DSO32\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj, float\+\_\+t \texorpdfstring{$\ast$}{*}Sensitivity)
+\begin{DoxyCompactList}\small\item\em Get the LSM6\+DSO32 gyroscope sensor sensitivity. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___exported___functions_gab227ad1c2216cb9c0128b1885b09d33b}{LSM6\+DSO32\+\_\+\+GYRO\+\_\+\+Get\+Output\+Data\+Rate}} (\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6\+DSO32\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj, float\+\_\+t \texorpdfstring{$\ast$}{*}Odr)
+\begin{DoxyCompactList}\small\item\em Get the LSM6\+DSO32 gyroscope sensor output data rate. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___exported___functions_ga0eb3f9628e321a955be9b2f8bc5ed9f2}{LSM6\+DSO32\+\_\+\+GYRO\+\_\+\+Set\+Output\+Data\+Rate}} (\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6\+DSO32\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj, float\+\_\+t Odr)
+\begin{DoxyCompactList}\small\item\em Set the LSM6\+DSO32 gyroscope sensor output data rate. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___exported___functions_gad47e8acc9908af596db33cfb55876805}{LSM6\+DSO32\+\_\+\+GYRO\+\_\+\+Set\+Output\+Data\+Rate\+\_\+\+With\+\_\+\+Mode}} (\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6\+DSO32\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj, float\+\_\+t Odr, LSM6\+DSO32\+\_\+\+GYRO\+\_\+\+Operating\+\_\+\+Mode\+\_\+t Mode)
+\begin{DoxyCompactList}\small\item\em Set the LSM6\+DSO32 gyroscope sensor output data rate with operating mode. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___exported___functions_gadc011c2c0ea0b598b3c1a8d3d618424f}{LSM6\+DSO32\+\_\+\+GYRO\+\_\+\+Get\+Full\+Scale}} (\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6\+DSO32\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj, int32\+\_\+t \texorpdfstring{$\ast$}{*}Full\+Scale)
+\begin{DoxyCompactList}\small\item\em Get the LSM6\+DSO32 gyroscope sensor full scale. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___exported___functions_gacb2df6b47c5d6ef897261758160ad610}{LSM6\+DSO32\+\_\+\+GYRO\+\_\+\+Set\+Full\+Scale}} (\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6\+DSO32\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj, int32\+\_\+t Full\+Scale)
+\begin{DoxyCompactList}\small\item\em Set the LSM6\+DSO32 gyroscope sensor full scale. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___exported___functions_gabb6ebb641850efc5ee3f8090eeed06cf}{LSM6\+DSO32\+\_\+\+GYRO\+\_\+\+Get\+Axes\+Raw}} (\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6\+DSO32\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj, \doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___axes_raw__t}{LSM6\+DSO32\+\_\+\+Axes\+Raw\+\_\+t}} \texorpdfstring{$\ast$}{*}Value)
+\begin{DoxyCompactList}\small\item\em Get the LSM6\+DSO32 gyroscope sensor raw axes. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___exported___functions_ga551615b8ea5610e625918d817e717c87}{LSM6\+DSO32\+\_\+\+GYRO\+\_\+\+Get\+Axes}} (\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6\+DSO32\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj, \doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___axes__t}{LSM6\+DSO32\+\_\+\+Axes\+\_\+t}} \texorpdfstring{$\ast$}{*}Angular\+Rate)
+\begin{DoxyCompactList}\small\item\em Get the LSM6\+DSO32 gyroscope sensor axes. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___exported___functions_gab2a8496b45fe6317364fd3863e2d82e3}{LSM6\+DSO32\+\_\+\+Read\+\_\+\+Reg}} (\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6\+DSO32\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj, uint8\+\_\+t Reg, uint8\+\_\+t \texorpdfstring{$\ast$}{*}Data)
+\begin{DoxyCompactList}\small\item\em Get the LSM6\+DSO32 register value. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___exported___functions_ga0b22103b87f6e5a4c5fea54a026bc851}{LSM6\+DSO32\+\_\+\+Write\+\_\+\+Reg}} (\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6\+DSO32\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj, uint8\+\_\+t Reg, uint8\+\_\+t Data)
+\begin{DoxyCompactList}\small\item\em Set the LSM6\+DSO32 register value. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___exported___functions_ga8c23fe107242bb6a8c1a2cc9009494b9}{LSM6\+DSO32\+\_\+\+ACC\+\_\+\+Get\+\_\+\+DRDY\+\_\+\+Status}} (\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6\+DSO32\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj, uint8\+\_\+t \texorpdfstring{$\ast$}{*}Status)
+\begin{DoxyCompactList}\small\item\em Get the LSM6\+DSO32 ACC data ready bit value. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___exported___functions_ga15b750708d0060fe358893a849b29016}{LSM6\+DSO32\+\_\+\+GYRO\+\_\+\+Get\+\_\+\+DRDY\+\_\+\+Status}} (\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6\+DSO32\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj, uint8\+\_\+t \texorpdfstring{$\ast$}{*}Status)
+\begin{DoxyCompactList}\small\item\em Get the LSM6\+DSO32 GYRO data ready bit value. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{group___l_s_m6_d_s_o32___exported___functions_gabaca91335633231a82e28d1c06d2dbd2}{LSM6\+DSO32\+\_\+\+Set\+\_\+\+Mem\+\_\+\+Bank}} (\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6\+DSO32\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+Obj, uint8\+\_\+t Val)
+\begin{DoxyCompactList}\small\item\em Set memory bank. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsubsubsubsection{Detailed Description}
+
+
+\label{doc-func-members}
+\Hypertarget{group___l_s_m6_d_s_o32___exported___functions_doc-func-members}
+\doxysubsubsubsubsection{Function Documentation}
+\Hypertarget{group___l_s_m6_d_s_o32___exported___functions_ga00514bcd708417d8133993500eb9d03b}\index{LSM6DSO32 Exported Functions@{LSM6DSO32 Exported Functions}!LSM6DSO32\_ACC\_Disable@{LSM6DSO32\_ACC\_Disable}}
+\index{LSM6DSO32\_ACC\_Disable@{LSM6DSO32\_ACC\_Disable}!LSM6DSO32 Exported Functions@{LSM6DSO32 Exported Functions}}
+\doxysubsubsubsubsubsection{\texorpdfstring{LSM6DSO32\_ACC\_Disable()}{LSM6DSO32\_ACC\_Disable()}}
+{\footnotesize\ttfamily \label{group___l_s_m6_d_s_o32___exported___functions_ga00514bcd708417d8133993500eb9d03b} 
+int32\+\_\+t LSM6\+DSO32\+\_\+\+ACC\+\_\+\+Disable (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6\+DSO32\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{p\+Obj}{}\end{DoxyParamCaption})}
+
+
+
+Disable the LSM6\+DSO32 accelerometer sensor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Obj} & the device p\+Obj \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & in case of success, an error code otherwise \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group___l_s_m6_d_s_o32___exported___functions_ga93eb810fa2dc6fbf7071edfcd906ba55}\index{LSM6DSO32 Exported Functions@{LSM6DSO32 Exported Functions}!LSM6DSO32\_ACC\_Enable@{LSM6DSO32\_ACC\_Enable}}
+\index{LSM6DSO32\_ACC\_Enable@{LSM6DSO32\_ACC\_Enable}!LSM6DSO32 Exported Functions@{LSM6DSO32 Exported Functions}}
+\doxysubsubsubsubsubsection{\texorpdfstring{LSM6DSO32\_ACC\_Enable()}{LSM6DSO32\_ACC\_Enable()}}
+{\footnotesize\ttfamily \label{group___l_s_m6_d_s_o32___exported___functions_ga93eb810fa2dc6fbf7071edfcd906ba55} 
+int32\+\_\+t LSM6\+DSO32\+\_\+\+ACC\+\_\+\+Enable (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6\+DSO32\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{p\+Obj}{}\end{DoxyParamCaption})}
+
+
+
+Enable the LSM6\+DSO32 accelerometer sensor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Obj} & the device p\+Obj \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & in case of success, an error code otherwise \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group___l_s_m6_d_s_o32___exported___functions_ga8c23fe107242bb6a8c1a2cc9009494b9}\index{LSM6DSO32 Exported Functions@{LSM6DSO32 Exported Functions}!LSM6DSO32\_ACC\_Get\_DRDY\_Status@{LSM6DSO32\_ACC\_Get\_DRDY\_Status}}
+\index{LSM6DSO32\_ACC\_Get\_DRDY\_Status@{LSM6DSO32\_ACC\_Get\_DRDY\_Status}!LSM6DSO32 Exported Functions@{LSM6DSO32 Exported Functions}}
+\doxysubsubsubsubsubsection{\texorpdfstring{LSM6DSO32\_ACC\_Get\_DRDY\_Status()}{LSM6DSO32\_ACC\_Get\_DRDY\_Status()}}
+{\footnotesize\ttfamily \label{group___l_s_m6_d_s_o32___exported___functions_ga8c23fe107242bb6a8c1a2cc9009494b9} 
+int32\+\_\+t LSM6\+DSO32\+\_\+\+ACC\+\_\+\+Get\+\_\+\+DRDY\+\_\+\+Status (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6\+DSO32\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{p\+Obj}{, }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{Status}{}\end{DoxyParamCaption})}
+
+
+
+Get the LSM6\+DSO32 ACC data ready bit value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Obj} & the device p\+Obj \\
+\hline
+{\em Status} & the status of data ready bit \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & in case of success, an error code otherwise \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group___l_s_m6_d_s_o32___exported___functions_ga743ce4d5e7a50b7d29970ed6b7e1f818}\index{LSM6DSO32 Exported Functions@{LSM6DSO32 Exported Functions}!LSM6DSO32\_ACC\_GetAxes@{LSM6DSO32\_ACC\_GetAxes}}
+\index{LSM6DSO32\_ACC\_GetAxes@{LSM6DSO32\_ACC\_GetAxes}!LSM6DSO32 Exported Functions@{LSM6DSO32 Exported Functions}}
+\doxysubsubsubsubsubsection{\texorpdfstring{LSM6DSO32\_ACC\_GetAxes()}{LSM6DSO32\_ACC\_GetAxes()}}
+{\footnotesize\ttfamily \label{group___l_s_m6_d_s_o32___exported___functions_ga743ce4d5e7a50b7d29970ed6b7e1f818} 
+int32\+\_\+t LSM6\+DSO32\+\_\+\+ACC\+\_\+\+Get\+Axes (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6\+DSO32\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{p\+Obj}{, }\item[{\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___axes__t}{LSM6\+DSO32\+\_\+\+Axes\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{Acceleration}{}\end{DoxyParamCaption})}
+
+
+
+Get the LSM6\+DSO32 accelerometer sensor axes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Obj} & the device p\+Obj \\
+\hline
+{\em Acceleration} & pointer where the values of the axes are written \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & in case of success, an error code otherwise \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group___l_s_m6_d_s_o32___exported___functions_ga1deb0b5d91ce6afa7cace7765c3adfab}\index{LSM6DSO32 Exported Functions@{LSM6DSO32 Exported Functions}!LSM6DSO32\_ACC\_GetAxesRaw@{LSM6DSO32\_ACC\_GetAxesRaw}}
+\index{LSM6DSO32\_ACC\_GetAxesRaw@{LSM6DSO32\_ACC\_GetAxesRaw}!LSM6DSO32 Exported Functions@{LSM6DSO32 Exported Functions}}
+\doxysubsubsubsubsubsection{\texorpdfstring{LSM6DSO32\_ACC\_GetAxesRaw()}{LSM6DSO32\_ACC\_GetAxesRaw()}}
+{\footnotesize\ttfamily \label{group___l_s_m6_d_s_o32___exported___functions_ga1deb0b5d91ce6afa7cace7765c3adfab} 
+int32\+\_\+t LSM6\+DSO32\+\_\+\+ACC\+\_\+\+Get\+Axes\+Raw (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6\+DSO32\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{p\+Obj}{, }\item[{\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___axes_raw__t}{LSM6\+DSO32\+\_\+\+Axes\+Raw\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{Value}{}\end{DoxyParamCaption})}
+
+
+
+Get the LSM6\+DSO32 accelerometer sensor raw axes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Obj} & the device p\+Obj \\
+\hline
+{\em Value} & pointer where the raw values of the axes are written \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & in case of success, an error code otherwise \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group___l_s_m6_d_s_o32___exported___functions_ga3602b42981f8b1d9bd78a2e9347f5ffd}\index{LSM6DSO32 Exported Functions@{LSM6DSO32 Exported Functions}!LSM6DSO32\_ACC\_GetFullScale@{LSM6DSO32\_ACC\_GetFullScale}}
+\index{LSM6DSO32\_ACC\_GetFullScale@{LSM6DSO32\_ACC\_GetFullScale}!LSM6DSO32 Exported Functions@{LSM6DSO32 Exported Functions}}
+\doxysubsubsubsubsubsection{\texorpdfstring{LSM6DSO32\_ACC\_GetFullScale()}{LSM6DSO32\_ACC\_GetFullScale()}}
+{\footnotesize\ttfamily \label{group___l_s_m6_d_s_o32___exported___functions_ga3602b42981f8b1d9bd78a2e9347f5ffd} 
+int32\+\_\+t LSM6\+DSO32\+\_\+\+ACC\+\_\+\+Get\+Full\+Scale (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6\+DSO32\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{p\+Obj}{, }\item[{int32\+\_\+t \texorpdfstring{$\ast$}{*}}]{Full\+Scale}{}\end{DoxyParamCaption})}
+
+
+
+Get the LSM6\+DSO32 accelerometer sensor full scale. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Obj} & the device p\+Obj \\
+\hline
+{\em Full\+Scale} & pointer where the full scale is written \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & in case of success, an error code otherwise \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group___l_s_m6_d_s_o32___exported___functions_ga7e71a862f860bafef5e76ccbcd932187}\index{LSM6DSO32 Exported Functions@{LSM6DSO32 Exported Functions}!LSM6DSO32\_ACC\_GetOutputDataRate@{LSM6DSO32\_ACC\_GetOutputDataRate}}
+\index{LSM6DSO32\_ACC\_GetOutputDataRate@{LSM6DSO32\_ACC\_GetOutputDataRate}!LSM6DSO32 Exported Functions@{LSM6DSO32 Exported Functions}}
+\doxysubsubsubsubsubsection{\texorpdfstring{LSM6DSO32\_ACC\_GetOutputDataRate()}{LSM6DSO32\_ACC\_GetOutputDataRate()}}
+{\footnotesize\ttfamily \label{group___l_s_m6_d_s_o32___exported___functions_ga7e71a862f860bafef5e76ccbcd932187} 
+int32\+\_\+t LSM6\+DSO32\+\_\+\+ACC\+\_\+\+Get\+Output\+Data\+Rate (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6\+DSO32\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{p\+Obj}{, }\item[{float\+\_\+t \texorpdfstring{$\ast$}{*}}]{Odr}{}\end{DoxyParamCaption})}
+
+
+
+Get the LSM6\+DSO32 accelerometer sensor output data rate. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Obj} & the device p\+Obj \\
+\hline
+{\em Odr} & pointer where the output data rate is written \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & in case of success, an error code otherwise \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group___l_s_m6_d_s_o32___exported___functions_ga3d227e1d7e6707b7d0d93fd6a672a324}\index{LSM6DSO32 Exported Functions@{LSM6DSO32 Exported Functions}!LSM6DSO32\_ACC\_GetSensitivity@{LSM6DSO32\_ACC\_GetSensitivity}}
+\index{LSM6DSO32\_ACC\_GetSensitivity@{LSM6DSO32\_ACC\_GetSensitivity}!LSM6DSO32 Exported Functions@{LSM6DSO32 Exported Functions}}
+\doxysubsubsubsubsubsection{\texorpdfstring{LSM6DSO32\_ACC\_GetSensitivity()}{LSM6DSO32\_ACC\_GetSensitivity()}}
+{\footnotesize\ttfamily \label{group___l_s_m6_d_s_o32___exported___functions_ga3d227e1d7e6707b7d0d93fd6a672a324} 
+int32\+\_\+t LSM6\+DSO32\+\_\+\+ACC\+\_\+\+Get\+Sensitivity (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6\+DSO32\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{p\+Obj}{, }\item[{float\+\_\+t \texorpdfstring{$\ast$}{*}}]{Sensitivity}{}\end{DoxyParamCaption})}
+
+
+
+Get the LSM6\+DSO32 accelerometer sensor sensitivity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Obj} & the device p\+Obj \\
+\hline
+{\em Sensitivity} & pointer \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & in case of success, an error code otherwise \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group___l_s_m6_d_s_o32___exported___functions_ga3202b692b7e1753b92c1f00206172867}\index{LSM6DSO32 Exported Functions@{LSM6DSO32 Exported Functions}!LSM6DSO32\_ACC\_SetFullScale@{LSM6DSO32\_ACC\_SetFullScale}}
+\index{LSM6DSO32\_ACC\_SetFullScale@{LSM6DSO32\_ACC\_SetFullScale}!LSM6DSO32 Exported Functions@{LSM6DSO32 Exported Functions}}
+\doxysubsubsubsubsubsection{\texorpdfstring{LSM6DSO32\_ACC\_SetFullScale()}{LSM6DSO32\_ACC\_SetFullScale()}}
+{\footnotesize\ttfamily \label{group___l_s_m6_d_s_o32___exported___functions_ga3202b692b7e1753b92c1f00206172867} 
+int32\+\_\+t LSM6\+DSO32\+\_\+\+ACC\+\_\+\+Set\+Full\+Scale (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6\+DSO32\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{p\+Obj}{, }\item[{int32\+\_\+t}]{Full\+Scale}{}\end{DoxyParamCaption})}
+
+
+
+Set the LSM6\+DSO32 accelerometer sensor full scale. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Obj} & the device p\+Obj \\
+\hline
+{\em Full\+Scale} & the functional full scale to be set \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & in case of success, an error code otherwise \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group___l_s_m6_d_s_o32___exported___functions_ga7d3787de56f4fd3f6e47c71503fb8e59}\index{LSM6DSO32 Exported Functions@{LSM6DSO32 Exported Functions}!LSM6DSO32\_ACC\_SetOutputDataRate@{LSM6DSO32\_ACC\_SetOutputDataRate}}
+\index{LSM6DSO32\_ACC\_SetOutputDataRate@{LSM6DSO32\_ACC\_SetOutputDataRate}!LSM6DSO32 Exported Functions@{LSM6DSO32 Exported Functions}}
+\doxysubsubsubsubsubsection{\texorpdfstring{LSM6DSO32\_ACC\_SetOutputDataRate()}{LSM6DSO32\_ACC\_SetOutputDataRate()}}
+{\footnotesize\ttfamily \label{group___l_s_m6_d_s_o32___exported___functions_ga7d3787de56f4fd3f6e47c71503fb8e59} 
+int32\+\_\+t LSM6\+DSO32\+\_\+\+ACC\+\_\+\+Set\+Output\+Data\+Rate (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6\+DSO32\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{p\+Obj}{, }\item[{float\+\_\+t}]{Odr}{}\end{DoxyParamCaption})}
+
+
+
+Set the LSM6\+DSO32 accelerometer sensor output data rate. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Obj} & the device p\+Obj \\
+\hline
+{\em Odr} & the output data rate value to be set \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & in case of success, an error code otherwise \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group___l_s_m6_d_s_o32___exported___functions_gabb91f51cda3310f73135bdf7e3eadb7e}\index{LSM6DSO32 Exported Functions@{LSM6DSO32 Exported Functions}!LSM6DSO32\_ACC\_SetOutputDataRate\_With\_Mode@{LSM6DSO32\_ACC\_SetOutputDataRate\_With\_Mode}}
+\index{LSM6DSO32\_ACC\_SetOutputDataRate\_With\_Mode@{LSM6DSO32\_ACC\_SetOutputDataRate\_With\_Mode}!LSM6DSO32 Exported Functions@{LSM6DSO32 Exported Functions}}
+\doxysubsubsubsubsubsection{\texorpdfstring{LSM6DSO32\_ACC\_SetOutputDataRate\_With\_Mode()}{LSM6DSO32\_ACC\_SetOutputDataRate\_With\_Mode()}}
+{\footnotesize\ttfamily \label{group___l_s_m6_d_s_o32___exported___functions_gabb91f51cda3310f73135bdf7e3eadb7e} 
+int32\+\_\+t LSM6\+DSO32\+\_\+\+ACC\+\_\+\+Set\+Output\+Data\+Rate\+\_\+\+With\+\_\+\+Mode (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6\+DSO32\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{p\+Obj}{, }\item[{float\+\_\+t}]{Odr}{, }\item[{LSM6\+DSO32\+\_\+\+ACC\+\_\+\+Operating\+\_\+\+Mode\+\_\+t}]{Mode}{}\end{DoxyParamCaption})}
+
+
+
+Set the LSM6\+DSO32 accelerometer sensor output data rate with operating mode. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Obj} & the device p\+Obj \\
+\hline
+{\em Odr} & the output data rate value to be set \\
+\hline
+{\em Mode} & the accelerometer operating mode \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+This function switches off the gyroscope if Ultra Low Power Mode is set 
+\end{DoxyNote}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & in case of success, an error code otherwise \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group___l_s_m6_d_s_o32___exported___functions_ga5de0f6c94656a1aa25cc725a801f0a3d}\index{LSM6DSO32 Exported Functions@{LSM6DSO32 Exported Functions}!LSM6DSO32\_DeInit@{LSM6DSO32\_DeInit}}
+\index{LSM6DSO32\_DeInit@{LSM6DSO32\_DeInit}!LSM6DSO32 Exported Functions@{LSM6DSO32 Exported Functions}}
+\doxysubsubsubsubsubsection{\texorpdfstring{LSM6DSO32\_DeInit()}{LSM6DSO32\_DeInit()}}
+{\footnotesize\ttfamily \label{group___l_s_m6_d_s_o32___exported___functions_ga5de0f6c94656a1aa25cc725a801f0a3d} 
+int32\+\_\+t LSM6\+DSO32\+\_\+\+De\+Init (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6\+DSO32\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{p\+Obj}{}\end{DoxyParamCaption})}
+
+
+
+Deinitialize the LSM6\+DSO32 sensor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Obj} & the device p\+Obj \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & in case of success, an error code otherwise \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group___l_s_m6_d_s_o32___exported___functions_ga84bcc198f533e55a8c7091374ce25502}\index{LSM6DSO32 Exported Functions@{LSM6DSO32 Exported Functions}!LSM6DSO32\_GetCapabilities@{LSM6DSO32\_GetCapabilities}}
+\index{LSM6DSO32\_GetCapabilities@{LSM6DSO32\_GetCapabilities}!LSM6DSO32 Exported Functions@{LSM6DSO32 Exported Functions}}
+\doxysubsubsubsubsubsection{\texorpdfstring{LSM6DSO32\_GetCapabilities()}{LSM6DSO32\_GetCapabilities()}}
+{\footnotesize\ttfamily \label{group___l_s_m6_d_s_o32___exported___functions_ga84bcc198f533e55a8c7091374ce25502} 
+int32\+\_\+t LSM6\+DSO32\+\_\+\+Get\+Capabilities (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6\+DSO32\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{p\+Obj}{, }\item[{\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___capabilities__t}{LSM6\+DSO32\+\_\+\+Capabilities\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{Capabilities}{}\end{DoxyParamCaption})}
+
+
+
+Get LSM6\+DSO32 sensor capabilities. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Obj} & Component object pointer \\
+\hline
+{\em Capabilities} & pointer to LSM6\+DSO32 sensor capabilities \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & in case of success, an error code otherwise \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group___l_s_m6_d_s_o32___exported___functions_ga998615e31de94c531025722231fb8d78}\index{LSM6DSO32 Exported Functions@{LSM6DSO32 Exported Functions}!LSM6DSO32\_GYRO\_Disable@{LSM6DSO32\_GYRO\_Disable}}
+\index{LSM6DSO32\_GYRO\_Disable@{LSM6DSO32\_GYRO\_Disable}!LSM6DSO32 Exported Functions@{LSM6DSO32 Exported Functions}}
+\doxysubsubsubsubsubsection{\texorpdfstring{LSM6DSO32\_GYRO\_Disable()}{LSM6DSO32\_GYRO\_Disable()}}
+{\footnotesize\ttfamily \label{group___l_s_m6_d_s_o32___exported___functions_ga998615e31de94c531025722231fb8d78} 
+int32\+\_\+t LSM6\+DSO32\+\_\+\+GYRO\+\_\+\+Disable (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6\+DSO32\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{p\+Obj}{}\end{DoxyParamCaption})}
+
+
+
+Disable the LSM6\+DSO32 gyroscope sensor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Obj} & the device p\+Obj \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & in case of success, an error code otherwise \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group___l_s_m6_d_s_o32___exported___functions_ga67bb91b304ae1221925c23749de5d864}\index{LSM6DSO32 Exported Functions@{LSM6DSO32 Exported Functions}!LSM6DSO32\_GYRO\_Enable@{LSM6DSO32\_GYRO\_Enable}}
+\index{LSM6DSO32\_GYRO\_Enable@{LSM6DSO32\_GYRO\_Enable}!LSM6DSO32 Exported Functions@{LSM6DSO32 Exported Functions}}
+\doxysubsubsubsubsubsection{\texorpdfstring{LSM6DSO32\_GYRO\_Enable()}{LSM6DSO32\_GYRO\_Enable()}}
+{\footnotesize\ttfamily \label{group___l_s_m6_d_s_o32___exported___functions_ga67bb91b304ae1221925c23749de5d864} 
+int32\+\_\+t LSM6\+DSO32\+\_\+\+GYRO\+\_\+\+Enable (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6\+DSO32\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{p\+Obj}{}\end{DoxyParamCaption})}
+
+
+
+Enable the LSM6\+DSO32 gyroscope sensor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Obj} & the device p\+Obj \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & in case of success, an error code otherwise \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group___l_s_m6_d_s_o32___exported___functions_ga15b750708d0060fe358893a849b29016}\index{LSM6DSO32 Exported Functions@{LSM6DSO32 Exported Functions}!LSM6DSO32\_GYRO\_Get\_DRDY\_Status@{LSM6DSO32\_GYRO\_Get\_DRDY\_Status}}
+\index{LSM6DSO32\_GYRO\_Get\_DRDY\_Status@{LSM6DSO32\_GYRO\_Get\_DRDY\_Status}!LSM6DSO32 Exported Functions@{LSM6DSO32 Exported Functions}}
+\doxysubsubsubsubsubsection{\texorpdfstring{LSM6DSO32\_GYRO\_Get\_DRDY\_Status()}{LSM6DSO32\_GYRO\_Get\_DRDY\_Status()}}
+{\footnotesize\ttfamily \label{group___l_s_m6_d_s_o32___exported___functions_ga15b750708d0060fe358893a849b29016} 
+int32\+\_\+t LSM6\+DSO32\+\_\+\+GYRO\+\_\+\+Get\+\_\+\+DRDY\+\_\+\+Status (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6\+DSO32\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{p\+Obj}{, }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{Status}{}\end{DoxyParamCaption})}
+
+
+
+Get the LSM6\+DSO32 GYRO data ready bit value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Obj} & the device p\+Obj \\
+\hline
+{\em Status} & the status of data ready bit \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & in case of success, an error code otherwise \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group___l_s_m6_d_s_o32___exported___functions_ga551615b8ea5610e625918d817e717c87}\index{LSM6DSO32 Exported Functions@{LSM6DSO32 Exported Functions}!LSM6DSO32\_GYRO\_GetAxes@{LSM6DSO32\_GYRO\_GetAxes}}
+\index{LSM6DSO32\_GYRO\_GetAxes@{LSM6DSO32\_GYRO\_GetAxes}!LSM6DSO32 Exported Functions@{LSM6DSO32 Exported Functions}}
+\doxysubsubsubsubsubsection{\texorpdfstring{LSM6DSO32\_GYRO\_GetAxes()}{LSM6DSO32\_GYRO\_GetAxes()}}
+{\footnotesize\ttfamily \label{group___l_s_m6_d_s_o32___exported___functions_ga551615b8ea5610e625918d817e717c87} 
+int32\+\_\+t LSM6\+DSO32\+\_\+\+GYRO\+\_\+\+Get\+Axes (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6\+DSO32\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{p\+Obj}{, }\item[{\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___axes__t}{LSM6\+DSO32\+\_\+\+Axes\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{Angular\+Rate}{}\end{DoxyParamCaption})}
+
+
+
+Get the LSM6\+DSO32 gyroscope sensor axes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Obj} & the device p\+Obj \\
+\hline
+{\em Angular\+Rate} & pointer where the values of the axes are written \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & in case of success, an error code otherwise \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group___l_s_m6_d_s_o32___exported___functions_gabb6ebb641850efc5ee3f8090eeed06cf}\index{LSM6DSO32 Exported Functions@{LSM6DSO32 Exported Functions}!LSM6DSO32\_GYRO\_GetAxesRaw@{LSM6DSO32\_GYRO\_GetAxesRaw}}
+\index{LSM6DSO32\_GYRO\_GetAxesRaw@{LSM6DSO32\_GYRO\_GetAxesRaw}!LSM6DSO32 Exported Functions@{LSM6DSO32 Exported Functions}}
+\doxysubsubsubsubsubsection{\texorpdfstring{LSM6DSO32\_GYRO\_GetAxesRaw()}{LSM6DSO32\_GYRO\_GetAxesRaw()}}
+{\footnotesize\ttfamily \label{group___l_s_m6_d_s_o32___exported___functions_gabb6ebb641850efc5ee3f8090eeed06cf} 
+int32\+\_\+t LSM6\+DSO32\+\_\+\+GYRO\+\_\+\+Get\+Axes\+Raw (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6\+DSO32\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{p\+Obj}{, }\item[{\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___axes_raw__t}{LSM6\+DSO32\+\_\+\+Axes\+Raw\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{Value}{}\end{DoxyParamCaption})}
+
+
+
+Get the LSM6\+DSO32 gyroscope sensor raw axes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Obj} & the device p\+Obj \\
+\hline
+{\em Value} & pointer where the raw values of the axes are written \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & in case of success, an error code otherwise \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group___l_s_m6_d_s_o32___exported___functions_gadc011c2c0ea0b598b3c1a8d3d618424f}\index{LSM6DSO32 Exported Functions@{LSM6DSO32 Exported Functions}!LSM6DSO32\_GYRO\_GetFullScale@{LSM6DSO32\_GYRO\_GetFullScale}}
+\index{LSM6DSO32\_GYRO\_GetFullScale@{LSM6DSO32\_GYRO\_GetFullScale}!LSM6DSO32 Exported Functions@{LSM6DSO32 Exported Functions}}
+\doxysubsubsubsubsubsection{\texorpdfstring{LSM6DSO32\_GYRO\_GetFullScale()}{LSM6DSO32\_GYRO\_GetFullScale()}}
+{\footnotesize\ttfamily \label{group___l_s_m6_d_s_o32___exported___functions_gadc011c2c0ea0b598b3c1a8d3d618424f} 
+int32\+\_\+t LSM6\+DSO32\+\_\+\+GYRO\+\_\+\+Get\+Full\+Scale (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6\+DSO32\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{p\+Obj}{, }\item[{int32\+\_\+t \texorpdfstring{$\ast$}{*}}]{Full\+Scale}{}\end{DoxyParamCaption})}
+
+
+
+Get the LSM6\+DSO32 gyroscope sensor full scale. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Obj} & the device p\+Obj \\
+\hline
+{\em Full\+Scale} & pointer where the full scale is written \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & in case of success, an error code otherwise \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group___l_s_m6_d_s_o32___exported___functions_gab227ad1c2216cb9c0128b1885b09d33b}\index{LSM6DSO32 Exported Functions@{LSM6DSO32 Exported Functions}!LSM6DSO32\_GYRO\_GetOutputDataRate@{LSM6DSO32\_GYRO\_GetOutputDataRate}}
+\index{LSM6DSO32\_GYRO\_GetOutputDataRate@{LSM6DSO32\_GYRO\_GetOutputDataRate}!LSM6DSO32 Exported Functions@{LSM6DSO32 Exported Functions}}
+\doxysubsubsubsubsubsection{\texorpdfstring{LSM6DSO32\_GYRO\_GetOutputDataRate()}{LSM6DSO32\_GYRO\_GetOutputDataRate()}}
+{\footnotesize\ttfamily \label{group___l_s_m6_d_s_o32___exported___functions_gab227ad1c2216cb9c0128b1885b09d33b} 
+int32\+\_\+t LSM6\+DSO32\+\_\+\+GYRO\+\_\+\+Get\+Output\+Data\+Rate (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6\+DSO32\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{p\+Obj}{, }\item[{float\+\_\+t \texorpdfstring{$\ast$}{*}}]{Odr}{}\end{DoxyParamCaption})}
+
+
+
+Get the LSM6\+DSO32 gyroscope sensor output data rate. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Obj} & the device p\+Obj \\
+\hline
+{\em Odr} & pointer where the output data rate is written \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & in case of success, an error code otherwise \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group___l_s_m6_d_s_o32___exported___functions_gaf66bc1f6fe95635d7cb835b28bed8800}\index{LSM6DSO32 Exported Functions@{LSM6DSO32 Exported Functions}!LSM6DSO32\_GYRO\_GetSensitivity@{LSM6DSO32\_GYRO\_GetSensitivity}}
+\index{LSM6DSO32\_GYRO\_GetSensitivity@{LSM6DSO32\_GYRO\_GetSensitivity}!LSM6DSO32 Exported Functions@{LSM6DSO32 Exported Functions}}
+\doxysubsubsubsubsubsection{\texorpdfstring{LSM6DSO32\_GYRO\_GetSensitivity()}{LSM6DSO32\_GYRO\_GetSensitivity()}}
+{\footnotesize\ttfamily \label{group___l_s_m6_d_s_o32___exported___functions_gaf66bc1f6fe95635d7cb835b28bed8800} 
+int32\+\_\+t LSM6\+DSO32\+\_\+\+GYRO\+\_\+\+Get\+Sensitivity (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6\+DSO32\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{p\+Obj}{, }\item[{float\+\_\+t \texorpdfstring{$\ast$}{*}}]{Sensitivity}{}\end{DoxyParamCaption})}
+
+
+
+Get the LSM6\+DSO32 gyroscope sensor sensitivity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Obj} & the device p\+Obj \\
+\hline
+{\em Sensitivity} & pointer \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & in case of success, an error code otherwise \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group___l_s_m6_d_s_o32___exported___functions_gacb2df6b47c5d6ef897261758160ad610}\index{LSM6DSO32 Exported Functions@{LSM6DSO32 Exported Functions}!LSM6DSO32\_GYRO\_SetFullScale@{LSM6DSO32\_GYRO\_SetFullScale}}
+\index{LSM6DSO32\_GYRO\_SetFullScale@{LSM6DSO32\_GYRO\_SetFullScale}!LSM6DSO32 Exported Functions@{LSM6DSO32 Exported Functions}}
+\doxysubsubsubsubsubsection{\texorpdfstring{LSM6DSO32\_GYRO\_SetFullScale()}{LSM6DSO32\_GYRO\_SetFullScale()}}
+{\footnotesize\ttfamily \label{group___l_s_m6_d_s_o32___exported___functions_gacb2df6b47c5d6ef897261758160ad610} 
+int32\+\_\+t LSM6\+DSO32\+\_\+\+GYRO\+\_\+\+Set\+Full\+Scale (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6\+DSO32\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{p\+Obj}{, }\item[{int32\+\_\+t}]{Full\+Scale}{}\end{DoxyParamCaption})}
+
+
+
+Set the LSM6\+DSO32 gyroscope sensor full scale. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Obj} & the device p\+Obj \\
+\hline
+{\em Full\+Scale} & the functional full scale to be set \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & in case of success, an error code otherwise \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group___l_s_m6_d_s_o32___exported___functions_ga0eb3f9628e321a955be9b2f8bc5ed9f2}\index{LSM6DSO32 Exported Functions@{LSM6DSO32 Exported Functions}!LSM6DSO32\_GYRO\_SetOutputDataRate@{LSM6DSO32\_GYRO\_SetOutputDataRate}}
+\index{LSM6DSO32\_GYRO\_SetOutputDataRate@{LSM6DSO32\_GYRO\_SetOutputDataRate}!LSM6DSO32 Exported Functions@{LSM6DSO32 Exported Functions}}
+\doxysubsubsubsubsubsection{\texorpdfstring{LSM6DSO32\_GYRO\_SetOutputDataRate()}{LSM6DSO32\_GYRO\_SetOutputDataRate()}}
+{\footnotesize\ttfamily \label{group___l_s_m6_d_s_o32___exported___functions_ga0eb3f9628e321a955be9b2f8bc5ed9f2} 
+int32\+\_\+t LSM6\+DSO32\+\_\+\+GYRO\+\_\+\+Set\+Output\+Data\+Rate (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6\+DSO32\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{p\+Obj}{, }\item[{float\+\_\+t}]{Odr}{}\end{DoxyParamCaption})}
+
+
+
+Set the LSM6\+DSO32 gyroscope sensor output data rate. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Obj} & the device p\+Obj \\
+\hline
+{\em Odr} & the output data rate value to be set \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & in case of success, an error code otherwise \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group___l_s_m6_d_s_o32___exported___functions_gad47e8acc9908af596db33cfb55876805}\index{LSM6DSO32 Exported Functions@{LSM6DSO32 Exported Functions}!LSM6DSO32\_GYRO\_SetOutputDataRate\_With\_Mode@{LSM6DSO32\_GYRO\_SetOutputDataRate\_With\_Mode}}
+\index{LSM6DSO32\_GYRO\_SetOutputDataRate\_With\_Mode@{LSM6DSO32\_GYRO\_SetOutputDataRate\_With\_Mode}!LSM6DSO32 Exported Functions@{LSM6DSO32 Exported Functions}}
+\doxysubsubsubsubsubsection{\texorpdfstring{LSM6DSO32\_GYRO\_SetOutputDataRate\_With\_Mode()}{LSM6DSO32\_GYRO\_SetOutputDataRate\_With\_Mode()}}
+{\footnotesize\ttfamily \label{group___l_s_m6_d_s_o32___exported___functions_gad47e8acc9908af596db33cfb55876805} 
+int32\+\_\+t LSM6\+DSO32\+\_\+\+GYRO\+\_\+\+Set\+Output\+Data\+Rate\+\_\+\+With\+\_\+\+Mode (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6\+DSO32\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{p\+Obj}{, }\item[{float\+\_\+t}]{Odr}{, }\item[{LSM6\+DSO32\+\_\+\+GYRO\+\_\+\+Operating\+\_\+\+Mode\+\_\+t}]{Mode}{}\end{DoxyParamCaption})}
+
+
+
+Set the LSM6\+DSO32 gyroscope sensor output data rate with operating mode. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Obj} & the device p\+Obj \\
+\hline
+{\em Odr} & the output data rate value to be set \\
+\hline
+{\em Mode} & the gyroscope operating mode \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & in case of success, an error code otherwise \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group___l_s_m6_d_s_o32___exported___functions_gae1cef97d1d85138a04cd70da5892a342}\index{LSM6DSO32 Exported Functions@{LSM6DSO32 Exported Functions}!LSM6DSO32\_Init@{LSM6DSO32\_Init}}
+\index{LSM6DSO32\_Init@{LSM6DSO32\_Init}!LSM6DSO32 Exported Functions@{LSM6DSO32 Exported Functions}}
+\doxysubsubsubsubsubsection{\texorpdfstring{LSM6DSO32\_Init()}{LSM6DSO32\_Init()}}
+{\footnotesize\ttfamily \label{group___l_s_m6_d_s_o32___exported___functions_gae1cef97d1d85138a04cd70da5892a342} 
+int32\+\_\+t LSM6\+DSO32\+\_\+\+Init (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6\+DSO32\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{p\+Obj}{}\end{DoxyParamCaption})}
+
+
+
+Initialize the LSM6\+DSO32 sensor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Obj} & the device p\+Obj \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & in case of success, an error code otherwise \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group___l_s_m6_d_s_o32___exported___functions_gab2a8496b45fe6317364fd3863e2d82e3}\index{LSM6DSO32 Exported Functions@{LSM6DSO32 Exported Functions}!LSM6DSO32\_Read\_Reg@{LSM6DSO32\_Read\_Reg}}
+\index{LSM6DSO32\_Read\_Reg@{LSM6DSO32\_Read\_Reg}!LSM6DSO32 Exported Functions@{LSM6DSO32 Exported Functions}}
+\doxysubsubsubsubsubsection{\texorpdfstring{LSM6DSO32\_Read\_Reg()}{LSM6DSO32\_Read\_Reg()}}
+{\footnotesize\ttfamily \label{group___l_s_m6_d_s_o32___exported___functions_gab2a8496b45fe6317364fd3863e2d82e3} 
+int32\+\_\+t LSM6\+DSO32\+\_\+\+Read\+\_\+\+Reg (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6\+DSO32\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{p\+Obj}{, }\item[{uint8\+\_\+t}]{Reg}{, }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{Data}{}\end{DoxyParamCaption})}
+
+
+
+Get the LSM6\+DSO32 register value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Obj} & the device p\+Obj \\
+\hline
+{\em Reg} & address to be read \\
+\hline
+{\em Data} & pointer where the value is written \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & in case of success, an error code otherwise \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group___l_s_m6_d_s_o32___exported___functions_ga150360ba7ffb226d5de0c9451cbcac84}\index{LSM6DSO32 Exported Functions@{LSM6DSO32 Exported Functions}!LSM6DSO32\_ReadID@{LSM6DSO32\_ReadID}}
+\index{LSM6DSO32\_ReadID@{LSM6DSO32\_ReadID}!LSM6DSO32 Exported Functions@{LSM6DSO32 Exported Functions}}
+\doxysubsubsubsubsubsection{\texorpdfstring{LSM6DSO32\_ReadID()}{LSM6DSO32\_ReadID()}}
+{\footnotesize\ttfamily \label{group___l_s_m6_d_s_o32___exported___functions_ga150360ba7ffb226d5de0c9451cbcac84} 
+int32\+\_\+t LSM6\+DSO32\+\_\+\+Read\+ID (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6\+DSO32\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{p\+Obj}{, }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{Id}{}\end{DoxyParamCaption})}
+
+
+
+Read component ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Obj} & the device p\+Obj \\
+\hline
+{\em Id} & the WHO\+\_\+\+AM\+\_\+I value \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & in case of success, an error code otherwise \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group___l_s_m6_d_s_o32___exported___functions_ga11aff8499ff27572ea29326de162d850}\index{LSM6DSO32 Exported Functions@{LSM6DSO32 Exported Functions}!LSM6DSO32\_RegisterBusIO@{LSM6DSO32\_RegisterBusIO}}
+\index{LSM6DSO32\_RegisterBusIO@{LSM6DSO32\_RegisterBusIO}!LSM6DSO32 Exported Functions@{LSM6DSO32 Exported Functions}}
+\doxysubsubsubsubsubsection{\texorpdfstring{LSM6DSO32\_RegisterBusIO()}{LSM6DSO32\_RegisterBusIO()}}
+{\footnotesize\ttfamily \label{group___l_s_m6_d_s_o32___exported___functions_ga11aff8499ff27572ea29326de162d850} 
+int32\+\_\+t LSM6\+DSO32\+\_\+\+Register\+Bus\+IO (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6\+DSO32\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{p\+Obj}{, }\item[{\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___i_o__t}{LSM6\+DSO32\+\_\+\+IO\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{p\+IO}{}\end{DoxyParamCaption})}
+
+
+
+Register Component Bus IO operations. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Obj} & the device p\+Obj \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & in case of success, an error code otherwise \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group___l_s_m6_d_s_o32___exported___functions_gabaca91335633231a82e28d1c06d2dbd2}\index{LSM6DSO32 Exported Functions@{LSM6DSO32 Exported Functions}!LSM6DSO32\_Set\_Mem\_Bank@{LSM6DSO32\_Set\_Mem\_Bank}}
+\index{LSM6DSO32\_Set\_Mem\_Bank@{LSM6DSO32\_Set\_Mem\_Bank}!LSM6DSO32 Exported Functions@{LSM6DSO32 Exported Functions}}
+\doxysubsubsubsubsubsection{\texorpdfstring{LSM6DSO32\_Set\_Mem\_Bank()}{LSM6DSO32\_Set\_Mem\_Bank()}}
+{\footnotesize\ttfamily \label{group___l_s_m6_d_s_o32___exported___functions_gabaca91335633231a82e28d1c06d2dbd2} 
+int32\+\_\+t LSM6\+DSO32\+\_\+\+Set\+\_\+\+Mem\+\_\+\+Bank (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6\+DSO32\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{p\+Obj}{, }\item[{uint8\+\_\+t}]{Val}{}\end{DoxyParamCaption})}
+
+
+
+Set memory bank. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Obj} & the device p\+Obj \\
+\hline
+{\em Val} & the value of memory bank in reg FUNC\+\_\+\+CFG\+\_\+\+ACCESS 0 -\/ LSM6\+DSO32\+\_\+\+USER\+\_\+\+BANK, 1 -\/ LSM6\+DSO32\+\_\+\+SENSOR\+\_\+\+HUB\+\_\+\+BANK, 2 -\/ LSM6\+DSO32\+\_\+\+EMBEDDED\+\_\+\+FUNC\+\_\+\+BANK \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & in case of success, an error code otherwise \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{group___l_s_m6_d_s_o32___exported___functions_ga0b22103b87f6e5a4c5fea54a026bc851}\index{LSM6DSO32 Exported Functions@{LSM6DSO32 Exported Functions}!LSM6DSO32\_Write\_Reg@{LSM6DSO32\_Write\_Reg}}
+\index{LSM6DSO32\_Write\_Reg@{LSM6DSO32\_Write\_Reg}!LSM6DSO32 Exported Functions@{LSM6DSO32 Exported Functions}}
+\doxysubsubsubsubsubsection{\texorpdfstring{LSM6DSO32\_Write\_Reg()}{LSM6DSO32\_Write\_Reg()}}
+{\footnotesize\ttfamily \label{group___l_s_m6_d_s_o32___exported___functions_ga0b22103b87f6e5a4c5fea54a026bc851} 
+int32\+\_\+t LSM6\+DSO32\+\_\+\+Write\+\_\+\+Reg (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_l_s_m6_d_s_o32___object__t}{LSM6\+DSO32\+\_\+\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{p\+Obj}{, }\item[{uint8\+\_\+t}]{Reg}{, }\item[{uint8\+\_\+t}]{Data}{}\end{DoxyParamCaption})}
+
+
+
+Set the LSM6\+DSO32 register value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Obj} & the device p\+Obj \\
+\hline
+{\em Reg} & address to be written \\
+\hline
+{\em Data} & value to be written \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & in case of success, an error code otherwise \\
+\hline
+\end{DoxyRetVals}
