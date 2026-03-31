@@ -80,6 +80,19 @@ void Error_Handler(void);
 
 /* USER CODE BEGIN Private defines */
 
+/* Adding a struct for the motor power. */
+
+/** @brief A struct which is used to store the analogue data received
+ * from the controller or by over BLE.
+ */
+typedef struct{
+  float forward_backward;
+  float left_right;
+} joyStick_values_t;
+
+extern joyStick_values_t joyStickValues; 
+
+
 /* USER CODE END Private defines */
 
 #ifdef __cplusplus

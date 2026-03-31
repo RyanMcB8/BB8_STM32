@@ -57,7 +57,9 @@ typedef struct
 
 /* Private macros -------------------------------------------------------------*/
 /* USER CODE BEGIN PM */
-
+void data_send_notification_task(void);
+static void num_to_char_to_val(char *buf, float num);
+static void int_to_char_to_val(char *buf, uint16_t num);
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
@@ -87,7 +89,9 @@ static void Custom_D11c_Update_Char(void);
 static void Custom_D11c_Send_Notification(void);
 
 /* USER CODE BEGIN PFP */
-
+uint16_t packetCount = 0;
+uint8_t NotificationStatus;
+tBleStatus status;
 /* USER CODE END PFP */
 
 /* Functions Definition ------------------------------------------------------*/
@@ -204,7 +208,36 @@ void Custom_APP_Init(void)
 }
 
 /* USER CODE BEGIN FD */
+void data_send_notification(void)
+{
+  uint8_t buffer[300] = {0}; // BLE characteristic buffer
+  
+  // ====================================================================== //
+  // ========================= STANDARD DATA ============================== //
+  // ====================================================================== //
+  strcat((char *)buffer, "{\"cmd\":9,\"data\":{");
+  
+  /* Add any data which should be transmitted to the controller here. This
+    may be battery level or speed etc. */
+  
+  packetCount++;
+  
+  strcat((char *)buffer, ", \"nP\":");
+  int_to_char_to_val((char *)buffer, packetCount);
+  
+  strcat((char *)buffer, "}}");//*/
+  
+  // ====================================================================== //
+  // ========================= STANDARD DATA END ========================== //
+  // ====================================================================== //
+  
+  int len = strlen((char *)buffer);
 
+  if (NotificationStatus)
+  {
+      status = Custom_STM_App_Update_Char_Variable_Length(CUSTOM_STM_D11A, buffer, len);
+  }
+}
 /* USER CODE END FD */
 
 /*************************************************************
@@ -294,5 +327,42 @@ void Custom_D11c_Send_Notification(void) /* Property Notification */
 }
 
 /* USER CODE BEGIN FD_LOCAL_FUNCTIONS*/
+/**
+ * @brief  Converts float number to string, clips large values, handles negatives
+ * @param  buf output string buffer
+ * @param  num value to be converted
+ * @retval None
+ */
+static void num_to_char_to_val(char *buf, float num)
+{
+  char str_buf[10] = {0};
 
+  if (num < 0)
+  {
+    num = -num;
+    strcat(buf, "-"); // Add minus sign if negative
+  }
+
+  if (num > 10000)
+  {
+    num = 10000; // Limit number to avoid overflow
+  }
+  
+  sprintf(str_buf, "%.5f", (double)num); // Convert float to string with 5 decimal places
+  
+  strcat(buf, str_buf);                  // Append to JSON buffer
+}
+
+/**
+ * @brief  Converts float number to string, clips large values, handles negatives
+ * @param  buf output string buffer
+ * @param  num value to be converted
+ * @retval None
+ */
+static void int_to_char_to_val(char *buf, uint16_t num)
+{
+  char str_buf[6] = {0};
+  sprintf(str_buf, "%u", (uint16_t)num);   // Convert int to string 
+  strcat(buf, str_buf);                  // Append to JSON buffer
+}
 /* USER CODE END FD_LOCAL_FUNCTIONS*/

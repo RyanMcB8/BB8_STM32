@@ -54,7 +54,7 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
-
+joyStick_values_t joyStickValues; 
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/

@@ -23,7 +23,7 @@
 #include "custom_stm.h"
 
 /* USER CODE BEGIN Includes */
-
+#include "main.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -83,7 +83,10 @@ static CustomContext_t CustomContext;
  */
 
 /* USER CODE BEGIN PV */
+char g_ble_recv_data[512] = {0}; /* Buffer to hold the received data */
+int g_ble_recv_data_len = 0;     /* Length of the received data */
 
+void data_ble_process_recv_data(void);
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -92,7 +95,7 @@ static SVCCTL_EvtAckStatus_t Custom_STM_Event_Handler(void *pckt);
 static tBleStatus Generic_STM_App_Update_Char_Ext(uint16_t ConnectionHandle, uint16_t ServiceHandle, uint16_t CharHandle, uint16_t CharValueLen, uint8_t *pPayload);
 
 /* USER CODE BEGIN PFP */
-
+tBleStatus response_status;
 /* USER CODE END PFP */
 
 /* Functions Definition ------------------------------------------------------*/
@@ -274,6 +277,25 @@ static SVCCTL_EvtAckStatus_t Custom_STM_Event_Handler(void *Event)
             return_value = SVCCTL_EvtAckFlowEnable;
             /* Allow or reject a write request from a client using aci_gatt_write_resp(...) function */
             /*USER CODE BEGIN CUSTOM_STM_Service_1_Char_2_ACI_GATT_WRITE_PERMIT_REQ_VSEVT_CODE */
+
+            // Handle the write request data
+            memset(g_ble_recv_data, 0, sizeof(g_ble_recv_data));
+            memcpy(g_ble_recv_data, write_perm_req->Data, write_perm_req->Data_Length);
+            g_ble_recv_data_len = write_perm_req->Data_Length;
+            data_ble_process_recv_data();
+
+            response_status = aci_gatt_write_resp(
+                write_perm_req->Connection_Handle,
+                write_perm_req->Attribute_Handle,
+                0x00,      // Write_status: success
+                0x00,      // Error_Code: no error
+                write_perm_req->Data_Length,
+                (uint8_t *)&write_perm_req->Data[0]
+            );
+            if(response_status != BLE_STATUS_SUCCESS)
+            {
+              /* Handle that there has been an error in the transmission of the response. */
+            }
 
             /*USER CODE END CUSTOM_STM_Service_1_Char_2_ACI_GATT_WRITE_PERMIT_REQ_VSEVT_CODE*/
           } /*if (write_perm_req->Attribute_Handle == (CustomContext.CustomC44DHdle + CHARACTERISTIC_VALUE_ATTRIBUTE_OFFSET))*/
@@ -923,3 +945,63 @@ static tBleStatus Generic_STM_App_Update_Char_Ext(uint16_t ConnectionHandle, uin
   return ret;
 }
 
+
+void data_ble_process_recv_data(void)
+{
+  uint8_t commandLen = 16;
+  //Start to transfer the data
+  if (strncmp(g_ble_recv_data, "{\"cmd\":0}", 10) == 0)
+  {
+    /* The cmd: 0 option has been transmitted from the controller. */
+  }
+  
+  else if (strncmp(g_ble_recv_data, "{\"cmd\":1}", 10) == 0)
+  {
+    /* The cmd: 1 option has been transmitted from the controller. */
+
+  }
+
+  else if (strncmp(g_ble_recv_data, "{\"cmd\":2}", 10) == 0)
+  {
+    /* The cmd: 2 option has been transmitted from the controller. */
+  }
+
+  else if (strncmp(g_ble_recv_data, "{\"cmd\":3,", 9) == 0){
+    /* The cmd: 3 option has been transmitted from the controller. */
+  }
+  
+  
+  else if (strncmp(g_ble_recv_data, "{\"cmd\":4}", 10) == 0)
+  {
+    /* The cmd: 4 option has been transmitted from the controller. */
+  }
+  
+  /* ========================================================================================== */
+  /* ========================================================================================== */
+  /* ============================= Reception of the BLE joystick values ======================= */
+  /* ========================================================================================== */  
+  /* ========================================================================================== */
+ 
+  else if (strncmp(g_ble_recv_data, "{\"cmd\":5,\"data\":", commandLen) == 0){
+     /* The cmd: 5 option has been transmitted from the controller. */
+
+	 /* Saving only the raw data to a new array and ignoring the JSON formatting now. */
+	 uint8_t strReturned[5];
+	 memcpy(strReturned, &g_ble_recv_data[commandLen], sizeof(strReturned) * sizeof(char));
+	joyStickValues.forward_backward = (float) ((atoi((char const *) strReturned)) / (10e5) );
+
+  }
+
+  else if (strncmp(g_ble_recv_data, "{\"cmd\":6,\"data\":", commandLen) == 0){
+     /* The cmd: 6 option has been transmitted from the controller. */
+
+	 /* Saving only the raw data to a new array and ignoring the JSON formatting now. */
+	 uint8_t strReturned[5];
+	 memcpy(strReturned, &g_ble_recv_data[commandLen], sizeof(strReturned) * sizeof(char));
+	joyStickValues.left_right = (float) ((atoi((char const *) strReturned)) / (10e5) );
+
+  }
+
+  /* Resetting the received data buffer once the data has been handled. */
+  memset(g_ble_recv_data, 0, sizeof(g_ble_recv_data));
+}
