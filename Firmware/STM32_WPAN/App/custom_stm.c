@@ -983,22 +983,42 @@ void data_ble_process_recv_data(void)
   /* ========================================================================================== */
  
   else if (strncmp(g_ble_recv_data, "{\"cmd\":5,\"data\":", commandLen) == 0){
-     /* The cmd: 5 option has been transmitted from the controller. */
+	/* The cmd: 5 option has been transmitted from the controller. */
 
-	 /* Saving only the raw data to a new array and ignoring the JSON formatting now. */
-	 uint8_t strReturned[5];
-	 memcpy(strReturned, &g_ble_recv_data[commandLen], sizeof(strReturned) * sizeof(char));
-	joyStickValues.forward_backward = (float) ((atoi((char const *) strReturned)) / (10e5) );
+	/* Saving only the raw data to a new array and ignoring the JSON formatting now. */
+	uint8_t strReturned[5];
+	memcpy(strReturned, &g_ble_recv_data[commandLen], sizeof(strReturned) * sizeof(char));
+	float temp = (float) ((atoi((char const *) strReturned)) / (10e5) );
+
+	/* Checking that the received value was between 0 and 1. */
+	if ( (1 >= temp) && (0 <= temp)){
+		/* Updating the left/right variable to match the received value*/
+		joyStickValues.forward_backward = temp;
+
+		/* Updating the move function to change the state of the motors. */
+		Move(joyStickValues.left_right, joyStickValues.forward_backward, motorPWMChannels);
+	}
 
   }
 
   else if (strncmp(g_ble_recv_data, "{\"cmd\":6,\"data\":", commandLen) == 0){
-     /* The cmd: 6 option has been transmitted from the controller. */
+	/* The cmd: 6 option has been transmitted from the controller. */
 
-	 /* Saving only the raw data to a new array and ignoring the JSON formatting now. */
-	 uint8_t strReturned[5];
-	 memcpy(strReturned, &g_ble_recv_data[commandLen], sizeof(strReturned) * sizeof(char));
-	joyStickValues.left_right = (float) ((atoi((char const *) strReturned)) / (10e5) );
+	/* Saving only the raw data to a new array and ignoring the JSON formatting now. */
+	uint8_t strReturned[5];
+	memcpy(strReturned, &g_ble_recv_data[commandLen], sizeof(strReturned) * sizeof(char));
+	
+	/* Normalising the 5 characters returned to be a floating point number: 0 <= N < 1. */
+	float temp = (float) ((atoi((char const *) strReturned)) / (10e5) );
+
+	/* Checking that the received value was between 0 and 1. */
+	if ( (1 >= temp) && (0 <= temp)){
+		/* Updating the left/right variable to match the received value*/
+		joyStickValues.left_right = temp;
+
+		/* Updating the move function to change the state of the motors. */
+		Move(joyStickValues.left_right, joyStickValues.forward_backward, motorPWMChannels);
+	}
 
   }
 

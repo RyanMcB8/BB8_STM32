@@ -55,6 +55,9 @@
 
 /* USER CODE BEGIN PV */
 joyStick_values_t joyStickValues; 
+joyStickValues.left_right  = 0.5; 
+joyStickValues.forward_backward = 0.5;
+MotorPWMChannels_t motorPWMChannels;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
