@@ -3,17 +3,10 @@
 #define __MOTION_CONTROL_
 
 /* Adding any necessary include files to the header file */
-
-
+#include "main.h"
 /* Creation of any specific types */
 
-/* struct which can allow for the motor PWM parameters to be passed through without using multiple parameters*/
-typedef struct{
-    TIM_HandleTypeDef* motor1PWM;
-    uint32_t motor1Channel;
-    TIM_HandleTypeDef* motor2PWM;
-    uint32_t motor2Channel;
-} MotorPWMChannels_t;
+
 
 /* Error types which may be returned when the Move() function is called upon */
 typedef enum{
@@ -28,6 +21,11 @@ typedef enum{
 
 
 } SpinErrors_t;
+
+
+void Forward( MotorPWMChannels_t motorPWMChannels);
+
+void StopDroid( MotorPWMChannels_t motorPWMChannels);
 
 
 /* Declaration of any functions within the c file */

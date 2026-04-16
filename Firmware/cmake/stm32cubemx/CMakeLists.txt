@@ -29,6 +29,7 @@ set(MX_Include_Dirs
     ${CMAKE_CURRENT_SOURCE_DIR}/../../Utilities/sequencer
     ${CMAKE_CURRENT_SOURCE_DIR}/../../Middlewares/ST/STM32_WPAN/ble
     ${CMAKE_CURRENT_SOURCE_DIR}/../../Drivers/CMSIS/Include
+    ${CMAKE_CURRENT_SOURCE_DIR}/../../Custom_Drivers/Inc
 )
 
 # STM32CubeMX generated application sources
@@ -60,6 +61,8 @@ set(MX_Application_Src
     ${CMAKE_CURRENT_SOURCE_DIR}/../../Core/Src/sysmem.c
     ${CMAKE_CURRENT_SOURCE_DIR}/../../Core/Src/syscalls.c
     ${CMAKE_CURRENT_SOURCE_DIR}/../../startup_stm32wb55xx_cm4.s
+    ${CMAKE_CURRENT_SOURCE_DIR}/../../Custom_Drivers/Src/motionControl.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/../../Custom_Drivers/Src/motorDriver.c
 )
 
 # STM32 HAL/LL Drivers
@@ -133,7 +136,9 @@ set(MX_LINK_DIRS
 set(MX_LINK_LIBS 
     STM32_Drivers
     ${TOOLCHAIN_LINK_LIBRARIES}
-    Utilities	STM32_WPAN	
+    Utilities
+	STM32_WPAN
+	
 )
 # Interface library for includes and symbols
 add_library(stm32cubemx INTERFACE)

@@ -5,7 +5,7 @@
 /* MOTOR DRIVER HEADER FILE */
 /* Includes */
 #include "main.h"
-
+#include <math.h>
 
 /* ======================================== Typedefs ======================================== */
 

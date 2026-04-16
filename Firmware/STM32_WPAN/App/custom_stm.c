@@ -954,11 +954,13 @@ void data_ble_process_recv_data(void)
   if (strncmp(g_ble_recv_data, "{\"cmd\":0}", 10) == 0)
   {
     /* The cmd: 0 option has been transmitted from the controller. */
+    Forward(motorPWMChannels);
   }
   
   else if (strncmp(g_ble_recv_data, "{\"cmd\":1}", 10) == 0)
   {
     /* The cmd: 1 option has been transmitted from the controller. */
+    StopDroid(motorPWMChannels);
 
   }
 

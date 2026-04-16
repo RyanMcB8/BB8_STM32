@@ -1,3 +1,7 @@
+
+#ifndef _MOTION_CONTROL_H_
+#define _MOTION_CONTROL_H_
+
 /* Adding included files */
 #include "motionControl.h"
 #include "motorDriver.h"
@@ -5,6 +9,18 @@
 /* Definition of global variables */
 
 /* Function defintions */
+
+
+void Forward( MotorPWMChannels_t motorPWMChannels){
+    MotorControl(0.10, 1, motorPWMChannels.motor1PWM, motorPWMChannels.motor1Channel, MOTOR_1);
+    MotorControl(0.10, 1, motorPWMChannels.motor2PWM, motorPWMChannels.motor2Channel, MOTOR_2);
+}
+
+void StopDroid( MotorPWMChannels_t motorPWMChannels){
+    MotorControl(0.00, 1, motorPWMChannels.motor1PWM, motorPWMChannels.motor1Channel, MOTOR_1);
+    MotorControl(0.00, 1, motorPWMChannels.motor2PWM, motorPWMChannels.motor2Channel, MOTOR_2);
+    return;
+}
 
 Move_t Move(float leftRight, float forwardBackward, MotorPWMChannels_t motorPWMChannels){
 
@@ -20,8 +36,8 @@ Move_t Move(float leftRight, float forwardBackward, MotorPWMChannels_t motorPWMC
        user entering the values to control motor */
 
     /* Assumming that the droid will not spin...*/
-    float rightPower = max(2*(leftRight - 0.5), 0);     /* max function ensures that when the value is */ 
-    float leftPower = max(2*(0.5 - leftRight), 0);     /* max function ensures that when the value is */
+    float rightPower = fmax(2*(leftRight - 0.5), 0);     /* max function ensures that when the value is */ 
+    float leftPower = fmax(2*(0.5 - leftRight), 0);     /* max function ensures that when the value is */
 
     /* Using this method does not allow for the droid to spin too. 
        That may be done in a separate function when the droid is stationary. */
@@ -44,3 +60,5 @@ SpinErrors_t Spin(float power, _Bool direction, MotorPWMChannels_t motorPWMChann
 
     return SPIN_SUCCESSFUL;
 }
+
+#endif
