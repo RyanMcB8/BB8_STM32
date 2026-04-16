@@ -27,12 +27,12 @@
 #include "rf.h"
 #include "rng.h"
 #include "rtc.h"
-#include "spi.h"
+#include "tim.h"
 #include "gpio.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "PS2_driver.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -53,7 +53,10 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
-
+joyStick_values_t joyStickValues; 
+joyStickValues.left_right  = 0.5; 
+joyStickValues.forward_backward = 0.5;
+MotorPWMChannels_t motorPWMChannels;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -111,9 +114,11 @@ int main(void)
   MX_RTC_Init();
   MX_RNG_Init();
   MX_CRC_Init();
-  MX_I2C1_Init();
   MX_LPTIM1_Init();
-  MX_SPI1_Init();
+  MX_TIM1_Init();
+  MX_TIM2_Init();
+  MX_I2C3_Init();
+  MX_TIM17_Init();
   MX_RF_Init();
   /* USER CODE BEGIN 2 */
 

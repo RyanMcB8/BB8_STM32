@@ -27,7 +27,6 @@
 #include "rf.h"
 #include "rng.h"
 #include "rtc.h"
-#include "spi.h"
 #include "tim.h"
 #include "gpio.h"
 
@@ -115,11 +114,11 @@ int main(void)
   MX_RTC_Init();
   MX_RNG_Init();
   MX_CRC_Init();
-  MX_I2C1_Init();
   MX_LPTIM1_Init();
-  MX_SPI1_Init();
   MX_TIM1_Init();
   MX_TIM2_Init();
+  MX_I2C3_Init();
+  MX_TIM17_Init();
   MX_RF_Init();
   /* USER CODE BEGIN 2 */
 

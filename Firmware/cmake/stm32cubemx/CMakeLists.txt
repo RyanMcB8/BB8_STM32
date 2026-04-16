@@ -49,7 +49,6 @@ set(MX_Application_Src
     ${CMAKE_CURRENT_SOURCE_DIR}/../../Core/Src/rf.c
     ${CMAKE_CURRENT_SOURCE_DIR}/../../Core/Src/rng.c
     ${CMAKE_CURRENT_SOURCE_DIR}/../../Core/Src/rtc.c
-    ${CMAKE_CURRENT_SOURCE_DIR}/../../Core/Src/spi.c
     ${CMAKE_CURRENT_SOURCE_DIR}/../../Core/Src/app_entry.c
     ${CMAKE_CURRENT_SOURCE_DIR}/../../Core/Src/app_debug.c
     ${CMAKE_CURRENT_SOURCE_DIR}/../../Core/Src/hw_timerserver.c
@@ -91,8 +90,6 @@ set(STM32_Drivers_Src
     ${CMAKE_CURRENT_SOURCE_DIR}/../../Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rng.c
     ${CMAKE_CURRENT_SOURCE_DIR}/../../Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc.c
     ${CMAKE_CURRENT_SOURCE_DIR}/../../Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c
-    ${CMAKE_CURRENT_SOURCE_DIR}/../../Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_spi.c
-    ${CMAKE_CURRENT_SOURCE_DIR}/../../Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_spi_ex.c
     ${CMAKE_CURRENT_SOURCE_DIR}/../../Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim.c
     ${CMAKE_CURRENT_SOURCE_DIR}/../../Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c
 )
