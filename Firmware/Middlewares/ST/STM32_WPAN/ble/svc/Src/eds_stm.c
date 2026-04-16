@@ -64,7 +64,7 @@ static SVCCTL_EvtAckStatus_t EndDeviceManagement_Event_Handler(void *Event)
   hci_event_pckt *event_pckt;
   evt_blecore_aci *blecore_evt;
   aci_gatt_attribute_modified_event_rp0    * attribute_modified;
-  EDS_STM_App_Notification_evt_t Notification;
+  // EDS_STM_App_Notification_evt_t Notification;
 
   return_value = SVCCTL_EvtNotAck;
   event_pckt = (hci_event_pckt *)(((hci_uart_pckt*)Event)->data);
@@ -92,15 +92,15 @@ static SVCCTL_EvtAckStatus_t EndDeviceManagement_Event_Handler(void *Event)
               if(attribute_modified->Attr_Data[0] & COMSVC_Notification)
               {
                
-                Notification.EDS_Evt_Opcode = EDS_STM_NOTIFY_ENABLED_EVT;
-                EDS_STM_App_Notification(&Notification);
+                // Notification.EDS_Evt_Opcode = EDS_STM_NOTIFY_ENABLED_EVT;
+                // EDS_STM_App_Notification(&Notification);
 
               }
               else
               {
               
-                Notification.EDS_Evt_Opcode = EDS_STM_NOTIFY_DISABLED_EVT;
-                EDS_STM_App_Notification(&Notification);
+                // Notification.EDS_Evt_Opcode = EDS_STM_NOTIFY_DISABLED_EVT;
+                // EDS_STM_App_Notification(&Notification);
 
               }
             }

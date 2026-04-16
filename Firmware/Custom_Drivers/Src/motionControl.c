@@ -34,7 +34,7 @@ Move_t Move(float leftRight, float forwardBackward, MotorPWMChannels_t motorPWMC
 
     /* Controlling the right motor */
     MotorControl(rightPower, rightDirection, motorPWMChannels.motor2PWM, motorPWMChannels.motor2Channel, MOTOR_2);
-    return;
+    return MOVE_SUCCESSFUL;
 }
 
 SpinErrors_t Spin(float power, _Bool direction, MotorPWMChannels_t motorPWMChannels){
@@ -42,5 +42,5 @@ SpinErrors_t Spin(float power, _Bool direction, MotorPWMChannels_t motorPWMChann
     MotorControl(power, !direction, motorPWMChannels.motor2PWM, motorPWMChannels.motor2Channel, MOTOR_2);
 
 
-    return;
+    return SPIN_SUCCESSFUL;
 }

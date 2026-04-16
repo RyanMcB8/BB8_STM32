@@ -24,6 +24,7 @@
 
 /* USER CODE BEGIN Includes */
 #include "main.h"
+#include "motionControl.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/

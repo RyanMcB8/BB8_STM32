@@ -53,9 +53,11 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
-joyStick_values_t joyStickValues; 
-joyStickValues.left_right  = 0.5; 
-joyStickValues.forward_backward = 0.5;
+
+/*  Storing the live joystick values. */
+joyStick_values_t joyStickValues = {0.5, 0.5}; 
+
+/*  Storing the PWM timers and channels for each drive motor.*/
 MotorPWMChannels_t motorPWMChannels;
 /* USER CODE END PV */
 
@@ -121,6 +123,12 @@ int main(void)
   MX_TIM17_Init();
   MX_RF_Init();
   /* USER CODE BEGIN 2 */
+
+  /*  Defining what timer and channel each motor is connected to.*/
+  motorPWMChannels.motor1PWM = &htim1;
+  motorPWMChannels.motor1Channel = TIM_CHANNEL_1;
+  motorPWMChannels.motor2PWM =  &htim1;
+  motorPWMChannels.motor2Channel = TIM_CHANNEL_3;
 
   /* USER CODE END 2 */
 
