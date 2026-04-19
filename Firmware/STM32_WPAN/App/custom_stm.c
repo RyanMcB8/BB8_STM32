@@ -951,10 +951,14 @@ void data_ble_process_recv_data(void)
 {
   uint8_t commandLen = 16;
   //Start to transfer the data
-  if (strncmp(g_ble_recv_data, "{\"cmd\":0}", 10) == 0)
+  if (strncmp(g_ble_recv_data, "{\"cmd\":0,", 10) == 0)
   {
     /* The cmd: 0 option has been transmitted from the controller. */
-    Forward(motorPWMChannels);
+    uint8_t strReturned[3];
+	  memcpy(strReturned, &g_ble_recv_data[commandLen], sizeof(strReturned) * sizeof(char));
+    float localDuty = (float) ((atoi((char const *) strReturned)) / (10e2)) ;
+	
+    Forward(motorPWMChannels, localDuty);
   }
   
   else if (strncmp(g_ble_recv_data, "{\"cmd\":1}", 10) == 0)
@@ -988,19 +992,19 @@ void data_ble_process_recv_data(void)
   else if (strncmp(g_ble_recv_data, "{\"cmd\":5,\"data\":", commandLen) == 0){
 	/* The cmd: 5 option has been transmitted from the controller. */
 
-	/* Saving only the raw data to a new array and ignoring the JSON formatting now. */
-	uint8_t strReturned[5];
-	memcpy(strReturned, &g_ble_recv_data[commandLen], sizeof(strReturned) * sizeof(char));
-	float temp = (float) ((atoi((char const *) strReturned)) / (10e5) );
+    /* Saving only the raw data to a new array and ignoring the JSON formatting now. */
+    uint8_t strReturned[5];
+    memcpy(strReturned, &g_ble_recv_data[commandLen], sizeof(strReturned) * sizeof(char));
+    float temp = (float) ((atoi((char const *) strReturned)) / (10e5) );
 
-	/* Checking that the received value was between 0 and 1. */
-	if ( (1 >= temp) && (0 <= temp)){
-		/* Updating the left/right variable to match the received value*/
-		joyStickValues.forward_backward = temp;
+    /* Checking that the received value was between 0 and 1. */
+    if ( (1 >= temp) && (0 <= temp)){
+      /* Updating the left/right variable to match the received value*/
+      joyStickValues.forward_backward = temp;
 
-		/* Updating the move function to change the state of the motors. */
-		Move(joyStickValues.left_right, joyStickValues.forward_backward, motorPWMChannels);
-	}
+      /* Updating the move function to change the state of the motors. */
+      Move(joyStickValues.left_right, joyStickValues.forward_backward, motorPWMChannels);
+    }
 
   }
 

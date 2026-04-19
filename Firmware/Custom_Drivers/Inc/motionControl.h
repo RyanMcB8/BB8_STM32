@@ -23,7 +23,7 @@ typedef enum{
 } SpinErrors_t;
 
 
-void Forward( MotorPWMChannels_t motorPWMChannels);
+void Forward( MotorPWMChannels_t motorPWMChannels, float duty);
 
 void StopDroid( MotorPWMChannels_t motorPWMChannels);
 
