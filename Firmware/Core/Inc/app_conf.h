@@ -40,7 +40,7 @@
 /**
  * Define Advertising parameters
  */
-#define CFG_ADV_BD_ADDRESS                (0x11aabbccddee)
+#define CFG_ADV_BD_ADDRESS                (0xAA22334455AA)
 
 /**
  * Define BD_ADDR type: define proper address. Can only be GAP_PUBLIC_ADDR (0x00) or GAP_STATIC_RANDOM_ADDR (0x01)
@@ -59,19 +59,14 @@
  */
 #define CFG_BLE_ADDRESS_TYPE              GAP_PUBLIC_ADDR
 
-#define CFG_FAST_CONN_ADV_INTERVAL_MIN    (0x0080)      /**< 80ms */
-#define CFG_FAST_CONN_ADV_INTERVAL_MAX    (0x00A0)      /**< 100ms */
-#define CFG_LP_CONN_ADV_INTERVAL_MIN      (0x640)     /**< 1s */
-#define CFG_LP_CONN_ADV_INTERVAL_MAX      (0xFA0)     /**< 2.5s */
-#define ADV_TYPE                          ADV_IND
-#define BLE_ADDR_TYPE                     GAP_PUBLIC_ADDR
-#define ADV_FILTER                        NO_WHITE_LIST_USE
+#define CFG_FAST_CONN_ADV_INTERVAL_MIN    (0x0)      /**< 80ms */
+#define CFG_FAST_CONN_ADV_INTERVAL_MAX    (0x0)      /**< 100ms */
+#define CFG_LP_CONN_ADV_INTERVAL_MIN      (0x0640)     /**< 1s */
+#define CFG_LP_CONN_ADV_INTERVAL_MAX      (0x0960)     /**< 2.5s */
 /**
  * Define IO Authentication
  */
-#define CFG_BONDING_MODE                 (0)
-#define CFG_FIXED_PIN                    (111111)
-#define CFG_USED_FIXED_PIN               (0)
+#define CFG_BONDING_MODE                 (1)
 #define CFG_ENCRYPTION_KEY_SIZE_MAX      (16)
 #define CFG_ENCRYPTION_KEY_SIZE_MIN      (8)
 
@@ -120,8 +115,8 @@
 /**
  * Device name configuration for Generic Access Service
  */
-#define CFG_GAP_DEVICE_NAME             "BB8_Main"
-#define CFG_GAP_DEVICE_NAME_LENGTH      (9)
+#define CFG_GAP_DEVICE_NAME             "BB8main"
+#define CFG_GAP_DEVICE_NAME_LENGTH      (8)
 
 /**
  * Define PHY
@@ -158,6 +153,21 @@
 /**< specific parameters */
 /*****************************************************/
 
+#define P2P_SERVER1    1    /*1 = Device is Peripherique*/
+#define P2P_SERVER2    0
+#define P2P_SERVER3    0
+#define P2P_SERVER4    0
+#define P2P_SERVER5    0
+#define P2P_SERVER6    0
+
+#define CFG_DEV_ID_P2P_SERVER1                  (0x83)
+#define CFG_DEV_ID_P2P_SERVER2                  (0x84)
+#define CFG_DEV_ID_P2P_SERVER3                  (0x87)
+#define CFG_DEV_ID_P2P_SERVER4                  (0x88)
+#define CFG_DEV_ID_P2P_SERVER5                  (0x89)
+#define CFG_DEV_ID_P2P_SERVER6                  (0x8A)
+#define CFG_DEV_ID_P2P_ROUTER                   (0x85)
+
 #define  RADIO_ACTIVITY_EVENT   1          /* 1 for OOB Demo */
 
 /**
@@ -173,7 +183,7 @@
 #define CONN_P(x) ((int)((x)/1.25f))
 
   /*  L2CAP Connection Update request parameters used for test only with smart Phone */
-#define L2CAP_REQUEST_NEW_CONN_PARAM             0
+#define L2CAP_REQUEST_NEW_CONN_PARAM             1
 
 #define L2CAP_INTERVAL_MIN              CONN_P(1000) /* 1s */
 #define L2CAP_INTERVAL_MAX              CONN_P(1000) /* 1s */
@@ -191,13 +201,13 @@
  * Maximum number of simultaneous connections that the device will support.
  * Valid values are from 1 to 8
  */
-#define CFG_BLE_NUM_LINK            2
+#define CFG_BLE_NUM_LINK            8
 
 /**
  * Maximum number of Services that can be stored in the GATT database.
  * Note that the GAP and GATT services are automatically added so this parameter should be 2 plus the number of user services
  */
-#define CFG_BLE_NUM_GATT_SERVICES   4
+#define CFG_BLE_NUM_GATT_SERVICES   8
 
 /**
  * Maximum number of Attributes
@@ -206,7 +216,7 @@
  * Note that certain characteristics and relative descriptors are added automatically during device initialization
  * so this parameters should be 9 plus the number of user Attributes
  */
-#define CFG_BLE_NUM_GATT_ATTRIBUTES 30
+#define CFG_BLE_NUM_GATT_ATTRIBUTES 68
 
 /**
  * Maximum supported ATT_MTU size
@@ -225,7 +235,7 @@
  *  The total amount of memory needed is the sum of the above quantities for each attribute.
  * This parameter is ignored by the CPU2 when CFG_BLE_OPTIONS has SHCI_C2_BLE_INIT_OPTIONS_LL_ONLY flag set
  */
-#define CFG_BLE_ATT_VALUE_ARRAY_SIZE    (1290)
+#define CFG_BLE_ATT_VALUE_ARRAY_SIZE    (1344)
 
 /**
  * Prepare Write List size in terms of number of packet
@@ -268,12 +278,11 @@
  * - bit 0:   1: Calibration for the RF system wakeup clock source   0: No calibration for the RF system wakeup clock source
  * - bit 1:   1: STM32WB5M Module device                             0: Other devices as STM32WBxx SOC, STM32WB1M module
  * - bit 2:   1: HSE/1024 Clock config                               0: LSE Clock config
- * Note: Enable Calibration when LSI selected as RF system wakeup clock and "bit 2" is meaningless with LSI
  */
 #if defined(STM32WB5Mxx)
-  #define CFG_BLE_LS_SOURCE  (SHCI_C2_BLE_INIT_CFG_BLE_LS_CALIB | SHCI_C2_BLE_INIT_CFG_BLE_LS_MOD5MM_DEV | SHCI_C2_BLE_INIT_CFG_BLE_LS_CLK_LSE)
+  #define CFG_BLE_LS_SOURCE  (SHCI_C2_BLE_INIT_CFG_BLE_LS_NOCALIB | SHCI_C2_BLE_INIT_CFG_BLE_LS_MOD5MM_DEV | SHCI_C2_BLE_INIT_CFG_BLE_LS_CLK_LSE)
 #else
-  #define CFG_BLE_LS_SOURCE  (SHCI_C2_BLE_INIT_CFG_BLE_LS_CALIB | SHCI_C2_BLE_INIT_CFG_BLE_LS_OTHER_DEV | SHCI_C2_BLE_INIT_CFG_BLE_LS_CLK_LSE)
+  #define CFG_BLE_LS_SOURCE  (SHCI_C2_BLE_INIT_CFG_BLE_LS_NOCALIB | SHCI_C2_BLE_INIT_CFG_BLE_LS_OTHER_DEV | SHCI_C2_BLE_INIT_CFG_BLE_LS_CLK_LSE)
 #endif
 
 /**
@@ -349,9 +358,9 @@
 
 #define CFG_BLE_MAX_COC_INITIATOR_NBR   (32)
 
-#define CFG_BLE_MIN_TX_POWER            (0)
+#define CFG_BLE_MIN_TX_POWER            (-40)
 
-#define CFG_BLE_MAX_TX_POWER            (0)
+#define CFG_BLE_MAX_TX_POWER            (6)
 
 /**
  * BLE stack Maximum number of created Enhanced ATT bearers to be configured
@@ -379,7 +388,7 @@
  * This parameter is considered by the CPU2 when CFG_BLE_OPTIONS has SHCI_C2_BLE_INIT_OPTIONS_EXT_ADV flag set
  */
 
-#define CFG_BLE_MAX_ADV_SET_NBR     (2)
+#define CFG_BLE_MAX_ADV_SET_NBR     (3)
 
  /* Maximum advertising data length (in bytes)
  * Range: 31 .. 1650 with limitation:
@@ -447,7 +456,7 @@
 /**
  * Select UART interfaces
  */
-#define CFG_DEBUG_TRACE_UART    0
+#define CFG_DEBUG_TRACE_UART    hw_uart1
 #define CFG_CONSOLE_MENU        0
 /******************************************************************************
  * USB interface
@@ -478,15 +487,6 @@
  *  When set to 0, the device stays in RUN mode
  */
 #define CFG_LPM_SUPPORTED    0
-
- /**
- * This shall be set to 1 when standby is supported while the wireless stack on CPU2 is running
- * (i.e the CPU2 is allowed to enter standby between RF activity)
- * Otherwise, it should be set to 0 for marginal code and test execution saving
- * In this case the lowest power mode available will be Stop 1
- * Note that keeping that setting to 1 when standby is not supported does not hurt
- */
-#define CFG_LPM_STANDBY_SUPPORTED    0
 
 /******************************************************************************
  * RTC interface
@@ -589,7 +589,7 @@ typedef enum
  * This shall be set to 0 in a final product
  *
  */
-#define CFG_HW_RESET_BY_FW         0
+#define CFG_HW_RESET_BY_FW         1
 
 /**
  * keep debugger enabled while in any low power mode when set to 1
@@ -600,12 +600,12 @@ typedef enum
 /**
  * When set to 1, the traces are enabled in the BLE services
  */
-#define CFG_DEBUG_BLE_TRACE     0
+#define CFG_DEBUG_BLE_TRACE     1
 
 /**
  * Enable or Disable traces in application
  */
-#define CFG_DEBUG_APP_TRACE     0
+#define CFG_DEBUG_APP_TRACE     1
 
 #if (CFG_DEBUG_APP_TRACE != 0)
 #define APP_DBG_MSG                 PRINT_MESG_DBG
@@ -631,7 +631,7 @@ typedef enum
  * When both are set to 0, no trace are output
  * When both are set to 1,  CFG_DEBUG_TRACE_FULL is selected
  */
-#define CFG_DEBUG_TRACE_LIGHT     0
+#define CFG_DEBUG_TRACE_LIGHT     1
 #define CFG_DEBUG_TRACE_FULL      0
 
 #if (( CFG_DEBUG_TRACE != 0 ) && ( CFG_DEBUG_TRACE_LIGHT == 0 ) && (CFG_DEBUG_TRACE_FULL == 0))
