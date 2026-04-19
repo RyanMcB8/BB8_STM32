@@ -45,6 +45,11 @@ enable_language(C ASM)
 # Create an executable object type
 add_executable(${CMAKE_PROJECT_NAME})
 
+add_custom_command(TARGET ${CMAKE_PROJECT_NAME} POST_BUILD
+    COMMAND ${CMAKE_OBJCOPY} -O binary $<TARGET_FILE:${CMAKE_PROJECT_NAME}> ${CMAKE_PROJECT_NAME}.bin
+    COMMAND ${CMAKE_OBJCOPY} -O ihex   $<TARGET_FILE:${CMAKE_PROJECT_NAME}> ${CMAKE_PROJECT_NAME}.hex
+)
+
 # Add STM32CubeMX generated sources
 add_subdirectory(cmake/stm32cubemx)
 
@@ -82,12 +87,7 @@ target_link_libraries(${CMAKE_PROJECT_NAME}
     # Add user defined libraries
 )
 
-# set(LINKER_SCRIPT ${CMAKE_SOURCE_DIR}/stm32wb55xx_flash_cm4.ld)
-
-# target_link_options(BB8 PRIVATE
-#     -T${LINKER_SCRIPT}
-# )
-
 target_link_options(BB8 PRIVATE
     -Wl,-Map=BB8.map
 )
+
