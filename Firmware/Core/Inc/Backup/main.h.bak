@@ -33,14 +33,22 @@ extern "C" {
 #include "app_entry.h"
 #include "app_common.h"
 
+
+
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "motionControl.h"
+
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/
 /* USER CODE BEGIN ET */
-
+/* struct which can allow for the motor PWM parameters to be passed through without using multiple parameters*/
+typedef struct{
+    TIM_HandleTypeDef* motor1PWM;
+    uint32_t motor1Channel;
+    TIM_HandleTypeDef* motor2PWM;
+    uint32_t motor2Channel;
+} MotorPWMChannels_t;
 /* USER CODE END ET */
 
 /* Exported constants --------------------------------------------------------*/
