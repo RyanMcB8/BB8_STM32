@@ -75,6 +75,11 @@ uint8_t UpdateCharData[512];
 uint8_t NotifyCharData[512];
 uint16_t Connection_Handle;
 /* USER CODE BEGIN PV */
+void data_send_notification(void);
+static void num_to_char_to_val(char *buf, float num);
+static void int_to_char_to_val(char *buf, uint16_t num);
+tBleStatus status;
+
 
 /* USER CODE END PV */
 
@@ -87,7 +92,7 @@ static void Custom_D11c_Update_Char(void);
 static void Custom_D11c_Send_Notification(void);
 
 /* USER CODE BEGIN PFP */
-
+uint8_t NotificationStatus;
 /* USER CODE END PFP */
 
 /* Functions Definition ------------------------------------------------------*/
@@ -105,13 +110,17 @@ void Custom_STM_App_Notification(Custom_STM_App_Notification_evt_t *pNotificatio
     /* Remote_control */
     case CUSTOM_STM_D11A_NOTIFY_ENABLED_EVT:
       /* USER CODE BEGIN CUSTOM_STM_D11A_NOTIFY_ENABLED_EVT */
-
+      NotificationStatus = 1;
+      APP_DBG_MSG("-- TEMPLATE APPLICATION SERVER : DATA NOTIFICATION ENABLED\n");
+      APP_DBG_MSG(" \n\r");
       /* USER CODE END CUSTOM_STM_D11A_NOTIFY_ENABLED_EVT */
       break;
 
     case CUSTOM_STM_D11A_NOTIFY_DISABLED_EVT:
       /* USER CODE BEGIN CUSTOM_STM_D11A_NOTIFY_DISABLED_EVT */
-
+      NotificationStatus = 0;
+      APP_DBG_MSG("-- TEMPLATE APPLICATION SERVER : DATA NOTIFICATION DISABLED\n");
+      APP_DBG_MSG(" \n\r");
       /* USER CODE END CUSTOM_STM_D11A_NOTIFY_DISABLED_EVT */
       break;
 
@@ -171,13 +180,13 @@ void Custom_APP_Notification(Custom_App_ConnHandle_Not_evt_t *pNotification)
     /* USER CODE END P2PS_CUSTOM_Notification_Custom_Evt_Opcode */
     case CUSTOM_CONN_HANDLE_EVT :
       /* USER CODE BEGIN CUSTOM_CONN_HANDLE_EVT */
-
+      Connection_Handle = pNotification->ConnectionHandle;
       /* USER CODE END CUSTOM_CONN_HANDLE_EVT */
       break;
 
     case CUSTOM_DISCON_HANDLE_EVT :
       /* USER CODE BEGIN CUSTOM_DISCON_HANDLE_EVT */
-
+      Connection_Handle = pNotification->ConnectionHandle;
       /* USER CODE END CUSTOM_DISCON_HANDLE_EVT */
       break;
 
@@ -198,12 +207,62 @@ void Custom_APP_Notification(Custom_App_ConnHandle_Not_evt_t *pNotification)
 void Custom_APP_Init(void)
 {
   /* USER CODE BEGIN CUSTOM_APP_Init */
-
   /* USER CODE END CUSTOM_APP_Init */
   return;
 }
 
 /* USER CODE BEGIN FD */
+uint16_t packetCount = 0;
+
+void data_send_notification(void)
+{
+  uint8_t buffer[300] = {0}; // BLE characteristic buffer
+  int len;
+  float foo = 0.1f;
+
+  // Initial packet of JSON
+  strcat((char *)buffer, "{\"cmd\":20,\"data\"");
+  len = strlen((char *)buffer);
+  
+  // Height packet
+  strcat((char *)buffer,":{\"H\":");
+  num_to_char_to_val((char *)buffer, foo);
+
+  
+  strcat((char *)buffer, ",\"Bat\":");
+  int_to_char_to_val((char *)buffer, foo);
+  
+  // Packet number packet
+  strcat((char *)buffer, ",\"nP\":");
+  
+  if (packetCount < 10){
+    strcat((char *)buffer, "0000");
+  }
+  else if (packetCount < 100){
+    strcat((char *)buffer, "000");
+  }
+  else if (packetCount < 1000){
+    strcat((char *)buffer, "00");
+  }
+  else if (packetCount < 10000){
+    strcat((char *)buffer, "0");
+  }
+  int_to_char_to_val((char *)buffer, packetCount);
+  packetCount++;
+  strcat((char *)buffer, "}}");
+
+  len = strlen((char *)buffer);
+
+  if (NotificationStatus)
+  {
+    status = Custom_STM_App_Update_Char_Variable_Length(CUSTOM_STM_D11A, 
+                                                        buffer, len);
+    
+    if (BLE_STATUS_SUCCESS != status){
+      APP_DBG_MSG("ERROR");
+    }
+  }
+}
 
 /* USER CODE END FD */
 
@@ -294,5 +353,42 @@ void Custom_D11c_Send_Notification(void) /* Property Notification */
 }
 
 /* USER CODE BEGIN FD_LOCAL_FUNCTIONS*/
+/**
+ * @brief  Converts float number to string, clips large values, handles negatives
+ * @param  buf output string buffer
+ * @param  num value to be converted
+ * @retval None
+ */
+static void num_to_char_to_val(char *buf, float num)
+{
+  char str_buf[10] = {0};
 
+  if (num < 0)
+  {
+    num = -num;
+    strcat(buf, "-"); // Add minus sign if negative
+  }
+
+  if (num > 10000)
+  {
+    num = 10000; // Limit number to avoid overflow
+  }
+  
+  sprintf(str_buf, "%.5f", (double)num); // Convert float to string with 5 decimal places
+  
+  strcat(buf, str_buf);                  // Append to JSON buffer
+}
+
+/**
+ * @brief  Converts float number to string, clips large values, handles negatives
+ * @param  buf output string buffer
+ * @param  num value to be converted
+ * @retval None
+ */
+static void int_to_char_to_val(char *buf, uint16_t num)
+{
+  char str_buf[6] = {0};
+  sprintf(str_buf, "%u", (uint16_t)num);   // Convert int to string 
+  strcat(buf, str_buf);                  // Append to JSON buffer
+}
 /* USER CODE END FD_LOCAL_FUNCTIONS*/

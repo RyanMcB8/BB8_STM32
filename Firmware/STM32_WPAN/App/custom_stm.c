@@ -46,7 +46,7 @@ extern uint16_t Connection_Handle;
 /* USER CODE END PTD */
 
 /* Private defines -----------------------------------------------------------*/
-#define UUID_128_SUPPORTED  1
+#define UUID_128_SUPPORTED  0
 
 #if (UUID_128_SUPPORTED == 1)
 #define BM_UUID_LENGTH  UUID_TYPE_128
@@ -102,15 +102,6 @@ static tBleStatus Generic_STM_App_Update_Char_Ext(uint16_t ConnectionHandle, uin
 
 /* Private functions ----------------------------------------------------------*/
 
-#define COPY_UUID_128(uuid_struct, uuid_15, uuid_14, uuid_13, uuid_12, uuid_11, uuid_10, uuid_9, uuid_8, uuid_7, uuid_6, uuid_5, uuid_4, uuid_3, uuid_2, uuid_1, uuid_0) \
-do {\
-    uuid_struct[0] = uuid_0; uuid_struct[1] = uuid_1; uuid_struct[2] = uuid_2; uuid_struct[3] = uuid_3; \
-    uuid_struct[4] = uuid_4; uuid_struct[5] = uuid_5; uuid_struct[6] = uuid_6; uuid_struct[7] = uuid_7; \
-    uuid_struct[8] = uuid_8; uuid_struct[9] = uuid_9; uuid_struct[10] = uuid_10; uuid_struct[11] = uuid_11; \
-    uuid_struct[12] = uuid_12; uuid_struct[13] = uuid_13; uuid_struct[14] = uuid_14; uuid_struct[15] = uuid_15; \
-}while(0)
-
-#define COPY_REMOTE_CONTROL_UUID(uuid_struct)          COPY_UUID_128(uuid_struct,0x00,0x00,0x90,0x02,0xcc,0x7a,0x48,0x2a,0x98,0x4a,0x7f,0x2e,0xd5,0xb3,0xe5,0x8f)
 
 /* USER CODE BEGIN PF */
 
@@ -382,8 +373,8 @@ void SVCCTL_InitCustomSvc(void)
 
   /* USER CODE END SVCCTL_InitService1 */
 
-  COPY_REMOTE_CONTROL_UUID(uuid.Char_UUID_128);
-  ret = aci_gatt_add_service(UUID_TYPE_128,
+  uuid.Char_UUID_16 = 0x9002;
+  ret = aci_gatt_add_service(UUID_TYPE_16,
                              (Service_UUID_t *) &uuid,
                              PRIMARY_SERVICE,
                              max_attr_record,

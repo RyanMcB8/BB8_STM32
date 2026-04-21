@@ -75,7 +75,11 @@ typedef struct
 } Custom_STM_App_Notification_evt_t;
 
 /* USER CODE BEGIN ET */
-
+typedef enum{
+  SHUTDOWN,
+  MOTOR_DUTY,
+  MOTOR_OFF,
+} cmd_idx_t;
 /* USER CODE END ET */
 
 /* Exported constants --------------------------------------------------------*/
@@ -95,7 +99,13 @@ extern uint16_t SizeC44F;
 
 /* Exported macros -----------------------------------------------------------*/
 /* USER CODE BEGIN EM */
+#ifndef true
+#define true 1
+#endif
 
+#ifndef false
+#define false 1
+#endif
 /* USER CODE END EM */
 
 /* Exported functions ------------------------------------------------------- */

@@ -33,7 +33,7 @@
 #include "stm32_lpm.h"
 #include "otp.h"
 
-#include "p2p_server_app.h"
+
 #include "custom_app.h"
 
 /* Private includes ----------------------------------------------------------*/
@@ -502,10 +502,7 @@ void APP_BLE_Init(void)
   mutex = 1;
 #endif /* L2CAP_REQUEST_NEW_CONN_PARAM != 0 */
 
-  /**
-   * Initialize P2P Server Application
-   */
-  P2PS_APP_Init();
+
 
   UTIL_SEQ_RegTask(1<<CFG_TASK_ADV_CANCEL_ID, UTIL_SEQ_RFU, Adv_Cancel);
 
