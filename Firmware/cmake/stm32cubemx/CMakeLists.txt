@@ -29,6 +29,7 @@ set(MX_Include_Dirs
     ${CMAKE_CURRENT_SOURCE_DIR}/../../Utilities/sequencer
     ${CMAKE_CURRENT_SOURCE_DIR}/../../Middlewares/ST/STM32_WPAN/ble
     ${CMAKE_CURRENT_SOURCE_DIR}/../../Drivers/CMSIS/Include
+    ${CMAKE_CURRENT_SOURCE_DIR}/../../Custom_Drivers/Inc
 )
 
 # STM32CubeMX generated application sources
@@ -120,6 +121,8 @@ set(STM32_WPAN_Src
     ${CMAKE_CURRENT_SOURCE_DIR}/../../Middlewares/ST/STM32_WPAN/ble/svc/Src/svc_ctl.c
     ${CMAKE_CURRENT_SOURCE_DIR}/../../Middlewares/ST/STM32_WPAN/ble/core/auto/ble_events.c
     ${CMAKE_CURRENT_SOURCE_DIR}/../../Middlewares/ST/STM32_WPAN/ble/core/auto/ble_gen_aci.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/../../Custom_Drivers/Src/motionControl.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/../../Custom_Drivers/Src/motorDriver.c
 )
 
 # Link directories setup

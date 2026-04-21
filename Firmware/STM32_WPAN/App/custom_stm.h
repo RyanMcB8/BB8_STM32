@@ -28,7 +28,8 @@ extern "C" {
 
 /* Includes ------------------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "main.h"
+#include "motionControl.h"
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/
@@ -80,6 +81,17 @@ typedef enum{
   MOTOR_DUTY,
   MOTOR_OFF,
 } cmd_idx_t;
+
+typedef __PACKED_STRUCT
+{
+  uint16_t Connection_Handle;
+  uint16_t Attribute_Handle;
+  uint16_t offset;
+  uint8_t Data_Length;
+  uint8_t gap;
+  uint8_t Data[(BLE_EVT_MAX_PARAM_LEN - 2) - 5];
+} Modifying_Attribute_t;
+
 /* USER CODE END ET */
 
 /* Exported constants --------------------------------------------------------*/
