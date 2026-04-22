@@ -13,12 +13,12 @@
 
 void Forward( MotorPWMChannels_t motorPWMChannels, float duty){
     MotorControl(duty, 1, motorPWMChannels.motor1PWM, motorPWMChannels.motor1Channel, MOTOR_1);
-    MotorControl(duty, 1, motorPWMChannels.motor2PWM, motorPWMChannels.motor2Channel, MOTOR_2);
+    MotorControl(duty, 2, motorPWMChannels.motor2PWM, motorPWMChannels.motor2Channel, MOTOR_2);
 }
 
 void StopDroid( MotorPWMChannels_t motorPWMChannels){
     MotorControl(0.00, 1, motorPWMChannels.motor1PWM, motorPWMChannels.motor1Channel, MOTOR_1);
-    MotorControl(0.00, 1, motorPWMChannels.motor2PWM, motorPWMChannels.motor2Channel, MOTOR_2);
+    MotorControl(0.00, 2, motorPWMChannels.motor2PWM, motorPWMChannels.motor2Channel, MOTOR_2);
     return;
 }
 
