@@ -128,8 +128,8 @@ int main(void)
   /*  Defining what timer and channel each motor is connected to.*/
   motorPWMChannels.motor1PWM = &htim1;
   motorPWMChannels.motor1Channel = TIM_CHANNEL_1;
-  motorPWMChannels.motor2PWM =  &htim1;
-  motorPWMChannels.motor2Channel = TIM_CHANNEL_3;
+  motorPWMChannels.motor2PWM =  &htim16;
+  motorPWMChannels.motor2Channel = TIM_CHANNEL_1;
 
   /* USER CODE END 2 */
 

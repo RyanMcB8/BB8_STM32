@@ -73,8 +73,6 @@ void Error_Handler(void);
 #define STEP_RIGHT_MOTOR_GPIO_Port GPIOB
 #define RIGHT_SERVO_Pin GPIO_PIN_9
 #define RIGHT_SERVO_GPIO_Port GPIOB
-#define PS2_ATTN_Pin GPIO_PIN_4
-#define PS2_ATTN_GPIO_Port GPIOA
 #define PS2_CLK_Pin GPIO_PIN_5
 #define PS2_CLK_GPIO_Port GPIOA
 #define PS2_DATA_Pin GPIO_PIN_6
@@ -85,6 +83,8 @@ void Error_Handler(void);
 #define STEP_LEFT_MOTOR_GPIO_Port GPIOA
 #define LEFT_SERVO_Pin GPIO_PIN_10
 #define LEFT_SERVO_GPIO_Port GPIOB
+#define PS2_ATTN_Pin GPIO_PIN_12
+#define PS2_ATTN_GPIO_Port GPIOB
 #define DIR_RIGHT_MOTOR_Pin GPIO_PIN_6
 #define DIR_RIGHT_MOTOR_GPIO_Port GPIOC
 #define DIR_LEFT_MOTOR_Pin GPIO_PIN_15

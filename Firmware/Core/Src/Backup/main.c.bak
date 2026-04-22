@@ -121,14 +121,15 @@ int main(void)
   MX_TIM2_Init();
   MX_I2C3_Init();
   MX_TIM17_Init();
+  MX_TIM16_Init();
   MX_RF_Init();
   /* USER CODE BEGIN 2 */
 
   /*  Defining what timer and channel each motor is connected to.*/
   motorPWMChannels.motor1PWM = &htim1;
   motorPWMChannels.motor1Channel = TIM_CHANNEL_1;
-  motorPWMChannels.motor2PWM =  &htim1;
-  motorPWMChannels.motor2Channel = TIM_CHANNEL_3;
+  motorPWMChannels.motor2PWM =  &htim16;
+  motorPWMChannels.motor2Channel = TIM_CHANNEL_1;
 
   /* USER CODE END 2 */
 
@@ -224,7 +225,16 @@ void PeriphCommonClock_Config(void)
 }
 
 /* USER CODE BEGIN 4 */
-
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
+{
+  if (htim == &htim1){
+    HAL_GPIO_TogglePin(STEP_LEFT_MOTOR_GPIO_Port, STEP_LEFT_MOTOR_Pin);
+  }
+  
+  else if (htim == &htim2){
+    HAL_GPIO_TogglePin(STEP_RIGHT_MOTOR_GPIO_Port, STEP_RIGHT_MOTOR_Pin);
+  }
+}
 /* USER CODE END 4 */
 
 /**
