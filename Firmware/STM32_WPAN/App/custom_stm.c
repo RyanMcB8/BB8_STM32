@@ -969,7 +969,7 @@ void data_ble_process_recv_data(void)
     uint8_t cmdIdx = (g_ble_recv_data[7] - '0')*10 + 
       (g_ble_recv_data[8] - '0');
     
-    uint8_t strReturned[5] = {0};
+    uint8_t strReturned[3] = {0};
     switch(cmdIdx)
     { 
       case MOTOR_OFF:
@@ -978,7 +978,7 @@ void data_ble_process_recv_data(void)
       
       case MOTOR_DUTY:
         memcpy(strReturned, &g_ble_recv_data[commandLen], sizeof(strReturned) * sizeof(char));
-        float localDuty = (float) ((atoi((char const *) strReturned)) / (10e2)) ;
+        float localDuty = (float) ((atoi((char const *) strReturned)) / (10e1)) ;
         Forward(motorPWMChannels, localDuty);
 
         break;

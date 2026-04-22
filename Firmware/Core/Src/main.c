@@ -224,7 +224,16 @@ void PeriphCommonClock_Config(void)
 }
 
 /* USER CODE BEGIN 4 */
-
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
+{
+  if (htim == &htim1){
+    HAL_GPIO_TogglePin(STEP_LEFT_MOTOR_GPIO_Port, STEP_LEFT_MOTOR_Pin);
+  }
+  
+  else if (htim == &htim2){
+    HAL_GPIO_TogglePin(STEP_RIGHT_MOTOR_GPIO_Port, STEP_RIGHT_MOTOR_Pin);
+  }
+}
 /* USER CODE END 4 */
 
 /**
