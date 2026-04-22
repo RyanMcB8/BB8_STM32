@@ -121,6 +121,7 @@ int main(void)
   MX_TIM2_Init();
   MX_I2C3_Init();
   MX_TIM17_Init();
+  MX_TIM16_Init();
   MX_RF_Init();
   /* USER CODE BEGIN 2 */
 
