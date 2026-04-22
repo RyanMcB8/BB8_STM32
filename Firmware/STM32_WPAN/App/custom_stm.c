@@ -46,7 +46,7 @@ extern uint16_t Connection_Handle;
 /* USER CODE END PTD */
 
 /* Private defines -----------------------------------------------------------*/
-#define UUID_128_SUPPORTED  0
+#define UUID_128_SUPPORTED  1
 
 #if (UUID_128_SUPPORTED == 1)
 #define BM_UUID_LENGTH  UUID_TYPE_128
@@ -103,9 +103,40 @@ tBleStatus response_status;
 
 /* Private functions ----------------------------------------------------------*/
 
-
 /* USER CODE BEGIN PF */
+void data_ble_process_recv_data(void)
+{
+  uint8_t commandLen = 9;  
+  
+  //    Command is sent to the device.
+  if (strncmp(g_ble_recv_data, "{\"cmd\":", 7) == 0)
+  {
+    /*  Parsing the string number to be as an integer. */
+    uint8_t cmdIdx = (g_ble_recv_data[7] - '0')*10 + 
+      (g_ble_recv_data[8] - '0');
+    
+    uint8_t strReturned[3] = {0};
+    switch(cmdIdx)
+    { 
+      case MOTOR_OFF:
+      Forward(motorPWMChannels, 0.0f);
+        break;
+      
+      case MOTOR_DUTY:
+        memcpy(strReturned, &g_ble_recv_data[commandLen], sizeof(strReturned) * sizeof(char));
+        float localDuty = (float) ((atoi((char const *) strReturned)) / (10e1)) ;
+        Forward(motorPWMChannels, localDuty);
 
+        break;
+
+
+    default:
+      break;
+    }
+      
+    return;
+  }
+}
 /* USER CODE END PF */
 
 /**
@@ -958,36 +989,3 @@ static tBleStatus Generic_STM_App_Update_Char_Ext(uint16_t ConnectionHandle, uin
   return ret;
 }
 
-void data_ble_process_recv_data(void)
-{
-  uint8_t commandLen = 9;  
-  
-  //    Command is sent to the device.
-  if (strncmp(g_ble_recv_data, "{\"cmd\":", 7) == 0)
-  {
-    /*  Parsing the string number to be as an integer. */
-    uint8_t cmdIdx = (g_ble_recv_data[7] - '0')*10 + 
-      (g_ble_recv_data[8] - '0');
-    
-    uint8_t strReturned[3] = {0};
-    switch(cmdIdx)
-    { 
-      case MOTOR_OFF:
-      Forward(motorPWMChannels, 0.0f);
-        break;
-      
-      case MOTOR_DUTY:
-        memcpy(strReturned, &g_ble_recv_data[commandLen], sizeof(strReturned) * sizeof(char));
-        float localDuty = (float) ((atoi((char const *) strReturned)) / (10e1)) ;
-        Forward(motorPWMChannels, localDuty);
-
-        break;
-
-
-    default:
-      break;
-    }
-      
-    return;
-  }
-}
