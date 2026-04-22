@@ -31,6 +31,7 @@ typedef struct{
  *  the LSM6DSO32 IMU.
  *  @param handle A void pointer to the handle of the
  *  communication interface being used.
+ *  @param  deviceAddr  The I2C address of the device.
  *  @param reg The value of the register which should be
  *  read from.
  *  @param bufp A pointer to an array which can store the
@@ -39,13 +40,14 @@ typedef struct{
  *  from the register.
  *  @retval Returns an error value. 0 is successful. 
  */
-extern int32_t IMU_read(void *handle, uint8_t reg, uint8_t *bufp,
-                             uint16_t len);
+extern int32_t IMU_read(I2C_HandleTypeDef *handle, uint8_t deviceAddr, 
+    uint8_t reg, uint8_t *bufp, uint16_t len);
 
 /** @brief A function which can write to a specific
  *  address in the LSM6DSO32 IMU.
  *  @param handle A void pointer to the handle of the
  *  communication interface being used.
+ *  @param  deviceAddr  The I2C address of the device.
  *  @param reg The value of the register which should be
  *  written to.
  *  @param bufp A pointer to an array which stores the data
@@ -54,8 +56,8 @@ extern int32_t IMU_read(void *handle, uint8_t reg, uint8_t *bufp,
  *  to the register.
  *  @retval Returns an error value. 0 is successful. 
  */
-extern int32_t IMU_write(void *handle, uint8_t reg, uint8_t *bufp,
-                              uint16_t len);
+extern int32_t IMU_write(I2C_HandleTypeDef *handle, uint8_t deviceAddr, 
+    uint8_t reg, uint8_t *bufp, uint16_t len);
                               
 /** @brief A function which may be used by the lower level
  *  driver to add a delay in milliseconds.

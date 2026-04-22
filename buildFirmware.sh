@@ -18,27 +18,57 @@ cmake --build "$BUILD_DIR" --target "$TARGET"
 echo "Build complete!   "
 echo "Checking for ST-Link..."
 
-# if lsusb | grep -qi "STMicroelectronics ST-LINK"; then
-if powershell.exe -Command "Get-PnpDevice -FriendlyName '*ST-Link*'"; then
-    echo "ST-Link detected"
+#   Linux build
+if [[ "$(uname)" == "Linux" ]]; then
+    if lsusb | grep -qi "STMicroelectronics ST-LINK"; then
+        echo "ST-Link detected"
 
-    # ---- Step 3: Flash ----
-    if [ -f "$ELF_PATH" ]; then
-        echo "Flashing firmware..."
+        # Flashing the ST device. 
+        if [ -f "$ELF_PATH" ]; then
+            echo "Flashing firmware..."
 
-        openocd \
-          -f interface/stlink.cfg \
-          -f target/stm32wbx.cfg \
-          -c "program $ELF_PATH verify reset exit"
+            openocd \
+            -f interface/stlink.cfg \
+            -f target/stm32wbx.cfg \
+            -c "program $ELF_PATH verify reset exit"
 
-        echo "Flash complete"
+            echo "Flash complete"
+        else
+            echo "ELF file not found at: $ELF_PATH"
+            exit 1
+        fi
     else
-        echo "ELF file not found at: $ELF_PATH"
+        echo "No ST-Link detected."
+        echo "Please connect an ST-Link and try again."
         exit 1
     fi
 
-else
-    echo "No ST-Link detected."
-    echo "Please connect an ST-Link and try again."
+#   Windows build
+elif [[ "$OS" == "Windows_NT" ]]; then
+    if powershell.exe -Command "Get-PnpDevice -FriendlyName '*ST-Link*'"; then
+        echo "ST-Link detected"
+
+        # ---- Step 3: Flash ----
+        if [ -f "$ELF_PATH" ]; then
+            echo "Flashing firmware..."
+
+            openocd \
+            -f interface/stlink.cfg \
+            -f target/stm32wbx.cfg \
+            -c "program $ELF_PATH verify reset exit"
+
+            echo "Flash complete"
+        else
+            echo "ELF file not found at: $ELF_PATH"
+            exit 1
+        fi
+
+    else
+        echo "No ST-Link detected."
+        echo "Please connect an ST-Link and try again."
+        exit 1
+    fi
+else 
+    echo "Unknown or uncompatible operating system detected."
     exit 1
 fi
