@@ -66,3 +66,5 @@ Firmware/build/
 .settings/
 .cproject
 .project
+*.vscode
+*.bak
