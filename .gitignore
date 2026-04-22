@@ -55,16 +55,18 @@ dkms.conf
 *.dwo
 
 # Build files
-Firmware/.settings/
-Firmware/.vscode/
-Firmware/build/
-Firmware/.settings
-Firmware/.vscode
-Firmware/build/
+.settings/
+.vscode/
+build/
+.settings
+.vscode
+build
 
 # Personal settings folders
 .settings/
 .cproject
 .project
 *.vscode
+
+#CubeMX
 *.bak

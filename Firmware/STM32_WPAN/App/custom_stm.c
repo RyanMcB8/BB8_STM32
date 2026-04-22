@@ -57,7 +57,8 @@ extern uint16_t Connection_Handle;
 #define BM_REQ_CHAR_SIZE    (3)
 
 /* USER CODE BEGIN PD */
-
+char g_ble_recv_data[512] = {0}; /* Buffer to hold the received data */
+uint16_t g_ble_recv_data_len = 0;     /* Length of the received data */
 /* USER CODE END PD */
 
 /* Private macros ------------------------------------------------------------*/
@@ -92,28 +93,50 @@ static SVCCTL_EvtAckStatus_t Custom_STM_Event_Handler(void *pckt);
 static tBleStatus Generic_STM_App_Update_Char_Ext(uint16_t ConnectionHandle, uint16_t ServiceHandle, uint16_t CharHandle, uint16_t CharValueLen, uint8_t *pPayload);
 
 /* USER CODE BEGIN PFP */
-
+void data_ble_process_recv_data(void);
 /* USER CODE END PFP */
 
 /* Functions Definition ------------------------------------------------------*/
 /* USER CODE BEGIN PFD */
-
+tBleStatus response_status;
 /* USER CODE END PFD */
 
 /* Private functions ----------------------------------------------------------*/
 
-#define COPY_UUID_128(uuid_struct, uuid_15, uuid_14, uuid_13, uuid_12, uuid_11, uuid_10, uuid_9, uuid_8, uuid_7, uuid_6, uuid_5, uuid_4, uuid_3, uuid_2, uuid_1, uuid_0) \
-do {\
-    uuid_struct[0] = uuid_0; uuid_struct[1] = uuid_1; uuid_struct[2] = uuid_2; uuid_struct[3] = uuid_3; \
-    uuid_struct[4] = uuid_4; uuid_struct[5] = uuid_5; uuid_struct[6] = uuid_6; uuid_struct[7] = uuid_7; \
-    uuid_struct[8] = uuid_8; uuid_struct[9] = uuid_9; uuid_struct[10] = uuid_10; uuid_struct[11] = uuid_11; \
-    uuid_struct[12] = uuid_12; uuid_struct[13] = uuid_13; uuid_struct[14] = uuid_14; uuid_struct[15] = uuid_15; \
-}while(0)
-
-#define COPY_REMOTE_CONTROL_UUID(uuid_struct)          COPY_UUID_128(uuid_struct,0x00,0x00,0x90,0x02,0xcc,0x7a,0x48,0x2a,0x98,0x4a,0x7f,0x2e,0xd5,0xb3,0xe5,0x8f)
-
 /* USER CODE BEGIN PF */
+void data_ble_process_recv_data(void)
+{
+  uint8_t commandLen = 9;  
+  
+  //    Command is sent to the device.
+  if (strncmp(g_ble_recv_data, "{\"cmd\":", 7) == 0)
+  {
+    /*  Parsing the string number to be as an integer. */
+    uint8_t cmdIdx = (g_ble_recv_data[7] - '0')*10 + 
+      (g_ble_recv_data[8] - '0');
+    
+    uint8_t strReturned[3] = {0};
+    switch(cmdIdx)
+    { 
+      case MOTOR_OFF:
+      Forward(motorPWMChannels, 0.0f);
+        break;
+      
+      case MOTOR_DUTY:
+        memcpy(strReturned, &g_ble_recv_data[commandLen], sizeof(strReturned) * sizeof(char));
+        float localDuty = (float) ((atoi((char const *) strReturned)) / (10e1)) ;
+        Forward(motorPWMChannels, localDuty);
 
+        break;
+
+
+    default:
+      break;
+    }
+      
+    return;
+  }
+}
 /* USER CODE END PF */
 
 /**
@@ -131,7 +154,7 @@ static SVCCTL_EvtAckStatus_t Custom_STM_Event_Handler(void *Event)
   aci_gatt_notification_complete_event_rp0    *notification_complete;
   Custom_STM_App_Notification_evt_t     Notification;
   /* USER CODE BEGIN Custom_STM_Event_Handler_1 */
-
+  Modifying_Attribute_t *write_modified;
   /* USER CODE END Custom_STM_Event_Handler_1 */
 
   return_value = SVCCTL_EvtNotAck;
@@ -248,6 +271,27 @@ static SVCCTL_EvtAckStatus_t Custom_STM_Event_Handler(void *Event)
             return_value = SVCCTL_EvtAckFlowEnable;
             /* USER CODE BEGIN CUSTOM_STM_Service_2_Char_2_ACI_GATT_ATTRIBUTE_MODIFIED_VSEVT_CODE */
 
+            // Handle the write request data
+            write_modified = (Modifying_Attribute_t *)blecore_evt->data;
+            memset(g_ble_recv_data, 0, sizeof(g_ble_recv_data));
+            memcpy(g_ble_recv_data, write_modified->Data, write_modified->Data_Length);
+            g_ble_recv_data_len = write_modified->Data_Length;
+            data_ble_process_recv_data();
+
+            // Respond to the write request to keep BLE stack happy
+            response_status = aci_gatt_write_resp(
+              write_modified->Connection_Handle,
+              write_modified->Attribute_Handle,
+              0x00,      // Write_status: success
+              0x00,      // Error_Code: no error
+              write_modified->Data_Length,
+              (uint8_t *)&write_modified->Data[0]
+            );
+            if(response_status != BLE_STATUS_SUCCESS)
+            {
+
+            }
+
             /* USER CODE END CUSTOM_STM_Service_2_Char_2_ACI_GATT_ATTRIBUTE_MODIFIED_VSEVT_CODE */
           } /* if (attribute_modified->Attr_Handle == (CustomContext.CustomC44FHdle + CHARACTERISTIC_VALUE_ATTRIBUTE_OFFSET))*/
           /* USER CODE BEGIN EVT_BLUE_GATT_ATTRIBUTE_MODIFIED_END */
@@ -274,6 +318,28 @@ static SVCCTL_EvtAckStatus_t Custom_STM_Event_Handler(void *Event)
             return_value = SVCCTL_EvtAckFlowEnable;
             /* Allow or reject a write request from a client using aci_gatt_write_resp(...) function */
             /*USER CODE BEGIN CUSTOM_STM_Service_1_Char_2_ACI_GATT_WRITE_PERMIT_REQ_VSEVT_CODE */
+
+            // Handle the write request data
+            memset(g_ble_recv_data, 0, sizeof(g_ble_recv_data));
+            memcpy(g_ble_recv_data, write_perm_req->Data, write_perm_req->Data_Length);
+            g_ble_recv_data_len = write_perm_req->Data_Length;
+            data_ble_process_recv_data();
+            //Change_RTC(&g_ble_recv_data, &g_ble_recv_data_len);
+
+            // Respond to the write request to keep BLE stack happy
+
+            response_status = aci_gatt_write_resp(
+              write_perm_req->Connection_Handle,
+              write_perm_req->Attribute_Handle,
+              0x00,      // Write_status: success
+              0x00,      // Error_Code: no error
+              write_perm_req->Data_Length,
+              (uint8_t *)&write_perm_req->Data[0]
+            );
+            if(response_status != BLE_STATUS_SUCCESS)
+            {
+              
+            }
 
             /*USER CODE END CUSTOM_STM_Service_1_Char_2_ACI_GATT_WRITE_PERMIT_REQ_VSEVT_CODE*/
           } /*if (write_perm_req->Attribute_Handle == (CustomContext.CustomC44DHdle + CHARACTERISTIC_VALUE_ATTRIBUTE_OFFSET))*/
@@ -382,8 +448,8 @@ void SVCCTL_InitCustomSvc(void)
 
   /* USER CODE END SVCCTL_InitService1 */
 
-  COPY_REMOTE_CONTROL_UUID(uuid.Char_UUID_128);
-  ret = aci_gatt_add_service(UUID_TYPE_128,
+  uuid.Char_UUID_16 = 0x9002;
+  ret = aci_gatt_add_service(UUID_TYPE_16,
                              (Service_UUID_t *) &uuid,
                              PRIMARY_SERVICE,
                              max_attr_record,

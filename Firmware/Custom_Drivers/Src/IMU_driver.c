@@ -39,31 +39,39 @@ static void IMUDeinit(){
   HAL_GPIO_WritePin(IMU_PWR_GPIO_Port, IMU_PWR_Pin, GPIO_PIN_RESET);
 }
 
-int32_t IMU_write(void *handle, uint8_t reg, uint8_t *bufp,
-                              uint16_t len)
+int32_t IMU_write(I2C_HandleTypeDef *handle, uint8_t deviceAddr, uint8_t reg, uint8_t *bufp, uint16_t len)
 {
-  HAL_GPIO_WritePin(IMU_6AX_CS_bar_GPIO_Port, IMU_6AX_CS_bar_Pin,
-                    GPIO_PIN_RESET);
-  HAL_SPI_Transmit(handle, &reg, 1, timeoutDuration);
-  HAL_SPI_Transmit(handle, (uint8_t*) bufp, len, timeoutDuration);
-  HAL_GPIO_WritePin(IMU_6AX_CS_bar_GPIO_Port, IMU_6AX_CS_bar_Pin, GPIO_PIN_SET);
-  return 0;
+
+    // Transmitting the register address followed by the data
+    if (HAL_I2C_Mem_Write(handle, deviceAddr, reg, I2C_MEMADD_SIZE_8BIT, bufp, len, timeoutDuration) != HAL_OK)
+    {
+        // Error_Handler();
+        return -1;
+    }
+
+    return 0;
 }
 
-int32_t IMU_read(void *handle, uint8_t reg, uint8_t *bufp,
-                             uint16_t len)
+int32_t IMU_read(I2C_HandleTypeDef *handle, uint8_t deviceAddr, uint8_t reg, uint8_t *bufp, uint16_t len)
 {
-  reg |= 0x80;
-  HAL_GPIO_WritePin(IMU_6AX_CS_bar_GPIO_Port, IMU_6AX_CS_bar_Pin, 
-                     GPIO_PIN_RESET);
-  if (HAL_SPI_Transmit(handle, &reg, 1, timeoutDuration) != HAL_OK){
-    //Error_Handler();
-  }
-  if (HAL_SPI_Receive(handle, bufp, len, timeoutDuration) != HAL_OK){
-    //Error_Handler();
-  }
-  HAL_GPIO_WritePin(IMU_6AX_CS_bar_GPIO_Port, IMU_6AX_CS_bar_Pin, GPIO_PIN_SET);
-  return 0;
+    // Setting the register address with the read flag.
+    reg |= 0x80;
+
+    // Transmitting the register address
+    if (HAL_I2C_Mem_Write(handle, deviceAddr, reg, I2C_MEMADD_SIZE_8BIT, NULL, 0, timeoutDuration) != HAL_OK)
+    {
+        // Error_Handler();
+        return -1;
+    }
+
+    // Receiving the data from the device
+    if (HAL_I2C_Mem_Read(handle, deviceAddr, reg, I2C_MEMADD_SIZE_8BIT, bufp, len, timeoutDuration) != HAL_OK)
+    {
+        // Error_Handler();
+        return -1;
+    }
+
+    return 0;
 }
 
 static void platform_delay(uint32_t ms)

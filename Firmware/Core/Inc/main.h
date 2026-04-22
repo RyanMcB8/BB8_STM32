@@ -40,7 +40,13 @@ extern "C" {
 
 /* Exported types ------------------------------------------------------------*/
 /* USER CODE BEGIN ET */
-
+/* struct which can allow for the motor PWM parameters to be passed through without using multiple parameters*/
+typedef struct{
+    TIM_HandleTypeDef* motor1PWM;
+    uint32_t motor1Channel;
+    TIM_HandleTypeDef* motor2PWM;
+    uint32_t motor2Channel;
+} MotorPWMChannels_t;
 /* USER CODE END ET */
 
 /* Exported constants --------------------------------------------------------*/
@@ -61,24 +67,46 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
-#define MOTOR2_FAULT_Pin GPIO_PIN_13
-#define MOTOR2_FAULT_GPIO_Port GPIOC
-#define MOTOR1_STEP_Pin GPIO_PIN_0
-#define MOTOR1_STEP_GPIO_Port GPIOA
-#define MOTOR2_EN_BAR_Pin GPIO_PIN_8
-#define MOTOR2_EN_BAR_GPIO_Port GPIOA
-#define MOTOR1_FAULT_Pin GPIO_PIN_10
-#define MOTOR1_FAULT_GPIO_Port GPIOA
-#define MOTOR2_STEP_Pin GPIO_PIN_11
-#define MOTOR2_STEP_GPIO_Port GPIOA
-#define MOTOR2_DIR_Pin GPIO_PIN_15
-#define MOTOR2_DIR_GPIO_Port GPIOA
-#define MOTOR1_EN_BAR_Pin GPIO_PIN_0
-#define MOTOR1_EN_BAR_GPIO_Port GPIOD
-#define MOTOR1_DIR_Pin GPIO_PIN_1
-#define MOTOR1_DIR_GPIO_Port GPIOD
+#define EN_LEFT_MOTOR_Pin GPIO_PIN_13
+#define EN_LEFT_MOTOR_GPIO_Port GPIOC
+#define STEP_RIGHT_MOTOR_Pin GPIO_PIN_8
+#define STEP_RIGHT_MOTOR_GPIO_Port GPIOB
+#define RIGHT_SERVO_Pin GPIO_PIN_9
+#define RIGHT_SERVO_GPIO_Port GPIOB
+#define PS2_CLK_Pin GPIO_PIN_5
+#define PS2_CLK_GPIO_Port GPIOA
+#define PS2_DATA_Pin GPIO_PIN_6
+#define PS2_DATA_GPIO_Port GPIOA
+#define PS2_CMD_Pin GPIO_PIN_7
+#define PS2_CMD_GPIO_Port GPIOA
+#define STEP_LEFT_MOTOR_Pin GPIO_PIN_8
+#define STEP_LEFT_MOTOR_GPIO_Port GPIOA
+#define LEFT_SERVO_Pin GPIO_PIN_10
+#define LEFT_SERVO_GPIO_Port GPIOB
+#define PS2_ATTN_Pin GPIO_PIN_12
+#define PS2_ATTN_GPIO_Port GPIOB
+#define DIR_RIGHT_MOTOR_Pin GPIO_PIN_6
+#define DIR_RIGHT_MOTOR_GPIO_Port GPIOC
+#define DIR_LEFT_MOTOR_Pin GPIO_PIN_15
+#define DIR_LEFT_MOTOR_GPIO_Port GPIOA
+#define EN_RIGHT_MOTOR_Pin GPIO_PIN_10
+#define EN_RIGHT_MOTOR_GPIO_Port GPIOC
 
 /* USER CODE BEGIN Private defines */
+
+/* Adding a struct for the motor power. */
+
+/** @brief A struct which is used to store the analogue data received
+ * from the controller or by over BLE.
+ */
+typedef struct{
+  float forward_backward;
+  float left_right;
+} joyStick_values_t;
+
+extern joyStick_values_t joyStickValues; 
+extern MotorPWMChannels_t motorPWMChannels;
+
 
 /* USER CODE END Private defines */
 

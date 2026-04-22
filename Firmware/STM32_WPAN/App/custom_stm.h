@@ -28,7 +28,8 @@ extern "C" {
 
 /* Includes ------------------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "main.h"
+#include "motionControl.h"
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/
@@ -75,6 +76,21 @@ typedef struct
 } Custom_STM_App_Notification_evt_t;
 
 /* USER CODE BEGIN ET */
+typedef enum{
+  SHUTDOWN,
+  MOTOR_DUTY,
+  MOTOR_OFF,
+} cmd_idx_t;
+
+typedef __PACKED_STRUCT
+{
+  uint16_t Connection_Handle;
+  uint16_t Attribute_Handle;
+  uint16_t offset;
+  uint8_t Data_Length;
+  uint8_t gap;
+  uint8_t Data[(BLE_EVT_MAX_PARAM_LEN - 2) - 5];
+} Modifying_Attribute_t;
 
 /* USER CODE END ET */
 
@@ -95,7 +111,13 @@ extern uint16_t SizeC44F;
 
 /* Exported macros -----------------------------------------------------------*/
 /* USER CODE BEGIN EM */
+#ifndef true
+#define true 1
+#endif
 
+#ifndef false
+#define false 1
+#endif
 /* USER CODE END EM */
 
 /* Exported functions ------------------------------------------------------- */
