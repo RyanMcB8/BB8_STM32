@@ -4,6 +4,7 @@
 
 /* Adding any necessary include files to the header file */
 #include "main.h"
+#include "motorDriver.h"
 /* Creation of any specific types */
 
 
@@ -21,6 +22,16 @@ typedef enum{
 
 
 } SpinErrors_t;
+
+typedef struct{
+    float power;
+    motorDirections_t direction;    
+} motorPower_t;
+
+typedef struct{
+    motorPower_t leftMotorPower;
+    motorPower_t rightMotorPower;
+} droidMotorPowers_t;
 
 
 void Forward( MotorPWMChannels_t motorPWMChannels, float duty);
@@ -50,6 +61,25 @@ void StopDroid( MotorPWMChannels_t motorPWMChannels);
  */
 Move_t Move(float leftRight, float forwardBackward, MotorPWMChannels_t motorPWMChannels);
 
+
+/** @brief                  A function which can take the normalised values of a joystick (x and y),
+ *                          and determine the relative powers to supply to the motor to achieve the
+ *                          best solution.
+ *  @param  x               The floating point normalised x value of the joystick.
+ *  @param  y               The floating point normalised y value of the joystick.
+ *  @param  reference_angle The global angle which the droid moves relative to.
+ *  @details                The reference angle may be determined using another joystick to
+ *                          determine the position the head is looking in or it may be an
+ *                          IMU built into a controller than allows the droid to always
+ *                          look the same direction as the user. 
+ */
+void DroidTranslation(float x = 0.5, float y = 0.5, float reference_angle = 0.0);
+
+/** @brief                  A simple function which takes an angle as an argument and maps it
+ *                          to remain between 0 and 2*Pi radians.
+ *  @param  angle           The floating point angle measured in radians.
+ */
+float wrap_angle(float angle);
 
 /* Declaration of any variables which may be referenced outside the file */
 

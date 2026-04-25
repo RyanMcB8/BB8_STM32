@@ -11,7 +11,7 @@ ELF_PATH="$BUILD_DIR/$TARGET.elf"
 # Building from the CMkaeLists.txt file.
 echo "Building BB8 project..."
 cd ./Firmware
-cmake -B "$BUILD_DIR" -G "Ninja" -DCMAKE_TOOLCHAIN_FILE=cmake/gcc-arm-none-eabi.cmake
+cmake -B "$BUILD_DIR" -G "Ninja" -DCMAKE_TOOLCHAIN_FILE=cmake/gcc-arm-none-eabi.cmake -DCMAKE_C_FLAGS="-Wno-unused-function -Wno-unused-variable"
 cmake --build "$BUILD_DIR" --target "$TARGET" 
 
 # Searching to see if the microcontroller is connected.

@@ -4,7 +4,7 @@
 #include "stm32wb55xx.h"
 /* Defining functions */
 
-motorErrors_t MotorControl(float power, _Bool direction, TIM_HandleTypeDef* timerHandle, uint32_t timerChannel, motors_t motor){
+motorErrors_t MotorControl(float power, motorDirections_t direction, TIM_HandleTypeDef* timerHandle, uint32_t timerChannel, motors_t motor){
     /* Checking past values are between 0 and 1. */
     if (power > 0.0f && power <= 1.0f){
 
@@ -24,8 +24,8 @@ motorErrors_t MotorControl(float power, _Bool direction, TIM_HandleTypeDef* time
 void InitMotors(TIM_HandleTypeDef *tim1, uint32_t timer1Channel, TIM_HandleTypeDef *tim2, uint32_t timer2Channel){
     HAL_TIM_PWM_Start(tim1, timer1Channel);  
     HAL_TIM_PWM_Start(tim2, timer2Channel);  
-    Motor1Reset();
-    Motor2Reset();
+    LeftMotorReset();
+    RightMotorReset();
     return;
 }
 
@@ -79,14 +79,14 @@ motorErrors_t SetMotorSpeed(float power, TIM_HandleTypeDef *timerHandle, uint32_
     return Sucessful;
 }
 
-motorErrors_t SetMotorDirection(motors_t motor, GPIO_PinState direction){
+motorErrors_t SetMotorDirection(motors_t motor, motorDirections_t direction){
     /* Setting the direction */
     switch(motor){
-        case MOTOR_1:
+        case leftMotor:
             HAL_GPIO_WritePin(DIR_LEFT_MOTOR_GPIO_Port, DIR_LEFT_MOTOR_Pin, direction);
             break;
 
-        case MOTOR_2:
+        case rightMotor:
             HAL_GPIO_WritePin(DIR_RIGHT_MOTOR_GPIO_Port, DIR_RIGHT_MOTOR_Pin, direction);
             break;
 
@@ -96,14 +96,14 @@ motorErrors_t SetMotorDirection(motors_t motor, GPIO_PinState direction){
     return Sucessful;
 }
 
-void Motor1Reset(void){
+void LeftMotorReset(void){
     HAL_GPIO_WritePin(EN_LEFT_MOTOR_GPIO_Port, EN_LEFT_MOTOR_Pin, GPIO_PIN_SET);
     HAL_Delay(1);
     HAL_GPIO_WritePin(EN_LEFT_MOTOR_GPIO_Port, EN_LEFT_MOTOR_Pin, GPIO_PIN_RESET);
     return;
 }
 
-void Motor2Reset(void){
+void RightMotorReset(void){
     HAL_GPIO_WritePin(EN_RIGHT_MOTOR_GPIO_Port, EN_RIGHT_MOTOR_Pin, GPIO_PIN_SET);
     HAL_Delay(1);
     HAL_GPIO_WritePin(EN_RIGHT_MOTOR_GPIO_Port, EN_RIGHT_MOTOR_Pin, GPIO_PIN_RESET);
