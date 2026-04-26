@@ -33,6 +33,7 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "PS2_driver.h"
+#include "motionControl.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -42,7 +43,8 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-
+#define minChangeJoy  10u
+#define DEADZONE  5
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -125,11 +127,34 @@ int main(void)
   MX_RF_Init();
   /* USER CODE BEGIN 2 */
 
+  /** @brief              A function which takes the users controller instance
+   *                      and sets the appropriate pins defintions and feedback
+   *                      zsettings.
+   *  @param  controller  A pointer to the controller instance which the user
+   *                      is looking to initialise.
+   */
+  void controllerInit(PS2ControllerStates_t *controller);
+
   /*  Defining what timer and channel each motor is connected to.*/
   motorPWMChannels.motor1PWM = &htim1;
   motorPWMChannels.motor1Channel = TIM_CHANNEL_1;
   motorPWMChannels.motor2PWM =  &htim16;
   motorPWMChannels.motor2Channel = TIM_CHANNEL_1;
+
+  /*  Creating the local variables for checking the analogue stick values. */
+  uint8_t last_joystickLeftX = 0;
+  uint8_t last_joystickLeftY = 0;
+  uint8_t last_joystickRight = 0;
+  
+  uint8_t new_joystickLeftX = 0;
+  uint8_t new_joystickLeftY = 0;
+  uint8_t new_joystickRight = 0;
+
+  /*  Creating the controller instance and initialising it. */
+  PS2ControllerStates_t controller;
+  controllerInit(&controller);
+  config_gamepad(&controller, controller.feedback.en_Pressures, controller.feedback.en_Rumble);
+
 
   /* USER CODE END 2 */
 
@@ -144,6 +169,37 @@ int main(void)
     MX_APPE_Process();
 
     /* USER CODE BEGIN 3 */
+
+    /*  Reading the most recent data from the analogue stick. */
+    new_joystickLeftX = Analogue(&controller, PS_LX);
+    new_joystickLeftY = Analogue(&controller, PS_LY);
+
+    /*  Checking if the joystick position is in the deadzone. */
+    if ((new_joystickLeftX > (0x80 - DEADZONE) && new_joystickLeftX < (0x80 + DEADZONE)) ||
+        (new_joystickLeftY > (0x80 - DEADZONE) && new_joystickLeftY < (0x80 + DEADZONE))){
+      /*  Stop the droid from moving. */
+      DroidTranslation(0.5, 0.5, 0);
+    }
+
+    /*  Checking if there has been a large enough change from the last joystick position. */
+    else if (minChangeJoy <= fabsf(new_joystickLeftX - last_joystickLeftX) || minChangeJoy <= fabsf(new_joystickLeftY - last_joystickLeftY)){
+      /*  Updating the recent joystick value. */
+      last_joystickLeftX = new_joystickLeftX;
+      last_joystickLeftY = new_joystickLeftY;
+
+      /*  Normalising the joystick controllers to be within a value between 0 and 1 and not 0 to 255. */
+      float normalisedX = ((float)new_joystickLeftX / (float)0xff);
+      float normalisedY = ((float)new_joystickLeftY / (float)0xff);
+
+      /*  Updating the droid's motor values. */
+      DroidTranslation(normalisedX, normalisedY, 0);
+    }
+
+    /*  Adding a short delay to reduce the sampling rate.
+        This must be replaced to be thread based/ timer
+        based in the future for optimal performance. */
+    HAL_Delay(5); // ~200Hz sampling rate.
+
   }
   /* USER CODE END 3 */
 }
@@ -225,15 +281,22 @@ void PeriphCommonClock_Config(void)
 }
 
 /* USER CODE BEGIN 4 */
-void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
-{
-  if (htim == &htim1){
-    HAL_GPIO_TogglePin(STEP_LEFT_MOTOR_GPIO_Port, STEP_LEFT_MOTOR_Pin);
-  }
-  
-  else if (htim == &htim2){
-    HAL_GPIO_TogglePin(STEP_RIGHT_MOTOR_GPIO_Port, STEP_RIGHT_MOTOR_Pin);
-  }
+
+void controllerInit(PS2ControllerStates_t *controller){
+    /*  Setting the pin defintions for the controller. */
+  controller->pins.att_GPIO_Pin = PS2_ATTN_Pin;
+  controller->pins.att_GPIO_Port = PS2_ATTN_GPIO_Port;
+  controller->pins.clk_GPIO_Pin = PS2_CLK_Pin;
+  controller->pins.clk_GPIO_Port = PS2_CLK_GPIO_Port;
+  controller->pins.cmd_GPIO_Pin = PS2_CMD_Pin;
+  controller->pins.cmd_GPIO_Port = PS2_CMD_GPIO_Port;
+  controller->pins.dat_GPIO_Pin = PS2_DATA_Pin;
+  controller->pins.dat_GPIO_Port = PS2_DATA_GPIO_Port;
+
+  /*  Disabling the feedback. */
+  controller->feedback.en_Pressures = false;
+  controller->feedback.en_Rumble = false;
+  return;
 }
 /* USER CODE END 4 */
 
