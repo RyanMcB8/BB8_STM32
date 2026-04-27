@@ -67,30 +67,30 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
-#define EN_LEFT_MOTOR_Pin GPIO_PIN_13
-#define EN_LEFT_MOTOR_GPIO_Port GPIOC
-#define STEP_RIGHT_MOTOR_Pin GPIO_PIN_8
-#define STEP_RIGHT_MOTOR_GPIO_Port GPIOB
-#define RIGHT_SERVO_Pin GPIO_PIN_9
-#define RIGHT_SERVO_GPIO_Port GPIOB
-#define PS2_CLK_Pin GPIO_PIN_5
-#define PS2_CLK_GPIO_Port GPIOA
-#define PS2_DATA_Pin GPIO_PIN_6
-#define PS2_DATA_GPIO_Port GPIOA
-#define PS2_CMD_Pin GPIO_PIN_7
-#define PS2_CMD_GPIO_Port GPIOA
-#define STEP_LEFT_MOTOR_Pin GPIO_PIN_8
-#define STEP_LEFT_MOTOR_GPIO_Port GPIOA
-#define LEFT_SERVO_Pin GPIO_PIN_10
-#define LEFT_SERVO_GPIO_Port GPIOB
-#define PS2_ATTN_Pin GPIO_PIN_12
-#define PS2_ATTN_GPIO_Port GPIOB
-#define DIR_RIGHT_MOTOR_Pin GPIO_PIN_6
-#define DIR_RIGHT_MOTOR_GPIO_Port GPIOC
-#define DIR_LEFT_MOTOR_Pin GPIO_PIN_15
+#define STEP_RIGHT_MOTOR_Pin GPIO_PIN_7
+#define STEP_RIGHT_MOTOR_GPIO_Port GPIOA
+#define DIR_RIGHT_MOTOR_Pin GPIO_PIN_8
+#define DIR_RIGHT_MOTOR_GPIO_Port GPIOA
+#define DIR_LEFT_MOTOR_Pin GPIO_PIN_9
 #define DIR_LEFT_MOTOR_GPIO_Port GPIOA
+#define PS2_CMD_Pin GPIO_PIN_4
+#define PS2_CMD_GPIO_Port GPIOC
+#define STEP_LEFT_MOTOR_Pin GPIO_PIN_10
+#define STEP_LEFT_MOTOR_GPIO_Port GPIOB
+#define PS2_DATA_Pin GPIO_PIN_0
+#define PS2_DATA_GPIO_Port GPIOB
+#define PS2_ATTN_Pin GPIO_PIN_1
+#define PS2_ATTN_GPIO_Port GPIOB
+#define RIGHT_SERVO_Pin GPIO_PIN_10
+#define RIGHT_SERVO_GPIO_Port GPIOA
+#define LEFT_SERVO_Pin GPIO_PIN_15
+#define LEFT_SERVO_GPIO_Port GPIOA
 #define EN_RIGHT_MOTOR_Pin GPIO_PIN_10
 #define EN_RIGHT_MOTOR_GPIO_Port GPIOC
+#define EN_LEFT_MOTOR_Pin GPIO_PIN_12
+#define EN_LEFT_MOTOR_GPIO_Port GPIOC
+#define PS2_CLK_Pin GPIO_PIN_4
+#define PS2_CLK_GPIO_Port GPIOB
 
 /* USER CODE BEGIN Private defines */
 
