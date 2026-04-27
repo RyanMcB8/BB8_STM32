@@ -93,7 +93,7 @@ void Error_Handler(void);
 #define PS2_CLK_GPIO_Port GPIOB
 
 /* USER CODE BEGIN Private defines */
-
+#define delayMicroseconds(x) for(uint16_t tempWait=0; tempWait < (x*500); tempWait++){} 
 /* Adding a struct for the motor power. */
 
 /** @brief A struct which is used to store the analogue data received

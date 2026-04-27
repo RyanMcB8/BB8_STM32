@@ -43,8 +43,8 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-#define minChangeJoy  10u
-#define DEADZONE  5
+#define minChangeJoy  5u
+#define DEADZONE  5u
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -138,9 +138,9 @@ int main(void)
   void controllerInit(PS2ControllerStates_t *controller);
 
   /*  Defining what timer and channel each motor is connected to.*/
-  motorPWMChannels.motor1PWM = &htim1;
-  motorPWMChannels.motor1Channel = TIM_CHANNEL_1;
-  motorPWMChannels.motor2PWM =  &htim16;
+  motorPWMChannels.motor1PWM = &htim2;
+  motorPWMChannels.motor1Channel = TIM_CHANNEL_3;
+  motorPWMChannels.motor2PWM =  &htim1;
   motorPWMChannels.motor2Channel = TIM_CHANNEL_1;
 
   /*  Creating the local variables for checking the analogue stick values. */
@@ -155,7 +155,9 @@ int main(void)
   /*  Creating the controller instance and initialising it. */
   PS2ControllerStates_t controller;
   controllerInit(&controller);
-  config_gamepad(&controller, controller.feedback.en_Pressures, controller.feedback.en_Rumble);
+  while (0 != config_gamepad(&controller, controller.feedback.en_Pressures, controller.feedback.en_Rumble)){
+    HAL_Delay(100);
+  }
 
 
   /* USER CODE END 2 */
