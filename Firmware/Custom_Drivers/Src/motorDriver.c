@@ -43,8 +43,8 @@ motorErrors_t SetMotorSpeed(float power, TIM_HandleTypeDef *timerHandle, uint32_
         power = 1.0f;
 
     /*  Setting the speed limits of the motor. */
-    uint32_t min_freq = 1000;    // Hz (slowest motor can handle)
-    uint32_t max_freq = 50000;   // Hz (fastest motor can handle)
+    uint32_t min_freq = 3000;    // Hz (slowest motor can handle)
+    uint32_t max_freq = 500000;   // Hz (fastest motor can handle)
 
     uint32_t freq = min_freq + (uint32_t)((max_freq - min_freq) * power);
 

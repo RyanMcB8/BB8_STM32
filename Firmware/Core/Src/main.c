@@ -127,6 +127,8 @@ int main(void)
   MX_RF_Init();
   /* USER CODE BEGIN 2 */
 
+  HAL_Delay(1000);
+
   /** @brief              A function which takes the users controller instance
    *                      and sets the appropriate pins defintions and feedback
    *                      zsettings.
@@ -188,11 +190,11 @@ int main(void)
       last_joystickLeftY = new_joystickLeftY;
 
       /*  Normalising the joystick controllers to be within a value between 0 and 1 and not 0 to 255. */
-      float normalisedX = ((float)new_joystickLeftX / (float)0xff);
-      float normalisedY = ((float)new_joystickLeftY / (float)0xff);
+      joyStickValues.left_right = ((float)new_joystickLeftX / (float)0xff);
+      joyStickValues.forward_backward = ((float)new_joystickLeftY / (float)0xff);
 
       /*  Updating the droid's motor values. */
-      DroidTranslation(normalisedX, normalisedY, 0);
+      DroidTranslation(joyStickValues.left_right, joyStickValues.forward_backward, 0);
     }
 
     /*  Adding a short delay to reduce the sampling rate.
