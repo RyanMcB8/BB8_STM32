@@ -109,12 +109,23 @@ void data_ble_process_recv_data(void)
   uint8_t commandLen = 9;  
   
   //    Command is sent to the device.
-  if (strncmp(g_ble_recv_data, "{\"cmd\":", 7) == 0)
+  /*  When transmitting from ST BLE Toolkit, there is an error in transitting
+      The correct ASCII value for the '"' symbol so an alternative comparison
+      is used to ensure that is can still be used to transmit commands. */
+
+  if ((strncmp(g_ble_recv_data, "{\"cmd\":", 7) == 0) || (strncmp(g_ble_recv_data, "{cmd:", 5) == 0) )
   {
     /*  Parsing the string number to be as an integer. */
-    uint8_t cmdIdx = (g_ble_recv_data[7] - '0')*10 + 
-      (g_ble_recv_data[8] - '0');
-    
+    uint8_t cmdIdx;
+    if (strncmp(g_ble_recv_data, "{\"cmd\":", 7) == 0){
+      cmdIdx = (g_ble_recv_data[7] - '0')*10 + 
+        (g_ble_recv_data[8] - '0');
+    }
+    else{
+      cmdIdx = (g_ble_recv_data[5] - '0')*10 + 
+        (g_ble_recv_data[6] - '0');
+      commandLen = 7;
+    }
     uint8_t strReturned[3] = {0};
     switch(cmdIdx)
     { 
@@ -125,7 +136,7 @@ void data_ble_process_recv_data(void)
       case MOTOR_DUTY:
         memcpy(strReturned, &g_ble_recv_data[commandLen], sizeof(strReturned) * sizeof(char));
         float localDuty = (float) ((atoi((char const *) strReturned)) / (10e1)) ;
-        Forward(motorPWMChannels, localDuty);
+        DroidTranslation(0, localDuty, 0.0f, motorPWMChannels);
 
         break;
 

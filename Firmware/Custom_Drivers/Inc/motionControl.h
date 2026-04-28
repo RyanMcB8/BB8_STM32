@@ -73,7 +73,7 @@ Move_t Move(float leftRight, float forwardBackward, MotorPWMChannels_t motorPWMC
  *                          IMU built into a controller than allows the droid to always
  *                          look the same direction as the user. 
  */
-void DroidTranslation(float x, float y, float reference_angle);
+void DroidTranslation(float x, float y, float reference_angle, MotorPWMChannels_t motorPWMChannels) ;
 
 /** @brief                  A simple function which takes an angle as an argument and maps it
  *                          to remain between 0 and 2*Pi radians.

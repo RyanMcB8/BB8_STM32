@@ -61,7 +61,7 @@ Move_t Move(float leftRight, float forwardBackward, MotorPWMChannels_t motorPWMC
 }
 
 
-void DroidTranslation(float x, float y, float reference_angle) {
+void DroidTranslation(float x, float y, float reference_angle, MotorPWMChannels_t motorPWMChannels) {
 
     /*  Recentreing the joystick so that the centre is 0.0. */
     float dx = x - 0.5f;
@@ -100,6 +100,21 @@ void DroidTranslation(float x, float y, float reference_angle) {
         motorPowers.rightMotorPower.power = -rightRelativePower;
         motorPowers.rightMotorPower.direction   = anticlockwise;
     }
+
+    /* Applying the new settings to the motors. */
+    MotorControl(motorPowers.leftMotorPower.power,
+        motorPowers.leftMotorPower.direction,
+        motorPWMChannels.motor1PWM,
+        motorPWMChannels.motor1Channel,
+        leftMotor);
+
+
+    MotorControl(motorPowers.rightMotorPower.power,
+        motorPowers.rightMotorPower.direction,
+        motorPWMChannels.motor2PWM,
+        motorPWMChannels.motor2Channel,
+        rightMotor);
+
 
     return;
 }
