@@ -144,6 +144,7 @@ int main(void)
   motorPWMChannels.motor2Channel = TIM_CHANNEL_1;
 
   /*  Creating the local variables for checking the analogue stick values. */
+  #ifdef USE_GAMEPAD
   uint8_t last_joystickLeftX = 0;
   uint8_t last_joystickLeftY = 0;
   uint8_t last_joystickRight = 0;
@@ -158,6 +159,7 @@ int main(void)
   while (0 != config_gamepad(&controller, controller.feedback.en_Pressures, controller.feedback.en_Rumble)){
     HAL_Delay(100);
   }
+  #endif
 
 
   /* USER CODE END 2 */
@@ -175,6 +177,7 @@ int main(void)
     /* USER CODE BEGIN 3 */
 
     /*  Reading the most recent data from the analogue stick. */
+    #ifdef USE_GAMEPAD
     new_joystickLeftX = Analogue(&controller, PS_LX);
     new_joystickLeftY = Analogue(&controller, PS_LY);
 
@@ -203,6 +206,7 @@ int main(void)
         This must be replaced to be thread based/ timer
         based in the future for optimal performance. */
     HAL_Delay(5); // ~200Hz sampling rate.
+    #endif
 
   }
   /* USER CODE END 3 */
