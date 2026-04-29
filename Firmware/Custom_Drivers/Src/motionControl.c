@@ -18,8 +18,15 @@ droidMotorPowers_t motorPowers;
 /* Test functions. */
 
 void Forward( MotorPWMChannels_t motorPWMChannels, float duty){
-    MotorControl(duty, clockwise, motorPWMChannels.motor1PWM, motorPWMChannels.motor1Channel, leftMotor);
-    MotorControl(duty, anticlockwise, motorPWMChannels.motor2PWM, motorPWMChannels.motor2Channel, rightMotor);
+    if (duty == 0){
+        HAL_TIM_PWM_Stop(motorPWMChannels.motor1PWM, motorPWMChannels.motor1Channel);
+        HAL_TIM_PWM_Stop(motorPWMChannels.motor2PWM, motorPWMChannels.motor2Channel);
+
+    }
+    else{
+        MotorControl(duty, anticlockwise, motorPWMChannels.motor1PWM, motorPWMChannels.motor1Channel, leftMotor);
+        MotorControl(duty, clockwise, motorPWMChannels.motor2PWM, motorPWMChannels.motor2Channel, rightMotor);
+    }
 }
 
 void StopDroid( MotorPWMChannels_t motorPWMChannels){
