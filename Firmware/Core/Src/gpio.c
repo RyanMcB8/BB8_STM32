@@ -48,6 +48,8 @@ void MX_GPIO_Init(void)
   __HAL_RCC_GPIOC_CLK_ENABLE();
   __HAL_RCC_GPIOB_CLK_ENABLE();
   __HAL_RCC_GPIOA_CLK_ENABLE();
+  __HAL_RCC_TIM1_CLK_ENABLE();
+  __HAL_RCC_TIM2_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOA, DIR_RIGHT_MOTOR_Pin|DIR_LEFT_MOTOR_Pin|RIGHT_SERVO_Pin|LEFT_SERVO_Pin, GPIO_PIN_RESET);
@@ -84,6 +86,20 @@ void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+
+  GPIO_InitStruct.Pin = STEP_RIGHT_MOTOR_Pin;  // PWM output pin for the right motor
+  GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;      // Alternate function push-pull mode
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  GPIO_InitStruct.Alternate = GPIO_AF1_TIM1;   // Ensure correct Alternate function for TIM1
+  HAL_GPIO_Init(STEP_RIGHT_MOTOR_GPIO_Port, &GPIO_InitStruct);
+
+  GPIO_InitStruct.Pin = STEP_LEFT_MOTOR_Pin;  // PWM output pin for the left motor
+  GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;     // Alternate function push-pull mode
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  GPIO_InitStruct.Alternate = GPIO_AF1_TIM2;  // Ensure correct Alternate function for TIM2
+  HAL_GPIO_Init(STEP_LEFT_MOTOR_GPIO_Port, &GPIO_InitStruct);
 
 }
 

@@ -136,7 +136,7 @@ void data_ble_process_recv_data(void)
       case MOTOR_DUTY:
         memcpy(strReturned, &g_ble_recv_data[commandLen], sizeof(strReturned) * sizeof(char));
         float localDuty = (float) ((atoi((char const *) strReturned)) / (10e1)) ;
-        DroidTranslation(0, localDuty, 0.0f, motorPWMChannels);
+        DroidTranslation(0.5, localDuty, 0.0f, motorPWMChannels);
 
         break;
 

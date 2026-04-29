@@ -73,8 +73,38 @@ void PeriphCommonClock_Config(void);
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 
-/* USER CODE END 0 */
+#include "main.h"  // Include your main header file
+#include "tim.h"   // Include your timer configuration header
+#include "gpio.h"  // Include GPIO configuration header
 
+// Constants
+#define MOTOR_SPEED 0.5f  // 50% speed (adjust between 0 and 1)
+
+// Timer handles for your motor PWM channels
+#define LEFT_MOTOR_PWM_CHANNEL  TIM_CHANNEL_1  
+#define RIGHT_MOTOR_PWM_CHANNEL TIM_CHANNEL_3
+
+extern TIM_HandleTypeDef htim1;  // Timer for left motor (e.g., TIM1)
+extern TIM_HandleTypeDef htim2;  // Timer for right motor (e.g., TIM2)
+
+void StartMotorPWM(void)
+{
+    // Set duty cycle for motors to 50% (period is already defined in your timers)
+    uint32_t dutyCycle = (htim1.Init.Period + 1) / 2;  // 50% duty cycle for PWM
+
+    // Left Motor
+    __HAL_TIM_SET_COMPARE(&htim1, LEFT_MOTOR_PWM_CHANNEL, dutyCycle);  // Set duty cycle (left motor)
+    HAL_TIM_PWM_Start(&htim1, LEFT_MOTOR_PWM_CHANNEL);  // Start PWM on left motor
+
+    // Right Motor
+    __HAL_TIM_SET_COMPARE(&htim2, RIGHT_MOTOR_PWM_CHANNEL, dutyCycle);  // Set duty cycle (right motor)
+    HAL_TIM_PWM_Start(&htim2, RIGHT_MOTOR_PWM_CHANNEL);  // Start PWM on right motor
+
+    // Enable both motors by setting the enable pins high
+    HAL_GPIO_WritePin(EN_LEFT_MOTOR_GPIO_Port, EN_LEFT_MOTOR_Pin, GPIO_PIN_SET);  // Enable left motor
+    HAL_GPIO_WritePin(EN_RIGHT_MOTOR_GPIO_Port, EN_RIGHT_MOTOR_Pin, GPIO_PIN_SET);  // Enable right motor
+}
+/* USER CODE END 0 */
 /**
   * @brief  The application entry point.
   * @retval int
@@ -143,6 +173,9 @@ int main(void)
   motorPWMChannels.motor2PWM =  &htim1;
   motorPWMChannels.motor2Channel = TIM_CHANNEL_1;
 
+  InitMotors(motorPWMChannels.motor1PWM, motorPWMChannels.motor1Channel, 
+    motorPWMChannels.motor2PWM, motorPWMChannels.motor2Channel);
+
   /*  Creating the local variables for checking the analogue stick values. */
   #ifdef USE_GAMEPAD
   uint8_t last_joystickLeftX = 0;
@@ -161,6 +194,8 @@ int main(void)
   }
   #endif
 
+  StartMotorPWM();
+
 
   /* USER CODE END 2 */
 
@@ -168,6 +203,7 @@ int main(void)
   MX_APPE_Init();
 
   /* Infinite loop */
+  motorErrors_t error;
   /* USER CODE BEGIN WHILE */
   while (1)
   {
@@ -207,6 +243,10 @@ int main(void)
         based in the future for optimal performance. */
     HAL_Delay(5); // ~200Hz sampling rate.
     #endif
+
+    
+
+    // HAL_Delay(100);
 
   }
   /* USER CODE END 3 */
