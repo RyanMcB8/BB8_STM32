@@ -10,9 +10,14 @@
 /* ======================================== Typedefs ======================================== */
 
 typedef enum{
-    MOTOR_1,
-    MOTOR_2,
+    leftMotor,
+    rightMotor,
 } motors_t;
+
+typedef enum{
+    clockwise,
+    anticlockwise,
+} motorDirections_t;
 
 typedef enum{
     Sucessful,
@@ -29,7 +34,7 @@ typedef enum{
  * @note This function takes the timer handle and channel as its parameters to be used for any PWM in use.
  * @return Returns 0 if no error is present, 1 if the power value is out of range.
   */
-motorErrors_t MotorControl(float power, _Bool direction, TIM_HandleTypeDef* timerHandle, uint32_t timerChannel, motors_t motor);
+motorErrors_t MotorControl(float power, motorDirections_t direction, TIM_HandleTypeDef* timerHandle, uint32_t timerChannel, motors_t motor);
 
 /** @brief                  A function which starts the PWM timers and resets the motor drivers.
  *  @param  tim1            A pointer to the timer handle for the left motor.
@@ -52,16 +57,16 @@ motorErrors_t SetMotorSpeed(float power, TIM_HandleTypeDef *timerHandle, uint32_
  *  @param  direction       The direction which the motor should spin in. 0 is clockwise, 1 is anticlockwise.
  *  @retval                 Error code of type motorErrors_t.
  */
-motorErrors_t SetMotorDirection(motors_t motor, GPIO_PinState direction);
+motorErrors_t SetMotorDirection(motors_t motor, motorDirections_t direction);
 
 /** @brief Motor1Reset
  *  @note Basic function to reset the 1st motor driver by toggling the enable pin on then off again.
  */
-void Motor1Reset(void);
+void LeftMotorReset(void);
 
 /** @brief Motor1Reset
  *  @note Basic function to reset the 2nd motor driver by toggling the enable pin on then off again.
  */
-void Motor2Reset(void);
+void RightMotorReset(void);
 
 #endif /* end of __MOTOR_DRIVER_H_*/
