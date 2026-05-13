@@ -283,8 +283,8 @@ void PeriphCommonClock_Config(void)
 }
 
 /* USER CODE BEGIN 4 */
-
 void controllerInit(PS2ControllerStates_t *controller){
+  #ifndef PS2_SPI
     /*  Setting the pin defintions for the controller. */
   controller->pins.att_GPIO_Pin = PS2_ATTN_Pin;
   controller->pins.att_GPIO_Port = PS2_ATTN_GPIO_Port;
@@ -298,6 +298,11 @@ void controllerInit(PS2ControllerStates_t *controller){
   /*  Disabling the feedback. */
   controller->feedback.en_Pressures = false;
   controller->feedback.en_Rumble = false;
+  #else
+  controller->handle = &hspi2;
+  controller->ChipSelect_GPIO_Port = PS2_ATTN_GPIO_Port;
+  controller->ChipSelect_GPIO_Pin = PS2_ATTN_Pin;
+  #endif
   return;
 }
 /* USER CODE END 4 */
