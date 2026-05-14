@@ -13,6 +13,7 @@ such as reading all sensor data. */
 #include "main.h"
 #include "lsm6dso32.h"
 #include "lsm6dso32_reg.h"
+#include "madgwickFilter.h"
 
 /* Type definitions. */
 
@@ -40,7 +41,7 @@ typedef struct{
  *  from the register.
  *  @retval Returns an error value. 0 is successful. 
  */
-extern int32_t IMU_read(I2C_HandleTypeDef *handle, uint8_t deviceAddr, 
+extern int32_t IMU_read(void *handle, uint8_t deviceAddr, 
     uint8_t reg, uint8_t *bufp, uint16_t len);
 
 /** @brief A function which can write to a specific
@@ -56,7 +57,7 @@ extern int32_t IMU_read(I2C_HandleTypeDef *handle, uint8_t deviceAddr,
  *  to the register.
  *  @retval Returns an error value. 0 is successful. 
  */
-extern int32_t IMU_write(I2C_HandleTypeDef *handle, uint8_t deviceAddr, 
+extern int32_t IMU_write(void *handle, uint8_t deviceAddr, 
     uint8_t reg, uint8_t *bufp, uint16_t len);
                               
 /** @brief A function which may be used by the lower level
@@ -93,8 +94,10 @@ extern void IMUDeinit();
  *  @param angles A pointer to an instance of the eulerAngles_t
  *  struct which stores the devices current orientation
  *  estimate.
+ *  @param quat A pointer to an instance of the quaternion struct
+ *  which stores the current quaternion estimate of the device.
  */
-extern void IMUUpdate(const stmdev_ctx_t *dev_ctx, eulerAngles_t *angles);
+extern void IMUUpdate(const stmdev_ctx_t *dev_ctx, eulerAngles_t *angles, quaternion *quat);
 
 /** @brief A simple function which can convert from the 
  *  degree unit into radians.
@@ -103,7 +106,7 @@ extern void IMUUpdate(const stmdev_ctx_t *dev_ctx, eulerAngles_t *angles);
  *  @retval Returns a floating point value of the radian
  *  equivalent value.
  */
-extern float_t Deg2rad(float angle);
+extern float Deg2rad(float angle);
 
 /* ========== Variable declarations ========== */
 
