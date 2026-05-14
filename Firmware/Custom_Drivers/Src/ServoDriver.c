@@ -1,4 +1,5 @@
-/** @file       ServoDrivers.c
+/** @file       ServoDriver.c
+ *  @author     Ryan McBride
  *  @brief      A file containing the definitions for functions
  *              to control the neck mechanism of the BB8 droid.
  *  @note       This driver requires that the timer used has a low
@@ -6,7 +7,7 @@
  */
 
  /* Adding the necessary header files to be included. */
- #include "ServoDrivers.h"
+ #include "ServoDriver.h"
  #include <math.h>
 
  void initServo(TIM_HandleTypeDef* handle, uint32_t channel){
@@ -33,6 +34,7 @@
 
    /* Applying the newly determined duty cycle. */
    setDuty(handle, channel, duty);
+   return;
  }
 
  _Bool setDuty(TIM_HandleTypeDef* handle, uint32_t channel, float duty){

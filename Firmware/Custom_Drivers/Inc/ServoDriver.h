@@ -1,25 +1,18 @@
-/** @file       ServoDrivers.h
+/** @file       ServoDriver.h
+ *  @author     Ryan McBride
  *  @brief      A header file containing the declarations for functions
  *              to control the neck mechanism of the BB8 droid.
  */
 
  /* Preventing recursive definitions of the file. */
- #ifndef _SERVO_DRIVERS_H_
- #define _SERVO_DRIVERS_H_
+ #ifndef _SERVO_DRIVER_H_
+ #define _SERVO_DRIVER_H_
 
  /* Adding the necessary header files to be included. */
  #include "main.h"
 
  /* Adding the necessary definitions. */
- /**    @brief  Struct containing the timer handle and channel for each
-  *             of the control pins for the left and right servos.
-  */
- typedef struct{
-    TIM_HandleTypeDef *leftTimerHandle;
-    TIM_HandleTypeDef *rightTimerHandle;
-    uint32_t    leftChannel;
-    uint32_t    rightChannel;
- } ServoPWM_t;
+
 
  /**    @brief          Starting the PWM timer for the selected channel.
   *     @param  handle  A pointer to the timer handle being used to control the servo.
