@@ -25,6 +25,16 @@ typedef enum{
     NoValidMotorChosen,
 } motorErrors_t;
 
+typedef struct{
+    TIM_HandleTypeDef* timerHandle;
+    uint32_t timerChannel;
+    uint16_t        En_GPIO_Pin;
+    GPIO_TypeDef*   En_GPIO_Port;
+    uint16_t        Dir_GPIO_Pin;
+    GPIO_TypeDef*   Dir_GPIO_Port;
+    uint32_t        min_freq;
+    uint32_t        max_freq;
+} Motor_Attributes;
 
 /* ======================================== Functions ======================================== */
 
@@ -34,7 +44,7 @@ typedef enum{
  * @note This function takes the timer handle and channel as its parameters to be used for any PWM in use.
  * @return Returns 0 if no error is present, 1 if the power value is out of range.
   */
-motorErrors_t MotorControl(float power, motorDirections_t direction, TIM_HandleTypeDef* timerHandle, uint32_t timerChannel, motors_t motor);
+motorErrors_t MotorControl(Motor_Attributes *attributes, float power, motorDirections_t direction);
 
 /** @brief                  A function which starts the PWM timers and resets the motor drivers.
  *  @param  tim1            A pointer to the timer handle for the left motor.
@@ -42,7 +52,7 @@ motorErrors_t MotorControl(float power, motorDirections_t direction, TIM_HandleT
  *  @param  tim2            A pointer to the timer handle for the right motor.
  *  @param  timer2Channel   The channel which is being used to output the generated signal to the right motor.
  */
-void InitMotors(TIM_HandleTypeDef *tim1, uint32_t timer1Channel, TIM_HandleTypeDef *tim2, uint32_t timer2Channel);
+void InitMotor(Motor_Attributes *attributes);
 
 /** @brief                  A function to control the speed of the motor.
  *  @param  power           The relative power mutliplier being applied between 0 and 1. 
@@ -50,23 +60,18 @@ void InitMotors(TIM_HandleTypeDef *tim1, uint32_t timer1Channel, TIM_HandleTypeD
  *  @param  timerChannel    The channel number which is being used to output the generated signal.
  *  @retval                 Error code of type motorErrors_t.
  */
-motorErrors_t SetMotorSpeed(float power, TIM_HandleTypeDef *timerHandle, uint32_t timerChannel);
+motorErrors_t SetMotorSpeed(Motor_Attributes *attributes, float power);
 
 /** @brief                  A function to set the direction of the specified motor.
  *  @param  motor           The motor which is being modified.
  *  @param  direction       The direction which the motor should spin in. 0 is clockwise, 1 is anticlockwise.
  *  @retval                 Error code of type motorErrors_t.
  */
-motorErrors_t SetMotorDirection(motors_t motor, motorDirections_t direction);
+motorErrors_t SetMotorDirection(Motor_Attributes *attributes, motorDirections_t direction);
 
 /** @brief Motor1Reset
  *  @note Basic function to reset the 1st motor driver by toggling the enable pin on then off again.
  */
-void LeftMotorReset(void);
-
-/** @brief Motor1Reset
- *  @note Basic function to reset the 2nd motor driver by toggling the enable pin on then off again.
- */
-void RightMotorReset(void);
+void MotorReset(Motor_Attributes *attributes);
 
 #endif /* end of __MOTOR_DRIVER_H_*/
