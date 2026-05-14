@@ -97,7 +97,7 @@ extern void IMUDeinit();
  *  @param quat A pointer to an instance of the quaternion struct
  *  which stores the current quaternion estimate of the device.
  */
-extern void IMUUpdate(const stmdev_ctx_t *dev_ctx, eulerAngles_t *angles, quaternion *quat);
+extern void IMUUpdate(const stmdev_ctx_t *dev_ctx, eulerAngles_t *angles, struct quaternion *quat);
 
 /** @brief A simple function which can convert from the 
  *  degree unit into radians.

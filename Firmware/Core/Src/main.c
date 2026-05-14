@@ -73,11 +73,15 @@ void PeriphCommonClock_Config(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+/* ==================== IMU Variables ==================== */
 stmdev_ctx_t IMU_data = {&IMU_write,
-  &IMU_read
+  &IMU_read,
   &platform_delay,
   &hspi1
 };
+
+struct quaternion deviceQuat;
+eulerAngles_t localAngles;
 
 /* USER CODE END 0 */
 
@@ -166,7 +170,7 @@ int main(void)
   config_gamepad(&controller, controller.feedback.en_Pressures, controller.feedback.en_Rumble);
 
   /* Initialising the IMU. */
-  IMUInit()
+  IMUInit(IMU_data);
 
 
   /* USER CODE END 2 */
@@ -184,7 +188,7 @@ int main(void)
     /* USER CODE BEGIN 3 */
 
     /* Checking Orientation estimates. */
-    IMUUpdate()
+    IMUUpdate(&IMU_data, &localAngles, &deviceQuat);
 
     /*  Reading the most recent data from the analogue stick. */
     new_joystickLeftX = Analogue(&controller, PS_LX);
