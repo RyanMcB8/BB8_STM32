@@ -19,8 +19,6 @@ typedef enum{
 /* Error types which may be returned when the Spin() function is called. */
 typedef enum{
     SPIN_SUCCESSFUL,
-
-
 } SpinErrors_t;
 
 typedef struct{
@@ -33,10 +31,14 @@ typedef struct{
     motorPower_t rightMotorPower;
 } droidMotorPowers_t;
 
+typedef struct{
+    Motor_Attributes leftMotor;
+    Motor_Attributes rightMotor;
+} Twin_Motor_Attributes_t;
 
-void Forward( MotorPWMChannels_t motorPWMChannels, float duty);
+void Forward(Twin_Motor_Attributes_t *attributes, float duty);
 
-void StopDroid( MotorPWMChannels_t motorPWMChannels);
+void StopDroid(Twin_Motor_Attributes_t *attributes);
 
 
 /* Declaration of any functions within the c file */
@@ -51,15 +53,14 @@ void StopDroid( MotorPWMChannels_t motorPWMChannels);
  *  sets the maximum motor speed for both motors. When the value is 0,
  *  the droid moves backwards, when the value is 1, the droid moves
  *  forwards. When the value is 0.5, the droid is stationary.
- * @param motorPWMChannels A struct containing the timer handles and
- *  channel to control the PWM pins connected to the motors.
+ * @param attributes A pointer to the struct containing the different motor 
  * @retval Returns a value of type Move_t which represents the error
  *  which has occured. 0 represents no error, any other value means
  *  an error has occurred. 
  *  @note This function is built to call upon the motorControl function
  *  which is a low level driver for the SWR4 stepper motor driver   
  */
-Move_t Move(float leftRight, float forwardBackward, MotorPWMChannels_t motorPWMChannels);
+Move_t Move(float leftRight, float forwardBackward, Twin_Motor_Attributes_t *attributes);
 
 
 /** @brief                  A function which can take the normalised values of a joystick (x and y),

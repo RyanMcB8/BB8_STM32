@@ -9,6 +9,7 @@ motorErrors_t MotorControl(Motor_Attributes *attributes, float power, motorDirec
     if (power > 0.0f && power <= 1.0f){
 
         /* Setting the direction */
+        InitMotor(attributes);
         motorErrors_t error = SetMotorDirection(attributes, direction);
         if (Sucessful != error) return error;
         
@@ -22,7 +23,7 @@ motorErrors_t MotorControl(Motor_Attributes *attributes, float power, motorDirec
 }
 
 void InitMotor(Motor_Attributes *attributes){
-    HAL_TIM_PWM_Start(&attributes->timerHandle, attributes->timerChannel)
+    HAL_TIM_PWM_Start(&attributes->timerHandle, attributes->timerChannel);
     MotorReset(attributes);
     return;
 }
