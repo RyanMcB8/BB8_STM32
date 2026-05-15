@@ -13,6 +13,10 @@
 #include "main.h"
 #include "ServoDriver.h"
 
+/*  Defintions and Macros. */
+#define MaxServoAngle   150.0f
+#define MinServoAngle    30.0f
+
 /*  Adding the definitions of types. */
 
 /**    @brief  Struct containing the timer handle and channel for each
