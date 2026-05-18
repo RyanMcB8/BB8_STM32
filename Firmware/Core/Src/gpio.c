@@ -50,30 +50,24 @@ void MX_GPIO_Init(void)
   __HAL_RCC_GPIOA_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOC, EN_LEFT_MOTOR_Pin|DIR_RIGHT_MOTOR_Pin|EN_RIGHT_MOTOR_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOC, DIR_RIGHT_MOTOR_Pin|DIR_HEAD_MOTOR_Pin|EN_RIGHT_MOTOR_Pin|EN_LEFT_MOTOR_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOA, PS2_CMD_Pin|DIR_LEFT_MOTOR_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(DIR_LEFT_MOTOR_GPIO_Port, DIR_LEFT_MOTOR_Pin, GPIO_PIN_RESET);
 
-  /*Configure GPIO pins : EN_LEFT_MOTOR_Pin DIR_RIGHT_MOTOR_Pin EN_RIGHT_MOTOR_Pin */
-  GPIO_InitStruct.Pin = EN_LEFT_MOTOR_Pin|DIR_RIGHT_MOTOR_Pin|EN_RIGHT_MOTOR_Pin;
+  /*Configure GPIO pins : DIR_RIGHT_MOTOR_Pin DIR_HEAD_MOTOR_Pin EN_RIGHT_MOTOR_Pin EN_LEFT_MOTOR_Pin */
+  GPIO_InitStruct.Pin = DIR_RIGHT_MOTOR_Pin|DIR_HEAD_MOTOR_Pin|EN_RIGHT_MOTOR_Pin|EN_LEFT_MOTOR_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
 
-  /*Configure GPIO pin : PS2_DATA_Pin */
-  GPIO_InitStruct.Pin = PS2_DATA_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
-  HAL_GPIO_Init(PS2_DATA_GPIO_Port, &GPIO_InitStruct);
-
-  /*Configure GPIO pins : PS2_CMD_Pin DIR_LEFT_MOTOR_Pin */
-  GPIO_InitStruct.Pin = PS2_CMD_Pin|DIR_LEFT_MOTOR_Pin;
+  /*Configure GPIO pin : DIR_LEFT_MOTOR_Pin */
+  GPIO_InitStruct.Pin = DIR_LEFT_MOTOR_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+  HAL_GPIO_Init(DIR_LEFT_MOTOR_GPIO_Port, &GPIO_InitStruct);
 
   /*Configure GPIO pin : PS2_ATTN_Pin */
   GPIO_InitStruct.Pin = PS2_ATTN_Pin;
