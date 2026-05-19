@@ -19,8 +19,8 @@
 
 void Forward(Twin_Motor_Attributes_t *attributes, float duty){
     if (duty == 0){
-        HAL_TIM_PWM_Stop(&attributes->leftMotor.timerHandle, &attributes->leftMotor.timerChannel);
-        HAL_TIM_PWM_Stop(&attributes->rightMotor.timerHandle, &attributes->rightMotor.timerChannel);
+        HAL_TIM_PWM_Stop(attributes->leftMotor.timerHandle, attributes->leftMotor.timerChannel);
+        HAL_TIM_PWM_Stop(attributes->rightMotor.timerHandle, attributes->rightMotor.timerChannel);
 
     }
     else{

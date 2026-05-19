@@ -4,8 +4,8 @@
 
 /* MOTOR DRIVER HEADER FILE */
 /* Includes */
-#include "main.h"
 #include <math.h>
+#include "stm32wbxx_hal.h"
 
 /* ======================================== Typedefs ======================================== */
 

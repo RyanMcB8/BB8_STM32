@@ -8,6 +8,16 @@
 /* Adding necessary include files. */
 #include "main.h"
 #include "IMU_driver.h"
+#include "madgwickFilter.h"
+
+/** @brief A simple function which can convert from the 
+ *  degree unit into radians.
+ *  @param angle A floating point value representing the 
+ *  angle in degrees which should be converted.
+ *  @retval Returns a floating point value of the radian
+ *  equivalent value.
+ */
+static float Deg2rad(float angle);
 
 /* ==================== Function defintions. ==================== */
 
@@ -19,7 +29,7 @@ void IMUInit(stmdev_ctx_t dev_ctx){
       - Implicit unit test essentialy*/
   do {
   lsm6dso32_device_id_get(&dev_ctx, &whoAmI);
-  } while (whoamI != LSM6DSO32_ID);
+  } while (whoAmI != LSM6DSO32_ID);
   
   /* Restore default configuration */
   lsm6dso32_reset_set(&dev_ctx, PROPERTY_ENABLE);
@@ -41,15 +51,15 @@ void IMUInit(stmdev_ctx_t dev_ctx){
   lsm6dso32_gy_data_rate_set(&dev_ctx, LSM6DSO32_GY_ODR_208Hz_NORMAL_MD);
 }
 
-static void IMUDeinit(){
-  HAL_GPIO_WritePin(IMU_PWR_GPIO_Port, IMU_PWR_Pin, GPIO_PIN_RESET);
+void IMUDeinit(){
+  return;
 }
 
-int32_t IMU_write(void *handle, uint8_t deviceAddr, uint8_t reg, uint8_t *bufp, uint16_t len)
+int32_t IMU_write(void *handle, uint8_t reg, uint8_t *bufp, uint16_t len)
 {
-
+    uint8_t deviceAddr = 0x00;
     // Transmitting the register address followed by the data
-    if (HAL_I2C_Mem_Write(handle, deviceAddr, reg, I2C_MEMADD_SIZE_8BIT, bufp, len, timeoutDuration) != HAL_OK)
+    if (HAL_I2C_Mem_Write(handle, deviceAddr, reg, I2C_MEMADD_SIZE_8BIT, bufp, len, HAL_MAX_DELAY) != HAL_OK)
     {
         // Error_Handler();
         return -1;
@@ -58,20 +68,21 @@ int32_t IMU_write(void *handle, uint8_t deviceAddr, uint8_t reg, uint8_t *bufp, 
     return 0;
 }
 
-int32_t IMU_read(void *handle, uint8_t deviceAddr, uint8_t reg, uint8_t *bufp, uint16_t len)
+int32_t IMU_read(void *handle, uint8_t reg, uint8_t *bufp, uint16_t len)
 {
     // Setting the register address with the read flag.
     reg |= 0x80;
+    uint8_t deviceAddr = 0x00;
 
     // Transmitting the register address
-    if (HAL_I2C_Mem_Write(handle, deviceAddr, reg, I2C_MEMADD_SIZE_8BIT, NULL, 0, timeoutDuration) != HAL_OK)
+    if (HAL_I2C_Mem_Write(handle, deviceAddr, reg, I2C_MEMADD_SIZE_8BIT, NULL, 0, HAL_MAX_DELAY) != HAL_OK)
     {
         // Error_Handler();
         return -1;
     }
 
     // Receiving the data from the device
-    if (HAL_I2C_Mem_Read(handle, deviceAddr, reg, I2C_MEMADD_SIZE_8BIT, bufp, len, timeoutDuration) != HAL_OK)
+    if (HAL_I2C_Mem_Read(handle, deviceAddr, reg, I2C_MEMADD_SIZE_8BIT, bufp, len, HAL_MAX_DELAY) != HAL_OK)
     {
         // Error_Handler();
         return -1;
@@ -80,12 +91,12 @@ int32_t IMU_read(void *handle, uint8_t deviceAddr, uint8_t reg, uint8_t *bufp, u
     return 0;
 }
 
-static void platform_delay(uint32_t ms)
+void platform_delay(uint32_t ms)
 {
   HAL_Delay(ms);
 }
 
-static void IMUUpdate(const stmdev_ctx_t *dev_ctx, eulerAngles_t *angles, quaternion *quat){
+void IMUUpdate(const stmdev_ctx_t *dev_ctx, eulerAngles_t *angles, struct quaternion *quat){
   /* Initialising local variables */
   static int16_t data_raw_acceleration[3], data_raw_angular_rate[3];
   static float acceleration_ms2[3], angular_rate_rads[3], normAcc[3];
@@ -112,6 +123,8 @@ static void IMUUpdate(const stmdev_ctx_t *dev_ctx, eulerAngles_t *angles, quater
     
     /* Removing predetermined offset values for the accelerometer
      and gyroscope. */
+     float calAcc[] = {0.0f, 0.0f, 0.0f};
+     float calGyro[] = {0.0f, 0.0f, 0.0f};
     calAcc[0]  = acceleration_ms2[0] - (float) A_xOffset;
     calAcc[1]  = acceleration_ms2[1] - (float) A_yOffset;
     calAcc[2]  = acceleration_ms2[2] - (float) A_zOffset;
@@ -134,7 +147,7 @@ static void IMUUpdate(const stmdev_ctx_t *dev_ctx, eulerAngles_t *angles, quater
                calGyro[0], calGyro[1], 
                calGyro[2]);
 
-    eulerAngles(quat, &angles->roll,
+    eulerAngles(*quat, &angles->roll,
          &angles->pitch, &angles->yaw);
  
   }

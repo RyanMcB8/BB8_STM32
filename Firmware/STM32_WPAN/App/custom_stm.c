@@ -23,7 +23,7 @@
 #include "custom_stm.h"
 
 /* USER CODE BEGIN Includes */
-
+#include "motionControl.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -119,13 +119,13 @@ void data_ble_process_recv_data(void)
     switch(cmdIdx)
     { 
       case MOTOR_OFF:
-      Forward(motorPWMChannels, 0.0f);
+      Forward(&motorAttributes, 0.0f);
         break;
       
       case MOTOR_DUTY:
         memcpy(strReturned, &g_ble_recv_data[commandLen], sizeof(strReturned) * sizeof(char));
         float localDuty = (float) ((atoi((char const *) strReturned)) / (10e1)) ;
-        Forward(motorPWMChannels, localDuty);
+        Forward(&motorAttributes, localDuty);
         HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_5);
 
         break;

@@ -35,7 +35,7 @@ extern "C" {
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "motionControl.h"
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/
@@ -104,7 +104,7 @@ typedef struct{
 
 extern joyStick_values_t joyStickValues; 
 extern MotorPWMChannels_t motorPWMChannels;
-
+extern Twin_Motor_Attributes_t motorAttributes;
 
 /* USER CODE END Private defines */
 

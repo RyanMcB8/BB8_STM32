@@ -3,7 +3,6 @@
 #define __MOTION_CONTROL_
 
 /* Adding any necessary include files to the header file */
-#include "main.h"
 #include "motorDriver.h"
 /* Creation of any specific types */
 
@@ -21,15 +20,6 @@ typedef enum{
     SPIN_SUCCESSFUL,
 } SpinErrors_t;
 
-typedef struct{
-    float power;
-    motorDirections_t direction;    
-} motorPower_t;
-
-typedef struct{
-    motorPower_t leftMotorPower;
-    motorPower_t rightMotorPower;
-} droidMotorPowers_t;
 
 typedef struct{
     Motor_Attributes leftMotor;

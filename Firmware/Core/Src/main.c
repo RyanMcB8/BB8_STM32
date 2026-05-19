@@ -34,8 +34,9 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "PS2_driver.h"
-#include "motionControl.h"
 #include "IMU_driver.h"
+#include "motorDriver.h"
+#include "motionControl.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -74,15 +75,15 @@ void PeriphCommonClock_Config(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-/* ==================== IMU Variables ==================== */
-stmdev_ctx_t IMU_data = {&IMU_write,
-  &IMU_read,
-  &platform_delay,
-  &hspi1
-};
 
 struct quaternion deviceQuat;
 eulerAngles_t localAngles;
+
+/*  Definition of the mtor attributes. This should be kept as a local variable
+    in the future but this needed to be an extern due to  BLE functions. */
+Twin_Motor_Attributes_t motorAttributes;
+
+void initMotorDrivers(Twin_Motor_Attributes_t* attributes);
 
 /* USER CODE END 0 */
 
@@ -150,8 +151,15 @@ int main(void)
    */
   void controllerInit(PS2ControllerStates_t *controller);
 
+  /* ==================== IMU Variables ==================== */
+  stmdev_ctx_t IMU_data = {&IMU_write,
+    &IMU_read,
+    &platform_delay,
+    &hspi2
+  };
+
   /*  Defining what timer and channel each motor is connected to.*/
-  initMotorDrivers(&motorPWMChannels);
+  initMotorDrivers(&motorAttributes);
 
   /*  Creating the local variables for checking the analogue stick values. */
   uint8_t last_joystickLeftX = 0;
@@ -172,10 +180,6 @@ int main(void)
   /* Initialising the IMU. */
   IMUInit(IMU_data);
 
-  /* Initialising the IMU. */
-  IMUInit(IMU_data);
-
-
   /* USER CODE END 2 */
 
   /* Init code for STM32_WPAN */
@@ -189,9 +193,6 @@ int main(void)
     MX_APPE_Process();
 
     /* USER CODE BEGIN 3 */
-
-    /* Checking Orientation estimates. */
-    IMUUpdate(&IMU_data, &localAngles, &deviceQuat);
 
     /* Checking Orientation estimates. */
     IMUUpdate(&IMU_data, &localAngles, &deviceQuat);
@@ -330,14 +331,32 @@ void controllerInit(PS2ControllerStates_t *controller){
   return;
 }
 
-void initMotorDrivers(MotorPWMChannels_t* motorPWM){
-  motorPWM->motor1PWM = &htim1;
-  motorPWM->motor1Channel = TIM_CHANNEL_1;
-  motorPWM->motor2PWM =  &htim16;
-  motorPWM->motor2Channel = TIM_CHANNEL_1;
+void initMotorDrivers(Twin_Motor_Attributes_t* attributes){
 
-  HAL_GPIO_WritePin(EN_LEFT_MOTOR_GPIO_Port, EN_LEFT_MOTOR_Pin, GPIO_PIN_RESET);
-  HAL_GPIO_WritePin(EN_RIGHT_MOTOR_GPIO_Port, EN_RIGHT_MOTOR_Pin, GPIO_PIN_RESET);
+  /*  Defining the left motor attributes. */
+  attributes->leftMotor.timerHandle = &htim16;
+  attributes->leftMotor.timerChannel = TIM_CHANNEL_1;
+  attributes->leftMotor.min_freq = 1000;
+  attributes->leftMotor.max_freq = 2000;
+  attributes->leftMotor.En_GPIO_Port = EN_LEFT_MOTOR_GPIO_Port;
+  attributes->leftMotor.Dir_GPIO_Port = DIR_LEFT_MOTOR_GPIO_Port;
+  attributes->leftMotor.En_GPIO_Pin = EN_LEFT_MOTOR_Pin;
+  attributes->leftMotor.Dir_GPIO_Pin = DIR_LEFT_MOTOR_Pin;
+
+
+  /*  Defining the right motor attributes. */
+  attributes->leftMotor.timerHandle = &htim1;
+  attributes->leftMotor.timerChannel = TIM_CHANNEL_1;
+  attributes->leftMotor.min_freq = 1000;
+  attributes->leftMotor.max_freq = 2000;
+  attributes->leftMotor.En_GPIO_Port = EN_RIGHT_MOTOR_GPIO_Port;
+  attributes->leftMotor.Dir_GPIO_Port = DIR_RIGHT_MOTOR_GPIO_Port;
+  attributes->leftMotor.En_GPIO_Pin = EN_RIGHT_MOTOR_Pin;
+  attributes->leftMotor.Dir_GPIO_Pin = DIR_RIGHT_MOTOR_Pin;
+
+  /*  Enabling the motors. */
+  MotorReset(&attributes->leftMotor);
+  MotorReset(&attributes->rightMotor);
   
   return;
 }

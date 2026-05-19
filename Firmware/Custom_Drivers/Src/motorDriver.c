@@ -23,7 +23,7 @@ motorErrors_t MotorControl(Motor_Attributes *attributes, float power, motorDirec
 }
 
 void InitMotor(Motor_Attributes *attributes){
-    HAL_TIM_PWM_Start(&attributes->timerHandle, attributes->timerChannel);
+    HAL_TIM_PWM_Start(attributes->timerHandle, attributes->timerChannel);
     MotorReset(attributes);
     return;
 }
@@ -33,7 +33,7 @@ motorErrors_t SetMotorSpeed(Motor_Attributes *attributes, float power)
     /*  Ensuring that the motor stops if the value passed is approximately 0 or less.*/
     if (power <= 0.000001f)
     {
-        HAL_TIM_PWM_Stop(&attributes->timerHandle, attributes->timerChannel);
+        HAL_TIM_PWM_Stop(attributes->timerHandle, attributes->timerChannel);
         return Sucessful;
     }
 
@@ -79,7 +79,7 @@ motorErrors_t SetMotorSpeed(Motor_Attributes *attributes, float power)
 }
 
 motorErrors_t SetMotorDirection(Motor_Attributes *attributes, motorDirections_t direction){
-    HAL_GPIO_WritePin(attributes->Dir_GPIO_Port, attributes->Dir_GPIO_Pin, direction)
+    HAL_GPIO_WritePin(attributes->Dir_GPIO_Port, attributes->Dir_GPIO_Pin, direction);
     return Sucessful;
 }
 

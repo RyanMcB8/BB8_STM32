@@ -41,7 +41,7 @@ typedef struct{
  *  from the register.
  *  @retval Returns an error value. 0 is successful. 
  */
-extern int32_t IMU_read(void *handle, uint8_t deviceAddr, 
+int32_t IMU_read(void *handle, 
     uint8_t reg, uint8_t *bufp, uint16_t len);
 
 /** @brief A function which can write to a specific
@@ -57,7 +57,7 @@ extern int32_t IMU_read(void *handle, uint8_t deviceAddr,
  *  to the register.
  *  @retval Returns an error value. 0 is successful. 
  */
-extern int32_t IMU_write(void *handle, uint8_t deviceAddr, 
+int32_t IMU_write(void *handle,
     uint8_t reg, uint8_t *bufp, uint16_t len);
                               
 /** @brief A function which may be used by the lower level
@@ -67,7 +67,7 @@ extern int32_t IMU_write(void *handle, uint8_t deviceAddr,
  *  @note This function uses the HAL_Delay function within
  *  it to create a delay which may interrupt other functions.
  */
-extern void platform_delay(uint32_t ms);
+void platform_delay(uint32_t ms);
 
 /** @brief The initialisation function for the IMU.
  *  @param dev_ctx Takes in the instance of the stmdev_ctx_t
@@ -76,14 +76,14 @@ extern void platform_delay(uint32_t ms);
  *  @note This function is responsible for setting the full
  *  scale range and sampling frequencies for the device. 
  */
-extern void IMUInit(const stmdev_ctx_t dev_ctx);
+void IMUInit(const stmdev_ctx_t dev_ctx);
 
 /** @brief A function which shuts down the LSM6DSO32.
  *  @note Currently, this just turns off the power and has
  *  no extra functionality but it may be added in the
  *  future if needed.
  */
-extern void IMUDeinit();
+void IMUDeinit();
 
 /** @brief A function which reads the data from the IMU
  *  and returns it to the user.
@@ -97,16 +97,8 @@ extern void IMUDeinit();
  *  @param quat A pointer to an instance of the quaternion struct
  *  which stores the current quaternion estimate of the device.
  */
-extern void IMUUpdate(const stmdev_ctx_t *dev_ctx, eulerAngles_t *angles, struct quaternion *quat);
+void IMUUpdate(const stmdev_ctx_t *dev_ctx, eulerAngles_t *angles, struct quaternion *quat);
 
-/** @brief A simple function which can convert from the 
- *  degree unit into radians.
- *  @param angle A floating point value representing the 
- *  angle in degrees which should be converted.
- *  @retval Returns a floating point value of the radian
- *  equivalent value.
- */
-extern float Deg2rad(float angle);
 
 /* ========== Variable declarations ========== */
 

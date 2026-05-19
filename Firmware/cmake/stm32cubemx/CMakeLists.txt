@@ -61,6 +61,12 @@ set(MX_Application_Src
     ${CMAKE_CURRENT_SOURCE_DIR}/../../Core/Src/sysmem.c
     ${CMAKE_CURRENT_SOURCE_DIR}/../../Core/Src/syscalls.c
     ${CMAKE_CURRENT_SOURCE_DIR}/../../startup_stm32wb55xx_cm4.s
+    ${CMAKE_CURRENT_SOURCE_DIR}/../../Custom_Drivers/Src/motionControl.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/../../Custom_Drivers/Src/motorDriver.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/../../Custom_Drivers/Src/IMU_driver.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/../../Custom_Drivers/Src/lsm6dso32.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/../../Custom_Drivers/Src/lsm6dso32_reg.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/../../Custom_Drivers/Src/madgwickFilter.c
 )
 
 # STM32 HAL/LL Drivers
@@ -124,8 +130,6 @@ set(STM32_WPAN_Src
     ${CMAKE_CURRENT_SOURCE_DIR}/../../Middlewares/ST/STM32_WPAN/ble/svc/Src/svc_ctl.c
     ${CMAKE_CURRENT_SOURCE_DIR}/../../Middlewares/ST/STM32_WPAN/ble/core/auto/ble_events.c
     ${CMAKE_CURRENT_SOURCE_DIR}/../../Middlewares/ST/STM32_WPAN/ble/core/auto/ble_gen_aci.c
-    ${CMAKE_CURRENT_SOURCE_DIR}/../../Custom_Drivers/Src/motionControl.c
-    ${CMAKE_CURRENT_SOURCE_DIR}/../../Custom_Drivers/Src/motorDriver.c
 )
 
 # Link directories setup
