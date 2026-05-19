@@ -126,6 +126,7 @@ void data_ble_process_recv_data(void)
         memcpy(strReturned, &g_ble_recv_data[commandLen], sizeof(strReturned) * sizeof(char));
         float localDuty = (float) ((atoi((char const *) strReturned)) / (10e1)) ;
         Forward(motorPWMChannels, localDuty);
+        HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_5);
 
         break;
 

@@ -39,7 +39,7 @@
 
 /* Private typedef -----------------------------------------------------------*/
 /* USER CODE BEGIN PTD */
-
+#define PS2_SPI //  Enabling the PS2 controller to be communicated with using SPI instead of bit banging.
 /* USER CODE END PTD */
 
 /* Private define ------------------------------------------------------------*/
@@ -73,7 +73,7 @@ void PeriphCommonClock_Config(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-
+void initMotorDrivers(MotorPWMChannels_t* motorPWM);
 /* USER CODE END 0 */
 
 /**
@@ -128,7 +128,7 @@ int main(void)
   MX_RF_Init();
   /* USER CODE BEGIN 2 */
 
-  HAL_Delay(1000);
+  HAL_Delay(100);
 
   /** @brief              A function which takes the users controller instance
    *                      and sets the appropriate pins defintions and feedback
@@ -139,10 +139,7 @@ int main(void)
   void controllerInit(PS2ControllerStates_t *controller);
 
   /*  Defining what timer and channel each motor is connected to.*/
-  motorPWMChannels.motor1PWM = &htim1;
-  motorPWMChannels.motor1Channel = TIM_CHANNEL_1;
-  motorPWMChannels.motor2PWM =  &htim16;
-  motorPWMChannels.motor2Channel = TIM_CHANNEL_1;
+  initMotorDrivers(&motorPWMChannels);
 
   /*  Creating the local variables for checking the analogue stick values. */
   uint8_t last_joystickLeftX = 0;
@@ -156,7 +153,9 @@ int main(void)
   /*  Creating the controller instance and initialising it. */
   PS2ControllerStates_t controller;
   controllerInit(&controller);
-  config_gamepad(&controller, controller.feedback.en_Pressures, controller.feedback.en_Rumble);
+  if(config_gamepad(&controller, controller.feedback.en_Pressures, controller.feedback.en_Rumble) != 0){
+    HAL_GPIO_WritePin(GPIOB, GPIO_PIN_5, GPIO_PIN_SET);
+  }
 
 
   /* USER CODE END 2 */
@@ -173,30 +172,30 @@ int main(void)
 
     /* USER CODE BEGIN 3 */
 
-    /*  Reading the most recent data from the analogue stick. */
-    new_joystickLeftX = Analogue(&controller, PS_LX);
-    new_joystickLeftY = Analogue(&controller, PS_LY);
+    // /*  Reading the most recent data from the analogue stick. */
+    // new_joystickLeftX = Analogue(&controller, PS_LX);
+    // new_joystickLeftY = Analogue(&controller, PS_LY);
+    
+    // /*  Checking if the joystick position is in the deadzone. */
+    // if ((new_joystickLeftX > (0x80 - DEADZONE) && new_joystickLeftX < (0x80 + DEADZONE)) ||
+    //     (new_joystickLeftY > (0x80 - DEADZONE) && new_joystickLeftY < (0x80 + DEADZONE))){
+    //   /*  Stop the droid from moving. */
+    //   DroidTranslation(0.5, 0.5, 0);
+    // }
 
-    /*  Checking if the joystick position is in the deadzone. */
-    if ((new_joystickLeftX > (0x80 - DEADZONE) && new_joystickLeftX < (0x80 + DEADZONE)) ||
-        (new_joystickLeftY > (0x80 - DEADZONE) && new_joystickLeftY < (0x80 + DEADZONE))){
-      /*  Stop the droid from moving. */
-      DroidTranslation(0.5, 0.5, 0);
-    }
+    // /*  Checking if there has been a large enough change from the last joystick position. */
+    // else if (minChangeJoy <= fabsf(new_joystickLeftX - last_joystickLeftX) || minChangeJoy <= fabsf(new_joystickLeftY - last_joystickLeftY)){
+    //   /*  Updating the recent joystick value. */
+    //   last_joystickLeftX = new_joystickLeftX;
+    //   last_joystickLeftY = new_joystickLeftY;
 
-    /*  Checking if there has been a large enough change from the last joystick position. */
-    else if (minChangeJoy <= fabsf(new_joystickLeftX - last_joystickLeftX) || minChangeJoy <= fabsf(new_joystickLeftY - last_joystickLeftY)){
-      /*  Updating the recent joystick value. */
-      last_joystickLeftX = new_joystickLeftX;
-      last_joystickLeftY = new_joystickLeftY;
+    //   /*  Normalising the joystick controllers to be within a value between 0 and 1 and not 0 to 255. */
+    //   joyStickValues.left_right = ((float)new_joystickLeftX / (float)0xff);
+    //   joyStickValues.forward_backward = ((float)new_joystickLeftY / (float)0xff);
 
-      /*  Normalising the joystick controllers to be within a value between 0 and 1 and not 0 to 255. */
-      joyStickValues.left_right = ((float)new_joystickLeftX / (float)0xff);
-      joyStickValues.forward_backward = ((float)new_joystickLeftY / (float)0xff);
-
-      /*  Updating the droid's motor values. */
-      DroidTranslation(joyStickValues.left_right, joyStickValues.forward_backward, 0);
-    }
+    //   /*  Updating the droid's motor values. */
+    //   DroidTranslation(joyStickValues.left_right, joyStickValues.forward_backward, 0);
+    // }
 
     /*  Adding a short delay to reduce the sampling rate.
         This must be replaced to be thread based/ timer
@@ -306,6 +305,20 @@ void controllerInit(PS2ControllerStates_t *controller){
   #endif
   return;
 }
+
+void initMotorDrivers(MotorPWMChannels_t* motorPWM){
+  motorPWM->motor1PWM = &htim1;
+  motorPWM->motor1Channel = TIM_CHANNEL_1;
+  motorPWM->motor2PWM =  &htim16;
+  motorPWM->motor2Channel = TIM_CHANNEL_1;
+
+  HAL_GPIO_WritePin(EN_LEFT_MOTOR_GPIO_Port, EN_LEFT_MOTOR_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(EN_RIGHT_MOTOR_GPIO_Port, EN_RIGHT_MOTOR_Pin, GPIO_PIN_RESET);
+  
+  return;
+}
+
+
 /* USER CODE END 4 */
 
 /**
