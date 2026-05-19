@@ -13,30 +13,30 @@
 #include "motorDriver.h"
 
 /* Definition of global variables */
-droidMotorPowers_t motorPowers;
+
 /* Function defintions */
 /* Test functions. */
 
-void Forward( MotorPWMChannels_t motorPWMChannels, float duty){
+void Forward(Twin_Motor_Attributes_t *attributes, float duty){
     if (duty == 0){
-        HAL_TIM_PWM_Stop(motorPWMChannels.motor1PWM, motorPWMChannels.motor1Channel);
-        HAL_TIM_PWM_Stop(motorPWMChannels.motor2PWM, motorPWMChannels.motor2Channel);
+        HAL_TIM_PWM_Stop(&attributes->leftMotor.timerHandle, &attributes->leftMotor.timerChannel);
+        HAL_TIM_PWM_Stop(&attributes->rightMotor.timerHandle, &attributes->rightMotor.timerChannel);
 
     }
     else{
-        MotorControl(duty, anticlockwise, motorPWMChannels.motor1PWM, motorPWMChannels.motor1Channel, leftMotor);
-        MotorControl(duty, clockwise, motorPWMChannels.motor2PWM, motorPWMChannels.motor2Channel, rightMotor);
+        MotorControl(&attributes->leftMotor, duty, anticlockwise);
+        MotorControl(&attributes->rightMotor, duty, clockwise);
     }
 }
 
-void StopDroid( MotorPWMChannels_t motorPWMChannels){
-    MotorControl(0.00, 1, motorPWMChannels.motor1PWM, motorPWMChannels.motor1Channel, leftMotor);
-    MotorControl(0.00, 2, motorPWMChannels.motor2PWM, motorPWMChannels.motor2Channel, rightMotor);
+void StopDroid(Twin_Motor_Attributes_t *attributes){
+    MotorControl(&attributes->leftMotor, 0.00, 1);
+    MotorControl(&attributes->rightMotor, 0.00, 2);
     return;
 }
 /*  Main implementation. */
 
-Move_t Move(float leftRight, float forwardBackward, MotorPWMChannels_t motorPWMChannels){
+Move_t Move(float leftRight, float forwardBackward, Twin_Motor_Attributes_t *attributes){
 
     // The leftRight and forwardBackward values should be transmitted via a normalisation between 0 and 1.
     if (leftRight > 1.0 || leftRight < 0.0){
@@ -60,10 +60,10 @@ Move_t Move(float leftRight, float forwardBackward, MotorPWMChannels_t motorPWMC
     
 
     /* Controlling the left motor */
-    MotorControl(leftPower, leftDirection, motorPWMChannels.motor1PWM, motorPWMChannels.motor1Channel, leftMotor);
+    MotorControl(&attributes->leftMotor, leftPower, leftDirection);
 
     /* Controlling the right motor */
-    MotorControl(rightPower, rightDirection, motorPWMChannels.motor2PWM, motorPWMChannels.motor2Channel, rightMotor);
+    MotorControl(&attributes->rightMotor, rightPower, rightDirection);
     return MOVE_SUCCESSFUL;
 }
 
@@ -87,26 +87,26 @@ void DroidTranslation(float x, float y, float reference_angle) {
     float leftRelativePower  = sinf(relative_angle + (M_PI/4.0f));
     float rightRelativePower = sinf(relative_angle - (M_PI/4.0f));
 
-    // Scale by joystick magnitude
-    leftRelativePower  *= magnitude;
-    rightRelativePower *= magnitude;
+    // // Scale by joystick magnitude
+    // leftRelativePower  *= magnitude;
+    // rightRelativePower *= magnitude;
 
-    // Convert to power + direction
-    if (leftRelativePower >= 0.0f) {
-        motorPowers.leftMotorPower.power = leftRelativePower;
-        motorPowers.leftMotorPower.direction = clockwise;
-    } else {
-        motorPowers.leftMotorPower.power = -leftRelativePower;
-        motorPowers.leftMotorPower.direction   = anticlockwise;
-    }
+    // // Convert to power + direction
+    // if (leftRelativePower >= 0.0f) {
+    //     motorPowers.leftMotorPower.power = leftRelativePower;
+    //     motorPowers.leftMotorPower.direction = clockwise;
+    // } else {
+    //     motorPowers.leftMotorPower.power = -leftRelativePower;
+    //     motorPowers.leftMotorPower.direction   = anticlockwise;
+    // }
 
-    if (rightRelativePower >= 0.0f) {
-        motorPowers.rightMotorPower.power = rightRelativePower;
-        motorPowers.rightMotorPower.direction   = clockwise;
-    } else {
-        motorPowers.rightMotorPower.power = -rightRelativePower;
-        motorPowers.rightMotorPower.direction   = anticlockwise;
-    }
+    // if (rightRelativePower >= 0.0f) {
+    //     motorPowers.rightMotorPower.power = rightRelativePower;
+    //     motorPowers.rightMotorPower.direction   = clockwise;
+    // } else {
+    //     motorPowers.rightMotorPower.power = -rightRelativePower;
+    //     motorPowers.rightMotorPower.direction   = anticlockwise;
+    // }
 
     return;
 }

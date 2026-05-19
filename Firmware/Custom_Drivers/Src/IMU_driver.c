@@ -1,14 +1,19 @@
+/** @file     IMU_driver.c
+ *  @author   Ryan McBride
+ *  @brief    File hosting any system specific defintions to interact with the
+ *            LSM6DSO32 Inertial Measurement Unit.
+ */
+
+
 /* Adding necessary include files. */
 #include "main.h"
 #include "IMU_driver.h"
-#include "madgwickFilter.h"
 
 /* ==================== Function defintions. ==================== */
 
 void IMUInit(stmdev_ctx_t dev_ctx){
   /* Turning IMU on. */
   uint8_t whoAmI, rst;
-  HAL_GPIO_WritePin(IMU_PWR_GPIO_Port, IMU_PWR_Pin, GPIO_PIN_SET);
 
   /* Ensuring that the expected device ID is being returned. 
       - Implicit unit test essentialy*/
@@ -23,6 +28,7 @@ void IMUInit(stmdev_ctx_t dev_ctx){
   } while (rst);
 
   /* Disable I3C interface */
+  lsm6dso32_i2c_interface_set(&dev_ctx, LSM6DSO32_I2C_ENABLE);
   lsm6dso32_i3c_disable_set(&dev_ctx, LSM6DSO32_I3C_DISABLE);
 
   /* Enable Block Data Update */
@@ -30,7 +36,7 @@ void IMUInit(stmdev_ctx_t dev_ctx){
 
   /* Set full scale range and sampling frequency. */
   lsm6dso32_xl_full_scale_set(&dev_ctx, LSM6DSO32_4g);
-  lsm6dso32_gy_full_scale_set(&dev_ctx, LSM6DSO32_250dps);
+  lsm6dso32_gy_full_scale_set(&dev_ctx, LSM6DSO32_125dps);
   lsm6dso32_xl_data_rate_set(&dev_ctx, LSM6DSO32_XL_ODR_208Hz_ULTRA_LOW_PW);
   lsm6dso32_gy_data_rate_set(&dev_ctx, LSM6DSO32_GY_ODR_208Hz_NORMAL_MD);
 }
@@ -39,7 +45,7 @@ static void IMUDeinit(){
   HAL_GPIO_WritePin(IMU_PWR_GPIO_Port, IMU_PWR_Pin, GPIO_PIN_RESET);
 }
 
-int32_t IMU_write(I2C_HandleTypeDef *handle, uint8_t deviceAddr, uint8_t reg, uint8_t *bufp, uint16_t len)
+int32_t IMU_write(void *handle, uint8_t deviceAddr, uint8_t reg, uint8_t *bufp, uint16_t len)
 {
 
     // Transmitting the register address followed by the data
@@ -52,7 +58,7 @@ int32_t IMU_write(I2C_HandleTypeDef *handle, uint8_t deviceAddr, uint8_t reg, ui
     return 0;
 }
 
-int32_t IMU_read(I2C_HandleTypeDef *handle, uint8_t deviceAddr, uint8_t reg, uint8_t *bufp, uint16_t len)
+int32_t IMU_read(void *handle, uint8_t deviceAddr, uint8_t reg, uint8_t *bufp, uint16_t len)
 {
     // Setting the register address with the read flag.
     reg |= 0x80;
@@ -79,7 +85,7 @@ static void platform_delay(uint32_t ms)
   HAL_Delay(ms);
 }
 
-static void IMUUpdate(const stmdev_ctx_t *dev_ctx, eulerAngles_t *angles){
+static void IMUUpdate(const stmdev_ctx_t *dev_ctx, eulerAngles_t *angles, quaternion *quat){
   /* Initialising local variables */
   static int16_t data_raw_acceleration[3], data_raw_angular_rate[3];
   static float acceleration_ms2[3], angular_rate_rads[3], normAcc[3];
@@ -127,17 +133,14 @@ static void IMUUpdate(const stmdev_ctx_t *dev_ctx, eulerAngles_t *angles){
     imu_filter(normAcc[0], normAcc[1], (normAcc[2]),
                calGyro[0], calGyro[1], 
                calGyro[2]);
-    /* q_est is a global variable defined in the Madgwick filter
-    library which is constantly being changed by the functions.
-    This should be updated in the future to be passed by reference
-    instead. */
-    eulerAngles(q_est, &angles->roll,
+
+    eulerAngles(quat, &angles->roll,
          &angles->pitch, &angles->yaw);
  
   }
 }
 
-static float_t Deg2rad(float angle){
+static float Deg2rad(float angle){
   float angleRad = PI*angle/180;
   return angleRad;
 }
