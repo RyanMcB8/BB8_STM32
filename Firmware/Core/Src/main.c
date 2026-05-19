@@ -35,6 +35,7 @@
 /* USER CODE BEGIN Includes */
 #include "PS2_driver.h"
 #include "motionControl.h"
+#include "IMU_driver.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -73,7 +74,16 @@ void PeriphCommonClock_Config(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-void initMotorDrivers(MotorPWMChannels_t* motorPWM);
+/* ==================== IMU Variables ==================== */
+stmdev_ctx_t IMU_data = {&IMU_write,
+  &IMU_read,
+  &platform_delay,
+  &hspi1
+};
+
+struct quaternion deviceQuat;
+eulerAngles_t localAngles;
+
 /* USER CODE END 0 */
 
 /**
@@ -128,7 +138,9 @@ int main(void)
   MX_RF_Init();
   /* USER CODE BEGIN 2 */
 
-  HAL_Delay(100);
+  /*  Debug timing to ensure all systems have been initialised correctly before
+      beginning to run. */
+  HAL_Delay(1000);
 
   /** @brief              A function which takes the users controller instance
    *                      and sets the appropriate pins defintions and feedback
@@ -157,6 +169,12 @@ int main(void)
     HAL_GPIO_WritePin(GPIOB, GPIO_PIN_5, GPIO_PIN_SET);
   }
 
+  /* Initialising the IMU. */
+  IMUInit(IMU_data);
+
+  /* Initialising the IMU. */
+  IMUInit(IMU_data);
+
 
   /* USER CODE END 2 */
 
@@ -171,6 +189,12 @@ int main(void)
     MX_APPE_Process();
 
     /* USER CODE BEGIN 3 */
+
+    /* Checking Orientation estimates. */
+    IMUUpdate(&IMU_data, &localAngles, &deviceQuat);
+
+    /* Checking Orientation estimates. */
+    IMUUpdate(&IMU_data, &localAngles, &deviceQuat);
 
     // /*  Reading the most recent data from the analogue stick. */
     // new_joystickLeftX = Analogue(&controller, PS_LX);
